@@ -107,7 +107,7 @@ class Personaje(models.Model):
             return self.raza
 
         class Meta:
-            ordering = ('pk', )
+            ordering = ('raza', )
 
     class BonificacionRaza(models.Model):
         bonificacionRaza = models.TextField(verbose_name='Bonificación raza')
@@ -136,12 +136,13 @@ class Personaje(models.Model):
         habilidad = models.TextField(verbose_name='Habilidad')
         #Creo que falta hacer un boolean o un enumerado para ver si
         #la clase es competente
+        competente = models.ManyToManyField('Clase')
 
         def __str__(self):
             return self.habilidad
 
         class Meta:
-            ordering = ('pk', )
+            ordering = ('habilidad', )
 
     class Clase(models.Model):
         clase = models.TextField(verbose_name='Clase')
@@ -154,12 +155,17 @@ class Personaje(models.Model):
         null=True)
         reflejos = models.IntegerField(verbose_name='Reflejos', null=True)
         voluntad = models.IntegerField(verbose_name='Fortaleza', null=True)
+        conjuros = models.ManyToManyField('Conjuro')
+        poderes = models.ManyToManyField('PoderClase')
+        conjurosDiarios = models.ManyToManyField('NivelConjuroDiario')
+        dotes = models.ManyToManyField('Dote')
+        habilidadesEspeciales = models.ManyToManyField('HabilidadEspecial')
 
         def __str__(self):
             return self.clase
 
         class Meta:
-            ordering = ('pk', )
+            ordering = ('clase', )
     
     class Dote(models.Model):
         nombre = models.TextField(verbose_name='Dote')
@@ -169,7 +175,7 @@ class Personaje(models.Model):
             return self.nombre
         
         class Meta: 
-            ordering = ('pk', )
+            ordering = ('nombre', )
 
     class PrerrequisitoDote(models.Model):
         ataqueBase = models.IntegerField(verbose_name='Ataque base',
@@ -190,10 +196,76 @@ class Personaje(models.Model):
         null=True, on_delete=models.SET_NULL)
         dotes = models.ManyToManyField('Dote', verbose_name='Dotes')
 
-        def __str__(self):
-            return str(ataqueBase)+clase+str(nivel)+str(fuerza)+str(destreza)+str(constitucion)+str(inteligencia)+str(sabiduria)+str(carisma)+puntuacion+dotes
-
         class Meta:
             ordering = ('pk', )
 
+    class Conjuro(models.Model):
+        nombre = models.TextField(verbose_name='Nombre')
+        nivel = models.IntegerField(verbose_name='Nivel')
+        escuela = models.TextField(verbose_name='Escuela')
+        tiempoDeLanzamiento = models.TextField(verbose_name='Tiempo de lanzamiento')
+        alcance = models.TextField(verbose_name='Alcance')
+        efecto = models.TextField(verbose_name='Efecto', null=True)
+        objetivo = models.TextField(verbose_name='Objetivo', null=True)
+        duracion = models.TextField(verbose_name='Duración')
+        tiroDeSalvacion = models.BooleanField(verbose_name='Tiro de salvación')
+        resistenciaConjuros = models.BooleanField(verbose_name='Resistencia a conjuros')
+        descripcion = models.TextField(verbose_name='Descripción')
+
+        def __str__(self):
+            return self.nombre
+
+        class Meta:
+            ordering = ('nivel', 'nombre', )
+
+    class PoderClase(models.Model):
+        nombre = models.TextField(verbose_name='Nombre')
+        descripcion = models.TextField(verbose_name='Descripción')
+        nivel = models.IntegerField(verbose_name='Nivel')
+
+        def __str__(self):
+            return nombre
+        
+        class Meta:
+            ordering = ('nivel', 'nombre', )
+
+    class NivelConjuroDiario(models.Model):
+        cantidad = models.IntegerField(verbose_name='Cantidad')
+
+        def __str__(self):
+            return cantidad
+        
+        class Meta:
+            ordering = ('pk', )
+
+    class HabilidadEspecial(models.Model):
+        nombre = models.TextField(verbose_name='Nombre')
+        descripcion = models.TextField(verbose_name='Descripción')
+        nivel = models.IntegerField(verbose_name='Nivel')
+
+        def __str__(self):
+            return nombre
+        
+        class Meta:
+            ordering = ('nivel', 'nombre', )
+
+    class PrerrequisitoHabilidadEspecial(models.Model):
+        nivel = models.IntegerField(verbose_name='Nivel', null=True)
+        ataqueBase = models.IntegerField(verbose_name='Ataque base',
+         null=True)
+        fuerza = models.IntegerField(verbose_name='Fuerza', null=True)
+        destreza = models.IntegerField(verbose_name='Destreza',
+         null=True)
+        constitucion = models.IntegerField(verbose_name='Constitución',
+         null=True)
+        inteligencia = models.IntegerField(verbose_name='Inteligencia',
+         null=True)
+        sabiduria = models.IntegerField(verbose_name='Sabiduría',
+         null=True)
+        carisma = models.IntegerField(verbose_name='Carisma',
+         null=True)
+        poderes = models.ManyToManyField('PoderClase')
+
+        class Meta:
+            ordering = ('pk', )
 
