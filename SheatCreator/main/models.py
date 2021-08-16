@@ -72,7 +72,7 @@ class Personaje(models.Model):
         return int((sabiduria-10)/2)
 
     def BonificadorCarisma(self):
-        return int((carisma-10)/2)
+        return int((carisma-10)/2-1)
 
     def __str__(self):
         return self.nombre
