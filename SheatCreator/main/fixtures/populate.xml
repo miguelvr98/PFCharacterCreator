@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Esto es un populate de la Base de Datos de TreeD. Para usar, escribir 'py manage.py loaddata populate.xml'-->
+<django-objects version="1.0">
+<!--DJANGO ADMINISTRATOR-->
+    <object pk="1" model="auth.user">
+        <!--administrator/administrator-->
+        <field type="CharField" name="username">administrator</field>
+        <field type="CharField" name="password">administrator</field>
+        <field type="BooleanField" name="is_superuser">True</field>
+        <field type="BooleanField" name="is_staff">True</field>
+    </object>
+    <object pk="1" model="main.perfil">
+        <field to="auth.user" name="usuario" rel="OneToOneRel">1</field>
+        <field type="CharField" name="nickname">alvaro28</field>
+        <field type="BooleanField" name="es_admin">True</field>
+    </object>
+<!--USUARIOS Y PERFILES-->
+    <object pk="2" model="auth.user">
+        <!--usuario1/usuario1-->
+        <field type="CharField" name="username">usuario1</field>
+        <field type="CharField" name="password">usuario1</field>
+    </object>
+    <object pk="2" model="main.perfil">
+        <field to="auth.user" name="usuario" rel="OneToOneRel">2</field>
+        <field type="CharField" name="nickname">usuario1_perfil</field>
+    </object>
+<!--IDIOMAS-->
+    <object pk="1" model="main.idioma">
+        <field type="CharField" name="idioma">Abisal</field>
+    </object>
+    <object pk="2" model="main.idioma">
+        <field type="CharField" name="idioma">Aklo</field>
+    </object>
+    <object pk="3" model="main.idioma">
+        <field type="CharField" name="idioma">Acuano</field>
+    </object>
+    <object pk="4" model="main.idioma">
+        <field type="CharField" name="idioma">Aurano</field>
+    </object>
+    <object pk="5" model="main.idioma">
+        <field type="CharField" name="idioma">Celestial</field>
+    </object>
+    <object pk="6" model="main.idioma">
+        <field type="CharField" name="idioma">Común</field>
+    </object>
+    <object pk="7" model="main.idioma">
+        <field type="CharField" name="idioma">Dracónico</field>
+    </object>
+    <object pk="8" model="main.idioma">
+        <field type="CharField" name="idioma">Duídrico</field>
+    </object>
+    <object pk="9" model="main.idioma">
+        <field type="CharField" name="idioma">Élfico</field>
+    </object>
+    <object pk="10" model="main.idioma">
+        <field type="CharField" name="idioma">Enano</field>
+    </object>
+    <object pk="11" model="main.idioma">
+        <field type="CharField" name="idioma">Gigante</field>
+    </object>
+    <object pk="12" model="main.idioma">
+        <field type="CharField" name="idioma">Gnoll</field>
+    </object>
+    <object pk="13" model="main.idioma">
+        <field type="CharField" name="idioma">Ígnaro</field>
+    </object>
+    <object pk="14" model="main.idioma">
+        <field type="CharField" name="idioma">Infernal</field>
+    </object>
+    <object pk="15" model="main.idioma">
+        <field type="CharField" name="idioma">Infracomún</field>
+    </object>
+    <object pk="16" model="main.idioma">
+        <field type="CharField" name="idioma">Mediano</field>
+    </object>
+    <object pk="17" model="main.idioma">
+        <field type="CharField" name="idioma">Orco</field>
+    </object>
+    <object pk="18" model="main.idioma">
+        <field type="CharField" name="idioma">Silvano</field>
+    </object>
+    <object pk="19" model="main.idioma">
+        <field type="CharField" name="idioma">Terrano</field>
+    </object>
+    <object pk="20" model="main.idioma">
+        <field type="CharField" name="idioma">Trasgo</field>
+    </object>
+    <object pk="21" model="main.idioma">
+        <field type="CharField" name="idioma">Idioma de signos drow</field>
+    </object>
+    <object pk="22" model="main.idioma">
+        <field type="CharField" name="idioma">Aboleth</field>
+    </object>
+    <object pk="23" model="main.idioma">
+        <field type="CharField" name="idioma">Sahuahin</field>
+    </object>
+    <object pk="24" model="main.idioma">
+        <field type="CharField" name="idioma">Tengu</field>
+    </object>
+    <object pk="25" model="main.idioma">
+        <field type="CharField" name="idioma">Gripo</field>
+    </object>
+    <object pk="26" model="main.idioma">
+        <field type="CharField" name="idioma">Boggard</field>
+    </object>
+    <object pk="27" model="main.idioma">
+        <field type="CharField" name="idioma">Félido</field>
+    </object>
+    <object pk="28" model="main.idioma">
+        <field type="CharField" name="idioma">Rátido</field>
+    </object>
+    <object pk="29" model="main.idioma">
+        <field type="CharField" name="idioma">Varanano</field>
+    </object>
+    <object pk="30" model="main.idioma">
+        <field type="CharField" name="idioma">Vishkanya</field>
+    </object>
+<!--INMUNE-->
+    <object pk="1" model="main.inmune">
+        <field type="CharField" name="inmune">Veneno</field>
+    </object>
+    <object pk="2" model="main.inmune">
+        <field type="CharField" name="inmune">Frío</field>
+    </object>
+    <object pk="3" model="main.inmune">
+        <field type="CharField" name="inmune">Fuego</field>
+    </object>
+    <object pk="4" model="main.inmune">
+        <field type="CharField" name="inmune">Electricidad</field>
+    </object>
+    <object pk="5" model="main.inmune">
+        <field type="CharField" name="inmune">Efectos de dormir</field>
+    </object>
+    <object pk="6" model="main.inmune">
+        <field type="CharField" name="inmune">Parálisis</field>
+    </object>
+    <object pk="7" model="main.inmune">
+        <field type="CharField" name="inmune">Ilusión (fantasma)</field>
+    </object>
+<!--BONIFICACIONES RAZAS-->
+    <object pk="1" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características élficos</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 inteligencia, -2 constitución.</field>
+    </object>
+    <object pk="2" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Mediano</field>
+        <field type="CharField" name="descripcion">No tienen bonificadores o penalizadores debidos a su tamaño.</field>
+    </object>
+    <object pk="3" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Velocidad normal</field>
+        <field type="CharField" name="descripcion">Su velocidad es de 9 metros</field>
+    </object>
+    <object pk="4" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Visión en la penumbra</field>
+        <field type="CharField" name="descripcion">Pueden ver el doble de lo normal en condiciones de luz tenue.</field>
+    </object>
+    <object pk="5" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Inmunidades élficas</field>
+        <field type="CharField" name="descripcion">Inmune a efectos mágicos de dormir y obtiene un bonificador +2 en sus tiradas de salvación contra conjuros y efectos de encantamiento.</field>
+    </object>
+    <object pk="6" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Magia élfica</field>
+        <field type="CharField" name="descripcion">+2 en las pruebas de conjuros para superar la resistencia a la magia. Además, +2 en las pruebas de conocimiento de conjuros hechas para identificar las propiedades de objetos mágicos.</field>
+    </object>
+    <object pk="7" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Familiaridad con las armas élficas</field>
+        <field type="CharField" name="descripcion">Competentes con arcos largos (incluyendo arcos largos compuestos), espadas largas, estoques y arcos cortos (incluyendo arcos cortos compuestos), y tratan cualquier arma que lleve en su nombre la palabra “elfo” como un arma marcial.</field>
+    </object>
+    <object pk="8" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas élficos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan élfico y común. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo celestial, dracónico, gnoll, gnomo, trasgo y silvano también.</field>
+    </object>
+    <object pk="9" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características enanos</field>
+        <field type="CharField" name="descripcion">+2 constitución, +2 sabiduría, -2 carisma.</field>
+    </object>
+    <object pk="10" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Lento y calmado</field>
+        <field type="CharField" name="descripcion">Su velocidad es de 6 metros, pero nunca se ve afectada por la armadura o la carga.</field>
+    </object>
+    <object pk="11" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Visión en la oscuridad</field>
+        <field type="CharField" name="descripcion">Puede ver en la oscuridad hasta 18 metros</field>
+    </object>
+    <object pk="12" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Entrenamiento defensivo enano</field>
+        <field type="CharField" name="descripcion">+4 a la CA contra criaturas del subtipo gigante.</field>
+    </object>
+    <object pk="13" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Avaricia</field>
+        <field type="CharField" name="descripcion">+2 a las tiradas de tasación para objetos no mágicos que contengan metales preciosos o gemas.</field>
+    </object>
+    <object pk="14" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Odio enano</field>
+        <field type="CharField" name="descripcion">+1 en las tiradas de ataque contra criaturas humanoides del subtipo orco o trasgoide.</field>
+    </object>
+    <object pk="15" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistente</field>
+        <field type="CharField" name="descripcion">+2 a las tiradas de salvación contra venenos, conjuros y efectos sortílegos.</field>
+    </object>
+    <object pk="16" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Estabilidad</field>
+        <field type="CharField" name="descripcion">+4 a su DMC para resistir ser embestido o derribado cuando está apoyado en el suelo.</field>
+    </object>
+    <object pk="17" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Afinidad con la piedra</field>
+        <field type="CharField" name="descripcion">+2 en las tiradas de percepción para percibir la presencia de obras poco comunes de mampostería, como por ejemplo trampas de piedra o puertas secretas ubicadas en paredes o suelos de piedra. Realizan una prueba para darse cuenta de tales construcciones siempre que pasen a menos de 3 metros de ellas, tanto si las buscan activamente como si no.</field>
+    </object>
+    <object pk="18" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Familiaridad con las armas enanas</field>
+        <field type="CharField" name="descripcion">Competentes con hachas de batalla, picos pesados, y martillos de guerra, y tratan cualquier arma con la palabra “enano” en su nombre como un arma marcial.</field>
+    </object>
+    <object pk="19" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas enanos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan enano y común. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo gigante, gnomo, trasgo, orco, terrano e infracomún también.</field>
+    </object>
+    <object pk="20" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características gnomo</field>
+        <field type="CharField" name="descripcion">+2 constitución, +2 carisma, -2 fuerza</field>
+    </object>
+    <object pk="21" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Pequeño</field>
+        <field type="CharField" name="descripcion">Obtiene un bonificador de tamaño de +1 a su CA, a sus tiradas de ataque, un penalizador de -1 a su BMC y DMC, y un bonificador de tamaño de +4 en tiradas de sigilo.</field>
+    </object>
+    <object pk="22" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Velocidad lenta</field>
+        <field type="CharField" name="descripcion">Su velocidad es de 6 metros</field>
+    </object>
+    <object pk="23" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Entrenamiento defensivo gnomo</field>
+        <field type="CharField" name="descripcion">+4 a la CA contra criaturas del subtipo gigante.</field>
+    </object>
+    <object pk="24" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Magia de los gnomos</field>
+        <field type="CharField" name="descripcion">+1 a la CD de cualquier tirada de salvación contra conjuros de ilusión que lancen. Aquellos que posean un carisma de 11 o superior también ganan las siguientes capacidades sortílegas: 1/día – Luces Danzantes, Sonido Fantasmal, Prestidigitación y Hablar con los animales. El nivel de lanzador para estos efectos es igual al nivel del gnomo. La CD para estos conjuros es igual a 10 + el nivel del conjuro + el modificador de carisma del gnomo.</field>
+    </object>
+    <object pk="25" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Odio gnomo</field>
+        <field type="CharField" name="descripcion">+1 a las tiradas de ataque contra criaturas humanoides de los subtipos reptiliano y trasgoide.</field>
+    </object>
+    <object pk="26" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia a la ilusión</field>
+        <field type="CharField" name="descripcion">+2 en tiradas de salvación contra conjuros y efectos de ilusión.</field>
+    </object>
+    <object pk="27" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Sentidos agudos</field>
+        <field type="CharField" name="descripcion">+2 a las pruebas de percepción.</field>
+    </object>
+    <object pk="28" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Obsesivo</field>
+        <field type="CharField" name="descripcion">+2 en una habilidad de interpretar o profesión de su elección.</field>
+    </object>
+    <object pk="28" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Familiaridad con las armas gnomo</field>
+        <field type="CharField" name="descripcion">Trata cualquier arma con la palabra "gnomo" en su nombre como un arma marcial.</field>
+    </object>
+    <object pk="29" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas gnomo</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan gnomo, silvano y común. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo dracónico, enano, élfico, gigante, trasgo y orco también.</field>
+    </object>
+    <object pk="30" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificador de característica humanos</field>
+        <field type="CharField" name="descripcion">+2 a cualquier características a su elección.</field>
+    </object>
+    <object pk="31" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Dote adicional</field>
+        <field type="CharField" name="descripcion">Seleccionan una dote extra a nivel 1.</field>
+    </object>
+    <object pk="32" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Hábil</field>
+        <field type="CharField" name="descripcion">Ganan un punto adicional de habilidad a nivel 1 y cada vez que ganan un nivel.</field>
+    </object>
+    <object pk="33" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas humanos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo cualquier otro idioma(excepto idiomas secretos como el duídrico) también.</field>
+    </object>
+    <object pk="34" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características medianas</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 carisma, -2 fuerza.</field>
+    </object>
+    <object pk="35" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Sin miedo</field>
+        <field type="CharField" name="descripcion">+2 a las tiradas de salvación contra el miedo. Este bonificador se apila con el proporcionado por "la suerte del mediano".</field>
+    </object>
+    <object pk="36" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">La suerte del mediano</field>
+        <field type="CharField" name="descripcion">+1 en todas sus tiradas de salvación.</field>
+    </object>
+    <object pk="37" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Pies firmes</field>
+        <field type="CharField" name="descripcion">+2 en las pruebas de acrobacias y trepar.</field>
+    </object>
+    <object pk="38" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Familiaridad con las armas medianas</field>
+        <field type="CharField" name="descripcion">Competentes con hondas y tratan cualquier arma con la palabra “mediano” en su nombre como arma marcial.</field>
+    </object>
+    <object pk="39" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas medianos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan mediano, y común. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo enano, élfico, gnomo y trasgo también.</field>
+    </object>
+    <object pk="40" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificador de característica semielfos</field>
+        <field type="CharField" name="descripcion">+2 en cualquier característica a su elección.</field>
+    </object>
+    <object pk="41" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Adaptabilidad</field>
+        <field type="CharField" name="descripcion">Obtienen "Soltura con una habilidad" como dote extra a primer nivel.</field>
+    </object>
+    <object pk="42" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Sangre élfica</field>
+        <field type="CharField" name="descripcion">Son tanto elfos como humanos ante cualquier efecto relativo a la raza.</field>
+    </object>
+    <object pk="43" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Multitalento</field>
+        <field type="CharField" name="descripcion">Escogen dos clases predilectas a primer nivel.</field>
+    </object>
+    <object pk="44" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas semielfos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y élfico. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo cualquier otro idioma (excepto idiomas secretos como el duídrico) también.</field>
+    </object>
+    <object pk="45" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificador de característica semiorco</field>
+        <field type="CharField" name="descripcion">+2 en cualquier característica a su elección.</field>
+    </object>
+    <object pk="46" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Intimidante</field>
+        <field type="CharField" name="descripcion">+2 a las tiradas de intimidar.</field>
+    </object>
+     <object pk="47" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Sangre orca</field>
+        <field type="CharField" name="descripcion">Son tanto orcos como humanos ante cualquier efecto relativo a la raza.</field>
+    </object>
+    <object pk="48" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Ferocidad orca</field>
+        <field type="CharField" name="descripcion">Una vez al día, cuando un semiorco cae por debajo de 0 puntos de vida pero no está muerto, puede luchar un asalto más como si estuviera incapacitado. Al final de su siguiente turno, a menos que suba pus puntos de vida por encima de 0, inmediatamente cae inconsciente y comienza a morir.</field>
+    </object>
+    <object pk="49" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Familiaridad con las armas orcas</field>
+        <field type="CharField" name="descripcion">Competentes con grandes hachas y tratan cualquier arma con la palabra “orco” en su nombre como si fuera un arma marcial.</field>
+    </object>
+    <object pk="50" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas semiorcos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y orco. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo abissal, dracónico, gigante, gnoll y trasgo también.</field>
+    </object>
+
+<!--RAZAS-->
+</django-objects>
