@@ -61,8 +61,7 @@ class Personaje(models.Model):
     clase = models.ManyToManyField('Clase')
     dotes = models.ManyToManyField('Dote')
     puntuaciones_habilidad = models.ManyToManyField('PuntuacionHabilidad')
-    inventario_equipado = models.ForeignKey('InventarioEquipado', on_delete=models.CASCADE, null=True)
-    inventario_no_equipado = models.ForeignKey('InventarioNoEquipado', on_delete=models.CASCADE, null=True)
+    propiedades_objeto = models.ManyToManyField('PropiedadObjeto')
     companero_animal = models.ForeignKey('CompaneroAnimal', on_delete=models.CASCADE, null=True)
     objetos = models.ManyToManyField('Objeto')
     conjuros_conocidos = models.ManyToManyField('Conjuro')
@@ -113,14 +112,15 @@ class Personaje(models.Model):
         raza = models.TextField(verbose_name='Raza')
         tamano = models.TextField(verbose_name='Tamaño', null=True)
         velocidad = models.TextField(verbose_name='Velocidad', null=True)
-        fuerza = models.IntegerField(verbose_name='Fuerza', null=True)
-        destreza = models.IntegerField(verbose_name='Destreza', null=True)
-        constitucion = models.IntegerField(verbose_name='Constitución', null=True)
-        inteligencia = models.IntegerField(verbose_name='Inteligencia', null=True)
-        sabiduria = models.IntegerField(verbose_name='Sabiduría', null=True)
-        carisma = models.IntegerField(verbose_name='Carisma', null=True)
-        bonificacion_raza = models.ManyToManyField('BonificacionRaza')
-        idiomas = models.ManyToManyField('Idioma')
+        fuerza = models.IntegerField(verbose_name='Fuerza', default=0)
+        destreza = models.IntegerField(verbose_name='Destreza', default=0)
+        constitucion = models.IntegerField(verbose_name='Constitución',default=0)
+        inteligencia = models.IntegerField(verbose_name='Inteligencia', default=0)
+        sabiduria = models.IntegerField(verbose_name='Sabiduría', default=0)
+        carisma = models.IntegerField(verbose_name='Carisma', default=0)
+        idiomas_conocidos = models.TextField(verbose_name='Idiomas conocidos', null=True)
+        idiomas_eleccion = models.ManyToManyField('Idioma')
+        bonificaciones_raza = models.ManyToManyField('BonificacionRaza')
 
         def __str__(self):
             return self.raza
@@ -320,18 +320,29 @@ class Personaje(models.Model):
         class Meta:
             ordering = ('pk', )
 
-    class InventarioEquipado(models.Model):
-        objetos = models.ManyToManyField('Objeto')
+    class PropiedadObjeto(models.Model):
+        equipado = models.BooleanField(verbose_name='Está equipado', default=False)
+        cantidad = models.IntegerField(verbose_name='Cantidad', default=1)
+        propiedades = models.ManyToManyField('Propiedad')
+        objeto = models.ForeignKey('Objeto', on_delete=models.CASCADE)
 
-    class InventarioNoEquipado(models.Model):
-        objetos = models.ManyToManyField('Objeto')
+    class Propiedad(models.Model):
+        nombre = models.TextField(verbose_name='Nombre')
+        descripcion = models.TextField(verbose_name='Descripción')
+        coste = models.IntegerField(verbose_name='Coste', null=True)
+        coste_dinero = models.IntegerField(verbose_name='Coste dinero', null=True)
+
+        def __str__(self):
+            return self.nombre
+
+        class Meta:
+            ordering = ('nombre', )
 
     class Objeto(models.Model):
         clase = models.TextField(verbose_name='Clase', null=True)
         nombre = models.TextField(verbose_name='Nombre')
         precio = models.IntegerField(verbose_name='Precio')
         peso = models.IntegerField(verbose_name='Peso', null=True)
-        propiedades = models.ManyToManyField('Propiedad')
 
         def __str__(self):
             return self.nombre
@@ -360,18 +371,6 @@ class Personaje(models.Model):
         fallo_conj_arc = models.IntegerField(verbose_name='Fallo conjuro arcano')
         velocidad_9m = models.IntegerField(verbose_name='Velocidad 9m')
         velocidad_6m = models.IntegerField(verbose_name='Velocidad 6m')
-
-        def __str__(self):
-            return self.nombre
-
-        class Meta:
-            ordering = ('nombre', )
-
-    class Propiedad(models.Model):
-        nombre = models.TextField(verbose_name='Nombre')
-        descripcion = models.TextField(verbose_name='Descripción')
-        coste = models.IntegerField(verbose_name='Coste', null=True)
-        coste_dinero = models.IntegerField(verbose_name='Coste dinero', null=True)
 
         def __str__(self):
             return self.nombre

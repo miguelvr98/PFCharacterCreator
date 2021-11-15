@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--Esto es un populate de la Base de Datos de TreeD. Para usar, escribir 'py manage.py loaddata populate.xml'-->
+<!--Esto es un populate de la Base de Datos de SheatCreator. Para usar, escribir 'py manage.py loaddata populate.xml'-->
 <django-objects version="1.0">
 <!--DJANGO ADMINISTRATOR-->
     <object pk="1" model="auth.user">
@@ -62,57 +62,60 @@
         <field type="CharField" name="idioma">Gnoll</field>
     </object>
     <object pk="13" model="main.idioma">
-        <field type="CharField" name="idioma">Ígnaro</field>
+        <field type="CharField" name="idioma">Gnomo</field>
     </object>
     <object pk="14" model="main.idioma">
-        <field type="CharField" name="idioma">Infernal</field>
+        <field type="CharField" name="idioma">Ígnaro</field>
     </object>
     <object pk="15" model="main.idioma">
-        <field type="CharField" name="idioma">Infracomún</field>
+        <field type="CharField" name="idioma">Infernal</field>
     </object>
     <object pk="16" model="main.idioma">
-        <field type="CharField" name="idioma">Mediano</field>
+        <field type="CharField" name="idioma">Infracomún</field>
     </object>
     <object pk="17" model="main.idioma">
-        <field type="CharField" name="idioma">Orco</field>
+        <field type="CharField" name="idioma">Mediano</field>
     </object>
     <object pk="18" model="main.idioma">
-        <field type="CharField" name="idioma">Silvano</field>
+        <field type="CharField" name="idioma">Orco</field>
     </object>
     <object pk="19" model="main.idioma">
-        <field type="CharField" name="idioma">Terrano</field>
+        <field type="CharField" name="idioma">Silvano</field>
     </object>
     <object pk="20" model="main.idioma">
-        <field type="CharField" name="idioma">Trasgo</field>
+        <field type="CharField" name="idioma">Terrano</field>
     </object>
     <object pk="21" model="main.idioma">
-        <field type="CharField" name="idioma">Idioma de signos drow</field>
+        <field type="CharField" name="idioma">Trasgo</field>
     </object>
     <object pk="22" model="main.idioma">
-        <field type="CharField" name="idioma">Aboleth</field>
+        <field type="CharField" name="idioma">Idioma de signos drow</field>
     </object>
     <object pk="23" model="main.idioma">
-        <field type="CharField" name="idioma">Sahuahin</field>
+        <field type="CharField" name="idioma">Aboleth</field>
     </object>
     <object pk="24" model="main.idioma">
-        <field type="CharField" name="idioma">Tengu</field>
+        <field type="CharField" name="idioma">Sahuahin</field>
     </object>
     <object pk="25" model="main.idioma">
-        <field type="CharField" name="idioma">Gripo</field>
+        <field type="CharField" name="idioma">Tengu</field>
     </object>
     <object pk="26" model="main.idioma">
-        <field type="CharField" name="idioma">Boggard</field>
+        <field type="CharField" name="idioma">Gripo</field>
     </object>
     <object pk="27" model="main.idioma">
-        <field type="CharField" name="idioma">Félido</field>
+        <field type="CharField" name="idioma">Boggard</field>
     </object>
     <object pk="28" model="main.idioma">
-        <field type="CharField" name="idioma">Rátido</field>
+        <field type="CharField" name="idioma">Félido</field>
     </object>
     <object pk="29" model="main.idioma">
-        <field type="CharField" name="idioma">Varanano</field>
+        <field type="CharField" name="idioma">Rátido</field>
     </object>
     <object pk="30" model="main.idioma">
+        <field type="CharField" name="idioma">Vanarano</field>
+    </object>
+    <object pk="31" model="main.idioma">
         <field type="CharField" name="idioma">Vishkanya</field>
     </object>
 <!--INMUNE-->
@@ -156,7 +159,7 @@
     </object>
     <object pk="5" model="main.bonificacionraza">
         <field type="CharField" name="nombre">Inmunidades élficas</field>
-        <field type="CharField" name="descripcion">Inmune a efectos mágicos de dormir y obtiene un bonificador +2 en sus tiradas de salvación contra conjuros y efectos de encantamiento.</field>
+        <field type="CharField" name="descripcion">Inmune a efectos mágicos de sueño y obtiene un bonificador +2 en sus tiradas de salvación contra conjuros y efectos de encantamiento.</field>
     </object>
     <object pk="6" model="main.bonificacionraza">
         <field type="CharField" name="nombre">Magia élfica</field>
@@ -335,13 +338,1643 @@
         <field type="CharField" name="descripcion">Una vez al día, cuando un semiorco cae por debajo de 0 puntos de vida pero no está muerto, puede luchar un asalto más como si estuviera incapacitado. Al final de su siguiente turno, a menos que suba pus puntos de vida por encima de 0, inmediatamente cae inconsciente y comienza a morir.</field>
     </object>
     <object pk="49" model="main.bonificacionraza">
-        <field type="CharField" name="nombre">Familiaridad con las armas orcas</field>
+        <field type="CharField" name="nombre">Familiaridad con las armas semiorcas</field>
         <field type="CharField" name="descripcion">Competentes con grandes hachas y tratan cualquier arma con la palabra “orco” en su nombre como si fuera un arma marcial.</field>
     </object>
     <object pk="50" model="main.bonificacionraza">
         <field type="CharField" name="nombre">Idiomas semiorcos</field>
-        <field type="CharField" name="descripcion">Inicialmente hablan común y orco. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo abissal, dracónico, gigante, gnoll y trasgo también.</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y orco. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo abisal, dracónico, gigante, gnoll y trasgo también.</field>
     </object>
-
+    <object pk="51" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Ajeno nativo</field>
+        <field type="CharField" name="descripcion">Son ajenos del subtipo nativo.</field>
+    </object>
+    <object pk="52" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características aasimar</field>
+        <field type="CharField" name="descripcion">+2 carisma, +2 sabiduría.</field>
+    </object>
+    <object pk="53" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Habilidosos aasimar</field>
+        <field type="CharField" name="descripcion">+2 en pruebas diplomacia y percepción.</field>
+    </object>
+    <object pk="54" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Aptitud sortílega aasimar</field>
+        <field type="CharField" name="descripcion">Pueden usar Luz del día una vez al día como aptitud sortílega (nivel de lanzador igual al nivel de clase del aasimar).</field>
+    </object>
+    <object pk="55" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia celestial</field>
+        <field type="CharField" name="descripcion">Resistencia 5 al ácido, frío y electricidad.</field>
+    </object>
+    <object pk="56" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas aasimar</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y celestial. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo dracónico, élfico, enano, gnomo, mediano y silvano también.</field>
+    </object>
+    <object pk="57" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características drow</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 inteligencia, -2 constitución.</field>
+    </object>
+    <object pk="58" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Visión en la oscuridad mejorada</field>
+        <field type="CharField" name="descripcion">Pueden ver en la oscuridad hasta 36 metros.</field>
+    </object>
+    <object pk="59" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia a conjuros drow</field>
+        <field type="CharField" name="descripcion">Poseen resistencia a conjuros 6 + nivel de personaje.</field>
+    </object>
+    <object pk="60" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Aptitudes sortílegas drow</field>
+        <field type="CharField" name="descripcion">Pueden lanzar Luces danzantes, Oscuridad y Fuego feérico cada uno una vez al día, usando el total de sus niveles de personaje como nivel de lanzador.</field>
+    </object>
+    <object pk="61" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Ceguera ante la luz</field>
+        <field type="CharField" name="descripcion">La exposición repentina de la luz brillante los ciega durante 1 asalto. En los asaltos siguientes estarán deslumbrados mientras permanezcan en el área afectada.</field>
+    </object>
+    <object pk="62" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Uso de venenos drow</field>
+        <field type="CharField" name="descripcion">Los drow están entrenados en el uso de venenos y nunca corren el riesgo de envenenarse accidentalmente a sí mismos. Crean un veneno que hace que sus víctimas caigan en la inconsciencia. Veneno drow – daño; salvación de Fortaleza CD 13; frecuencia 1/minuto a dos minutos; efecto inicial inconsciencia durante 1 minuto; efecto secundario inconsciencia durante 2d4 horas; curación 1 salvación.</field>
+    </object>
+    <object pk="63" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Familiaridad con las armas drow</field>
+        <field type="CharField" name="descripcion">Son competentes con la ballesta de mano, estoque y espada corta.</field>
+    </object>
+    <object pk="64" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas drow</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan élfico e infracomún. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo abisal, acuano, aklo, común, dracónico, gnomo e idioma de signos drow también.</field>
+    </object>
+    <object pk="65" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características duergar</field>
+        <field type="CharField" name="descripcion">+2 constitución, +2 sabiduría, -4 carisma.</field>
+    </object>
+    <object pk="66" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Inmunidades duergar</field>
+        <field type="CharField" name="descripcion">Son inmunes a la parálisis, ilusión (fantasma) y al veneno. Además reciben un bonificador racial + 2 a las TS contra conjuros y aptitudes sortílegas.</field>
+    </object>
+    <object pk="67" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Aptitudes sortílegas duergar</field>
+        <field type="CharField" name="descripcion">Pueden lanzar Agrandar persona e Invisibilidad cada uno una vez al día, usando su nivel de personaje como su nivel de lanzador. Ambas aptitudes sortílegas afectan sólo a los duergar.</field>
+    </object>
+    <object pk="68" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Sensibilidad a la luz</field>
+        <field type="CharField" name="descripcion">Están deslumbrados mientras permanezcan en un área de luz brillante.</field>
+    </object>
+    <object pk="69" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas duergar</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común, enano e infracomún. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo aklo, dracónico, gigante, orco, terrano y trasgo también.</field>
+    </object>
+    <object pk="70" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características svirfneblin</field>
+        <field type="CharField" name="descripcion">-2 fuerza, +2 destreza, +2 sabiduría, -4 carisma.</field>
+    </object>
+    <object pk="71" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Entrenamiento defensivo svirfneblin</field>
+        <field type="CharField" name="descripcion">Ganan un bonificador +2 de esquiva a la CA.</field>
+    </object>
+    <object pk="72" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Afortunado</field>
+        <field type="CharField" name="descripcion">Ganan un bonificador +2 a todas las tiradas de salvación.</field>
+    </object>
+    <object pk="73" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Experto svirfneblin</field>
+        <field type="CharField" name="descripcion">Ganan un bonificador + 2 a las pruebas de sigilo; esto mejora a un bonificador +4 bajo tierra. Ganan un bonificador +2 en las pruebas de artesanía (alquimia) y percepción.</field>
+    </object>
+    <object pk="74" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Odio svirfneblin</field>
+        <field type="CharField" name="descripcion">Reciben un bonificador de +1 en sus tiradas de ataque contra criaturas humanoides del subtipo reptiliano y enano.</field>
+    </object>
+    <object pk="75" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia a conjuros svirfneblin</field>
+        <field type="CharField" name="descripcion">Tienen una resistencia a conjuros igual a 11 + su nivel de personaje.</field>
+    </object>
+    <object pk="76" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Magia svirfneblin</field>
+        <field type="CharField" name="descripcion">Añaden + 1 a la CD de cualquier conjuro de ilusión que lancen. Los svirfneblin también ganan las siguientes aptitudes sortílegas: Indetectabilidad como una aptitud sortílega constante y Ceguera/Sordera, Contorno borroso y Disfrazarse 1 vez al día; el nivel de lanzador es igual a sus niveles de personaje.</field>
+    </object>
+    <object pk="77" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas svirfneblin</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan gnomo, e infracomún. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo aklo, dracónico, élfico, enano, gigante, terrano y trasgo también.</field>
+    </object>
+    <object pk="78" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características hobgoblin</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 constitución.</field>
+    </object>
+    <object pk="79" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Furtivo hobgoblin</field>
+        <field type="CharField" name="descripcion">Bonificador +4 a las pruebas de sigilo.</field>
+    </object>
+    <object pk="80" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas hobgoblin</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y trasgo. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo dracónico, enano, infernal, gigante y orco también.</field>
+    </object>
+    <object pk="81" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características orcas</field>
+        <field type="CharField" name="descripcion">+4 fuerza, -2 inteligencia, -2 sabiduría, -2 carisma.</field>
+    </object>
+    <object pk="82" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Ferocidad</field>
+        <field type="CharField" name="descripcion">Un orco permanece consciente y puede seguir luchando incluso si su total de puntos de golpe es menor de 0. El orco todavía está grogui y pierde 1 punto de golpe cada asalto. Un orco todavía muere cuando sus puntos de golpe totales alcanzan un total negativo igual a su puntuación de constitución.</field>
+    </object>
+    <object pk="83" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Familiaridad con las armas orcas</field>
+        <field type="CharField" name="descripcion">Son competentes con grandes hachas y alfanjones y tratan cualquier arma con la palabra “orco” en su nombre como un arma marcial.</field>
+    </object>
+    <object pk="84" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas orcos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y orco. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo enano, gigante, gnoll, infracomún y trasgo también.</field>
+    </object>
+    <object pk="85" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características tengu</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 sabiduría, -2 constitución.</field>
+    </object>
+    <object pk="86" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Furtivo tengu</field>
+        <field type="CharField" name="descripcion">+2 a las pruebas de percepción y sigilo.</field>
+    </object>
+    <object pk="87" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Lingüista dotado</field>
+        <field type="CharField" name="descripcion">+4 a las pruebas de lingüística. Además aprenden 2 idiomas en vez de 1 cada vez que ganan un rango en la habilidad lingüística.</field>
+    </object>
+    <object pk="88" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Entrenado en espadas</field>
+        <field type="CharField" name="descripcion">Son competentes con armas similares a la espada (incluyendo espadas bastardas, dagas, espadas curvas elfas, alfanjotes, espadones, kukris, espadas largas, puñales, estoques, cimitarras, espadas cortas y espadas de dos hojas).</field>
+    </object>
+    <object pk="89" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Arma natural tengu</field>
+        <field type="CharField" name="descripcion">Tienen un ataque natural de mordisco que causa 1d6 de daño. Es un ataque primario, o un ataque secundario si el tengu lleva un arma.</field>
+    </object>
+    <object pk="90" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas tengu</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y tengu. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo cualquier otro idioma también.</field>
+    </object>
+    <object pk="91" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características sirénidos</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 constitución, +2 carisma.</field>
+    </object>
+    <object pk="92" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Acuático</field>
+        <field type="CharField" name="descripcion">Son acuáticos y pueden respirar agua. Su velocidad terrestre es de 1.5 metros, pero su velocidad nadando es de 15 metros.</field>
+    </object>
+    <object pk="93" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas sirénidos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y acuano. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo aboleth, aklo, dracónico, élfico, sahuahin y silvano también.</field>
+    </object>
+    <object pk="94" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características tiefling</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 inteligencia, -2 carisma.</field>
+    </object>
+    <object pk="95" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Habilidosos tieflings</field>
+        <field type="CharField" name="descripcion">+2 a las pruebas de engañar y sigilo.</field>
+    </object>
+    <object pk="96" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Aptitud sortílega tieflings</field>
+        <field type="CharField" name="descripcion">Pueden usar Oscuridad una vez al día como aptitud sortílega. El nivel de lanzador para esta aptitud es igual al nivel de clase del tiefling.</field>
+    </object>
+    <object pk="97" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia infernal</field>
+        <field type="CharField" name="descripcion">Tienen resistencia 5 al fuego, frío y electricidad.</field>
+    </object>
+    <object pk="98" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Hechicería infernal</field>
+        <field type="CharField" name="descripcion">Los hechiceros tiefling con linaje abisal o infernal tratan su puntuación de carisma como si fuera 2 puntos mayor para todas las aptitudes de clase de hechicero.</field>
+    </object>
+    <object pk="99" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas tieflings</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y pueden elegir entre abisal e infernal. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo abisal, dracónico, enano, élfico, gnomo, trasgo, mediano, infernal y orco también.</field>
+    </object>
+    <object pk="100" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características goblin</field>
+        <field type="CharField" name="descripcion">-2 fuerza, +4 destreza, -2 carisma.</field>
+    </object>
+    <object pk="101" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Experto goblin</field>
+        <field type="CharField" name="descripcion">+4 a las pruebas de montar y sigilo.</field>
+    </object>
+    <object pk="102" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas goblin</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan trasgo. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo común, dracónico, enano, gnoll, gnomo, mediano y orco también.</field>
+    </object>
+    <object pk="103" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características fetchling</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 carisma, -2 sabiduría.</field>
+    </object>
+    <object pk="104" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Habilidoso fetchling</field>
+        <field type="CharField" name="descripcion">+2 a las pruebas de saber(los planos) y sigilo.</field>
+    </object>
+    <object pk="105" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Fundirse con las sombras</field>
+        <field type="CharField" name="descripcion">Los ataques contra un aparecido en luz tenue tienen una probabilidad de fallo del 50%, en lugar del 20% habitual. Esta aptitud no concede ocultación total, sólo aumenta la probabilidad de fallo.</field>
+    </object>
+    <object pk="106" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia al frío y electricidad</field>
+        <field type="CharField" name="descripcion">Tienen resistencia 5 al frío y la electricidad.</field>
+    </object>
+    <object pk="107" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Aptitudes sortílegas fetchling</field>
+        <field type="CharField" name="descripcion">Puede usar Disfrazarse una vez al día como aptitud sortílega. Puede adoptar la forma de cualquier criatura humanoide usando esta aptitud sortílega. Cuando un aparecido llega a nivel 9, obtiene Caminar por la sombra (sólo le afecta a él) como aptitud sortílega utilizable una vez al día y a nivel 13, obtiene Desplazamiento de plano (sólo le afecta a él y sólo puede viajar hacia el Plano de la Sombra o al Plano Material) utilizable una vez al día. El nivel de lanzador del aparecido es igual a su nivel de personaje.</field>
+    </object>
+    <object pk="108" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas fetchling</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo aklo, acuano, aurano, dracónico, ígnaro y terrano también.</field>
+    </object>
+    <object pk="109" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características dhampiros</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 carisma, -2 constitución.</field>
+    </object>
+    <object pk="110" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Manipulador</field>
+        <field type="CharField" name="descripcion">+2 a las pruebas de engañar y percepción.</field>
+    </object>
+    <object pk="111" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia muertos vivientes</field>
+        <field type="CharField" name="descripcion">+2 a las tiradas de salvación contra enfermedades y efectos enajenadores.</field>
+    </object>
+    <object pk="112" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Afinidad con la energía negativa</field>
+        <field type="CharField" name="descripcion">La energía positiva los daña y la negativa los cura.</field>
+    </object>
+    <object pk="113" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Aptitud sortílega dhampiros</field>
+        <field type="CharField" name="descripcion">Puede usar Detectar muertos vivientes tres veces al día como aptitud sortílega. El nivel de lanzador para esta aptitud es igual al nivel de personaje del dhampiro.</field>
+    </object>
+    <object pk="114" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas dhampiros</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo cualquier otro idioma(excepto idiomas secretos como el duídrico) también.</field>
+    </object>
+    <object pk="115" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características efrits</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 carisma, -2 sabiduría.</field>
+    </object>
+    <object pk="116" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Aptitud sortílega efrits</field>
+        <field type="CharField" name="descripcion">Puede usar Manos ardientes 1 vez al día usando su nivel de personaje como nivel de lanzador.</field>
+    </object>
+    <object pk="117" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia elemental efrits</field>
+        <field type="CharField" name="descripcion">Tienen resistencia 5 al fuego.</field>
+    </object>
+    <object pk="118" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Afinidad elemental efrits</field>
+        <field type="CharField" name="descripcion">Los hechiceros efrit con el linaje elemental fuego tratan su puntuación de carisma como si fuera 2 puntos mayor para todos los conjuros y aptitudes de clase de hechicero. Los clérigos efrit con el dominio de fuego usan sus poderes de dominio y conjuros con +1 nivel de lanzador.</field>
+    </object>
+    <object pk="119" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas efrits</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común e ígnaro. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo acuano, aurano, enano, élfico, gnomo, mediano y terrano también.</field>
+    </object>
+    <object pk="120" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características gripos</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 sabiduría, -2 fuerza</field>
+    </object>
+    <object pk="121" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Velocidad gripos</field>
+        <field type="CharField" name="descripcion">Tienen una velocidad de 9 metros a pie y de 6 metros trepando.</field>
+    </object>
+    <object pk="122" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Camuflaje</field>
+        <field type="CharField" name="descripcion">+4 a las pruebas de sigilo en pantanos o áreas boscosas.</field>
+    </object>
+    <object pk="123" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Zancada pantanosa</field>
+        <field type="CharField" name="descripcion">Puede moverse a través de terreno difícil a su índice normal de movimiento mientras esté en un pantano. El terreno mágicamente alterado lo afecta de forma normal.</field>
+    </object>
+    <object pk="124" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Familiaridad con las armas gripo</field>
+        <field type="CharField" name="descripcion">Son competentes con las redes.</field>
+    </object>
+    <object pk="125" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas gripos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y gripo. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo boggard, dracónico, élfico, gnomo, trasgo y silvano también.</field>
+    </object>
+    <object pk="126" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características oréades</field>
+        <field type="CharField" name="descripcion">+2 fuerza, +2 constitución, -2 carisma.</field>
+    </object>
+    <object pk="127" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Aptitud sortílega oréades</field>
+        <field type="CharField" name="descripcion">Pueden usar Piedra mágica 1 vez al día usando su nivel de personaje como nivel de lanzador.</field>
+    </object>
+    <object pk="128" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia elemental oréades</field>
+        <field type="CharField" name="descripcion">Tienen resistencia al ácido 5.</field>
+    </object>
+    <object pk="129" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Afinidad elemental oréades</field>
+        <field type="CharField" name="descripcion">Los hechiceros oréades con el linaje elemental tierra tratan su puntuación de carisma como si fuera 2 puntos mayor para todo los conjuros y aptitudes de clase de hechicero. Los clérigos oréades con el dominio de tierra usan sus poderes de dominio y conjuros con +1 nivel de lanzador.</field>
+    </object>
+    <object pk="130" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas oréades</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y terrano. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo acuano, aurano, enano, élfico, gnomo, mediano, ígnaro e infracomún también.</field>
+    </object>
+    <object pk="131" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características silfos</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 inteligencia, -2 constitución.</field>
+    </object>
+    <object pk="132" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Aptitud sortílega silfos</field>
+        <field type="CharField" name="descripcion">Pueden usar Caída de pluma 1 vez al día usando su nivel de personaje como nivel de lanzador.</field>
+    </object>
+    <object pk="133" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia elemental silfos</field>
+        <field type="CharField" name="descripcion">Tienen resistencia a la electricidad 5.</field>
+    </object>
+    <object pk="134" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Afinidad elemental silfos</field>
+        <field type="CharField" name="descripcion">Los hechiceros silfos con linaje elemental aire tratan su puntuación de carisma como si fuera 2 puntos mayor para todos los conjuros y aptitudes de clase de hechicero. Los clérigos silfos con el dominio de aire usan sus poderes de dominio y conjuros con +1 nivel de lanzador.</field>
+    </object>
+    <object pk="135" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas silfos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y aurano. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo acuano, enano, élfico, gnomo, mediano, ígnaro y terrano también.</field>
+    </object>
+    <object pk="136" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características ondinas</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 sabiduría, -2 fuerza.</field>
+    </object>
+    <object pk="137" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Velocidad ondinas</field>
+        <field type="CharField" name="descripcion">Tienen una velocidad nadando de 9 metros.</field>
+    </object>
+    <object pk="138" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Aptitud sortílega ondinas</field>
+        <field type="CharField" name="descripcion">Pueden usar Empujon hidráulico 1 vez al día usando su nivel de personaje como nivel de laznador.</field>
+    </object>
+    <object pk="139" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia elemental ondinas</field>
+        <field type="CharField" name="descripcion">Tienen resistencia al frío 5.</field>
+    </object>
+    <object pk="140" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Afinidad elemental ondinas</field>
+        <field type="CharField" name="descripcion">Las hechiceras ondinas con el linaje de elemental agua tratan su puntuación de carisma como si fuera 2 puntos mayor para todos los conjuros y aptitudes de clase de hechicero. Las clérigas ondinas con el dominio de agua usan sus poderes de dominio y conjuros con +1 nivel de lanzador.</field>
+    </object>
+    <object pk="141" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas ondinas</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y acuano. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo aurano, enano, élfico, gnomo, mediano, ígnaro y terrano también.</field>
+    </object>
+    <object pk="142" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características félidos</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 sabiduría, -2 carimas.</field>
+    </object>
+    <object pk="143" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Suerte del gato</field>
+        <field type="CharField" name="descripcion">Una vez al día cuando un félido haga un tiro de salvación de reflejos, puede hacer la tirada dos veces y elegir el mejor resultado. Debe decidir si usa esta aptitud antes de hacer la primera tirada.</field>
+    </object>
+    <object pk="144" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Velocista</field>
+        <field type="CharField" name="descripcion">Obtiene un bonificador de 3 metros cuando usa acciones de cargar, correr o retirarse.</field>
+    </object>
+    <object pk="145" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Cazador natural</field>
+        <field type="CharField" name="descripcion">+2 a las pruebas de percepción, sigilo y supervivencia.</field>
+    </object>
+    <object pk="146" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas félidos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y félido. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo élfico, gnoll, gnomo, trasgo, mediano, orco y silvano también.</field>
+    </object>
+    <object pk="147" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características rátidos</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 inteligencia, -2 fuerza.</field>
+    </object>
+    <object pk="148" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Experimentador</field>
+        <field type="CharField" name="descripcion">+2 a las pruebas de artesanía (alquimia), percepción y usar objeto mágico.</field>
+    </object>
+    <object pk="149" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Empatía con roedores</field>
+        <field type="CharField" name="descripcion">+4 a las pruebas de trato con animales para influenciar roedores.</field>
+    </object>
+    <object pk="150" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Enjambre</field>
+        <field type="CharField" name="descripcion">Hasta dos rátidos pueden compartir la misma casilla al mismo tiempo. Si dos rátidos de la misma casilla atacan al mismo enemigo, se considera que están flanqueando a ese enemigo como si estuvieran en dos casillas opuestas.</field>
+    </object>
+    <object pk="151" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas rátidos</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y rátido. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo aklo, dracónico, enano, gnoll, gnomo, trasgo, mediano, orco e infracomún también.</field>
+    </object>
+    <object pk="152" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características suli</field>
+        <field type="CharField" name="descripcion">+2 fuerza, +2 carisma, -2 inteligencia.</field>
+    </object>
+    <object pk="153" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Negociador</field>
+        <field type="CharField" name="descripcion">+2 a las pruebas de averiguar intenciones y diplomacia.</field>
+    </object>
+    <object pk="154" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Asalto elemental</field>
+        <field type="CharField" name="descripcion">Una vez al día, como acción rápida, un suli puede envolver sus brazos en ácido, frío, electricidad o fuego. Los impactos sin arma hechos con sus codos o manos (o los ataques con armas que sujete con esas manos) causan +1d6 puntos de daño del tipo de energía apropiado. Esto dura 1 asalto por nivel de personaje. El suli puede finalizar antes los efectos de su poder elemental como acción gratuita.</field>
+    </object>
+    <object pk="155" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia elemental suli</field>
+        <field type="CharField" name="descripcion">Tienen resistencia 5 al frío, fuego, electricidad y ácido.</field>
+    </object>
+    <object pk="156" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas suli</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan un idioma elemental a su elección(acuano, aurano, ígnaro, terrano). Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo acuano, aurano, ígnaro y terrano también.</field>
+    </object>
+    <object pk="157" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características vanara</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 sabiduría, -2 carisma.</field>
+    </object>
+    <object pk="158" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Velocidad trepando</field>
+        <field type="CharField" name="descripcion">Tienen velocidad trepando de 6 metros.</field>
+    </object>
+    <object pk="159" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Ágil</field>
+        <field type="CharField" name="descripcion">+2 a las pruebas de acrobacias y sigilo.</field>
+    </object>
+    <object pk="160" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Cola prensil</field>
+        <field type="CharField" name="descripcion">Los vanara poseen largas colas flexibles que pueden usar para transportar objetos. No pueden blandir armas con sus colas, pero les permiten recuperar pequeños objetos que lleven guardados como acción rápida.</field>
+    </object>
+    <object pk="161" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas vanaras</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y vanarano. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo aklo, celestial, élfico, gnomo, trasgo y silvano también.</field>
+    </object>
+    <object pk="162" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Bonificadores de características vishkanya</field>
+        <field type="CharField" name="descripcion">+2 destreza, +2 carisma, -2 sabiduría.</field>
+    </object>
+    <object pk="163" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Flexible</field>
+        <field type="CharField" name="descripcion">+2 a las pruebas de escapismo y sigilo.</field>
+    </object>
+    <object pk="164" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Resistencia a venenos</field>
+        <field type="CharField" name="descripcion">Tienen un bonificador a las tiradas de salvación contra venenos igual a su nivel de personaje.</field>
+    </object>
+    <object pk="165" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Uso de venenos vishkanya</field>
+        <field type="CharField" name="descripcion">Nunca se envenenan accidentalmente a sí mismos cuando usan o aplican un veneno.</field>
+    </object>
+    <object pk="166" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Tóxico</field>
+        <field type="CharField" name="descripcion">Un número de veces al día igual a su modificador de constitución(mínimo 1/día), un vishkanya puede envenenar un arma que porte con su saliva o sangre tóxica(usar la sangre requiere que el vishkanya sea herido cuando usa esta aptitud). Aplicar el veneno de esta forma es una acción rápida.</field>
+    </object>
+    <object pk="167" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Veneno de vishkanya</field>
+        <field type="CharField" name="descripcion">Herida; salvación Fort CD 10 + la mitad del nivel del vishkanya + el modificador de constitución del vishkanya; frecuencia 1/asalto durante 6 asaltos; efecto 1d2 destreza; cura 1 salvación.</field>
+    </object>
+    <object pk="168" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Familiaridad con las armas vishkanya</field>
+        <field type="CharField" name="descripcion">Son competentes con cerbatana, kukri y shuriken.</field>
+    </object>
+    <object pk="169" model="main.bonificacionraza">
+        <field type="CharField" name="nombre">Idiomas vishkanyas</field>
+        <field type="CharField" name="descripcion">Inicialmente hablan común y vishkanya. Sin embargo, los que tienen una inteligencia alta pueden empezar conociendo aklo, dracónico, élfico, silvano e infracomún también.</field>
+    </object>
 <!--RAZAS-->
+    <!--ELFO-->
+    <object pk="1" model="main.raza">
+        <field type="CharField" name="raza">Elfo</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="constitucion">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, élfico</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="21"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="27"></object>
+        </field>
+    </object>
+    <!--ENANO-->
+    <object pk="2" model="main.raza">
+        <field type="CharField" name="raza">Enano</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">6 metros</field>
+        <field type="IntegerField" name="constitucion">2</field>
+        <field type="IntegerField" name="sabiduria">2</field>
+        <field type="IntegerField" name="carisma">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, enano</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="11"></object>
+            <object pk="13"></object>
+            <object pk="18"></object>
+            <object pk="21"></object>
+            <object pk="20"></object>
+            <object pk="16"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="9"></object>
+            <object pk="2"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+        </field>
+    </object>
+    <!--GNOMO-->
+    <object pk="3" model="main.raza">
+        <field type="CharField" name="raza">Gnomo</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">6 metros</field>
+        <field type="IntegerField" name="constitucion">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="IntegerField" name="fuerza">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, gnomo, silvano</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="7"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="18"></object>
+            <object pk="21"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="4"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+        </field>
+    </object>
+    <!--HUMANO-->
+    <object pk="4" model="main.raza">
+        <field type="CharField" name="raza">Humano</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="CharField" name="idiomas_conocidos">Común</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="30"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+        </field>
+    </object>
+    <!--MEDIANO-->
+    <object pk="5" model="main.raza">
+        <field type="CharField" name="raza">Mediano</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">6 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="IntegerField" name="fuerza">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, mediano</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+            <object pk="20"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="34"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="27"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+        </field>
+    </object>
+    <!--SEMIELFO-->
+    <object pk="6" model="main.raza">
+        <field type="CharField" name="raza">Semielfo</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="CharField" name="idiomas_conocidos">Común, élfico</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="40"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="5"></object>
+            <object pk="27"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+        </field>
+    </object>
+    <!--SEMIORCO-->
+    <object pk="7" model="main.raza">
+        <field type="CharField" name="raza">Semiorco</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="CharField" name="idiomas_conocidos">Común, orco</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="7"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="21"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="45"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="11"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+        </field>
+    </object>
+    <!--AASIMAR-->
+    <object pk="8" model="main.raza">
+        <field type="CharField" name="raza">Aasimar</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="sabiduria">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, celestial</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="7"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+            <object pk="17"></object>
+            <object pk="19"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="51"></object>
+            <object pk="52"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="11"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+        </field>
+    </object>
+    <!--DROW-->
+    <object pk="9" model="main.raza">
+        <field type="CharField" name="raza">Drow</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="IntegerField" name="constitucion">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Élfico, infracomún</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="13"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="57"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="58"></object>
+            <object pk="5"></object>
+            <object pk="27"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+        </field>
+    </object>
+    <!--DUERGAR-->
+    <object pk="10" model="main.raza">
+        <field type="CharField" name="raza">Duergar</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">6 metros</field>
+        <field type="IntegerField" name="constitucion">2</field>
+        <field type="IntegerField" name="sabiduria">2</field>
+        <field type="IntegerField" name="carisma">-4</field>
+        <field type="CharField" name="idiomas_conocidos">Común, enano, infracomún</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="7"></object>
+            <object pk="11"></object>
+            <object pk="18"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="65"></object>
+            <object pk="2"></object>
+            <object pk="10"></object>
+            <object pk="58"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+        </field>
+    </object>
+    <!--SVIRFNEBLIN-->
+    <object pk="11" model="main.raza">
+        <field type="CharField" name="raza">Svirfneblin</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">6 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="sabiduria">2</field>
+        <field type="IntegerField" name="carisma">-4</field>
+        <field type="IntegerField" name="fuerza">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Gnomo, infracomún</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="18"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="70"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="71"></object>
+            <object pk="4"></object>
+            <object pk="58"></object>
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="17"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+        </field>
+    </object>
+    <!--HOBGOBLIN-->
+    <object pk="12" model="main.raza">
+        <field type="CharField" name="raza">Hobgoblin</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="constitucion">2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, trasgo</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="15"></object>
+            <object pk="18"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="11"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+        </field>
+    </object>
+    <!--ORCO-->
+    <object pk="13" model="main.raza">
+        <field type="CharField" name="raza">Orco</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="fuerza">4</field>
+        <field type="IntegerField" name="inteligencia">-2</field>
+        <field type="IntegerField" name="sabiduria">-2</field>
+        <field type="IntegerField" name="carisma">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, orco</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="16"></object>
+            <object pk="21"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="81"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="82"></object>
+            <object pk="68"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+        </field>
+    </object>
+    <!--TENGU-->
+    <object pk="14" model="main.raza">
+        <field type="CharField" name="raza">Tengu</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="sabiduria">2</field>
+        <field type="IntegerField" name="constitucion">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, tengu</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+        </field>
+    </object>
+    <!--SIRÉNIDO-->
+    <object pk="15" model="main.raza">
+        <field type="CharField" name="raza">Sirénido</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">1.5 metros(tierra). 15 metros(agua)</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="constitucion">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, acuano</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="23"></object>
+            <object pk="2"></object>
+            <object pk="7"></object>
+            <object pk="9"></object>
+            <object pk="24"></object>
+            <object pk="19"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="91"></object>
+            <object pk="2"></object>
+            <object pk="92"></object>
+            <object pk="4"></object>
+            <object pk="93"></object>
+        </field>
+    </object>
+    <!--TIEFLING-->
+    <object pk="16" model="main.raza">
+        <field type="CharField" name="raza">Tiefling</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="carisma">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="7"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+            <object pk="21"></object>
+            <object pk="17"></object>
+            <object pk="15"></object>
+            <object pk="18"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="51"></object>
+            <object pk="94"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="11"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+        </field>
+    </object>
+    <!--GOBLIN-->
+    <object pk="17" model="main.raza">
+        <field type="CharField" name="raza">Goblin</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">4</field>
+        <field type="IntegerField" name="fuerza">-2</field>
+        <field type="IntegerField" name="carisma">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Trasgo</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="100"></object>
+            <object pk="21"></object>
+            <object pk="3"></object>
+            <object pk="11"></object>
+            <object pk="101"></object>
+            <object pk="102"></object>
+        </field>
+    </object>
+    <!--FETCHLING-->
+    <object pk="18" model="main.raza">
+        <field type="CharField" name="raza">Fetchling</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="IntegerField" name="sabiduria">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="7"></object>
+            <object pk="14"></object>
+            <object pk="20"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="103"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="11"></object>
+            <object pk="104"></object>
+            <object pk="105"></object>
+            <object pk="106"></object>
+            <object pk="107"></object>
+            <object pk="108"></object>
+        </field>
+    </object>
+    <!--DHAMPIRO-->
+    <object pk="19" model="main.raza">
+        <field type="CharField" name="raza">Dhampiro</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="IntegerField" name="constitucion">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="109"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="11"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="68"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+        </field>
+    </object>
+    <!--EFRIT-->
+    <object pk="20" model="main.raza">
+        <field type="CharField" name="raza">Efrit</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="IntegerField" name="sabiduria">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, ígnaro</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+            <object pk="17"></object>
+            <object pk="20"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="115"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="11"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+        </field>
+    </object>
+    <!--GRIPO-->
+    <object pk="21" model="main.raza">
+        <field type="CharField" name="raza">Gripo</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">9 metros(tierra). 6 metros(trepando)</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="sabiduria">2</field>
+        <field type="IntegerField" name="fuerza">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, gripo</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="27"></object>
+            <object pk="7"></object>
+            <object pk="9"></object>
+            <object pk="13"></object>
+            <object pk="21"></object>
+            <object pk="19"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="120"></object>
+            <object pk="21"></object>
+            <object pk="121"></object>
+            <object pk="11"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+        </field>
+    </object>
+    <!--ORÉADE-->
+    <object pk="22" model="main.raza">
+        <field type="CharField" name="raza">Oréade</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="fuerza">2</field>
+        <field type="IntegerField" name="sabiduria">2</field>
+        <field type="IntegerField" name="carisma">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, terrano</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+            <object pk="17"></object>
+            <object pk="14"></object>
+            <object pk="16"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="126"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="11"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+        </field>
+    </object>
+    <!--SILFO-->
+    <object pk="23" model="main.raza">
+        <field type="CharField" name="raza">Silfo</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="constitucion">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, aurano</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+            <object pk="17"></object>
+            <object pk="14"></object>
+            <object pk="20"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="131"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="11"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+        </field>
+    </object>
+    <!--ONDINA-->
+    <object pk="24" model="main.raza">
+        <field type="CharField" name="raza">Ondina</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros(tierra y agua)</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="sabiduria">2</field>
+        <field type="IntegerField" name="fuerza">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, acuano</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="4"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+            <object pk="17"></object>
+            <object pk="14"></object>
+            <object pk="20"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="136"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="137"></object>
+            <object pk="11"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+        </field>
+    </object>
+    <!--FÉLIDO-->
+    <object pk="25" model="main.raza">
+        <field type="CharField" name="raza">Félido</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="IntegerField" name="sabiduria">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, félido</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="21"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="142"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="143"></object>
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+        </field>
+    </object>
+    <!--RÁTIDO-->
+    <object pk="26" model="main.raza">
+        <field type="CharField" name="raza">Rátido</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">6 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="fuerza">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, rátido</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="21"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="16"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="147"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="11"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+        </field>
+    </object>
+    <!--SULI-->
+    <object pk="27" model="main.raza">
+        <field type="CharField" name="raza">Suli</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="fuerza">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="IntegerField" name="inteligencia">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="7"></object>
+            <object pk="14"></object>
+            <object pk="20"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="152"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="156"></object>
+        </field>
+    </object>
+    <!--VANARA-->
+    <object pk="28" model="main.raza">
+        <field type="CharField" name="raza">Vanara</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros(tierra). 6 metros (trepando)</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="sabiduria">2</field>
+        <field type="IntegerField" name="carisma">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, vanarano</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="5"></object>
+            <object pk="9"></object>
+            <object pk="13"></object>
+            <object pk="21"></object>
+            <object pk="19"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="157"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="158"></object>
+            <object pk="4"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+        </field>
+    </object>
+    <!--VISHKANYA-->
+    <object pk="29" model="main.raza">
+        <field type="CharField" name="raza">Vishkanya</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="carisma">2</field>
+        <field type="IntegerField" name="sabiduria">-2</field>
+        <field type="CharField" name="idiomas_conocidos">Común, vishkanya</field>
+        <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="7"></object>
+            <object pk="9"></object>
+            <object pk="21"></object>
+            <object pk="19"></object>
+            <object pk="16"></object>
+        </field>
+        <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
+            <object pk="162"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="27"></object>
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="165"></object>
+            <object pk="166"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+        </field>
+    </object>
+<!--HABILIDADES-->
+    <object pk="1" model="main.habilidad">
+        <field type="CharField" name="habilidad">Acrobacias</field>
+        <field type="CharField" name="caracteristica">Des</field>
+    </object>
+    <object pk="2" model="main.habilidad">
+        <field type="CharField" name="habilidad">Artesanía(alquimia)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="3" model="main.habilidad">
+        <field type="CharField" name="habilidad">Artesanía(arcos)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="4" model="main.habilidad">
+        <field type="CharField" name="habilidad">Artesanía(armaduras)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="5" model="main.habilidad">
+        <field type="CharField" name="habilidad">Artesanía(armas)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="6" model="main.habilidad">
+        <field type="CharField" name="habilidad">Artesanía(trampas)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="7" model="main.habilidad">
+        <field type="CharField" name="habilidad">Artesanía(varios)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="8" model="main.habilidad">
+        <field type="CharField" name="habilidad">Averiguar intenciones</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="9" model="main.habilidad">
+        <field type="CharField" name="habilidad">Conocimiento de conjuros</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="10" model="main.habilidad">
+        <field type="CharField" name="habilidad">Curar</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="11" model="main.habilidad">
+        <field type="CharField" name="habilidad">Diplomacia</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="12" model="main.habilidad">
+        <field type="CharField" name="habilidad">Disfrazarse</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="13" model="main.habilidad">
+        <field type="CharField" name="habilidad">Engañar</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="14" model="main.habilidad">
+        <field type="CharField" name="habilidad">Escapismo</field>
+        <field type="CharField" name="caracteristica">Des</field>
+    </object>
+    <object pk="15" model="main.habilidad">
+        <field type="CharField" name="habilidad">Interpretar(actuar)</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="16" model="main.habilidad">
+        <field type="CharField" name="habilidad">Interpretar(canto)</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="17" model="main.habilidad">
+        <field type="CharField" name="habilidad">Interpretar(comedia)</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="18" model="main.habilidad">
+        <field type="CharField" name="habilidad">Interpretar(danza)</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="19" model="main.habilidad">
+        <field type="CharField" name="habilidad">Interpretar(cuerda)</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="20" model="main.habilidad">
+        <field type="CharField" name="habilidad">Interpretar(percusion)</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="21" model="main.habilidad">
+        <field type="CharField" name="habilidad">Interpretar(teclado)</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="22" model="main.habilidad">
+        <field type="CharField" name="habilidad">Interpretar(viento)</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="23" model="main.habilidad">
+        <field type="CharField" name="habilidad">Interpretar(oratoria)</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="24" model="main.habilidad">
+        <field type="CharField" name="habilidad">Intimidar</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="25" model="main.habilidad">
+        <field type="CharField" name="habilidad">Inutilizar mecanismos</field>
+        <field type="CharField" name="caracteristica">Des</field>
+    </object>
+    <object pk="26" model="main.habilidad">
+        <field type="CharField" name="habilidad">Juego de manos</field>
+        <field type="CharField" name="caracteristica">Des</field>
+    </object>
+    <object pk="27" model="main.habilidad">
+        <field type="CharField" name="habilidad">Lingüística</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="28" model="main.habilidad">
+        <field type="CharField" name="habilidad">Montar</field>
+        <field type="CharField" name="caracteristica">Des</field>
+    </object>
+    <object pk="29" model="main.habilidad">
+        <field type="CharField" name="habilidad">Nadar</field>
+        <field type="CharField" name="caracteristica">Fue</field>
+    </object>
+    <object pk="30" model="main.habilidad">
+        <field type="CharField" name="habilidad">Percepción</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="31" model="main.habilidad">
+        <field type="CharField" name="habilidad">Profesión(boticario)</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="32" model="main.habilidad">
+        <field type="CharField" name="habilidad">Profesión(cocinero)</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="33" model="main.habilidad">
+        <field type="CharField" name="habilidad">Profesión(curtidor)</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="34" model="main.habilidad">
+        <field type="CharField" name="habilidad">Profesión(herrero)</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="35" model="main.habilidad">
+        <field type="CharField" name="habilidad">Profesión(leñador)</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="36" model="main.habilidad">
+        <field type="CharField" name="habilidad">Profesión(marinero)</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="37" model="main.habilidad">
+        <field type="CharField" name="habilidad">Profesión(minero)</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="38" model="main.habilidad">
+        <field type="CharField" name="habilidad">Profesión(pescador)</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="39" model="main.habilidad">
+        <field type="CharField" name="habilidad">Profesión(posadero)</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="40" model="main.habilidad">
+        <field type="CharField" name="habilidad">Saber(arcano)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="41" model="main.habilidad">
+        <field type="CharField" name="habilidad">Saber(dungeons)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="42" model="main.habilidad">
+        <field type="CharField" name="habilidad">Saber(geografía)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="43" model="main.habilidad">
+        <field type="CharField" name="habilidad">Saber(historia)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="44" model="main.habilidad">
+        <field type="CharField" name="habilidad">Saber(ingeniería)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="45" model="main.habilidad">
+        <field type="CharField" name="habilidad">Saber(local)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="46" model="main.habilidad">
+        <field type="CharField" name="habilidad">Saber(los planos)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="47" model="main.habilidad">
+        <field type="CharField" name="habilidad">Saber(naturaleza)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="48" model="main.habilidad">
+        <field type="CharField" name="habilidad">Saber(nobleza)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="49" model="main.habilidad">
+        <field type="CharField" name="habilidad">Saber(religión)</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="50" model="main.habilidad">
+        <field type="CharField" name="habilidad">Sigilo</field>
+        <field type="CharField" name="caracteristica">Des</field>
+    </object>
+    <object pk="51" model="main.habilidad">
+        <field type="CharField" name="habilidad">Supervivencia</field>
+        <field type="CharField" name="caracteristica">Sab</field>
+    </object>
+    <object pk="52" model="main.habilidad">
+        <field type="CharField" name="habilidad">Tasación</field>
+        <field type="CharField" name="caracteristica">Int</field>
+    </object>
+    <object pk="53" model="main.habilidad">
+        <field type="CharField" name="habilidad">Trato con animales</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="54" model="main.habilidad">
+        <field type="CharField" name="habilidad">Trepar</field>
+        <field type="CharField" name="caracteristica">Fue</field>
+    </object>
+    <object pk="55" model="main.habilidad">
+        <field type="CharField" name="habilidad">Usar objeto mágico</field>
+        <field type="CharField" name="caracteristica">Car</field>
+    </object>
+    <object pk="56" model="main.habilidad">
+        <field type="CharField" name="habilidad">Volar</field>
+        <field type="CharField" name="caracteristica">Des</field>
+    </object>
 </django-objects>
