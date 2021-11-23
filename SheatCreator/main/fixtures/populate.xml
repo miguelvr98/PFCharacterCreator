@@ -2392,4 +2392,8 @@
         <field type="CharField" name="nombre">Maestro cazador</field>
         <field type="CharField" name="descripcion">Un explorador de nivel 20 se convierte en un maestro cazador. Siempre puede moverse a velocidad completa utilizando supervivencia para seguir rastros sin penalización. Puede, como acción estándar, hacer un único ataque contra su enemigo predilecto con el bonificador de ataque completo. Si el ataque impacta, el blanco recibe el daño normalmente y debe hacer una tirada de salvación de fortaleza o morir. La CD de esta tirada de salvación es igual a 10 + 1/2 del nivel del explorador + el modificador de sabiduría del explorador. Un explorador también puede elegir causar una cantidad de daño atenuado igual a los puntos de vida actuales de la criatura. Una tirada de salvación con éxito niega este daño. Un explorador puede utilizar esta aptitud una vez al día contra cada tipo de enemigo predilecto que posea, pero no contra la misma criatura más de una vez en un periodo de 24 horas.</field>
     </object>
+    <object pk="73" model="main.especial">
+        <field type="CharField" name="nombre">Competencias con el guerrero</field>
+        <field type="CharField" name="descripcion">Un guerrero es competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+    </object>
 </django-objects>
