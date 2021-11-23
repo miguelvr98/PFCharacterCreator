@@ -62,9 +62,9 @@ class Personaje(models.Model):
     dotes = models.ManyToManyField('Dote')
     puntuaciones_habilidad = models.ManyToManyField('PuntuacionHabilidad')
     propiedades_objeto = models.ManyToManyField('PropiedadObjeto')
-    companero_animal = models.ForeignKey('CompaneroAnimal', on_delete=models.CASCADE, null=True)
-    objetos = models.ManyToManyField('Objeto')
+    companero_animal = models.ForeignKey('CompaneroAnimalPersonaje', on_delete=models.CASCADE, null=True)
     conjuros_conocidos = models.ManyToManyField('Conjuro')
+    poderes_conocidos = models.ManyToManyField('Poder')
 
     def BonificadorFuerza(self):
         return int((fuerza-10)/2)
@@ -175,10 +175,12 @@ class Personaje(models.Model):
         dano_desarmado = models.TextField(verbose_name='Daño desarmado', null = True)
         bonificacion_ac = models.IntegerField(verbose_name='Bonificación AC', null = True)
         movimiento_rapido = models.IntegerField(verbose_name='Movimiento rápido', null =True)
+        puntos_de_habilidad_por_nivel = models.TextField(verbose_name='Puntos de habilidad por nivel', null=True)
         nivel_conjuro_diario = models.ManyToManyField('NivelConjuroDiario')
+        cantidad_conjuros_conocidos = models.ManyToManyField('CantidadConjuroConocido')
         poderes = models.ManyToManyField('Poder')
         especiales = models.ManyToManyField('Especial')
-        companero_animal = models.ManyToManyField('CompaneroAnimal', default=False)
+        companero_animal = models.ManyToManyField('CompaneroAnimal')
         habilidad = models.ManyToManyField('Habilidad')
 
         def __str__(self):
@@ -249,18 +251,28 @@ class Personaje(models.Model):
 
     class NivelConjuroDiario(models.Model):
         cantidad = models.IntegerField(verbose_name='Cantidad')
+        nivel = models.IntegerField(verbose_name='Nivel', null=True)
 
         def __str__(self):
-            return cantidad
+            return str(nivel)+": "+str(cantidad)
         
         class Meta:
-            ordering = ('pk', )
+            ordering = ('nivel', )
+
+    class CantidadConjuroConocido(models.Model):
+        cantidad = models.IntegerField(verbose_name='Cantidad')
+        nivel = models.IntegerField(verbose_name='Nivel')
+
+        def __str__(self):
+            return str(nivel)+": "+str(cantidad)
+        
+        class Meta:
+            ordering = ('nivel', )
 
     class Especial(models.Model):
         nombre = models.TextField(verbose_name='Nombre')
         descripcion = models.TextField(verbose_name='Descripción')
-        nivel = models.IntegerField(verbose_name='Nivel', null=True)
-        es_especial_companero_animal = models.BooleanField(verbose_name='Es especial de compañero animal')
+        es_especial_companero_animal = models.BooleanField(verbose_name='Es especial de compañero animal', default=False)
 
         def __str__(self):
             return nombre
@@ -269,7 +281,7 @@ class Personaje(models.Model):
             ordering = ('nombre', )
 
     class CompaneroAnimal(models.Model):
-        nombre = models.TextField(verbose_name='Nombre')
+        tipo = models.TextField(verbose_name='Tipo', null=True)
         nivel = models.IntegerField(verbose_name='Nivel')
         dados_de_golpe = models.IntegerField(verbose_name='Dados de golpe')
         puntos_de_golpe = models.IntegerField(verbose_name='Puntos de golpe')
@@ -287,21 +299,24 @@ class Personaje(models.Model):
         fortaleza = models.IntegerField(verbose_name='Fortaleza')
         reflejos = models.IntegerField(verbose_name='Reflejos')
         voluntad = models.IntegerField(verbose_name='Voluntad')
-        dotes = models.ManyToManyField('Dote')
         especial = models.ManyToManyField('Especial')
-        trucos = models.ManyToManyField('Truco')
-        puntuacion_habilidad = models.ManyToManyField('PuntuacionHabilidadCA')
 
         def __str__(self):
-            return nombre
+            return tipo
 
         class Meta:
-            ordering = ('nombre', )
+            ordering = ('tipo', )
+
+    class CompaneroAnimalPersonaje(CompaneroAnimal):
+        nombre = models.TextField(verbose_name='Nombre')
+        dotes = models.ManyToManyField('Dote')
+        trucos = models.ManyToManyField('Truco')
+        puntuacion_habilidad = models.ManyToManyField('PuntuacionHabilidadCA')
 
     class Truco(models.Model):
         nombre = models.TextField(verbose_name='Nombre')
         descripcion = models.TextField(verbose_name='Descripción')
-        cd = models.IntegerField(verbose_name='CD')
+        cd = models.TextField(verbose_name='CD')
         prerrequisito_truco = models.ManyToManyField('self')
 
         def __str__(self):
