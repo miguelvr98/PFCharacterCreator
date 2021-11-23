@@ -161,15 +161,15 @@ class Personaje(models.Model):
 
     class Clase(models.Model):
         clase = models.TextField(verbose_name='Clase')
-        nivel = models.IntegerField(verbose_name='Nivel', default=1)
+        nivel = models.IntegerField(verbose_name='Nivel', default=1, null=True)
         dados_de_golpe = models.IntegerField(verbose_name='Dados de golpe',
-        default=6)
+        default=6, null=True)
         ataque_base = models.TextField(verbose_name='Ataque base',
-         null=False)
+         null=True)
         fortaleza = models.IntegerField(verbose_name='Fortaleza', 
-        null=False)
-        reflejos = models.IntegerField(verbose_name='Reflejos', null=False)
-        voluntad = models.IntegerField(verbose_name='Fortaleza', null=False)
+        null=True)
+        reflejos = models.IntegerField(verbose_name='Reflejos', null=True)
+        voluntad = models.IntegerField(verbose_name='Fortaleza', null=True)
         competencia = models.TextField(verbose_name='Competente con', null=True)
         rafaga_de_golpes = models.TextField(verbose_name='Ráfaga de golpes', null=True)
         dano_desarmado = models.TextField(verbose_name='Daño desarmado', null = True)
@@ -273,6 +273,7 @@ class Personaje(models.Model):
         nombre = models.TextField(verbose_name='Nombre')
         descripcion = models.TextField(verbose_name='Descripción')
         es_especial_companero_animal = models.BooleanField(verbose_name='Es especial de compañero animal', default=False)
+        clase_perteneciente = models.ForeignKey('Clase', on_delete=models.CASCADE, null=True)
 
         def __str__(self):
             return nombre
