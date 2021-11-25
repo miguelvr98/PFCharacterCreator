@@ -3558,7 +3558,7 @@
         <field type="CharField" name="descripcion">Cuando un pícaro con este talento use acrobacias para moverse a velocidad completa a través de casillas amenazadas sin provocar ataques de oportunidad, la CD de la tirada de acrobacias no aumenta en +10.</field>
         <field type="IntegerField" name="nivel">10</field>
     </object>
-    <!--PODERES DE HECHICERO--> <!--FALTA HACER LOS LINAJES-->
+    <!--PODERES DE HECHICERO-->
     <object pk="161" model="main.poder">
         <field type="CharField" name="nombre">Rayo ácido</field>
         <field type="CharField" name="descripcion">Comenzando a nivel 1, puedes disparar un rayo ácido como acción estándar, apuntando a cualquier enemigo que se encuentre a un máximo de 9 metros como un ataque de toque a distancia. El rayo ácido causa 1d6 puntos de daño por ácido +1 por cada dos niveles de hechicero que poseas. Puedes utilizar esta aptitud un número de veces al día igual a 3 + tu modificador de carisma.</field>
@@ -3703,4 +3703,84 @@
         <field type="CharField" name="descripcion">A nivel 20, tu forma comienza a pudrirse (la apariencia de esta descomposición es cosa tuya) y los muertos vivientes te ven como uno de ellos Obtienes inmunidad al frío, al daño no letal, parálisis y al sueño. También obtienes RD 5/-. Los muertos vivientes no inteligentes no se dan cuenta de tu presencia a menos que les ataques. Recibes un bonificador +4 de moral a las tiradas de salvación contra conjuros y aptitudes sortílegas lanzados por muertos vivientes.</field>
         <field type="IntegerField" name="nivel">20</field>
     </object>
+<!--LINAJES--> <!--FALTA AÑADIR LAS DOTES Y LOS CONJUROS-->
+    <object pk="1" model="main.linaje">
+        <field type="CharField" name="nombre">Aberrante</field>
+        <field type="CharField" name="descripcion">Hay una mancha en tu sangre, una que es alienígena y extraña. Tiendes a pensar de forma extraña, abordando los problemas desde un ángulo que la mayoría no esperaría. Con el paso del tiempo, esta mancha se manifiesta físicamente.</field>
+        <field type="CharField" name="linaje_arcano">Cuando lanzas un conjuro de la subescuela de polimorfismo, aumenta la duración del conjuro en un 50% (mínimo 1 asalto).</field>
+        <field to="main.habilidad" name="habilidad" rel="OneToOneRel">41</field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="165"></object>
+        </field>
+    </object>
+    <object pk="2" model="main.linaje">
+        <field type="CharField" name="nombre">Abisal</field>
+        <field type="CharField" name="descripcion">Hace generaciones, un demonio extendió su obscenidad hacia tu familia. Aunque no se manifiesta en toda tu estirpe, para ti es particularmente fuerte. Puede que a veces tengas tendencias hacia el caos o el mal, pero tu destino (y tu alineamiento) es decisión tuya.</field>
+        <field type="CharField" name="linaje_arcano">Cuando lances un conjuro de la subescuela de convocación, las criaturas convocadas recibe RD /bien igual a la mitar de tu nivel de hechicero (mínimo 1). Esto no se apila con otra RD que la criatura pueda tener.</field>
+        <field to="main.habilidad" name="habilidad" rel="OneToOneRel">46</field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="166"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+        </field>
+    </object>
+    <object pk="3" model="main.linaje">
+        <field type="CharField" name="nombre">Alma estelar</field>
+        <field type="CharField" name="descripcion">Provienes de una saga de astrónomos y exploradores que indagaron en la oscuridad más allá de las estrellas. Al tocar el vacío, el vacío les tocó a ellos y tu mente espíritu y cuerpo anhelan alcanzar el vacío entre mundos.</field>
+        <field type="CharField" name="linaje_arcano">Cuando lanzas un conjuro de evocación, los objetivos que fallen sus salvaciones quedan deslumbrados por pequeños destellos durante 1 asalto por nivel del conjuro.</field>
+        <field to="main.habilidad" name="habilidad" rel="OneToOneRel">47</field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+            <object pk="175"></object>
+        </field>
+    </object>
+    <object pk="4" model="main.linaje">
+        <field type="CharField" name="nombre">Celestial</field>
+        <field type="CharField" name="descripcion">Tu linaje está bendecido por un poder celestial. Ya sea debido a un ancestro celestial o a la intervención divina. Aunque este poder te lleva hacia el camino del bien, tu destino (y tu alineamiento) son decisión tuya.</field>
+        <field type="CharField" name="linaje_arcano">Cuando lances un conjuro de la subescuela de convocación, la criatura convocada recibe RD/mal igual a la mitad de tu nivel de hechicero (mínimo 1). Esto no se apila con otra RD que la criatura pueda tener.</field>
+        <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+        </field>
+    </object>
+    <object pk="5" model="main.linaje">
+        <field type="CharField" name="nombre">Infernal</field>
+        <field type="CharField" name="descripcion">En alguna parte de tu historia familiar, un pariente hizo un trato con un diablo y ese pacto ha influenciado a tu línea familiar desde entonces. En ti se manifiesta de formas obvias y manifiestas, concediéndote poderes y habilidades. Aunque tu destino está en tu mano, no puedes evitar preguntarte si tu recompensa final está vinculada al infierno.</field>
+        <field type="CharField" name="linaje_arcano">Cuando lances un conjuro de la subescuela de convocación, la criatura convocada recibe RD/mal igual a la mitad de tu nivel de hechicero (mínimo 1). Esto no se apila con otra RD que la criatura pueda tener.</field>
+        <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="181"></object>
+            <object pk="182"></object>
+            <object pk="183"></object>
+            <object pk="184"></object>
+            <object pk="185"></object>
+        </field>
+    </object>
+    <object pk="6" model="main.linaje">
+        <field type="CharField" name="nombre">Muerto viviente</field>
+        <field type="CharField" name="descripcion">La marca de la tumba corre por tu familia. Quizás alguno de tus ancestros se convirtió en un poderoso liche o vampiro, o quizás naciste muerto justo antes de volver repentinamente a la vida. De cualquier forma, las fuerzas de la muerte te impregnan y ponen su marca en todas tus acciones.</field>
+        <field type="CharField" name="linaje_arcano">Algunos muertos vivientes son susceptibles a tus conjuros enajenadores. Los muertos vivientes corpóreos que antes fueron humanoides se consideran humanoides a efectos de determinar qué conjuros les afectan.</field>
+        <field to="main.habilidad" name="habilidad" rel="OneToOneRel">49</field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="186"></object>
+            <object pk="187"></object>
+            <object pk="188"></object>
+            <object pk="189"></object>
+            <object pk="190"></object>
+        </field>
+    </object>
+<!--DOTES-->
 </django-objects>
