@@ -2289,515 +2289,1169 @@
         <field type="CharField" name="descripcion">El clérigo puede liberar una ráfaga de energía canalizando el poder de su fe a través de su símbolo sagrado (o sacrílego). Esta energía puede ser usada para causar daño o curarlo, dependiendo del tipo de energía canalizada y las criaturas afectadas. Está energía será positiva si el dios al que adora es benigno y sera negativo si su dios es maligno, en caso de que sea neutral el clérigo deberá decidir si será positiva o negativa y no podrá cambiarse. Canalizar energía causa una explosión a 9 metros del clérigo que afecta a todas las criaturas y al clérigo(si decide incluirse). El daño causado es 1d6 y aumenta 1d6 en los niveles impares. Los seres afectados pueden realizar una salvación de voluntad cuya CD será 10 + la mitad del nivel de clérigo + el modificador de carisma del clérigo.</field>
     </object>
     <object pk="47" model="main.especial">
-        <field type="CharField" name="nombre">Dominios</field>
-        <field type="CharField" name="descripcion">Un clérigo elige dos dominios de entre los que corresponden a su deidad. Un clérigo puede elegir un dominio de alineamiento (Bien, Caos, Ley o Mal) sólo si su alineamiento coincide con ese dominio. Un clérigo obtiene un espacio de dominio de conjuro cada nivel de conjuro de clérigo que sea capaz de lanzar, desde el nivel 1 en adelante. Cada día, un clérigo puede preparar uno de los conjuros de sus dos dominios en ese espacio de conjuro. si un conjuro de dominio no está en la lista de conjuros de clérigo, un clérigo sólo puede prepararlo en su espacio de conjuro de dominio. Los conjuros de dominio no pueden utilizarse para lanzar conjuros espontáneamente. Además, un clérigo obtiene los poderes indicados en ambos dominios, asumiendo que sea de un nivel lo bastante alto. A menos que se indique lo contrario, usar un poder de dominio es una acción estándar.</field>
-    </object>
-    <object pk="48" model="main.especial">
         <field type="CharField" name="nombre">Oraciones del clérigo</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del clérigo.</field>
     </object>
-    <object pk="49" model="main.especial">
+    <object pk="48" model="main.especial">
         <field type="CharField" name="nombre">Idiomas adicionales del clérigo</field>
-        <field type="CharField" name="descripcion">las opciones de idiomas adicionales de un clérigo incluye celestial, abisal e infernal.</field>
+        <field type="CharField" name="descripcion">Las opciones de idiomas adicionales de un clérigo incluye celestial, abisal e infernal.</field>
     </object>
-    <object pk="50" model="main.especial">
+    <object pk="49" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del druida</field>
         <field type="CharField" name="descripcion">d8.</field>
     </object>
-    <object pk="51" model="main.especial">
+    <object pk="50" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del druida</field>
         <field type="CharField" name="descripcion">artesanía(int), conocimiento de conjuros(int), curar(sab), montar(des), nadar(fue), percepción(sab), profesión(sab), saber(geografía)(int), saber(naturaleza)(int), supervivencia(sab), trato con animales(car), trepar(fue) y volar(des).</field>
     </object>
-    <object pk="52" model="main.especial">
+    <object pk="51" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del druida</field>
         <field type="CharField" name="descripcion">4 + modificador de inteligencia.</field>
     </object>
-    <object pk="53" model="main.especial">
+    <object pk="52" model="main.especial">
         <field type="CharField" name="nombre">Competencias del druida</field>
         <field type="CharField" name="descripcion">Los druidas son competentes con las siguientes armas: clava, daga, dardo, bastón, cimitarra, guadaña, hoz, lanza corta, honda y lanza. También son competentes con todos los ataques naturales (garra, mordisco, etc.) de cualquier forma que asuman utilizando la Forma salvaje. Los druidas son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Los druidas son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera. Un druida que lleve una armadura prohibida o use un escudo prohibido es incapaz de lanzar conjuros de druida o de utilizar cualquier aptitud de clase sobrenatural o sortílega mientras la lleve puesta y hasta 24 horas más tarde.</field>
+    </object>
+    <object pk="53" model="main.especial">
+        <field type="CharField" name="nombre">Conjuros del druida</field>
+        <field type="CharField" name="descripcion">Los druidas lanzan conjuros de la lista de conjuros del druida. Su alineamiento puede restringir el lanzamiento de ciertos conjuros opuestos a sus creencias morales o éticas. Un druida debe seleccionar y preparar sus conjuros por adelantado meditando 1 hora. Para preparar o lanzar un conjuro, el druida debe poseer una puntuación de sabiduría al menos igual a 10 + nivel del conjuro. La CD para la tirada de salvación contra los conjuros de un druida es 10 + nivel del conjuro + el modificador de sabiduría del druida.</field>
     </object>
     <object pk="54" model="main.especial">
         <field type="CharField" name="nombre">Conjuros del druida</field>
         <field type="CharField" name="descripcion">Los druidas lanzan conjuros de la lista de conjuros del druida. Su alineamiento puede restringir el lanzamiento de ciertos conjuros opuestos a sus creencias morales o éticas. Un druida debe seleccionar y preparar sus conjuros por adelantado meditando 1 hora. Para preparar o lanzar un conjuro, el druida debe poseer una puntuación de sabiduría al menos igual a 10 + nivel del conjuro. La CD para la tirada de salvación contra los conjuros de un druida es 10 + nivel del conjuro + el modificador de sabiduría del druida.</field>
     </object>
     <object pk="55" model="main.especial">
-        <field type="CharField" name="nombre">Conjuros del druida</field>
-        <field type="CharField" name="descripcion">Los druidas lanzan conjuros de la lista de conjuros del druida. Su alineamiento puede restringir el lanzamiento de ciertos conjuros opuestos a sus creencias morales o éticas. Un druida debe seleccionar y preparar sus conjuros por adelantado meditando 1 hora. Para preparar o lanzar un conjuro, el druida debe poseer una puntuación de sabiduría al menos igual a 10 + nivel del conjuro. La CD para la tirada de salvación contra los conjuros de un druida es 10 + nivel del conjuro + el modificador de sabiduría del druida.</field>
-    </object>
-    <object pk="56" model="main.especial">
         <field type="CharField" name="nombre">Oraciones del druida</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del druida.</field>
     </object>
-    <object pk="57" model="main.especial">
+    <object pk="56" model="main.especial">
         <field type="CharField" name="nombre">Idiomas adicionales del druida</field>
         <field type="CharField" name="descripcion">Las opciones para idiomas adicionales de un druida incluyen el silvano. Y obtienen el duídrico gratis.</field>
     </object>
-    <object pk="58" model="main.especial">
+    <object pk="57" model="main.especial">
         <field type="CharField" name="nombre">Vínculo natural</field>
         <field type="CharField" name="descripcion">El druida elige un compañero animal como su vínculo natural. Este compañero animal irá subiendo de nivel respecto al nivel de druida del personaje.</field>
     </object>
-    <object pk="59" model="main.especial">
+    <object pk="58" model="main.especial">
         <field type="CharField" name="nombre">Sentido de la naturaleza</field>
         <field type="CharField" name="descripcion">El druida obtiene un bonificador +2 a las pruebas de saber(naturaleza) y supervivencia.</field>
     </object>
-    <object pk="60" model="main.especial">
+    <object pk="59" model="main.especial">
         <field type="CharField" name="nombre">Empatía salvaje del druida</field>
         <field type="CharField" name="descripcion">Esta aptitud funciona como una prueba de diplomacia hecha para mejorar la actitud de una persona, pero sería para animales. El druida tira 1d20 y añade su nivel de druida y su modificador de carisma para determinar el resultado de la prueba. El druida y el animal deben estar a un máximo de 9 metros uno del otro bajo circunstancias normales. Un druida también puede usar esta aptitud para influenciar a una bestia mágica con una puntuación de inteligencia de 1 ó 2, pero recibe un penalizador -4 a la prueba.</field>
     </object>
-    <object pk="61" model="main.especial">
+    <object pk="60" model="main.especial">
         <field type="CharField" name="nombre">Zancada forestal</field>
         <field type="CharField" name="descripcion">Un druida puede moverse a través de cualquier clase de maleza (como arbustos espinosos, brezos, áreas cubiertas por la maleza y terrenos similares) a su velocidad normal sin recibir daño o sufrir otro impedimento. Los arbustos espinosos, brezos y áreas con maleza manipuladas mágicamente para impedir el movimiento, sin embargo, todavía le afectan.</field>
     </object>
-    <object pk="62" model="main.especial">
+    <object pk="61" model="main.especial">
         <field type="CharField" name="nombre">Pisada sin rastro</field>
         <field type="CharField" name="descripcion">Un druida no deja rastros en entornos naturales y no puede ser rastreado. Puede elegir dejar un rastro si lo desea.</field>
     </object>
-    <object pk="63" model="main.especial">
+    <object pk="62" model="main.especial">
         <field type="CharField" name="nombre">Resistir la atracción de la naturaleza</field>
         <field type="CharField" name="descripcion">Un druida obtiene un bonificador +4 a las Tiradas de Salvación hechas contra las aptitudes sortílegas y sobrenaturales de las hadas.</field>
     </object>
-    <object pk="64" model="main.especial">
+    <object pk="63" model="main.especial">
         <field type="CharField" name="nombre">Forma salvaje</field>
         <field type="CharField" name="descripcion">Un druida obtiene la aptitud de convertirse en cualquier animal Pequeño o Mediano y volver a su forma normal una vez al día. Sus opciones para nuevas formas incluyen todas las criaturas con el tipo animal. El efecto dura 1 hora por nivel de druida o hasta que vuelve a su forma normal. Cambiar de forma es una acción estándar que no provoca ataques de oportunidad. La forma elegida debe ser la de un animal con el que el druida esté familiarizado. Un druida puede usar esta habilidad una vez adicional al día a nivel 6 y cada dos niveles en adelante, para un total de ocho veces a nivel 18. A nivel 4 funciona como el conjuro forma de bestia I, a nivel 6 puede cambiar en animales grandes y menudos o en elementales pequeños, a nivel 8 puede cambiar a un animal enorme o diminuto o en un elemental mediano. A nivel 10 puede cambiar en una planta grande o en un elemental grande. A nivel 12 puede cambiar en una planta enorme o en un elemental enorme.</field>
     </object>
-    <object pk="65" model="main.especial">
+    <object pk="64" model="main.especial">
         <field type="CharField" name="nombre">Inmunidad al veneno</field>
         <field type="CharField" name="descripcion">Un druida tiene inmunidad a todos los venenos.</field>
     </object>
-    <object pk="66" model="main.especial">
+    <object pk="65" model="main.especial">
         <field type="CharField" name="nombre">Las mil caras</field>
         <field type="CharField" name="descripcion">Un druida puede cambiar de aspecto a voluntad, siempre que esté en su forma normal.</field>
     </object>
-    <object pk="67" model="main.especial">
+    <object pk="66" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo eterno del druida</field>
         <field type="CharField" name="descripcion">un druida ya no recibe penalizaciones a las características debidas a la edad y no puede ser envejecido mágicamente. Cualquier penalizador que ya poseyera, permanece inalterado. El druida aún puede morir por la vejez.</field>
     </object>
-    <object pk="68" model="main.especial">
+    <object pk="67" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del explorador</field>
         <field type="CharField" name="descripcion">d10.</field>
     </object>
-    <object pk="69" model="main.especial">
+    <object pk="68" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del explorador</field>
         <field type="CharField" name="descripcion">artesanía(int), conocimiento de conjuros(int), curar(sab), intimidar(car), montar(des), nadar(fue), percepción(sab), profesión(sab), saber(dungeons)(int), saber(geografía)(int), saber(naturaleza)(int), sigilo(des), supervivencia(sab), trato con animales(car) y trepar(fue).</field>
     </object>
-    <object pk="70" model="main.especial">
+    <object pk="69" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del explorador</field>
         <field type="CharField" name="descripcion">6 + modificador de inteligencia.</field>
     </object>
-    <object pk="71" model="main.especial">
+    <object pk="70" model="main.especial">
         <field type="CharField" name="nombre">Competencias del explorador</field>
         <field type="CharField" name="descripcion">Un explorador es competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
     </object>
-    <object pk="72" model="main.especial">
+    <object pk="71" model="main.especial">
         <field type="CharField" name="nombre">Enemigo predilecto</field>
         <field type="CharField" name="descripcion">Un explorador elige un tipo de criatura de la tabla de enemigos predilectos. Obtiene un bonificador +2 a las pruebas de engañar, saber, percepción, averiguar intenciones y supervivencia contra las criaturas del tipo seleccionado. Del mismo modo, recibe un bonificador +2 a las tiradas de ataque y daño contra ellos. Un explorador puede hacer pruebas de saber no entrenadas al intentar identificar a estas criaturas. A nivel 5 y cada 5 niveles puede elegir otro tipo adicional, además los bonificadores de los tipos (incluido el que acaba de elegir) aumentan en +2.</field>
     </object>
-    <object pk="73" model="main.especial">
+    <object pk="72" model="main.especial">
         <field type="CharField" name="nombre">Rastrear</field>
         <field type="CharField" name="descripcion">Un explorador suma la mitad de su nivel (mínimo 1) a las pruebas de Supervivencia hechas para seguir rastros.</field>
     </object>
-    <object pk="74" model="main.especial">
+    <object pk="73" model="main.especial">
         <field type="CharField" name="nombre">Empatía salvaje del explorador</field>
         <field type="CharField" name="descripcion">Esta aptitud funciona como una prueba de diplomacia hecha para mejorar la actitud de una persona, pero sería para animales. El explorador tira 1d20 y añade su nivel de explorador y su modificador de carisma para determinar el resultado de la prueba. El explorador y el animal deben estar a un máximo de 9 metros uno del otro bajo circunstancias normales. Un explorador también puede usar esta aptitud para influenciar a una bestia mágica con una puntuación de inteligencia de 1 ó 2, pero recibe un penalizador -4 a la prueba.</field>
     </object>
-    <object pk="75" model="main.especial">
+    <object pk="74" model="main.especial">
         <field type="CharField" name="nombre">Dote de estilo de combate</field>
         <field type="CharField" name="descripcion">El explorador debe elegir entre el combate con dos armas o el tiro con arco y obtendrá diferentes dotes adicionales a partir de su decision. Si elige tiro con arco, puede elegir de la siguiente lista cuando gane una dote de estilo de combate: Disparo a larga distancia, Disparo a bocajarro, Disparo preciso y Disparo rápido. A nivel 6, añade Disparo preciso mejorado y Disparo múltiple a la lista. A nivel 10, añade Disparo a la carrera y Puntería precisa a la lista. Si el explorador elige combate con dos armas, puede seleccionar dotes de la siguiente lista cuando obtenga una dote de estilo de combate: Doble tajo, Golpear con el escudo mejorado, Desenvainado rápido y Combate con dos armas. A nivel 6, añade Combate con dos armas mejorado y Defensa con dos armas a la lista. A nivel 10, añade Combate con dos armas mayor y Desgarrar con dos armas a la lista. Pierde todos los beneficios de sus dotes de estilo de combate cuando lleve armadura pesada. Una vez que un explorador elige un estilo de combate, ya no puede cambiarlo.</field>
     </object>
-    <object pk="76" model="main.especial">
+    <object pk="75" model="main.especial">
         <field type="CharField" name="nombre">Aguante</field>
         <field type="CharField" name="descripcion">Un explorador obtiene Aguante como dote adicional a nivel 3.</field>
     </object>
-    <object pk="77" model="main.especial">
+    <object pk="76" model="main.especial">
         <field type="CharField" name="nombre">Terreno predilecto</field>
         <field type="CharField" name="descripcion">Un explorador puede elegir un tipo de terreno como terreno predilecto. El explorador gana un bonificador +2 a las pruebas de iniciativa y a las pruebas de saber(geografía), percepción, sigilo y supervivencia cuando esté en ese tipo de terreno. Un explorador viajando por su terreno predilecto normalmente no deja rastro y no puede ser rastreado (aunque puede dejar un rastro si lo desea). A nivel 8 y cada cinco niveles en adelante, el explorador puede elegir un terreno predilecto adicional. Además, el bonificador para sus terrenos predilectos (incluyendo el que acaba de elegir, si lo desea) aumenta en +2.</field>
     </object>
-    <object pk="78" model="main.especial">
+    <object pk="77" model="main.especial">
         <field type="CharField" name="nombre">Vínculo animal del explorador</field>
         <field type="CharField" name="descripcion">Un explorador obtiene un compañero animal de la lista: tejón, ave, camello, felino (pequeño), rata terrible, perro, caballo, poni, serpiente o lobo. Que irá subiendo de nivel respecto al explorador, sin embargo, siempre tendrá 3 niveles menos que el nivel de explorador del personaje.</field>
     </object>
-    <object pk="79" model="main.especial">
+    <object pk="78" model="main.especial">
         <field type="CharField" name="nombre">Conjuros del explorador</field>
         <field type="CharField" name="descripcion">Un explorador obtiene la capacidad de lanzar un pequeño número de conjuros que se eligen de la lista de conjuros de explorador. Un explorador debe elegir y preparar sus conjuros por adelantado meditando 1 hora. Para preparar o lanzar un conjuro, un explorador debe poseer una puntuación de sabiduría de al menos 10 + nivel del conjuro. La CD para una tirada de salvación contra los conjuros de un explorador es 10 + nivel del conjuro + el modificador de sabiduría del explorador. Su nivel de lanzador es igual a su nivel de explorador -3.</field>
     </object>
-    <object pk="80" model="main.especial">
+    <object pk="79" model="main.especial">
         <field type="CharField" name="nombre">Zancada forestal del explorador</field>
         <field type="CharField" name="descripcion">Un explorador puede moverse a través de cualquier clase de maleza (como arbustos espinosos, brezos, áreas cubiertas por la maleza y terrenos similares) a su velocidad normal sin recibir daño o sufrir otro impedimento. Los arbustos espinosos, brezos y áreas con maleza manipuladas mágicamente para impedir el movimiento, sin embargo, todavía le afectan.</field>
     </object>
-    <object pk="81" model="main.especial">
+    <object pk="80" model="main.especial">
         <field type="CharField" name="nombre">Rastreador veloz</field>
         <field type="CharField" name="descripcion">Un explorador puede moverse a su velocidad normal mientras usa supervivencia para seguir rastros sin el penalizador normal de -5. Sólo tiene un penalizador -10 (en lugar del habitual -20) al moverse al doble de su velocidad normal mientras rastrea.</field>
     </object>
-    <object pk="82" model="main.especial">
+    <object pk="81" model="main.especial">
         <field type="CharField" name="nombre">Evasión del explorador</field>
         <field type="CharField" name="descripcion">Si supera una tirada de salvación de reflejos contra un ataque que normalmente causa la mitad del daño con una tirada exitosa, en su lugar no recibe ningún daño. Evasión puede usarse sólo si el explorador lleva armadura ligera, intermedia o ninguna armadura. Un explorador indefenso no obtiene el beneficio de evasión.</field>
     </object>
-    <object pk="83" model="main.especial">
+    <object pk="82" model="main.especial">
         <field type="CharField" name="nombre">Presa</field>
         <field type="CharField" name="descripcion">Un explorador puede, como acción estándar, designar a un objetivo dentro de su línea de visión como su presa. Mientras esté siguiento el rastro de su presa, un explorador puede elegir 10 en sus pruebas de habilidad de supervivencia mientras se mueve a velocidad normal, sin penalización. Además, recibe un bonificador +2 a las tiradas de ataque hechas contra su presa y todas las amenazas de crítico se confirman automáticamente. Un explorador no puede tener más de una presa al mismo tiempo y el tipo de criatura debe coincidir con uno de sus tipos de enemigo predilecto. Puede descartar este efecto en cualquier momento como acción gratuita, pero no puede serleccionar una nueva presa durante 24 horas. Si el explorador ve pruebas de que su presa está muerta, puede seleccionar una nueva presa tras esperar 1 hora.</field>
     </object>
-    <object pk="84" model="main.especial">
+    <object pk="83" model="main.especial">
         <field type="CharField" name="nombre">Camuflaje</field>
         <field type="CharField" name="descripcion">Un explorador de nivel 12 o mayor puede usar la habilidad de Sigilo para ocultarse en cualquiera de sus terrenos predilectos, incluso si el terreno no proporciona cobertura u ocultación.</field>
     </object>
-    <object pk="85" model="main.especial">
+    <object pk="84" model="main.especial">
         <field type="CharField" name="nombre">Evasión mejorada del explorador</field>
         <field type="CharField" name="descripcion">Esta aptitud funciona como evasión, excepto en que además de no recibir daño al superar una tirada de salvación de Reflejos contra un ataque, sólo recibe la mitad del daño con una tirada de salvación fallida. Un explorador indefenso no recibe los beneficios de la evasión.</field>
     </object>
-    <object pk="86" model="main.especial">
+    <object pk="85" model="main.especial">
         <field type="CharField" name="nombre">Esconderse a plena vista</field>
         <field type="CharField" name="descripcion">Mientras está en alguno de sus terrenos predilectos, un explorador de nivel 17 o mayor puede utilizar la habilidad de Sigilo incluso mientras está siendo observado.</field>
     </object>
-    <object pk="87" model="main.especial">
+    <object pk="86" model="main.especial">
         <field type="CharField" name="nombre">Presa mejorada</field>
         <field type="CharField" name="descripcion">Puede elegir una presa como acción gratuita y puede elegir 20 mientras usa su habilidad de Superviviencia para rastrear a su presa, mientras se mueve a velocidad normal sin penalización. Su bonificador introspectivo al atacar a supresa mejora hasta +4. Si su presa muere o se descarta, puede elegir una nueva tras 10 minutos.</field>
     </object>
-    <object pk="88" model="main.especial">
+    <object pk="87" model="main.especial">
         <field type="CharField" name="nombre">Maestro cazador</field>
         <field type="CharField" name="descripcion">Un explorador de nivel 20 se convierte en un maestro cazador. Siempre puede moverse a velocidad completa utilizando supervivencia para seguir rastros sin penalización. Puede, como acción estándar, hacer un único ataque contra su enemigo predilecto con el bonificador de ataque completo. Si el ataque impacta, el blanco recibe el daño normalmente y debe hacer una tirada de salvación de fortaleza o morir. La CD de esta tirada de salvación es igual a 10 + 1/2 del nivel del explorador + el modificador de sabiduría del explorador. Un explorador también puede elegir causar una cantidad de daño atenuado igual a los puntos de vida actuales de la criatura. Una tirada de salvación con éxito niega este daño. Un explorador puede utilizar esta aptitud una vez al día contra cada tipo de enemigo predilecto que posea, pero no contra la misma criatura más de una vez en un periodo de 24 horas.</field>
     </object>
-    <object pk="89" model="main.especial">
+    <object pk="88" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del guerrero</field>
         <field type="CharField" name="descripcion">d10.</field>
     </object>
-    <object pk="90" model="main.especial">
+    <object pk="89" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del guerrero</field>
         <field type="CharField" name="descripcion">artesanía(int), intimidar(car), montar(des), nadar(fue), profesión(sab), saber(dungeons)(int), saber(ingeniería)(int), supervivencia(sab), trato con animales(car) y trepar(fue).</field>
     </object>
-    <object pk="91" model="main.especial">
+    <object pk="90" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del guerrero</field>
         <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
     </object>
-    <object pk="92" model="main.especial">
+    <object pk="91" model="main.especial">
         <field type="CharField" name="nombre">Competencias del guerrero</field>
         <field type="CharField" name="descripcion">Un guerrero es competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
     </object>
-    <object pk="93" model="main.especial">
+    <object pk="92" model="main.especial">
         <field type="CharField" name="nombre">Dotes adicionales</field>
         <field type="CharField" name="descripcion">En los niveles impares un guerrero gana una dote adicional además de la ganada por el avance normal. Esta dote adicional debe ser seleccionada de la lista de dotes de combate.</field>
     </object>
-    <object pk="94" model="main.especial">
+    <object pk="93" model="main.especial">
         <field type="CharField" name="nombre">Valentía</field>
         <field type="CharField" name="descripcion">Un guerrero gana un bonificador de + 1 a sus tiradas de salvación de voluntad contra miedo. Este bonificador aumenta en +1 cada cuatro niveles a partir del segundo.</field>
     </object>
-    <object pk="95" model="main.especial">
+    <object pk="94" model="main.especial">
         <field type="CharField" name="nombre">Entrenamiento con armaduras</field>
         <field type="CharField" name="descripcion">A partir de nivel 3 un guerrerro siempre que lleve una armadura, reduce la penalización por llevar armadura en 1 (con un mínimo de 0) e incrementa el bonificador máximo de destreza en 1. En los niveles 7, 11 y 15, estos bonificadores se incrementan en +1 cada vez, hasta una reducción máxima del penalizador de armadura de -4 y un incremento de + 4 a la máxima bonificación de destreza. Además, un guerrero puede mover su velocidad normal mientras use una armadura intermedia. A nivel 7, un guerrero puede moverse a su velocidad normal mientras use armadura pesada.</field>
     </object>
-    <object pk="96" model="main.especial">
+    <object pk="95" model="main.especial">
         <field type="CharField" name="nombre">Entrenamiento en armas</field>
         <field type="CharField" name="descripcion">A partir de nivel 5, un guerrero puede seleccionar un grupo de armas (arcos, ballestas, corto alcance, espadas ligeras, espadas pesadas, hachas, lanzas y martillos). Cada vez que ataque con un arma de ese grupo, gana un bonificador de + 1 a las tiradas de ataque y daño. En los niveles 9, 13 y 17 obtiene entrenamiento en otro grupo de armas. Gana un bonificador de +1 a las tiradas de ataque y daño cuando use un arma de ese grupo. Además, los bonificadores obtenidos en cada grupo de armas se incrementan en +1. También añade este bonificador en cualquier maniobra de combate hecha con armas de este grupo. Este bonificador también se aplica a la DMC del guerrero cuando se defienda contra intentos de desarmar y romper hecho contra armas de este grupo.</field>
     </object>
-    <object pk="97" model="main.especial">
+    <object pk="96" model="main.especial">
         <field type="CharField" name="nombre">Maestría con la armadura</field>
         <field type="CharField" name="descripcion">A nivel 19, un guerrero gana Reducción del daño 5/- cada vez que lleve armadura o use un escudo.</field>
     </object>
-    <object pk="98" model="main.especial">
+    <object pk="97" model="main.especial">
         <field type="CharField" name="nombre">Maestría con las armas</field>
         <field type="CharField" name="descripcion">A nivel 20, un guerrero elige un arma, como la espada larga, gran hacha o arco largo. Cualquier ataque hecho con ese arma confirma automáticamente todas las amenazas de crítico y tiene su multiplicador de daño incrementado en +1 (x2 se convierte en x3, por ejemplo). Además, no puede ser desarmado mientras empuñe un arma de este tipo.</field>
     </object>
-    <object pk="99" model="main.especial">
+    <object pk="98" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del hechicero</field>
         <field type="CharField" name="descripcion">d6.</field>
     </object>
-    <object pk="100" model="main.especial">
+    <object pk="99" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del hechicero</field>
         <field type="CharField" name="descripcion">artesanía(int), conocimiento de conjuros(int), engañar(car), intimidar(car), profesión(sab), saber(arcano)(int), tasación(int), usar objeto mágico(car) y volar(des).</field>
     </object>
-    <object pk="101" model="main.especial">
+    <object pk="100" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del hechicero</field>
         <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
     </object>
-    <object pk="102" model="main.especial">
+    <object pk="101" model="main.especial">
         <field type="CharField" name="nombre">Competencias del hechicero</field>
         <field type="CharField" name="descripcion">Los hechiceros son competentes con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
     </object>
-    <object pk="103" model="main.especial">
+    <object pk="102" model="main.especial">
         <field type="CharField" name="nombre">Conjuros del hechicero</field>
         <field type="CharField" name="descripcion">Un hechicero lanza conjuros arcanos principalmente de la lista de conjuros de hechicero/mago. Puede lanzar cualquier conjuro que conozca sin prepararlo por adelantado. Para aprender o lanzar un conjuro, un hechicero Debe poseer una puntuación de carisma igual al menos a 10 + nivel del conjuro. La CD para la tirada de salvación contra el conjuro de un hechicero es 10 + nivel del conjuro + el modificador de carisma del hechicero. Un hechicero comienza el juego conociendo cuatro conjuros de nivel 0 y dos de nivel 1 de su elección. Cada nuevo nivel de hechicero, recibe uno o más conjuros nuevos.</field>
     </object>
-    <object pk="104" model="main.especial">
+    <object pk="103" model="main.especial">
         <field type="CharField" name="nombre">Linajes</field>
         <field type="CharField" name="descripcion">Cada hechicero tiene una fuente de magia en alguna parte de su herencia que le concede sus conjuros, dotes adicionales, una habilidad de clase adicional y otras aptitudes especiales. Esta fuente puede representar una relación sanguínea o un suceso extremo en el que está involucrada una criatura en alguna parte del pasado familiar. Un hechicero debe elegir un linaje al alcancer su primer nivel de hechicero. Una vez hecha, esta elección no puede cambiarse. A nivel 3 y cada dos niveles en adelante, un hechicero aprende un conjuro adicional, derivado de su linaje. A nivel 7, y cada seis niveles en adelante, un hechicero recibe una dote adicional, elegida de una lista específica de cada linaje. El hechicero debe cumplir los requisitos de estas dotes adicionales.</field>
     </object>
-    <object pk="105" model="main.especial">
+    <object pk="104" model="main.especial">
         <field type="CharField" name="nombre">Trucos del hechicero</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del hechicero.</field>
     </object>
-    <object pk="106" model="main.especial">
+    <object pk="105" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del mago</field>
         <field type="CharField" name="descripcion">d6.</field>
     </object>
-    <object pk="107" model="main.especial">
+    <object pk="106" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del mago</field>
         <field type="CharField" name="descripcion">artesanía(int), conocimiento de conjuros(int), lingüística(int), profesión(sab), saber(todos)(int), tasación(int) y volar(des).</field>
     </object>
-    <object pk="108" model="main.especial">
+    <object pk="107" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del mago</field>
         <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
     </object>
-    <object pk="109" model="main.especial">
+    <object pk="108" model="main.especial">
         <field type="CharField" name="nombre">Competencias del mago</field>
         <field type="CharField" name="descripcion">Los magos son competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
     </object>
-    <object pk="110" model="main.especial">
+    <object pk="109" model="main.especial">
         <field type="CharField" name="nombre">Vínculo arcano</field>
         <field type="CharField" name="descripcion">Los magos forman un poderoso vínculo con un familiar. Un familiar es una mascota mágica que mejora las habilidades y sentidos del mago y puede ayudarle con la magia.</field>
     </object>
-    <object pk="111" model="main.especial">
+    <object pk="110" model="main.especial">
         <field type="CharField" name="nombre">Trucos</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del mago.</field>
     </object>
-    <object pk="112" model="main.especial">
+    <object pk="111" model="main.especial">
         <field type="CharField" name="nombre">Inscribir pergamino</field>
         <field type="CharField" name="descripcion">A nivel 1, un mago obtiene la dote Inscribir pergamino como dote adicional.</field>
     </object>
-    <object pk="113" model="main.especial">
+    <object pk="112" model="main.especial">
         <field type="CharField" name="nombre">Dotes adicionales</field>
         <field type="CharField" name="descripcion">A nivel 5, 10, 15 y 20, un mago recibe una dote adicional. En ese momento, puede elegir una dote metamágica, de creación o maestría en conjuros. El mago sigue neceitando cumplir todos los requisitos para la dote adicional.  Estas dotes adicionales se añaden a las dotes que un personaje de cualquier clase obtiene por avanzar niveles.</field>
     </object>
-    <object pk="114" model="main.especial">
+    <object pk="113" model="main.especial">
         <field type="CharField" name="nombre">Libro de conjuros</field>
         <field type="CharField" name="descripcion">Un mago debe estudiar su libro de conjuros cada día para preparar sus conjuros. No puede preparar ningún conjuro que no esté anotado en su libro de conjuros, excepto leer magia, que todos los magos pueden preparar de memoria. Un mago comienza el juego con un libro de conjuros que contiene todos los conjuros de mago de nivel 0. más tres conjuros de nivel 1 a su elección. El mago también elige una cantidad de conjuros adicionales de nivel 1 igual a su modificador de inteligencia para añadirlos a su libro de conjuros. Cada nuevo nivel de mago, recibe dos nuevos conjuros de cualquier nivel de conjuro que pueda lanzar (basándose en su nuevo nivel de mago) para su libro de conjuros. En cualquier momento, un mago también puede añadir conjuros encontrados en los libros de otros magos a su propio libro.</field>
     </object>
-    <object pk="115" model="main.especial">
+    <object pk="114" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del monje</field>
         <field type="CharField" name="descripcion">d8.</field>
     </object>
-    <object pk="116" model="main.especial">
+    <object pk="115" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del monje</field>
         <field type="CharField" name="descripcion">acrobacias(des), artesanía(int), averiguar intenciones(sab), escapismo(des), interpretar(car), intimidar(car), montar(des), nadar(fue), percepción(sab), profesión(sab), saber(historia), saber(religión), sigilo(des) y trepar(fue).</field>
     </object>
-    <object pk="117" model="main.especial">
+    <object pk="116" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del monje</field>
         <field type="CharField" name="descripcion">4 + modificador de inteligencia.</field>
     </object>
-    <object pk="118" model="main.especial">
+    <object pk="117" model="main.especial">
         <field type="CharField" name="nombre">Competencias del monje</field>
         <field type="CharField" name="descripcion">Los monjes son competentes con la porra, ballesta (ligera o pesada), daga, hacha de mano, jabalina, espada corta y lanza. Los monjes no son competentes con ninguna armadura o escudo. Cuando visten armadura, lleven escudo o porten una carga intermedia o pesada, un monje pierde sus bonificadores a la CA, al igual sus capacidades de movimiento rápido y ráfaga de golpes.</field>
     </object>
-    <object pk="119" model="main.especial">
+    <object pk="118" model="main.especial">
         <field type="CharField" name="nombre">Bonificador a la CA</field>
         <field type="CharField" name="descripcion">Cuando está sin armas y libre de impedimentos, el monje añade su bonificación de sabiduría a su CA y su DMC. Este bonificador se incrementa en 1 por cada cuatro niveles de monje. Estos bonificadores a la CA se aplican incluso contra ataques de toque o cuando el monje está desprevenido. Pierde estos bonificadores cuando está inmovilizado o indefenso, cuando viste cualquier armadura, cuando lleve un escudo o cuando porte una carga intermedia o pesada.</field>
     </object>
-    <object pk="120" model="main.especial">
+    <object pk="119" model="main.especial">
         <field type="CharField" name="nombre">Ráfaga de golpes</field>
         <field type="CharField" name="descripcion">Un monje puede hacer una ráfaga de golpes como acción de ataque completo. Cuando haga esto puede hacer un ataque adicional usando cualquier combinación de ataques sin armas. El BAB es el nivel de monje - 2. A nivel 8 y 15 puede usar otro ataque extra. Un monje aplica su bonificador completo de fuerza a sus tiradas de daño para todos los ataques con éxito hechos con ráfaga de golpes.</field>
     </object>
-    <object pk="121" model="main.especial">
+    <object pk="120" model="main.especial">
         <field type="CharField" name="nombre">Impacto sin arma</field>
         <field type="CharField" name="descripcion">Un monje gana Impacto sin arma mejorado como dote adicional. Los ataques de un monje pueden ser con el puño, codo, rodillas y pies. Esto significa que un monje puede hacer ataques sin armas con sus manos ocupadas. En consecuencia un monje puede aplicar su bonificador completo de fuerza a las tiradas de daño de todos sus ataques sin armas. El impacto sin arma de un monje es tratado como arma manufacturada y como arma natural a los propósitos de conjuros y efectos que mejoren o aumenten armas manufacturadas o naturales.</field>
     </object>
-    <object pk="122" model="main.especial">
+    <object pk="121" model="main.especial">
         <field type="CharField" name="nombre">Dotes adicionales del monje</field>
         <field type="CharField" name="descripcion">A nivel 1, nivel 2, y cada 4 niveles a partir de entonces, un monje puede seleccionar una dote adicional. Esa dote debe ser escogida de la siguiente lista: Usar arma improvisada, Reflejos de combate, Desviar flechas, Esquiva, Presa mejorada, Estilo del escorpión y Lanzar cualquier cosa. A nivel 6, las siguientes dotes se añaden a la lista: Puño del gorgón, Embestida mejorada, Desarme mejorado, Finta mejorada, Derribo mejorado y Movilidad. A nivel 10, las siguientes dotes son añadidas a la lista: Crítico mejorado, Ira de la medusa, Atrapar flechas y Ataque elástico. Un monje no necesita tener ninguna de las condiciones previas requeridas normalmente para esas dotes para poder seleccionarlas.</field>
     </object>
-    <object pk="123" model="main.especial">
+    <object pk="122" model="main.especial">
         <field type="CharField" name="nombre">Puñetazo aturdidor</field>
         <field type="CharField" name="descripcion">El monje gana Puñetazo aturdidor como dote adicional, incluso si no reúne los requisitos. A nivel 4, y cada 4 niveles a partir de entonces, el monje gana la capacidad de aplicar un nuevo estado al objetivo con su Puñetazo aturdidor. Este estado reemplaza el aturdimiento del objetivo durante 1 asalto, y una tirada de salvación exitosa aun niega el efecto. A nivel 4, puede escoger que el objetivo quede fatigado. A nivel 8, puede hacer que el objetivo quede indispuesto. A nivel 12, puede hacer que el objetivo quede grogui durante 1d6 + 1 asalto. A nivel 16, puede dejar ciego o sordo permanentemente al objetivo. A nivel 20, puede paralizar al objetivo durante 1d6 + 1 asaltos.</field>
     </object>
-    <object pk="124" model="main.especial">
+    <object pk="123" model="main.especial">
         <field type="CharField" name="nombre">Evasión del monje</field>
         <field type="CharField" name="descripcion">Si un monje hace una TS exitosa de Reflejos contra un ataque que normalmente infligiría medio daño con una salvación exitosa, en su lugar no recibe daño. Evasión puede ser usada únicamente si un monje viste armadura ligera o va sin armadura. Un monje indefenso no gana los beneficios de evasión.</field>
     </object>
-    <object pk="125" model="main.especial">
+    <object pk="124" model="main.especial">
         <field type="CharField" name="nombre">Movimiento rápido</field>
         <field type="CharField" name="descripcion">Un monje gana un bonificador de mejora a su movimiento terrestre, que subirá con los niveles de monje. Un monje con armadura o que porta una carga mediana o pesada pierde esta velocidad adicional.</field>
     </object>
-    <object pk="126" model="main.especial">
+    <object pk="125" model="main.especial">
         <field type="CharField" name="nombre">Entrenamiento en maniobras</field>
         <field type="CharField" name="descripcion">Un monje usa su nivel de monje en lugar de su bonificador de ataque base cuando calcula su BMC.</field>
     </object>
-    <object pk="127" model="main.especial">
+    <object pk="126" model="main.especial">
         <field type="CharField" name="nombre">Mente en calma</field>
         <field type="CharField" name="descripcion">Un monje de nivel 3 o superior gana un bonificador +2 a las tiradas de salvación contra conjuros y efectos de encantamiento.</field>
     </object>
-    <object pk="128" model="main.especial">
+    <object pk="127" model="main.especial">
         <field type="CharField" name="nombre">Reserva de ki</field>
         <field type="CharField" name="descripcion">Un monje gana una reserva de puntos de ki, energía sobrenatural que puede usar para llevar a cabo hazañas asombrosas. El número de puntos en la reserva de ki de un monje es igual a la mitad de su nivel de monje + su modificador de sabiduría. Mientras tenga al menos 1 punto en su reserva de ki, puede hacer un ataque ki. Mientras tenga un punto de ki, a nivel 4, sus ataques sin armas son tratados como armas mágicas para superar la reducción del daño, a nivel 7, sus ataques sin armas son tratados como hierro frío y plata para superar la reducción del daño a nivel 10, sus ataques sin armas son tratados como armas legales para superar la reducción del daño, a nivel 16, sus ataques sin armas son tratados como armas adamantinas para superar la reducción del daño y traspasar la dureza. Gastando 1 punto de su reserva de ki, un monje puede hacer un ataque adicional con su mayor bonificador de ataque cuando hace un ataque de ráfaga de golpes. Además, puede gastar 1 punto para aumentar su velocidad en 6 metros durante 1 asalto. Finalmente, un monje puede gastar 1 punto de su reserva de ki para darse a si mismo un bonificador de esquiva +4 a la CA durante un asalto. Cada uno de esos poderes es activado como una acción rápida. La reserva de ki se llena cada mañana después de 8 horas de descanso o meditación; esas horas no necesitan ser consecutivas.</field>
     </object>
-    <object pk="129" model="main.especial">
+    <object pk="128" model="main.especial">
         <field type="CharField" name="nombre">Caída lentificada</field>
         <field type="CharField" name="descripcion">Un monje cuyos brazos alcancen un muro puede usarlo para frenar su caída. La capacidad del monje para frenar su caída mejora con su nivel de monje.</field>
     </object>
-    <object pk="130" model="main.especial">
+    <object pk="129" model="main.especial">
         <field type="CharField" name="nombre">Gran salto</field>
         <field type="CharField" name="descripcion">Un monje añade su nivel a todas las pruebas de acrobacias hechas para saltar, tanto para saltos verticales como horizontales. Además, se considera que siempre que ha comenzado a correr cuando hace la prueba de salto usando acrobacias. Gastando 1 punto de su reserva de ki como acción rápida, un monje gana un bonificador +20 a las pruebas de acrobacias hechas para saltar durante un asalto.</field>
     </object>
-    <object pk="131" model="main.especial">
+    <object pk="130" model="main.especial">
         <field type="CharField" name="nombre">Pureza corporal</field>
         <field type="CharField" name="descripcion">Un monje gana inmunidad a todas las enfermedades, incluyendo enfermedades sobrenaturales y mágicas.</field>
     </object>
-    <object pk="132" model="main.especial">
+    <object pk="131" model="main.especial">
         <field type="CharField" name="nombre">Plenitud corporal</field>
         <field type="CharField" name="descripcion">Un monje puede sanar sus propias heridas como una acción estándar. Puede sanar un número de puntos de golpe de daño igual a su nivel de monje usando 2 puntos de su reserva de ki.</field>
     </object>
-    <object pk="133" model="main.especial">
+    <object pk="132" model="main.especial">
         <field type="CharField" name="nombre">Evasión mejorada del monje</field>
         <field type="CharField" name="descripcion">La capacidad de evasión del monje mejora. El sigue sin recibir daño con una tirada de salvación de reflejos exitosa contra ataques, pero de ahora en adelante recibe sólo medio daño de las salvaciones fallidas. Un monje indefenso no gana el beneficio de evasión mejorada.</field>
     </object>
-    <object pk="134" model="main.especial">
+    <object pk="133" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo diamantino</field>
         <field type="CharField" name="descripcion">Un monje gana inmunidad a los venenos de todo tipo.</field>
     </object>
-    <object pk="135" model="main.especial">
+    <object pk="134" model="main.especial">
         <field type="CharField" name="nombre">Paso abundante</field>
         <field type="CharField" name="descripcion">Un monje puede deslizarse mágicamente entre los espacios, como si usara el conjuro puerta dimensional . Usar esta capacidad es una acción de movimiento que consume 2 puntos de su reserva de ki. Su nivel de lanzador para este efecto es igual a su nivel de monje. No puede llevar otras criaturas con él usando esta capacidad.</field>
     </object>
-    <object pk="136" model="main.especial">
+    <object pk="135" model="main.especial">
         <field type="CharField" name="nombre">Alma diamantina</field>
         <field type="CharField" name="descripcion">Un monje gana resistencia a conjuros igual a su actual nivel de monje + 10.</field>
     </object>
-    <object pk="137" model="main.especial">
+    <object pk="136" model="main.especial">
         <field type="CharField" name="nombre">Palma temblorosa</field>
         <field type="CharField" name="descripcion">Puede usar este ataque de palma temblorosa una vez al día, y debe anunciar su intento antes de hacer su tirada de ataque. Las criaturas inmunes a ataques críticos no se ven afectadas. Si acierta, el monje puede intentar matar a la víctima en cualquier momento, siempre y cuando el intento se haga dentro de un número de días igual a su nivel de monje. Para hacer esta tentativa, el monje simplemente desea que el objetivo muera (como acción inmediata), y a no ser que el objetivo supere una tirada de salvación de fortaleza (CD 10 + la mitad de su nivel de monje + el modificador de sabiduría), muere. Si la tirada de salvación tiene éxito, el objetivo ya no corre peligro de ese ataque en concreto de palma temblorosa, pero todavía puede verse afectado por otra en un momento posterior. Un monje no puede tener más de 1 palma temblorosa en vigor al mismo tiempo. Si un monje usa palma temblorosa mientras otra todavía está en vigor, el efecto previo es negado.</field>
     </object>
-    <object pk="138" model="main.especial">
+    <object pk="137" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo eterno del monje</field>
         <field type="CharField" name="descripcion">Un monje no recibe penalizaciones a sus puntuaciones de capacidad por envejecimiento y no puede ser envejecido mágicamente. Cualquier penalización que ya haya recibido, sin embargo, se mantiene. El monje aún puede morir por su vejez.</field>
     </object>
-    <object pk="139" model="main.especial">
+    <object pk="138" model="main.especial">
         <field type="CharField" name="nombre">Lengua del sol y la luna</field>
         <field type="CharField" name="descripcion">Un monje a nivel 17 o mayor puede hablar con cualquier criatura viviente.</field>
     </object>
-    <object pk="140" model="main.especial">
+    <object pk="139" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo vacío</field>
         <field type="CharField" name="descripcion">Un monje gana la capacidad de asumir un estado etéreo durante 1 minuto como si usara el conjuro eternidad . Usar esta capacidad es una acción de movimiento que consume 3 puntos de su reserva de ki. Esta capacidad sólo afecta al monje.</field>
     </object>
-    <object pk="141" model="main.especial">
+    <object pk="140" model="main.especial">
         <field type="CharField" name="nombre">Yo perfecto</field>
         <field type="CharField" name="descripcion">A nivel 20, un monje se convierte en una criatura mágica. Es tratado para siempre como un ajeno más que como un humanoide (o el tipo de criatura que fuera el monje) a los efectos de conjuros o efectos mágicos. Además, el monje gana reducción del daño 10/caótico. A diferencia de otros ajenos, el monje todavía puede ser traído de vuelta de la muerte como si fuera un miembro de su tipo de criatura anterior.</field>
     </object>
-    <object pk="142" model="main.especial">
+    <object pk="141" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del paladín</field>
         <field type="CharField" name="descripcion">d10.</field>
     </object>
-    <object pk="143" model="main.especial">
+    <object pk="142" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del paladín</field>
         <field type="CharField" name="descripcion">artesanía(int), averiguar intenciones(sab), conocimiento de conjuros(int), curar(sab), diplomacia(car), montar(des), profesión(sab), saber(nobleza)(int), saber(religión)(int) y trato con animales(car).</field>
     </object>
-    <object pk="144" model="main.especial">
+    <object pk="143" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del paladín</field>
         <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
     </object>
-    <object pk="145" model="main.especial">
+    <object pk="144" model="main.especial">
         <field type="CharField" name="nombre">Competencias del paladín</field>
         <field type="CharField" name="descripcion">Los paladines son competentes con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
     </object>
-    <object pk="146" model="main.especial">
+    <object pk="145" model="main.especial">
         <field type="CharField" name="nombre">Aura buena</field>
         <field type="CharField" name="descripcion">El poder del aura buena de un paladín es igual a su nivel de paladín.</field>
     </object>
-    <object pk="147" model="main.especial">
+    <object pk="146" model="main.especial">
         <field type="CharField" name="nombre">Detectar el mal</field>
         <field type="CharField" name="descripcion">A voluntad, un paladín puede usar detectar el mal, como el conjuro. Un paladín puede, como acción de movimiento, concentrarse en un objeto individual o individuo dentro de 18 metros y determinar si es malvado, leyendo la fuerza de su aura como si lo hubiera estudiado durante 3 asaltos. Mientras se centre en un individuo u objeto, el paladín no detecta el mal en ningún otro objeto o individuo dentro del alcance.</field>
     </object>
-    <object pk="148" model="main.especial">
+    <object pk="147" model="main.especial">
         <field type="CharField" name="nombre">Castigar al mal</field>
         <field type="CharField" name="descripcion">Como acción rápida, el paladín escoge un objetivo en su línea de visión al que castigar. Si el objetivo es malvado, el paladín añade su bonificador de carisma a sus tiradas de ataque y añade su nivel de paladín a todas las tiradas de daño contra el objetivo que está castigando. Si el objetivo de castigar al mal es un ajeno con el subtipo maligno, un dragón de alineamiento malvado, o una criatura muerta viviente, el bonificador al daño en el primer ataque con éxito se incrementa a 2 puntos de daño por cada nivel de paladín que tenga. Independientemente del objetivo, castigar al mal sobrepasa automáticamente cualquier RD que posea la criatura. Además, mientras castigar al mal esté en funcionamiento, el paladín gana un bonificador de desvío igual a su modificador de carisma a su CA contra ataques hechos por el objetivo del castigo. Si el paladín escoge como objetivo una criatura que no es malvada, el castigo se pierde sin causar efectos. Los efectos del castigar al mal permanecen hasta que el objetivo del castigar está muerto o la próxima vez que el paladín descanse y vuelva a ganar sus usos de esta capacidad. A nivel 4, y cada tres niveles puede realizar esto 1 vez más.</field>
     </object>
-    <object pk="149" model="main.especial">
+    <object pk="148" model="main.especial">
         <field type="CharField" name="nombre">Gracia divina</field>
         <field type="CharField" name="descripcion">Un paladín gana un bonificador igual a su bonificar de carisma en todas sus tiradas de salvación.</field>
     </object>
-    <object pk="150" model="main.especial">
+    <object pk="149" model="main.especial">
         <field type="CharField" name="nombre">Imposición de manos</field>
         <field type="CharField" name="descripcion">Un paladín puede sanar heridas al toque. Cada día puede usar esta capacidad un número de veces igual a la mitad de su nivel de paladín más su modificador de carisma. Con cada uso de esta capacidad, un paladín puede sanar 1d6 puntos de golpe de daño por cada dos niveles de paladín que tenga. Usar esta capacidad es una acción estándar, a no ser que el paladín se cure a si mismo, en cuyo caso es una acción rápida. Alternativamente, un paladín puede usar este poder curativo para infligir daño a criaturas muertas vivientes, infligiendo 1d6 puntos de año por cada dos niveles que posea de paladín. Usar la imposición de manos de esta manera requiere un ataque de toque cuerpo a cuerpo exitoso y no provoca un ataque de oportunidad. Los muertos vivientes no reciben una tirada de salvación contra este daño.</field>
     </object>
-    <object pk="151" model="main.especial">
+    <object pk="150" model="main.especial">
         <field type="CharField" name="nombre">Aura de valor</field>
         <field type="CharField" name="descripcion">Un paladín es inmune al miedo (mágico o de otro tipo). Cada aliado a 3 metros o menos de él gana un bonificador de moral +4 a las tiradas de salvación contra los efectos del miedo. Esta capacidad funciona solo mientras el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="152" model="main.especial">
+    <object pk="151" model="main.especial">
         <field type="CharField" name="nombre">Salud divina</field>
         <field type="CharField" name="descripcion">Un paladín es inmune a todas las enfermedades, incluyendo las enfermedades sobrenaturales y las mágicas.Incluyendo la putridez de momia.</field>
     </object>
-    <object pk="153" model="main.especial">
+    <object pk="152" model="main.especial">
         <field type="CharField" name="nombre">Merced</field>
         <field type="CharField" name="descripcion">A nivel 3, y cada tres niveles, un paladín puede seleccionar una merced. Cada merced añade un efecto a la capacidad de imposición de manos del paladín. Cada vez que el paladín use imposición de manos para sanar daño a un objetivo, el objetivo también recibe los efectos adicionales de todas las mercedes que posea el paladín. Una merced puede eliminar un estado causado por una maldición, enfermedad o veneno sin curar el mal en si mismo. Tales estados vuelven después de 1 hora a no ser que la merced elimine realmente la aflicción que origina el estado. Estas capacidades son acumulativas.</field>
     </object>
-    <object pk="154" model="main.especial">
+    <object pk="153" model="main.especial">
         <field type="CharField" name="nombre">Canalizar energía positiva</field>
         <field type="CharField" name="descripcion">Cuando un paladín alcanza el nivel 4, gana la capacidad sobrenatural de canalizar energía positiva como un clérigo. Usar esta capacidad consume dos usos de su capacidad de imposición de manos. Un paladín usa su nivel como nivel efectivo de clérigo cuando canaliza energía positiva. Esta es una capacidad basada en el carisma.</field>
     </object>
-    <object pk="155" model="main.especial">
+    <object pk="154" model="main.especial">
         <field type="CharField" name="nombre">Conjuros de paladín</field>
         <field type="CharField" name="descripcion">Comenzando a nivel 4, un paladín gana la capacidad de lanzar conjuros divinos que son extraídos de la lista de conjuros de paladín. Un paladín debe escoger y preparar sus conjuros con antelación. Para preparar o lanzar un conjuro, un paladín debe tener una puntuación de carisma como mínimo igual a 10 + nivel de conjuro. La CD para una tirada de salvación contra el conjuro de un paladín es igual a 10 + nivel del conjuro + el modificador de carisma del paladín. Un paladín debe invertir 1 hora cada día en la oración y la meditación silenciosa para recuperar su asignación diaria de hechizos. Su nivel de lanzador es igual a su nivel de paladín – 3.</field>
     </object>
-    <object pk="156" model="main.especial">
+    <object pk="155" model="main.especial">
         <field type="CharField" name="nombre">Vínculo de paladín</field>
         <field type="CharField" name="descripcion">Al llegar a nivel 5, un paladín forma un vínculo divino con su dios, permitiendole mejorar su arma como acción estándar haciendo un llamamiento a la ayuda de un espíritu celestial durante un minuto por nivel de paladín. Cuando es llamado, el espíritu causa que el arma emane luz como una antorcha. A nivel 5, este espíritu garantiza al arma un bonificador +1 de mejora. Cada tres niveles el arma gana otro modificador +1 de mejora. Estos bonificadores pueden ser añadidos al arma, apilándose con los bonificadores existentes en el arma hasta un máximo de +5, o pueden ser usados para añadir alguna de las siguiente propiedades al arma: axiomática, radiante, defensora, disruptora, flamígera, flamígera explosiva, sagrada, afilada, compasiva y veloz. Añadir estas propiedades consume una cantidad de bonificación igual al coste de la propiedad. Estos bonificadores se añaden a cualquier propiedad que el arma ya tenga, pero no se apilan habilidades duplicadas. Si el arma no es mágica, al menos hay que añadir un bonificador de mejora +1 antes de poder añadir cualquier otra propiedad. El espíritu celestial no concede bonificadores si el arma está en poder de cualquier otro que no sea el paladín pero vuelve a concederlas si retorna al paladín. Un paladín puede usar esta capacidad una vez al día a nivel 5, y una vez adicional al día por cada cuatro niveles. Si un arma vinculada con un espíritu celestial es destruida, el paladín pierde el uso de esta capacidad durante 30 días, o hasta que gane un nivel, lo que ocurra antes. Durante este periodo de 30 días, el paladín recibe un penalizador -1 a las tiradas de ataque y daño con arma.</field>
     </object>
-    <object pk="157" model="main.especial">
+    <object pk="156" model="main.especial">
         <field type="CharField" name="nombre">Aura de decisión</field>
         <field type="CharField" name="descripcion">Un paladín es inmune los conjuros y aptitudes sortílegas de hechizo. Cada aliado a 3 metros del paladín gana un bonificador de moral +4 a las tiradas de salvación contra efectos de hechizo. Esta capacidad funciona sólo mientras el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="158" model="main.especial">
+    <object pk="157" model="main.especial">
         <field type="CharField" name="nombre">Aura de justicia</field>
         <field type="CharField" name="descripcion">Un paladín puede gastar dos usos de su capacidad de castigar al mal para otorgar la capacidad de castigar al mal a todos los aliados a 3 metros de él, usando los bonificadores del paladín. Los aliados pueden usar esta capacidad de castigar al mal desde el comienzo del siguiente turno del paladín y los bonificadores duran 1 minuto. Usar esta capacidad es una acción gratuita. Las criaturas malignas no reciben beneficios de esta capacidad.</field>
     </object>
-    <object pk="159" model="main.especial">
+    <object pk="158" model="main.especial">
         <field type="CharField" name="nombre">Aura de fe</field>
         <field type="CharField" name="descripcion">Las armas de un paladín son tratadas como si tuvieran alineamiento bueno para superar la reducción del daño. Cualquier ataque hecho contra un enemigo a 3 metros del paladín es tratado como si tuviera alineamiento bueno para superar la reducción del daño. Esta capacidad funciona sólo cuando el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="160" model="main.especial">
+    <object pk="159" model="main.especial">
         <field type="CharField" name="nombre">Aura de rectitud</field>
         <field type="CharField" name="descripcion">Un paladín gana RD 5/mal e inmunidad a los conjuros y habilidades sortílegas de compulsión. Cada aliado dentro de 3 metros de él gana un bonificador de moral +4 a las tiradas de salvación contra efectos de compulsión. Esta capacidad funciona sólo cuando el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="161" model="main.especial">
+    <object pk="160" model="main.especial">
         <field type="CharField" name="nombre">Campeón sagrado</field>
         <field type="CharField" name="descripcion">Un paladín se convierte en un conducto para el poder de su dios. Su RD se incrementa a 10/mal. Cada vez que use castigar al mal e impacta con éxito a un ajeno maligno, el ajeno también queda afectado por un destierro, usando su nivel de paladín como el nivel de lanzador (su arma y símbolo sagrado cuentan automáticamente como objeto que el sujeto odia). Después de que el efecto del destierro y el daño del ataque se hayan resuelto, el castigo finaliza inmediatamente. Además, cada vez que canalice energía positiva o use imposición de manos para sanar una criatura, sana la cantidad máxima posible.</field>
     </object>
-    <object pk="162" model="main.especial">
+    <object pk="161" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del pícaro</field>
         <field type="CharField" name="descripcion">d8.</field>
     </object>
-    <object pk="163" model="main.especial">
+    <object pk="162" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del pícaro</field>
         <field type="CharField" name="descripcion">acrobacias(des), artesanía(int), averiguar intenciones(sab), diplomacia(car), disfrazarse(car), engañar(car), escapismo(des), interpretar(car), intimidar(car), inutilizar mecanismo(des), juego de manos(des), lingüística(int), nadar(fue), percepción(sab), profesión(sab), saber(dungeons)(int), saber(local), sigilo(des), tasación(int), trepar(fue) y usar objeto mágico(car).</field>
     </object>
-    <object pk="164" model="main.especial">
+    <object pk="163" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del pícaro</field>
         <field type="CharField" name="descripcion">8 + modificador de inteligencia.</field>
     </object>
-    <object pk="165" model="main.especial">
+    <object pk="164" model="main.especial">
         <field type="CharField" name="nombre">Competencias del pícaro</field>
         <field type="CharField" name="descripcion">Los pícaros son competentes con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
     </object>
-    <object pk="166" model="main.especial">
+    <object pk="165" model="main.especial">
         <field type="CharField" name="nombre">Ataque furtivo</field>
         <field type="CharField" name="descripcion">El ataque del pícaro causa daño adicional en cualquier momento en que el bonificador de destreza a la CA. del objetivo sea negado, o cuando el pícaro flanquea a su objetivo. Este daño adicional es de 1d6 a primer nivel, y se incrementa 1d6 cada dos niveles de pícaro. Si el pícaro consigue asestar un golpe crítico con un ataque furtivo, este daño adicional no es multiplicado. Los ataques a distancia se pueden considerar como ataques furtivos sólo si el objetivo está dentro de 9 metros. Con un arma que inflija daño atenuado, un pícaro puede dar un golpe furtivo que haga daño atenuado en lugar de daño letal. No puede usar un arma que inflinge daño letal para hacer daño atenuado en un ataque furtivo. El pícaro debe ser capaz de ver el objetivo lo suficientemente bien y  no puede hacer un ataque furtivo contra una criatura que tenga ocultación.</field>
     </object>
-    <object pk="167" model="main.especial">
+    <object pk="166" model="main.especial">
         <field type="CharField" name="nombre">Encontrar trampas</field>
         <field type="CharField" name="descripcion">Un pícaro añade la mitad de su nivel a las pruebas de percepción hechas para detectar trampas y a las pruebas de habilidad de inutilizar mecanismo (mínimo +1). Un pícaro puede usar inutilizar mecanismo para desactivar trampas mágicas.</field>
     </object>
-    <object pk="168" model="main.especial">
+    <object pk="167" model="main.especial">
         <field type="CharField" name="nombre">Evasión del pícaro</field>
         <field type="CharField" name="descripcion">Un pícaro puede evitar incluso ataques mágicos e inusuales con gran agilidad. Si supera una tirada de salvación de reflejos contra un ataque que normalmente haría medio daño con una tirada de salvación exitosa, en lugar de eso no recibe daño. Evasión puede ser usada sólo si el pícaro viste armadura ligera o va sin armadura. Un pícaro indefenso no gana el beneficio de evasión.</field>
     </object>
-    <object pk="169" model="main.especial">
+    <object pk="168" model="main.especial">
         <field type="CharField" name="nombre">Talentos del pícaro</field>
         <field type="CharField" name="descripcion">Empezando a nivel 2, un pícaro gana un talento de pícaro. Gana un talento de pícaro adicional en los niveles pares del pícaro hasta nivel 10. Un pícaro no puede seleccionar un talento individual más de una vez.</field>
     </object>
-    <object pk="170" model="main.especial">
+    <object pk="169" model="main.especial">
         <field type="CharField" name="nombre">Sentido de las trampas del pícaro</field>
         <field type="CharField" name="descripcion">Un pícaro gana un sentido intuitivo que le alerta del peligro de las trampas, dándole un bonificador +1 a las salvaciones de reflejos hechos para evitar trampas y un bonificador +1 de esquiva a la CA contra ataques hechos por trampas. Estos bonificadores aumentan en 1 en los niveles 6, 9, 12, 15 y 18. Los bonificadores de sentido de las trampas ganados por múltiples clases se apilan.</field>
     </object>
-    <object pk="171" model="main.especial">
+    <object pk="170" model="main.especial">
         <field type="CharField" name="nombre">Esquiva asombrosa del pícaro</field>
         <field type="CharField" name="descripcion">No puede ser cogido desprevenido, incluso si el atacante es invisible. Todavía pierde su bonificador de Destreza a la CA si está inmovilizado. Un pícaro con esta capacidad todavía puede perder su bonificador de Destreza a la CA si un oponente usa una acción de fintar de manera exitosa contra él.</field>
     </object>
-    <object pk="172" model="main.especial">
+    <object pk="171" model="main.especial">
         <field type="CharField" name="nombre">Esquiva asombrosa mejorada del pícaro</field>
         <field type="CharField" name="descripcion">Un pícaro de nivel 8 o mayor ya no puede ser flanqueado. Esta defensa niega a otro pícaro la capacidad de hacer un ataque furtivo al personaje al flanquearlo, a no ser que el atacante tenga al menos cuatro niveles de pícaro más que el objetivo.</field>
     </object>
-    <object pk="173" model="main.especial">
+    <object pk="172" model="main.especial">
         <field type="CharField" name="nombre">Talentos mejorados del pícaro</field>
         <field type="CharField" name="descripcion">A nivel 10, y cada dos niveles a partir de entonces, un pícaro puede escoger un talento avanzado en lugar de un talento de pícaro.</field>
     </object>
-    <object pk="174" model="main.especial">
+    <object pk="173" model="main.especial">
         <field type="CharField" name="nombre">Golpe maestro</field>
         <field type="CharField" name="descripcion">Alcanzado el nivel 20, un pícaro se vuelve increíblemente mortal cuando inflige daño con ataque furtivo. Cada vez que el pícaro inflige daño con ataque furtivo, puede escoger uno de los siguientes tres efectos: el objetivo puede caer dormido durante 1d4 horas, paralizado durante 2d6 asaltos o asesinado. Independientemente del efecto escogido, el objetivo recibe una salvación de fortaleza para negar el efecto adicional. La CD de esta salvación es igual a 10 + la mitad del nivel de pícaro + el modificador de inteligencia. Una vez que una criatura ha sido el objetivo de un golpe maestro, independientemente de si ha tenido éxito en la salvación o no, la criatura es inmune al golpe maestro del pícaro durante 24 horas. Las criaturas que son inmunes al ataque furtivo del pícaro también son inmunes a esta capacidad.</field>
     </object>
+<!--PODERES-->
+    <!--PODERES DE BÁRBARO-->
+    <object pk="1" model="main.poder">
+        <field type="CharField" name="nombre">Abandono temerario</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, el bárbaro puede recibir un penalizador -1 a la CA para obtener un bonificador +1 a las tiradas de ataque. El penalizador a la CA aumenta en -1 y el bonificador a la tirada de ataque aumenta en +1 a nivel 4 y cada 4 niveles en adelante.</field>
+    </object>
+    <object pk="2" model="main.poder">
+        <field type="CharField" name="nombre">Abatir</field>
+        <field type="CharField" name="descripcion">Una vez por furia, el bárbaro puede hacer un ataque de derribo contra un objetivo en lugar de un ataque cuerpo a cuerpo. Si tiene éxito, el objetivo recibe un daño igual al modificador de fuerza del bárbaro y queda derribado. Esto no provoca ataques de oportunidad.</field>
+    </object>
+    <object pk="3" model="main.poder">
+        <field type="CharField" name="nombre">Arredrar</field>
+        <field type="CharField" name="descripcion">Una vez por asalto, el bárbaro puede hacer un intento de embestida contra un enemigo en lugar de un ataque cuerpo a cuerpo. Si tiene éxito, el blanco recibe un daño igual al modificador de fuerza del bárbaro y es desplazado de la forma habitual. El bárbaro no necesita moverse con el blanco si tiene éxito. Esto no provoca ataques de oportunidad.</field>
+    </object>
+    <object pk="4" model="main.poder">
+        <field type="CharField" name="nombre">Mirada intimidante</field>
+        <field type="CharField" name="descripcion">El bárbaro puede hacer una prueba de intimidar contra un enemigo adyacente como acción de movimiento. Si el bárbaro tiene éxito al desmoralizar a su oponente, el enemigo queda estremecido durante 1d4 asaltos + 1 asalto por cada 5 puntos de diferencia que superen la CD de la prueba.</field>
+    </object>
+    <object pk="5" model="main.poder">
+        <field type="CharField" name="nombre">Aullido terrorífico</field>
+        <field type="CharField" name="descripcion">El bárbaro desata un aullido temible como acción estándar. Todos los enemigos estremecidos en un radio de 9 metros deben hacer una tirada de salvación de voluntad (DC 10 + la mitad del nivel de bárbaro + el modificador de fuerza del bárbaro) o quedar despavoridos durante 1d4+1 asaltos. Una vez que un enemigo ha hecho una tirada de salvación contra el aullido terrorífico (con éxito o no) es inmune a este poder durante 24 horas. Un bárbaro debe tener el poder de Mirada intimidante antes de seleccionar este poder de furia. Un bárbaro debe ser al menos nivel 8 para seleccionar este poder.</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object pk="6" model="main.poder">
+        <field type="CharField" name="nombre">Avance autoritario</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, el bárbaro inflige un daño igual a su bonificador de fuerza cuando tenga éxito en una maniobra de combate de arrollar.</field>
+    </object>
+    <object pk="7" model="main.poder">
+        <field type="CharField" name="nombre">Barrido poderoso</field>
+        <field type="CharField" name="descripcion">El bárbaro confirma automáticamente un impacto crítico. Este poder se usa como acción inmediata una vez que se consigue una amenaza de crítico. Un bárbaro debe ser al menos nivel 12 antes de seleccionar este poder. Este poder sólo puede activarse una vez por cada uso de furia.</field>
+        <field type="IntegerField" name="nivel">12</field>
+    </object>
+    <object pk="8" model="main.poder">
+        <field type="CharField" name="nombre">Borracho tambaleante</field>
+        <field type="CharField" name="descripcion">Mientras esté en furia, un bárbaro obtiene un bonificador +1 de esquiva a la CA contra ataques de oportunidad por cada bebida alcohólica que haya consumido durante su furia, hasta un máximo de +1 por cada cuatro niveles de bárbaro.</field>
+    </object>
+    <object pk="9" model="main.poder">
+        <field type="CharField" name="nombre">Borracho rugiente</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, el bárbaro obtiene un bonificador +1 de moral a las pruebas de intimidar y a la CD de la salvación de cualquier efecto de miedo que produzca por cada bebida alcohólica que haya consumido durante su furia, hasta un máximo de +1 por cada cuatro niveles de bárbaro.</field>
+    </object>
+    <object pk="10" model="main.poder">
+        <field type="CharField" name="nombre">Superstición</field>
+        <field type="CharField" name="descripcion">El bárbaro obtiene un bonificador +2 de moral a las tiradas de salvación para resistir conjuros, aptitudes sobrenaturales y aptitudes sortílegas. Este bonificador aumenta en +1 por cada 4 niveles que el bárbaro haya obtenido. Mientras está en furia, el bárbaro no puede ser blanco voluntario de ningún conjuro y debe hacer tiradas de salvación para resistir todos los conjuros, incluso los lanzados por sus aliados.</field>
+    </object>
+    <object pk="11" model="main.poder">
+        <field type="CharField" name="nombre">Cazador de brujas</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, el bárbaro obtiene un bonificador +1 a las tiradas de daño contra criaturas que posean conjuros o aptitudes sortílegas. Este bonificador al daño aumenta en +1 por cada cuatro niveles que posea el bárbaro. El bárbaro debe poseer el poder de furia de Superstición para seleccionar este poder de furia.</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="10"></object>
+        </field>    
+    </object>
+    <object pk="12" model="main.poder">
+        <field type="CharField" name="nombre">Momento de claridad</field>
+        <field type="CharField" name="descripcion">El bárbaro no obtiene los beneficios ni recibe los penalizadores de la furia durante 1 asalto. Esto incluye el penalizador a la CA y la restricción de qué acciones puede realizar. Este asalto sigue contando para el número total de asaltos de furia al día. Este poder sólo puede activarse una vez por cada uso de furia. Activar este poder es una acción rápida.</field>
+    </object>
+    <object pk="13" model="main.poder">
+        <field type="CharField" name="nombre">Claridad perfecta</field>
+        <field type="CharField" name="descripcion">Mientras utiliza su poder de furia de Momento de claridad, el bárbaro puede tirar dos veces por cada posibilidad de fallo o tiros de salvación de voluntad para descreer ilusiones, eligiendo el mejor resultado. Un bárbaro debe poseer el poder de Momento de claridad antes de seleccionar este poder de furia.</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="12"></object>
+        </field>    
+    </object>
+    <object pk="14" model="main.poder">
+        <field type="CharField" name="nombre">Cólera soliviantada</field>
+        <field type="CharField" name="descripcion">El bárbaro puede entrar en furia incluso estando fatigado. Mientras permanece en furia después de usar esta aptitud, el bárbaro es inmune a la condición de fatigado. Una vez que la furia termina, el bárbaro permanece exhausto durante 10 minutos por cada asalto pasado en furia.</field>
+    </object>
+    <object pk="15" model="main.poder">
+        <field type="CharField" name="nombre">Montura feroz</field>
+        <field type="CharField" name="descripcion">Mientras está en furia y montado, la montura del bárbaro también obtiene los beneficios de la furia (incluyendo furia mayor y furia poderosa) mientras el bárbaro siga montado o esté adyacente a ella. Mientras su montura esté en furia de esta forma, debe consumir un asalto adicional de furia por asalto. Puede elegir no pagar este coste, en cuyo caso la montura no entrará en furia.</field>
+    </object>
+    <object pk="16" model="main.poder">
+        <field type="CharField" name="nombre">Corcel espiritual</field>
+        <field type="CharField" name="descripcion">Mientras está en furia y montado, la montura del bárbaro obtiene RD/magia igual a la mitad del nivel del bárbaro. Las armas naturales de la montura cuentan como mágicas a efectos de superar la reducción del daño. Un bárbaro debe poseer el poder de Montura feroz y ser al menos nivel 6 para seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="12"></object>
+        </field>    
+    </object>
+    <object pk="17" model="main.poder">
+        <field type="CharField" name="nombre">Custodia vital</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, si el bárbaro queda reducido por debajo de 0 puntos, 1 punto de golpe de daño letal por nivel de bárbaro queda convertido en daño no letal. Si el bárbaro queda con puntos de golpe negativosdebido al daño letal, se estabiliza inmediatamente.</field>
+    </object>
+    <object pk="18" model="main.poder">
+        <field type="CharField" name="nombre">Destrozador</field>
+        <field type="CharField" name="descripcion">Una vez por furia, cuando el bárbaro realice un ataque contra un objeto desatendido o cuando realice una maniobra de combate de romper arma, puede ignorar la dureza del objeto. Esta aptitud debe usarse antes de hacer la tirada de ataque o la prueba de romper arma.</field>
+    </object>
+    <object pk="19" model="main.poder">
+        <field type="CharField" name="nombre">Pies ligeros</field>
+        <field type="CharField" name="descripcion">El bárbaro gana un bonificador de mejora de 5 pies a su velocidad. Este aumento siempre está activo durante la furia.</field>
+    </object>
+    <object pk="20" model="main.poder">
+        <field type="CharField" name="nombre">Esprintar</field>
+        <field type="CharField" name="descripcion">Una vez por furia, el bárbaro puede usar una única acción de asalto completo de carrera para moverse hasta 6 veces su velocidad o una acción de asalto completo de carga para moverse hasta 3 veces su velocidad. Un bárbaro debe poseer el poder de furia de Pies ligeros y ser de al menos nivel 4 antes de seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="19"></object>
+        </field>    
+    </object>
+    <object pk="21" model="main.poder">
+        <field type="CharField" name="nombre">Esquivar rodando</field>
+        <field type="CharField" name="descripcion">El bárbaro obtiene un bonificador +1 de esquiva a su CA contra ataques a distancia durante un número de asaltos igual al modificador actual de constitución (mínimo 1). Este bonificador aumenta en +1 por cada 6 niveles que tenga el bárbaro. Activar esta aptitud es una acción de movimiento que no provoca ataques de oportunidad.</field>
+    </object>
+    <object pk="22" model="main.poder">
+        <field type="CharField" name="nombre">Esquiva refleja</field>
+        <field type="CharField" name="descripcion">Mientras usa su poder de furia de esquivar rodando, el bárbaro puede aplicar su bonificador de esquiva a la CA como bonificador a las salvaciones de reflejos. Un bárbaro debe poseer el poder de furia de esquivar rodando y ser al menos nivel 6 antes de elegir este poder de furia.</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="21"></object>
+        </field>    
+    </object>
+    <object pk="23" model="main.poder">
+        <field type="CharField" name="nombre">Fantasma furioso</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, el bárbaro causa daño normal a las criaturas incorporales incluso cuando utiliza armas no mágicas. También obtiene un bonificador de moral a la CA de toque igual a su bonificador a las tiradas de salvación debido a su poder de furia de Superstición. Un bárbaro debe poseer el poder de furia de Superstición y ser al menos nivel 6 antes de seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="10"></object>
+        </field>    
+    </object>
+    <object pk="24" model="main.poder">
+        <field type="CharField" name="nombre">Fortaleza interna</field>
+        <field type="CharField" name="descripcion">Mientras permanece en furia, el bárbaro es inmune a las condiciones de indispuesto y mareado. Un bárbaro debe ser al menos nivel 8 para seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">8</field>
+    </object>
+    <object pk="25" model="main.poder">
+        <field type="CharField" name="nombre">Furia elemental menor</field>
+        <field type="CharField" name="descripcion">Como acción rápida, el bárbaro puede hacer que sus ataques cuerpo a cuerpo provoquen 1d6 puntos de daño por energía (ácido, electricidad, fuego o frío) adicionales durante 1 asalto. Un bárbaro debe ser al menos nivel 4 para usar este poder de furia. Este poder sólo puede usarse una vez por furia.</field>
+        <field type="IntegerField" name="nivel">4</field>
+    </object>
+    <object pk="26" model="main.poder">
+        <field type="CharField" name="nombre">Furia elemental</field>
+        <field type="CharField" name="descripcion">Mientras está en fura, todos los ataques cuerpo a cuerpo del bárbaro causa 1d6 puntos de daño por energía (ácido, electricidad, frío o fuego) adicionales. El tipo se elige cuando el bárbaro comienza su furia. Un bárbaro debe poseer el poder de Furia elemental menor para elegir este poder de furia. Un bárbaro debe ser al menos nivel 8 para seleccionar este poder de furia. El bárbaro puede seguir usando su poder de Furia elemental menor mientras usa este poder de furia, pero debe elegir un tipo de energía diferente.</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="25"></object>
+        </field>    
+    </object>
+    <object pk="27" model="main.poder">
+        <field type="CharField" name="nombre">Furia elemental mayor</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, todos los impactos críticos que consiga el bárbaro con armas cuerpo a cuerpo causan 1d10 puntos de daño de energía adicionales. El tipo de daño es el mismo que el elegido para el poder de Furia elemental. Un bárbaro debe poseer el poder de Furia elemental y ser al menos nivel 12 para seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="26"></object>
+        </field>    
+    </object>
+    <object pk="28" model="main.poder">
+        <field type="CharField" name="nombre">Furia intrepida</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, el bárbaro es inmune a las condiciones de estremecido y asustado. Un bárbaro debe ser al menos nivel 12 antes de seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">12</field>
+    </object>
+    <object pk="29" model="main.poder">
+        <field type="CharField" name="nombre">Golpe inesperado</field>
+        <field type="CharField" name="descripcion">El bárbaro puede hacer un ataque de oportunidad contra un enemigo que se mueva hasta una casilla amenazada por el bárbaro, independientemente de si ese movimiento provoque normalmente un ataque de oportunidad. Este poder sólo puede activarse una vez por cada uso de furia. Un bárbaro debe ser al menos nivel 8 antes de seleccionar este poder.</field>
+        <field type="IntegerField" name="nivel">8</field>
+    </object>
+    <object pk="30" model="main.poder">
+        <field type="CharField" name="nombre">Golpe poderoso</field>
+        <field type="CharField" name="descripcion">El bárbaro obtiene un bonificador +1 a una tirada de daño. Este bonificador aumenta en +1 por cada 4 niveles que el bárbaro haya conseguido. Este poder se activa como acción rápida antes de hacer al tirada de daño. Este poder sólo puede activarse una vez por cada uso de furia.</field>
+    </object>
+    <object pk="31" model="main.poder">
+        <field type="CharField" name="nombre">Golpe sangrante</field>
+        <field type="CharField" name="descripcion">Cuando usa su poder de furia de Golpe poderoso, el bárbaro también causa daño de desangramiento igual a su bonificador de daño con el Golpe poderoso. Este daño de desangramiento ignora la reducción del daño. Un bárbaro debe poseer el poder de Golpe poderoso y ser al menos nivel 8 para seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="30"></object>
+        </field>    
+    </object>
+    <object pk="32" model="main.poder">
+        <field type="CharField" name="nombre">Marca propicia</field>
+        <field type="CharField" name="descripcion">Una vez por furia, como acción rápida que cuesta 2 asaltos de furia, el bárbaro puede invocar el favor de los espíritus. Usar la marca propicia le concede un bonificador de +1d6 a una tirada de d20 que acabe de hacer. Puede invocar la marca propicia después de ver el resultado de la tirada.</field>
+    </object>
+    <object pk="33" model="main.poder">
+        <field type="CharField" name="nombre">Montura feroz mayor</field>
+        <field type="CharField" name="descripcion">Mientras esté en furia y montado, la montura del bárbaro obtiene los beneficios de cualquier poder de furia que tenga un efecto constante cuando el bárbaro entra en furia. No obtiene los beneficios de ningún poder de furia que requiera acciones para ser activado, incluso si son acciones gratuitas. Un bárbaro debe poseer el poder de furia de Montura feroz y ser al menos nivel 8 para seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="15"></object>
+        </field>    
+    </object>
+    <object pk="34" model="main.poder">
+        <field type="CharField" name="nombre">Nadador furioso</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, el bárbaro suma su nivel como un bonificador de mejora a todas las pruebas de nadar.</field>
+    </object>
+    <object pk="35" model="main.poder">
+        <field type="CharField" name="nombre">Nadador bestial</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, el bárbaro obtiene una velocidad natural nadando igual a su velocidad terrestre normal. Un bárbaro debe poseer el poder de nadador furioso y ser de al menos nivel 6 antes de seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="34"></object>
+        </field>
+    </object>
+    <object pk="36" model="main.poder">
+        <field type="CharField" name="nombre">Oleada de fuerza</field>
+        <field type="CharField" name="descripcion">El bárbaro añade su nivel de bárbaro a una prueba de fuerza o maniobra de combate, o a su DMC cuando un oponente intente hacer alguna maniobra contra él. Este poder se usa como acción inmediata y sólo puede activarse una vez por cada uso de furia.</field>
+    </object>
+    <object pk="37" model="main.poder">
+        <field type="CharField" name="nombre">Olfato</field>
+        <field type="CharField" name="descripcion">El bárbaro obtiene la aptitud de olfato mientras permanezca en furia y puede usar esta aptitud para localizar enemigos invisibles.</field>
+    </object>
+    <object pk="38" model="main.poder">
+        <field type="CharField" name="nombre">Olfato primigenio</field>
+        <field type="CharField" name="descripcion">Cuando usa su poder de furia de Olfato, el bárbaro añade la mitad de su nivel de bárbaro a las pruebas de supervivencia para rastrear mediante el olfato y a las pruebas de percepción para adivinar la localización de criaturas que no pueda ver. Si adivina la localización de una criatura que posea ocultación total, la trata como si tuviera ocultación. Un bárbaro debe poseer el poder de furia de Olfato y ser al menos nivel 8 antes de seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="37"></object>
+        </field>
+    </object>
+    <object pk="39" model="main.poder">
+        <field type="CharField" name="nombre">Precisión sorprendente</field>
+        <field type="CharField" name="descripcion">El bárbaro obtiene un bonificador +1 de moral a una tirada de ataque. Este bonificador aumenta en +1 por cada 4 niveles que el bárbaro haya obtenido. Este poder funciona como una acción rápida antes de que se haga la tirada. Sólo puede activarse una vez por cada uso de furia.</field>
+    </object>
+    <object pk="40" model="main.poder">
+        <field type="CharField" name="nombre">Precisión mortal</field>
+        <field type="CharField" name="descripcion">Si el bárbaro logra una amenaza de crítico cuando usa su poder de furia de Precisión sorprendente, aplica el doble del bonificador de Precisión sorprendente al tirar para confirmar el crítico. Un bárbaro debe poseer el poder de furia de Precisión sorprendente y ser al menos nivel 4 antes de seleccionar este poder de furia.</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="39"></object>
+        </field>
+    </object>
+    <object pk="41" model="main.poder">
+        <field type="CharField" name="nombre">Reflejos rápidos</field>
+        <field type="CharField" name="descripcion">Mientras está en furia, el bárbaro puede hacer un ataque de oportunidad adicional por asalto.</field>
+    </object>
+    <object pk="42" model="main.poder">
+        <field type="CharField" name="nombre">Visión en la penumbra</field>
+        <field type="CharField" name="descripcion">Los sentidos del bárbaro se afinan y obtiene visión en la penumbra durante la furia.</field>
+    </object>
+    <object pk="43" model="main.poder">
+        <field type="CharField" name="nombre">Visión en la oscuridad</field>
+        <field type="CharField" name="descripcion">Los sentidos del bárbaro se vuelven increíblemente precisos mientras está en furia y obtiene visión en la oscuridad 18 metros. El bárbaro debe tener visión en la penumbra como poder de furia.</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="42"></object>
+        </field>
+    </object>
+    <!--PODERES DE BARDO-->
+    <object pk="44" model="main.poder">
+        <field type="CharField" name="nombre">Actuar(engañar, disfrazarse)</field>
+        <field type="CharField" name="descripcion">Interpretación versatil del bardo: actuar(engañar, disfrazarse).</field>
+    </object>
+    <object pk="45" model="main.poder">
+        <field type="CharField" name="nombre">Canto(engañar, averiguar intenciones)</field>
+        <field type="CharField" name="descripcion">Interpretación versatil del bardo: canto(engañar, averiguar intenciones).</field>
+    </object>
+    <object pk="46" model="main.poder">
+        <field type="CharField" name="nombre">Comedia(engañar, intimidar)</field>
+        <field type="CharField" name="descripcion">Interpretación versatil del bardo: comedia(engañar, intimidar).</field>
+    </object>
+    <object pk="47" model="main.poder">
+        <field type="CharField" name="nombre">Danza(acrobacias, volar)</field>
+        <field type="CharField" name="descripcion">Interpretación versatil del bardo: danza(acrobacias, volar).</field>
+    </object>
+    <object pk="48" model="main.poder">
+        <field type="CharField" name="nombre">Cuerda(engañar, diplomacia)</field>
+        <field type="CharField" name="descripcion">Interpretación versatil del bardo: cuerda(engañar, diplomacia).</field>
+    </object>
+    <object pk="49" model="main.poder">
+        <field type="CharField" name="nombre">Percusión(trato con animales, intimidar)</field>
+        <field type="CharField" name="descripcion">Interpretación versatil del bardo: percusión(trato con animales, intimidar).</field>
+    </object>
+    <object pk="50" model="main.poder">
+        <field type="CharField" name="nombre">Teclado(diplomacia, intimidar)</field>
+        <field type="CharField" name="descripcion">Interpretación versatil del bardo: cuerda(diplomacia, intimidar).</field>
+    </object>
+    <object pk="51" model="main.poder">
+        <field type="CharField" name="nombre">Viento(diplomacia, trato con animales)</field>
+        <field type="CharField" name="descripcion">Interpretación versatil del bardo: viento(diplomacia, trato con animales).</field>
+    </object>
+    <object pk="52" model="main.poder">
+        <field type="CharField" name="nombre">Oratoria(diplomacia, averiguar intenciones)</field>
+        <field type="CharField" name="descripcion">Interpretación versatil del bardo: cuerda(diplomacia, averiguar intenciones).</field>
+    </object>
+    <!--PODERES DE EXPLORADOR-->
+    <object pk="53" model="main.poder">
+        <field type="CharField" name="nombre">Aberración</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: aberración.</field>
+    </object>
+    <object pk="54" model="main.poder">
+        <field type="CharField" name="nombre">Animal</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: animal.</field>
+    </object>
+    <object pk="55" model="main.poder">
+        <field type="CharField" name="nombre">Constructo</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: constructo.</field>
+    </object>
+    <object pk="56" model="main.poder">
+        <field type="CharField" name="nombre">Dragón</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: dragón.</field>
+    </object>
+    <object pk="57" model="main.poder">
+        <field type="CharField" name="nombre">Hada</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: hada.</field>
+    </object>
+    <object pk="58" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(acuático)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(acuático).</field>
+    </object>
+    <object pk="59" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(enano)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(enano).</field>
+    </object>
+    <object pk="60" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(elfo)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(elfo).</field>
+    </object>
+    <object pk="61" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(gigante)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(gigante).</field>
+    </object>
+    <object pk="62" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(trasgoide)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(trasgoide).</field>
+    </object>
+    <object pk="63" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(gnoll)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(gnoll).</field>
+    </object>
+    <object pk="64" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(gnomo)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(gnomo).</field>
+    </object>
+    <object pk="65" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(mediano)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(mediano).</field>
+    </object>
+    <object pk="66" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(humano)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(humano).</field>
+    </object>
+    <object pk="67" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(orco)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(orco).</field>
+    </object>
+    <object pk="68" model="main.poder">
+        <field type="CharField" name="nombre">Humanoide(reptiliano)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: humanoide(reptiliano).</field>
+    </object>
+    <object pk="69" model="main.poder">
+        <field type="CharField" name="nombre">Bestia mágica</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: bestia mágica.</field>
+    </object>
+    <object pk="70" model="main.poder">
+        <field type="CharField" name="nombre">Ajeno(aire)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: ajeno(aire).</field>
+    </object>
+    <object pk="71" model="main.poder">
+        <field type="CharField" name="nombre">Ajeno(caótico)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: ajeno(caótico).</field>
+    </object>
+    <object pk="72" model="main.poder">
+        <field type="CharField" name="nombre">Ajeno(tierra)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: ajeno(tierra).</field>
+    </object>
+    <object pk="73" model="main.poder">
+        <field type="CharField" name="nombre">Ajeno(malvado)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: ajeno(malvado).</field>
+    </object>
+    <object pk="74" model="main.poder">
+        <field type="CharField" name="nombre">Ajeno(fuego)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: ajeno(fuego).</field>
+    </object>
+    <object pk="75" model="main.poder">
+        <field type="CharField" name="nombre">Ajeno(bueno)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: ajeno(bueno).</field>
+    </object>
+    <object pk="76" model="main.poder">
+        <field type="CharField" name="nombre">Ajeno(legal)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: ajeno(legal).</field>
+    </object>
+    <object pk="77" model="main.poder">
+        <field type="CharField" name="nombre">Ajeno(nativo)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: ajeno(nativo).</field>
+    </object>
+    <object pk="78" model="main.poder">
+        <field type="CharField" name="nombre">Ajeno(agua)</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: ajeno(agua).</field>
+    </object>
+    <object pk="79" model="main.poder">
+        <field type="CharField" name="nombre">Planta</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: planta.</field>
+    </object>
+    <object pk="80" model="main.poder">
+        <field type="CharField" name="nombre">Muerto viviente</field>
+        <field type="CharField" name="descripcion">Enemigo predilecto del explorador: muerto viviente.</field>
+    </object>
+    <!--PODERES DE GUERRERO-->
+    <object pk="81" model="main.poder">
+        <field type="CharField" name="nombre">Entrenamiento en armas: arcos</field>
+        <field type="CharField" name="descripcion">Arco compuesto, arco corto compuesto, arco largo y arco corto.</field>
+    </object>
+    <object pk="82" model="main.poder">
+        <field type="CharField" name="nombre">Entrenamiento en armas: ballestas</field>
+        <field type="CharField" name="descripcion">Ballesta de mano, ballesta ligera, ballesta pesada.</field>
+    </object>
+    <object pk="83" model="main.poder">
+        <field type="CharField" name="nombre">Entrenamiento en armas: corto alcance</field>
+        <field type="CharField" name="descripcion">Impacto sin arma.</field>
+    </object>
+    <object pk="84" model="main.poder">
+        <field type="CharField" name="nombre">Entrenamiento en armas: espadas ligeras</field>
+        <field type="CharField" name="descripcion">Daga, espada corta.</field>
+    </object>
+    <object pk="85" model="main.poder">
+        <field type="CharField" name="nombre">Entrenamiento en armas: espadas pesadas</field>
+        <field type="CharField" name="descripcion">Cimitarra, espada bastarda, espada larga, guadaña, mandoble.</field>
+    </object>
+    <object pk="86" model="main.poder">
+        <field type="CharField" name="nombre">Entrenamiento en armas: hachas</field>
+        <field type="CharField" name="descripcion">Gran hacha, hacha de mano, pico.</field>
+    </object>
+    <object pk="87" model="main.poder">
+        <field type="CharField" name="nombre">Entrenamiento en armas: lanzas</field>
+        <field type="CharField" name="descripcion">Jabalina, lanza, lanza corta.</field>
+    </object>
+    <object pk="88" model="main.poder">
+        <field type="CharField" name="nombre">Entrenamiento en armas: martillos</field>
+        <field type="CharField" name="descripcion">Martillo de guerra, martillo ligero, maza ligera, maza pesada.</field>
+    </object>
+    <!--PODERES DE PALADÍN-->
+    <object pk="89" model="main.poder">
+        <field type="CharField" name="nombre">Merced: fatigado</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está fatigado.</field>
+        <field type="IntegerField" name="nivel">3</field>
+    </object>
+    <object pk="90" model="main.poder">
+        <field type="CharField" name="nombre">Merced: estremecido</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está estremecido.</field>
+        <field type="IntegerField" name="nivel">3</field>
+    </object>
+    <object pk="91" model="main.poder">
+        <field type="CharField" name="nombre">Merced: indispuesto</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está indispuesto.</field>
+        <field type="IntegerField" name="nivel">3</field>
+    </object>
+    <object pk="92" model="main.poder">
+        <field type="CharField" name="nombre">Merced: atontado</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está atontado.</field>
+        <field type="IntegerField" name="nivel">6</field>
+    </object>
+    <object pk="93" model="main.poder">
+        <field type="CharField" name="nombre">Merced: enfermo</field>
+        <field type="CharField" name="descripcion">La capacidad de imposición de manos del paladín también actúa como Quitar enfermedad, usando el nivel del paladín como nivel de lanzador.</field>
+        <field type="IntegerField" name="nivel">6</field>
+    </object>
+    <object pk="94" model="main.poder">
+        <field type="CharField" name="nombre">Merced: grogui</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está grogui, a no ser que el objetivo esté exactamente en 0 puntos de golpe.</field>
+        <field type="IntegerField" name="nivel">6</field>
+    </object>
+    <object pk="95" model="main.poder">
+        <field type="CharField" name="nombre">Merced: asustado</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está asustado. El paladín debe tener la merced de estremecido antes de seleccionar esta merced.</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="90"></object>
+        </field>
+    </object>
+    <object pk="96" model="main.poder">
+        <field type="CharField" name="nombre">Merced: envenenado</field>
+        <field type="CharField" name="descripcion">La capacidad de imposición de manos del paladín también actúa como Neutralizar veneno, usando el nivel del paladín como nivel de lanzador..</field>
+        <field type="IntegerField" name="nivel">9</field>
+    </object>
+    <object pk="97" model="main.poder">
+        <field type="CharField" name="nombre">Merced: exhausto</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está exhausto. El paladín debe tener la merced de fatigado antes de seleccionar esta merced.</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="89"></object>
+        </field>
+    </object>
+    <object pk="98" model="main.poder">
+        <field type="CharField" name="nombre">Merced: mareado</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está mareado. El paladín debe tener la merced de indispuesto antes de seleccionar esta merced.</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="91"></object>
+        </field>
+    </object>
+    <object pk="99" model="main.poder">
+        <field type="CharField" name="nombre">Merced: aturdido</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está aturdido.</field>
+        <field type="IntegerField" name="nivel">12</field>
+    </object>
+    <object pk="100" model="main.poder">
+        <field type="CharField" name="nombre">Merced: cegado</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está cegado.</field>
+        <field type="IntegerField" name="nivel">12</field>
+    </object>
+    <object pk="101" model="main.poder">
+        <field type="CharField" name="nombre">Merced: ensordecodo</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está ensordecido.</field>
+        <field type="IntegerField" name="nivel">12</field>
+    </object>
+    <object pk="102" model="main.poder">
+        <field type="CharField" name="nombre">Merced: paralizado</field>
+        <field type="CharField" name="descripcion">El objetivo ya no está paralizado.</field>
+        <field type="IntegerField" name="nivel">12</field>
+    </object>
+    <!--PODERES DE PÍCARO-->
+    <object pk="103" model="main.poder">
+        <field type="CharField" name="nombre">Ataque por sorpresa</field>
+        <field type="CharField" name="descripcion">Durante el asalto de sorpresa, los oponentes siempre son considerados desprevenidos ante un pícaro con esta capacidad, incluso si ellos ya han actuado.</field>
+    </object>
+    <object pk="104" model="main.poder">
+        <field type="CharField" name="nombre">Disparador astuto</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede usar una acción rápida para desactivar cualquier trampa que haya construido en un radio de 9 metros.</field>
+    </object>
+    <object pk="105" model="main.poder">
+        <field type="CharField" name="nombre">Ataque de colocación</field>
+        <field type="CharField" name="descripcion">Una vez al día, cuando un pícaro con este talento impacte a una criatura con un ataque cuerpo a cuerpo, podrá moverse hasta 9 metros sin provocar ataques de oportunidad. El movimiento debe terminar en un espacio adyacente a la criatura golpeada con el ataque cuerpo a cuerpo.</field>
+    </object>
+    <object pk="106" model="main.poder">
+        <field type="CharField" name="nombre">Artista de la huida</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento añade montar, trato con animales y volar a su lista de habilidades de clase.</field>
+    </object>
+    <object pk="107" model="main.poder">
+        <field type="CharField" name="nombre">Furtivo poderoso</field>
+        <field type="CharField" name="descripcion">Cuando un pícaro con este talento lleve a cabo una acción de ataque completo, puede elegir recibir un penalizador de -2 a todas sus tiradas de ataque hasta el inicio de su siguiente turno. Si un ataque durante este tiempo es furtivo, todos los unos obtenidos en los dados del daño furtivo de daño son considerados doses.</field>
+    </object>
+    <object pk="108" model="main.poder">
+        <field type="CharField" name="nombre">Ataque sangrante</field>
+        <field type="CharField" name="descripcion">Un pícaro con esta capacidad puede hacer que los oponentes vivos sangren tras ser golpeados con un ataque furtivo. Este ataque hace que el objetivo reciba 1 punto de daño adicional cada asalto por cada dado usado en el ataque furtivo del pícaro. Las criaturas sangrantes reciben esta cantidad de daño cada asalto al comienzo de cada uno de sus respectivos turnos. El sangrado puede ser detenido por una prueba de curar CD 15 o la aplicación de cualquier efecto que sane daño de puntos de golpe. El daño de sangrado de esta capacidad no se apila consigo mismo. El daño de sangrado supera cualquier reducción del daño que la criatura pueda poseer.</field>
+    </object>
+    <object pk="109" model="main.poder">
+        <field type="CharField" name="nombre">Avistador de trampas</field>
+        <field type="CharField" name="descripcion">Cada vez que un pícaro con este talento esté a 3 metros de una trampa, recibe una prueba de habilidad de Percepción para percatarse de la trampa. Esta prueba debe ser hecha en secreto por DM.</field>
+    </object>
+    <object pk="110" model="main.poder">
+        <field type="CharField" name="nombre">Caminar por las cornisas</field>
+        <field type="CharField" name="descripcion">Esta capacidad permite a un pícaro moverse a lo largo de estrechas superficies a velocidad máxima usando la habilidad de acrobacias sin penalización. Además, un pícaro con este talento no queda desprevenido cuando use acrobacias para moverse a lo largo de estrechas superficies.</field>
+    </object>
+    <object pk="111" model="main.poder">
+        <field type="CharField" name="nombre">Camuflaje</field>
+        <field type="CharField" name="descripcion">Una vez al día, un pícaro con este talento puede crear camuflajes sencillos pero efectivos con el follaje que le rodea. Necesita 1 minuto para preparar el camuflaje, y una vez hecho, será apropiado durante el resto del día o hasta que el pícaro falle una tirada de salvación contra un conjuro de área que haga daño por fuego, frío o ácido, lo que sea primero. El pícaro gana un bono de +4 a tiradas de sigilo mientras esté en el terreno que rodea el follaje usado para hacer el camuflaje. Esta aptitud no puede usarse en áreas sin follaje natural.</field>
+    </object>
+    <object pk="112" model="main.poder">
+        <field type="CharField" name="nombre">Dedos rápidos</field>
+        <field type="CharField" name="descripcion">Una vez al día, un pícaro con este talento puede tirar 2 dados cuando haga una tirada de juego de manos y elegir el mejor resultado. Debe elegir usar este talento antes de hacer la tirada de juego de manos. Un pícaro puede usar esta aptitud una vez adicional al día por cada 5 niveles de pícaro que posea.</field>
+    </object>
+    <object pk="113" model="main.poder">
+        <field type="CharField" name="nombre">Defensa ofensiva</field>
+        <field type="CharField" name="descripcion">Cuando un pícaro con este talento golpea a una criatura con un ataque cuerpo a cuerpo que cause daño de ataque furtivo, el pícaro obtiene un bonificador +1 de Esquiva a la CA por cada dado de ataque furtivo tirado durante un asalto.</field>
+    </object>
+    <object pk="114" model="main.poder">
+        <field type="CharField" name="nombre">Disparo instantáneo</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede tratar su tirada de iniciativa como si fuera 20 durante un asalto de sorpresa, independientemente de su iniciativa, pero sólo podrá realizar una acción de ataque con un arma a distancia. Su tirada normal de iniciativa se usará en los siguientes asaltos. Si dos o más pícaros poseen este talento, su iniciativa determina el orden en el que actúan, pero todos irán antes que cualquier otra criatura. Si un pícaro no puede actuar en el asalto de sorpresa, este talento no tiene efecto.</field>
+    </object>
+    <object pk="115" model="main.poder">
+        <field type="CharField" name="nombre">Encantador</field>
+        <field type="CharField" name="descripcion">Una vez al día, el pícaro puede tirar 2 dados mientras hace tiradas de diplomacia, y elegir el mejor resultado. Debe elegir usar este talento antes de hacer la tirada de diplomacia. Un pícaro puede usar esta aptitud una vez adicional al día por cada 5 niveles de pícaro que posea.</field>
+    </object>
+    <!--FALTARIA METER LAS DOTES-->
+    <object pk="116" model="main.poder">
+        <field type="CharField" name="nombre">Entrenamiento en armas</field>
+        <field type="CharField" name="descripcion">Un pícaro que seleccione este talento gana Soltura con arma como dote adicional.</field>
+    </object>
+    <object pk="117" model="main.poder">
+        <field type="CharField" name="nombre">Envenenamiento rápido</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede aplicar venenos a un arma como acción de movimiento, en lugar de como acción estándar.</field>
+    </object>
+    <object pk="118" model="main.poder">
+        <field type="CharField" name="nombre">Falso amigo</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento obtiene un bonificador +4 al realizar pruebas de engañar para convencer a alguien a quien nunca ha visto o que no conoce bien de que se han visto anteriormente o de que se conocen bien el uno al otro.</field>
+    </object>
+    <object pk="119" model="main.poder">
+        <field type="CharField" name="nombre">Fuerte impresión</field>
+        <field type="CharField" name="descripcion">Un pícaro que elija este talento obtiene Poderío intimidante como dote adicional.</field>
+    </object>
+    <object pk="120" model="main.poder">
+        <field type="CharField" name="nombre">Ganzúas rápidas</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede usar Inutilizar mecanismo para intentar abrir una cerradura como acción estándar en lugar de acción de asalto completo.</field>
+    </object>
+    <object pk="121" model="main.poder">
+        <field type="CharField" name="nombre">Huida veloz</field>
+        <field type="CharField" name="descripcion">Tras hacer un ataque furtivo con éxito o una tirada de juego de manos, un pícaro con este talento puede usar una acción de movimiento para realizar la acción de retirada. No podrá moverse más allá de su velocidad durante este movimiento.</field>
+    </object>
+    <object pk="122" model="main.poder">
+        <field type="CharField" name="nombre">Impacto aturdidor</field>
+        <field type="CharField" name="descripcion">Cuando el pícaro realice daño de ataque furtivo contra un oponente, dicho oponente recibe un penalizador -2 a los ataques contra el pícaro durante 1d4 asaltos.</field>
+    </object>
+    <object pk="123" model="main.poder">
+        <field type="CharField" name="nombre">Inutilizar rápido</field>
+        <field type="CharField" name="descripcion">Un pícaro con esta capacidad tarda la mitad del tiempo normal en inutilizar una trampa usando la habilidad de inutilizar mecanismo (mínimo 1 asalto).</field>
+    </object>
+    <object pk="124" model="main.poder">
+        <field type="CharField" name="nombre">Levantarse</field>
+        <field type="CharField" name="descripcion">Un pícaro con esta capacidad puede levantarse de una posición tumbada como acción gratuita. Esto todavía provoca ataques de oportunidad por levantarse mientras se está amenazado por un enemigo.</field>
+    </object>
+    <object pk="125" model="main.poder">
+        <field type="CharField" name="nombre">Lider de asalto</field>
+        <field type="CharField" name="descripcion">1 vez al día, cuando el pícaro falle con un ataque sobre un oponente flanqueado, puede asignar a un único aliado que esté flanqueando al objetivo y que su ataque haya fallado. Ese aliado puede hacer un único ataque cuerpo a cuerpo contra el oponente como acción inmediata.</field>
+    </object>
+    <object pk="126" model="main.poder">
+        <field type="CharField" name="nombre">Maestro de la cuerda</field>
+        <field type="CharField" name="descripcion">Un pícaro con esta aptitud puede moverse a su velocidad normal cuando use cuerdas en una prueba de trepar, puede elegir 10 al usar acrobacias para moverse sobre superficies estrechas incluso cuando esté en peligro o distraído y obtiene un bonificador +4 cuando determine la CD para escapar ligaduras cuando ate a una criatura.</field>
+    </object>
+    <object pk="127" model="main.poder">
+        <field type="CharField" name="nombre">Maniobra imcomparable</field>
+        <field type="CharField" name="descripcion">Una vez al día, un pícaro con este talento puede tirar 2 dados mientras realiza una prueba de acrobacias y quedarse con el mejor resultado. Debe decidir si usa este talento antes de hacer la prueba de acrobacias. Un pícaro puede usar esta aptitud una vez adicional al día por cada 5 niveles de pícaro que posea.</field>
+    </object>
+    <object pk="128" model="main.poder">
+        <field type="CharField" name="nombre">Mentira convincente</field>
+        <field type="CharField" name="descripcion">Cuando un pícaro con este talento miente, crea invenciones tan convincentes que otros las tratan como la verdad. Cuando un pícaro con este talento usa con éxito la habilidad de engañar para convencer a alguien de que dice la verdad, si ese individuo es preguntado después sobre la afirmación o historia, utiliza el modificador de engañar del pícaro en lugar del suyo para convencer al interrogador. Si su modificador de engañar es mejor que el del pícaro, el individuo puede usar su propio modificador y ganar un bonificador +2 a cualquier tirada para convencer a otros de la mentira. El efecto dura tantos días como la mitad del nivel de pícaro + su modificador de carisma.</field>
+    </object>
+    <object pk="129" model="main.poder">
+        <field type="CharField" name="nombre">Observador sagaz</field>
+        <field type="CharField" name="descripcion">Cuando un pícaro con este talento hace una tirada de Percepción para escuchar los detalles de una conversación o encontrar objetos ocultos o secretos (incluso puertas y trampas), obtiene un bonificador de +4.</field>
+    </object>
+    <object pk="130" model="main.poder">
+        <field type="CharField" name="nombre">Ojo del francotirador</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede aplicar su daño de ataque furtivo en ataque a distancia apuntando a objetivos hasta a 9 metros que se beneficien de ocultación. Los enemigos con ocultación total siguen siendo inmunes.</field>
+    </object>
+    <object pk="131" model="main.poder">
+        <field type="CharField" name="nombre">Palabras lisonjeras</field>
+        <field type="CharField" name="descripcion">Una vez al día, el pícaro puede tirar dos veces cuando realiza una prueba de engañar y quedarse con el mejor resultado. Debe decidir si usa este talento antes de hacer la prueba de engañar. Un pícaro puedeusar esta aptitud una vez adicional al día por cada 5 niveles de pícaro que posea.</field>
+    </object>
+    <object pk="132" model="main.poder">
+        <field type="CharField" name="nombre">Palma hábil</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede usar Juego de manos para ocultar un arma mientras la sostiene a plena vista, incluso cuando es observado.</field>
+    </object>
+    <object pk="133" model="main.poder">
+        <field type="CharField" name="nombre">Reacciones lentas</field>
+        <field type="CharField" name="descripcion">Oponentes dañados por el ataque furtivo del pícaro no pueden hacer ataques de oportunidad durante 1 asalto.</field>
+    </object>
+    <object pk="134" model="main.poder">
+        <field type="CharField" name="nombre">Erudito esotérico</field>
+        <field type="CharField" name="descripcion">Una vez al día, un pícaro con este talento puede realizar una prueba de saber, incluso si no está entrenado en esa habilidad de saber.</field>
+    </object>
+    <object pk="135" model="main.poder">
+        <field type="CharField" name="nombre">Seguir pistas</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede usar percepción para seguir rastros igual que con la habilidad de supervivencia.</field>
+    </object>
+    <object pk="136" model="main.poder">
+        <field type="CharField" name="nombre">Sigilo veloz</field>
+        <field type="CharField" name="descripcion">Esta capacidad permite a un pícaro moverse a velocidad máxima usando la habilidad de sigilo sin penalización.</field>
+    </object>
+    <object pk="137" model="main.poder">
+        <field type="CharField" name="nombre">Sisar en combate</field>
+        <field type="CharField" name="descripcion">Un pícaro que elija este talento obtiene sigilo mejorado como dote adicional.</field>
+    </object>
+    <object pk="138" model="main.poder">
+        <field type="CharField" name="nombre">Sutileza de pícaro</field>
+        <field type="CharField" name="descripcion">Un pícaro que seleccione este talento gana Sutileza con las armas como dote adicional.</field>
+    </object>
+    <object pk="139" model="main.poder">
+        <field type="CharField" name="nombre">Trepamuros</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento tira 2 veces cuando haga una prueba de trepar y escoge el mejor resultado. Si ya ha tirado 2 veces por trepar a causa de otra aptitud o efecto, obtieneun bonificador +2 a ambas tiradas en su lugar. Si el pícaro está bajo el efecto de un conjuro o aptitud que le fuerce a tirar dos dados y tomar el peor resultado, sólo tirará 1d20 mientras trepe.</field>
+    </object>
+    <object pk="140" model="main.poder">
+        <field type="CharField" name="nombre">Tripas de hierro</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento tiene un estómago de hierro o se ha entrenado para soportar venenos, en especial ingeridos. Obtiene un bonificador +1 a todas las salvaciones contra venenos ingeridos y un bonificador +4 a las salvaciones contra conjuros y efectos que hagan que el pícaro quede indispuesto o mareado.</field>
+    </object>
+    <object pk="141" model="main.poder">
+        <field type="CharField" name="nombre">Veneno duradero</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede aplicar veneno en un arma de forma que sea efectivo para dos ataques con éxito en vez de uno. Sin embargo, el veneno tiene un efecto reducido y los tiros de salvación contra el mismo reciben un bonificador +2 de circunstancia. Aplicar veneno de esta forma requiere una acción de asalto completo, o una acción estándar para un pícaro con el talento de Envenenamiento rápido.</field>
+    </object>
+    <!--PODERES DE HECHICERO--> <!--FALTA HACER LOS LINAJES-->
 </django-objects>
