@@ -3453,5 +3453,106 @@
         <field type="CharField" name="nombre">Veneno duradero</field>
         <field type="CharField" name="descripcion">Un pícaro con este talento puede aplicar veneno en un arma de forma que sea efectivo para dos ataques con éxito en vez de uno. Sin embargo, el veneno tiene un efecto reducido y los tiros de salvación contra el mismo reciben un bonificador +2 de circunstancia. Aplicar veneno de esta forma requiere una acción de asalto completo, o una acción estándar para un pícaro con el talento de Envenenamiento rápido.</field>
     </object>
+    <object pk="142" model="main.poder">
+        <field type="CharField" name="nombre">Aliado involuntario</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede usar una acción rápida para intentar que un oponente actúe como un aliado a efectos de proporcionar flanqueo hasta el final del siguiente turno del pícaro. El oponente debe ser capaz de oír y ver al pícaro, y éste debe superar una prueba de Engañar enfrentada a la habilidad de Averiguar intenciones del oponente. Si la prueba tiene éxito, el oponente actúa como un aliado para proporcionar flanqueo. Tenga o no éxito en la prueba, el pícaro no puede volver a usar este truco contra el mismo oponente durante las siguientes 24 horas. Si el pícaro falla la prueba por 5 o más, no podrá usar el truco de Aliado involuntario sobre ningún oponente dentro de la línea de visión del intento fallido durante 24 horas.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="143" model="main.poder">
+        <field type="CharField" name="nombre">Furtivo letal</field>
+        <field type="CharField" name="descripcion">Cuando un pícaro con este talento utiliza el talento de Furtivo poderoso, trata todos resultados de 1 y 2 de los dados de daño furtivo como si fueran 3. Un pícaro debe poseer el talento de pícaro de Furtivo poderoso antes de elegir este talento.</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="107"></object>
+        </field>
+    </object>
+    <object pk="144" model="main.poder">
+        <field type="CharField" name="nombre">Cóctel mortal</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede aplicar dos dosis de veneno sobre un arma a la vez. Pueden ser venenos separados, en cuyo caso ambos afectan al objetivo individualmente, o dos dosis de la misma toxina, en cuyo caso la frecuencia del veneno se extiende un 50% y la CD de la salvación aumenta en +2. Este talento es una excepción a la regla de que los venenos de herida sólo pueden liberar una dosis cada vez.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="145" model="main.poder">
+        <field type="CharField" name="nombre">Difícil de engañar</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento es difícil de engañar con efectos enajenadores. Al inicio de su turno, si aún está sujeto a cualquier conjuro o efecto enajenador, puede hacer un tiro de salvación de voluntad contra la CD normal para nivel del efecto y si tiene éxito ya no se verá afectado por el efecto enajenador. Puede hacer esta tirada de salvación incluso contra efectos enajenadores que normalmente no permiten un tiro de salvación. En esos casos genera el tiro de salvación como si el conjuro o efecto lo permitiese.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="146" model="main.poder">
+        <field type="CharField" name="nombre">Evasión mejorada</field>
+        <field type="CharField" name="descripcion">Funciona como evasión, excepto que mientras que el pícaro sigue sin recibir daño de una TS de reflejos exitosa contra ataques, de ahora en adelante recibe sólo medio daño de las salvaciones falladas. Un pícaro indefenso no gana los beneficios de evasión mejorada.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="147" model="main.poder">
+        <field type="CharField" name="nombre">Francotirador sigiloso</field>
+        <field type="CharField" name="descripcion">Cuando un pícaro con este talento usa la habilidad de Sigilo para realizar un ataque desde un escondite, sólo sufre un -10 de penalización a la tirada de Sigilo, en vez de -20.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="148" model="main.poder">
+        <field type="CharField" name="nombre">Golpe paralizante</field>
+        <field type="CharField" name="descripcion">Un pícaro con esta capacidad puede atacar furtivamente a oponentes con tal precisión que sus golpes los debilitan y obstaculizan. Un oponente dañado por uno de tus ataques de oportunidad también recibe 2 puntos de daño a la fuerza.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="149" model="main.poder">
+        <field type="CharField" name="nombre">Hojas desconcertantes</field>
+        <field type="CharField" name="descripcion">Cuando un pícaro con este talento golpea a una criatura con un ataque cuerpo a cuerpo que provoque daño de ataque furtivo, su objetivo no podrá hacer ataques de oportunidad hasta el inicio de su próximo turno.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="150" model="main.poder">
+        <field type="CharField" name="nombre">Ladrón de armas</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento puede hacer una prueba de juego de manos en lugar de una prueba de maniobra de combate para intentar desarmar a un oponente.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="151" model="main.poder">
+        <field type="CharField" name="nombre">Maestro de la huida</field>
+        <field type="CharField" name="descripcion">Un pícaro con este talento obtiene un bonificador +10 a todas las tiradas relacionadas con conducir. El pícaro debe poseer el talento de Artista de la huida para elegir este talento.</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field to="main.poder" name="prerrequisito_poder" rel="ManyToManyRel">
+            <object pk="106"></object>
+        </field>
+    </object>
+    <object pk="152" model="main.poder">
+        <field type="CharField" name="nombre">Maestro del disfraz</field>
+        <field type="CharField" name="descripcion">Una vez al día, un pícaro con este talento obtiene un bonificador de +10 a su prueba de disfrazarse.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="153" model="main.poder">
+        <field type="CharField" name="nombre">Maraña de espadas</field>
+        <field type="CharField" name="descripcion">Cuando un pícaro con este talento impacta a una criatura con un ataque cuerpo a cuerpo que cause daño de ataque furtivo, el objetivo no podrá dar un paso de 1.5 metros hasta el inicio del siguiente turno del pícaro.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="154" model="main.poder">
+        <field type="CharField" name="nombre">Mente resistente</field>
+        <field type="CharField" name="descripcion">Esta capacidad representa la capacidad del pícaro para zafarse de los efectos mágicos que de otra forma podría controlarlo u obligarlo. Si un pícaro con mente resistente es afectado por un conjuro o efecto de encantamiento y falla su tirada de salvación, puede intentarlo de nuevo 1 asalto más tarde con la misma CD. Sólo tiene esta oportunidad extra para superar su tirada de salvación.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="155" model="main.poder">
+        <field type="CharField" name="nombre">Oportunista</field>
+        <field type="CharField" name="descripcion">Una vez por asalto, el pícaro puede hacer un ataque de oportunidad contra un oponente que acaba de recibir daño en cuerpo a cuerpo por otro personaje. Este ataque cuenta como un ataque de oportunidad para ese asalto. Incluso un pícaro con la dote de Reflejos de combate no puede usar la capacidad de oportunismo más de una vez por asalto.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="156" model="main.poder">
+        <field type="CharField" name="nombre">Otro día</field>
+        <field type="CharField" name="descripcion">Una vez al día, cuando un pícaro vaya a quedar reducido a 0 puntos de golpe o menos con un ataque cuerpo a cuerpo, puede dar un paso de 1.5 metros como acción inmediata. Si el movimiento lo deja fuera del alcance del ataque, no recibe daño del mismo. El pícaro quedará grogui durante 1 asalto en su próximo turno.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="157" model="main.poder">
+        <field type="CharField" name="nombre">Redirigir ataque</field>
+        <field type="CharField" name="descripcion">Una vez al día, cuando un pícaro con este talento es golpeado con un ataque cuerpo a cuerpo, puede redirigir el ataque para que golpee a una criatura adyacente como acción gratuita. La criatura objetivo debe estar a alcance de cuerpo a cuerpo del ataque que golpea al pícaro, y la criatura que hizo el ataque contra el pícaro debe hacer una nueva tirada de ataque contra el nuevo objetivo.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="158" model="main.poder">
+        <field type="CharField" name="nombre">Reconsideración pensativa</field>
+        <field type="CharField" name="descripcion">Una vez al día, un pícaro con este talento puede repetir una prueba de averiguar intenciones, percepción o saber para tratar de conseguir información nueva o mejor con la tirada. Esta repetición puede hacerse en cualquier momento durante el mismo día que la prueba original.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="159" model="main.poder">
+        <field type="CharField" name="nombre">Sorpresa del cazador</field>
+        <field type="CharField" name="descripcion">Una vez al día, un pícaro con este talento puede elegir un único enemigo adyacente como su presa. Hasta el final de su próximo turno, puede añadir su daño de ataque furtivo a todos los ataques que haga contra su presa, incluso si no la flanquea o si no está desprevenida.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="160" model="main.poder">
+        <field type="CharField" name="nombre">Voltereta veloz</field>
+        <field type="CharField" name="descripcion">Cuando un pícaro con este talento use acrobacias para moverse a velocidad completa a través de casillas amenazadas sin provocar ataques de oportunidad, la CD de la tirada de acrobacias no aumenta en +10.</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
     <!--PODERES DE HECHICERO--> <!--FALTA HACER LOS LINAJES-->
 </django-objects>
