@@ -65,6 +65,7 @@ class Personaje(models.Model):
     companero_animal = models.ForeignKey('CompaneroAnimalPersonaje', on_delete=models.CASCADE, null=True)
     conjuros_conocidos = models.ManyToManyField('Conjuro')
     poderes_conocidos = models.ManyToManyField('Poder')
+    linaje = models.ForeignKey('Linaje', null=True, on_delete=models.SET_NULL)
 
     def BonificadorFuerza(self):
         return int((fuerza-10)/2)
@@ -182,6 +183,7 @@ class Personaje(models.Model):
         especiales = models.ManyToManyField('Especial')
         companero_animal = models.ManyToManyField('CompaneroAnimal')
         habilidad = models.ManyToManyField('Habilidad')
+        linaje = models.ForeignKey('Linaje', null=True, on_delete=models.SET_NULL)
 
         def __str__(self):
             return self.clase
@@ -233,14 +235,7 @@ class Personaje(models.Model):
     class Poder(models.Model):
         nombre = models.TextField(verbose_name='Nombre')
         descripcion = models.TextField(verbose_name='Descripción')
-        nivel = models.IntegerField(verbose_name='Nivel', null=True)
-        ataque_base = models.IntegerField(verbose_name='Ataque base', null=True)
-        fuerza = models.IntegerField(verbose_name='Fuerza', null=True)
-        destreza = models.IntegerField(verbose_name='Destreza', null=True)
-        constitucion = models.IntegerField(verbose_name='Constitución', null=True)
-        inteligencia = models.IntegerField(verbose_name='Inteligencia', null=True)
-        sabiduria = models.IntegerField(verbose_name='Sabiduría', null=True)
-        carisma = models.IntegerField(verbose_name='Carisma', null=True)
+        nivel = models.IntegerField(verbose_name='Nivel', default=1)
         prerrequisito_poder = models.ManyToManyField('self')
 
         def __str__(self):
@@ -387,6 +382,21 @@ class Personaje(models.Model):
         fallo_conj_arc = models.IntegerField(verbose_name='Fallo conjuro arcano')
         velocidad_9m = models.IntegerField(verbose_name='Velocidad 9m')
         velocidad_6m = models.IntegerField(verbose_name='Velocidad 6m')
+
+        def __str__(self):
+            return self.nombre
+
+        class Meta:
+            ordering = ('nombre', )
+
+    class Linaje(models.Model):
+        nombre = models.TextField(verbose_name='Nombre')
+        descripcion = models.TextField(verbose_name='Descripción')
+        linaje_arcano = models.TextField(verbose_name='Linaje arcano')
+        habilidad = models.ForeignKey('Habilidad', null=False, on_delete=models.CASCADE)
+        conjuros = models.ManyToManyField('Conjuro')
+        dotes = models.ManyToManyField('Dote')
+        poderes = models.ManyToManyField('Poder')
 
         def __str__(self):
             return self.nombre

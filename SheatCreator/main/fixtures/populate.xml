@@ -2517,282 +2517,286 @@
         <field type="CharField" name="descripcion">Cada hechicero tiene una fuente de magia en alguna parte de su herencia que le concede sus conjuros, dotes adicionales, una habilidad de clase adicional y otras aptitudes especiales. Esta fuente puede representar una relación sanguínea o un suceso extremo en el que está involucrada una criatura en alguna parte del pasado familiar. Un hechicero debe elegir un linaje al alcancer su primer nivel de hechicero. Una vez hecha, esta elección no puede cambiarse. A nivel 3 y cada dos niveles en adelante, un hechicero aprende un conjuro adicional, derivado de su linaje. A nivel 7, y cada seis niveles en adelante, un hechicero recibe una dote adicional, elegida de una lista específica de cada linaje. El hechicero debe cumplir los requisitos de estas dotes adicionales.</field>
     </object>
     <object pk="104" model="main.especial">
+        <field type="CharField" name="nombre">Abstención de materiales</field>
+        <field type="CharField" name="descripcion">Un hechicero recibe Abstención de materiales como dote adicional a nivel 1.</field>
+    </object>
+    <object pk="105" model="main.especial">
         <field type="CharField" name="nombre">Trucos del hechicero</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del hechicero.</field>
     </object>
-    <object pk="105" model="main.especial">
+    <object pk="106" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del mago</field>
         <field type="CharField" name="descripcion">d6.</field>
     </object>
-    <object pk="106" model="main.especial">
+    <object pk="107" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del mago</field>
         <field type="CharField" name="descripcion">artesanía(int), conocimiento de conjuros(int), lingüística(int), profesión(sab), saber(todos)(int), tasación(int) y volar(des).</field>
     </object>
-    <object pk="107" model="main.especial">
+    <object pk="108" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del mago</field>
         <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
     </object>
-    <object pk="108" model="main.especial">
+    <object pk="109" model="main.especial">
         <field type="CharField" name="nombre">Competencias del mago</field>
         <field type="CharField" name="descripcion">Los magos son competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
     </object>
-    <object pk="109" model="main.especial">
+    <object pk="110" model="main.especial">
         <field type="CharField" name="nombre">Vínculo arcano</field>
         <field type="CharField" name="descripcion">Los magos forman un poderoso vínculo con un familiar. Un familiar es una mascota mágica que mejora las habilidades y sentidos del mago y puede ayudarle con la magia.</field>
     </object>
-    <object pk="110" model="main.especial">
+    <object pk="111" model="main.especial">
         <field type="CharField" name="nombre">Trucos</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del mago.</field>
     </object>
-    <object pk="111" model="main.especial">
+    <object pk="112" model="main.especial">
         <field type="CharField" name="nombre">Inscribir pergamino</field>
         <field type="CharField" name="descripcion">A nivel 1, un mago obtiene la dote Inscribir pergamino como dote adicional.</field>
     </object>
-    <object pk="112" model="main.especial">
+    <object pk="113" model="main.especial">
         <field type="CharField" name="nombre">Dotes adicionales</field>
         <field type="CharField" name="descripcion">A nivel 5, 10, 15 y 20, un mago recibe una dote adicional. En ese momento, puede elegir una dote metamágica, de creación o maestría en conjuros. El mago sigue neceitando cumplir todos los requisitos para la dote adicional.  Estas dotes adicionales se añaden a las dotes que un personaje de cualquier clase obtiene por avanzar niveles.</field>
     </object>
-    <object pk="113" model="main.especial">
+    <object pk="114" model="main.especial">
         <field type="CharField" name="nombre">Libro de conjuros</field>
         <field type="CharField" name="descripcion">Un mago debe estudiar su libro de conjuros cada día para preparar sus conjuros. No puede preparar ningún conjuro que no esté anotado en su libro de conjuros, excepto leer magia, que todos los magos pueden preparar de memoria. Un mago comienza el juego con un libro de conjuros que contiene todos los conjuros de mago de nivel 0. más tres conjuros de nivel 1 a su elección. El mago también elige una cantidad de conjuros adicionales de nivel 1 igual a su modificador de inteligencia para añadirlos a su libro de conjuros. Cada nuevo nivel de mago, recibe dos nuevos conjuros de cualquier nivel de conjuro que pueda lanzar (basándose en su nuevo nivel de mago) para su libro de conjuros. En cualquier momento, un mago también puede añadir conjuros encontrados en los libros de otros magos a su propio libro.</field>
     </object>
-    <object pk="114" model="main.especial">
+    <object pk="115" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del monje</field>
         <field type="CharField" name="descripcion">d8.</field>
     </object>
-    <object pk="115" model="main.especial">
+    <object pk="116" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del monje</field>
         <field type="CharField" name="descripcion">acrobacias(des), artesanía(int), averiguar intenciones(sab), escapismo(des), interpretar(car), intimidar(car), montar(des), nadar(fue), percepción(sab), profesión(sab), saber(historia), saber(religión), sigilo(des) y trepar(fue).</field>
     </object>
-    <object pk="116" model="main.especial">
+    <object pk="117" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del monje</field>
         <field type="CharField" name="descripcion">4 + modificador de inteligencia.</field>
     </object>
-    <object pk="117" model="main.especial">
+    <object pk="118" model="main.especial">
         <field type="CharField" name="nombre">Competencias del monje</field>
         <field type="CharField" name="descripcion">Los monjes son competentes con la porra, ballesta (ligera o pesada), daga, hacha de mano, jabalina, espada corta y lanza. Los monjes no son competentes con ninguna armadura o escudo. Cuando visten armadura, lleven escudo o porten una carga intermedia o pesada, un monje pierde sus bonificadores a la CA, al igual sus capacidades de movimiento rápido y ráfaga de golpes.</field>
     </object>
-    <object pk="118" model="main.especial">
+    <object pk="119" model="main.especial">
         <field type="CharField" name="nombre">Bonificador a la CA</field>
         <field type="CharField" name="descripcion">Cuando está sin armas y libre de impedimentos, el monje añade su bonificación de sabiduría a su CA y su DMC. Este bonificador se incrementa en 1 por cada cuatro niveles de monje. Estos bonificadores a la CA se aplican incluso contra ataques de toque o cuando el monje está desprevenido. Pierde estos bonificadores cuando está inmovilizado o indefenso, cuando viste cualquier armadura, cuando lleve un escudo o cuando porte una carga intermedia o pesada.</field>
     </object>
-    <object pk="119" model="main.especial">
+    <object pk="120" model="main.especial">
         <field type="CharField" name="nombre">Ráfaga de golpes</field>
         <field type="CharField" name="descripcion">Un monje puede hacer una ráfaga de golpes como acción de ataque completo. Cuando haga esto puede hacer un ataque adicional usando cualquier combinación de ataques sin armas. El BAB es el nivel de monje - 2. A nivel 8 y 15 puede usar otro ataque extra. Un monje aplica su bonificador completo de fuerza a sus tiradas de daño para todos los ataques con éxito hechos con ráfaga de golpes.</field>
     </object>
-    <object pk="120" model="main.especial">
+    <object pk="121" model="main.especial">
         <field type="CharField" name="nombre">Impacto sin arma</field>
         <field type="CharField" name="descripcion">Un monje gana Impacto sin arma mejorado como dote adicional. Los ataques de un monje pueden ser con el puño, codo, rodillas y pies. Esto significa que un monje puede hacer ataques sin armas con sus manos ocupadas. En consecuencia un monje puede aplicar su bonificador completo de fuerza a las tiradas de daño de todos sus ataques sin armas. El impacto sin arma de un monje es tratado como arma manufacturada y como arma natural a los propósitos de conjuros y efectos que mejoren o aumenten armas manufacturadas o naturales.</field>
     </object>
-    <object pk="121" model="main.especial">
+    <object pk="122" model="main.especial">
         <field type="CharField" name="nombre">Dotes adicionales del monje</field>
         <field type="CharField" name="descripcion">A nivel 1, nivel 2, y cada 4 niveles a partir de entonces, un monje puede seleccionar una dote adicional. Esa dote debe ser escogida de la siguiente lista: Usar arma improvisada, Reflejos de combate, Desviar flechas, Esquiva, Presa mejorada, Estilo del escorpión y Lanzar cualquier cosa. A nivel 6, las siguientes dotes se añaden a la lista: Puño del gorgón, Embestida mejorada, Desarme mejorado, Finta mejorada, Derribo mejorado y Movilidad. A nivel 10, las siguientes dotes son añadidas a la lista: Crítico mejorado, Ira de la medusa, Atrapar flechas y Ataque elástico. Un monje no necesita tener ninguna de las condiciones previas requeridas normalmente para esas dotes para poder seleccionarlas.</field>
     </object>
-    <object pk="122" model="main.especial">
+    <object pk="123" model="main.especial">
         <field type="CharField" name="nombre">Puñetazo aturdidor</field>
         <field type="CharField" name="descripcion">El monje gana Puñetazo aturdidor como dote adicional, incluso si no reúne los requisitos. A nivel 4, y cada 4 niveles a partir de entonces, el monje gana la capacidad de aplicar un nuevo estado al objetivo con su Puñetazo aturdidor. Este estado reemplaza el aturdimiento del objetivo durante 1 asalto, y una tirada de salvación exitosa aun niega el efecto. A nivel 4, puede escoger que el objetivo quede fatigado. A nivel 8, puede hacer que el objetivo quede indispuesto. A nivel 12, puede hacer que el objetivo quede grogui durante 1d6 + 1 asalto. A nivel 16, puede dejar ciego o sordo permanentemente al objetivo. A nivel 20, puede paralizar al objetivo durante 1d6 + 1 asaltos.</field>
     </object>
-    <object pk="123" model="main.especial">
+    <object pk="124" model="main.especial">
         <field type="CharField" name="nombre">Evasión del monje</field>
         <field type="CharField" name="descripcion">Si un monje hace una TS exitosa de Reflejos contra un ataque que normalmente infligiría medio daño con una salvación exitosa, en su lugar no recibe daño. Evasión puede ser usada únicamente si un monje viste armadura ligera o va sin armadura. Un monje indefenso no gana los beneficios de evasión.</field>
     </object>
-    <object pk="124" model="main.especial">
+    <object pk="125" model="main.especial">
         <field type="CharField" name="nombre">Movimiento rápido</field>
         <field type="CharField" name="descripcion">Un monje gana un bonificador de mejora a su movimiento terrestre, que subirá con los niveles de monje. Un monje con armadura o que porta una carga mediana o pesada pierde esta velocidad adicional.</field>
     </object>
-    <object pk="125" model="main.especial">
+    <object pk="126" model="main.especial">
         <field type="CharField" name="nombre">Entrenamiento en maniobras</field>
         <field type="CharField" name="descripcion">Un monje usa su nivel de monje en lugar de su bonificador de ataque base cuando calcula su BMC.</field>
     </object>
-    <object pk="126" model="main.especial">
+    <object pk="127" model="main.especial">
         <field type="CharField" name="nombre">Mente en calma</field>
         <field type="CharField" name="descripcion">Un monje de nivel 3 o superior gana un bonificador +2 a las tiradas de salvación contra conjuros y efectos de encantamiento.</field>
     </object>
-    <object pk="127" model="main.especial">
+    <object pk="128" model="main.especial">
         <field type="CharField" name="nombre">Reserva de ki</field>
         <field type="CharField" name="descripcion">Un monje gana una reserva de puntos de ki, energía sobrenatural que puede usar para llevar a cabo hazañas asombrosas. El número de puntos en la reserva de ki de un monje es igual a la mitad de su nivel de monje + su modificador de sabiduría. Mientras tenga al menos 1 punto en su reserva de ki, puede hacer un ataque ki. Mientras tenga un punto de ki, a nivel 4, sus ataques sin armas son tratados como armas mágicas para superar la reducción del daño, a nivel 7, sus ataques sin armas son tratados como hierro frío y plata para superar la reducción del daño a nivel 10, sus ataques sin armas son tratados como armas legales para superar la reducción del daño, a nivel 16, sus ataques sin armas son tratados como armas adamantinas para superar la reducción del daño y traspasar la dureza. Gastando 1 punto de su reserva de ki, un monje puede hacer un ataque adicional con su mayor bonificador de ataque cuando hace un ataque de ráfaga de golpes. Además, puede gastar 1 punto para aumentar su velocidad en 6 metros durante 1 asalto. Finalmente, un monje puede gastar 1 punto de su reserva de ki para darse a si mismo un bonificador de esquiva +4 a la CA durante un asalto. Cada uno de esos poderes es activado como una acción rápida. La reserva de ki se llena cada mañana después de 8 horas de descanso o meditación; esas horas no necesitan ser consecutivas.</field>
     </object>
-    <object pk="128" model="main.especial">
+    <object pk="129" model="main.especial">
         <field type="CharField" name="nombre">Caída lentificada</field>
         <field type="CharField" name="descripcion">Un monje cuyos brazos alcancen un muro puede usarlo para frenar su caída. La capacidad del monje para frenar su caída mejora con su nivel de monje.</field>
     </object>
-    <object pk="129" model="main.especial">
+    <object pk="130" model="main.especial">
         <field type="CharField" name="nombre">Gran salto</field>
         <field type="CharField" name="descripcion">Un monje añade su nivel a todas las pruebas de acrobacias hechas para saltar, tanto para saltos verticales como horizontales. Además, se considera que siempre que ha comenzado a correr cuando hace la prueba de salto usando acrobacias. Gastando 1 punto de su reserva de ki como acción rápida, un monje gana un bonificador +20 a las pruebas de acrobacias hechas para saltar durante un asalto.</field>
     </object>
-    <object pk="130" model="main.especial">
+    <object pk="131" model="main.especial">
         <field type="CharField" name="nombre">Pureza corporal</field>
         <field type="CharField" name="descripcion">Un monje gana inmunidad a todas las enfermedades, incluyendo enfermedades sobrenaturales y mágicas.</field>
     </object>
-    <object pk="131" model="main.especial">
+    <object pk="132" model="main.especial">
         <field type="CharField" name="nombre">Plenitud corporal</field>
         <field type="CharField" name="descripcion">Un monje puede sanar sus propias heridas como una acción estándar. Puede sanar un número de puntos de golpe de daño igual a su nivel de monje usando 2 puntos de su reserva de ki.</field>
     </object>
-    <object pk="132" model="main.especial">
+    <object pk="133" model="main.especial">
         <field type="CharField" name="nombre">Evasión mejorada del monje</field>
         <field type="CharField" name="descripcion">La capacidad de evasión del monje mejora. El sigue sin recibir daño con una tirada de salvación de reflejos exitosa contra ataques, pero de ahora en adelante recibe sólo medio daño de las salvaciones fallidas. Un monje indefenso no gana el beneficio de evasión mejorada.</field>
     </object>
-    <object pk="133" model="main.especial">
+    <object pk="134" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo diamantino</field>
         <field type="CharField" name="descripcion">Un monje gana inmunidad a los venenos de todo tipo.</field>
     </object>
-    <object pk="134" model="main.especial">
+    <object pk="135" model="main.especial">
         <field type="CharField" name="nombre">Paso abundante</field>
         <field type="CharField" name="descripcion">Un monje puede deslizarse mágicamente entre los espacios, como si usara el conjuro puerta dimensional . Usar esta capacidad es una acción de movimiento que consume 2 puntos de su reserva de ki. Su nivel de lanzador para este efecto es igual a su nivel de monje. No puede llevar otras criaturas con él usando esta capacidad.</field>
     </object>
-    <object pk="135" model="main.especial">
+    <object pk="136" model="main.especial">
         <field type="CharField" name="nombre">Alma diamantina</field>
         <field type="CharField" name="descripcion">Un monje gana resistencia a conjuros igual a su actual nivel de monje + 10.</field>
     </object>
-    <object pk="136" model="main.especial">
+    <object pk="137" model="main.especial">
         <field type="CharField" name="nombre">Palma temblorosa</field>
         <field type="CharField" name="descripcion">Puede usar este ataque de palma temblorosa una vez al día, y debe anunciar su intento antes de hacer su tirada de ataque. Las criaturas inmunes a ataques críticos no se ven afectadas. Si acierta, el monje puede intentar matar a la víctima en cualquier momento, siempre y cuando el intento se haga dentro de un número de días igual a su nivel de monje. Para hacer esta tentativa, el monje simplemente desea que el objetivo muera (como acción inmediata), y a no ser que el objetivo supere una tirada de salvación de fortaleza (CD 10 + la mitad de su nivel de monje + el modificador de sabiduría), muere. Si la tirada de salvación tiene éxito, el objetivo ya no corre peligro de ese ataque en concreto de palma temblorosa, pero todavía puede verse afectado por otra en un momento posterior. Un monje no puede tener más de 1 palma temblorosa en vigor al mismo tiempo. Si un monje usa palma temblorosa mientras otra todavía está en vigor, el efecto previo es negado.</field>
     </object>
-    <object pk="137" model="main.especial">
+    <object pk="138" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo eterno del monje</field>
         <field type="CharField" name="descripcion">Un monje no recibe penalizaciones a sus puntuaciones de capacidad por envejecimiento y no puede ser envejecido mágicamente. Cualquier penalización que ya haya recibido, sin embargo, se mantiene. El monje aún puede morir por su vejez.</field>
     </object>
-    <object pk="138" model="main.especial">
+    <object pk="139" model="main.especial">
         <field type="CharField" name="nombre">Lengua del sol y la luna</field>
         <field type="CharField" name="descripcion">Un monje a nivel 17 o mayor puede hablar con cualquier criatura viviente.</field>
     </object>
-    <object pk="139" model="main.especial">
+    <object pk="140" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo vacío</field>
         <field type="CharField" name="descripcion">Un monje gana la capacidad de asumir un estado etéreo durante 1 minuto como si usara el conjuro eternidad . Usar esta capacidad es una acción de movimiento que consume 3 puntos de su reserva de ki. Esta capacidad sólo afecta al monje.</field>
     </object>
-    <object pk="140" model="main.especial">
+    <object pk="141" model="main.especial">
         <field type="CharField" name="nombre">Yo perfecto</field>
         <field type="CharField" name="descripcion">A nivel 20, un monje se convierte en una criatura mágica. Es tratado para siempre como un ajeno más que como un humanoide (o el tipo de criatura que fuera el monje) a los efectos de conjuros o efectos mágicos. Además, el monje gana reducción del daño 10/caótico. A diferencia de otros ajenos, el monje todavía puede ser traído de vuelta de la muerte como si fuera un miembro de su tipo de criatura anterior.</field>
     </object>
-    <object pk="141" model="main.especial">
+    <object pk="142" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del paladín</field>
         <field type="CharField" name="descripcion">d10.</field>
     </object>
-    <object pk="142" model="main.especial">
+    <object pk="143" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del paladín</field>
         <field type="CharField" name="descripcion">artesanía(int), averiguar intenciones(sab), conocimiento de conjuros(int), curar(sab), diplomacia(car), montar(des), profesión(sab), saber(nobleza)(int), saber(religión)(int) y trato con animales(car).</field>
     </object>
-    <object pk="143" model="main.especial">
+    <object pk="144" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del paladín</field>
         <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
     </object>
-    <object pk="144" model="main.especial">
+    <object pk="145" model="main.especial">
         <field type="CharField" name="nombre">Competencias del paladín</field>
         <field type="CharField" name="descripcion">Los paladines son competentes con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
     </object>
-    <object pk="145" model="main.especial">
+    <object pk="146" model="main.especial">
         <field type="CharField" name="nombre">Aura buena</field>
         <field type="CharField" name="descripcion">El poder del aura buena de un paladín es igual a su nivel de paladín.</field>
     </object>
-    <object pk="146" model="main.especial">
+    <object pk="147" model="main.especial">
         <field type="CharField" name="nombre">Detectar el mal</field>
         <field type="CharField" name="descripcion">A voluntad, un paladín puede usar detectar el mal, como el conjuro. Un paladín puede, como acción de movimiento, concentrarse en un objeto individual o individuo dentro de 18 metros y determinar si es malvado, leyendo la fuerza de su aura como si lo hubiera estudiado durante 3 asaltos. Mientras se centre en un individuo u objeto, el paladín no detecta el mal en ningún otro objeto o individuo dentro del alcance.</field>
     </object>
-    <object pk="147" model="main.especial">
+    <object pk="148" model="main.especial">
         <field type="CharField" name="nombre">Castigar al mal</field>
         <field type="CharField" name="descripcion">Como acción rápida, el paladín escoge un objetivo en su línea de visión al que castigar. Si el objetivo es malvado, el paladín añade su bonificador de carisma a sus tiradas de ataque y añade su nivel de paladín a todas las tiradas de daño contra el objetivo que está castigando. Si el objetivo de castigar al mal es un ajeno con el subtipo maligno, un dragón de alineamiento malvado, o una criatura muerta viviente, el bonificador al daño en el primer ataque con éxito se incrementa a 2 puntos de daño por cada nivel de paladín que tenga. Independientemente del objetivo, castigar al mal sobrepasa automáticamente cualquier RD que posea la criatura. Además, mientras castigar al mal esté en funcionamiento, el paladín gana un bonificador de desvío igual a su modificador de carisma a su CA contra ataques hechos por el objetivo del castigo. Si el paladín escoge como objetivo una criatura que no es malvada, el castigo se pierde sin causar efectos. Los efectos del castigar al mal permanecen hasta que el objetivo del castigar está muerto o la próxima vez que el paladín descanse y vuelva a ganar sus usos de esta capacidad. A nivel 4, y cada tres niveles puede realizar esto 1 vez más.</field>
     </object>
-    <object pk="148" model="main.especial">
+    <object pk="149" model="main.especial">
         <field type="CharField" name="nombre">Gracia divina</field>
         <field type="CharField" name="descripcion">Un paladín gana un bonificador igual a su bonificar de carisma en todas sus tiradas de salvación.</field>
     </object>
-    <object pk="149" model="main.especial">
+    <object pk="150" model="main.especial">
         <field type="CharField" name="nombre">Imposición de manos</field>
         <field type="CharField" name="descripcion">Un paladín puede sanar heridas al toque. Cada día puede usar esta capacidad un número de veces igual a la mitad de su nivel de paladín más su modificador de carisma. Con cada uso de esta capacidad, un paladín puede sanar 1d6 puntos de golpe de daño por cada dos niveles de paladín que tenga. Usar esta capacidad es una acción estándar, a no ser que el paladín se cure a si mismo, en cuyo caso es una acción rápida. Alternativamente, un paladín puede usar este poder curativo para infligir daño a criaturas muertas vivientes, infligiendo 1d6 puntos de año por cada dos niveles que posea de paladín. Usar la imposición de manos de esta manera requiere un ataque de toque cuerpo a cuerpo exitoso y no provoca un ataque de oportunidad. Los muertos vivientes no reciben una tirada de salvación contra este daño.</field>
     </object>
-    <object pk="150" model="main.especial">
+    <object pk="151" model="main.especial">
         <field type="CharField" name="nombre">Aura de valor</field>
         <field type="CharField" name="descripcion">Un paladín es inmune al miedo (mágico o de otro tipo). Cada aliado a 3 metros o menos de él gana un bonificador de moral +4 a las tiradas de salvación contra los efectos del miedo. Esta capacidad funciona solo mientras el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="151" model="main.especial">
+    <object pk="152" model="main.especial">
         <field type="CharField" name="nombre">Salud divina</field>
         <field type="CharField" name="descripcion">Un paladín es inmune a todas las enfermedades, incluyendo las enfermedades sobrenaturales y las mágicas.Incluyendo la putridez de momia.</field>
     </object>
-    <object pk="152" model="main.especial">
+    <object pk="153" model="main.especial">
         <field type="CharField" name="nombre">Merced</field>
         <field type="CharField" name="descripcion">A nivel 3, y cada tres niveles, un paladín puede seleccionar una merced. Cada merced añade un efecto a la capacidad de imposición de manos del paladín. Cada vez que el paladín use imposición de manos para sanar daño a un objetivo, el objetivo también recibe los efectos adicionales de todas las mercedes que posea el paladín. Una merced puede eliminar un estado causado por una maldición, enfermedad o veneno sin curar el mal en si mismo. Tales estados vuelven después de 1 hora a no ser que la merced elimine realmente la aflicción que origina el estado. Estas capacidades son acumulativas.</field>
     </object>
-    <object pk="153" model="main.especial">
+    <object pk="154" model="main.especial">
         <field type="CharField" name="nombre">Canalizar energía positiva</field>
         <field type="CharField" name="descripcion">Cuando un paladín alcanza el nivel 4, gana la capacidad sobrenatural de canalizar energía positiva como un clérigo. Usar esta capacidad consume dos usos de su capacidad de imposición de manos. Un paladín usa su nivel como nivel efectivo de clérigo cuando canaliza energía positiva. Esta es una capacidad basada en el carisma.</field>
     </object>
-    <object pk="154" model="main.especial">
+    <object pk="155" model="main.especial">
         <field type="CharField" name="nombre">Conjuros de paladín</field>
         <field type="CharField" name="descripcion">Comenzando a nivel 4, un paladín gana la capacidad de lanzar conjuros divinos que son extraídos de la lista de conjuros de paladín. Un paladín debe escoger y preparar sus conjuros con antelación. Para preparar o lanzar un conjuro, un paladín debe tener una puntuación de carisma como mínimo igual a 10 + nivel de conjuro. La CD para una tirada de salvación contra el conjuro de un paladín es igual a 10 + nivel del conjuro + el modificador de carisma del paladín. Un paladín debe invertir 1 hora cada día en la oración y la meditación silenciosa para recuperar su asignación diaria de hechizos. Su nivel de lanzador es igual a su nivel de paladín – 3.</field>
     </object>
-    <object pk="155" model="main.especial">
+    <object pk="156" model="main.especial">
         <field type="CharField" name="nombre">Vínculo de paladín</field>
         <field type="CharField" name="descripcion">Al llegar a nivel 5, un paladín forma un vínculo divino con su dios, permitiendole mejorar su arma como acción estándar haciendo un llamamiento a la ayuda de un espíritu celestial durante un minuto por nivel de paladín. Cuando es llamado, el espíritu causa que el arma emane luz como una antorcha. A nivel 5, este espíritu garantiza al arma un bonificador +1 de mejora. Cada tres niveles el arma gana otro modificador +1 de mejora. Estos bonificadores pueden ser añadidos al arma, apilándose con los bonificadores existentes en el arma hasta un máximo de +5, o pueden ser usados para añadir alguna de las siguiente propiedades al arma: axiomática, radiante, defensora, disruptora, flamígera, flamígera explosiva, sagrada, afilada, compasiva y veloz. Añadir estas propiedades consume una cantidad de bonificación igual al coste de la propiedad. Estos bonificadores se añaden a cualquier propiedad que el arma ya tenga, pero no se apilan habilidades duplicadas. Si el arma no es mágica, al menos hay que añadir un bonificador de mejora +1 antes de poder añadir cualquier otra propiedad. El espíritu celestial no concede bonificadores si el arma está en poder de cualquier otro que no sea el paladín pero vuelve a concederlas si retorna al paladín. Un paladín puede usar esta capacidad una vez al día a nivel 5, y una vez adicional al día por cada cuatro niveles. Si un arma vinculada con un espíritu celestial es destruida, el paladín pierde el uso de esta capacidad durante 30 días, o hasta que gane un nivel, lo que ocurra antes. Durante este periodo de 30 días, el paladín recibe un penalizador -1 a las tiradas de ataque y daño con arma.</field>
     </object>
-    <object pk="156" model="main.especial">
+    <object pk="157" model="main.especial">
         <field type="CharField" name="nombre">Aura de decisión</field>
         <field type="CharField" name="descripcion">Un paladín es inmune los conjuros y aptitudes sortílegas de hechizo. Cada aliado a 3 metros del paladín gana un bonificador de moral +4 a las tiradas de salvación contra efectos de hechizo. Esta capacidad funciona sólo mientras el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="157" model="main.especial">
+    <object pk="158" model="main.especial">
         <field type="CharField" name="nombre">Aura de justicia</field>
         <field type="CharField" name="descripcion">Un paladín puede gastar dos usos de su capacidad de castigar al mal para otorgar la capacidad de castigar al mal a todos los aliados a 3 metros de él, usando los bonificadores del paladín. Los aliados pueden usar esta capacidad de castigar al mal desde el comienzo del siguiente turno del paladín y los bonificadores duran 1 minuto. Usar esta capacidad es una acción gratuita. Las criaturas malignas no reciben beneficios de esta capacidad.</field>
     </object>
-    <object pk="158" model="main.especial">
+    <object pk="159" model="main.especial">
         <field type="CharField" name="nombre">Aura de fe</field>
         <field type="CharField" name="descripcion">Las armas de un paladín son tratadas como si tuvieran alineamiento bueno para superar la reducción del daño. Cualquier ataque hecho contra un enemigo a 3 metros del paladín es tratado como si tuviera alineamiento bueno para superar la reducción del daño. Esta capacidad funciona sólo cuando el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="159" model="main.especial">
+    <object pk="160" model="main.especial">
         <field type="CharField" name="nombre">Aura de rectitud</field>
         <field type="CharField" name="descripcion">Un paladín gana RD 5/mal e inmunidad a los conjuros y habilidades sortílegas de compulsión. Cada aliado dentro de 3 metros de él gana un bonificador de moral +4 a las tiradas de salvación contra efectos de compulsión. Esta capacidad funciona sólo cuando el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="160" model="main.especial">
+    <object pk="161" model="main.especial">
         <field type="CharField" name="nombre">Campeón sagrado</field>
         <field type="CharField" name="descripcion">Un paladín se convierte en un conducto para el poder de su dios. Su RD se incrementa a 10/mal. Cada vez que use castigar al mal e impacta con éxito a un ajeno maligno, el ajeno también queda afectado por un destierro, usando su nivel de paladín como el nivel de lanzador (su arma y símbolo sagrado cuentan automáticamente como objeto que el sujeto odia). Después de que el efecto del destierro y el daño del ataque se hayan resuelto, el castigo finaliza inmediatamente. Además, cada vez que canalice energía positiva o use imposición de manos para sanar una criatura, sana la cantidad máxima posible.</field>
     </object>
-    <object pk="161" model="main.especial">
+    <object pk="162" model="main.especial">
         <field type="CharField" name="nombre">Dados de golpe del pícaro</field>
         <field type="CharField" name="descripcion">d8.</field>
     </object>
-    <object pk="162" model="main.especial">
+    <object pk="163" model="main.especial">
         <field type="CharField" name="nombre">Habilidades de clase del pícaro</field>
         <field type="CharField" name="descripcion">acrobacias(des), artesanía(int), averiguar intenciones(sab), diplomacia(car), disfrazarse(car), engañar(car), escapismo(des), interpretar(car), intimidar(car), inutilizar mecanismo(des), juego de manos(des), lingüística(int), nadar(fue), percepción(sab), profesión(sab), saber(dungeons)(int), saber(local), sigilo(des), tasación(int), trepar(fue) y usar objeto mágico(car).</field>
     </object>
-    <object pk="163" model="main.especial">
+    <object pk="164" model="main.especial">
         <field type="CharField" name="nombre">Puntos de habilidad por nivel del pícaro</field>
         <field type="CharField" name="descripcion">8 + modificador de inteligencia.</field>
     </object>
-    <object pk="164" model="main.especial">
+    <object pk="165" model="main.especial">
         <field type="CharField" name="nombre">Competencias del pícaro</field>
         <field type="CharField" name="descripcion">Los pícaros son competentes con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
     </object>
-    <object pk="165" model="main.especial">
+    <object pk="166" model="main.especial">
         <field type="CharField" name="nombre">Ataque furtivo</field>
         <field type="CharField" name="descripcion">El ataque del pícaro causa daño adicional en cualquier momento en que el bonificador de destreza a la CA. del objetivo sea negado, o cuando el pícaro flanquea a su objetivo. Este daño adicional es de 1d6 a primer nivel, y se incrementa 1d6 cada dos niveles de pícaro. Si el pícaro consigue asestar un golpe crítico con un ataque furtivo, este daño adicional no es multiplicado. Los ataques a distancia se pueden considerar como ataques furtivos sólo si el objetivo está dentro de 9 metros. Con un arma que inflija daño atenuado, un pícaro puede dar un golpe furtivo que haga daño atenuado en lugar de daño letal. No puede usar un arma que inflinge daño letal para hacer daño atenuado en un ataque furtivo. El pícaro debe ser capaz de ver el objetivo lo suficientemente bien y  no puede hacer un ataque furtivo contra una criatura que tenga ocultación.</field>
     </object>
-    <object pk="166" model="main.especial">
+    <object pk="167" model="main.especial">
         <field type="CharField" name="nombre">Encontrar trampas</field>
         <field type="CharField" name="descripcion">Un pícaro añade la mitad de su nivel a las pruebas de percepción hechas para detectar trampas y a las pruebas de habilidad de inutilizar mecanismo (mínimo +1). Un pícaro puede usar inutilizar mecanismo para desactivar trampas mágicas.</field>
     </object>
-    <object pk="167" model="main.especial">
+    <object pk="168" model="main.especial">
         <field type="CharField" name="nombre">Evasión del pícaro</field>
         <field type="CharField" name="descripcion">Un pícaro puede evitar incluso ataques mágicos e inusuales con gran agilidad. Si supera una tirada de salvación de reflejos contra un ataque que normalmente haría medio daño con una tirada de salvación exitosa, en lugar de eso no recibe daño. Evasión puede ser usada sólo si el pícaro viste armadura ligera o va sin armadura. Un pícaro indefenso no gana el beneficio de evasión.</field>
     </object>
-    <object pk="168" model="main.especial">
+    <object pk="169" model="main.especial">
         <field type="CharField" name="nombre">Talentos del pícaro</field>
         <field type="CharField" name="descripcion">Empezando a nivel 2, un pícaro gana un talento de pícaro. Gana un talento de pícaro adicional en los niveles pares del pícaro hasta nivel 10. Un pícaro no puede seleccionar un talento individual más de una vez.</field>
     </object>
-    <object pk="169" model="main.especial">
+    <object pk="170" model="main.especial">
         <field type="CharField" name="nombre">Sentido de las trampas del pícaro</field>
         <field type="CharField" name="descripcion">Un pícaro gana un sentido intuitivo que le alerta del peligro de las trampas, dándole un bonificador +1 a las salvaciones de reflejos hechos para evitar trampas y un bonificador +1 de esquiva a la CA contra ataques hechos por trampas. Estos bonificadores aumentan en 1 en los niveles 6, 9, 12, 15 y 18. Los bonificadores de sentido de las trampas ganados por múltiples clases se apilan.</field>
     </object>
-    <object pk="170" model="main.especial">
+    <object pk="171" model="main.especial">
         <field type="CharField" name="nombre">Esquiva asombrosa del pícaro</field>
         <field type="CharField" name="descripcion">No puede ser cogido desprevenido, incluso si el atacante es invisible. Todavía pierde su bonificador de Destreza a la CA si está inmovilizado. Un pícaro con esta capacidad todavía puede perder su bonificador de Destreza a la CA si un oponente usa una acción de fintar de manera exitosa contra él.</field>
     </object>
-    <object pk="171" model="main.especial">
+    <object pk="172" model="main.especial">
         <field type="CharField" name="nombre">Esquiva asombrosa mejorada del pícaro</field>
         <field type="CharField" name="descripcion">Un pícaro de nivel 8 o mayor ya no puede ser flanqueado. Esta defensa niega a otro pícaro la capacidad de hacer un ataque furtivo al personaje al flanquearlo, a no ser que el atacante tenga al menos cuatro niveles de pícaro más que el objetivo.</field>
     </object>
-    <object pk="172" model="main.especial">
+    <object pk="173" model="main.especial">
         <field type="CharField" name="nombre">Talentos mejorados del pícaro</field>
         <field type="CharField" name="descripcion">A nivel 10, y cada dos niveles a partir de entonces, un pícaro puede escoger un talento avanzado en lugar de un talento de pícaro.</field>
     </object>
-    <object pk="173" model="main.especial">
+    <object pk="174" model="main.especial">
         <field type="CharField" name="nombre">Golpe maestro</field>
         <field type="CharField" name="descripcion">Alcanzado el nivel 20, un pícaro se vuelve increíblemente mortal cuando inflige daño con ataque furtivo. Cada vez que el pícaro inflige daño con ataque furtivo, puede escoger uno de los siguientes tres efectos: el objetivo puede caer dormido durante 1d4 horas, paralizado durante 2d6 asaltos o asesinado. Independientemente del efecto escogido, el objetivo recibe una salvación de fortaleza para negar el efecto adicional. La CD de esta salvación es igual a 10 + la mitad del nivel de pícaro + el modificador de inteligencia. Una vez que una criatura ha sido el objetivo de un golpe maestro, independientemente de si ha tenido éxito en la salvación o no, la criatura es inmune al golpe maestro del pícaro durante 24 horas. Las criaturas que son inmunes al ataque furtivo del pícaro también son inmunes a esta capacidad.</field>
     </object>
@@ -3555,4 +3559,148 @@
         <field type="IntegerField" name="nivel">10</field>
     </object>
     <!--PODERES DE HECHICERO--> <!--FALTA HACER LOS LINAJES-->
+    <object pk="161" model="main.poder">
+        <field type="CharField" name="nombre">Rayo ácido</field>
+        <field type="CharField" name="descripcion">Comenzando a nivel 1, puedes disparar un rayo ácido como acción estándar, apuntando a cualquier enemigo que se encuentre a un máximo de 9 metros como un ataque de toque a distancia. El rayo ácido causa 1d6 puntos de daño por ácido +1 por cada dos niveles de hechicero que poseas. Puedes utilizar esta aptitud un número de veces al día igual a 3 + tu modificador de carisma.</field>
+    </object>
+    <object pk="162" model="main.poder">
+        <field type="CharField" name="nombre">Piernas largas</field>
+        <field type="CharField" name="descripcion">A nivel 3, tu alcance aumenta en 1.5 metros cuando haces un ataque de toque cuerpo a cuerpo. Esta aptitud no aumenta tu área de amenaza. A nivel 11, hasta 3 metros. A nivel 17, aumenta hasta 4.5 metros.</field>
+        <field type="IntegerField" name="nivel">3</field>
+    </object>
+    <object pk="163" model="main.poder">
+        <field type="CharField" name="nombre">Anatomía inusual</field>
+        <field type="CharField" name="descripcion">A nivel 9, tu anatomía cambia, concediéndote una probabilidad del 25% de ignorar cualquier ataque crítico o furtivo que te haya impactado. Esta probabilidad aumenta a 50% al llegar a nivel 13.</field>
+        <field type="IntegerField" name="nivel">9</field>
+    </object>
+    <object pk="164" model="main.poder">
+        <field type="CharField" name="nombre">Resistencia de ajeno</field>
+        <field type="CharField" name="descripcion">A nivel 15, obtienes Resistencia a Conjuros igual a tu nivel de hechicero +10.</field>
+        <field type="IntegerField" name="nivel">15</field>
+    </object>
+    <object pk="165" model="main.poder">
+        <field type="CharField" name="nombre">Forma aberrante</field>
+        <field type="CharField" name="descripcion">A nivel 20, tu cuerpo se vuelve realmente antinatural. Te vuelves inmune a los ataques críticos y furtivos. Además, recibes vista ciega con un alcance de 18 metros y Reducción del daño 5/-.</field>
+        <field type="IntegerField" name="nivel">20</field>
+    </object>
+    <object pk="166" model="main.poder">
+        <field type="CharField" name="nombre">Garras</field>
+        <field type="CharField" name="descripcion">A nivel 1, puedes hacer crecer garras como acción gratuita. Estas garras se consideran armas naturales, permitiéndote hacer dos ataques de garra como acción de ataque completo usando tu ataque base completo. Estos ataques causan 1d4 puntos de daño cada uno (1d3 si eres pequeño) más tu bonificador de fuerza. A nivel 5, estas garras se consideran armas mágicas a efectos de superar la RD. A nivel 7, el daño causado aumenta en un paso hasta 1d6 puntos de daño (1d4 si eres pequeño). A nivel 11, estas garras se vuelven armas flamígeras. Puedes usar tus garras un número de asaltos al día igual a 3 + tu modificador de carisma.</field>
+    </object>
+    <object pk="167" model="main.poder">
+        <field type="CharField" name="nombre">Resistencia demoníaca</field>
+        <field type="CharField" name="descripcion">A nivel 3, ganas resistencia a la electricidad 5 y un bonificador +2 en las tiradas de salvación contra veneno. A nivel 9, tu resistencia a la electricidad aumenta hasta 10 y tu bonificador a las tiradas de salvación contra veneno aumenta hasta +4.</field>
+        <field type="IntegerField" name="nivel">3</field>
+    </object>
+    <object pk="168" model="main.poder">
+        <field type="CharField" name="nombre">Fuerza del abismo</field>
+        <field type="CharField" name="descripcion">A nivel 9, recibes un bonificador +2 inherente a tu fuerza. Este bonificador aumenta a +4 a nivel 13 y a +6 a nivel 17.</field>
+        <field type="IntegerField" name="nivel">9</field>
+    </object>
+    <object pk="169" model="main.poder">
+        <field type="CharField" name="nombre">Convocación adicional</field>
+        <field type="CharField" name="descripcion">A nivel 15, cada vez que convoques a una criatura con el subtipo de demonio o la plantilla de infernal usando un conjuro de convocar monstruo, convocarás una criatura adicional del mismo tipo.</field>
+        <field type="IntegerField" name="nivel">15</field>
+    </object>
+    <object pk="170" model="main.poder">
+        <field type="CharField" name="nombre">Poder demoníaco</field>
+        <field type="CharField" name="descripcion">A nivel 20, el poder del Abismo fluye a través de ti. Obtienes inmunidad a la electricidad y al veneno. También recibes resistencia 10 al ácido, frío y fuego y obtienes telepatía con un alcance de 18 metros (permitiéndote comunicarte con cualquier criatura que pueda hablar un idioma).</field>
+        <field type="IntegerField" name="nivel">20</field>
+    </object>
+    <object pk="171" model="main.poder">
+        <field type="CharField" name="nombre">Meteoritos diminutos</field>
+        <field type="CharField" name="descripcion">A nivel 1 puedes convocar una lluvia de meteoritos diminutos como acción estándar para que caigan en un area de 1.5 metros de radio con un alcance de 9 metros. Los meteoros infligen 1d4 puntos de daño por fuego + 1 por cada 2 niveles de hechicero. Una salvación de reflejos niega este daño. La CD de la salvación es igual a 10 + la mitad de tu nivel de hechicero + tu modificador de carisma. Puedes usar esta aptitud un número de veces al día igual a 3 + tu modificador de carisma.</field>
+    </object>
+    <object pk="172" model="main.poder">
+        <field type="CharField" name="nombre">Caminante del vacío</field>
+        <field type="CharField" name="descripcion">A nivel 3 obtienes visión en la penumbra y resistencia al frío y fuego 5. A nivel 9 ya no necesitas respirar.</field>
+        <field type="IntegerField" name="nivel">3</field>
+    </object>
+    <object pk="173" model="main.poder">
+        <field type="CharField" name="nombre">Aurora boreal</field>
+        <field type="CharField" name="descripcion">A nivel 9, puedes crear una lámina de colores. Este poder funciona como un muro de fuego, pero inflige daño por frío y no irradia calor. Sin embargo, un lado de la aurora elegido por ti fascina a las criaturas que estén a 1.5 metros, hasta un máximo de 2 DG de criaturas por nivel de hechicero. Una salvación de voluntad niega el efecto de fascinación. La CD de la salvación es igual a 10 + la mitad de tu nivel de hechicero + tu modificador de carisma. Puedes usar esta aptitud un número de asaltos al día igual a tu nivel de hechicero. Estos asaltos no necesitan ser consecutivos.</field>
+        <field type="IntegerField" name="nivel">9</field>
+    </object>
+    <object pk="174" model="main.poder">
+        <field type="CharField" name="nombre">Traspasar el abismo</field>
+        <field type="CharField" name="descripcion">A nivel 15, tu nivel de lanzador aumenta en 3 al lanzar conjuros de la subescuela de teletransporte. Además, una vez al día puedes teletransportar a una única criatura que esté a 9 metros hasta el vacío del espacio si falla una salvación de voluntad. La CD de la salvación es igual a 10 + la mitad de tu nivel de hechicero + tu modificador de carisma. El objetivo puede intentar una nueva tirada de salvación como acción de asalto completo en cada asalto para volver. Mientras esté atrapado en el vacío del espacio, el objetivo recibe 6d6 puntos de daño de frío por asalto y debe retener el aliento o comenzar a asfixiarse.</field>
+        <field type="IntegerField" name="nivel">15</field>
+    </object>
+    <object pk="175" model="main.poder">
+        <field type="CharField" name="nombre">Nacido de la estrella</field>
+        <field type="CharField" name="descripcion">A nivel 20 obtienes inmunidad al frío y ceguera y puedes ver perfectamente en oscuridad natural o mágica. Además, obtienes curación rápida 1 cuando estás en el exterior y es de noche.</field>
+        <field type="IntegerField" name="nivel">20</field>
+    </object>
+    <object pk="176" model="main.poder">
+        <field type="CharField" name="nombre">Fuego celestial</field>
+        <field type="CharField" name="descripcion">Comenzando a nivel 1, puedes desatar un rayo de fuego celestial como acción estándar, apuntando a cualquier enemigo a un máximo de 9 metros como ataque de toque a distancia. Contra criaturas malvadas este rayo causa 1d4 puntos de daño +1 por cada dos niveles de hechicero que poseas. Este daño es divino y no está sujeto a resistencia a la energía o inmunidad. Este rayo cura a las criaturas buenas de 1d4 puntos de daño +1 por cada dos niveles de hechicero que poseas. Una criatura buena no puede beneficiarse de tu fuego celestial más de una vez al día. Las criaturas neutrales no resultan dañadas ni curadas por este efecto. Puedes utilizar esta aptitud un número de veces al día igual a 3 + tu modificador de carisma.</field>
+    </object>
+    <object pk="177" model="main.poder">
+        <field type="CharField" name="nombre">Fuego celestial</field>
+        <field type="CharField" name="descripcion">A nivel 3, ganas resistencia 5 al ácido y al frío. A nivel 9, tus resistencias aumentan hasta 10.</field>
+        <field type="IntegerField" name="nivel">3</field>
+    </object>
+    <object pk="178" model="main.poder">
+        <field type="CharField" name="nombre">Alas del cielo</field>
+        <field type="CharField" name="descripcion">A nivel 9, puedes hacer aparecer alas emplumadas y volar durante un número de minutos al día igual a tu nivel de hechicero, con una velocidad de 18 metros y maniobrabilidad buena. Esta duración no necesita ser consecutiva, pero debe utilizarse en incrementos de 1 minuto.</field>
+        <field type="IntegerField" name="nivel">9</field>
+    </object>
+    <object pk="179" model="main.poder">
+        <field type="CharField" name="nombre">Convicción</field>
+        <field type="CharField" name="descripcion">A nivel 15, puedes repetir cualquier prueba de característica, tirada de ataque, prueba de habilidad o tirada de salvación que acabes de hacer. Debes decidir usar esta aptitud después de tirar el dado, pero antes de que el DM revele los resultados. Puedes usar esta aptitud una vez al día.</field>
+        <field type="IntegerField" name="nivel">15</field>
+    </object>
+    <object pk="180" model="main.poder">
+        <field type="CharField" name="nombre">Ascención</field>
+        <field type="CharField" name="descripcion">A nivel 20, eres imbuido por el poder de los cielos. Ganas inmunidad al ácido, frío y petrificación. También ganas resistencia 10 a la electricidad y el fuego y un bonificador racial +4 a las tiradas de salvación contra veneno. También ganas un uso ilimitado de la aptitud de Alas del cielo. Finalmente, ganas la capacidad de hablar con cualquier criatura que posea un idioma.</field>
+        <field type="IntegerField" name="nivel">20</field>
+    </object>
+    <object pk="181" model="main.poder">
+        <field type="CharField" name="nombre">Toque corruptor</field>
+        <field type="CharField" name="descripcion">A nivel 1, puedes hacer que una criatura quede estremecida como ataque de toque cuerpo a cuerpo. Este efecto se mantiene durante un número de asaltos igual a la mitad de tu nivel de hechicero (mínimo 1). Las criaturas estremecidas con esta aptitud irradian un aura de maldad, como si fueran ajenos malvados. Varios toques no se apilan, pero sí se añaden a la duración. Puedes usar esta aptitud un número de veces al día igual a 3 + tu modificador de carisma.</field>
+    </object>
+    <object pk="182" model="main.poder">
+        <field type="CharField" name="nombre">Resistencias infernales</field>
+        <field type="CharField" name="descripcion">A nivel 3 obtienes resistencia 5 al fuego y un bonificador +2 a las tiradas de salvación contra veneno. A nivel 9 tu resistencia al fuego aumenta a 10 y tu bonificiador a las tiradas de salvación contra veneno aumenta a +4.</field>
+        <field type="IntegerField" name="nivel">3</field>
+    </object>
+    <object pk="183" model="main.poder">
+        <field type="CharField" name="nombre">Fuego infernal</field>
+        <field type="CharField" name="descripcion">A nivel 9 puedes convocar una columna de fuego infernal. Esta explosión de 3 metros de radio causa 1d6 puntos de daño por nivel de hechicero. Aquellos atrapados en el área de tu ataque reciben una tirada de salvación de reflejos para reducir el daño a la mitad. Las criaturas buenas que fallen sus tiradas de salvación quedan estremecidas un número de asaltos igual a tu nivel de hechicero. La CD de esta salvación es 10 + la mitad de tu nivel de hechicero + tu modificador de carisma. A nivel 9 puedes usar esta aptitud una vez al día. A nivel 17 2 veces al día y a nivel 20 3 veces al día. Este poder tiene un alcance de 18 metros.</field>
+        <field type="IntegerField" name="nivel">9</field>
+    </object>
+    <object pk="184" model="main.poder">
+        <field type="CharField" name="nombre">Sobre alas negras</field>
+        <field type="CharField" name="descripcion">A nivel 15, puedes hacer crecer unas temibles alas de murciélago como acción estándard, que te conceden una velocidad de vuelo de 18 metros con maniobrabilidad regular. Las alas pueden hacerse desaparecer como acción gratuita.</field>
+        <field type="IntegerField" name="nivel">15</field>
+    </object>
+    <object pk="185" model="main.poder">
+        <field type="CharField" name="nombre">Poder del averno</field>
+        <field type="CharField" name="descripcion">A nivel 20, tu forma queda imbuida por un vil poder. Obtienes inmunidad al fuego y al veneno. También obtienes resistencia 10 al ácido y al frío y la aptitud de ver perfectamente en la oscuridad de cualquier tipo hasta una distancia de 18 metros.</field>
+        <field type="IntegerField" name="nivel">20</field>
+    </object>
+    <object pk="186" model="main.poder">
+        <field type="CharField" name="nombre">Toque de la tumba</field>
+        <field type="CharField" name="descripcion">Comenzando a nivel 1, puedes hacer un ataque de toque cuerpo a cuerpo como acción estándar que hace que una criatura viviente quede estremecida durante un número de asaltos igual a la mitad de tu nivel de hechicero (mínimo 1). Si tocas a una criatura estremecida con esta aptitud, queda asustada durante 1 asalto si tiene menos dados de golpe que tu nivel de hechicero. Puedes usar esta aptitud un número de veces al día igual a 3 + tu modificador de carisma.</field>
+    </object>
+    <object pk="187" model="main.poder">
+        <field type="CharField" name="nombre">Regalo de la muerte</field>
+        <field type="CharField" name="descripcion">A nivel 3, obtienes resistencia al frío 5 y RD 5/- contra daño no letal. A nivel 9, tu resistencia al frío aumenta a 10 y tu RD aumenta a 10/- contra daño no letal.</field>
+        <field type="IntegerField" name="nivel">3</field>
+    </object>
+    <object pk="188" model="main.poder">
+        <field type="CharField" name="nombre">Agarrón de lo muertos</field>
+        <field type="CharField" name="descripcion">A nivel 9 puede hacer que un enjambre de brazos esqueléticos salgan del suelo para arañar y rasgar a tus enemigos. Los brazos esqueléticos aparecen desde el suelo en un área de 6 metros de radio. Cualquiera que esté en el área recibe 1d6 puntos de daño cortante por nivel de hechicero. Aquellos atrapados en el área reciben una tirada de salvación de reflejos para reducir el daño a la mitad. Aquellos que fallen su salvación son incapaces de moverse durante 1 asalto. La CD para esta salvación es igual a 10 + la mitad de tu nivel de hechicero + tu modificador de carisma. Los brazos esqueléticos desaparecen después de 1 asalto. Los brazos deben salir de una superficie sólida. A nivel 9 puedes usar esta aptitud una vez al día. A nivel 17 dos veces al día y a nivel 20 tres veces al día. Este poder tiene un alcance de 18 metros.</field>
+        <field type="IntegerField" name="nivel">9</field>
+    </object>
+    <object pk="189" model="main.poder">
+        <field type="CharField" name="nombre">Forma incorporal</field>
+        <field type="CharField" name="descripcion">A nivel 15 puedes volverte incorpóreo durante 1 asalto por nivel de hechicero. Mientras permanezcas en esta forma, obtienes el subtipo incorporal. Sólo recibes la mitad de daño de fuentes de daño corpóreo mientras sean mágicas (no recibes daño de armas y objetos no mágicos). Del mismo modo, tus conjuros sólo causan la mitad del daño a las criaturas corpóreas. Los conjuros y otros efectos que no causen daño funcionan normalmente. Puedes usar esta aptitud una vez al día.</field>
+        <field type="IntegerField" name="nivel">15</field>
+    </object>
+    <object pk="190" model="main.poder">
+        <field type="CharField" name="nombre">Uno de nosotros</field>
+        <field type="CharField" name="descripcion">A nivel 20, tu forma comienza a pudrirse (la apariencia de esta descomposición es cosa tuya) y los muertos vivientes te ven como uno de ellos Obtienes inmunidad al frío, al daño no letal, parálisis y al sueño. También obtienes RD 5/-. Los muertos vivientes no inteligentes no se dan cuenta de tu presencia a menos que les ataques. Recibes un bonificador +4 de moral a las tiradas de salvación contra conjuros y aptitudes sortílegas lanzados por muertos vivientes.</field>
+        <field type="IntegerField" name="nivel">20</field>
+    </object>
 </django-objects>
