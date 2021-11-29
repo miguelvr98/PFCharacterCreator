@@ -3783,4 +3783,210 @@
         </field>
     </object>
 <!--DOTES-->
+    <object pk="1" model="main.dote">
+        <field type="CharField" name="nombre">Abstención de materiales</field>
+        <field type="CharField" name="descripcion">Puedes lanzar cualquier conjuro con un costo en componentes materiales de una moneda de oro o menos sin necesidad de dicho componente. Lanzar el conjuro sigue provocando ataques de oportunidad de manera habitual. Si el conjuro requiere un componente material cuyo costo sea mayor de 1 mo, debes poseer el componente material a mano para lanzarlo, de la manera normal.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="2" model="main.dote">
+        <field type="CharField" name="nombre">Acrobático</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador de +2 en todas las pruebas de acrobacias y volar. Si tienes 10 o más rangos en una de estas habilidades, el bonificador se incrementa a +4 en esa habilidad.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="3" model="main.dote">
+        <field type="CharField" name="nombre">Afinidad con la piedra mejorada</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador +4 a las pruebas de percepción hechas para advertir un trabajo en piedra inusual. Este bonificador reemplaza todos los bonificadores normales a las pruebas de percepción debidos a la Afinidad con la piedra.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field type="IntegerField" name="sabiduria">13</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="4" model="main.dote">
+        <field type="CharField" name="nombre">Afinidad con los animales</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador +2 a todas las pruebas de trato con animales y montar. Si tienes 10 o más rangos en una de esas habilidades, el bonificador se incrementa a +4 en esa habilidad.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="5" model="main.dote">
+        <field type="CharField" name="nombre">Aguante</field>
+        <field type="CharField" name="descripcion">Ganas un bonificador +4 en las siguientes pruebas y salvaciones: pruebas de nadar para resistir el daño no letal de la extenuación, pruebas para continuar corriendo, pruebas para evitar el daño no letal de una marcha forzada, pruebas para aguantar la respiración, pruebas para evitar el daño no letal del hambre o la sed, tiradas de salvación para evitar el daño no letal de ambientes calientes o fríos y tiradas de salvación para resistir el daño de la asfixia. Puedes dormir con armadura ligera o intermedia sin quedar fatigado.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="6" model="main.dote">
+        <field type="CharField" name="nombre">Alerta</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador de +2 a la percepción y averiguar intenciones. Si tienes 10 o más rangos en una de esas habilidades, el bonificador se incrementa a +4 en esa habilidad.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="7" model="main.dote">
+        <field type="CharField" name="nombre">Alma de acero</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador +4 racial a los tiros de salvación contra conjuros y aptitudes sortílegas. Esto reemplaza el bonificador normal del rasgo racial Resistente que poseen los enanos.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="8" model="main.dote">
+        <field type="CharField" name="nombre">Aniñado</field>
+        <field type="CharField" name="descripcion">Puedes elegir 10 en las pruebas de engañar para convencer a otros de que estás diciendo la verdad, mientras tu historia te haga parecer inocente. Obtienes un bonificador +2 a las pruebas de habilidad de disfrazarse para fingir que eres un niño humano e ignoras los penalizadores a la prueba para disfrazarte como alguien de una raza y categoría de edad distintas mientras lo haces.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field type="IntegerField" name="carisma">13</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="9" model="main.dote">
+        <field type="CharField" name="nombre">Aptitudes mágicas</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador +2 en todas las pruebas de conocimiento de conjuros y usar objeto mágico. Si tienes 10 o más rangos en una de estas habilidades, el bonificador aumenta a +4 para esa habilidad.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="10" model="main.dote">
+        <field type="CharField" name="nombre">Atlético</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador +2 a las pruebas de habilidad de trepar y nadar. Si tienes 10 o más rangos en una de esas habilidades, el bonificador se incrementa a +4 en esa habilidad.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="11" model="main.dote">
+        <field type="CharField" name="nombre">Autosuficiente</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador +2 a todas las pruebas de curar y superviviencia. Si tienes 10 o más rangos en una de esas habilidades, el bonificador se incrementa a +4 para esa habilidad.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="12" model="main.dote">
+        <field type="CharField" name="nombre">Canalización adicional</field>
+        <field type="CharField" name="descripcion">Puedes canalizar energía dos veces más al día. Si un paladín con la capacidad de canalizar energía positiva escoge esta dote, puede usar la imposición de manos cuatro veces más al día, pero sólo para canalizar energía positiva.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="13" model="main.dote">
+        <field type="CharField" name="nombre">Canalización mejorada</field>
+        <field type="CharField" name="descripcion">Suma +2 a la CD de las tiradas de salvación para resistir los efectos de tu aptitud de canalizar energía.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="14" model="main.dote">
+        <field type="CharField" name="nombre">Canalización selectiva</field>
+        <field type="CharField" name="descripcion">Cuando canalices energía, puedes escoger un número de objetivos en el área de hasta tu modificador de carisma. Estos objetivos no se ven afectados por tu energía canalizada.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field type="IntegerField" name="carisma">13</field>
+    </object>
+    <object pk="15" model="main.dote">
+        <field type="CharField" name="nombre">Colmillos cortantes</field>
+        <field type="CharField" name="descripcion">Puedes hacer un ataque de mordisco que causa 1d4 puntos de daño, más tu modificador de fuerza. Se te considera competente con este ataque y puedes aplicarle dotes o efectos apropiados para los ataques naturales. Si se usa como parte de una acción de ataque completo, el mordisco se considera un ataque secundario y se hace con tu bonificador de ataque base -5 y añades la mitad de tu modificador de fuerza al daño.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="16" model="main.dote">
+        <field type="CharField" name="nombre">Competencia con las armas sencillas</field>
+        <field type="CharField" name="descripcion">Haces las tiradas de ataque con armas sencillas sin penalizador.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="17" model="main.dote">
+        <field type="CharField" name="nombre">Conjurar en combate</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador de +4 a las pruebas de concentración al lanzar conjuros o usar aptitudes sortílegas cuando conjures a la defensiva o mientras esté apresado.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="18" model="main.dote">
+        <field type="CharField" name="nombre">Conjuros perforantes</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador +2 en las pruebas de nivel de lanzador (1d20 + nivel de lanzador) para superar la RC de una criatura.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="19" model="main.dote">
+        <field type="CharField" name="nombre">Conjuros perforantes mayor</field>
+        <field type="CharField" name="descripcion">Ganas un bonificador +2 a las pruebas de nivel de lanzador (1d20 + nivel de lanzador) para superar la RC de una criatura. Este bonificador se apila con el dado por Conjuros perforantes.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="18"></object>
+        </field>
+    </object>
+    <object pk="20" model="main.dote">
+        <field type="CharField" name="nombre">Contraconjuro mejorado</field>
+        <field type="CharField" name="descripcion">Cuando contraconjures, puedes usar un conjuro de la misma escuela que sea uno o más niveles superior que el conjuro objetivo.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="21" model="main.dote">
+        <field type="CharField" name="nombre">Correr</field>
+        <field type="CharField" name="descripcion">Cuando corres, te mueves cinco veces tu velocidad normal (si llevas armadura intermedia, ligera o sin armadura y no transportas más que una carga media) o cuatro veces tu velocidad (si llevas una armadura pesada o una carga pesada). Si haces un salto tras comenzar a correr ganas un bonificador +4 a tu pruebas de acrobacias. Mientras corres, puedes mantener tu bonificador de destreza a tu CA.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="22" model="main.dote">
+        <field type="CharField" name="nombre">Dureza</field>
+        <field type="CharField" name="descripcion">Ganas 1 PG por nivel.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="23" model="main.dote">
+        <field type="CharField" name="nombre">Engañoso</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador de +2 a todas las tiradas de engañar y disfrazarse. Si tienes 10 o más rangos en una de esas habilidades, el bonificador aumenta a +4 para esa habilidad.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="24" model="main.dote">
+        <field type="CharField" name="nombre">Escudo arcano</field>
+        <field type="CharField" name="descripcion">Como acción inmediata, puedes sacrificar un conjuro preparado o un espacio de conjuro sin usar de nivel 1 o superior para obtener un bonificador de desvío a tu CA igual al nivel del conjuro o espacio de conjuro sacrificado durante 1 asalto. Los conjuros de nivel 0 no pueden sacrificarse de esta forma.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="25" model="main.dote">
+        <field type="CharField" name="nombre">Explosión arcana</field>
+        <field type="CharField" name="descripcion">Como acción estándar, puedes sacrificar un conjuro preparado o un espacio de conjuro sin usar de nivel 1 o superior y transformarlo en un rayo, apuntando a cualquier objetivo que se encuentre a un máximo de 9 metros como ataque de toque a distancia. Este ataque causa 2d6 puntos da daño más 1d6 puntos de daño adicionales por cada nivel del conjuro o del espacio de conjuro que has sacrificado. Los conjuros de nivel 0 no pueden sacrificarse de esta forma.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field type="IntegerField" name="nivel">10</field>
+    </object>
+    <object pk="26" model="main.dote">
+        <field type="CharField" name="nombre">Gnomo embaucador</field>
+        <field type="CharField" name="descripcion">Además de tus aptitudes sortílegas normales de gnomo, ganas las siguientes aptitudes sortílegas: 1/día: mano de mago  y prestidigitación.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="27" model="main.dote">
+        <field type="CharField" name="nombre">Gran fortaleza</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador de +2 a todas las tiradas de salvación de fortaleza.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="28" model="main.dote">
+        <field type="CharField" name="nombre">Gran fortaleza mejorada</field>
+        <field type="CharField" name="descripcion">Una vez al día, puedes repetir una tirada de salvación de Fortaleza. Debes decidir utilizar esta aptitud antes de que el resultado sea revelado. Debes aceptar el resultado de la segunda tirada, aunque sea peor.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="27"></object>
+        </field>
+    </object>
+    <object pk="29" model="main.dote">
+        <field type="CharField" name="nombre">Imposición de manos adicional</field>
+        <field type="CharField" name="descripcion">Puedes usar tu aptitud de imposición de manos dos veces más al día.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="30" model="main.dote">
+        <field type="CharField" name="nombre">Interpretación adicional</field>
+        <field type="CharField" name="descripcion">Puedes usar tu interpretación de bardo durante 6 asaltos adicionales por día.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="31" model="main.dote">
+        <field type="CharField" name="nombre">Interpretación persistente</field>
+        <field type="CharField" name="descripcion">Los bonificadores y penalizadores de tu interpretación de bardo continúan durante 2 asaltos después de que termines la interpretación. Cualquier otro requisito, como alcance o condiciones específicas deben seguir cumpliéndose para que el efecto pueda continuar. Si comienzas una nueva interpretación de bardo durante este tiempo, los efectos de la interpretación anterior cesan de inmediato.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="32" model="main.dote">
+        <field type="CharField" name="nombre">Ki adicional</field>
+        <field type="CharField" name="descripcion">Tu reserva de ki aumenta en dos puntos.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="33" model="main.dote">
+        <field type="CharField" name="nombre">Mediano afortunado</field>
+        <field type="CharField" name="descripcion">Una vez al día, cuando uno de tus aliados a un máximo de 9 metros haga un tiro de salvación, puedes hacer el mismo tiro de salvación como si fueras el objetivo del efecto que lo requiere. Puedes usar esta aptitud después de que tu aliado haya tirado, pero antes de que el DM declare si la tirada fue un éxito o un fracaso. Tu aliado puede elegir si usa tu tiro de salvación en lugar de su propio tiro.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="34" model="main.dote">
+        <field type="CharField" name="nombre">Movimientos ágiles</field>
+        <field type="CharField" name="descripcion">Cada vez que te muevas, puedes mover a través de 1.5 metros de terreno difícil cada asalto como si fuera terreno normal. Esta dote te permite dar un paso de 1.5 metros dentro de terreno difícil.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field type="IntegerField" name="destreza">13</field>
+    </object>
+    <object pk="35" model="main.dote">
+        <field type="CharField" name="nombre">Ojos de águila</field>
+        <field type="CharField" name="descripcion">Ignoras penalizadores de hasta -5 debidos a la distancia en pruebas de percepción visual, permitiéndote ver con precisión a distancias mucho mayores que la mayoría.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field type="IntegerField" name="sabiduria">13</field>
+    </object>
+    <object pk="36" model="main.dote">
+        <field type="CharField" name="nombre">Perspicacia compartida</field>
+        <field type="CharField" name="descripcion">Como acción de movimiento, puedes hacer que todas las criaturas amistosas en un radio de 9 metros que puedan verte u oírte, ganen un bonificador +2 a las pruebas de percepción durante un número de asaltos igual a tu modificador de sabiduría (mínimo 1 asalto).</field>
+        <field type="CharField" name="tipo">General</field>
+        <field type="IntegerField" name="sabiduria">13</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="37" model="main.dote">
+        <field type="CharField" name="nombre">Persuasivo</field>
+        <field type="CharField" name="descripcion">Consigues un bonificador +2 a las tiradas de diplomacia e intimidar. Si tienes 10 o más rangos en una de esas habilidades, el bonificador aumenta a +4 para esa habilidad.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
 </django-objects>

@@ -194,7 +194,11 @@ class Personaje(models.Model):
     class Dote(models.Model):
         nombre = models.TextField(verbose_name='Dote')
         descripcion = models.TextField(verbose_name='Descripcion')
-        tipo = models.TextField(verbose_name='Tipo', null=True)
+        class Tipo(models.TextChoices):
+            GENERAL = 'General'
+            COMBATE = 'Combate'
+            METAMAGICA = 'Metamágica'
+        tipo = models.CharField(max_length=10, choices=Tipo.choices, verbose_name='Tipo', null=True)
         nivel = models.IntegerField(verbose_name='Nivel', null=True)
         ataque_base = models.IntegerField(verbose_name='Ataque base', null=True)
         fuerza = models.IntegerField(verbose_name='Fuerza', null=True)
@@ -206,6 +210,7 @@ class Personaje(models.Model):
         creador = models.OneToOneField('Perfil', null=True, on_delete=models.SET_NULL)
         es_dote_companero_animal = models.BooleanField(verbose_name='Es dote de compañero animal', default=False)
         prerrequisito_dote = models.ManyToManyField('self')
+        prerrequisito_raza = models.ForeignKey('Raza', on_delete=models.SET_NULL, null=True)
     
         def __str__(self):
             return self.nombre
@@ -225,6 +230,7 @@ class Personaje(models.Model):
         tiro_de_salvacion = models.BooleanField(verbose_name='Tiro de salvación')
         resistencia_conjuros = models.BooleanField(verbose_name='Resistencia a conjuros')
         descripcion = models.TextField(verbose_name='Descripción')
+        clase = models.ManyToManyField('Clase')
 
         def __str__(self):
             return self.nombre
