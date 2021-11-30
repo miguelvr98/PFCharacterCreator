@@ -5518,25 +5518,25 @@
         <field type="CharField" name="alcance">30 m</field>
         <field type="CharField" name="tipo">Per</field>
     </object>
-    <object pk="48" model="main.objeto">
+    <object pk="49" model="main.objeto">
         <field type="CharField" name="clase">Armas marciales, a distancia</field>
         <field type="CharField" name="nombre">Arco largo compuesto</field>
         <field type="FloatField" name="precio">100</field>
         <field type="FloatField" name="peso">1.35</field>
     </object>
-    <object pk="48" model="main.arma">
+    <object pk="49" model="main.arma">
         <field type="CharField" name="dano_p">1d6</field>
         <field type="CharField" name="dano_m">1d8</field>
         <field type="CharField" name="critico">x3</field>
         <field type="CharField" name="alcance">33 m</field>
         <field type="CharField" name="tipo">Per</field>
     </object>
-    <object pk="48" model="main.objeto">
+    <object pk="50" model="main.objeto">
         <field type="CharField" name="clase">Armas marciales, a distancia</field>
         <field type="CharField" name="nombre">Flechas (20)</field>
         <field type="FloatField" name="precio">1</field>
         <field type="FloatField" name="peso">1.35</field>
     </object>
-    <object pk="48" model="main.arma">
+    <object pk="50" model="main.arma">
     </object>
 </django-objects>
