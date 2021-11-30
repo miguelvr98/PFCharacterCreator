@@ -4603,6 +4603,7 @@
         <field type="IntegerField" name="coste">1</field>
         <field type="IntegerField" name="coste_dinero">2000</field>
         <field type="BooleanField" name="es_propiedad_arma">True</field>
+        <field to="main.propiedad" name="prerrequisito_propiedad" rel="OneToOneRel">41</field>
     </object>
     <object pk="2" model="main.propiedad">
         <field type="CharField" name="nombre">Arma mágica +2</field>
@@ -4779,6 +4780,7 @@
         <field type="IntegerField" name="coste">1</field>
         <field type="IntegerField" name="coste_dinero">1000</field>
         <field type="BooleanField" name="es_propiedad_armadura">True</field>
+        <field to="main.propiedad" name="prerrequisito_propiedad" rel="OneToOneRel">41</field>
     </object>
     <object pk="27" model="main.propiedad">
         <field type="CharField" name="nombre">Armadura mágica +2</field>
@@ -4886,5 +4888,655 @@
         <field type="IntegerField" name="coste">4</field>
         <field type="BooleanField" name="es_propiedad_armadura">True</field>
         <field to="main.propiedad" name="prerrequisito_propiedad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="41" model="main.propiedad">
+        <field type="CharField" name="nombre">Gran calidad</field>
+        <field type="CharField" name="descripcion">Se considera un objeto de gran calidad</field>
+        <field type="IntegerField" name="coste">0</field>
+        <field type="IntegerField" name="coste_dinero">100</field>
+        <field type="BooleanField" name="es_propiedad_armadura">True</field>
+        <field type="BooleanField" name="es_propiedad_arma">True</field>
+    </object>
+<!--ARMAS-->
+    <object pk="1" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, ataques sin armas</field>
+        <field type="CharField" name="nombre">Guantelete</field>
+        <field type="IntegerField" name="precio">2</field>
+        <field type="FloatField" name="peso">0.45</field>
+    </object>
+    <object pk="1" model="main.arma">
+        <field type="CharField" name="dano_p">1d2</field>
+        <field type="CharField" name="dano_m">1d3</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Con</field>
+    </object>
+    <object pk="2" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, ataques sin armas</field>
+        <field type="CharField" name="nombre">Impacto sin armas</field>
+    </object>
+    <object pk="2" model="main.arma">
+        <field type="CharField" name="dano_p">1d2</field>
+        <field type="CharField" name="dano_m">1d3</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Con</field>
+        <field type="CharField" name="especial">No letal</field>
+    </object>
+    <object pk="3" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Daga</field>
+        <field type="IntegerField" name="precio">2</field>
+        <field type="FloatField" name="peso">0.45</field>
+    </object>
+    <object pk="3" model="main.arma">
+        <field type="CharField" name="dano_p">1d3</field>
+        <field type="CharField" name="dano_m">1d4</field>
+        <field type="CharField" name="critico">19-20/x2</field>
+        <field type="CharField" name="alcance">3 m</field>
+        <field type="CharField" name="tipo">Per o Con</field>
+    </object>
+    <object pk="4" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Estaca de madera</field>
+        <field type="FloatField" name="peso">0.45</field>
+    </object>
+    <object pk="4" model="main.arma">
+        <field type="CharField" name="dano_p">1d3</field>
+        <field type="CharField" name="dano_m">1d4</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="alcance">3 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="5" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Guantelete armado</field>
+        <field type="IntegerField" name="precio">5</field>
+    </object>
+    <object pk="5" model="main.arma">
+        <field type="CharField" name="dano_p">1d3</field>
+        <field type="CharField" name="dano_m">1d4</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="6" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Hoz</field>
+        <field type="IntegerField" name="precio">6</field>
+        <field type="FloatField" name="peso">0.90</field>
+    </object>
+    <object pk="6" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Cor</field>
+        <field type="CharField" name="especial">Derribar</field>
+    </object>
+    <object pk="7" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Maza ligera</field>
+        <field type="IntegerField" name="precio">5</field>
+        <field type="FloatField" name="peso">1.80</field>
+    </object>
+    <object pk="7" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Con</field>
+    </object>
+    <object pk="8" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Puñal</field>
+        <field type="IntegerField" name="precio">2</field>
+        <field type="FloatField" name="peso">0.45</field>
+    </object>
+    <object pk="8" model="main.arma">
+        <field type="CharField" name="dano_p">1d3</field>
+        <field type="CharField" name="dano_m">1d4</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="9" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Clava</field>
+        <field type="FloatField" name="peso">1.35</field>
+    </object>
+    <object pk="9" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="alcance">3 m</field>
+        <field type="CharField" name="tipo">Con</field>
+    </object>
+    <object pk="10" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Clava mere</field>
+        <field type="FloatField" name="precio">2</field>
+        <field type="FloatField" name="peso">0.90</field>
+    </object>
+    <object pk="10" model="main.arma">
+        <field type="CharField" name="dano_p">1d3</field>
+        <field type="CharField" name="dano_m">1d4</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Con o Per</field>
+        <field type="CharField" name="especial">Frágil</field>
+    </object>
+    <object pk="11" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Lanza corta</field>
+        <field type="FloatField" name="precio">1</field>
+        <field type="FloatField" name="peso">1.35</field>
+    </object>
+    <object pk="11" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="alcance">6 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="12" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Maza pesada</field>
+        <field type="FloatField" name="precio">12</field>
+        <field type="FloatField" name="peso">3.60</field>
+    </object>
+    <object pk="12" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Con</field>
+    </object>
+    <object pk="13" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Maza de armas</field>
+        <field type="FloatField" name="precio">8</field>
+        <field type="FloatField" name="peso">2.70</field>
+    </object>
+    <object pk="13" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Con o Per</field>
+    </object>
+    <object pk="14" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Bayoneta</field>
+        <field type="FloatField" name="precio">5</field>
+        <field type="FloatField" name="peso">0.45</field>
+    </object>
+    <object pk="14" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="15" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Lanza</field>
+        <field type="FloatField" name="precio">2</field>
+        <field type="FloatField" name="peso">2.70</field>
+    </object>
+    <object pk="15" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="alcance">6 m</field>
+        <field type="CharField" name="tipo">Per</field>
+        <field type="CharField" name="especial">Apuntalar</field>
+    </object>
+    <object pk="16" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, a distancia</field>
+        <field type="CharField" name="nombre">Ballesta pesada</field>
+        <field type="FloatField" name="precio">50</field>
+        <field type="FloatField" name="peso">3.60</field>
+    </object>
+    <object pk="16" model="main.arma">
+        <field type="CharField" name="dano_p">1d8</field>
+        <field type="CharField" name="dano_m">1d10</field>
+        <field type="CharField" name="critico">19-20/x2</field>
+        <field type="CharField" name="alcance">36 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="17" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, a distancia</field>
+        <field type="CharField" name="nombre">Ballesta ligera</field>
+        <field type="FloatField" name="precio">35</field>
+        <field type="FloatField" name="peso">1.80</field>
+    </object>
+    <object pk="17" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">19-20/x2</field>
+        <field type="CharField" name="alcance">24 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="18" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, a distancia</field>
+        <field type="CharField" name="nombre">Cerbatana</field>
+        <field type="FloatField" name="precio">2</field>
+        <field type="FloatField" name="peso">0.45</field>
+    </object>
+    <object pk="18" model="main.arma">
+        <field type="CharField" name="dano_p">1</field>
+        <field type="CharField" name="dano_m">1d2</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="alcance">6 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="19" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, a distancia</field>
+        <field type="CharField" name="nombre">Dardo</field>
+        <field type="FloatField" name="precio">0.5</field>
+        <field type="FloatField" name="peso">0.23</field>
+    </object>
+    <object pk="19" model="main.arma">
+        <field type="CharField" name="dano_p">1d3</field>
+        <field type="CharField" name="dano_m">1d4</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="alcance">6 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="20" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, a distancia</field>
+        <field type="CharField" name="nombre">Honda</field>
+    </object>
+    <object pk="20" model="main.arma">
+        <field type="CharField" name="dano_p">1d3</field>
+        <field type="CharField" name="dano_m">1d4</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="alcance">15 m</field>
+        <field type="CharField" name="tipo">Con</field>
+    </object>
+    <object pk="21" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, a distancia</field>
+        <field type="CharField" name="nombre">Jabalina</field>
+        <field type="FloatField" name="precio">1</field>
+        <field type="FloatField" name="peso">0.90</field>
+    </object>
+    <object pk="21" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="alcance">9 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="22" model="main.objeto">
+        <field type="CharField" name="clase">Armas sencillas, a distancia</field>
+        <field type="CharField" name="nombre">Virotes de ballesta (10)</field>
+        <field type="FloatField" name="precio">1</field>
+        <field type="FloatField" name="peso">0.45</field>
+    </object>
+    <object pk="22" model="main.arma">
+    </object>
+    <object pk="23" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Cachiporra</field>
+        <field type="FloatField" name="precio">1</field>
+        <field type="FloatField" name="peso">0.90</field>
+    </object>
+    <object pk="23" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Con</field>
+        <field type="CharField" name="especial">No letal</field>
+    </object>
+    <object pk="24" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Cuchillo de estrella</field>
+        <field type="FloatField" name="precio">24</field>
+        <field type="FloatField" name="peso">1.35</field>
+    </object>
+    <object pk="24" model="main.arma">
+        <field type="CharField" name="dano_p">1d3</field>
+        <field type="CharField" name="dano_m">1d4</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="alcance">6 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="25" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Espada corta</field>
+        <field type="FloatField" name="precio">10</field>
+        <field type="FloatField" name="peso">0.90</field>
+    </object>
+    <object pk="25" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">19-20/x2</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="26" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Gladio</field>
+        <field type="FloatField" name="precio">15</field>
+        <field type="FloatField" name="peso">1.35</field>
+    </object>
+    <object pk="26" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">19-20/x2</field>
+        <field type="CharField" name="tipo">Per o Cor</field>
+        <field type="CharField" name="especial">Artística</field>
+    </object>
+    <object pk="27" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Hacha de mano</field>
+        <field type="FloatField" name="precio">6</field>
+        <field type="FloatField" name="peso">1.35</field>
+    </object>
+    <object pk="27" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="tipo">Cor</field>
+    </object>
+    <object pk="28" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Martillo ligero</field>
+        <field type="FloatField" name="precio">1</field>
+        <field type="FloatField" name="peso">0.90</field>
+    </object>
+    <object pk="28" model="main.arma">
+        <field type="CharField" name="dano_p">1d3</field>
+        <field type="CharField" name="dano_m">1d4</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="alcance">6 m</field>
+        <field type="CharField" name="tipo">Con</field>
+    </object>
+    <object pk="29" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo ligeras</field>
+        <field type="CharField" name="nombre">Pico ligero</field>
+        <field type="FloatField" name="precio">4</field>
+        <field type="FloatField" name="peso">1.35</field>
+    </object>
+    <object pk="29" model="main.arma">
+        <field type="CharField" name="dano_p">1d3</field>
+        <field type="CharField" name="dano_m">1d4</field>
+        <field type="CharField" name="critico">x4</field>
+        <field type="CharField" name="alcance">6 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="30" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Bastón estoque</field>
+        <field type="FloatField" name="precio">45</field>
+        <field type="FloatField" name="peso">1.80</field>
+    </object>
+    <object pk="30" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="31" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Cimitarra</field>
+        <field type="FloatField" name="precio">15</field>
+        <field type="FloatField" name="peso">1.80</field>
+    </object>
+    <object pk="31" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">18-20/x2</field>
+        <field type="CharField" name="tipo">Cor</field>
+    </object>
+    <object pk="32" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Espada larga</field>
+        <field type="FloatField" name="precio">15</field>
+        <field type="FloatField" name="peso">1.80</field>
+    </object>
+    <object pk="32" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">19-20/x2</field>
+        <field type="CharField" name="tipo">Cor</field>
+    </object>
+    <object pk="33" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Espada ropera</field>
+        <field type="FloatField" name="precio">20</field>
+        <field type="FloatField" name="peso">0.90</field>
+    </object>
+    <object pk="33" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">18-20/x2</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="34" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Hacha de batalla</field>
+        <field type="FloatField" name="precio">10</field>
+        <field type="FloatField" name="peso">2.70</field>
+    </object>
+    <object pk="34" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="tipo">Cor</field>
+    </object>
+    <object pk="35" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Mangual</field>
+        <field type="FloatField" name="precio">8</field>
+        <field type="FloatField" name="peso">2.25</field>
+    </object>
+    <object pk="35" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Con</field>
+        <field type="CharField" name="especial">Desarmar, derribar</field>
+    </object>
+    <object pk="36" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Martillo de guerra</field>
+        <field type="FloatField" name="precio">12</field>
+        <field type="FloatField" name="peso">2.25</field>
+    </object>
+    <object pk="36" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="tipo">Con</field>
+    </object>
+    <object pk="36" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Pico pesado</field>
+        <field type="FloatField" name="precio">8</field>
+        <field type="FloatField" name="peso">2.70</field>
+    </object>
+    <object pk="36" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">x4</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="37" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a una mano</field>
+        <field type="CharField" name="nombre">Tridente</field>
+        <field type="FloatField" name="precio">15</field>
+        <field type="FloatField" name="peso">1.80</field>
+    </object>
+    <object pk="37" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="alcance">3 m</field>
+        <field type="CharField" name="tipo">Per</field>
+        <field type="CharField" name="especial">Apuntalar</field>
+    </object>
+    <object pk="38" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Alabarda</field>
+        <field type="FloatField" name="precio">10</field>
+        <field type="FloatField" name="peso">5.40</field>
+    </object>
+    <object pk="38" model="main.arma">
+        <field type="CharField" name="dano_p">1d8</field>
+        <field type="CharField" name="dano_m">1d10</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="tipo">Per o Cor</field>
+        <field type="CharField" name="especial">Apuntalar, derribar</field>
+    </object>
+    <object pk="39" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Alfanje</field>
+        <field type="FloatField" name="precio">75</field>
+        <field type="FloatField" name="peso">3.60</field>
+    </object>
+    <object pk="39" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">2d4</field>
+        <field type="CharField" name="critico">18-20/x2</field>
+        <field type="CharField" name="tipo">Cor</field>
+    </object>
+    <object pk="40" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Gran clava</field>
+        <field type="FloatField" name="precio">5</field>
+        <field type="FloatField" name="peso">3.60</field>
+    </object>
+    <object pk="40" model="main.arma">
+        <field type="CharField" name="dano_p">1d8</field>
+        <field type="CharField" name="dano_m">1d10</field>
+        <field type="CharField" name="critico">x2</field>
+        <field type="CharField" name="tipo">Con</field>
+    </object>
+    <object pk="41" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Gran hacha</field>
+        <field type="FloatField" name="precio">20</field>
+        <field type="FloatField" name="peso">5.40</field>
+    </object>
+    <object pk="41" model="main.arma">
+        <field type="CharField" name="dano_p">1d10</field>
+        <field type="CharField" name="dano_m">1d12</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="tipo">Cor</field>
+    </object>
+    <object pk="42" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Guadaña</field>
+        <field type="FloatField" name="precio">18</field>
+        <field type="FloatField" name="peso">4.50</field>
+    </object>
+    <object pk="42" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">2d4</field>
+        <field type="CharField" name="critico">x4</field>
+        <field type="CharField" name="tipo">Per o Cor</field>
+        <field type="CharField" name="especial">Derribar</field>
+    </object>
+    <object pk="43" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Guja</field>
+        <field type="FloatField" name="precio">8</field>
+        <field type="FloatField" name="peso">4.50</field>
+    </object>
+    <object pk="43" model="main.arma">
+        <field type="CharField" name="dano_p">1d8</field>
+        <field type="CharField" name="dano_m">1d10</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="tipo">Cor</field>
+        <field type="CharField" name="especial">Alcance</field>
+    </object>
+    <object pk="44" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Mandoble</field>
+        <field type="FloatField" name="precio">50</field>
+        <field type="FloatField" name="peso">3.60</field>
+    </object>
+    <object pk="44" model="main.arma">
+        <field type="CharField" name="dano_p">1d10</field>
+        <field type="CharField" name="dano_m">2d6</field>
+        <field type="CharField" name="critico">19-20/x2</field>
+        <field type="CharField" name="tipo">Cor</field>
+    </object>
+    <object pk="45" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Mangual pesado</field>
+        <field type="FloatField" name="precio">15</field>
+        <field type="FloatField" name="peso">4.50</field>
+    </object>
+    <object pk="45" model="main.arma">
+        <field type="CharField" name="dano_p">1d8</field>
+        <field type="CharField" name="dano_m">1d10</field>
+        <field type="CharField" name="critico">19-20/x2</field>
+        <field type="CharField" name="tipo">Con</field>
+        <field type="CharField" name="especial">Desarmar, derribar</field>
+    </object>
+    <object pk="45" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, cuerpo a cuerpo a dos manos</field>
+        <field type="CharField" name="nombre">Nodachi</field>
+        <field type="FloatField" name="precio">60</field>
+        <field type="FloatField" name="peso">3.60</field>
+    </object>
+    <object pk="45" model="main.arma">
+        <field type="CharField" name="dano_p">1d8</field>
+        <field type="CharField" name="dano_m">1d10</field>
+        <field type="CharField" name="critico">18-20/x2</field>
+        <field type="CharField" name="tipo">Cor o Per</field>
+        <field type="CharField" name="especial">Apuntalar</field>
+    </object>
+    <object pk="46" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, a distancia</field>
+        <field type="CharField" name="nombre">Arco corto</field>
+        <field type="FloatField" name="precio">30</field>
+        <field type="FloatField" name="peso">0.90</field>
+    </object>
+    <object pk="46" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="alcance">18 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="47" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, a distancia</field>
+        <field type="CharField" name="nombre">Arco corto compuesto</field>
+        <field type="FloatField" name="precio">75</field>
+        <field type="FloatField" name="peso">0.90</field>
+    </object>
+    <object pk="47" model="main.arma">
+        <field type="CharField" name="dano_p">1d4</field>
+        <field type="CharField" name="dano_m">1d6</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="alcance">21 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="48" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, a distancia</field>
+        <field type="CharField" name="nombre">Arco largo</field>
+        <field type="FloatField" name="precio">75</field>
+        <field type="FloatField" name="peso">0.90</field>
+    </object>
+    <object pk="48" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="alcance">30 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="48" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, a distancia</field>
+        <field type="CharField" name="nombre">Arco largo compuesto</field>
+        <field type="FloatField" name="precio">100</field>
+        <field type="FloatField" name="peso">1.35</field>
+    </object>
+    <object pk="48" model="main.arma">
+        <field type="CharField" name="dano_p">1d6</field>
+        <field type="CharField" name="dano_m">1d8</field>
+        <field type="CharField" name="critico">x3</field>
+        <field type="CharField" name="alcance">33 m</field>
+        <field type="CharField" name="tipo">Per</field>
+    </object>
+    <object pk="48" model="main.objeto">
+        <field type="CharField" name="clase">Armas marciales, a distancia</field>
+        <field type="CharField" name="nombre">Flechas (20)</field>
+        <field type="FloatField" name="precio">1</field>
+        <field type="FloatField" name="peso">1.35</field>
+    </object>
+    <object pk="48" model="main.arma">
     </object>
 </django-objects>

@@ -361,8 +361,8 @@ class Personaje(models.Model):
     class Objeto(models.Model):
         clase = models.TextField(verbose_name='Clase', null=True)
         nombre = models.TextField(verbose_name='Nombre')
-        precio = models.IntegerField(verbose_name='Precio')
-        peso = models.IntegerField(verbose_name='Peso', null=True)
+        precio = models.FloatField(verbose_name='Precio', default=0.0)
+        peso = models.FloatField(verbose_name='Peso', default=0.0)
 
         def __str__(self):
             return self.nombre
