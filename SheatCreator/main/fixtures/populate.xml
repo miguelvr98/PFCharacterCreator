@@ -3989,4 +3989,611 @@
         <field type="CharField" name="descripcion">Consigues un bonificador +2 a las tiradas de diplomacia e intimidar. Si tienes 10 o más rangos en una de esas habilidades, el bonificador aumenta a +4 para esa habilidad.</field>
         <field type="CharField" name="tipo">General</field>
     </object>
+    <object pk="38" model="main.dote">
+        <field type="CharField" name="nombre">Pies ligeros</field>
+        <field type="CharField" name="descripcion">Mientras vayas con armadura ligera o sin armadura, tu velocidad base aumenta en 5 pies. Pierdes el beneficio de esta dote si llevas carga media o pesada.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="39" model="main.dote">
+        <field type="CharField" name="nombre">Pasos acrobáticos</field>
+        <field type="CharField" name="descripcion">Cada vez que te mueves, puedes atravesar 4.5 metros de terreno difícil cada asalto como si fuera terreno normal. El efecto de esta dote se apilan con los proporcionados por Movimientos ágiles (permitiéndote mover con normalidad a través de terreno difícil un total de 6 metros cada asalto).</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">15</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="34"></object>
+        </field>
+    </object>
+    <object pk="40" model="main.dote">
+        <field type="CharField" name="nombre">Pisada ligera</field>
+        <field type="CharField" name="descripcion">Puedes ignorar los efectos del terreno difícil en entornos naturales, como si fuera terreno normal.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">1</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="34"></object>
+            <object pk="39"></object>
+        </field>
+    </object>
+    <object pk="41" model="main.dote">
+        <field type="CharField" name="nombre">Reflejos rápidos</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador +2 a todos los tiros de salvación de reflejos.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="42" model="main.dote">
+        <field type="CharField" name="nombre">Reflejos rápidos mejorados</field>
+        <field type="CharField" name="descripcion">Una vez al día, puedes repetir una tirada de salvación de reflejos.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="41"></object>
+        </field>
+    </object>
+    <object pk="43" model="main.dote">
+        <field type="CharField" name="nombre">Rostro pétreo</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador +4 a las pruebas de engañar para mentir u ocultar tus emociones o auténticos motivos, pero no para fintar en combate o enviar mensajes secretos. Además, la CD para las pruebas de averiguar intenciones para obtener una corazonada sobre ti es 25 en lugar de 20.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="44" model="main.dote">
+        <field type="CharField" name="nombre">Sigiloso</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador +2 a todas las pruebas de escapismo y sigilo. Si tienes 10 o más rangos en alguna de esas habilidades, el bonificador aumenta a +4 para esa habilidad.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="45" model="main.dote">
+        <field type="CharField" name="nombre">Sociable</field>
+        <field type="CharField" name="descripcion">Como acción de movimiento concedes a todas las criaturas amistosas a un máximo de 9 metros que pueda verte u oírte (incluyéndote a ti mismo) un bonificador +2 a las pruebas de diplomacia durante un número de asaltos igual a tu modificador de carisma (mínimo 1 asalto).</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="46" model="main.dote">
+        <field type="CharField" name="nombre">Terrícola</field>
+        <field type="CharField" name="descripcion">Puedes usar Hablar con los animales como aptitud sortílega, pero sólo para comunicarte con animales cavadores, como marmotas, topos y similares. Puedes seguir usando tu aptitud de gnomo de hablar con los animales una vez al día para hablar con cualquier animal de la forma habitual.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field type="IntegerField" name="carisma">13</field>
+        <field to="main.raza" name="prerrequisito_raza" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="47" model="main.dote">
+        <field type="CharField" name="nombre">Voluntad de hierro</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador +2 a los tiros de salvación de voluntad.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="48" model="main.dote">
+        <field type="CharField" name="nombre">Voluntad de hierro mejorada</field>
+        <field type="CharField" name="descripcion">Una vez al día, puedes repetir un tiro de salvación de voluntad. Debes decidir usar esta aptitud antes de que el resultado sea revelado. Debes aceptar el resultado de la segunda tirada, aunque sea peor.</field>
+        <field type="CharField" name="tipo">General</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="47"></object>
+        </field>
+    </object>
+    <object pk="49" model="main.dote">
+        <field type="CharField" name="nombre">Acometer</field>
+        <field type="CharField" name="descripcion">Puedes aumentar el alcance de tu ataque cuerpo a cuerpo en 1.5 metros hasta el final de tu turno, a cambio de recibir un penalizador -2 a tu CA hasta tu próximo turno. Debes decidir usar esta aptitud antes de hacer ningún ataque.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+    </object>
+    <object pk="50" model="main.dote">
+        <field type="CharField" name="nombre">Ataque poderoso</field>
+        <field type="CharField" name="descripcion">Puedes escoger un -1 a las tiradas de ataque para obtener un bonificador +2 a las tiradas de daño. Cuando tu ataque base llegue a +4, y cada 4 puntos a partir de entonces, el penalizador aumenta en -1 y el bonificador aumenta en +2. Debes elegir si usas esta dote antes de hacer una tirada de ataque, y sus efectos duran hasta tu próximo turno.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+        <field type="IntegerField" name="fuerza">13</field>
+    </object>
+    <object pk="51" model="main.dote">
+        <field type="CharField" name="nombre">Arrastre mejorado</field>
+        <field type="CharField" name="descripcion">No provocas un ataque de oportunidad cuando realizas una maniobra de combate de arrastre. Además, recibes un bonificador +2 a las pruebas para arrastrar a un oponente. También recibes un bonificador +2 a tu DMC cuando un oponente trata de arrastrarte.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+        </field>
+    </object>
+    <object pk="52" model="main.dote">
+        <field type="CharField" name="nombre">Arrastre mayor</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador +2 a las pruebas para arrastrar a un enemigo. Este bonificador se apila con el concedido por Arrastre mejorado. Cuando arrastres a un enemigo, su movimiento provoca ataques de oportunidad por parte de tus aliados (pero no por tu parte).</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+            <object pk="51"></object>
+        </field>
+    </object>
+    <object pk="53" model="main.dote">
+        <field type="CharField" name="nombre">Arrollar mejorado</field>
+        <field type="CharField" name="descripcion">No provocas un ataque de oportunidad cuando realizas una maniobra de combate de arrollar. Además, recibes un bonificador +2 a las pruebas para arrollar a un enemigo. También recibes un bonificador +2 a tu DMC cada vez que un oponente intente arrollarte. Los objetivos de tu intento de arrollar no pueden elegir evitarte.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+        </field>
+    </object>
+    <object pk="54" model="main.dote">
+        <field type="CharField" name="nombre">Arrollar mayor</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador +2 a las pruebas para arrollar a un enemigo. Este bonificador se apila con los otorgados por Arrollar mejorado. Cada vez que arrollas a tus oponentes, provocan ataques de oportunidad si son derribados por tu ataque.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+            <object pk="53"></object>
+        </field>
+    </object>
+    <object pk="55" model="main.dote">
+        <field type="CharField" name="nombre">Asalto atontador</field>
+        <field type="CharField" name="descripcion">Puedes recibir un penalizador de -5 a las tiradas de ataque a cambio de poder atontar a los enemigos cuando los golpees cuerpo a cuerpo durante 1 asalto. Una salvación de fortaleza con éxito niega el efecto. La CD de esta salvación es 10 + tu bonificador de ataque base.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">11</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+        </field>
+    </object>
+    <object pk="56" model="main.dote">
+        <field type="CharField" name="nombre">Asalto aturdidor</field>
+        <field type="CharField" name="descripcion">Puedes recibir un penalizador de -5 a las tiradas de ataque a cambio de poder aturdir a los enemigos cuando los golpees cuerpo a cuerpo durante 1 asalto. Una salvación de fortaleza con éxito niega el efecto. La CD de esta salvación es 10 + tu bonificador de ataque base.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">16</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+        </field>
+    </object>
+    <object pk="57" model="main.dote">
+        <field type="CharField" name="nombre">Asalto sangriento</field>
+        <field type="CharField" name="descripcion">Puedes recibir un penalizador de -5 a las tiradas de ataque a cambio de poder inflingir 1d4 de sangrado a los enemigos cuando los golpees cuerpo a cuerpo durante 1 asalto. Una salvación de fortaleza con éxito niega el efecto. La CD de esta salvación es 10 + tu bonificador de ataque base. Una criatura continúa recibiendo el daño de sangrado cada asalto al comienzo de su turno. El daño de sangrado puede detenerse con una prueba de curar (CD 15) o mediante cualquier curación mágica. El daño de sangrado de esta dote no se apila consigo mismo.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+        </field>
+    </object>
+    <object pk="58" model="main.dote">
+        <field type="CharField" name="nombre">Pericia en combate</field>
+        <field type="CharField" name="descripcion">Puedes escoger un -1 a las tiradas de ataque para obtener un bonificador +1 a la CA por esquiva. Cuando tu ataque base llegue a +4, y cada 4 puntos a partir de entonces, el penalizador aumenta en -1 y el bonificador aumenta en +1. Debes elegir si usas esta dote antes de hacer una tirada de ataque, y sus efectos duran hasta tu próximo turno.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="inteligencia">13</field>
+    </object>
+    <object pk="59" model="main.dote">
+        <field type="CharField" name="nombre">Esquiva</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador de esquiva de +1 a tu CA. Una situación que te haga perder tu bonificador de destreza a la CA también te hacer perder los beneficios de esta dote.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">13</field>
+    </object>
+    <object pk="60" model="main.dote">
+        <field type="CharField" name="nombre">Movilidad</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador +4 de esquiva a la CA contra ataques de oportunidad causados cuando te mueves saliendo o entrando en un área amenazada. Una condición que te haga perder el bonificador de destreza a la CA también te hace perder los bonificadores de esquiva. Los bonificadores de esquiva se apilan con cualquier otro, a diferencia de la mayoría de otros bonificadores.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="59"></object>
+        </field>
+    </object>
+    <object pk="61" model="main.dote">
+        <field type="CharField" name="nombre">Ataque elástico</field>
+        <field type="CharField" name="descripcion">Puedes moverte hasta el máximo de tu velocidad y hacer un único ataque cuerpo a cuerpo sin provotar ataques de oportunidad del objetivo al que estás atacando. Puedes moverte tanto antes como después del ataque, pero debes moverte al menos 3 metros antes del ataque y la distancia total no puede superar tu velocidad. No puedes usar esta aptitud para atacar a un enemigo que esté adyacente a ti al comienzo de tu turno.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field type="IntegerField" name="ataque_base">4</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="59"></object>
+            <object pk="60"></object>
+        </field>
+    </object>
+    <object pk="62" model="main.dote">
+        <field type="CharField" name="nombre">Ataque de torbellino</field>
+        <field type="CharField" name="descripcion">Cuando usas una acción de ataque completo, puedes renunciar a tus ataques normales y, en su lugar, hacer un ataque cuerpo a cuerpo con tu ataque base más alto contra todos los oponentes dentro de tu alcance. Debes hacer una tirada de ataque separada contra cada oponente.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field type="IntegerField" name="inteligencia">13</field>
+        <field type="IntegerField" name="ataque_base">4</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+        </field>
+    </object>
+    <object pk="63" model="main.dote">
+        <field type="CharField" name="nombre">Impacto sin arma mejorado</field>
+        <field type="CharField" name="descripcion">Se te considera armado aún cuando estés desarmado. No provocas ataques de oportunidad cuando ataques enemigos mientras estás desarmado. Tus ataques sin arma pueden hacer daño letal o atenuado, a tu elección.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="64" model="main.dote">
+        <field type="CharField" name="nombre">Desviar flechas</field>
+        <field type="CharField" name="descripcion">Debes tener al menos una mano libre (que no lleve nada) para usar esta dote. Una vez por asalto cuando serías normalmente golpeado con un ataque de un arma a distancia, puedes desviarlo para no recbir daño de ese impacto. Debes ser consciente del ataque y no estar desprevenido. El intento de desviar un ataque a distancia no cuenta como una acción. Armas a distancia inusualmente grandes, como pedruscos o virotes de ballista y los ataques a distancia generados por ataques naturales o efectos mágicos no puedes ser desviados.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="63"></object>
+        </field>
+    </object>
+    <object pk="65" model="main.dote">
+        <field type="CharField" name="nombre">Atrapar flechas</field>
+        <field type="CharField" name="descripcion">Cuando usas la dote de Desviar flechas, puedes elegir atrapar el arma en lugar de simplemente desviarla. Las armas arrojadizas pueden devolverse inmediatamente contra el lanzador original (aunque no sea tu turno) o retenerlas para un uso posterior. Debes tener al menos una mano libre (sin sujetar nada) para usar esta dote.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">15</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="63"></object>
+            <object pk="64"></object>
+        </field>
+    </object>
+    <object pk="66" model="main.dote">
+        <field type="CharField" name="nombre">Ayuda veloz</field>
+        <field type="CharField" name="descripcion">Como acción rápida, puedes realizar la acción de ayudar a otro, concediendo a tu aliado un bonificador +1 a su siguiente ataque o un +1 a su CA.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="inteligencia">13</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="58"></object>
+        </field>
+    </object>
+    <object pk="67" model="main.dote">
+        <field type="CharField" name="nombre">Carga arrolladora</field>
+        <field type="CharField" name="descripcion">Cuando haces una carga, puedes intentar arrollar a una criatura que esté en el camino de tu carga como acción gratuita. Si tienes éxito en arrollar a la criatura, puedes completar la carga. Si la maniobra de arrollar no tiene éxito, la carga termina en el espacio frente a esa criatura.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+            <object pk="51"></object>
+        </field>
+    </object>
+    <object pk="68" model="main.dote">
+        <field type="CharField" name="nombre">Combate con dos armas</field>
+        <field type="CharField" name="descripcion">Tus penalizadores a las tiradas de ataque por luchar con dos armas se reducen. El penalizador para tu arma principal se reduce en 2 y el de tu mano torpe se reduce en 6.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">15</field>
+    </object>
+    <object pk="69" model="main.dote">
+        <field type="CharField" name="nombre">Combate con dos armas mejorado</field>
+        <field type="CharField" name="descripcion">Además del ataque adicional que tienes con la mano torpe, consigues un segundo ataque, aunque con un penalizador de -5.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">17</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="70" model="main.dote">
+        <field type="CharField" name="nombre">Combate con dos armas mayor</field>
+        <field type="CharField" name="descripcion">Consigues un tercer ataque con tu mano torpe, aunque con un penalizador -10.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">19</field>
+        <field type="IntegerField" name="ataque_base">11</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="68"></object>
+            <object pk="69"></object>
+        </field>
+    </object>
+    <object pk="71" model="main.dote">
+        <field type="CharField" name="nombre">Competencia con armas marciales</field>
+        <field type="CharField" name="descripcion">Eres competente con todas las armas marciales.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="72" model="main.dote">
+        <field type="CharField" name="nombre">Competencia con armadura intermedia</field>
+        <field type="CharField" name="descripcion">Eres competente con todas las armaduras intermedias.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="73" model="main.dote">
+        <field type="CharField" name="nombre">Competencia con armadura ligera</field>
+        <field type="CharField" name="descripcion">Eres competente con todas las armaduras ligeras.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="74" model="main.dote">
+        <field type="CharField" name="nombre">Competencia con armadura pesada</field>
+        <field type="CharField" name="descripcion">Eres competente con todas las armaduras pesadas.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="75" model="main.dote">
+        <field type="CharField" name="nombre">Competencia con escudos</field>
+        <field type="CharField" name="descripcion">Eres competente con todos los escudos (excepto escudo pavés).</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="76" model="main.dote">
+        <field type="CharField" name="nombre">Contraatacar</field>
+        <field type="CharField" name="descripcion">Puedes preparar una acción para hacer un ataque cuerpo a cuerpo contra cualquier enemigo que te ataque cuerpo a cuerpo, incluso si el enemigo está fuera de tu alcance.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">11</field>
+    </object>
+    <object pk="77" model="main.dote">
+        <field type="CharField" name="nombre">Soltura con los críticos</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador de circunstancia de +4 a las tiradas de ataque para confirmar golpes críticos.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">9</field>
+    </object>
+    <object pk="78" model="main.dote">
+        <field type="CharField" name="nombre">Crítico fatigante</field>
+        <field type="CharField" name="descripcion">Cuando consigas un impacto crítico, tu oponente queda agotado. Esta dote no tiene efectos adicionales en una criatura que ya esté agotada o extenuada.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="77"></object>
+        </field>
+    </object>
+    <object pk="79" model="main.dote">
+        <field type="CharField" name="nombre">Crítico agotador</field>
+        <field type="CharField" name="descripcion">Cuando logras un golpe crítico contra un enemigo, tu objetivo queda inmediatamente exhausto. Esta dote no tiene efecto en criaturas exhaustas.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">15</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+    </object>
+    <object pk="80" model="main.dote">
+        <field type="CharField" name="nombre">Crítico asombroso</field>
+        <field type="CharField" name="descripcion">Cuando consigas un impacto crítico, tu oponente queda grogui durante 1d4+1 asaltos. Un tiro de salvación de fortaleza con éxito reduce la duración a 1 asalto. La CD para esta salvación de fortaleza es igual a 10 + tu ataque base. El efecto de esta dote no se apila. En su lugar, impactos adicionales se añaden a la duración.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="77"></object>
+        </field>
+    </object>
+    <object pk="81" model="main.dote">
+        <field type="CharField" name="nombre">Crítico aturdidor</field>
+        <field type="CharField" name="descripcion">Cada vez que logres un golpe crítico, tu oponente queda aturdido durante 1d4 asaltos. Una Tirada de salvación de fortaleza reduce su estado a grogui durante 1d4 asaltos. La CD para esta tirada de salvación es 10 + tu ataque base. El efecto de esta dote no se apila. En su lugar, impactos adicionales se añaden a la duración.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">17</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="80"></object>
+        </field>
+    </object>
+    <object pk="82" model="main.dote">
+        <field type="CharField" name="nombre">Crítico cegador</field>
+        <field type="CharField" name="descripcion">Cada vez que logres un golpe crítico, tu oponente queda permanentemente ciego. Una tirada exitosa de fortaleza reduce esto a quedar deslumbrado durante 1d4 asaltos. La dificultad de esta tirada de salvación de fortaleza es igual a 10 más tu ataque base.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">15</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="77"></object>
+        </field>
+    </object>
+    <object pk="83" model="main.dote">
+        <field type="CharField" name="nombre">Crítico nauseabundo</field>
+        <field type="CharField" name="descripcion">Cuando consigas un ataque crítico, tu oponente queda indispuesto durante 1 minuto. Los efectos de esta dote no se apilan. Golpes adicionales añaden duración al efecto.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">11</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="77"></object>
+        </field>
+    </object>
+    <object pk="84" model="main.dote">
+        <field type="CharField" name="nombre">Crítico sangrante</field>
+        <field type="CharField" name="descripcion">Cada vez que logres un golpe crítico con un arma cortante o penetrante, tus oponentes sufren 2d6 puntos de daño por sangrado cada asalto en su turno, además del daño causado por el golpe crítico. El daño de sangrado puede ser detenido por una prueba de curar con CD 15 o a través de cualquier curación mágica. Los efectos de esta dote se apilan.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">11</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="77"></object>
+        </field>
+    </object>
+    <object pk="85" model="main.dote">
+        <field type="CharField" name="nombre">Defensa con dos armas</field>
+        <field type="CharField" name="descripcion">Cuando blandes un arma doble o dos armas (sin incluir armas naturales o impacto sin arma), recibes un bonificador de escudo +1 a tu CA. Cuando estás luchando a la defensiva o usando la acción de defensa total, este bonificador de escudo aumenta hasta +2.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">15</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="86" model="main.dote">
+        <field type="CharField" name="nombre">Derribo mejorado</field>
+        <field type="CharField" name="descripcion">No provocas un ataque de oportunidad cuando realizas una maniobra de combate de derribo. Además, recibes un bonificador +2 a las pruebas para derribar un enemigo. También recibes un bonificador +2 a tu DMC cada vez que un oponente intente derribarte.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="inteligencia">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="58"></object>
+        </field>
+    </object>
+    <object pk="87" model="main.dote">
+        <field type="CharField" name="nombre">Derribo mayor</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador +2 en las pruebas para derribar a un enemigo. Este bonificador se apila con el dado por Derribo mejorado. Cada vez que logres derribar a un oponente, éste provoca ataques de oportunidad.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="inteligencia">13</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="58"></object>
+            <object pk="86"></object>
+        </field>
+    </object>
+    <object pk="88" model="main.dote">
+        <field type="CharField" name="nombre">Disparo a bocajarro</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador +1 a las tiradas de ataque y daño con armas a distancia a distancias de hasta 9 metros.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="89" model="main.dote">
+        <field type="CharField" name="nombre">Disparo a la carrera</field>
+        <field type="CharField" name="descripcion">Como acción de asalto completo, puedes moverte hasta tu velocidad y hacer un único ataque a distancia en cualquier punto durante tu movimiento.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field type="IntegerField" name="ataque_base">4</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="88"></object>
+        </field>
+    </object>
+    <object pk="90" model="main.dote">
+        <field type="CharField" name="nombre">Disparo a larga distancia</field>
+        <field type="CharField" name="descripcion">Sólo sufres un penalizador de -1 por cada incremento de distancia entre tú y tu objetivo cuando uses armas a distancia.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="88"></object>
+        </field>
+    </object>
+    <object pk="91" model="main.dote">
+        <field type="CharField" name="nombre">Disparo rápido</field>
+        <field type="CharField" name="descripcion">Cuando uses una acción de ataque completo con un arma a distancia, puedes disparar una vez más en ese asalto. Todas tus tiradas de ataque reciben un penalizador de -2 cuando usas Disparo rápido.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="88"></object>
+        </field>
+    </object>
+    <object pk="92" model="main.dote">
+        <field type="CharField" name="nombre">Disparo múltiple</field>
+        <field type="CharField" name="descripcion">Cuando hagas una acción de ataque completo con un arco, tu primer ataque dispara dos flechas. Si el ataque impacta, ambas flechas impactan. Aplica el daño basado en precisión (como el ataque furtivo) y el daño crítico sólo una vez en cada ataque.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">17</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="88"></object>
+            <object pk="91"></object>
+        </field>
+    </object>
+    <object pk="93" model="main.dote">
+        <field type="CharField" name="nombre">Doble tajo</field>
+        <field type="CharField" name="descripcion">Suma tu bonificador de fuerza al daño con el arma que llevas en tu mano torpe en vez de la mitad.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">15</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="94" model="main.dote">
+        <field type="CharField" name="nombre">Embestida mejorada</field>
+        <field type="CharField" name="descripcion">No provocas un ataque de oportunidad cuando realizas una maniobra de combate de embestida. Además, recibes un bonificador +2 a las pruebas para embestir a un enemigo. También recibes un bonificador +2 a tu DMC cada vez que un oponente intente embestirte a ti.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+        </field>
+    </object>
+    <object pk="95" model="main.dote">
+        <field type="CharField" name="nombre">Embestida mayor</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador +2 a las pruebas para embestir a un enemigo. Este bonificador se apila con los otorgados por Embestida mejorada. Cada vez que hagas una embestida contra un oponente, su movimiento provoca un ataque de oportunidad de todos tus aliados (pero no tuyo).</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+            <object pk="94"></object>
+        </field>
+    </object>
+    <object pk="96" model="main.dote">
+        <field type="CharField" name="nombre">Estilo del escorpión</field>
+        <field type="CharField" name="descripcion">Para usar esta dote, debes hacer un impacto sin arma como acción estándar. Si este ataque impacta, haces el daño normalmente, y la velocidad base terrestre del objetivo se reduce a 1.5 metros durante un número de asaltos igual a tu modificador de sabiduría si no supera una tirada de salvación de fortaleza (CD 10 + la mitad de tu nivel de personaje + tu modificador de sabiduría).</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="63"></object>
+        </field>
+    </object>
+    <object pk="97" model="main.dote">
+        <field type="CharField" name="nombre">Golpe en las sombras</field>
+        <field type="CharField" name="descripcion">Puedes causar daño de precisión, como el daño por ataque furtivo, contra objetivos con ocultación (pero no con ocultación total).</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+    </object>
+    <object pk="98" model="main.dote">
+        <field type="CharField" name="nombre">Golpe vital</field>
+        <field type="CharField" name="descripcion">Cuando usas una acción de ataque, puedes hacer un ataque con tu tirada ataque base más alto que causa daño adicional. Tira los dados de daño para el ataque dos veces y suma el resultado, pero no multipliques los bonificadores de daño por fuerza, propiedades del arma o el daño basado en la precisión. Este bonificador al daño no se multiplica con un ataque crítico.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+    </object>
+    <object pk="99" model="main.dote">
+        <field type="CharField" name="nombre">Golpe vital mejorado</field>
+        <field type="CharField" name="descripcion">Cuando usas una acción de ataque, puedes hacer un ataque con tu tirada ataque base más alto que causa daño adicional. Tira los dados de daño para el ataque tres veces y suma el resultado, pero no multipliques los bonificadores de daño por fuerza, propiedades del arma o el daño basado en la precisión. Este bonificador al daño no se multiplica con un ataque crítico.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">11</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="98"></object>
+        </field>
+    </object>
+    <object pk="100" model="main.dote">
+        <field type="CharField" name="nombre">Maniobras ágiles</field>
+        <field type="CharField" name="descripcion">Puedes añadir tu bonificador de destreza a tu bonificador de ataque base y tamaño cuando determines tu bonificador total de BMC en lugar de tu bonificador de fuerza.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="101" model="main.dote">
+        <field type="CharField" name="nombre">Paso adelante</field>
+        <field type="CharField" name="descripcion">Cuando un enemigo adyacente trata de dar un paso de 1.5 metros para alejarse de ti, puedes dar un paso de 1.5 metros como acción inmediata para terminar adyacente que activó esta dote. Si das este paso no puedes dar un paso de 1.5 metros durante tu próximo turno. Si haces una acción de movimiento durante tu próximo turno, resta 1.5 metros de tu movimiento total.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+    </object>
+    <object pk="102" model="main.dote">
+        <field type="CharField" name="nombre">Poderío intimidante</field>
+        <field type="CharField" name="descripcion">Suma tu modificador de fuerza a las pruebas de intimidar además de tu modificador de carisma.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="103" model="main.dote">
+        <field type="CharField" name="nombre">Presa mejorada</field>
+        <field type="CharField" name="descripcion">No provocas ataque de oportunidad cuando realizas una maniobra de combate de presa. Además, recibes un bonificador +2 a las pruebas para apresar a un enemigo. También recibes un bonificador +2 a tu DMC cada vez que un oponente intente apresarte.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="63"></object>
+        </field>
+    </object>
+    <object pk="104" model="main.dote">
+        <field type="CharField" name="nombre">Presa mayor</field>
+        <field type="CharField" name="descripcion">Recibes un bonificador +2 a las pruebas para hacer una presa a un enemigo. Este bonificador se apila el que otorga Presa mejorada. Una vez que has apresado a una criatura, mantener la presa es una acción de movimiento. Esta dote te permite hacer dos pruebas de presa cada asalto (para mover, dañar o sujetar a tu oponente), pero no estás obligado a hacer dos pruebas. Sólo necesitas tener éxito en una de esas pruebas para mantener la presa.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="63"></object>
+            <object pk="103"></object>
+        </field>
+    </object>
+    <object pk="105" model="main.dote">
+        <field type="CharField" name="nombre">Reflejos de combate</field>
+        <field type="CharField" name="descripcion">Puedes hacer un número de ataques de oportunidad adicionales por asalto igual a tu bonificador de destreza. Con esta dote, además puedes hacer ataques de oportunidad aunque estés desprevenido.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="106" model="main.dote">
+        <field type="CharField" name="nombre">Soltura con el escudo</field>
+        <field type="CharField" name="descripcion">Aumenta el bonificador a la CA dado por cualquier escudo que estés usando en +1.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="75"></object>
+        </field>
+    </object>
+    <object pk="107" model="main.dote">
+        <field type="CharField" name="nombre">Sutileza con las armas</field>
+        <field type="CharField" name="descripcion">Con un arma ligera hecha para una criatura de tu tamaño, puedes usar tu bonificador de destreza en lugar del de fuerza en las tiradas de ataque. Si llevas un escudo, su penalizador por armadura se aplica a tus tiradas de ataque.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="108" model="main.dote">
+        <field type="CharField" name="nombre">Ampliar conjuro</field>
+        <field type="CharField" name="descripcion">Puedes alterar un conjuro con alcance corto, intermedio o largo incrementando su alcance un 100%. Un conjuro ampliado usa un espacio de conjuro un nivel mayor que el nivel real del conjuro.</field>
+        <field type="CharField" name="tipo">Metamágica</field>
+    </object>
+    <object pk="109" model="main.dote">
+        <field type="CharField" name="nombre">Apresurar conjuro</field>
+        <field type="CharField" name="descripcion">Lanzar un conjuro apresurado es una acción rápida. Puedes hacer otras acciones, incluso lanzar otros conjuros, en el mismo asalto en el que lanzas un conjuro apresurado. Un conjuro cuyo tiempo de lanzamiento sea 1 asalto o mayor que una acción de asalto completo no puede ser apresurado. Un conjuro apresurado usa un espacio de conjuro cuatro niveles mayor al nivel real del conjuro. Lanzar un conjuro apresurado no provoca un ataque de oportunidad.</field>
+        <field type="CharField" name="tipo">Metamágica</field>
+    </object>
+    <object pk="110" model="main.dote">
+        <field type="CharField" name="nombre">Conjurar en silencio</field>
+        <field type="CharField" name="descripcion">Un conjuro silencioso puede lanzarse sin componentes verbales. Los conjuros sin componentes verbales no se ven afectados. Un conjuro silencioso usa un espacio de conjuro de un nivel mayor que el nivel real del conjuro.</field>
+        <field type="CharField" name="tipo">Metamágica</field>
+    </object>
+    <object pk="111" model="main.dote">
+        <field type="CharField" name="nombre">Extender conjuro</field>
+        <field type="CharField" name="descripcion">Puedes alterar un conjuro de explosión, emanación o expansión para ampliar su área. Cualquier valor numérico de las medidas del área de conjuro aumentan en un 100%. Un conjuro extendido usa un espacio de conjuro tres niveles superior al nivel real del conjuro.</field>
+        <field type="CharField" name="tipo">Metamágica</field>
+    </object>
+    <object pk="112" model="main.dote">
+        <field type="CharField" name="nombre">Intensificar conjuro</field>
+        <field type="CharField" name="descripcion">Puedes lanzar conjuros como si fueran de mayor nivel (máximo nivel 9).</field>
+        <field type="CharField" name="tipo">Metamágica</field>
+    </object>
+    <object pk="113" model="main.dote">
+        <field type="CharField" name="nombre">Maximizar conjuro</field>
+        <field type="CharField" name="descripcion">Todas las variables y efectos numéricos de un conjuro modificado por esta dote están maximizados. Las tiradas de salvación y las tiradas enfrentadas no se ven afectadas, así como tampoco conjuros sin variables aleatorias. Un conjuro maximizado usa un espacio de conjuro tres niveles por encima de su nivel real. Un conjuro potenciado y maximizado gana los beneficios de cada dote por separado: el máximo resultado más la mitad del resultado normal tirado.</field>
+        <field type="CharField" name="tipo">Metamágica</field>
+    </object>
+    <object pk="114" model="main.dote">
+        <field type="CharField" name="nombre">Potenciar conjuro</field>
+        <field type="CharField" name="descripcion">Todos los efectos numéricos y variables de un conjuro potenciado se incrementan en un medio, incluyendo las bonificaciones a esas tiradas de dados. Las tiradas de salvación y las tiradas enfrentadas no resultan afectadas, ni los conjuros sin variables aleatorias. Un conjuro potenciado usa un espacio de conjuro dos niveles mayor que el nivel real del conjuro.</field>
+        <field type="CharField" name="tipo">Metamágica</field>
+    </object>
+    <object pk="115" model="main.dote">
+        <field type="CharField" name="nombre">Prolongar conjuro</field>
+        <field type="CharField" name="descripcion">Un conjuro prolongado dura el doble de lo normal.</field>
+        <field type="CharField" name="tipo">Metamágica</field>
+    </object>
 </django-objects>
