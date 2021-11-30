@@ -5539,4 +5539,19 @@
     </object>
     <object pk="50" model="main.arma">
     </object>
+<!--ARMADURAS-->
+    <object pk="51" model="main.objeto">
+        <field type="CharField" name="clase">Armadura ligera</field>
+        <field type="CharField" name="nombre">Acolchada</field>
+        <field type="FloatField" name="precio">5</field>
+        <field type="FloatField" name="peso">4.5</field>
+    </object>
+    <object pk="1" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">1</field>
+        <field type="IntegerField" name="bonif_max_des">8</field>
+        <field type="CharField" name="penaliz_arm">0</field>
+        <field type="CharField" name="fallo_conj_arc">5</field>
+        <field type="CharField" name="velocidad_9m">9</field>
+        <field type="CharField" name="velocidad_6m">6</field>
+    </object>
 </django-objects>
