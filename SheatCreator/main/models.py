@@ -348,6 +348,9 @@ class Personaje(models.Model):
         descripcion = models.TextField(verbose_name='Descripción')
         coste = models.IntegerField(verbose_name='Coste', null=True)
         coste_dinero = models.IntegerField(verbose_name='Coste dinero', null=True)
+        es_propiedad_arma = models.BooleanField(verbose_name='Es propiedad de arma', default=False)
+        es_propiedad_armadura = models.BooleanField(verbose_name='Es propiedad de armadura', default=False)
+        prerrequisito_propiedad = models.ForeignKey('self', null=True, on_delete=models.SET_NULL)
 
         def __str__(self):
             return self.nombre
