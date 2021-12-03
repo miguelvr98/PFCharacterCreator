@@ -223,14 +223,16 @@ class Personaje(models.Model):
         nivel = models.IntegerField(verbose_name='Nivel')
         escuela = models.TextField(verbose_name='Escuela')
         tiempo_de_lanzamiento = models.TextField(verbose_name='Tiempo de lanzamiento')
+        componentes = models.TextField(verbose_name='Componentes')
         alcance = models.TextField(verbose_name='Alcance')
         efecto = models.TextField(verbose_name='Efecto', null=True)
+        area = models.TextField(verbose_name='Área', null=True)
         objetivo = models.TextField(verbose_name='Objetivo', null=True)
         duracion = models.TextField(verbose_name='Duración')
-        tiro_de_salvacion = models.BooleanField(verbose_name='Tiro de salvación')
-        resistencia_conjuros = models.BooleanField(verbose_name='Resistencia a conjuros')
+        tiro_de_salvacion = models.TextField(verbose_name='Tiro de salvación')
+        resistencia_conjuros = models.TextField(verbose_name='Resistencia a conjuros')
         descripcion = models.TextField(verbose_name='Descripción')
-        clase = models.ManyToManyField('Clase')
+        clases = models.ManyToManyField('Clase')
 
         def __str__(self):
             return self.nombre
