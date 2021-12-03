@@ -5554,4 +5554,224 @@
         <field type="CharField" name="velocidad_9m">9</field>
         <field type="CharField" name="velocidad_6m">6</field>
     </object>
-</django-objects>
+    <object pk="52" model="main.objeto">
+        <field type="CharField" name="clase">Armadura ligera</field>
+        <field type="CharField" name="nombre">Cuero</field>
+        <field type="FloatField" name="precio">10</field>
+        <field type="FloatField" name="peso">6.8</field>
+    </object>
+    <object pk="2" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">2</field>
+        <field type="IntegerField" name="bonif_max_des">6</field>
+        <field type="CharField" name="penaliz_arm">0</field>
+        <field type="CharField" name="fallo_conj_arc">10</field>
+        <field type="CharField" name="velocidad_9m">9</field>
+        <field type="CharField" name="velocidad_6m">6</field>
+    </object>    
+    <object pk="53" model="main.objeto">
+        <field type="CharField" name="clase">Armadura ligera</field>
+        <field type="CharField" name="nombre">Cuero tachonado</field>
+        <field type="FloatField" name="precio">25</field>
+        <field type="FloatField" name="peso">9</field>
+    </object>
+    <object pk="3" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">3</field>
+        <field type="IntegerField" name="bonif_max_des">5</field>
+        <field type="CharField" name="penaliz_arm">-1</field>
+        <field type="CharField" name="fallo_conj_arc">15</field>
+        <field type="CharField" name="velocidad_9m">9</field>
+        <field type="CharField" name="velocidad_6m">6</field>
+    </object>
+    <object pk="54" model="main.objeto">
+        <field type="CharField" name="clase">Armadura ligera</field>
+        <field type="CharField" name="nombre">Camisote de mallas</field>
+        <field type="FloatField" name="precio">100</field>
+        <field type="FloatField" name="peso">11</field>
+    </object>
+    <object pk="4" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">4</field>
+        <field type="IntegerField" name="bonif_max_des">4</field>
+        <field type="CharField" name="penaliz_arm">-2</field>
+        <field type="CharField" name="fallo_conj_arc">20</field>
+        <field type="CharField" name="velocidad_9m">9</field>
+        <field type="CharField" name="velocidad_6m">6</field>
+    </object> 
+    <object pk="55" model="main.objeto">
+        <field type="CharField" name="clase">Armadura intermedia</field>
+        <field type="CharField" name="nombre">De pieles</field>
+        <field type="FloatField" name="precio">15</field>
+        <field type="FloatField" name="peso">11</field>
+    </object>
+    <object pk="5" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">4</field>
+        <field type="IntegerField" name="bonif_max_des">4</field>
+        <field type="CharField" name="penaliz_arm">-3</field>
+        <field type="CharField" name="fallo_conj_arc">40</field>
+        <field type="CharField" name="velocidad_9m">6</field>
+        <field type="CharField" name="velocidad_6m">4.5</field>
+    </object> 
+    <object pk="56" model="main.objeto">
+        <field type="CharField" name="clase">Armadura intermedia</field>
+        <field type="CharField" name="nombre">De escamas</field>
+        <field type="FloatField" name="precio">50</field>
+        <field type="FloatField" name="peso">13.6</field>
+    </object>
+    <object pk="6" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">5</field>
+        <field type="IntegerField" name="bonif_max_des">4</field>
+        <field type="CharField" name="penaliz_arm">-4</field>
+        <field type="CharField" name="fallo_conj_arc">35</field>
+        <field type="CharField" name="velocidad_9m">6</field>
+        <field type="CharField" name="velocidad_6m">4.5</field>
+    </object>
+    <object pk="57" model="main.objeto">
+        <field type="CharField" name="clase">Armadura intermedia</field>
+        <field type="CharField" name="nombre">Cota de mallas</field>
+        <field type="FloatField" name="precio">150</field>
+        <field type="FloatField" name="peso">18</field>
+    </object>
+    <object pk="7" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">6</field>
+        <field type="IntegerField" name="bonif_max_des">2</field>
+        <field type="CharField" name="penaliz_arm">-5</field>
+        <field type="CharField" name="fallo_conj_arc">40</field>
+        <field type="CharField" name="velocidad_9m">6</field>
+        <field type="CharField" name="velocidad_6m">4.5</field>
+    </object> 
+    <object pk="58" model="main.objeto">
+        <field type="CharField" name="clase">Armadura intermedia</field>
+        <field type="CharField" name="nombre">Coraza</field>
+        <field type="FloatField" name="precio">200</field>
+        <field type="FloatField" name="peso">13.6</field>
+    </object>
+    <object pk="8" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">6</field>
+        <field type="IntegerField" name="bonif_max_des">3</field>
+        <field type="CharField" name="penaliz_arm">-4</field>
+        <field type="CharField" name="fallo_conj_arc">35</field>
+        <field type="CharField" name="velocidad_9m">6</field>
+        <field type="CharField" name="velocidad_6m">4.5</field>
+    </object>  
+    <object pk="59" model="main.objeto">
+        <field type="CharField" name="clase">Armadura pesada</field>
+        <field type="CharField" name="nombre">Laminada</field>
+        <field type="FloatField" name="precio">200</field>
+        <field type="FloatField" name="peso">20.4</field>
+    </object>
+    <object pk="9" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">7</field>
+        <field type="IntegerField" name="bonif_max_des">0</field>
+        <field type="CharField" name="penaliz_arm">-7</field>
+        <field type="CharField" name="fallo_conj_arc">40</field>
+        <field type="CharField" name="velocidad_9m">6</field>
+        <field type="CharField" name="velocidad_6m">4.5</field>
+    </object>
+    <object pk="60" model="main.objeto">
+        <field type="CharField" name="clase">Armadura pesada</field>
+        <field type="CharField" name="nombre">Cota de bandas</field>
+        <field type="FloatField" name="precio">250</field>
+        <field type="FloatField" name="peso">15.9</field>
+    </object>
+    <object pk="10" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">7</field>
+        <field type="IntegerField" name="bonif_max_des">1</field>
+        <field type="CharField" name="penaliz_arm">-6</field>
+        <field type="CharField" name="fallo_conj_arc">35</field>
+        <field type="CharField" name="velocidad_9m">6</field>
+        <field type="CharField" name="velocidad_6m">4.5</field>
+    </object><object pk="60" model="main.objeto">
+        <field type="CharField" name="clase">Armadura pesada</field>
+        <field type="CharField" name="nombre">Placa y mallas</field>
+        <field type="FloatField" name="precio">600</field>
+        <field type="FloatField" name="peso">22.7</field>
+    </object>
+    <object pk="10" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">8</field>
+        <field type="IntegerField" name="bonif_max_des">0</field>
+        <field type="CharField" name="penaliz_arm">-7</field>
+        <field type="CharField" name="fallo_conj_arc">40</field>
+        <field type="CharField" name="velocidad_9m">6</field>
+        <field type="CharField" name="velocidad_6m">4.5</field>
+    </object>
+    </object><object pk="61" model="main.objeto">
+        <field type="CharField" name="clase">Armadura pesada</field>
+        <field type="CharField" name="nombre">Completa</field>
+        <field type="FloatField" name="precio">1500</field>
+        <field type="FloatField" name="peso">22.7</field>
+    </object>
+    <object pk="11" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">9</field>
+        <field type="IntegerField" name="bonif_max_des">1</field>
+        <field type="CharField" name="penaliz_arm">-6</field>
+        <field type="CharField" name="fallo_conj_arc">35</field>
+        <field type="CharField" name="velocidad_9m">6</field>
+        <field type="CharField" name="velocidad_6m">4.5</field>
+    </object>
+    </object><object pk="62" model="main.objeto">
+        <field type="CharField" name="clase">Escudo</field>
+        <field type="CharField" name="nombre">Rodela</field>
+        <field type="FloatField" name="precio">5</field>
+        <field type="FloatField" name="peso">2.25</field>
+    </object>
+    <object pk="12" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">1</field>
+        <field type="CharField" name="penaliz_arm">-1</field>
+        <field type="CharField" name="fallo_conj_arc">5</field>
+    </object>
+    </object><object pk="63" model="main.objeto">
+        <field type="CharField" name="clase">Escudo</field>
+        <field type="CharField" name="nombre">Escudo ligero de madera</field>
+        <field type="FloatField" name="precio">3</field>
+        <field type="FloatField" name="peso">2.25</field>
+    </object>
+    <object pk="13" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">1</field>
+        <field type="CharField" name="penaliz_arm">-1</field>
+        <field type="CharField" name="fallo_conj_arc">5</field>
+    </object>
+    </object><object pk="64" model="main.objeto">
+        <field type="CharField" name="clase">Escudo</field>
+        <field type="CharField" name="nombre">Escudo ligero de acero</field>
+        <field type="FloatField" name="precio">9</field>
+        <field type="FloatField" name="peso">2.7</field>
+    </object>
+    <object pk="14" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">1</field>
+        <field type="CharField" name="penaliz_arm">-1</field>
+        <field type="CharField" name="fallo_conj_arc">5</field>
+    </object>
+    </object><object pk="65" model="main.objeto">
+        <field type="CharField" name="clase">Escudo</field>
+        <field type="CharField" name="nombre">Escudo pesado de madera</field>
+        <field type="FloatField" name="precio">7</field>
+        <field type="FloatField" name="peso">4.5</field>
+    </object>
+    <object pk="15" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">2</field>
+        <field type="CharField" name="penaliz_arm">-2</field>
+        <field type="CharField" name="fallo_conj_arc">15</field>
+    </object>
+    </object><object pk="66" model="main.objeto">
+        <field type="CharField" name="clase">Escudo</field>
+        <field type="CharField" name="nombre">Escudo pesado de acero</field>
+        <field type="FloatField" name="precio">20</field>
+        <field type="FloatField" name="peso">6.8</field>
+    </object>
+    <object pk="16" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">2</field>
+        <field type="CharField" name="penaliz_arm">-2</field>
+        <field type="CharField" name="fallo_conj_arc">15</field>
+    </object>
+    </object><object pk="67" model="main.objeto">
+        <field type="CharField" name="clase">Escudo</field>
+        <field type="CharField" name="nombre">Escudo pavés</field>
+        <field type="FloatField" name="precio">30</field>
+        <field type="FloatField" name="peso">20.4</field>
+    </object>
+    <object pk="17" model="main.armadura">
+        <field type="IntegerField" name="bonif_arm">4</field>
+        <field type="IntegerField" name="bonif_max_des">2</field>
+        <field type="CharField" name="penaliz_arm">-10</field>
+        <field type="CharField" name="fallo_conj_arc">50</field>
+    </object>
+    <django-objects>
