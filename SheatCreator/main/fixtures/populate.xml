@@ -2800,6 +2800,91 @@
         <field type="CharField" name="nombre">Golpe maestro</field>
         <field type="CharField" name="descripcion">Alcanzado el nivel 20, un pícaro se vuelve increíblemente mortal cuando inflige daño con ataque furtivo. Cada vez que el pícaro inflige daño con ataque furtivo, puede escoger uno de los siguientes tres efectos: el objetivo puede caer dormido durante 1d4 horas, paralizado durante 2d6 asaltos o asesinado. Independientemente del efecto escogido, el objetivo recibe una salvación de fortaleza para negar el efecto adicional. La CD de esta salvación es igual a 10 + la mitad del nivel de pícaro + el modificador de inteligencia. Una vez que una criatura ha sido el objetivo de un golpe maestro, independientemente de si ha tenido éxito en la salvación o no, la criatura es inmune al golpe maestro del pícaro durante 24 horas. Las criaturas que son inmunes al ataque furtivo del pícaro también son inmunes a esta capacidad.</field>
     </object>
+    <object pk="175" model="main.especial">
+        <field type="CharField" name="nombre">Vínculo</field>
+        <field type="CharField" name="descripcion">El dueño puede controlar a su compañero animal como acción gratuita o presionarle como acción de movimiento, incluso si no tiene ningún rango en la habilidad de trato con animales. El dueño obtiene un bonificador +4 de circunstancia en todas las pruebas de empatía animal y trato con animales con relación a un compañero animal.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="176" model="main.especial">
+        <field type="CharField" name="nombre">Compartir conjuros</field>
+        <field type="CharField" name="descripcion">El dueño puede lanzar un conjuro con un objetivo "tú" sobre su compañero animal (como si fuera un conjuro con alcance de toque) en lugar de usarlo sobre sí mismo. El dueño puede lanzar conjuros sobre su compañero animal incluso si los conjuros normalmente no afectaría a criaturas del tipo de su compañero (animal). Los conjuros lanzados de esta forma deben provenir de la clase que concede el compañero animal. Esta aptitud no permite al compañero animal compartir aptitudes que no sean conjuros, ni siquiera si estas funcionan como conjuros.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="177" model="main.especial">
+        <field type="CharField" name="nombre">Evasión del compañero animal</field>
+        <field type="CharField" name="descripcion">Si un compañero es sometido a un ataque que normalmente permite una tirada de salvación de reflejos para reducir el daño a la mitad, no recibe ningún daño con una tirada de salvación con éxito.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="178" model="main.especial">
+        <field type="CharField" name="nombre">Aumento de puntuación de caracteristica</field>
+        <field type="CharField" name="descripcion">El compañero animal añade +1 a una de sus características.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="179" model="main.especial">
+        <field type="CharField" name="nombre">Devoción</field>
+        <field type="CharField" name="descripcion">Un compañero animal obtiene un bonificador +4 de moral a sus tiradas de salvación de voluntad contra conjuros y efectos de encantamiento.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="180" model="main.especial">
+        <field type="CharField" name="nombre">Ataque múltiple</field>
+        <field type="CharField" name="descripcion">Un compañero animal obtiene Ataque múltiple como dote adicional si tiene tres o más ataques naturales y no posee ya esa dote. Si no cumple el requisito de tres o más ataques naturales, en su lugar el compañero animal obtiene un segundo ataque con una de sus armas naturales, aunque con un penalizador -5.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="181" model="main.especial">
+        <field type="CharField" name="nombre">Evasión mejorada del compañero animal</field>
+        <field type="CharField" name="descripcion">Cuando sea expuesto a un ataque que permita una tirada de salvación de reflejos para reducir el daño a la mitad, un compañero animal no recibe daño si consigue una tirada de salvación con éxito y sólo recibe la mitad de daño si la tirada de salvación falla.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="182" model="main.especial">
+        <field type="CharField" name="nombre">Visión en la penumbra</field>
+        <field type="CharField" name="descripcion">Tiene visión en la penumbra.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="183" model="main.especial">
+        <field type="CharField" name="nombre">Olfato</field>
+        <field type="CharField" name="descripcion">Tiene olfato.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="184" model="main.especial">
+        <field type="CharField" name="nombre">Aptitud especial: murciélago</field>
+        <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de volar.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="185" model="main.especial">
+        <field type="CharField" name="nombre">Aptitud especial: gato</field>
+        <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de sigilo.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="186" model="main.especial">
+        <field type="CharField" name="nombre">Aptitud especial: lagarto</field>
+        <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de trepar.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="187" model="main.especial">
+        <field type="CharField" name="nombre">Aptitud especial: mono</field>
+        <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de acrobacias.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="188" model="main.especial">
+        <field type="CharField" name="nombre">Aptitud especial: rata</field>
+        <field type="CharField" name="descripcion">El amo gana un bonificador +2 a las tiradas de salvación de fortaleza.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="189" model="main.especial">
+        <field type="CharField" name="nombre">Aptitud especial: cuervo</field>
+        <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de tasación.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="190" model="main.especial">
+        <field type="CharField" name="nombre">Aptitud especial: víbora</field>
+        <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de engañar.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="191" model="main.especial">
+        <field type="CharField" name="nombre">Aptitud especial: comadreja</field>
+        <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las tiradas de salvación de reflejos.</field>
+        <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
 <!--PODERES-->
     <!--PODERES DE BÁRBARO-->
     <object pk="1" model="main.poder">
@@ -7370,4 +7455,764 @@
         <field type="CharField" name="descripcion">Te rodeas con un velo de energía positiva, haciendo más difícil que las criaturas muertas vivientes te dañen. Cuando estás bajo los efectos de este conjuro, obtienes un bonificador +2 sagrado a la CA y un bonificador +2 sagrado a los tiros de salvación. Ambos bonificadores se aplican únicamente contra ataques o efectos creados por muertos vivientes. Puedes disipar este conjuro antes de su duración normal como acción rápida en tu turno para causar un número de puntos de daño por energía positiva igual a tu nivel a todas las criaturas muertas vivientes que estén a 1.5 metros de ti.</field>
     </object>
 <!--COMPAÑEROS ANIMALES-->
+    <!--COMPAÑEROS ANIMALES POR NIVEL-->
+    <object pk="1" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="dados_de_golpe">2</field>
+        <field type="IntegerField" name="puntos_de_golpe">13</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">0</field>
+        <field type="IntegerField" name="puntos_habilidad">2</field>
+        <field type="IntegerField" name="numero_dotes">1</field>
+        <field type="IntegerField" name="ca">0</field>
+        <field type="IntegerField" name="fuerza">0</field>
+        <field type="IntegerField" name="destreza">0</field>
+        <field type="IntegerField" name="numero_trucos">1</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+        </field>
+    </object>
+    <object pk="2" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="dados_de_golpe">3</field>
+        <field type="IntegerField" name="puntos_de_golpe">18</field>
+        <field type="IntegerField" name="ataque_base">2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="IntegerField" name="puntos_habilidad">3</field>
+        <field type="IntegerField" name="numero_dotes">2</field>
+        <field type="IntegerField" name="ca">0</field>
+        <field type="IntegerField" name="fuerza">0</field>
+        <field type="IntegerField" name="destreza">0</field>
+        <field type="IntegerField" name="numero_trucos">1</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+        </field>
+    </object>
+    <object pk="3" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="dados_de_golpe">3</field>
+        <field type="IntegerField" name="puntos_de_golpe">18</field>
+        <field type="IntegerField" name="ataque_base">2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="IntegerField" name="puntos_habilidad">3</field>
+        <field type="IntegerField" name="numero_dotes">2</field>
+        <field type="IntegerField" name="ca">2</field>
+        <field type="IntegerField" name="fuerza">1</field>
+        <field type="IntegerField" name="destreza">1</field>
+        <field type="IntegerField" name="numero_trucos">2</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+        </field>
+    </object>
+    <object pk="4" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="dados_de_golpe">4</field>
+        <field type="IntegerField" name="puntos_de_golpe">23</field>
+        <field type="IntegerField" name="ataque_base">3</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="IntegerField" name="puntos_habilidad">4</field>
+        <field type="IntegerField" name="numero_dotes">2</field>
+        <field type="IntegerField" name="ca">2</field>
+        <field type="IntegerField" name="fuerza">1</field>
+        <field type="IntegerField" name="destreza">1</field>
+        <field type="IntegerField" name="numero_trucos">2</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+        </field>
+    </object>
+    <object pk="5" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="dados_de_golpe">5</field>
+        <field type="IntegerField" name="puntos_de_golpe">28</field>
+        <field type="IntegerField" name="ataque_base">4</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="IntegerField" name="puntos_habilidad">5</field>
+        <field type="IntegerField" name="numero_dotes">3</field>
+        <field type="IntegerField" name="ca">2</field>
+        <field type="IntegerField" name="fuerza">1</field>
+        <field type="IntegerField" name="destreza">1</field>
+        <field type="IntegerField" name="numero_trucos">2</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+        </field>
+    </object>
+    <object pk="6" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="dados_de_golpe">6</field>
+        <field type="IntegerField" name="puntos_de_golpe">33</field>
+        <field type="IntegerField" name="ataque_base">4</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="IntegerField" name="puntos_habilidad">6</field>
+        <field type="IntegerField" name="numero_dotes">3</field>
+        <field type="IntegerField" name="ca">4</field>
+        <field type="IntegerField" name="fuerza">2</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="numero_trucos">3</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+        </field>
+    </object>
+    <object pk="7" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="IntegerField" name="dados_de_golpe">6</field>
+        <field type="IntegerField" name="puntos_de_golpe">33</field>
+        <field type="IntegerField" name="ataque_base">5</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="IntegerField" name="puntos_habilidad">6</field>
+        <field type="IntegerField" name="numero_dotes">3</field>
+        <field type="IntegerField" name="ca">4</field>
+        <field type="IntegerField" name="fuerza">2</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="numero_trucos">3</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+        </field>
+    </object>
+    <object pk="8" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="IntegerField" name="dados_de_golpe">7</field>
+        <field type="IntegerField" name="puntos_de_golpe">38</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="IntegerField" name="puntos_habilidad">7</field>
+        <field type="IntegerField" name="numero_dotes">4</field>
+        <field type="IntegerField" name="ca">4</field>
+        <field type="IntegerField" name="fuerza">2</field>
+        <field type="IntegerField" name="destreza">2</field>
+        <field type="IntegerField" name="numero_trucos">3</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+        </field>
+    </object>
+    <object pk="9" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="IntegerField" name="dados_de_golpe">8</field>
+        <field type="IntegerField" name="puntos_de_golpe">43</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="IntegerField" name="puntos_habilidad">8</field>
+        <field type="IntegerField" name="numero_dotes">4</field>
+        <field type="IntegerField" name="ca">6</field>
+        <field type="IntegerField" name="fuerza">3</field>
+        <field type="IntegerField" name="destreza">3</field>
+        <field type="IntegerField" name="numero_trucos">4</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="178"></object>
+        </field>
+    </object>
+    <object pk="10" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="IntegerField" name="dados_de_golpe">9</field>
+        <field type="IntegerField" name="puntos_de_golpe">48</field>
+        <field type="IntegerField" name="ataque_base">6</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="IntegerField" name="puntos_habilidad">9</field>
+        <field type="IntegerField" name="numero_dotes">5</field>
+        <field type="IntegerField" name="ca">6</field>
+        <field type="IntegerField" name="fuerza">3</field>
+        <field type="IntegerField" name="destreza">3</field>
+        <field type="IntegerField" name="numero_trucos">4</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+        </field>
+    </object>
+    <object pk="11" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="IntegerField" name="dados_de_golpe">9</field>
+        <field type="IntegerField" name="puntos_de_golpe">48</field>
+        <field type="IntegerField" name="ataque_base">7</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="IntegerField" name="puntos_habilidad">9</field>
+        <field type="IntegerField" name="numero_dotes">5</field>
+        <field type="IntegerField" name="ca">6</field>
+        <field type="IntegerField" name="fuerza">3</field>
+        <field type="IntegerField" name="destreza">3</field>
+        <field type="IntegerField" name="numero_trucos">4</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+        </field>
+    </object>
+    <object pk="12" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="IntegerField" name="dados_de_golpe">10</field>
+        <field type="IntegerField" name="puntos_de_golpe">53</field>
+        <field type="IntegerField" name="ataque_base">8</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">7</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="IntegerField" name="puntos_habilidad">10</field>
+        <field type="IntegerField" name="numero_dotes">5</field>
+        <field type="IntegerField" name="ca">8</field>
+        <field type="IntegerField" name="fuerza">4</field>
+        <field type="IntegerField" name="destreza">4</field>
+        <field type="IntegerField" name="numero_trucos">5</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+        </field>
+    </object>
+    <object pk="13" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="IntegerField" name="dados_de_golpe">11</field>
+        <field type="IntegerField" name="puntos_de_golpe">58</field>
+        <field type="IntegerField" name="ataque_base">9</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">7</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="IntegerField" name="puntos_habilidad">11</field>
+        <field type="IntegerField" name="numero_dotes">6</field>
+        <field type="IntegerField" name="ca">8</field>
+        <field type="IntegerField" name="fuerza">4</field>
+        <field type="IntegerField" name="destreza">4</field>
+        <field type="IntegerField" name="numero_trucos">5</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+        </field>
+    </object>
+    <object pk="14" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="IntegerField" name="dados_de_golpe">12</field>
+        <field type="IntegerField" name="puntos_de_golpe">63</field>
+        <field type="IntegerField" name="ataque_base">9</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="IntegerField" name="puntos_habilidad">12</field>
+        <field type="IntegerField" name="numero_dotes">6</field>
+        <field type="IntegerField" name="ca">8</field>
+        <field type="IntegerField" name="fuerza">4</field>
+        <field type="IntegerField" name="destreza">4</field>
+        <field type="IntegerField" name="numero_trucos">5</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="178"></object>
+        </field>
+    </object>
+    <object pk="15" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="IntegerField" name="dados_de_golpe">12</field>
+        <field type="IntegerField" name="puntos_de_golpe">63</field>
+        <field type="IntegerField" name="ataque_base">9</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="IntegerField" name="puntos_habilidad">12</field>
+        <field type="IntegerField" name="numero_dotes">6</field>
+        <field type="IntegerField" name="ca">10</field>
+        <field type="IntegerField" name="fuerza">5</field>
+        <field type="IntegerField" name="destreza">5</field>
+        <field type="IntegerField" name="numero_trucos">6</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+        </field>
+    </object>
+        <object pk="16" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="IntegerField" name="dados_de_golpe">13</field>
+        <field type="IntegerField" name="puntos_de_golpe">68</field>
+        <field type="IntegerField" name="ataque_base">10</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="IntegerField" name="puntos_habilidad">13</field>
+        <field type="IntegerField" name="numero_dotes">7</field>
+        <field type="IntegerField" name="ca">10</field>
+        <field type="IntegerField" name="fuerza">5</field>
+        <field type="IntegerField" name="destreza">5</field>
+        <field type="IntegerField" name="numero_trucos">6</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+        </field>
+    </object>
+    <object pk="17" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="IntegerField" name="dados_de_golpe">14</field>
+        <field type="IntegerField" name="puntos_de_golpe">73</field>
+        <field type="IntegerField" name="ataque_base">11</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="IntegerField" name="puntos_habilidad">14</field>
+        <field type="IntegerField" name="numero_dotes">7</field>
+        <field type="IntegerField" name="ca">10</field>
+        <field type="IntegerField" name="fuerza">5</field>
+        <field type="IntegerField" name="destreza">5</field>
+        <field type="IntegerField" name="numero_trucos">6</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+        </field>
+    </object>
+    <object pk="18" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="IntegerField" name="dados_de_golpe">15</field>
+        <field type="IntegerField" name="puntos_de_golpe">78</field>
+        <field type="IntegerField" name="ataque_base">11</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="IntegerField" name="puntos_habilidad">15</field>
+        <field type="IntegerField" name="numero_dotes">8</field>
+        <field type="IntegerField" name="ca">12</field>
+        <field type="IntegerField" name="fuerza">6</field>
+        <field type="IntegerField" name="destreza">6</field>
+        <field type="IntegerField" name="numero_trucos">7</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+        </field>
+    </object>
+    <object pk="19" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="IntegerField" name="dados_de_golpe">15</field>
+        <field type="IntegerField" name="puntos_de_golpe">78</field>
+        <field type="IntegerField" name="ataque_base">11</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="IntegerField" name="puntos_habilidad">15</field>
+        <field type="IntegerField" name="numero_dotes">8</field>
+        <field type="IntegerField" name="ca">12</field>
+        <field type="IntegerField" name="fuerza">6</field>
+        <field type="IntegerField" name="destreza">6</field>
+        <field type="IntegerField" name="numero_trucos">7</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+        </field>
+    </object>
+    <object pk="20" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="IntegerField" name="dados_de_golpe">16</field>
+        <field type="IntegerField" name="puntos_de_golpe">83</field>
+        <field type="IntegerField" name="ataque_base">12</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">10</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="IntegerField" name="puntos_habilidad">16</field>
+        <field type="IntegerField" name="numero_dotes">8</field>
+        <field type="IntegerField" name="ca">12</field>
+        <field type="IntegerField" name="fuerza">6</field>
+        <field type="IntegerField" name="destreza">6</field>
+        <field type="IntegerField" name="numero_trucos">7</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+            <object pk="178"></object>
+        </field>
+    </object>
+    <!--COMPAÑEROS ANIMALES POR TIPO-->
+    <object pk="21" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Ave (águila/halcón/buho)</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">3 metros, volando 24 metros (regular)</field>
+        <field type="IntegerField" name="ca">1</field>
+        <field type="CharField" name="ataque">Mordisco (1d4), 2 garras (1d4)</field>
+        <field type="IntegerField" name="fuerza">10</field>
+        <field type="IntegerField" name="destreza">15</field>
+        <field type="IntegerField" name="constitucion">12</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">14</field>
+        <field type="IntegerField" name="carisma">6</field>
+        <field type="IntegerField" name="nivel_cambio">4</field>
+        <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">22</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+        </field>
+    </object>
+    <object pk="22" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Ave (águila/halcón/buho) avanzada</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">3 metros, volando 24 metros (regular)</field>
+        <field type="IntegerField" name="ca">1</field>
+        <field type="CharField" name="ataque">Mordisco (1d4), 2 garras (1d4)</field>
+        <field type="IntegerField" name="fuerza">12</field>
+        <field type="IntegerField" name="destreza">15</field>
+        <field type="IntegerField" name="constitucion">14</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">14</field>
+        <field type="IntegerField" name="carisma">6</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+        </field>
+    </object>
+    <object pk="23" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Caballo</field>
+        <field type="CharField" name="tamano">Grande</field>
+        <field type="CharField" name="velocidad">15 metros</field>
+        <field type="IntegerField" name="ca">4</field>
+        <field type="CharField" name="ataque">Mordisco (1d4), 2 pezuñas (1d6)</field>
+        <field type="IntegerField" name="fuerza">16</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field type="IntegerField" name="constitucion">15</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">6</field>
+        <field type="IntegerField" name="nivel_cambio">4</field>
+        <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">24</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="24" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Caballo avanzado</field>
+        <field type="CharField" name="tamano">Grande</field>
+        <field type="CharField" name="velocidad">15 metros</field>
+        <field type="IntegerField" name="ca">4</field>
+        <field type="CharField" name="ataque">Mordisco (1d4), 2 pezuñas (1d6)</field>
+        <field type="IntegerField" name="fuerza">18</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field type="IntegerField" name="constitucion">17</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">6</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="25" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Camello</field>
+        <field type="CharField" name="tamano">Grande</field>
+        <field type="CharField" name="velocidad">15 metros</field>
+        <field type="IntegerField" name="ca">1</field>
+        <field type="CharField" name="ataque">Mordisco (1d4) o escupitajo (ataque de toque a distancia, el blanco queda indispuesto durante 1d4 asaltos, alcance 3 mertros)</field>
+        <field type="IntegerField" name="fuerza">18</field>
+        <field type="IntegerField" name="destreza">16</field>
+        <field type="IntegerField" name="constitucion">14</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">11</field>
+        <field type="IntegerField" name="carisma">4</field>
+        <field type="IntegerField" name="nivel_cambio">4</field>
+        <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">26</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="26" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Camello</field>
+        <field type="CharField" name="tamano">Grande</field>
+        <field type="CharField" name="velocidad">15 metros</field>
+        <field type="IntegerField" name="ca">1</field>
+        <field type="CharField" name="ataque">Mordisco (1d4) o escupitajo (ataque de toque a distancia, el blanco queda indispuesto durante 1d4 asaltos, alcance 3 mertros)</field>
+        <field type="IntegerField" name="fuerza">20</field>
+        <field type="IntegerField" name="destreza">16</field>
+        <field type="IntegerField" name="constitucion">16</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">11</field>
+        <field type="IntegerField" name="carisma">4</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="27" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Lobo</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">15 metros</field>
+        <field type="IntegerField" name="ca">2</field>
+        <field type="CharField" name="ataque">Mordisco (1d6 más derribo)</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field type="IntegerField" name="destreza">15</field>
+        <field type="IntegerField" name="constitucion">15</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">6</field>
+        <field type="IntegerField" name="nivel_cambio">7</field>
+        <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">28</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="28" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Lobo avanzado</field>
+        <field type="CharField" name="tamano">Grande</field>
+        <field type="CharField" name="velocidad">15 metros</field>
+        <field type="IntegerField" name="ca">2</field>
+        <field type="CharField" name="ataque">Mordisco (1d8 más derribo)</field>
+        <field type="IntegerField" name="fuerza">21</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field type="IntegerField" name="constitucion">19</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">6</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="29" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Oso</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">12 metros</field>
+        <field type="IntegerField" name="ca">2</field>
+        <field type="CharField" name="ataque">Mordisco (1d4), 2 garras (1d3)</field>
+        <field type="IntegerField" name="fuerza">15</field>
+        <field type="IntegerField" name="destreza">15</field>
+        <field type="IntegerField" name="constitucion">13</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">6</field>
+        <field type="IntegerField" name="nivel_cambio">4</field>
+        <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">30</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="30" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Oso avanzado</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">12 metros</field>
+        <field type="IntegerField" name="ca">2</field>
+        <field type="CharField" name="ataque">Mordisco (1d6), 2 garras (1d4)</field>
+        <field type="IntegerField" name="fuerza">19</field>
+        <field type="IntegerField" name="destreza">13</field>
+        <field type="IntegerField" name="constitucion">15</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">6</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="31" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Perro</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">12 metros</field>
+        <field type="IntegerField" name="ca">2</field>
+        <field type="CharField" name="ataque">Mordisco (1d4)</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field type="IntegerField" name="destreza">17</field>
+        <field type="IntegerField" name="constitucion">15</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">6</field>
+        <field type="IntegerField" name="nivel_cambio">4</field>
+        <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">32</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="32" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Perro avanzado</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">12 metros</field>
+        <field type="IntegerField" name="ca">2</field>
+        <field type="CharField" name="ataque">Mordisco (1d6)</field>
+        <field type="IntegerField" name="fuerza">17</field>
+        <field type="IntegerField" name="destreza">15</field>
+        <field type="IntegerField" name="constitucion">17</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">6</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="33" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Simio</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros, trepando 9 metros</field>
+        <field type="IntegerField" name="ca">1</field>
+        <field type="CharField" name="ataque">Mordisco (1d4), 2 garras (1d4)</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field type="IntegerField" name="destreza">17</field>
+        <field type="IntegerField" name="constitucion">10</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">7</field>
+        <field type="IntegerField" name="nivel_cambio">4</field>
+        <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">34</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <object pk="34" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Simio avanzado</field>
+        <field type="CharField" name="tamano">Grande</field>
+        <field type="CharField" name="velocidad">9 metros, trepando 9 metros</field>
+        <field type="IntegerField" name="ca">2</field>
+        <field type="CharField" name="ataque">Mordisco (1d6), 2 garras (1d6)</field>
+        <field type="IntegerField" name="fuerza">21</field>
+        <field type="IntegerField" name="destreza">15</field>
+        <field type="IntegerField" name="constitucion">14</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">7</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
+    </object>
+    <!--FAMILIARES-->
+    <object pk="35" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Murciélago</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">3 metros, volando 24 metros (regular)</field>
+        <field type="BooleanField" name="es_familiar">True</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="184"></object>
+        </field>
+    </object>
+    <object pk="36" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Gato</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">9 metros, trepando 9 metros</field>
+        <field type="BooleanField" name="es_familiar">True</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="185"></object>
+        </field>
+    </object>
+    <object pk="37" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Lagarto</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">3 metros, trepando 9 metros</field>
+        <field type="BooleanField" name="es_familiar">True</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="186"></object>
+        </field>
+    </object>
+    <object pk="38" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Mono</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">9 metros, trepando 9 metros</field>
+        <field type="BooleanField" name="es_familiar">True</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="187"></object>
+        </field>
+    </object>
+    <object pk="39" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Rata</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">3 metros, trepando 9 metros</field>
+        <field type="BooleanField" name="es_familiar">True</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="188"></object>
+        </field>
+    </object>
+    <object pk="40" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Cuervo</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">3 metros, volando 24 metros (regular)</field>
+        <field type="BooleanField" name="es_familiar">True</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="189"></object>
+        </field>
+    </object>
+    <object pk="41" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Víbora</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">3 metros, trepando 9 metros</field>
+        <field type="BooleanField" name="es_familiar">True</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="190"></object>
+        </field>
+    </object>
+    <object pk="42" model="main.companeroanimal">
+        <field type="CharField" name="tipo">Comadreja</field>
+        <field type="CharField" name="tamano">Pequeño</field>
+        <field type="CharField" name="velocidad">9 metros</field>
+        <field type="BooleanField" name="es_familiar">True</field>
+        <field to="main.especial" name="especial" rel="ManyToManyRel">
+            <object pk="191"></object>
+        </field>
+    </object>
 </django-objects>
