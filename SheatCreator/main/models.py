@@ -388,7 +388,7 @@ class Personaje(models.Model):
 
     class Armadura(Objeto):
         bonif_arm = models.IntegerField(verbose_name='Bonificación armadura')
-        bonif_max_des = models.IntegerField(verbose_name='Bonificación máximo destreza')
+        bonif_max_des = models.IntegerField(verbose_name='Bonificación máximo destreza', null=True)
         penaliz_arm = models.TextField(verbose_name='Penalizador armadura')
         fallo_conj_arc = models.TextField(verbose_name='Fallo conjuro arcano')
         velocidad_9m = models.TextField(verbose_name='Velocidad 9m')

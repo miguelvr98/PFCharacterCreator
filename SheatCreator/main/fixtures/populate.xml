@@ -2590,7 +2590,7 @@
     </object>
     <object pk="122" model="main.especial">
         <field type="CharField" name="nombre">Dotes adicionales del monje</field>
-        <field type="CharField" name="descripcion">A nivel 1, nivel 2, y cada 4 niveles a partir de entonces, un monje puede seleccionar una dote adicional. Esa dote debe ser escogida de la siguiente lista: Usar arma improvisada, Reflejos de combate, Desviar flechas, Esquiva, Presa mejorada, Estilo del escorpión y Lanzar cualquier cosa. A nivel 6, las siguientes dotes se añaden a la lista: Puño del gorgón, Embestida mejorada, Desarme mejorado, Finta mejorada, Derribo mejorado y Movilidad. A nivel 10, las siguientes dotes son añadidas a la lista: Crítico mejorado, Ira de la medusa, Atrapar flechas y Ataque elástico. Un monje no necesita tener ninguna de las condiciones previas requeridas normalmente para esas dotes para poder seleccionarlas.</field>
+        <field type="CharField" name="descripcion">A nivel 1, nivel 2, y cada 4 niveles a partir de entonces, un monje puede seleccionar una dote adicional. Esa dote debe ser escogida de la siguiente lista: Usar arma improvisada, Reflejos de combate, Desviar flechas, Esquiva, Presa mejorada, Estilo del escorpión y Lanzar cualquier cosa. A nivel 6, las siguientes dotes se añaden a la lista: Puño del gorgón, Embestida mejorada, Desarme mejorado, Finta mejorada, Derribo mejorado y Movilidad. A nivel 10, las siguientes dotes son añadidas a la lista: Ira de la medusa, Atrapar flechas y Ataque elástico. Un monje no necesita tener ninguna de las condiciones previas requeridas normalmente para esas dotes para poder seleccionarlas.</field>
     </object>
     <object pk="123" model="main.especial">
         <field type="CharField" name="nombre">Puñetazo aturdidor</field>
@@ -5693,7 +5693,7 @@
         <field type="CharField" name="velocidad_9m">6</field>
         <field type="CharField" name="velocidad_6m">4.5</field>
     </object>
-    </object><object pk="61" model="main.objeto">
+    <object pk="61" model="main.objeto">
         <field type="CharField" name="clase">Armadura pesada</field>
         <field type="CharField" name="nombre">Completa</field>
         <field type="FloatField" name="precio">1500</field>
@@ -5707,7 +5707,7 @@
         <field type="CharField" name="velocidad_9m">6</field>
         <field type="CharField" name="velocidad_6m">4.5</field>
     </object>
-    </object><object pk="62" model="main.objeto">
+    <object pk="62" model="main.objeto">
         <field type="CharField" name="clase">Escudo</field>
         <field type="CharField" name="nombre">Rodela</field>
         <field type="FloatField" name="precio">5</field>
@@ -5718,7 +5718,7 @@
         <field type="CharField" name="penaliz_arm">-1</field>
         <field type="CharField" name="fallo_conj_arc">5</field>
     </object>
-    </object><object pk="63" model="main.objeto">
+    <object pk="63" model="main.objeto">
         <field type="CharField" name="clase">Escudo</field>
         <field type="CharField" name="nombre">Escudo ligero de madera</field>
         <field type="FloatField" name="precio">3</field>
@@ -5729,7 +5729,7 @@
         <field type="CharField" name="penaliz_arm">-1</field>
         <field type="CharField" name="fallo_conj_arc">5</field>
     </object>
-    </object><object pk="64" model="main.objeto">
+    <object pk="64" model="main.objeto">
         <field type="CharField" name="clase">Escudo</field>
         <field type="CharField" name="nombre">Escudo ligero de acero</field>
         <field type="FloatField" name="precio">9</field>
@@ -5740,7 +5740,7 @@
         <field type="CharField" name="penaliz_arm">-1</field>
         <field type="CharField" name="fallo_conj_arc">5</field>
     </object>
-    </object><object pk="65" model="main.objeto">
+    <object pk="65" model="main.objeto">
         <field type="CharField" name="clase">Escudo</field>
         <field type="CharField" name="nombre">Escudo pesado de madera</field>
         <field type="FloatField" name="precio">7</field>
@@ -5751,7 +5751,7 @@
         <field type="CharField" name="penaliz_arm">-2</field>
         <field type="CharField" name="fallo_conj_arc">15</field>
     </object>
-    </object><object pk="66" model="main.objeto">
+    <object pk="66" model="main.objeto">
         <field type="CharField" name="clase">Escudo</field>
         <field type="CharField" name="nombre">Escudo pesado de acero</field>
         <field type="FloatField" name="precio">20</field>
@@ -5762,7 +5762,7 @@
         <field type="CharField" name="penaliz_arm">-2</field>
         <field type="CharField" name="fallo_conj_arc">15</field>
     </object>
-    </object><object pk="67" model="main.objeto">
+    <object pk="67" model="main.objeto">
         <field type="CharField" name="clase">Escudo</field>
         <field type="CharField" name="nombre">Escudo pavés</field>
         <field type="FloatField" name="precio">30</field>
@@ -5775,12 +5775,13 @@
         <field type="CharField" name="fallo_conj_arc">50</field>
     </object>
 <!--CONJUROS--> <!--FALTA AÑADIR LAS CLASES-->
-    <!--CONJUROS DE BARDO Nº0-->
+    <!--CONJUROS DE BARDO Nº0--> <!--REVISAR LOS NIVELES DE LOS CONJUROS, ALGUNAS CLASES PIDEN NIVELES DISTINTOS-->
     <object pk="1" model="main.conjuro">
         <field type="CharField" name="nombre">Abrir/Cerrar</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (una llave de bronce)</field>
         <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
         <field type="CharField" name="objetivo">Objeto con un peso máximo de 13.6 kg o un portal que pueda ser abierto o cerrado)</field>
         <field type="CharField" name="duracion">Instantáneo</field>
@@ -5789,7 +5790,20 @@
         <field type="CharField" name="descripcion">Puedes abrir o cerrar puertas, cofres, cajas, ventanas u otros contenedores. Si algo se resiste a esta actividad (algo bloquea una puerta), el conjuro falla.</field>
     </object>
     <object pk="2" model="main.conjuro">
-        <field type="CharField" name="nombre">Aliado involuntario<field>
+        <field type="CharField" name="nombre">Aliado involuntario</field>
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="CharField" name="escuela">Encantamiento (enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Una criatura viva</field>
+        <field type="CharField" name="duracion">1 asalto</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Confundes la mente del objetivo. El objetivo tiene dificultad para distinguir a sus aliados de los enemigos durante un corto periodo de tiempo. El objetivo se considera aliado al flanquear. El objetivo no toma acciones hostiles contra sus aliados.</field>
+    </object>
+    <object pk="2" model="main.conjuro">
+        <field type="CharField" name="nombre">Aliado involuntario</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Encantamiento (enajenador)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5802,7 +5816,7 @@
         <field type="CharField" name="descripcion">Confundes la mente del objetivo. El objetivo tiene dificultad para distinguir a sus aliados de los enemigos durante un corto periodo de tiempo. El objetivo se considera aliado al flanquear. El objetivo no toma acciones hostiles contra sus aliados.</field>
     </object>
     <object pk="3" model="main.conjuro">
-        <field type="CharField" name="nombre">Atontar<field>
+        <field type="CharField" name="nombre">Atontar</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Encantamiento (enajenador)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5815,7 +5829,7 @@
         <field type="CharField" name="descripcion">Este conjuro nubla la mente del objetivo impidiendole llevar a cabo acciones. El receptor atontado no se considera aturdido. Después de que una criatura sea víctima de este conjuro, será inmune a el durante 1 minuto.</field>
     </object>
     <object pk="4" model="main.conjuro">
-        <field type="CharField" name="nombre">Chispa<field>
+        <field type="CharField" name="nombre">Chispa</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Evocación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5828,7 +5842,7 @@
         <field type="CharField" name="descripcion">Puedes hacer que un objeto minúsculo desatendido prenda en fuego. Esto funciona como si estuvieras usando yesca y acero excepto en que puedes usar chispa en cualquier clase de clima y requiere de mucho menos tiempo para prender fuego al objeto.</field>
     </object>
     <object pk="5" model="main.conjuro">
-        <field type="CharField" name="nombre">Conocer la dirección<field>
+        <field type="CharField" name="nombre">Conocer la dirección</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5841,7 +5855,7 @@
         <field type="CharField" name="descripcion">Cuando lanzas este conjuro puedes saber al instante la dirección del norte. Este conjuro es eficaz en cualquier entorno en el que el "norte" exista, pero no funciona en un lugar extraplanar.</field>
     </object>
     <object pk="6" model="main.conjuro">
-        <field type="CharField" name="nombre">Convocar instrumento<field>
+        <field type="CharField" name="nombre">Convocar instrumento</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Conjuración</field>
         <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
@@ -5855,7 +5869,7 @@
         <field type="CharField" name="descripcion">Este conjuro invoca un instrumento musical del mano a tu elección. Aparece en tus manos o en tus pies (a tu elección). El instrumento es típico de su tipo. Solo tu puedes utilizar el instrumento y no puede ser un instrumento demasiado grande que requiera de usar las dos manos para tocarlo. El instrumento desaparece al terminar la duración del conjuro.</field>
     </object>
     <object pk="7" model="main.conjuro">
-        <field type="CharField" name="nombre">Cribar<field>
+        <field type="CharField" name="nombre">Cribar</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
@@ -5868,7 +5882,7 @@
         <field type="CharField" name="descripcion">Examinas un área dentro del alcance como si estuvieras usando la habilidad percepción. Realiza una prueba de percepción con un penalizador de -5. A la tirada no se le aplica penalizador por la distancia. El resultado sera la tirada contra la CD de los detalles ocultos (puertas secretas, trampas, tesoros ocultos). Solo puedes encontrar detalles que puedan ser percibidos por la vista o el tacto. Cribar solo detecta objetos y rasgo del terreno, no criaturas.</field>
     </object>
     <object pk="8" model="main.conjuro">
-        <field type="CharField" name="nombre">Cuchichear mensaje<field>
+        <field type="CharField" name="nombre">Cuchichear mensaje</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5881,7 +5895,7 @@
         <field type="CharField" name="descripcion">Puedes susurrar mensajes y recibir respuesta. Los que estén cerca pueden oír los mensajes con una prueba de percepción CD 25. Debes apuntar con el dedo a cada criatura que quieres que reciba el mensaje. Cuando susurras el mensaje, es audible para todas los objetivos. Los obstáculos bloquean el conjuro. Los objetivos que reciben el mensaje pueden susurrar una respuesta de la misma forma que tú.</field>
     </object>
     <object pk="8" model="main.conjuro">
-        <field type="CharField" name="nombre">Detectar magia<field>
+        <field type="CharField" name="nombre">Detectar magia</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5894,7 +5908,7 @@
         <field type="CharField" name="descripcion">Detectas áuras mágicas. La cantidad de información revelada depende del tiempo que lleve el conjuro usándose.</field>
     </object>
     <object pk="9" model="main.conjuro">
-        <field type="CharField" name="nombre">Leer magia<field>
+        <field type="CharField" name="nombre">Leer magia</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5907,7 +5921,7 @@
         <field type="CharField" name="descripcion">Puedes descifrar inscripciones mágicas en objetos (libros, pergaminos, armas, etc). Leer magia no suele invocar la magia contenida en la escritura, aunque puede hacerlo en el caso de que sea una maldición o una trampa. Una vez que el conjuro es lanzado y has leido la inscripción mágica, eres capaz de leer esta inscripción particular sin recurrir al conjuro.</field>
     </object>
     <object pk="10" model="main.conjuro">
-        <field type="CharField" name="nombre">Llamarada<field>
+        <field type="CharField" name="nombre">Llamarada</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Evocación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5920,7 +5934,7 @@
         <field type="CharField" name="descripcion">Creas una explosión de luz brillante. Si haces que el efecto se produzca justo delante de una única criatura, esta quedará cegada durante 1 minuto a no ser que tenga éxito en la salvación de fortaleza.</field>
     </object>
     <object pk="11" model="main.conjuro">
-        <field type="CharField" name="nombre">Luces danzantes<field>
+        <field type="CharField" name="nombre">Luces danzantes</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Evocación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5933,7 +5947,7 @@
         <field type="CharField" name="descripcion">Creas hasta cuatro luces que tienen que permanecer a 1.5 metros entre ellas. Puedes mover estas luces como desees y pueden desplazarse 30 metros por asalto. Si lanzas Luces danzantes cuando estaba ya activo, el primer Luces danzantes se disipará.</field>
     </object>
     <object pk="12" model="main.conjuro">
-        <field type="CharField" name="nombre">Luz<field>
+        <field type="CharField" name="nombre">Luz</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Evocación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5946,7 +5960,7 @@
         <field type="CharField" name="descripcion">Este conjuro hace que el objeto tocado brille como una antorcha iluminando en un radio de 6 metros, e incrementando el nivel de luz en un paso en otros 6 metros adicionales a su paso. Solo puedes tener un conjuro de Luz activo, en caso de que lances otro cuando ya hay uno activo, el primero se disipará.</field>
     </object>
     <object pk="13" model="main.conjuro">
-        <field type="CharField" name="nombre">Mano del mago<field>
+        <field type="CharField" name="nombre">Mano del mago</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5959,7 +5973,7 @@
         <field type="CharField" name="descripcion">Señalas el objeto con tu dedo y el conjuro te permite moverlo hasta 4.5 metros en cualquier dirección. El efecto termina si se pierde la concetración o el objeto se sale del alcance.</field>
     </object>
     <object pk="14" model="main.conjuro">
-        <field type="CharField" name="nombre">Prestidigitación<field>
+        <field type="CharField" name="nombre">Prestidigitación</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Universalista</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5971,7 +5985,7 @@
         <field type="CharField" name="descripcion">Puedes llevar a cabo efectos mágicos sencillos. Algunos ejemplos son elevar levemente un objeto de 0.45 kg, colorear, limpiar o manchas objetos, enfriar, calentar o dar sabor a 0.45 kg de materia inerte, etc. Puedes crear pequeños objetos que parecen toscos y artificiales haciendolos inutil para cualquier tarea.</field>
     </object>
     <object pk="15" model="main.conjuro">
-        <field type="CharField" name="nombre">Remendar<field>
+        <field type="CharField" name="nombre">Remendar</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
@@ -5983,7 +5997,7 @@
         <field type="CharField" name="descripcion">Este conjuro repara objetos dañados, restaurando 1d4 puntos de golpe al objeto. Si el objeto estuviera roto, esta condición se eliminaría cuando recuperara la mitad de sus puntos de golpe. Todas las piezas de un objeto deben estar presentes para que el conjuro funcione. Puedes reparar objetos mágicos destruidos con este conjuro pero no le devolverá sus propiedades mágicas.</field>
     </object>
     <object pk="16" model="main.conjuro">
-        <field type="CharField" name="nombre">Resistencia<field>
+        <field type="CharField" name="nombre">Resistencia</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -5995,7 +6009,7 @@
         <field type="CharField" name="descripcion">El objetivo obtiene un bonificador +1 en sus tiradas de salvación.</field>
     </object>
     <object pk="17" model="main.conjuro">
-        <field type="CharField" name="nombre">Sonido fantasma<field>
+        <field type="CharField" name="nombre">Sonido fantasma</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Ilusión</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6009,7 +6023,7 @@
     </object>
     <!--CONJUROS BARDO Nº1-->
     <object pk="18" model="main.conjuro">
-        <field type="CharField" name="nombre">Alarma<field>
+        <field type="CharField" name="nombre">Alarma</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Abjuración</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6022,7 +6036,7 @@
         <field type="CharField" name="descripcion">Creas un área en la cuál cada vez que entre una criatura se activará. Al activarse se puede recibir de forma mental, escuchando un "ping" en tu cabeza siempre que permanezcas a 1.5 km de distancia. O puede ser una alarma audible con la que sonará el sonido de una campanilla a 18 metros en el área. Las criaturas astrales no activan la alarma.</field>
     </object>
     <object pk="19" model="main.conjuro">
-        <field type="CharField" name="nombre">Alineamiento indetectable<field>
+        <field type="CharField" name="nombre">Alineamiento indetectable</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Abjuración</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6035,7 +6049,7 @@
         <field type="CharField" name="descripcion">Un conjuro de alineamiento indetectable oculta el alineamiento de un objeto o una criatura de todas las formas de adivinación.</field>
     </object>
     <object pk="20" model="main.conjuro">
-        <field type="CharField" name="nombre">Alteración vocal<field>
+        <field type="CharField" name="nombre">Alteración vocal</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6048,7 +6062,7 @@
         <field type="CharField" name="descripcion">Alteras la voz del objetivo para que sea otra cosa. Por ejemplo, podrías hacer que la voz del objetivo se volviera aguda, ronca o nasal, o cambiar su acento a un acento con el que estés familiarizado. Si el conjuro se usa como parte de un disfraz, concede al personaje un bonificador +10 a la prueba de D¡disfrazarse cuando trate de engañar a alguien que le escucha.</field>
     </object>
     <object pk="21" model="main.conjuro">
-        <field type="CharField" name="nombre">Arreglar<field>
+        <field type="CharField" name="nombre">Arreglar</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6061,7 +6075,7 @@
         <field type="CharField" name="descripcion">Cuando lanzas este conjuro, una fuerza espectral une de nuevo un objeto roto, eliminando la condición de roto durante un breve tiempo. Mientras esté bajo los efectos de este conjuro, un objeto con la condición de roto, no sufre efectos adversos debidos a esa condición y se considera que no está roto. El objeto no recupera puntos de golpe y el daño todavía puede destruirlo.</field>
     </object>
     <object pk="22" model="main.conjuro">
-        <field type="CharField" name="nombre">Aura mágica<field>
+        <field type="CharField" name="nombre">Aura mágica</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Ilusión (engaño)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6074,7 +6088,7 @@
         <field type="CharField" name="descripcion">Alteras el aura de un objeto para que aparezca ante los sortilegios de detección (y conjuros con capacidad similares) como si no fuese mágico, como si fuese un objeto mágico del tipo que especifíques o como si estuviese bajo los efectos de un conjuro que especifíques. Si el objeto portador del aura mágica se convierte en objetivo de un conjuro de identificar (o se examina de forma parecida), quien lo esté examinando podrá r econocer que el aura es falsa y detectar sus verdaderas cualídades teniendo éxito en una tirada de salvación de Voluntad. De lo contrario ceerá que el aura es verdadera y no averiguará la auténtica naturaleza de la magia por mucho que lo intente. Si el aura del objeto custodiado es excepcionalmente poderosa (como por ejemplo un artefacto) no funcionará.</field>
     </object>
     <object pk="23" model="main.conjuro">
-        <field type="CharField" name="nombre">Caída de pluma<field>
+        <field type="CharField" name="nombre">Caída de pluma</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción inmediata</field>
@@ -6087,7 +6101,7 @@
         <field type="CharField" name="descripcion">Los objetivos afectados caen más lento, a unos 18 metros por asalto y no reciben daño al aterrizar bajo los efectos de este conjuro. Cuando el conjuro termina, vuelven a tener una velocidad de caída normal.</field>
     </object>
     <object pk="24" model="main.conjuro">
-        <field type="CharField" name="nombre">Causar miedo<field>
+        <field type="CharField" name="nombre">Causar miedo</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Nigromancia (miedo, enajenador)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6100,7 +6114,7 @@
         <field type="CharField" name="descripcion">La criatura afectada queda asustada. Si el sujeto tiene éxito en la tirada de salvación de voluntad, queda estremecida durante 1 asalto. Las criaturas con 6 o más dados de golpe son inmunes a este efecto. Causar miedo contrarresta y disipa el conjuro quitar el miedo.</field>
     </object>
     <object pk="25" model="main.conjuro">
-        <field type="CharField" name="nombre">Comprensión idiomática<field>
+        <field type="CharField" name="nombre">Comprensión idiomática</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6113,7 +6127,7 @@
         <field type="CharField" name="descripcion">Puedes comprender las palabras dichas por criaturas o leer mensajes que de otro modo resultarían incomprensibles. La aptitud para leer no proporciona necesariamente conocimientos sobre el material, sólo su significado literal. El conjuro te permite comprender o leer un idioma desconocido, no hablarlo ni escribirlo.</field>
     </object>
     <object pk="26" model="main.conjuro">
-        <field type="CharField" name="nombre">Confusión menor<field>
+        <field type="CharField" name="nombre">Confusión menor</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6126,7 +6140,7 @@
         <field type="CharField" name="descripcion">Este conjuro hace que una criatura quede confusa durante 1 asalto.</field>
     </object>
     <object pk="27" model="main.conjuro">
-        <field type="CharField" name="nombre">Curar heridas leves<field>
+        <field type="CharField" name="nombre">Curar heridas leves</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Conjuración (curación)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6139,7 +6153,7 @@
         <field type="CharField" name="descripcion">Poniendo tus manos sobre una criatura viva, canalizas energía positiva que cura 1d8 puntos de daño +1 punto por nivel de lanzador (máximo +5). Ya que los muertos vivientes se alimentan con energía negativa, este conjuro les hace daño en lugar de curar sus heridas. Una criatura muerta viviente puede aplicar la resistencia a conjuros y puede intentar una tirada de salvación de Voluntad para recibir la mitad del daño.</field>
     </object>
     <object pk="28" model="main.conjuro">
-        <field type="CharField" name="nombre">Desvanecer<field>
+        <field type="CharField" name="nombre">Desvanecer</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Ilusión (engaño)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6152,7 +6166,7 @@
         <field type="CharField" name="descripcion">Este conjuro funciona como invisibilidad, excepto en que el efecto sólo dura 1 asalto por nivel de lanzador (hasta un máximo de 5 asaltos). Como con invisibilidad, el conjuro finaliza si el objetivo ataca a cualquier criatura.</field>
     </object>
     <object pk="29" model="main.conjuro">
-        <field type="CharField" name="nombre">Disfrazarse<field>
+        <field type="CharField" name="nombre">Disfrazarse</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Ilusión (engaño)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6165,7 +6179,7 @@
         <field type="CharField" name="descripcion">Haces que tu aspecto, incluyendo ropas, armadura, armas y equipo, tenga un aspecto diferente. No puedes cambiar tu tipo de criatura (aunque puedes aparentar otro subtipo). Por lo demás, la extensión del cambio aparente depende de ti. Podrías añadir o esconder un rasgo menor para parecer como una persona o de un género totalmente diferente. El conjuro no proporciona las aptitudes o las peculiaridades de la forma elegida ni tampoco altera las propiedades táctiles (toque) o audibles (sonido) de tu equipo. Si uesas este conjuro para crear un disfraz, obtendrás un bonificador +10 a la prueba de disfraz. Una criatura que interactúe con el engaño recibe una salvación de voluntad para reconocerla como una ilusión.</field>
     </object>
     <object pk="30" model="main.conjuro">
-        <field type="CharField" name="nombre">Dormir<field>
+        <field type="CharField" name="nombre">Dormir</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
@@ -6178,7 +6192,7 @@
         <field type="CharField" name="descripcion">Dormir induce un sueño mágico a criaturas por un valor de 4 DG. Los receptores con menos DG serán los primeros afectados. Cuando haya varios con los mismos DG, los que estén más cerca del punto de origen del conjuro serán los primeros que sufran el efecto. Las criaturas dormidas estarán indefensas. Abofetear o herir a una de ellas bastará para despertarla, pero el ruido normal no será suficiente. Despertar a una criatura se considera acción estándar (una de las aplicaciones de la acción de prestar ayuda). Este conjuro no puede tomar como objetivo a criaturas inconscientes, constructos ni muertos vivientes.</field>
     </object>
     <object pk="31" model="main.conjuro">
-        <field type="CharField" name="nombre">Grasa<field>
+        <field type="CharField" name="nombre">Grasa</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Conjuración (creación)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6191,7 +6205,7 @@
         <field type="CharField" name="descripcion">Un conjuro de grasa cubre una superficie sólida con una capa de grasa resbaladiza. Cualquier criatura en el área en el momento de lanzar el conjuro debe superar una salvación de reflejos o caer. Una criatura puede caminar dentro o a través de la zona engrasada a la mitad de la velocidad normal con una prueba de acrobacias (CD 10). Un fallo indica que no puede moverse ese asalto (y debe hacer otra salvación de reflejos o caer), mientras que un fallo por 5 o más significa que se cae. Las criaturas que no se mueven en su turno no necesitan hacer esta prueba y no se les considera desprevenidas. El conjuro también puede usarse para crear un baño de grasa sobre un objeto. Los objetos materiales que no estén en uso siempre se ven afectados por este conjuro, mientras que un objeto portado o empleado por una criatura requiere que su portador haga una salvación de reflejos para evitar el efecto. Si la tirada de salvación inicial falla, la criatura deja caer inmediatamente el objeto. Cada asalto que la criatura trate de agarrar o usar el objeto engrasado, debe superar una nueva salvación. Una criatura que lleve una armadura o ropa engrasada obtiene un bonificador +10 de circunstancia a las pruebas de escapismo, a sus tiradas de maniobras de combate para escapar de una presa y a su DMC para evitar ser apresado.</field>
     </object>
     <object pk="32" model="main.conjuro">
-        <field type="CharField" name="nombre">Habilidad prestada<field>
+        <field type="CharField" name="nombre">Habilidad prestada</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6204,7 +6218,7 @@
         <field type="CharField" name="descripcion">Tomas prestada una de las habilidades conocidas del objetivo. Después de tocarlo, puedes hacer una única prueba con la habilidad escogida usando los rangos de habilidad del objetivo, pero modificada por tu propio modificador de característica. Si tardas más en hacer la prueba que la duración del conjuro, o si la prueba requiere más tiempo, entonces el conjuro falla y debes usar tus propios rangos de habilidad (si los tienes). Si la habilidad prestada es una habilidad de clase para ti, obtienes el bonificador +3 a las pruebas usando esa habilidad.</field>
     </object>
     <object pk="33" model="main.conjuro">
-        <field type="CharField" name="nombre">Hechizar persona<field>
+        <field type="CharField" name="nombre">Hechizar persona</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Encantamiento (hechizo, enajenador)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6217,7 +6231,7 @@
         <field type="CharField" name="descripcion">Este conjuro hace que una criatura humanoide te considere su amigo y aliado de confianza (trata la actitud del objetivo como amistosa). Sin embargo si la criatura está siendo amenazada o atacada por ti o por uno de tus aliados, recibe un bonificador + 5 a su tirada de salvación. El conjuro no te permite controlar a la persona hechizada como si fuera un autómata, pero sí percibe tus palabras y acciones de la manera más favorable. Puedes intentar dar órdenes al sujeto, pero debes vencer una prueba enfrentada de carisma para convencerle de que haga algo que normalmente no haría. (No se permite volver a intentarlo). Una criatura hechizada nunca obedecerá órdenes suicidas o claramente dañinas, pero puede ser convencido de que algo muy peligroso vale la pena hacerlo.</field>
     </object>
     <object pk="34" model="main.conjuro">
-        <field type="CharField" name="nombre">Identificar<field>
+        <field type="CharField" name="nombre">Identificar</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6230,7 +6244,7 @@
         <field type="CharField" name="descripcion">Este conjuro funciona como detectar magia excepto en que concede un bonificador de mejora +10 a las pruebas de conocimiento de conjuros para identificar las propiedades y palabras de mando de los objetos mágicos que estén en tu poder. Este conjuro no te permite identificar artefactos.</field>
     </object>
     <object pk="35" model="main.conjuro">
-        <field type="CharField" name="nombre">Imagen silenciosa<field>
+        <field type="CharField" name="nombre">Imagen silenciosa</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Ilusión (quimera)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6243,7 +6257,7 @@
         <field type="CharField" name="descripcion">Este conjuro crea una ilusión visual de un objeto, fuerza o criatura, tal y como tú la visualices. La ilusión no crea sonido, olor, textura o temperatura. Puedes mover la imagen dentro de los límites del tamaño del efecto.</field>
     </object>
     <object pk="35" model="main.conjuro">
-        <field type="CharField" name="nombre">Inspiración oportuna<field>
+        <field type="CharField" name="nombre">Inspiración oportuna</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción inmediata</field>
@@ -6256,7 +6270,7 @@
         <field type="CharField" name="descripcion">Una palabra de inspiración arcanamente potenciada puede extraer una victoria de una aparente derrota. Lanza este conjuro cuando una criatura falle una tirada de ataque o prueba de habilidad. El objetivo obtiene un bonificador +1 de competencia por cada cinco niveles (máximo bonificador +3) a la tirada de ataque o prueba de habilidad retroactivamente. Si el bonificador es suficiente para convertir el fallo en un éxito, la tirada tiene éxito.</field>
     </object>
     <object pk="36" model="main.conjuro">
-        <field type="CharField" name="nombre">Paso abjurador<field>
+        <field type="CharField" name="nombre">Paso abjurador</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Abjuración (fuerza)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6269,7 +6283,7 @@
         <field type="CharField" name="descripcion">Este conjuro crea un sutil y complicado efecto de fuerza que es más efectivo cuando lo usa un lanzador de conjuros que esté quieto o moviéndose lentamente. Mientras estás afectado por el conjuro, puedes dar dos pasos de 1.5 metros cada asalto y seguir lanzando conjuros y usando aptitudes sortílegas sin provocar ataques de oportunidad. Este conjuro se descarga automáticamente tan pronto como realizas un ataque, lanzas un conjuro dañino contra otra criatura o te mueves más de 1.5 metros con una sola acción de movimiento. Si la acción que descarga el conjuro también provoca ataques de oportunidad, esa acción sigue provocando ataques de oportunidad de la forma normal.</field>
     </object>
     <object pk="37" model="main.conjuro">
-        <field type="CharField" name="nombre">Paso de pluma<field>
+        <field type="CharField" name="nombre">Paso de pluma</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6282,7 +6296,7 @@
         <field type="CharField" name="descripcion">Mientras dure el conjuro, el objetivo ignora los efectos adversos para el movimiento del terreno difícil y puede incluso dar un pasos de 1.5 metros en terreno difícil.</field>
     </object>
     <object pk="38" model="main.conjuro">
-        <field type="CharField" name="nombre">Quitar el miedo<field>
+        <field type="CharField" name="nombre">Quitar el miedo</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Abjuración</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6295,7 +6309,7 @@
         <field type="CharField" name="descripcion">Te permite infundir valor en un receptor, concediendole un bonificador +4 de moral contra los efectos de miedo durante 10 minutos. Si la criatura ya estuviera sufriendo los efectos de miedo al recibir el conjuro, este efecto quedaría suprimido durante la duración del conjuro. Quitar el miedo contrarresta y disipa el conjuro causar miedo.</field>
     </object>
     <object pk="39" model="main.conjuro">
-        <field type="CharField" name="nombre">Retirada expeditiva<field>
+        <field type="CharField" name="nombre">Retirada expeditiva</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6308,7 +6322,7 @@
         <field type="CharField" name="descripcion">Este conjuro aumenta tu velocidad terreste en 9 metros. Este ajuste es considerado como un bonificador de mejora. No tiene efecto sobre otras formas de movimiento como excavar, trepar, volar o nadar. Como cualquier otro efecto que aumente tu velocidad, este conjuro afecta la distancia que puedes saltar.</field>
     </object>
     <object pk="40" model="main.conjuro">
-        <field type="CharField" name="nombre">Ventriloquía<field>
+        <field type="CharField" name="nombre">Ventriloquía</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Ilusión (quimera)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6322,7 +6336,7 @@
     </object>
     <!--CONJUROS DE CLÉRIGO Nº0-->
     <object pk="41" model="main.conjuro">
-        <field type="CharField" name="nombre">Crear agua<field>
+        <field type="CharField" name="nombre">Crear agua</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Conjuración (creación)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6335,7 +6349,7 @@
         <field type="CharField" name="descripcion">Este hechizo genera agua sana y potable, al igual que el agua de lluvia limpia. El agua puede ser creada en un área tan pequeña como la que actualmente contienen el líquido, o en un área tres veces mayor - posiblemente creando un aguacero o llenando muchos recipientes pequeños.</field>
     </object>
     <object pk="42" model="main.conjuro">
-        <field type="CharField" name="nombre">Detectar veneno<field>
+        <field type="CharField" name="nombre">Detectar veneno</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6348,7 +6362,7 @@
         <field type="CharField" name="descripcion">Determinas si una criatura, objeto o área ha sido envenenada o es venenosa. Puedes determinar el tipo exacto de veneno con una prueba de sabiduría CD 20. Un personaje con la habilidad de artesanía(alquimia) puede intentar una prueba de artesanía(alquimia) con CD 20 si falla la prueba de sabiduría, o puede intentar la prueba de artesanía(alquimia) antes de la prueba de sabiduría.</field>
     </object>
     <object pk="43" model="main.conjuro">
-        <field type="CharField" name="nombre">Estabilizar<field>
+        <field type="CharField" name="nombre">Estabilizar</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Conjuración (curación)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6361,7 +6375,7 @@
         <field type="CharField" name="descripcion">Al lanzar este conjuro, apuntas a una criatura viva que posea -1 o menos puntos de golpe. Esa criatura queda inmediatamente estabilizada y no pierde más puntos de golpe. Si la criatura recibe daño más tarde continúa muriendo de la forma normal.</field>
     </object>
     <object pk="44" model="main.conjuro">
-        <field type="CharField" name="nombre">Orientación divina<field>
+        <field type="CharField" name="nombre">Orientación divina</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6374,7 +6388,7 @@
         <field type="CharField" name="descripcion">Este conjuro da al objetivo un toque de orientación divina. La criatura recibe un bonificador +1 de competencia a una única tirada de ataque, tiro de salvación o prueba de habilidad. Debe elegir que usa el bonificador antes de hacer la tirada a la que se aplica.</field>
     </object>
     <object pk="45" model="main.conjuro">
-        <field type="CharField" name="nombre">Purificar comida y bebida<field>
+        <field type="CharField" name="nombre">Purificar comida y bebida</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6387,7 +6401,7 @@
         <field type="CharField" name="descripcion">Este conjuro convierte la comida y agua que esté estropeada, podrida, infectada, venenosa o contaminada de cualquier forma en pura y adecuada para comer y beber. Este conjuro no evita que posteriormente vuelva a pudrirse o estropearse. El agua sacrílega y comida y bebida similares quedan arruinadas por purificar comida y agua, pero el conjuro no tiene efecto sobre criaturas de cualquier tipo ni sobre pociones mágicas.</field>
     </object>
     <object pk="46" model="main.conjuro">
-        <field type="CharField" name="nombre">Sangrar<field>
+        <field type="CharField" name="nombre">Sangrar</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Nigromancia</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6400,7 +6414,7 @@
         <field type="CharField" name="descripcion">Haces que una criatura viva que esté por debajo de 0 puntos de golpe pero estabilizada vuelva a estar moribunda. Al lanzar este conjuro, eliges una criatura que tenga -1 puntos de golpe o menos. Esa criatura queda moribunda, recibiendo 1 punto de daño por asalto. La criatura puede estabilizarse más tarde de la forma normal. Este conjuro hace que una criatura que ya esté moribunda reciba 1 punto de daño.</field>
     </object>
     <object pk="47" model="main.conjuro">
-        <field type="CharField" name="nombre">Virtud<field>
+        <field type="CharField" name="nombre">Virtud</field>
         <field type="IntegerField" name="nivel">0</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6414,7 +6428,7 @@
     </object>
     <!--CONJUROS DE CLÉRIGO Nº1-->
     <object pk="48" model="main.conjuro">
-        <field type="CharField" name="nombre">Arma mágica<field>
+        <field type="CharField" name="nombre">Arma mágica</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6427,7 +6441,7 @@
         <field type="CharField" name="descripcion">Arma mágica da un bonificador +1 de mejora a un arma a las tiradas de ataque y daño. El bonificador de mejora no se apila con el bonificador + 1 a las tiradas de ataque de un arma de gran calidad. No puedes lanzar este conjuro en un arma natural, como un impacto sin arma. El impacto sin arma del monje se considera un arma, por lo que se puede mejorar con este conjuro.</field>
     </object>
     <object pk="49" model="main.conjuro">
-        <field type="CharField" name="nombre">Bendecir<field>
+        <field type="CharField" name="nombre">Bendecir</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6440,7 +6454,7 @@
         <field type="CharField" name="descripcion">Bendecir llena a tus aliados de valor. Cada aliado gana un bonificador de moral +1 a las tiradas de ataque y a las tiradas de salvación contra efectos de miedo. Bendecir contrarresta y disipa perdición.</field>
     </object>
     <object pk="50" model="main.conjuro">
-        <field type="CharField" name="nombre">Bendecir agua<field>
+        <field type="CharField" name="nombre">Bendecir agua</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Transmutación (bien)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">1 minuto</field>
@@ -6453,7 +6467,7 @@
         <field type="CharField" name="descripcion">Esta transmutación imbuye un frasco (1 litro) de agua con energía positiva, convirtiéndola en agua bendita.</field>
     </object>
     <object pk="51" model="main.conjuro">
-        <field type="CharField" name="nombre">Capacidad de carga de la hormiga<field>
+        <field type="CharField" name="nombre">Capacidad de carga de la hormiga</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6466,7 +6480,7 @@
         <field type="CharField" name="descripcion">La capacidad de carga del objetivo se triplica. No tiene efecto en la carga debida a la armadura. Si la criatura lleva armadura seguirá recibiendo los penalizadores normales por hacerlo, independientemente de cuanto peso le permita cargar este conjuro.</field>
     </object>
     <object pk="52" model="main.conjuro">
-        <field type="CharField" name="nombre">Detectar el mal<field>
+        <field type="CharField" name="nombre">Detectar el mal</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6479,7 +6493,7 @@
         <field type="CharField" name="descripcion">Puedes sentir la presencia del mal. La cantidad de información revelada depende de cuanto tiempo estudies un área o sujeto en particular. Criaturas con intenciones activamente malvadas cuentan como criaturas malvadas a los propósitos de este conjuro.</field>
     </object>
     <object pk="53" model="main.conjuro">
-        <field type="CharField" name="nombre">Detectar el bien<field>
+        <field type="CharField" name="nombre">Detectar el bien</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6492,7 +6506,7 @@
         <field type="CharField" name="descripcion">Este conjuro funciona como detectar el mal, excepto que detectar las auras de criaturas buenas, clérigos o paladines de deidades buenas, conjuros buenos y objetos mágicos buenos, y eres vulnerable a un aura buena abrumadora si eres malvado.</field>
     </object>
     <object pk="54" model="main.conjuro">
-        <field type="CharField" name="nombre">Detectar el caos<field>
+        <field type="CharField" name="nombre">Detectar el caos</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6505,7 +6519,7 @@
         <field type="CharField" name="descripcion">Este conjuro funciona igual que detectar el mal, excepto que detectar las auras de criaturas caóticas, clérigos de deidades caóticas, conjuros caóticos y objetos mágicos caóticos, y eres vulnerable a un aura caótica abrumadora si eres legal.</field>
     </object>
     <object pk="55" model="main.conjuro">
-        <field type="CharField" name="nombre">Detectar la ley<field>
+        <field type="CharField" name="nombre">Detectar la ley</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6518,7 +6532,7 @@
         <field type="CharField" name="descripcion">Este conjuro funciona como detectar el mal, excepto que detectar las auras de criaturas legales, clérigos o paladines de deidades legales, conjuros legales y objetos mágicos legales, y eres vulnerable a un aura legal abrumadora si eres caótico.</field>
     </object>
     <object pk="56" model="main.conjuro">
-        <field type="CharField" name="nombre">Detectar muertos vivientes<field>
+        <field type="CharField" name="nombre">Detectar muertos vivientes</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6531,7 +6545,7 @@
         <field type="CharField" name="descripcion">Puedes detectar el aura que rodea a las criaturas muertas vivientes. La cantidad de información revelada depende de cuanto tiempo estudies un área en particular.</field>
     </object>
     <object pk="57" model="main.conjuro">
-        <field type="CharField" name="nombre">Esconderse de los muertos vivientes<field>
+        <field type="CharField" name="nombre">Esconderse de los muertos vivientes</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Abjuración</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6544,7 +6558,7 @@
         <field type="CharField" name="descripcion">Los muertos vivientes no pueden ver, oír u oler a las criaturas protegidas por este conjuro. Una criatura muerta viviente inteligente obtiene una única tirada de salvación de voluntad. Si la falla, el sujeto no puede ver a ninguna de las criaturas protegidas. Sin embargo, si tiene razones para creer que hay oponentes invisibles presentes, puede intentar encontrarlos o golpearlos. Si una criatura protegida intenta canalizar energía positiva, expulsar o comandar muertos vivientes, tocar una criatura muerta viviente o atacar cualquier criatura (incluso con un conjuro), el conjuro finaliza para todos los beneficiarios.</field>
     </object>
     <object pk="58" model="main.conjuro">
-        <field type="CharField" name="nombre">Escudo de entropía<field>
+        <field type="CharField" name="nombre">Escudo de entropía</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Abjuración</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6557,7 +6571,7 @@
         <field type="CharField" name="descripcion">Un campo mágico aparece a tu alrededor, brillando con un estallido caótico multicolor. Este campo desvía las flechas, rayos y otros ataques a distancia contra ti. Cada ataque a distancia dirigido contra ti para el que el atacante deba hacer una tirada de ataque tiene un 20% de probabilidades de fallo (similar a los efectos de la ocultación). Otros ataques que simplemente funcionan a distancia no se ven afectados.</field>
     </object>
     <object pk="59" model="main.conjuro">
-        <field type="CharField" name="nombre">Escudo de la fe<field>
+        <field type="CharField" name="nombre">Escudo de la fe</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Abjuración</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6570,7 +6584,7 @@
         <field type="CharField" name="descripcion">Este conjuro crea una brillante campo de energía alrededor del objetivo que evita o desvía ataques. El conjuro concede al objetivo un bonificador +2 de desvío a la CA, con un bonificador +1 adicional por cada seis niveles que poseas (máximo +5).</field>
     </object>
     <object pk="60" model="main.conjuro">
-        <field type="CharField" name="nombre">Fatalidad<field>
+        <field type="CharField" name="nombre">Fatalidad</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Nigromancia (miedo, enajenador)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6583,7 +6597,7 @@
         <field type="CharField" name="descripcion">Este conjuro llena a un único objetivo con un sentimiento de horrible terror que hace que quede estremecido.</field>
     </object>
     <object pk="61" model="main.conjuro">
-        <field type="CharField" name="nombre">Favor divino<field>
+        <field type="CharField" name="nombre">Favor divino</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Evocación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6596,7 +6610,7 @@
         <field type="CharField" name="descripcion">Invocando la fuerza y sabiduría de una deidad, ganas un bonificador +1 de suerte a las tiradas de ataque y daño con arma por cada tres niveles de lanzador que tengas (como mínimo +1, máximo +3). El bonificador no se aplica a daño de conjuros.</field>
     </object>
     <object pk="62" model="main.conjuro">
-        <field type="CharField" name="nombre">Inflingir heridas leves<field>
+        <field type="CharField" name="nombre">Inflingir heridas leves</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Nigromancia</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -6609,7 +6623,7 @@
         <field type="CharField" name="descripcion">Poniendo tus manos sobre una criatura, canalizas energía negativa que causa 1d8 puntos de daño +1 punto por nivel de lanzador (máximo +5). Debido a que los muertos vivientes se alimentan de energía negativa, este conjuro cura a dicha criatura de una cantidad de daño en lugar de dañarla.</field>
     </object>
     <object pk="63" model="main.conjuro">
-        <field type="CharField" name="nombre">Maldecir agua<field>
+        <field type="CharField" name="nombre">Maldecir agua</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Nigromancia (mal)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">1 minuto</field>
@@ -6621,4 +6635,739 @@
         <field type="CharField" name="resistencia_conjuros">Sí (objeto)</field>
         <field type="CharField" name="descripcion">Este conjuro llena un frasco de 1 litro de agua con energía negativa, convirtiéndola en agua sacrílega.</field>
     </object>
-<django-objects>
+    <object pk="64" model="main.conjuro">
+        <field type="CharField" name="nombre">Niebla de obscurecimiento</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Conjuración (creación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">6 metros</field>
+        <field type="CharField" name="area">Nube que se expande 6 metros de radio desde ti, 6 metros de altura</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Un vapor nuboso se alza a tu alrededor. Es estacionario. El vapor oscurece toda la visión, incluyendo visión en la oscuridad, más allá de 1.5 metros. Las criaturas a 1.5 metros de distancia poseen ocultación (los ataques tienen un 20% de probabilidad de fallo). Las criaturas a mayor distancia tienen ocultación total (50% de probabilidad de fallo y el atacante no puede usar la vista para localizar al objetivo). Este conjuro no funciona bajo el agua. Un viento moderado, dispersa la niebla en 4 asaltos. Un viento fuerte dispersa la niebla en 1 asalto.</field>
+    </object>
+    <object pk="65" model="main.conjuro">
+        <field type="CharField" name="nombre">Orden asesina</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Una criatura viva</field>
+        <field type="CharField" name="duracion">1 asalto</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Das al objetivo el ansia mental de matar a su aliado más cercano, que obedece lo mejor que pueda. El objetivo ataca a su aliado más cercano durante su siguiente turno con un arma cuerpo a cuerpo o natural. Si es necesario, se mueve o carga hacia el aliado más cercano para llevar a cabo este ataque. Si e sincapaz de alcanzar a su aliado más cercano en su siguiente turno, el objetivo utiliza su turno para acercarse lo máximo posible a su aliado.</field>
+    </object>
+    <object pk="66" model="main.conjuro">
+        <field type="CharField" name="nombre">Perdición</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">15 metros</field>
+        <field type="CharField" name="area">Una explosión de 15 metros, centrado en ti</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Perdición llena a tus enemigos de temor y duda. Cada criatura afectada recibe un penalizador -1 a las tiradas de ataque y un penalizador -1 a las tiradas de salvación contra efectos de miedo. Perdición contrarresta y disipa Bendecir.</field>
+    </object>
+    <object pk="67" model="main.conjuro">
+        <field type="CharField" name="nombre">Piedra mágica</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Hasta tres guijarros tocados</field>
+        <field type="CharField" name="duracion">30 minutos o hasta desgastarse</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo, objeto)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo, objeto)</field>
+        <field type="CharField" name="descripcion">Transmutas un máximo de tres guijarros, que no pueden ser más grandes que balas de honda, de forma que impacten con una gran fuerza cuando son arrojados o lanzados con una honda. Si son arrojados, poseen un incremento de distancia de 6 metros. Si se lanzan con una honda, considéralos balas de honda (incremento de distancia de 15 metros). El conjuro les proporciona un bonificador +1 de mejora a las tiradas de ataque y daño. El usuario de las piedras hace un ataque a distancia normal. Cada piedra que impacte causa 1d6+1 puntos de daño (incluyendo el bonificador de mejora del conjuro), o 2d6+2 contra muertos vivientes.</field>
+    </object>
+    <object pk="68" model="main.conjuro">
+        <field type="CharField" name="nombre">Protección contra el mal</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Abjuración (bien)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">El objetivo obtiene un bonificador +2 de desvío a la CA y un bonificador +2 de resistencia a las salvaciones. Ambos bonificadores se aplican contra ataques o efectos provenientes de criaturas malvadas. El objetivo recibe inmediatamente una nueva tirada de salvación (si se le permitió realizar una antes) contra cualquier conjuro o efecto que suponga una posesión o que ejerza control mental sobre la criatura. Esta tirada de salvación tiene un bonificador +2 de moral y utiliza la misma CD que el efecto original. Si tiene éxito, dicho efecto queda anulado mientras dure este conjuro. Los efectos vuelven a ponerse en marcha cuando este conjuro finalice. Mientras esté bajo los efectos de este conjuro, el objetivo es inmune a nuevos intentos de posesión o de control mental. el conjuro evita el contacto físico con criaturas malvadas convocadas. Esto hace que los ataques con armas naturales de dichas criaturas fallen y que retrocedan si los ataques requieren tocar a la criatura protegida. La protección contra el contacto de criaturas convocadas finaliza si la criatura protegida hace un ataque contra la criatura bloqueada o trata de forzar la barrera contra ella. La resistencia a conjuros puede permitir a una criatura superar esta protección y tocar a la criatura protegida.</field>
+    </object>
+    <object pk="69" model="main.conjuro">
+        <field type="CharField" name="nombre">Protección contra el bien</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Abjuración (mal)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como protección contra el mal, excepto en que los bonificadores por desvío y resistencia se aplican a los ataques que provengan de criaturas buenas. El objetivo recibe un nuevo tiro de salvación contra el control por parte de criaturas buenas y las criaturas buenas convocadas no pueden tocar al objetivo.</field>
+    </object>
+    <object pk="69" model="main.conjuro">
+        <field type="CharField" name="nombre">Protección contra el caos</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Abjuración (legal)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como protección contra el mal, excepto en que los bonificadores por desvío y resistencia se aplican a los ataques que provengan de criaturas caóticas. El objetivo recibe un nuevo tiro de salvación contra el control por parte de criaturas caóticas y las criaturas caóticas convocadas no pueden tocar al objetivo.</field>
+    </object>
+    <object pk="70" model="main.conjuro">
+        <field type="CharField" name="nombre">Protección contra la ley</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Abjuración (legal)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como protección contra el mal, excepto en que los bonificadores por desvío y resistencia se aplican a los ataques que provengan de criaturas legales. El objetivo recibe un nuevo tiro de salvación contra el control por parte de criaturas legales y las criaturas legales convocadas no pueden tocar al objetivo.</field>
+    </object>
+    <!--CONJUROS DE DRUIDA Nº0-->
+    <object pk="71" model="main.conjuro">
+        <field type="CharField" name="nombre">Pudrir comida y bebida</field>
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">3 metros</field>
+        <field type="CharField" name="objetivo">1.5 metros cúbicos por nivel de comida y agua</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (objeto) y fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (objeto)</field>
+        <field type="CharField" name="descripcion">Este conjuro echa a perder y envenena la comida y los líquidos haciéndolos inadecuados para su consumo. Una criatura consumiendo esta comida o bebida debe superar una salvación de fortaleza o recibirá 1 punto de daño de constitución por asalto durante 2 asaltos. El agua bendita y la comida y bebida similares quedan arruinadas por pudrir comida y bebida. Este conjuro no tiene efecto sobre ningún tipo de criatura o poción mágica. Pudrir comida y bebida contrarresta y es contrarrestada por purificar comida y bebida.</field>
+    </object>
+    <!--CONJUROS DE DRUIDA Nº1-->
+    <object pk="72" model="main.conjuro">
+        <field type="CharField" name="nombre">Aspecto del halcón</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación (polimorfismo)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Tus ojos se vuelven más anchos y con aspecto de depredador y te crecen plumas en los lados de tu cabeza. Obtienes un bonificador +3 de competencia a las pruebas de percepción, un bonificador +1 de competencia a los ataques a distancia y el multiplicador al daño de tus arcos y ballestas pasa a ser 19-20/x3.</field>
+    </object>
+    <object pk="73" model="main.conjuro">
+        <field type="CharField" name="nombre">Buenas bayas</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">2d4 bayas frescas tocadas</field>
+        <field type="CharField" name="duracion">1 día por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Lanzar buenas bayas convierte en mágicas 2d4 bayas recién recogidas. Tú (y cualquier cualquier otro druida de al menos nivel 3) puede distinguir inmediatamente qué bayas están afectadas. Cada baya transmutada proporciona alimento como si fuera una comida normal para una criatura mediana. La baya también cura 1 punto de daño cuando se come, hasta un máximo de 8 puntos de este tipo cada periodo de 24 horas.</field>
+    </object>
+    <object pk="74" model="main.conjuro">
+        <field type="CharField" name="nombre">Calmar animales</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Animales que estén no estén separados más de 9 metros entre ellos</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro calma y silencia animales, haciéndolos dóciles e inofensivos. Sólo animales ordinarios (aquellos con puntuaciones de Inteligencia 1 o 2) pueden ser afectados por este conjuro. Todos los objetivos deben ser del mismo tipo, y dos de ellos no pueden estar a más de 9 metros de distancia. El número máximo de DG de animales que puedes afectar es igual a 2d4 + nivel de lanzador. Las criaturas afectadas permanecen donde están y no atacan o huyen. No están indefensas y se defienden normalmente si son atacadas. Cualquier amenaza rompe el conjuro para las criaturas amenazadas.</field>
+    </object>
+    <object pk="75" model="main.conjuro">
+        <field type="CharField" name="nombre">Colmillo mágico</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura viva tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Colmillo mágico concede a un arma natural o impacto sin arma del objetivo un bonificador de mejora + 1 a las tiradas de ataque y daño. El conjuro puede afectar un golpetazo, puñetazo, mordisco u otra arma natural. El conjuro no cambia el daño de un impacto sin arma de daño atenuado a daño letal.</field>
+    </object>
+    <object pk="76" model="main.conjuro">
+        <field type="CharField" name="nombre">Detectar aberración</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Largo (120 metros + 12 metros por nivel)</field>
+        <field type="CharField" name="area">Emanación en forma de cono</field>
+        <field type="CharField" name="duracion">Concentración, hasta 10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como detectar animales o plantas, excepto en que detecta criaturas de tipo aberración.</field>
+    </object>
+    <object pk="77" model="main.conjuro">
+        <field type="CharField" name="nombre">Detectar animales o plantas</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Largo (120 metros + 12 metros por nivel)</field>
+        <field type="CharField" name="area">Emanación en forma de cono</field>
+        <field type="CharField" name="duracion">Concentración, hasta 10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Puedes detectar un tipo particular de animal o planta en una emanación en forma de cono que sale de ti en cualquier dirección a la que mires. Debes pensar en el tipo de animal o planta cuando uses el conjuro, pero puedes cambiar el tipo de animal o planta cada asalto. La cantidad de información que es revelada depende de cuanto tiempo busques en un área en particular o te centres en un tipo específico de animal o planta.</field>
+    </object>
+    <object pk="78" model="main.conjuro">
+        <field type="CharField" name="nombre">Detectar trampas y fosos</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">18 metros</field>
+        <field type="CharField" name="area">Emanación en forma de cono</field>
+        <field type="CharField" name="duracion">Concentración, hasta 1 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Puedes detectar fosos, trampas de caída y trampas de atrapamiento simples así como trampas mecánicas construidas con materiales naturales. El conjuro no detecta trampas complejas, incluyendo las trampas de trampilla. Detectar trampas y fosos detecta ciertos peligros naturales – arenas movedizas (tipo atrapamiento), una grieta (un pozo) o muros inseguros de roca natural (una trampa de caída). No revela otras condiciones potencialmente peligrosas. El conjuro no detecta trampas mágicas (excepto aquellas que operen mediante foso, caídas o atrapamiento), ni las mecánicamente complejas, ni aquellas que hayan sido hechas seguras o desactivadas.</field>
+    </object>
+    <object pk="79" model="main.conjuro">
+        <field type="CharField" name="nombre">Empujón hidráulico</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Evocación (agua)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Una criatura u objeto</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Invocas un rápido chorro de agua que derriba y empapa a una criatura o casilla. Puedes usar este chorro de agua para realizar un empujón contra una criatura u objeto. Tu BMC para este empujón es igual a tu nivel de lanzador más tu modificador de inteligencia, sabiduría o carisma, el que sea mayor. Este empujón no provoca ataques de oportunidad. Empujón hidráulico extingue cualquier fuego normal sobre una criatura, objeto o en la casilla de 1.5 metros cuadrados a la que se apunta. Los fuegos mágicos no resultan afectados.</field>
+    </object>
+    <object pk="80" model="main.conjuro">
+        <field type="CharField" name="nombre">Esconderse de los animales</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Una criatura tocada por nivel</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Los animales no pueden detectar a las criaturas protegidas. Incluso capacidades sensoriales extraordinarias o sobrenaturales, como sentido ciego, vista ciega, olfato y sentido de la vibración no pueden detectar o localizar a las criaturas protegidas. Los animales simplemente actúan como si la criatura protegida no estuviera allí. Si la criatura protegida toca un animal o ataca alguna criatura, incluso con un conjuro, el conjuro finaliza para el beneficiario.</field>
+    </object>
+    <object pk="81" model="main.conjuro">
+        <field type="CharField" name="nombre">Flamear</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Evocación (fuego)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">0 metros</field>
+        <field type="CharField" name="efecto">Llama en tu mano</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">De tu mano abierta brotan llamas tan brillantes como una antorcha. Las llamas no te dañan a ti ni a tu equipo. Además de proporcionar iluminación, las llamas pueden lanzarse o usarse para tocar enemigos. Puedes golpear a un oponente con un ataque de toque cuerpo a cuerpo, causando un daño de fuego igual a 1d6 + 1 punto por nivel de lanzador (máximo +5). Alternativamente, puedes lanzar las llamas hasta a 36 metros como arma arrojadiza. Al hacerlo, haces un ataque de toque a distancia (sin penalizador por distancia) y causas el mismo daño que con el ataque cuerpo a cuerpo. En cuanto lanzas las llamas unas nuevas aparecen en tu mano. Cada ataque que hagas reduce la duración restante en 1 minuto. Si un ataque reduce la duración restante a 0 minutos o menos, el conjuro finaliza después de resolver el ataque. Este conjuro no funciona bajo el agua.</field>
+    </object>
+    <object pk="82" model="main.conjuro">
+        <field type="CharField" name="nombre">Fuego feérico</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Evocación (luz)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Largo (120 metros + 12 metros por nivel)</field>
+        <field type="CharField" name="area">Explosión de 1.5 metros de radio</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un brillo pálido rodea y perfila a los objetivos. Las criaturas perfiladas irradian luz como si fueran velas. Las criaturas perfiladas por fuego feérico reciben un penalizador -20 a todas las pruebas de sigilo. Tampoco se benefician de la ocultación proporcionada normalmente por la oscuridad (aunque un efecto de oscuridad mágica de nivel 2 o superior funciona normalmente), contorno borroso, desplazamiento, invisibilidad o efectos similares. La luz es demasiado tenue para tener ningún efecto especial sobre muertos vivientes o criaturas habitantes de la oscuridad vulnerables a la luz. El fuego feérico puede ser azul, verde o violeta, dependiendo de lo que elijas en el momento del lanzamiento. El fuego feérico no causa ningún daño a los objetos o criaturas perfilados.</field>
+    </object>
+    <object pk="83" model="main.conjuro">
+        <field type="CharField" name="nombre">Hablar con los animales</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Puedes hacer preguntas y recibir respuestas de los animales, pero el conjuro no los hace más amistosos de lo normal. Animales astutos y cautelosos es probable que sean concisos y evasivos, mientras los más estúpidos hacen comentarios vanos. Si un animal es amistoso contigo, puede hacer algún favor o servicio para ti.</field>
+    </object>
+    <object pk="84" model="main.conjuro">
+        <field type="CharField" name="nombre">Hechizar animal</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Encantamiento (hechizo, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Un animal</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como hechizar persona, excepto que afectas a una criatura de tipo animal.</field>
+    </object>
+    <object pk="85" model="main.conjuro">
+        <field type="CharField" name="nombre">Garrote</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Una clava o un bastón de roble no mágico tocado</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (objeto)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (objeto)</field>
+        <field type="CharField" name="descripcion">Tu clava o bastón no mágico se convierte en un arma con bonificador +1 de mejora a las tiradas de ataque y daño. Un bastón obtiene este bonificador para embos extremos del arma. Causa un daño como si fuera dos categorías de tamaño mayor (una clava o bastón Pequeños transmutados causará 1d8 puntos de daño, uno Mediano 2d6 y uno Grande 3d6), +1 por su bonificador de mejora. Estos efectos sólo funcionan si eres tú el que usa el arma. Si no eres tú, el arma se comporta como si no se viera afectada por el conjuro.</field>
+    </object>
+    <object pk="86" model="main.conjuro">
+        <field type="CharField" name="nombre">Negar aroma</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (una pizca de alumbre)</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Una criatura u objetos tocados por nivel</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Con un gesto, este conjuro te permite eliminar incluso el más mínimo de la mayoría de olores distintivos. Cuando se lanza, las criaturas u objetos afectados pierden todos los olores, naturales o no. Una criatura bajo los efectos de negar aroma no puede ser rastreado, localizado o apuntado a través de la aptitud especial de olfato. Además, este conjuro evita que el objetivo utilice la aptitud especial de hedor o aptitudes similares basadas en el olor. Negar aroma no evita que el objetivo adquiera olores exteriores. Untar a la criatura con una sustancia acre niega los beneficios del conjuro hasta que la sustancia sea neutralizada o lavada.</field>
+    </object>
+    <object pk="87" model="main.conjuro">
+        <field type="CharField" name="nombre">Pasar sin dejar rastro</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Una criatura tocada por nivel</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo u objetivos de este conjuro no dejan huellas o rastros de olor mientras se mueven. El rastreo de los objetivos es imposible por medios no mágicos.</field>
+    </object>
+    <object pk="88" model="main.conjuro">
+        <field type="CharField" name="nombre">Salto</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una pata de saltamontes)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo gana un bonificador +10 de mejora a las pruebas de acrobacias hechas para intentar saltos de altura o saltos de longitud. El bonificador de mejora se incrementa a + 20 a nivel de lanzador 5, y a +30 a nivel de lanzador 9.</field>
+    </object>
+    <object pk="89" model="main.conjuro">
+        <field type="CharField" name="nombre">Sentidos agudos</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (una pluma de halcón)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo obtiene un bonificador +2 de competencia a las pruebas de percepción y obtiene visión en la penumbra. Los objetivos que ya posean visión en la penumbra doblan la distancia a la que pueden ver bajo los efectos de este conjuro.</field>
+    </object>
+    <object pk="90" model="main.conjuro">
+        <field type="CharField" name="nombre">Zancada prodigiosa</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una pizca de tierra)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">El conjuro aumenta 3 metros tu velocidad base. No tiene efecto en otros modos de movimiento, como excavar, trepar, volar o nadar.</field>
+    </object>
+    <!--CONJUROS DE EXPLORADOR Nº1-->
+    <object pk="90" model="main.conjuro">
+        <field type="CharField" name="nombre">Disparo largo</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (plumas de una flecha)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro reduce el efecto de la distancia, concediéndote un bonificador de +3 metros al incremento de distancia de cualquier arma utilizada por el objetivo.</field>
+    </object>
+    <object pk="91" model="main.conjuro">
+        <field type="CharField" name="nombre">Lentificar veneno</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo se vuelve temporalmente inmune al veneno. Cualquier veneno en su sistema o cualquier veneno al cual esté expuesto durante la duración del conjuro no afecta al sujeto hasta que la duración del conjuro haya finalizado. Lentificar veneno no cura ningún daño que el veneno ya haya podido hacer.</field>
+    </object>
+    <!--CONJUROS DE MAGO/HECHICERO Nº0-->
+    <object pk="92" model="main.conjuro">
+        <field type="CharField" name="nombre">Salpicadura de ácido</field>
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="CharField" name="escuela">Conjuración (creación, ácido)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="efecto">Un misil de ácido</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Disparas un pequeño orbe de ácido a un objetivo. Debes tener éxito en un ataque de toque a distancia para impactar a tu objetivo. El orbe hace 1d3 puntos de daño por ácido. Este ácido desaparece tras 1 asalto.</field>
+    </object>
+    <object pk="93" model="main.conjuro">
+        <field type="CharField" name="nombre">Rayo de escarcha</field>
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="CharField" name="escuela">Evocación (frío)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="efecto">Rayo</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un rayo de hielo y aire frío surge de tu dedo índice. Debes tener éxito en un ataque de toque a distancia con el rayo para dañar al objetivo. El rayo hace 1d3 puntos de daño por frío.</field>
+    </object>
+    <object pk="94" model="main.conjuro">
+        <field type="CharField" name="nombre">Toque de fatiga</field>
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una gota de sudor)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Canalizas energía negativa a través de tu toque, fatigando al objetivo. Debes tener éxito en un ataque de toque. El sujeto queda inmediatamente fatigado hasta el fin del conjuro. Este conjuro no tiene efecto sobre criaturas que ya estén fatigadas. Al contrario que la fatiga normal, el efecto acaba cuando se agota la duración del conjuro.</field>
+    </object>
+    <!--CONJUROS DE MAGO/HECHICERO Nº1-->
+    <object pk="95" model="main.conjuro">
+        <field type="CharField" name="nombre">Escudo</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Abjuración (fuerza)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro crea un disco de fuerza, móvil e invisible, que flota delante de ti negando el efecto de los proyectiles mágicos dirigidos contra ti. El disco además proporciona un bonificador +4 por escudo a la CA. Este bonificador se puede aplicar contra los ataques de toque incorporales, ya que es un efecto de fuerza. El escudo no tiene penalizador de armadura, ni probabilidad de fallo de conjuro arcano.</field>
+    </object>
+    <object pk="96" model="main.conjuro">
+        <field type="CharField" name="nombre">Escudo elécrico</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Abjuración (electricidad, fuerza)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro crea un escudo invisible similar pero no tan fuerte como el conjuro de escudo. Este escudo flota frente a ti y anula los ataques de proyectil mágico dirigidos contra ti. El disco proporciona un bonificador +2 de escudo a la CA. Este bonificador se aplica contra ataques de toque incorporales. En cualquier momento, como acción gratuita, puedes disipar tu conjuro y en ese momento causará 1d6 puntos de daño eléctrico a todas las criaturas en una explosión de 1.5 metros, incluyéndote a ti. Una salvación de reflejos reduce el daño a la mitad.</field>
+    </object>
+    <object pk="97" model="main.conjuro">
+        <field type="CharField" name="nombre">Trabar portal</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V</field>
+        <field type="CharField" name="alcance">Medio (30 metros + 3 metros por nivel)</field>
+        <field type="CharField" name="objetivo">Un portal, de hasta 6 metros cuadrados por nivel</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este hechizo mágicamente mantiene cerrada una puerta, ventana, o una persiana de madera, metal o piedra. La magia afecta al portal como si estuviera cerrada y bloqueada normalmente. Un conjuro de apertura o un conjuro de disipar magia con éxito puede negar el hechizo de trabar portal. Añade 5 a la CD normal para forzar la apertura de un portal afectado por este hechizo.</field>
+    </object>
+    <object pk="98" model="main.conjuro">
+        <field type="CharField" name="nombre">Impacto verdadero</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, F (una pequeña réplica de una diana, hecha de madera)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">Hasta descargar</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Tu siguiente tirada de ataque (una sola, que debe llevarse a cabo antes del fin del próximo asalto) obtiene un bonificador +20 introspectivo. Además, no resultas afectado por la probabilidad de fallo que sufren los ataques efectuados contra un defensor que dispone de ocultación.</field>
+    </object>
+    <object pk="99" model="main.conjuro">
+        <field type="CharField" name="nombre">Armadura de mago</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Conjuración (creación, fuerza)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (un trozo de cuero)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 hora por nivelr</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Un campo de fuerza invisible pero tangible rodea al receptor del conjuro, proporcionándole un bonificador +4 por armadura a la CA. Al contrario que la armadura mundana, la de este conjuro no impone penalizador de armadura, no da lugar a fallo de conjuro arcano, ni reduce la velocidad. Al estar hecha de fuerza, las criaturas incorporales no pueden atravesar la armadura de mago igual que hacen con la normal.</field>
+    </object>
+    <object pk="100" model="main.conjuro">
+        <field type="CharField" name="nombre">Montura</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Conjuración (llamada)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S, M (un poco de pelo de caballo)</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="efecto">Una montura</field>
+        <field type="CharField" name="duracion">2 horas por nivelr</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Convocas un caballo ligero o un pony (a tu elección) para servirte como montura. La montura se comporta de buen agrado y bien. La montura viene con un cabestro, una brida y una silla de montar.</field>
+    </object>
+    <object pk="101" model="main.conjuro">
+        <field type="CharField" name="nombre">Contacto electrizante</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Evocación (electricidad)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Una criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un ataque cuerpo a cuerpo con éxito hace 1d6 puntos de daño por electricidad por nivel de lanzador (máximo 5d6). Cuando das la sacudida, obtienes un bonificador de +3 en las tiradas de ataque si el oponente lleva una armadura de metal (o es portador de un arma de metal o está hecho de metal).</field>
+    </object>
+    <object pk="102" model="main.conjuro">
+        <field type="CharField" name="nombre">Explosión de llamaradas</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Evocación (luz)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="area">Explosión de luz de 3 metros de radio</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como llamarada, excepto en que afecta a todas las criaturas en un a explosión de 3 metros de radio desde el objetivo.</field>
+    </object>
+    <object pk="103" model="main.conjuro">
+        <field type="CharField" name="nombre">Manos ardientes</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Evocación (fuego)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">4.5 metros</field>
+        <field type="CharField" name="area">Explosión en forma de cono</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Reflejos mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un cono de llamas abrasadoras sale de las puntas de tus dedos. Cualquier criatura en el área de las llamas recibe 1d4 puntos de daño por fuego por nivel de lanzador (máximo 5d4). Los materiales inflamablas arden cuando las llamas los tocan. Un personaje puede extinguir los objetos ardiendo como acción de asalto completo.</field>
+    </object>
+    <object pk="104" model="main.conjuro">
+        <field type="CharField" name="nombre">Proyectil mágico</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Evocación (fuerza)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Medio (30 metros + 3 metros por nivel)</field>
+        <field type="CharField" name="objetivo">Hasta cinco criaturas, ninguna de las cuales puede estar a más de 4.5 metros de las otras</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un proyectil de energía mágica sale disparado de las llemas de tus dedos e impacta a su objetivo, causando 1d4+1 puntos de daño por fuerza. El proyectil no puede ser esquivado. Por cada dos niveles de lanzador más allá del primero, obtienes un proyectil adicional (dos a nivel 3, tres a nivel 5, cuatro a nivel 7 y el máximo de 5 proyectiles a nivel 9 o superior). Si disparas múltiples proyectiles, puede hacer que impacten a una única criatura o a varias. Un único proyectil sólo puede impactar a una criatura. Debes elegir los objetivos antes de comprobar la resistencia mágica o tirar el daño.</field>
+    </object>
+    <object pk="105" model="main.conjuro">
+        <field type="CharField" name="nombre">Rayo de debilitamiento</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="efecto">Rayo</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un rayo chispeante brota de tu mano. Debes hacer una tirada de ataque de toque a distancia para impactar a un objetivo. El sujeto recibe un penalizador a su fuerza igual a 1d6 +1 por cada dos niveles de lanzador (máximo 1d6+5). La fuerza del objetivo no puede caer por debajo de 1. Una salvación de fortaleza con éxito reduce este penalizador a la mitad. Este penalizador no se apila consigo mismo. En su lugar, aplica sólo el mayor penalizador.</field>
+    </object>
+    <object pk="106" model="main.conjuro">
+        <field type="CharField" name="nombre">Toque gélido</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura o criaturas tocadas (1 por nivel)</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza parcial o voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Con un toque de tu mano, que brilla con una energía azul, interrumpe la fuerza vital de las criaturas vivas. Cada toque canaliza energía negativa que causa 1d6 puntos de daño. La criatura tocada además recibe 1 punto de daño de a su fuerza a menos que supere un tiro de salvación de fortaleza. Puedes usar este ataque de toque cuerpo a cuerpo hasta una vez por nivel. Una criatura muerta vivienta que toques no recibe daño de ningún tipo, pero debe superar un tiro de salvación de voluntad o huir presa del pánico durante 1d4 asaltos + 1 asalto por nivel de lanzador.</field>
+    </object>
+    <object pk="107" model="main.conjuro">
+        <field type="CharField" name="nombre">Agrandar persona</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S, M (polvo de hierro)</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Una criatura humanoide</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Aumenta el tamaño del objetivo en un paso, dandole los bonificadores y penalizadores por el tamaño correspondientes. Agrandar persona contrarresta y disipa reducir persona.</field>
+    </object>
+    <object pk="108" model="main.conjuro">
+        <field type="CharField" name="nombre">Reducir persona</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S, M (polvo de hierro)</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Una criatura humanoide</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Disminuye el tamaño del objetivo en un paso, dandole los bonificadores y penalizadores por el tamaño correspondientes. Reducir persona contrarresta y disipa agrandar persona.</field>
+    </object>
+    <object pk="109" model="main.conjuro">
+        <field type="CharField" name="nombre">Suerte del artesano</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (una herramienta)</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Una criatura</field>
+        <field type="CharField" name="duracion">1 día por nivel o hasta descargar</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo recibe un golpe de inspiración y obtiene un bonificador +5 a su próxima prueba de habilidad de artesanía.</field>
+    </object>
+    <!--CONJUROS DE PALADÍN Nº1-->
+    <object pk="110" model="main.conjuro">
+        <field type="CharField" name="nombre">Bendecir arma</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Arma tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Esta transmutación hace que un arma de golpes terribles contra enemigos malignos. El arma es tratada como si tuviera un bonificador de mejora + 1 a los propósitos de sobrepasar la RD de criaturas malignas o golpear criaturas incorporales malignas (aunque el conjuro no concede un bonificador de mejora real). El arma también se convierte en alineada buena, lo que significa que puede sobrepasar la RD de ciertas criaturas. (Esto anula y suprime el efecto de cualquier otro alineamiento que el arma pueda tener). Flechas o virotes individuales pueden ser transmutados, pero las armas de proyectiles afectadas (como los arcos) no traspasan el beneficio a los proyectiles que disparan. Además, todas las tiradas críticas contra enemigos malvados son éxito automáticamente, así cada amenaza es un golpe crítico. Éste último efecto no se aplica a ningún arma que ya tenga un efecto mágico en relación con los golpes críticos.</field>
+    </object>
+    <object pk="111" model="main.conjuro">
+        <field type="CharField" name="nombre">Endecha azote de fantasmas</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (una vieja lengüenta de un instrumento de viento)</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Una criatura incorporal</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">El objetivo se asienta con una forma semi-física durante un corto periodo de tiempo. Mientras esté afectado por el conjuro, la criatura incorporal recibe la mitad del daño (50%) de las formas de ataque no mágicas, y el daño completo de las armas mágicas, conjuros, efectos sortílegos y efectos sobrenaturales.</field>
+    </object>
+    <object pk="112" model="main.conjuro">
+        <field type="CharField" name="nombre">Gracilidad</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción rápida</field>
+        <field type="CharField" name="componentes">V</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 asalto</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Hasta el final de tu turno, tu movimiento no provoca ataques de oportunidad.</field>
+    </object>
+    <object pk="113" model="main.conjuro">
+        <field type="CharField" name="nombre">Lengua melosa</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, M/FD (una gota de miel)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Mientras estés bajo los efectos de este conjuro, tiras dos veces cada vez que realizas una prueba de diplomacia para cambiar la actitud de una criatura, eligiendo la tirada más alta. Alternativamente puedes lanzar este conjuro antes de realizar una prueba de diplomacia para reunir información, obteniendo un bonificador +5 de competencia a la prueba.</field>
+    </object>
+    <object pk="114" model="main.conjuro">
+        <field type="CharField" name="nombre">Letanía de pereza</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción rápida</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Una criatura</field>
+        <field type="CharField" name="duracion">1 asalto</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Con una letanía sobre las bondades de la pereza, ralentizas las defensas del objetivo. El objetivo no puede realizar ataques de oportunidad ni lanzar conjuros a la defensiva. Mientras esté afectado por este conjuro, el objetivo no puede ser objetivo por otro conjuro que posea la palabra "letanía" en su título.</field>
+    </object>
+    <object pk="115" model="main.conjuro">
+        <field type="CharField" name="nombre">Punto de reunión</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">1.5 metros</field>
+        <field type="CharField" name="area">Una casilla de 1.5 metros</field>
+        <field type="CharField" name="duracion">1 asalto</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Creas un punto que tiene el poder de anima brevemente a cualquier criatura que entre en contacto con él. Una criatura buena que entra en esta casilla (incluso si simplemente lo hace como parte de su movimiento normal) obtiene un bonificador +2 demoral a los ataques y tiros de salvación y 2 puntos de golpe temporales por nivel de lanzador durante 1 asalto. Las criaturas que no sean buenas no obtienen beneficios con a este conjuro. Una criatura no puede beneficiarse más de una vez del mismo lanzamiento de este conjuro.</field>
+    </object>
+    <object pk="116" model="main.conjuro">
+        <field type="CharField" name="nombre">Restablecimiento menor</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">3 asaltos</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Restablecimiento menor disipa cualquier efecto mágico que reduzca una de las puntuaciones de característica del objetivo o cura 1d4 puntos de daño temporal a una de las puntuaciones de característica del objetivo. También elimina cualquier fatiga que sufra el personaje y mejora la condición de exhausto hasta fatigado. No restablece una consunción permanente de característica.</field>
+    </object>
+    <object pk="117" model="main.conjuro">
+        <field type="CharField" name="nombre">Velo de energía positiva</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Abjuración (bien)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Personal o 1.5 metros</field>
+        <field type="CharField" name="objetivo">Tú o todas las criatuas a 1.5 metros</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Te rodeas con un velo de energía positiva, haciendo más difícil que las criaturas muertas vivientes te dañen. Cuando estás bajo los efectos de este conjuro, obtienes un bonificador +2 sagrado a la CA y un bonificador +2 sagrado a los tiros de salvación. Ambos bonificadores se aplican únicamente contra ataques o efectos creados por muertos vivientes. Puedes disipar este conjuro antes de su duración normal como acción rápida en tu turno para causar un número de puntos de daño por energía positiva igual a tu nivel a todas las criaturas muertas vivientes que estén a 1.5 metros de ti.</field>
+    </object>
+<!--COMPAÑEROS ANIMALES-->
+</django-objects>
