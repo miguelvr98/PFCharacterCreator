@@ -223,7 +223,7 @@ class Personaje(models.Model):
         nivel = models.IntegerField(verbose_name='Nivel')
         escuela = models.TextField(verbose_name='Escuela')
         tiempo_de_lanzamiento = models.TextField(verbose_name='Tiempo de lanzamiento')
-        componentes = models.TextField(verbose_name='Componentes')
+        componentes = models.TextField(verbose_name='Componentes', null=True)
         alcance = models.TextField(verbose_name='Alcance')
         efecto = models.TextField(verbose_name='Efecto', null=True)
         area = models.TextField(verbose_name='Área', null=True)
