@@ -2103,787 +2103,615 @@
             <object pk="12"></object>
         </field>
     </object>
-<!--ESPECIALES--> <!--FALTA AÑADIR LA CLASE A LA QUE PERTENECEN-->
+<!--ESPECIALES-->
     <object pk="1" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del bárbaro</field>
-        <field type="CharField" name="descripcion">d12.</field>
-    </object>
-    <object pk="2" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del bárbaro</field>
-        <field type="CharField" name="descripcion">acrobacias(des), artesanía(int), intimidar(car), montar(des), nadar(fue), percepción(sab), saber(naturaleza)(int), supervivencia(sab), trato con animales(car), trepar(fue).</field>
-    </object>
-    <object pk="3" model="main.especial">
-        <field type="CharField" name="nombre">Rangos de habilidad por nivel del bárbaro</field>
-        <field type="CharField" name="descripcion">4 + modificador de inteligencia.</field>
-    </object>
-    <object pk="4" model="main.especial">
-        <field type="CharField" name="nombre">Competencias bárbaro</field>
-        <field type="CharField" name="descripcion">un bárbaro es competente con todas las armas simples y marciales, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
-    </object>
-    <object pk="5" model="main.especial">
         <field type="CharField" name="nombre">Movimiento rápido</field>
         <field type="CharField" name="descripcion">La velocidad aumenta 3 metros. Este beneficio sólo se aplica cuando lleva armadura ligera o intermedia o ninguna armadura y tampoco está llevando una carga pesada.</field>
     </object>
-    <object pk="6" model="main.especial">
+    <object pk="2" model="main.especial">
         <field type="CharField" name="nombre">Furia</field>
         <field type="CharField" name="descripcion">Un bárbaro puede enfurecerse durante un número de asaltos al día igual a 4 + su modificador de constitución. Cada nivel después del primero, puede entrar en furia durante 2 asaltos adicionales. Los aumentos temporales de constitución, como los obtenidos de la furia y conjuros como Resistencia de oso no aumentan el número total de asaltos que un bárbaro puede enfurecerse al día. Un bárbaro puede entrar en furia como acción gratuita. El número total de asaltos al día se recupera después de haber descansado 8 horas, aunque esas horas no tienen que ser consecutivas. Mientras está en furia, un bárbaro obtiene un bonificador de moral +4 a su fuerza y constitución, así como un bonificador +2 a sus tiradas de salvación de voluntad. Además, recibe un penalizador -2 a su CA. El aumento de la constitución concede al bárbaro 2 puntos de golpe por nivel, pero estos desaparecen cuando finaliza la furia y no son los primeros que se pierden como ocurre con los puntos de golpe temporales. Mientras está en furia, un bárbaro no puede utilizar ninguna habilidad basada en carisma, destreza o inteligencia (excepto acrobacias, volar y montar) ni tampoco otra aptitud que requiera paciencia o concentración. Queda fatigado después de la furia durante un número de asaltos igual a 2 veces el número de asaltos durante los que estuvo en furia. Un bárbaro no puede entrar en una nueva furia mientras esté fatigado o exhausto pero de puede entrar varias veces en furia durante un mismo encuentro o combate. Si un bárbaro cae inconsciente, su furia termina inmediatamente, dejándolo en peligro de muerte.</field>
     </object>
-    <object pk="7" model="main.especial">
+    <object pk="3" model="main.especial">
         <field type="CharField" name="nombre">Poder de furia</field>
         <field type="CharField" name="descripcion">Obtiene un poder de furia. Un bárbaro obtiene los beneficios de los poderes de furia sólo cuando está en furia y algunos necesitan que el bárbaro tome alguna acción antes. A menos que se indique de otra forma, un bárbaro no puede seleccionar un poder concreto más de una vez.</field>
     </object>
-    <object pk="8" model="main.especial">
+    <object pk="4" model="main.especial">
         <field type="CharField" name="nombre">Esquiva asombrosa</field>
         <field type="CharField" name="descripcion">No puede ser pillado desprevenido, ni pierde su bonificador de destreza a la CA, incluso si el atacante es invisible. Todavía pierde su bonificador de destreza a la CA si está inmovilizado. Todavía puede perder su bonificador de destreza a la CA si un oponente usa la acción de finta con éxito contra él.</field>
     </object>
-    <object pk="9" model="main.especial">
+    <object pk="5" model="main.especial">
         <field type="CharField" name="nombre">Sentido de las trampas(Bárbaro)</field>
         <field type="CharField" name="descripcion">A nivel 3, un bárbaro obtiene un bonificador +1 a sus tiradas de salvación de reflejos para evitar trampas y un bonificador de esquiva +1 a la CA contra ataques hechos por trampas. Estos bonificadores aumentan en +1 por cada tres niveles de bárbaro en adelante (a nivel 6º, 9º, 12º, 15º 18º). Los bonificadores por Sentido de las trampas obtenidos por múltiples clases se apilan.</field>
     </object>
-    <object pk="10" model="main.especial">
+    <object pk="6" model="main.especial">
         <field type="CharField" name="nombre">Esquiva asombrosa mejorada</field>
         <field type="CharField" name="descripcion">No puede ser flanqueado. Esta defensa anula la aptitud del pícaro de hacer ataques furtivos al personaje flanqueándolo, a menos que el atacante tenga al menos cuatro niveles de pícaro más que los niveles del personaje.</field>
     </object>
-    <object pk="11" model="main.especial">
+    <object pk="7" model="main.especial">
         <field type="CharField" name="nombre">Reducción del daño</field>
         <field type="CharField" name="descripcion">A nivel 7, el bárbaro obtiene Reducción del daño. Resta 1 del daño que recibe el bárbaro cada vez que recibe daño de un arma o un ataque natural. A 10º nivel y cada tres niveles en adelante, (a nivel 13º, 16º y 19º) esta reducción del daño aumenta en 1 punto. La reducción del daño puede reducir el daño a 0, pero no por debajo de 0.</field>
     </object>
-    <object pk="12" model="main.especial">
+    <object pk="8" model="main.especial">
         <field type="CharField" name="nombre">Furia mayor</field>
         <field type="CharField" name="descripcion">A nivel 11, cuando el bárbaro entra en furia, el bonificador a su fuerza y constitución aumenta a +6 y el bonificador a sus tiradas de salvación de voluntad aumenta a +3.</field>
     </object>
-    <object pk="13" model="main.especial">
+    <object pk="9" model="main.especial">
         <field type="CharField" name="nombre">Voluntad indomable</field>
         <field type="CharField" name="descripcion">Mientras está en furia, un bárbaro de nivel 14 o mayor obtiene un bonificador +4 a sus tiradas de salvación de voluntad para resistir conjuros de encantamiento. Este bonificador se apila con otros modificadores, incluido el bonificador a las tiradas de salvación de voluntad que recibe durante la furia.</field>
     </object>
-    <object pk="14" model="main.especial">
+    <object pk="10" model="main.especial">
         <field type="CharField" name="nombre">Furia incansable</field>
         <field type="CharField" name="descripcion">A partir de nivel 17, el bárbaro ya no queda fatigado al terminar la furia.</field>
     </object>
-    <object pk="15" model="main.especial">
+    <object pk="11" model="main.especial">
         <field type="CharField" name="nombre">Furia poderosa</field>
         <field type="CharField" name="descripcion">A nivel 20, cuando el bárbaro entra en furia, el bonificador a su fuerza y constitución aumenta a +8 y el bonificador a sus tiradas de salvación aumenta a +4.</field>
     </object>
-    <object pk="16" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del bardo</field>
-        <field type="CharField" name="descripcion">d8.</field>
-    </object>
-    <object pk="17" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del bardo</field>
-        <field type="CharField" name="descripcion">acrobacias(des), artesanía(nt), averiguar intenciones(sab), conocimiento de conjuros(int), diplomacia(car), disfrazarse(car), engañar(car), escapismo(des), interpretar(car), intimidar(car) , juego de manos(des), lingüística(int), profesión(sab), percepción(sab), saber(todos)(int), tasación(int), trepar(fue), sigilo(des) y usar objeto mágico(car).</field>
-    </object>
-    <object pk="18" model="main.especial">
-        <field type="CharField" name="nombre">Puntos de habilidad por nivel del bardo</field>
-        <field type="CharField" name="descripcion">6 + modificador de inteligencia.</field>
-    </object>
-    <object pk="19" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del bardo</field>
-        <field type="CharField" name="descripcion">Un bardo es competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
-    </object>
-    <object pk="20" model="main.especial">
+    <object pk="12" model="main.especial">
         <field type="CharField" name="nombre">Conjuros de bardo</field>
         <field type="CharField" name="descripcion">Un bardo lanza conjuros arcanos extraídos de la lista de conjuros de bardo. Puede lanzar cualquier conjuro que conozca sin prepararlo por adelantado. Todos los conjuros de bardo tienen un componente verbal (canción, recitación o música). Para aprender o lanzar un conjuro, un bardo debe tener una puntuación de carisma de al menos 10 + el nivel del conjuro. La CD para las tiradas de salvación contra los conjuros de bardo es 10 + el nivel del conjuro + el modificador de carisma del bardo.</field>
     </object>
-    <object pk="21" model="main.especial">
+    <object pk="13" model="main.especial">
         <field type="CharField" name="nombre">Interpretación del bardo</field>
         <field type="CharField" name="descripcion">Puede crear efectos mágicos en aquellos a su alrededor. Puede usar esta aptitud un número de asaltos al día igual a 4 + su modificador de carisma. Cada nivel puede usar su interpretación de bardo durante 2 asaltos adicionales al día. Hacer esto es una acción estándar, sin embargo, mantenerla es una acción estándar. Cambiar de una a otra es una acción estándar. Solo se interrumpe si el bardo muere o queda incapacitado. A nivel 7 puede usar esta aptitud como acción de movimiento en vez de estándar y a nivel 13 como acción gratuita. Los bardos sordos tienen un 20% de probabilidad de fallar la aptitud si tiene componentes verbales y los bardos ciegos un 50% de fallar si tiene componentes verbales.</field>
     </object>
-    <object pk="22" model="main.especial">
+    <object pk="14" model="main.especial">
         <field type="CharField" name="nombre">Contraoda</field>
         <field type="CharField" name="descripcion">El bardo aprende a contrarrestar efectos mágicos que dependan del sonido (pero no conjuros que tengan componentes verbales). Cada asalto de la contraoda, hace una prueba de interpretar. Cualquier criatura que esté a un máximo de 9 metros del bardo (incluyendo el propio bardo) que esté afectada por un ataque sónico o que dependa del idioma puede utilizar el resultado de la prueba de interpretar en lugar de su tirada de salvación si, después de hacer la tirada de salvación, el resultado de la prueba de interpretar es mayor. Si una criatura dentro del alcance de la contraoda ya está bajo el efecto de un ataque mágico no instantáneo sónico o dependiente del idioma, recibe una nueva tirada de salvación contra el efecto cada asalto en que oiga la contraoda, pero debe usar el resultado de la prueba de interpretar del bardo como resultado de la tirada de salvación. La contraoda no funciona contra efectos que no permitan tiradas de salvación. La contraoda requiere componentes audibles.</field>
     </object>
-    <object pk="23" model="main.especial">
+    <object pk="15" model="main.especial">
         <field type="CharField" name="nombre">Distracción</field>
         <field type="CharField" name="descripcion">El bardo puede utilizar su interpretación para contrarrestar efectos mágicos que dependan de la vista. Cada asalto de la distracción, realiza una prueba de interpretar. Cualquier criatura que esté a un máximo de 9 metros del bardo (incluyendo el propio bardo) que esté afectado por ataque mágico de ilusión(pauta o quimera) puede utilizar el resultado de la prueba de interpretar en lugar de su tirada de salvación si, después de hacer la tirada de salvación, el resultado de la prueba de interpretar es mayor. Si una criatura dentro del alcance de la distracción ya está bajo el efecto de un ataque mágico no instantáneo de ilusión(pauta o quimera), recibe una nueva tirada de salvación contra el efecto cada asalto en que vea la distracción, pero debe usar el resultado de la prueba de interpretar del bardo como resultado de la tirada de salvación. La distracción no funciona contra efectos que no permitan tiradas de salvación. La distracción requiere componentes visuales.</field>
     </object>
-    <object pk="24" model="main.especial">
+    <object pk="16" model="main.especial">
         <field type="CharField" name="nombre">Fascinar</field>
         <field type="CharField" name="descripcion">El bardo puede usar su interpretación para hacer que una o más criaturas se queden fascinadas con él. Cada criatura que va a ser fascinada debe estar a un máximo de 27 metros y ser capaces de ver y oír al bardo y capaces de prestarle atención. El bardo también debe ser capaz de ver a las criaturas afectadas. La distracción de un combate cercano y otros peligros evitan que esta aptitud funcione. Cada tres niveles puede afectar a una criatura adicional con esta aptitud. Los afectados deben realizar una tirada de salvación de voluntad(CD 10 + 1/2 nivel del bardo + el modificador de carisma del bardo). Si el objetivo falla la salvación tiene un penalizador de -4 en todas sus reacciones, si salva solo verá la actuación del bardo. Una amenaza obvia, como alguien desenvainando un arma, lanzando un conjuro o apuntando un arma al blanco, rompe automáticamente el efecto. Fascinar es una aptitud de encantamiento (compulsión) enajenadora. Fascinar requiere componentes audibles y visuales para funcionar.</field>
     </object>
-    <object pk="25" model="main.especial">
+    <object pk="17" model="main.especial">
         <field type="CharField" name="nombre">Infundir valor</field>
         <field type="CharField" name="descripcion">El bardo puede usar su interpretación para infundir valor en sus aliados (incluido él mismo), reforzándolo contra el miedo y mejorando sus capacidades de combate. Para ser afectado, un aliado debe ser capaz de percibir la interpretación del bardo. Un aliado afectado recibe un bonificador +1 a las tiradas de salvación contra efectos de hechizo y miedo y un bonificador +1 a las tiradas de ataque y daño. A nivel 5, 11 y 17 este bonificador aumenta en +1, hasta un máximo de +4. Infundir valor es una aptitud enajenadora. Infundir valor puede usar componentes visuales o audibles. El bardo debe elegir qué tipo de componente utilizar al comenzar la interpretación.</field>
     </object>
-    <object pk="26" model="main.especial">
+    <object pk="18" model="main.especial">
         <field type="CharField" name="nombre">Infundir gran aptitud</field>
         <field type="CharField" name="descripcion">El bardo puede utilizar su interpretación para darle a un aliado que este máximo a 9 metros y sea capaz de oir al bardo un bonificador +2 a las pruebas de habilidad con una habilidad en concreto mientras continúe oyendo la interpretación del bardo. Este bonificador aumenta en +1 en los niveles 7, 11, 15 y 19. Ciertos usos de esta aptitud puede no tener sentido, como usarlo para sigilo, y no deberían ser permitidas a discreción del DM. Un bardo no puede infundir gran aptitud sobre sí mismo. Infundir gran aptitud requiere componentes audibles.</field>
     </object>
-    <object pk="27" model="main.especial">
+    <object pk="19" model="main.especial">
         <field type="CharField" name="nombre">Sugestión</field>
         <field type="CharField" name="descripcion">El bardo puede usar su interpretación para hacer una sugestión. Un bardo puede utilizar esta aptitud más de una vez contra una misma criatura durante una interpretación individual. Hacer una sugestión no cuenta para el uso diario de interpretaciones de bardo. Los objetivos realizan una tirada de salvación de voluntad(CD 10 + 1/2 nivel de bardo + su modificador de carisma) para anulan el efecto. Sugestión es una aptitud de encantamiento (compulsión), enajenadora y dependiente del idioma que requiere componentes audibles.</field>
     </object>
-    <object pk="28" model="main.especial">
+    <object pk="20" model="main.especial">
         <field type="CharField" name="nombre">Endecha de perdición</field>
         <field type="CharField" name="descripcion">El bardo puede usar su interpretación para causar que los objetivos queden estremecidos. Para ser afectado, un enemigo debe estar a un máximo de 9 metros y ser capaz de ver y oír la interpretación del bardo. El efecto se mantiene mientras el enemigo permanezca dentro del alcance y el bardo continúe su interpretación. Esta interpretación no puede hacer que una criatura quede asustada o despavorida, incluso si los objetivos ya estaban estremecidos a causa de otro efecto. Endecha de perdición es un efecto enajenador y de miedo y requiere de componentes audibles y visuales.</field>
     </object>
-    <object pk="29" model="main.especial">
+    <object pk="21" model="main.especial">
         <field type="CharField" name="nombre">Infundir grandeza</field>
         <field type="CharField" name="descripcion">El bardo puede usar su interpretación para infundir grandeza en sí mismo o en un único aliado voluntario que esté a un máximo de 9 metros. A niveles 12, 15 y 18, puede seleccionar un aliado adicional mientras usa esta interpretación. Para infundir grandeza, todos los blancos deben ser capaces de ver y oír al bardo. Una criatura infundida con grandeza obtiene 2d10 + 2 x bonificador de constitucion como puntos de golpe temporales, un bonificador +2 a las tiradas de ataque y un bonificador +1 a las tiradas de salvación de fortaleza. Los DG adicionales cuentan como DG normales a la hora de determinar los efectos de conjuros que dependan de los DG. Infundir grandeza es una aptitud enajenadora que requiere componentes audibles y visuales.</field>
     </object>
-    <object pk="30" model="main.especial">
+    <object pk="22" model="main.especial">
         <field type="CharField" name="nombre">Interpretación tranquilizadora</field>
         <field type="CharField" name="descripcion">El bardo puede usar su interpretación para crear un efecto equivalente a curar heridas graves en grupo, usando su nivel de bardo como nivel de lanzador. Además, esta interpretación elimina las condiciones de fatigado, indispuesto y estremecido de todos los afectados. Usar esta aptitud requiere 4 asaltos de interpretación continua y los blancos deben ser capaces de ver y oír al bardo durante toda la interpretación. La Interpretación tranquilizadora afecta a todos los objetivos que permanezcan a un máximo de 9 metros durante la interpretación. Interpretación tranquilizadora requiere componentes audibles y visuales.</field>
     </object>
-    <object pk="31" model="main.especial">
+    <object pk="23" model="main.especial">
         <field type="CharField" name="nombre">Melodía pavorosa</field>
         <field type="CharField" name="descripcion">El bardo puede utilizar su interpretación para causar miedo a sus enemigos. Para ser afectado, un enemigo debe ser capaz de oír la interpretación del bardo y estar a un máximo de 9 metros. Cada enemigo dentro del alcance recibe una tirada de salvación de voluntad(CD 10 + 1/2 nivel del bardo + el modificador de carisma del bardo) para anular el efecto. Si la salvación tiene éxito, la criatura es inmune a esta aptitud durante 24 horas. Si la salvación falla, el blanco queda asustado y escapa mientras sea capaz de oír la interpretación del bardo. Melodía pavorosa requiere componentes audibles.</field>
     </object>
-    <object pk="32" model="main.especial">
+    <object pk="24" model="main.especial">
         <field type="CharField" name="nombre">Infundir heroísmo</field>
         <field type="CharField" name="descripcion">El bardo puede infundir un heroísmo tremendo en sí mismo o en un único aliado a un máximo de 9 metros. A nivel 18, puede infundir heroísmo en una criatura adicional. Para infundir heroísmo, todos los objetivos deben ser capaces de ver y oír al bardo. Las criaturas infundidas obtienen un bonificador +4 a las tiradas de salvación y un bonificador +4 de esquiva a la CA. Este efecto dura mientras los objetivos sean capaces de ver la interpretación. Infundir heroísmo es una aptitud enajenadora que requiere componentes audibles y visuales.</field>
     </object>
-    <object pk="33" model="main.especial">
+    <object pk="25" model="main.especial">
         <field type="CharField" name="nombre">Sugestión en grupo</field>
         <field type="CharField" name="descripcion">Funciona como sugestión, pero permite hacer una sugestión simultáneamente a cualquier número de criaturas que haya fascinado previamente. Sugestión en grupo es una aptitud de encantamiento (compulsión), enajenadora y dependiente del idioma que requiere componentes audibles.</field>
     </object>
-    <object pk="34" model="main.especial">
+    <object pk="26" model="main.especial">
         <field type="CharField" name="nombre">Interpretación mortal</field>
         <field type="CharField" name="descripcion">El bardo puede usar su interpretación para hacer que un enemigo muera de alegría o de pena. Para ser afectado, el blanco debe ser capaz de ver y oír al bardo durante un asalto completo y estar a un máximo de 9 metros. El objetivo recibe una tirada de salvación(CD 10 + 1/2 nivel del bardo + el modificador de carisma del bardo) para anular el efecto. Si la tirada de salvación tiene éxito, el blanco queda grogui durante 1d4 asaltos y el bardo no puede volver a utilizar la interpretación mortal en esa criatura durante 24 horas. Si la tirada de salvación falla, la criatura muere. La interpretación mortal es un efecto de muerte, enajenador que requiere componentes audibles y visuales.</field>
     </object>
-    <object pk="35" model="main.especial">
+    <object pk="27" model="main.especial">
         <field type="CharField" name="nombre">Trucos del bardo</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 de la lista de conjuros del bardo.</field>
     </object>
-    <object pk="36" model="main.especial">
+    <object pk="28" model="main.especial">
         <field type="CharField" name="nombre">Interpretación versátil</field>
         <field type="CharField" name="descripcion">El bardo puede elegir un tipo de habilidad de interpretar. Puede utilizar su bonificador en esa habilidad en lugar de su bonificador en habilidades asociadas. Al hacer esta sustitución, el bardo usa su bonificador de habilidad de interpretar completo, incluyendo los bonificadores de habilidad de clase, en lugar del bonificador de la habilidad asociada, tenga o no tenga rangos en esa habilidad o si es una habilidad de clase. A nivel 6, 10, 14 y 18, el bardo puede elegir un tipo adicional de interpretar para sustituir. Los tipos de interpretar y sus habilidades asociadas son: actuar(engañar, disfrazarse), canto(engañar, averiguar intenciones), comedia(engañar, intimidar), danza(acrobacias, volar), cuerda(engañar, diplomacia), percusión(trato con animales, intimidar), teclado(diplomacia, intimidar), viento(diplomacia, trato con animales) y oratoria(diplomacia, averiguar intenciones).</field>
     </object>
-    <object pk="37" model="main.especial">
+    <object pk="29" model="main.especial">
         <field type="CharField" name="nombre">Bien versado</field>
         <field type="CharField" name="descripcion">El bardo se vuelve resistente a las interpretaciones de bardo de otros y efectos sónicos en general. El bardo obtiene un bonificador +4 a las tiradas de salvación contra interpretaciones de bardo y efectos sónicos y dependientes del idioma.</field>
     </object>
-    <object pk="38" model="main.especial">
+    <object pk="30" model="main.especial">
         <field type="CharField" name="nombre">Maestro del saber</field>
         <field type="CharField" name="descripcion">El bardo puede elegir 10 en cualquier prueba de habilidad de saber en la que tenga rangos. Un bardo puede decidir no elegir 10 y en su lugar tirar normalmente. Además, una vez al día, el bardo puede elegir 20 en cualquier prueba de habilidad de saber como acción estándar. Puede usar esta aptitud una vez adicional al día a nivel 11 y 17.</field>
     </object>
-    <object pk="39" model="main.especial">
+    <object pk="31" model="main.especial">
         <field type="CharField" name="nombre">Polifacético</field>
         <field type="CharField" name="descripcion">El bardo puede utilizar cualquier habilidad, incluso si la habilidad requiere normalmente estar entrenado. A nivel 16, el bardo considera todas las habilidades como habilidades de clase. A nivel 19, el bardo puede elegir 10 en cualquier prueba de habilidad, incluso si no se permite normalmente.</field>
     </object>
-    <object pk="40" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del clérigo</field>
-        <field type="CharField" name="descripcion">d8.</field>
-    </object>
-    <object pk="41" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del clérigo</field>
-        <field type="CharField" name="descripcion">artesanía(int), averiguar intenciones(sab), conocimiento de conjuros(int), curar(sab), diplomacia(car), lingüística(int), profesión(sab), saber(arcano)(int), saber(historia)(int), saber(los planos)(int), saber(nobleza)(int), saber(religión)(int) y tasación(int).</field>
-    </object>
-    <object pk="42" model="main.especial">
-        <field type="CharField" name="nombre">Puntos de habilidad por nivel del clérigo</field>
-        <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
-    </object>
-    <object pk="43" model="main.especial">
-        <field type="CharField" name="nombre">Competencias del clérigo</field>
-        <field type="CharField" name="descripcion">Los clérigos tienen competencia con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses). Los clérigos también tienen competencia con el arma predilecta de su deidad.</field>
-    </object>
-    <object pk="44" model="main.especial">
+    <object pk="32" model="main.especial">
         <field type="CharField" name="nombre">Aura</field>
         <field type="CharField" name="descripcion">Un clérigo tiene un aura particularmente poderosa correspondiente al alineamiento de su dios.</field>
     </object>
-    <object pk="45" model="main.especial">
+    <object pk="33" model="main.especial">
         <field type="CharField" name="nombre">Conjuros de clérigo</field>
         <field type="CharField" name="descripcion">Un clérigo lanza conjuros arcanos extraídos de la lista de conjuros de clérigo. Su alineamiento, sin embargo, puede impedirle lanzar ciertos conjuros opuestos a su s creencias morales o éticas. Debe preparar los conjuros por adelantado rezando mediante una hora a su dios. Para preparar o lanzar un conjuro, un clérigo debe poseer una puntuación de sabiduría que sea como mínimo de 10 + nivel del conjuro. La CD para las tiradas de salvación contra los conjuros de un clérigo es 10 + nivel del conjuro + el modificador de sabiduría del clérigo.</field>
     </object>
-    <object pk="46" model="main.especial">
+    <object pk="34" model="main.especial">
         <field type="CharField" name="nombre">Canalizar energía</field>
         <field type="CharField" name="descripcion">El clérigo puede liberar una ráfaga de energía canalizando el poder de su fe a través de su símbolo sagrado (o sacrílego). Esta energía puede ser usada para causar daño o curarlo, dependiendo del tipo de energía canalizada y las criaturas afectadas. Está energía será positiva si el dios al que adora es benigno y sera negativo si su dios es maligno, en caso de que sea neutral el clérigo deberá decidir si será positiva o negativa y no podrá cambiarse. Canalizar energía causa una explosión a 9 metros del clérigo que afecta a todas las criaturas y al clérigo(si decide incluirse). El daño causado es 1d6 y aumenta 1d6 en los niveles impares. Los seres afectados pueden realizar una salvación de voluntad cuya CD será 10 + la mitad del nivel de clérigo + el modificador de carisma del clérigo.</field>
     </object>
-    <object pk="47" model="main.especial">
+    <object pk="35" model="main.especial">
         <field type="CharField" name="nombre">Oraciones del clérigo</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del clérigo.</field>
     </object>
-    <object pk="48" model="main.especial">
+    <object pk="36" model="main.especial">
         <field type="CharField" name="nombre">Idiomas adicionales del clérigo</field>
         <field type="CharField" name="descripcion">Las opciones de idiomas adicionales de un clérigo incluye celestial, abisal e infernal.</field>
     </object>
-    <object pk="49" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del druida</field>
-        <field type="CharField" name="descripcion">d8.</field>
-    </object>
-    <object pk="50" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del druida</field>
-        <field type="CharField" name="descripcion">artesanía(int), conocimiento de conjuros(int), curar(sab), montar(des), nadar(fue), percepción(sab), profesión(sab), saber(geografía)(int), saber(naturaleza)(int), supervivencia(sab), trato con animales(car), trepar(fue) y volar(des).</field>
-    </object>
-    <object pk="51" model="main.especial">
-        <field type="CharField" name="nombre">Puntos de habilidad por nivel del druida</field>
-        <field type="CharField" name="descripcion">4 + modificador de inteligencia.</field>
-    </object>
-    <object pk="52" model="main.especial">
-        <field type="CharField" name="nombre">Competencias del druida</field>
-        <field type="CharField" name="descripcion">Los druidas son competentes con las siguientes armas: clava, daga, dardo, bastón, cimitarra, guadaña, hoz, lanza corta, honda y lanza. También son competentes con todos los ataques naturales (garra, mordisco, etc.) de cualquier forma que asuman utilizando la Forma salvaje. Los druidas son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Los druidas son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera. Un druida que lleve una armadura prohibida o use un escudo prohibido es incapaz de lanzar conjuros de druida o de utilizar cualquier aptitud de clase sobrenatural o sortílega mientras la lleve puesta y hasta 24 horas más tarde.</field>
-    </object>
-    <object pk="53" model="main.especial">
+    <object pk="37" model="main.especial">
         <field type="CharField" name="nombre">Conjuros del druida</field>
         <field type="CharField" name="descripcion">Los druidas lanzan conjuros de la lista de conjuros del druida. Su alineamiento puede restringir el lanzamiento de ciertos conjuros opuestos a sus creencias morales o éticas. Un druida debe seleccionar y preparar sus conjuros por adelantado meditando 1 hora. Para preparar o lanzar un conjuro, el druida debe poseer una puntuación de sabiduría al menos igual a 10 + nivel del conjuro. La CD para la tirada de salvación contra los conjuros de un druida es 10 + nivel del conjuro + el modificador de sabiduría del druida.</field>
     </object>
-    <object pk="54" model="main.especial">
+    <object pk="38" model="main.especial">
         <field type="CharField" name="nombre">Conjuros del druida</field>
         <field type="CharField" name="descripcion">Los druidas lanzan conjuros de la lista de conjuros del druida. Su alineamiento puede restringir el lanzamiento de ciertos conjuros opuestos a sus creencias morales o éticas. Un druida debe seleccionar y preparar sus conjuros por adelantado meditando 1 hora. Para preparar o lanzar un conjuro, el druida debe poseer una puntuación de sabiduría al menos igual a 10 + nivel del conjuro. La CD para la tirada de salvación contra los conjuros de un druida es 10 + nivel del conjuro + el modificador de sabiduría del druida.</field>
     </object>
-    <object pk="55" model="main.especial">
+    <object pk="39" model="main.especial">
         <field type="CharField" name="nombre">Oraciones del druida</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del druida.</field>
     </object>
-    <object pk="56" model="main.especial">
+    <object pk="40" model="main.especial">
         <field type="CharField" name="nombre">Idiomas adicionales del druida</field>
         <field type="CharField" name="descripcion">Las opciones para idiomas adicionales de un druida incluyen el silvano. Y obtienen el duídrico gratis.</field>
     </object>
-    <object pk="57" model="main.especial">
+    <object pk="41" model="main.especial">
         <field type="CharField" name="nombre">Vínculo natural</field>
         <field type="CharField" name="descripcion">El druida elige un compañero animal como su vínculo natural. Este compañero animal irá subiendo de nivel respecto al nivel de druida del personaje.</field>
     </object>
-    <object pk="58" model="main.especial">
+    <object pk="42" model="main.especial">
         <field type="CharField" name="nombre">Sentido de la naturaleza</field>
         <field type="CharField" name="descripcion">El druida obtiene un bonificador +2 a las pruebas de saber(naturaleza) y supervivencia.</field>
     </object>
-    <object pk="59" model="main.especial">
+    <object pk="43" model="main.especial">
         <field type="CharField" name="nombre">Empatía salvaje del druida</field>
         <field type="CharField" name="descripcion">Esta aptitud funciona como una prueba de diplomacia hecha para mejorar la actitud de una persona, pero sería para animales. El druida tira 1d20 y añade su nivel de druida y su modificador de carisma para determinar el resultado de la prueba. El druida y el animal deben estar a un máximo de 9 metros uno del otro bajo circunstancias normales. Un druida también puede usar esta aptitud para influenciar a una bestia mágica con una puntuación de inteligencia de 1 ó 2, pero recibe un penalizador -4 a la prueba.</field>
     </object>
-    <object pk="60" model="main.especial">
+    <object pk="44" model="main.especial">
         <field type="CharField" name="nombre">Zancada forestal</field>
         <field type="CharField" name="descripcion">Un druida puede moverse a través de cualquier clase de maleza (como arbustos espinosos, brezos, áreas cubiertas por la maleza y terrenos similares) a su velocidad normal sin recibir daño o sufrir otro impedimento. Los arbustos espinosos, brezos y áreas con maleza manipuladas mágicamente para impedir el movimiento, sin embargo, todavía le afectan.</field>
     </object>
-    <object pk="61" model="main.especial">
+    <object pk="45" model="main.especial">
         <field type="CharField" name="nombre">Pisada sin rastro</field>
         <field type="CharField" name="descripcion">Un druida no deja rastros en entornos naturales y no puede ser rastreado. Puede elegir dejar un rastro si lo desea.</field>
     </object>
-    <object pk="62" model="main.especial">
+    <object pk="46" model="main.especial">
         <field type="CharField" name="nombre">Resistir la atracción de la naturaleza</field>
         <field type="CharField" name="descripcion">Un druida obtiene un bonificador +4 a las Tiradas de Salvación hechas contra las aptitudes sortílegas y sobrenaturales de las hadas.</field>
     </object>
-    <object pk="63" model="main.especial">
+    <object pk="47" model="main.especial">
         <field type="CharField" name="nombre">Forma salvaje</field>
         <field type="CharField" name="descripcion">Un druida obtiene la aptitud de convertirse en cualquier animal Pequeño o Mediano y volver a su forma normal una vez al día. Sus opciones para nuevas formas incluyen todas las criaturas con el tipo animal. El efecto dura 1 hora por nivel de druida o hasta que vuelve a su forma normal. Cambiar de forma es una acción estándar que no provoca ataques de oportunidad. La forma elegida debe ser la de un animal con el que el druida esté familiarizado. Un druida puede usar esta habilidad una vez adicional al día a nivel 6 y cada dos niveles en adelante, para un total de ocho veces a nivel 18. A nivel 4 funciona como el conjuro forma de bestia I, a nivel 6 puede cambiar en animales grandes y menudos o en elementales pequeños, a nivel 8 puede cambiar a un animal enorme o diminuto o en un elemental mediano. A nivel 10 puede cambiar en una planta grande o en un elemental grande. A nivel 12 puede cambiar en una planta enorme o en un elemental enorme.</field>
     </object>
-    <object pk="64" model="main.especial">
+    <object pk="48" model="main.especial">
         <field type="CharField" name="nombre">Inmunidad al veneno</field>
         <field type="CharField" name="descripcion">Un druida tiene inmunidad a todos los venenos.</field>
     </object>
-    <object pk="65" model="main.especial">
+    <object pk="49" model="main.especial">
         <field type="CharField" name="nombre">Las mil caras</field>
         <field type="CharField" name="descripcion">Un druida puede cambiar de aspecto a voluntad, siempre que esté en su forma normal.</field>
     </object>
-    <object pk="66" model="main.especial">
+    <object pk="50" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo eterno del druida</field>
         <field type="CharField" name="descripcion">un druida ya no recibe penalizaciones a las características debidas a la edad y no puede ser envejecido mágicamente. Cualquier penalizador que ya poseyera, permanece inalterado. El druida aún puede morir por la vejez.</field>
     </object>
-    <object pk="67" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del explorador</field>
-        <field type="CharField" name="descripcion">d10.</field>
-    </object>
-    <object pk="68" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del explorador</field>
-        <field type="CharField" name="descripcion">artesanía(int), conocimiento de conjuros(int), curar(sab), intimidar(car), montar(des), nadar(fue), percepción(sab), profesión(sab), saber(dungeons)(int), saber(geografía)(int), saber(naturaleza)(int), sigilo(des), supervivencia(sab), trato con animales(car) y trepar(fue).</field>
-    </object>
-    <object pk="69" model="main.especial">
-        <field type="CharField" name="nombre">Puntos de habilidad por nivel del explorador</field>
-        <field type="CharField" name="descripcion">6 + modificador de inteligencia.</field>
-    </object>
-    <object pk="70" model="main.especial">
-        <field type="CharField" name="nombre">Competencias del explorador</field>
-        <field type="CharField" name="descripcion">Un explorador es competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
-    </object>
-    <object pk="71" model="main.especial">
+    <object pk="51" model="main.especial">
         <field type="CharField" name="nombre">Enemigo predilecto</field>
         <field type="CharField" name="descripcion">Un explorador elige un tipo de criatura de la tabla de enemigos predilectos. Obtiene un bonificador +2 a las pruebas de engañar, saber, percepción, averiguar intenciones y supervivencia contra las criaturas del tipo seleccionado. Del mismo modo, recibe un bonificador +2 a las tiradas de ataque y daño contra ellos. Un explorador puede hacer pruebas de saber no entrenadas al intentar identificar a estas criaturas. A nivel 5 y cada 5 niveles puede elegir otro tipo adicional, además los bonificadores de los tipos (incluido el que acaba de elegir) aumentan en +2.</field>
     </object>
-    <object pk="72" model="main.especial">
+    <object pk="52" model="main.especial">
         <field type="CharField" name="nombre">Rastrear</field>
         <field type="CharField" name="descripcion">Un explorador suma la mitad de su nivel (mínimo 1) a las pruebas de Supervivencia hechas para seguir rastros.</field>
     </object>
-    <object pk="73" model="main.especial">
+    <object pk="53" model="main.especial">
         <field type="CharField" name="nombre">Empatía salvaje del explorador</field>
         <field type="CharField" name="descripcion">Esta aptitud funciona como una prueba de diplomacia hecha para mejorar la actitud de una persona, pero sería para animales. El explorador tira 1d20 y añade su nivel de explorador y su modificador de carisma para determinar el resultado de la prueba. El explorador y el animal deben estar a un máximo de 9 metros uno del otro bajo circunstancias normales. Un explorador también puede usar esta aptitud para influenciar a una bestia mágica con una puntuación de inteligencia de 1 ó 2, pero recibe un penalizador -4 a la prueba.</field>
     </object>
-    <object pk="74" model="main.especial">
+    <object pk="54" model="main.especial">
         <field type="CharField" name="nombre">Dote de estilo de combate</field>
         <field type="CharField" name="descripcion">El explorador debe elegir entre el combate con dos armas o el tiro con arco y obtendrá diferentes dotes adicionales a partir de su decision. Si elige tiro con arco, puede elegir de la siguiente lista cuando gane una dote de estilo de combate: Disparo a larga distancia, Disparo a bocajarro, Disparo preciso y Disparo rápido. A nivel 6, añade Disparo preciso mejorado y Disparo múltiple a la lista. A nivel 10, añade Disparo a la carrera y Puntería precisa a la lista. Si el explorador elige combate con dos armas, puede seleccionar dotes de la siguiente lista cuando obtenga una dote de estilo de combate: Doble tajo, Golpear con el escudo mejorado, Desenvainado rápido y Combate con dos armas. A nivel 6, añade Combate con dos armas mejorado y Defensa con dos armas a la lista. A nivel 10, añade Combate con dos armas mayor y Desgarrar con dos armas a la lista. Pierde todos los beneficios de sus dotes de estilo de combate cuando lleve armadura pesada. Una vez que un explorador elige un estilo de combate, ya no puede cambiarlo.</field>
     </object>
-    <object pk="75" model="main.especial">
+    <object pk="55" model="main.especial">
         <field type="CharField" name="nombre">Aguante</field>
         <field type="CharField" name="descripcion">Un explorador obtiene Aguante como dote adicional a nivel 3.</field>
     </object>
-    <object pk="76" model="main.especial">
+    <object pk="56" model="main.especial">
         <field type="CharField" name="nombre">Terreno predilecto</field>
         <field type="CharField" name="descripcion">Un explorador puede elegir un tipo de terreno como terreno predilecto. El explorador gana un bonificador +2 a las pruebas de iniciativa y a las pruebas de saber(geografía), percepción, sigilo y supervivencia cuando esté en ese tipo de terreno. Un explorador viajando por su terreno predilecto normalmente no deja rastro y no puede ser rastreado (aunque puede dejar un rastro si lo desea). A nivel 8 y cada cinco niveles en adelante, el explorador puede elegir un terreno predilecto adicional. Además, el bonificador para sus terrenos predilectos (incluyendo el que acaba de elegir, si lo desea) aumenta en +2.</field>
     </object>
-    <object pk="77" model="main.especial">
+    <object pk="57" model="main.especial">
         <field type="CharField" name="nombre">Vínculo animal del explorador</field>
         <field type="CharField" name="descripcion">Un explorador obtiene un compañero animal de la lista: tejón, ave, camello, felino (pequeño), rata terrible, perro, caballo, poni, serpiente o lobo. Que irá subiendo de nivel respecto al explorador, sin embargo, siempre tendrá 3 niveles menos que el nivel de explorador del personaje.</field>
     </object>
-    <object pk="78" model="main.especial">
+    <object pk="58" model="main.especial">
         <field type="CharField" name="nombre">Conjuros del explorador</field>
         <field type="CharField" name="descripcion">Un explorador obtiene la capacidad de lanzar un pequeño número de conjuros que se eligen de la lista de conjuros de explorador. Un explorador debe elegir y preparar sus conjuros por adelantado meditando 1 hora. Para preparar o lanzar un conjuro, un explorador debe poseer una puntuación de sabiduría de al menos 10 + nivel del conjuro. La CD para una tirada de salvación contra los conjuros de un explorador es 10 + nivel del conjuro + el modificador de sabiduría del explorador. Su nivel de lanzador es igual a su nivel de explorador -3.</field>
     </object>
-    <object pk="79" model="main.especial">
+    <object pk="59" model="main.especial">
         <field type="CharField" name="nombre">Zancada forestal del explorador</field>
         <field type="CharField" name="descripcion">Un explorador puede moverse a través de cualquier clase de maleza (como arbustos espinosos, brezos, áreas cubiertas por la maleza y terrenos similares) a su velocidad normal sin recibir daño o sufrir otro impedimento. Los arbustos espinosos, brezos y áreas con maleza manipuladas mágicamente para impedir el movimiento, sin embargo, todavía le afectan.</field>
     </object>
-    <object pk="80" model="main.especial">
+    <object pk="60" model="main.especial">
         <field type="CharField" name="nombre">Rastreador veloz</field>
         <field type="CharField" name="descripcion">Un explorador puede moverse a su velocidad normal mientras usa supervivencia para seguir rastros sin el penalizador normal de -5. Sólo tiene un penalizador -10 (en lugar del habitual -20) al moverse al doble de su velocidad normal mientras rastrea.</field>
     </object>
-    <object pk="81" model="main.especial">
+    <object pk="61" model="main.especial">
         <field type="CharField" name="nombre">Evasión del explorador</field>
         <field type="CharField" name="descripcion">Si supera una tirada de salvación de reflejos contra un ataque que normalmente causa la mitad del daño con una tirada exitosa, en su lugar no recibe ningún daño. Evasión puede usarse sólo si el explorador lleva armadura ligera, intermedia o ninguna armadura. Un explorador indefenso no obtiene el beneficio de evasión.</field>
     </object>
-    <object pk="82" model="main.especial">
+    <object pk="62" model="main.especial">
         <field type="CharField" name="nombre">Presa</field>
         <field type="CharField" name="descripcion">Un explorador puede, como acción estándar, designar a un objetivo dentro de su línea de visión como su presa. Mientras esté siguiento el rastro de su presa, un explorador puede elegir 10 en sus pruebas de habilidad de supervivencia mientras se mueve a velocidad normal, sin penalización. Además, recibe un bonificador +2 a las tiradas de ataque hechas contra su presa y todas las amenazas de crítico se confirman automáticamente. Un explorador no puede tener más de una presa al mismo tiempo y el tipo de criatura debe coincidir con uno de sus tipos de enemigo predilecto. Puede descartar este efecto en cualquier momento como acción gratuita, pero no puede serleccionar una nueva presa durante 24 horas. Si el explorador ve pruebas de que su presa está muerta, puede seleccionar una nueva presa tras esperar 1 hora.</field>
     </object>
-    <object pk="83" model="main.especial">
+    <object pk="63" model="main.especial">
         <field type="CharField" name="nombre">Camuflaje</field>
         <field type="CharField" name="descripcion">Un explorador de nivel 12 o mayor puede usar la habilidad de Sigilo para ocultarse en cualquiera de sus terrenos predilectos, incluso si el terreno no proporciona cobertura u ocultación.</field>
     </object>
-    <object pk="84" model="main.especial">
+    <object pk="64" model="main.especial">
         <field type="CharField" name="nombre">Evasión mejorada del explorador</field>
         <field type="CharField" name="descripcion">Esta aptitud funciona como evasión, excepto en que además de no recibir daño al superar una tirada de salvación de Reflejos contra un ataque, sólo recibe la mitad del daño con una tirada de salvación fallida. Un explorador indefenso no recibe los beneficios de la evasión.</field>
     </object>
-    <object pk="85" model="main.especial">
+    <object pk="65" model="main.especial">
         <field type="CharField" name="nombre">Esconderse a plena vista</field>
         <field type="CharField" name="descripcion">Mientras está en alguno de sus terrenos predilectos, un explorador de nivel 17 o mayor puede utilizar la habilidad de Sigilo incluso mientras está siendo observado.</field>
     </object>
-    <object pk="86" model="main.especial">
+    <object pk="66" model="main.especial">
         <field type="CharField" name="nombre">Presa mejorada</field>
         <field type="CharField" name="descripcion">Puede elegir una presa como acción gratuita y puede elegir 20 mientras usa su habilidad de Superviviencia para rastrear a su presa, mientras se mueve a velocidad normal sin penalización. Su bonificador introspectivo al atacar a supresa mejora hasta +4. Si su presa muere o se descarta, puede elegir una nueva tras 10 minutos.</field>
     </object>
-    <object pk="87" model="main.especial">
+    <object pk="67" model="main.especial">
         <field type="CharField" name="nombre">Maestro cazador</field>
         <field type="CharField" name="descripcion">Un explorador de nivel 20 se convierte en un maestro cazador. Siempre puede moverse a velocidad completa utilizando supervivencia para seguir rastros sin penalización. Puede, como acción estándar, hacer un único ataque contra su enemigo predilecto con el bonificador de ataque completo. Si el ataque impacta, el blanco recibe el daño normalmente y debe hacer una tirada de salvación de fortaleza o morir. La CD de esta tirada de salvación es igual a 10 + 1/2 del nivel del explorador + el modificador de sabiduría del explorador. Un explorador también puede elegir causar una cantidad de daño atenuado igual a los puntos de vida actuales de la criatura. Una tirada de salvación con éxito niega este daño. Un explorador puede utilizar esta aptitud una vez al día contra cada tipo de enemigo predilecto que posea, pero no contra la misma criatura más de una vez en un periodo de 24 horas.</field>
     </object>
-    <object pk="88" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del guerrero</field>
-        <field type="CharField" name="descripcion">d10.</field>
-    </object>
-    <object pk="89" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del guerrero</field>
-        <field type="CharField" name="descripcion">artesanía(int), intimidar(car), montar(des), nadar(fue), profesión(sab), saber(dungeons)(int), saber(ingeniería)(int), supervivencia(sab), trato con animales(car) y trepar(fue).</field>
-    </object>
-    <object pk="90" model="main.especial">
-        <field type="CharField" name="nombre">Puntos de habilidad por nivel del guerrero</field>
-        <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
-    </object>
-    <object pk="91" model="main.especial">
-        <field type="CharField" name="nombre">Competencias del guerrero</field>
-        <field type="CharField" name="descripcion">Un guerrero es competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
-    </object>
-    <object pk="92" model="main.especial">
+    <object pk="68" model="main.especial">
         <field type="CharField" name="nombre">Dotes adicionales</field>
         <field type="CharField" name="descripcion">En los niveles impares un guerrero gana una dote adicional además de la ganada por el avance normal. Esta dote adicional debe ser seleccionada de la lista de dotes de combate.</field>
     </object>
-    <object pk="93" model="main.especial">
+    <object pk="69" model="main.especial">
         <field type="CharField" name="nombre">Valentía</field>
         <field type="CharField" name="descripcion">Un guerrero gana un bonificador de + 1 a sus tiradas de salvación de voluntad contra miedo. Este bonificador aumenta en +1 cada cuatro niveles a partir del segundo.</field>
     </object>
-    <object pk="94" model="main.especial">
+    <object pk="70" model="main.especial">
         <field type="CharField" name="nombre">Entrenamiento con armaduras</field>
         <field type="CharField" name="descripcion">A partir de nivel 3 un guerrerro siempre que lleve una armadura, reduce la penalización por llevar armadura en 1 (con un mínimo de 0) e incrementa el bonificador máximo de destreza en 1. En los niveles 7, 11 y 15, estos bonificadores se incrementan en +1 cada vez, hasta una reducción máxima del penalizador de armadura de -4 y un incremento de + 4 a la máxima bonificación de destreza. Además, un guerrero puede mover su velocidad normal mientras use una armadura intermedia. A nivel 7, un guerrero puede moverse a su velocidad normal mientras use armadura pesada.</field>
     </object>
-    <object pk="95" model="main.especial">
+    <object pk="71" model="main.especial">
         <field type="CharField" name="nombre">Entrenamiento en armas</field>
         <field type="CharField" name="descripcion">A partir de nivel 5, un guerrero puede seleccionar un grupo de armas (arcos, ballestas, corto alcance, espadas ligeras, espadas pesadas, hachas, lanzas y martillos). Cada vez que ataque con un arma de ese grupo, gana un bonificador de + 1 a las tiradas de ataque y daño. En los niveles 9, 13 y 17 obtiene entrenamiento en otro grupo de armas. Gana un bonificador de +1 a las tiradas de ataque y daño cuando use un arma de ese grupo. Además, los bonificadores obtenidos en cada grupo de armas se incrementan en +1. También añade este bonificador en cualquier maniobra de combate hecha con armas de este grupo. Este bonificador también se aplica a la DMC del guerrero cuando se defienda contra intentos de desarmar y romper hecho contra armas de este grupo.</field>
     </object>
-    <object pk="96" model="main.especial">
+    <object pk="72" model="main.especial">
         <field type="CharField" name="nombre">Maestría con la armadura</field>
         <field type="CharField" name="descripcion">A nivel 19, un guerrero gana Reducción del daño 5/- cada vez que lleve armadura o use un escudo.</field>
     </object>
-    <object pk="97" model="main.especial">
+    <object pk="73" model="main.especial">
         <field type="CharField" name="nombre">Maestría con las armas</field>
         <field type="CharField" name="descripcion">A nivel 20, un guerrero elige un arma, como la espada larga, gran hacha o arco largo. Cualquier ataque hecho con ese arma confirma automáticamente todas las amenazas de crítico y tiene su multiplicador de daño incrementado en +1 (x2 se convierte en x3, por ejemplo). Además, no puede ser desarmado mientras empuñe un arma de este tipo.</field>
     </object>
-    <object pk="98" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del hechicero</field>
-        <field type="CharField" name="descripcion">d6.</field>
-    </object>
-    <object pk="99" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del hechicero</field>
-        <field type="CharField" name="descripcion">artesanía(int), conocimiento de conjuros(int), engañar(car), intimidar(car), profesión(sab), saber(arcano)(int), tasación(int), usar objeto mágico(car) y volar(des).</field>
-    </object>
-    <object pk="100" model="main.especial">
-        <field type="CharField" name="nombre">Puntos de habilidad por nivel del hechicero</field>
-        <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
-    </object>
-    <object pk="101" model="main.especial">
-        <field type="CharField" name="nombre">Competencias del hechicero</field>
-        <field type="CharField" name="descripcion">Los hechiceros son competentes con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
-    </object>
-    <object pk="102" model="main.especial">
+    <object pk="75" model="main.especial">
         <field type="CharField" name="nombre">Conjuros del hechicero</field>
         <field type="CharField" name="descripcion">Un hechicero lanza conjuros arcanos principalmente de la lista de conjuros de hechicero/mago. Puede lanzar cualquier conjuro que conozca sin prepararlo por adelantado. Para aprender o lanzar un conjuro, un hechicero Debe poseer una puntuación de carisma igual al menos a 10 + nivel del conjuro. La CD para la tirada de salvación contra el conjuro de un hechicero es 10 + nivel del conjuro + el modificador de carisma del hechicero. Un hechicero comienza el juego conociendo cuatro conjuros de nivel 0 y dos de nivel 1 de su elección. Cada nuevo nivel de hechicero, recibe uno o más conjuros nuevos.</field>
     </object>
-    <object pk="103" model="main.especial">
+    <object pk="76" model="main.especial">
         <field type="CharField" name="nombre">Linajes</field>
         <field type="CharField" name="descripcion">Cada hechicero tiene una fuente de magia en alguna parte de su herencia que le concede sus conjuros, dotes adicionales, una habilidad de clase adicional y otras aptitudes especiales. Esta fuente puede representar una relación sanguínea o un suceso extremo en el que está involucrada una criatura en alguna parte del pasado familiar. Un hechicero debe elegir un linaje al alcancer su primer nivel de hechicero. Una vez hecha, esta elección no puede cambiarse. A nivel 3 y cada dos niveles en adelante, un hechicero aprende un conjuro adicional, derivado de su linaje. A nivel 7, y cada seis niveles en adelante, un hechicero recibe una dote adicional, elegida de una lista específica de cada linaje. El hechicero debe cumplir los requisitos de estas dotes adicionales.</field>
     </object>
-    <object pk="104" model="main.especial">
+    <object pk="77" model="main.especial">
         <field type="CharField" name="nombre">Abstención de materiales</field>
         <field type="CharField" name="descripcion">Un hechicero recibe Abstención de materiales como dote adicional a nivel 1.</field>
     </object>
-    <object pk="105" model="main.especial">
+    <object pk="78" model="main.especial">
         <field type="CharField" name="nombre">Trucos del hechicero</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del hechicero.</field>
     </object>
-    <object pk="106" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del mago</field>
-        <field type="CharField" name="descripcion">d6.</field>
-    </object>
-    <object pk="107" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del mago</field>
-        <field type="CharField" name="descripcion">artesanía(int), conocimiento de conjuros(int), lingüística(int), profesión(sab), saber(todos)(int), tasación(int) y volar(des).</field>
-    </object>
-    <object pk="108" model="main.especial">
-        <field type="CharField" name="nombre">Puntos de habilidad por nivel del mago</field>
-        <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
-    </object>
-    <object pk="109" model="main.especial">
-        <field type="CharField" name="nombre">Competencias del mago</field>
-        <field type="CharField" name="descripcion">Los magos son competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
-    </object>
-    <object pk="110" model="main.especial">
+    <object pk="79" model="main.especial">
         <field type="CharField" name="nombre">Vínculo arcano</field>
         <field type="CharField" name="descripcion">Los magos forman un poderoso vínculo con un familiar. Un familiar es una mascota mágica que mejora las habilidades y sentidos del mago y puede ayudarle con la magia.</field>
     </object>
-    <object pk="111" model="main.especial">
+    <object pk="80" model="main.especial">
         <field type="CharField" name="nombre">Trucos</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del mago.</field>
     </object>
-    <object pk="112" model="main.especial">
+    <object pk="81" model="main.especial">
         <field type="CharField" name="nombre">Inscribir pergamino</field>
         <field type="CharField" name="descripcion">A nivel 1, un mago obtiene la dote Inscribir pergamino como dote adicional.</field>
     </object>
-    <object pk="113" model="main.especial">
+    <object pk="82" model="main.especial">
         <field type="CharField" name="nombre">Dotes adicionales</field>
         <field type="CharField" name="descripcion">A nivel 5, 10, 15 y 20, un mago recibe una dote adicional. En ese momento, puede elegir una dote metamágica, de creación o maestría en conjuros. El mago sigue neceitando cumplir todos los requisitos para la dote adicional.  Estas dotes adicionales se añaden a las dotes que un personaje de cualquier clase obtiene por avanzar niveles.</field>
     </object>
-    <object pk="114" model="main.especial">
+    <object pk="83" model="main.especial">
         <field type="CharField" name="nombre">Libro de conjuros</field>
         <field type="CharField" name="descripcion">Un mago debe estudiar su libro de conjuros cada día para preparar sus conjuros. No puede preparar ningún conjuro que no esté anotado en su libro de conjuros, excepto leer magia, que todos los magos pueden preparar de memoria. Un mago comienza el juego con un libro de conjuros que contiene todos los conjuros de mago de nivel 0. más tres conjuros de nivel 1 a su elección. El mago también elige una cantidad de conjuros adicionales de nivel 1 igual a su modificador de inteligencia para añadirlos a su libro de conjuros. Cada nuevo nivel de mago, recibe dos nuevos conjuros de cualquier nivel de conjuro que pueda lanzar (basándose en su nuevo nivel de mago) para su libro de conjuros. En cualquier momento, un mago también puede añadir conjuros encontrados en los libros de otros magos a su propio libro.</field>
     </object>
-    <object pk="115" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del monje</field>
-        <field type="CharField" name="descripcion">d8.</field>
-    </object>
-    <object pk="116" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del monje</field>
-        <field type="CharField" name="descripcion">acrobacias(des), artesanía(int), averiguar intenciones(sab), escapismo(des), interpretar(car), intimidar(car), montar(des), nadar(fue), percepción(sab), profesión(sab), saber(historia), saber(religión), sigilo(des) y trepar(fue).</field>
-    </object>
-    <object pk="117" model="main.especial">
-        <field type="CharField" name="nombre">Puntos de habilidad por nivel del monje</field>
-        <field type="CharField" name="descripcion">4 + modificador de inteligencia.</field>
-    </object>
-    <object pk="118" model="main.especial">
-        <field type="CharField" name="nombre">Competencias del monje</field>
-        <field type="CharField" name="descripcion">Los monjes son competentes con la porra, ballesta (ligera o pesada), daga, hacha de mano, jabalina, espada corta y lanza. Los monjes no son competentes con ninguna armadura o escudo. Cuando visten armadura, lleven escudo o porten una carga intermedia o pesada, un monje pierde sus bonificadores a la CA, al igual sus capacidades de movimiento rápido y ráfaga de golpes.</field>
-    </object>
-    <object pk="119" model="main.especial">
+    <object pk="84" model="main.especial">
         <field type="CharField" name="nombre">Bonificador a la CA</field>
         <field type="CharField" name="descripcion">Cuando está sin armas y libre de impedimentos, el monje añade su bonificación de sabiduría a su CA y su DMC. Este bonificador se incrementa en 1 por cada cuatro niveles de monje. Estos bonificadores a la CA se aplican incluso contra ataques de toque o cuando el monje está desprevenido. Pierde estos bonificadores cuando está inmovilizado o indefenso, cuando viste cualquier armadura, cuando lleve un escudo o cuando porte una carga intermedia o pesada.</field>
     </object>
-    <object pk="120" model="main.especial">
+    <object pk="85" model="main.especial">
         <field type="CharField" name="nombre">Ráfaga de golpes</field>
         <field type="CharField" name="descripcion">Un monje puede hacer una ráfaga de golpes como acción de ataque completo. Cuando haga esto puede hacer un ataque adicional usando cualquier combinación de ataques sin armas. El BAB es el nivel de monje - 2. A nivel 8 y 15 puede usar otro ataque extra. Un monje aplica su bonificador completo de fuerza a sus tiradas de daño para todos los ataques con éxito hechos con ráfaga de golpes.</field>
     </object>
-    <object pk="121" model="main.especial">
+    <object pk="86" model="main.especial">
         <field type="CharField" name="nombre">Impacto sin arma</field>
         <field type="CharField" name="descripcion">Un monje gana Impacto sin arma mejorado como dote adicional. Los ataques de un monje pueden ser con el puño, codo, rodillas y pies. Esto significa que un monje puede hacer ataques sin armas con sus manos ocupadas. En consecuencia un monje puede aplicar su bonificador completo de fuerza a las tiradas de daño de todos sus ataques sin armas. El impacto sin arma de un monje es tratado como arma manufacturada y como arma natural a los propósitos de conjuros y efectos que mejoren o aumenten armas manufacturadas o naturales.</field>
     </object>
-    <object pk="122" model="main.especial">
+    <object pk="87" model="main.especial">
         <field type="CharField" name="nombre">Dotes adicionales del monje</field>
         <field type="CharField" name="descripcion">A nivel 1, nivel 2, y cada 4 niveles a partir de entonces, un monje puede seleccionar una dote adicional. Esa dote debe ser escogida de la siguiente lista: Usar arma improvisada, Reflejos de combate, Desviar flechas, Esquiva, Presa mejorada, Estilo del escorpión y Lanzar cualquier cosa. A nivel 6, las siguientes dotes se añaden a la lista: Puño del gorgón, Embestida mejorada, Desarme mejorado, Finta mejorada, Derribo mejorado y Movilidad. A nivel 10, las siguientes dotes son añadidas a la lista: Ira de la medusa, Atrapar flechas y Ataque elástico. Un monje no necesita tener ninguna de las condiciones previas requeridas normalmente para esas dotes para poder seleccionarlas.</field>
     </object>
-    <object pk="123" model="main.especial">
+    <object pk="88" model="main.especial">
         <field type="CharField" name="nombre">Puñetazo aturdidor</field>
         <field type="CharField" name="descripcion">El monje gana Puñetazo aturdidor como dote adicional, incluso si no reúne los requisitos. A nivel 4, y cada 4 niveles a partir de entonces, el monje gana la capacidad de aplicar un nuevo estado al objetivo con su Puñetazo aturdidor. Este estado reemplaza el aturdimiento del objetivo durante 1 asalto, y una tirada de salvación exitosa aun niega el efecto. A nivel 4, puede escoger que el objetivo quede fatigado. A nivel 8, puede hacer que el objetivo quede indispuesto. A nivel 12, puede hacer que el objetivo quede grogui durante 1d6 + 1 asalto. A nivel 16, puede dejar ciego o sordo permanentemente al objetivo. A nivel 20, puede paralizar al objetivo durante 1d6 + 1 asaltos.</field>
     </object>
-    <object pk="124" model="main.especial">
+    <object pk="89" model="main.especial">
         <field type="CharField" name="nombre">Evasión del monje</field>
         <field type="CharField" name="descripcion">Si un monje hace una TS exitosa de Reflejos contra un ataque que normalmente infligiría medio daño con una salvación exitosa, en su lugar no recibe daño. Evasión puede ser usada únicamente si un monje viste armadura ligera o va sin armadura. Un monje indefenso no gana los beneficios de evasión.</field>
     </object>
-    <object pk="125" model="main.especial">
+    <object pk="90" model="main.especial">
         <field type="CharField" name="nombre">Movimiento rápido</field>
         <field type="CharField" name="descripcion">Un monje gana un bonificador de mejora a su movimiento terrestre, que subirá con los niveles de monje. Un monje con armadura o que porta una carga mediana o pesada pierde esta velocidad adicional.</field>
     </object>
-    <object pk="126" model="main.especial">
+    <object pk="91" model="main.especial">
         <field type="CharField" name="nombre">Entrenamiento en maniobras</field>
         <field type="CharField" name="descripcion">Un monje usa su nivel de monje en lugar de su bonificador de ataque base cuando calcula su BMC.</field>
     </object>
-    <object pk="127" model="main.especial">
+    <object pk="92" model="main.especial">
         <field type="CharField" name="nombre">Mente en calma</field>
         <field type="CharField" name="descripcion">Un monje de nivel 3 o superior gana un bonificador +2 a las tiradas de salvación contra conjuros y efectos de encantamiento.</field>
     </object>
-    <object pk="128" model="main.especial">
+    <object pk="93" model="main.especial">
         <field type="CharField" name="nombre">Reserva de ki</field>
         <field type="CharField" name="descripcion">Un monje gana una reserva de puntos de ki, energía sobrenatural que puede usar para llevar a cabo hazañas asombrosas. El número de puntos en la reserva de ki de un monje es igual a la mitad de su nivel de monje + su modificador de sabiduría. Mientras tenga al menos 1 punto en su reserva de ki, puede hacer un ataque ki. Mientras tenga un punto de ki, a nivel 4, sus ataques sin armas son tratados como armas mágicas para superar la reducción del daño, a nivel 7, sus ataques sin armas son tratados como hierro frío y plata para superar la reducción del daño a nivel 10, sus ataques sin armas son tratados como armas legales para superar la reducción del daño, a nivel 16, sus ataques sin armas son tratados como armas adamantinas para superar la reducción del daño y traspasar la dureza. Gastando 1 punto de su reserva de ki, un monje puede hacer un ataque adicional con su mayor bonificador de ataque cuando hace un ataque de ráfaga de golpes. Además, puede gastar 1 punto para aumentar su velocidad en 6 metros durante 1 asalto. Finalmente, un monje puede gastar 1 punto de su reserva de ki para darse a si mismo un bonificador de esquiva +4 a la CA durante un asalto. Cada uno de esos poderes es activado como una acción rápida. La reserva de ki se llena cada mañana después de 8 horas de descanso o meditación; esas horas no necesitan ser consecutivas.</field>
     </object>
-    <object pk="129" model="main.especial">
+    <object pk="94" model="main.especial">
         <field type="CharField" name="nombre">Caída lentificada</field>
         <field type="CharField" name="descripcion">Un monje cuyos brazos alcancen un muro puede usarlo para frenar su caída. La capacidad del monje para frenar su caída mejora con su nivel de monje.</field>
     </object>
-    <object pk="130" model="main.especial">
+    <object pk="95" model="main.especial">
         <field type="CharField" name="nombre">Gran salto</field>
         <field type="CharField" name="descripcion">Un monje añade su nivel a todas las pruebas de acrobacias hechas para saltar, tanto para saltos verticales como horizontales. Además, se considera que siempre que ha comenzado a correr cuando hace la prueba de salto usando acrobacias. Gastando 1 punto de su reserva de ki como acción rápida, un monje gana un bonificador +20 a las pruebas de acrobacias hechas para saltar durante un asalto.</field>
     </object>
-    <object pk="131" model="main.especial">
+    <object pk="96" model="main.especial">
         <field type="CharField" name="nombre">Pureza corporal</field>
         <field type="CharField" name="descripcion">Un monje gana inmunidad a todas las enfermedades, incluyendo enfermedades sobrenaturales y mágicas.</field>
     </object>
-    <object pk="132" model="main.especial">
+    <object pk="97" model="main.especial">
         <field type="CharField" name="nombre">Plenitud corporal</field>
         <field type="CharField" name="descripcion">Un monje puede sanar sus propias heridas como una acción estándar. Puede sanar un número de puntos de golpe de daño igual a su nivel de monje usando 2 puntos de su reserva de ki.</field>
     </object>
-    <object pk="133" model="main.especial">
+    <object pk="98" model="main.especial">
         <field type="CharField" name="nombre">Evasión mejorada del monje</field>
         <field type="CharField" name="descripcion">La capacidad de evasión del monje mejora. El sigue sin recibir daño con una tirada de salvación de reflejos exitosa contra ataques, pero de ahora en adelante recibe sólo medio daño de las salvaciones fallidas. Un monje indefenso no gana el beneficio de evasión mejorada.</field>
     </object>
-    <object pk="134" model="main.especial">
+    <object pk="99" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo diamantino</field>
         <field type="CharField" name="descripcion">Un monje gana inmunidad a los venenos de todo tipo.</field>
     </object>
-    <object pk="135" model="main.especial">
+    <object pk="100" model="main.especial">
         <field type="CharField" name="nombre">Paso abundante</field>
         <field type="CharField" name="descripcion">Un monje puede deslizarse mágicamente entre los espacios, como si usara el conjuro puerta dimensional . Usar esta capacidad es una acción de movimiento que consume 2 puntos de su reserva de ki. Su nivel de lanzador para este efecto es igual a su nivel de monje. No puede llevar otras criaturas con él usando esta capacidad.</field>
     </object>
-    <object pk="136" model="main.especial">
+    <object pk="101" model="main.especial">
         <field type="CharField" name="nombre">Alma diamantina</field>
         <field type="CharField" name="descripcion">Un monje gana resistencia a conjuros igual a su actual nivel de monje + 10.</field>
     </object>
-    <object pk="137" model="main.especial">
+    <object pk="102" model="main.especial">
         <field type="CharField" name="nombre">Palma temblorosa</field>
         <field type="CharField" name="descripcion">Puede usar este ataque de palma temblorosa una vez al día, y debe anunciar su intento antes de hacer su tirada de ataque. Las criaturas inmunes a ataques críticos no se ven afectadas. Si acierta, el monje puede intentar matar a la víctima en cualquier momento, siempre y cuando el intento se haga dentro de un número de días igual a su nivel de monje. Para hacer esta tentativa, el monje simplemente desea que el objetivo muera (como acción inmediata), y a no ser que el objetivo supere una tirada de salvación de fortaleza (CD 10 + la mitad de su nivel de monje + el modificador de sabiduría), muere. Si la tirada de salvación tiene éxito, el objetivo ya no corre peligro de ese ataque en concreto de palma temblorosa, pero todavía puede verse afectado por otra en un momento posterior. Un monje no puede tener más de 1 palma temblorosa en vigor al mismo tiempo. Si un monje usa palma temblorosa mientras otra todavía está en vigor, el efecto previo es negado.</field>
     </object>
-    <object pk="138" model="main.especial">
+    <object pk="103" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo eterno del monje</field>
         <field type="CharField" name="descripcion">Un monje no recibe penalizaciones a sus puntuaciones de capacidad por envejecimiento y no puede ser envejecido mágicamente. Cualquier penalización que ya haya recibido, sin embargo, se mantiene. El monje aún puede morir por su vejez.</field>
     </object>
-    <object pk="139" model="main.especial">
+    <object pk="104" model="main.especial">
         <field type="CharField" name="nombre">Lengua del sol y la luna</field>
         <field type="CharField" name="descripcion">Un monje a nivel 17 o mayor puede hablar con cualquier criatura viviente.</field>
     </object>
-    <object pk="140" model="main.especial">
+    <object pk="105" model="main.especial">
         <field type="CharField" name="nombre">Cuerpo vacío</field>
         <field type="CharField" name="descripcion">Un monje gana la capacidad de asumir un estado etéreo durante 1 minuto como si usara el conjuro eternidad . Usar esta capacidad es una acción de movimiento que consume 3 puntos de su reserva de ki. Esta capacidad sólo afecta al monje.</field>
     </object>
-    <object pk="141" model="main.especial">
+    <object pk="106" model="main.especial">
         <field type="CharField" name="nombre">Yo perfecto</field>
         <field type="CharField" name="descripcion">A nivel 20, un monje se convierte en una criatura mágica. Es tratado para siempre como un ajeno más que como un humanoide (o el tipo de criatura que fuera el monje) a los efectos de conjuros o efectos mágicos. Además, el monje gana reducción del daño 10/caótico. A diferencia de otros ajenos, el monje todavía puede ser traído de vuelta de la muerte como si fuera un miembro de su tipo de criatura anterior.</field>
     </object>
-    <object pk="142" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del paladín</field>
-        <field type="CharField" name="descripcion">d10.</field>
-    </object>
-    <object pk="143" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del paladín</field>
-        <field type="CharField" name="descripcion">artesanía(int), averiguar intenciones(sab), conocimiento de conjuros(int), curar(sab), diplomacia(car), montar(des), profesión(sab), saber(nobleza)(int), saber(religión)(int) y trato con animales(car).</field>
-    </object>
-    <object pk="144" model="main.especial">
-        <field type="CharField" name="nombre">Puntos de habilidad por nivel del paladín</field>
-        <field type="CharField" name="descripcion">2 + modificador de inteligencia.</field>
-    </object>
-    <object pk="145" model="main.especial">
-        <field type="CharField" name="nombre">Competencias del paladín</field>
-        <field type="CharField" name="descripcion">Los paladines son competentes con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
-    </object>
-    <object pk="146" model="main.especial">
+    <object pk="107" model="main.especial">
         <field type="CharField" name="nombre">Aura buena</field>
         <field type="CharField" name="descripcion">El poder del aura buena de un paladín es igual a su nivel de paladín.</field>
     </object>
-    <object pk="147" model="main.especial">
+    <object pk="108" model="main.especial">
         <field type="CharField" name="nombre">Detectar el mal</field>
         <field type="CharField" name="descripcion">A voluntad, un paladín puede usar detectar el mal, como el conjuro. Un paladín puede, como acción de movimiento, concentrarse en un objeto individual o individuo dentro de 18 metros y determinar si es malvado, leyendo la fuerza de su aura como si lo hubiera estudiado durante 3 asaltos. Mientras se centre en un individuo u objeto, el paladín no detecta el mal en ningún otro objeto o individuo dentro del alcance.</field>
     </object>
-    <object pk="148" model="main.especial">
+    <object pk="109" model="main.especial">
         <field type="CharField" name="nombre">Castigar al mal</field>
         <field type="CharField" name="descripcion">Como acción rápida, el paladín escoge un objetivo en su línea de visión al que castigar. Si el objetivo es malvado, el paladín añade su bonificador de carisma a sus tiradas de ataque y añade su nivel de paladín a todas las tiradas de daño contra el objetivo que está castigando. Si el objetivo de castigar al mal es un ajeno con el subtipo maligno, un dragón de alineamiento malvado, o una criatura muerta viviente, el bonificador al daño en el primer ataque con éxito se incrementa a 2 puntos de daño por cada nivel de paladín que tenga. Independientemente del objetivo, castigar al mal sobrepasa automáticamente cualquier RD que posea la criatura. Además, mientras castigar al mal esté en funcionamiento, el paladín gana un bonificador de desvío igual a su modificador de carisma a su CA contra ataques hechos por el objetivo del castigo. Si el paladín escoge como objetivo una criatura que no es malvada, el castigo se pierde sin causar efectos. Los efectos del castigar al mal permanecen hasta que el objetivo del castigar está muerto o la próxima vez que el paladín descanse y vuelva a ganar sus usos de esta capacidad. A nivel 4, y cada tres niveles puede realizar esto 1 vez más.</field>
     </object>
-    <object pk="149" model="main.especial">
+    <object pk="110" model="main.especial">
         <field type="CharField" name="nombre">Gracia divina</field>
         <field type="CharField" name="descripcion">Un paladín gana un bonificador igual a su bonificar de carisma en todas sus tiradas de salvación.</field>
     </object>
-    <object pk="150" model="main.especial">
+    <object pk="111" model="main.especial">
         <field type="CharField" name="nombre">Imposición de manos</field>
         <field type="CharField" name="descripcion">Un paladín puede sanar heridas al toque. Cada día puede usar esta capacidad un número de veces igual a la mitad de su nivel de paladín más su modificador de carisma. Con cada uso de esta capacidad, un paladín puede sanar 1d6 puntos de golpe de daño por cada dos niveles de paladín que tenga. Usar esta capacidad es una acción estándar, a no ser que el paladín se cure a si mismo, en cuyo caso es una acción rápida. Alternativamente, un paladín puede usar este poder curativo para infligir daño a criaturas muertas vivientes, infligiendo 1d6 puntos de año por cada dos niveles que posea de paladín. Usar la imposición de manos de esta manera requiere un ataque de toque cuerpo a cuerpo exitoso y no provoca un ataque de oportunidad. Los muertos vivientes no reciben una tirada de salvación contra este daño.</field>
     </object>
-    <object pk="151" model="main.especial">
+    <object pk="112" model="main.especial">
         <field type="CharField" name="nombre">Aura de valor</field>
         <field type="CharField" name="descripcion">Un paladín es inmune al miedo (mágico o de otro tipo). Cada aliado a 3 metros o menos de él gana un bonificador de moral +4 a las tiradas de salvación contra los efectos del miedo. Esta capacidad funciona solo mientras el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="152" model="main.especial">
+    <object pk="113" model="main.especial">
         <field type="CharField" name="nombre">Salud divina</field>
         <field type="CharField" name="descripcion">Un paladín es inmune a todas las enfermedades, incluyendo las enfermedades sobrenaturales y las mágicas.Incluyendo la putridez de momia.</field>
     </object>
-    <object pk="153" model="main.especial">
+    <object pk="114" model="main.especial">
         <field type="CharField" name="nombre">Merced</field>
         <field type="CharField" name="descripcion">A nivel 3, y cada tres niveles, un paladín puede seleccionar una merced. Cada merced añade un efecto a la capacidad de imposición de manos del paladín. Cada vez que el paladín use imposición de manos para sanar daño a un objetivo, el objetivo también recibe los efectos adicionales de todas las mercedes que posea el paladín. Una merced puede eliminar un estado causado por una maldición, enfermedad o veneno sin curar el mal en si mismo. Tales estados vuelven después de 1 hora a no ser que la merced elimine realmente la aflicción que origina el estado. Estas capacidades son acumulativas.</field>
     </object>
-    <object pk="154" model="main.especial">
+    <object pk="115" model="main.especial">
         <field type="CharField" name="nombre">Canalizar energía positiva</field>
         <field type="CharField" name="descripcion">Cuando un paladín alcanza el nivel 4, gana la capacidad sobrenatural de canalizar energía positiva como un clérigo. Usar esta capacidad consume dos usos de su capacidad de imposición de manos. Un paladín usa su nivel como nivel efectivo de clérigo cuando canaliza energía positiva. Esta es una capacidad basada en el carisma.</field>
     </object>
-    <object pk="155" model="main.especial">
+    <object pk="116" model="main.especial">
         <field type="CharField" name="nombre">Conjuros de paladín</field>
         <field type="CharField" name="descripcion">Comenzando a nivel 4, un paladín gana la capacidad de lanzar conjuros divinos que son extraídos de la lista de conjuros de paladín. Un paladín debe escoger y preparar sus conjuros con antelación. Para preparar o lanzar un conjuro, un paladín debe tener una puntuación de carisma como mínimo igual a 10 + nivel de conjuro. La CD para una tirada de salvación contra el conjuro de un paladín es igual a 10 + nivel del conjuro + el modificador de carisma del paladín. Un paladín debe invertir 1 hora cada día en la oración y la meditación silenciosa para recuperar su asignación diaria de hechizos. Su nivel de lanzador es igual a su nivel de paladín – 3.</field>
     </object>
-    <object pk="156" model="main.especial">
+    <object pk="117" model="main.especial">
         <field type="CharField" name="nombre">Vínculo de paladín</field>
         <field type="CharField" name="descripcion">Al llegar a nivel 5, un paladín forma un vínculo divino con su dios, permitiendole mejorar su arma como acción estándar haciendo un llamamiento a la ayuda de un espíritu celestial durante un minuto por nivel de paladín. Cuando es llamado, el espíritu causa que el arma emane luz como una antorcha. A nivel 5, este espíritu garantiza al arma un bonificador +1 de mejora. Cada tres niveles el arma gana otro modificador +1 de mejora. Estos bonificadores pueden ser añadidos al arma, apilándose con los bonificadores existentes en el arma hasta un máximo de +5, o pueden ser usados para añadir alguna de las siguiente propiedades al arma: axiomática, radiante, defensora, disruptora, flamígera, flamígera explosiva, sagrada, afilada, compasiva y veloz. Añadir estas propiedades consume una cantidad de bonificación igual al coste de la propiedad. Estos bonificadores se añaden a cualquier propiedad que el arma ya tenga, pero no se apilan habilidades duplicadas. Si el arma no es mágica, al menos hay que añadir un bonificador de mejora +1 antes de poder añadir cualquier otra propiedad. El espíritu celestial no concede bonificadores si el arma está en poder de cualquier otro que no sea el paladín pero vuelve a concederlas si retorna al paladín. Un paladín puede usar esta capacidad una vez al día a nivel 5, y una vez adicional al día por cada cuatro niveles. Si un arma vinculada con un espíritu celestial es destruida, el paladín pierde el uso de esta capacidad durante 30 días, o hasta que gane un nivel, lo que ocurra antes. Durante este periodo de 30 días, el paladín recibe un penalizador -1 a las tiradas de ataque y daño con arma.</field>
     </object>
-    <object pk="157" model="main.especial">
+    <object pk="118" model="main.especial">
         <field type="CharField" name="nombre">Aura de decisión</field>
         <field type="CharField" name="descripcion">Un paladín es inmune los conjuros y aptitudes sortílegas de hechizo. Cada aliado a 3 metros del paladín gana un bonificador de moral +4 a las tiradas de salvación contra efectos de hechizo. Esta capacidad funciona sólo mientras el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="158" model="main.especial">
+    <object pk="119" model="main.especial">
         <field type="CharField" name="nombre">Aura de justicia</field>
         <field type="CharField" name="descripcion">Un paladín puede gastar dos usos de su capacidad de castigar al mal para otorgar la capacidad de castigar al mal a todos los aliados a 3 metros de él, usando los bonificadores del paladín. Los aliados pueden usar esta capacidad de castigar al mal desde el comienzo del siguiente turno del paladín y los bonificadores duran 1 minuto. Usar esta capacidad es una acción gratuita. Las criaturas malignas no reciben beneficios de esta capacidad.</field>
     </object>
-    <object pk="159" model="main.especial">
+    <object pk="120" model="main.especial">
         <field type="CharField" name="nombre">Aura de fe</field>
         <field type="CharField" name="descripcion">Las armas de un paladín son tratadas como si tuvieran alineamiento bueno para superar la reducción del daño. Cualquier ataque hecho contra un enemigo a 3 metros del paladín es tratado como si tuviera alineamiento bueno para superar la reducción del daño. Esta capacidad funciona sólo cuando el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="160" model="main.especial">
+    <object pk="121" model="main.especial">
         <field type="CharField" name="nombre">Aura de rectitud</field>
         <field type="CharField" name="descripcion">Un paladín gana RD 5/mal e inmunidad a los conjuros y habilidades sortílegas de compulsión. Cada aliado dentro de 3 metros de él gana un bonificador de moral +4 a las tiradas de salvación contra efectos de compulsión. Esta capacidad funciona sólo cuando el paladín está consciente, no si está inconsciente o muerto.</field>
     </object>
-    <object pk="161" model="main.especial">
+    <object pk="122" model="main.especial">
         <field type="CharField" name="nombre">Campeón sagrado</field>
         <field type="CharField" name="descripcion">Un paladín se convierte en un conducto para el poder de su dios. Su RD se incrementa a 10/mal. Cada vez que use castigar al mal e impacta con éxito a un ajeno maligno, el ajeno también queda afectado por un destierro, usando su nivel de paladín como el nivel de lanzador (su arma y símbolo sagrado cuentan automáticamente como objeto que el sujeto odia). Después de que el efecto del destierro y el daño del ataque se hayan resuelto, el castigo finaliza inmediatamente. Además, cada vez que canalice energía positiva o use imposición de manos para sanar una criatura, sana la cantidad máxima posible.</field>
     </object>
-    <object pk="162" model="main.especial">
-        <field type="CharField" name="nombre">Dados de golpe del pícaro</field>
-        <field type="CharField" name="descripcion">d8.</field>
-    </object>
-    <object pk="163" model="main.especial">
-        <field type="CharField" name="nombre">Habilidades de clase del pícaro</field>
-        <field type="CharField" name="descripcion">acrobacias(des), artesanía(int), averiguar intenciones(sab), diplomacia(car), disfrazarse(car), engañar(car), escapismo(des), interpretar(car), intimidar(car), inutilizar mecanismo(des), juego de manos(des), lingüística(int), nadar(fue), percepción(sab), profesión(sab), saber(dungeons)(int), saber(local), sigilo(des), tasación(int), trepar(fue) y usar objeto mágico(car).</field>
-    </object>
-    <object pk="164" model="main.especial">
-        <field type="CharField" name="nombre">Puntos de habilidad por nivel del pícaro</field>
-        <field type="CharField" name="descripcion">8 + modificador de inteligencia.</field>
-    </object>
-    <object pk="165" model="main.especial">
-        <field type="CharField" name="nombre">Competencias del pícaro</field>
-        <field type="CharField" name="descripcion">Los pícaros son competentes con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
-    </object>
-    <object pk="166" model="main.especial">
+    <object pk="123" model="main.especial">
         <field type="CharField" name="nombre">Ataque furtivo</field>
         <field type="CharField" name="descripcion">El ataque del pícaro causa daño adicional en cualquier momento en que el bonificador de destreza a la CA. del objetivo sea negado, o cuando el pícaro flanquea a su objetivo. Este daño adicional es de 1d6 a primer nivel, y se incrementa 1d6 cada dos niveles de pícaro. Si el pícaro consigue asestar un golpe crítico con un ataque furtivo, este daño adicional no es multiplicado. Los ataques a distancia se pueden considerar como ataques furtivos sólo si el objetivo está dentro de 9 metros. Con un arma que inflija daño atenuado, un pícaro puede dar un golpe furtivo que haga daño atenuado en lugar de daño letal. No puede usar un arma que inflinge daño letal para hacer daño atenuado en un ataque furtivo. El pícaro debe ser capaz de ver el objetivo lo suficientemente bien y  no puede hacer un ataque furtivo contra una criatura que tenga ocultación.</field>
     </object>
-    <object pk="167" model="main.especial">
+    <object pk="124" model="main.especial">
         <field type="CharField" name="nombre">Encontrar trampas</field>
         <field type="CharField" name="descripcion">Un pícaro añade la mitad de su nivel a las pruebas de percepción hechas para detectar trampas y a las pruebas de habilidad de inutilizar mecanismo (mínimo +1). Un pícaro puede usar inutilizar mecanismo para desactivar trampas mágicas.</field>
     </object>
-    <object pk="168" model="main.especial">
+    <object pk="125" model="main.especial">
         <field type="CharField" name="nombre">Evasión del pícaro</field>
         <field type="CharField" name="descripcion">Un pícaro puede evitar incluso ataques mágicos e inusuales con gran agilidad. Si supera una tirada de salvación de reflejos contra un ataque que normalmente haría medio daño con una tirada de salvación exitosa, en lugar de eso no recibe daño. Evasión puede ser usada sólo si el pícaro viste armadura ligera o va sin armadura. Un pícaro indefenso no gana el beneficio de evasión.</field>
     </object>
-    <object pk="169" model="main.especial">
+    <object pk="126" model="main.especial">
         <field type="CharField" name="nombre">Talentos del pícaro</field>
         <field type="CharField" name="descripcion">Empezando a nivel 2, un pícaro gana un talento de pícaro. Gana un talento de pícaro adicional en los niveles pares del pícaro hasta nivel 10. Un pícaro no puede seleccionar un talento individual más de una vez.</field>
     </object>
-    <object pk="170" model="main.especial">
+    <object pk="127" model="main.especial">
         <field type="CharField" name="nombre">Sentido de las trampas del pícaro</field>
         <field type="CharField" name="descripcion">Un pícaro gana un sentido intuitivo que le alerta del peligro de las trampas, dándole un bonificador +1 a las salvaciones de reflejos hechos para evitar trampas y un bonificador +1 de esquiva a la CA contra ataques hechos por trampas. Estos bonificadores aumentan en 1 en los niveles 6, 9, 12, 15 y 18. Los bonificadores de sentido de las trampas ganados por múltiples clases se apilan.</field>
     </object>
-    <object pk="171" model="main.especial">
+    <object pk="128" model="main.especial">
         <field type="CharField" name="nombre">Esquiva asombrosa del pícaro</field>
         <field type="CharField" name="descripcion">No puede ser cogido desprevenido, incluso si el atacante es invisible. Todavía pierde su bonificador de Destreza a la CA si está inmovilizado. Un pícaro con esta capacidad todavía puede perder su bonificador de Destreza a la CA si un oponente usa una acción de fintar de manera exitosa contra él.</field>
     </object>
-    <object pk="172" model="main.especial">
+    <object pk="129" model="main.especial">
         <field type="CharField" name="nombre">Esquiva asombrosa mejorada del pícaro</field>
         <field type="CharField" name="descripcion">Un pícaro de nivel 8 o mayor ya no puede ser flanqueado. Esta defensa niega a otro pícaro la capacidad de hacer un ataque furtivo al personaje al flanquearlo, a no ser que el atacante tenga al menos cuatro niveles de pícaro más que el objetivo.</field>
     </object>
-    <object pk="173" model="main.especial">
+    <object pk="130" model="main.especial">
         <field type="CharField" name="nombre">Talentos mejorados del pícaro</field>
         <field type="CharField" name="descripcion">A nivel 10, y cada dos niveles a partir de entonces, un pícaro puede escoger un talento avanzado en lugar de un talento de pícaro.</field>
     </object>
-    <object pk="174" model="main.especial">
+    <object pk="131" model="main.especial">
         <field type="CharField" name="nombre">Golpe maestro</field>
         <field type="CharField" name="descripcion">Alcanzado el nivel 20, un pícaro se vuelve increíblemente mortal cuando inflige daño con ataque furtivo. Cada vez que el pícaro inflige daño con ataque furtivo, puede escoger uno de los siguientes tres efectos: el objetivo puede caer dormido durante 1d4 horas, paralizado durante 2d6 asaltos o asesinado. Independientemente del efecto escogido, el objetivo recibe una salvación de fortaleza para negar el efecto adicional. La CD de esta salvación es igual a 10 + la mitad del nivel de pícaro + el modificador de inteligencia. Una vez que una criatura ha sido el objetivo de un golpe maestro, independientemente de si ha tenido éxito en la salvación o no, la criatura es inmune al golpe maestro del pícaro durante 24 horas. Las criaturas que son inmunes al ataque furtivo del pícaro también son inmunes a esta capacidad.</field>
     </object>
-    <object pk="175" model="main.especial">
+    <object pk="132" model="main.especial">
         <field type="CharField" name="nombre">Vínculo</field>
         <field type="CharField" name="descripcion">El dueño puede controlar a su compañero animal como acción gratuita o presionarle como acción de movimiento, incluso si no tiene ningún rango en la habilidad de trato con animales. El dueño obtiene un bonificador +4 de circunstancia en todas las pruebas de empatía animal y trato con animales con relación a un compañero animal.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="176" model="main.especial">
+    <object pk="133" model="main.especial">
         <field type="CharField" name="nombre">Compartir conjuros</field>
         <field type="CharField" name="descripcion">El dueño puede lanzar un conjuro con un objetivo "tú" sobre su compañero animal (como si fuera un conjuro con alcance de toque) en lugar de usarlo sobre sí mismo. El dueño puede lanzar conjuros sobre su compañero animal incluso si los conjuros normalmente no afectaría a criaturas del tipo de su compañero (animal). Los conjuros lanzados de esta forma deben provenir de la clase que concede el compañero animal. Esta aptitud no permite al compañero animal compartir aptitudes que no sean conjuros, ni siquiera si estas funcionan como conjuros.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="177" model="main.especial">
+    <object pk="134" model="main.especial">
         <field type="CharField" name="nombre">Evasión del compañero animal</field>
         <field type="CharField" name="descripcion">Si un compañero es sometido a un ataque que normalmente permite una tirada de salvación de reflejos para reducir el daño a la mitad, no recibe ningún daño con una tirada de salvación con éxito.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="178" model="main.especial">
+    <object pk="135" model="main.especial">
         <field type="CharField" name="nombre">Aumento de puntuación de caracteristica</field>
         <field type="CharField" name="descripcion">El compañero animal añade +1 a una de sus características.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="179" model="main.especial">
+    <object pk="136" model="main.especial">
         <field type="CharField" name="nombre">Devoción</field>
         <field type="CharField" name="descripcion">Un compañero animal obtiene un bonificador +4 de moral a sus tiradas de salvación de voluntad contra conjuros y efectos de encantamiento.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="180" model="main.especial">
+    <object pk="137" model="main.especial">
         <field type="CharField" name="nombre">Ataque múltiple</field>
         <field type="CharField" name="descripcion">Un compañero animal obtiene Ataque múltiple como dote adicional si tiene tres o más ataques naturales y no posee ya esa dote. Si no cumple el requisito de tres o más ataques naturales, en su lugar el compañero animal obtiene un segundo ataque con una de sus armas naturales, aunque con un penalizador -5.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="181" model="main.especial">
+    <object pk="138" model="main.especial">
         <field type="CharField" name="nombre">Evasión mejorada del compañero animal</field>
         <field type="CharField" name="descripcion">Cuando sea expuesto a un ataque que permita una tirada de salvación de reflejos para reducir el daño a la mitad, un compañero animal no recibe daño si consigue una tirada de salvación con éxito y sólo recibe la mitad de daño si la tirada de salvación falla.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="182" model="main.especial">
+    <object pk="139" model="main.especial">
         <field type="CharField" name="nombre">Visión en la penumbra</field>
         <field type="CharField" name="descripcion">Tiene visión en la penumbra.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="183" model="main.especial">
+    <object pk="140" model="main.especial">
         <field type="CharField" name="nombre">Olfato</field>
         <field type="CharField" name="descripcion">Tiene olfato.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="184" model="main.especial">
+    <object pk="141" model="main.especial">
         <field type="CharField" name="nombre">Aptitud especial: murciélago</field>
         <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de volar.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="185" model="main.especial">
+    <object pk="142" model="main.especial">
         <field type="CharField" name="nombre">Aptitud especial: gato</field>
         <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de sigilo.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="186" model="main.especial">
+    <object pk="143" model="main.especial">
         <field type="CharField" name="nombre">Aptitud especial: lagarto</field>
         <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de trepar.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="187" model="main.especial">
+    <object pk="144" model="main.especial">
         <field type="CharField" name="nombre">Aptitud especial: mono</field>
         <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de acrobacias.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="188" model="main.especial">
+    <object pk="145" model="main.especial">
         <field type="CharField" name="nombre">Aptitud especial: rata</field>
         <field type="CharField" name="descripcion">El amo gana un bonificador +2 a las tiradas de salvación de fortaleza.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="189" model="main.especial">
+    <object pk="146" model="main.especial">
         <field type="CharField" name="nombre">Aptitud especial: cuervo</field>
         <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de tasación.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="190" model="main.especial">
+    <object pk="147" model="main.especial">
         <field type="CharField" name="nombre">Aptitud especial: víbora</field>
         <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las pruebas de engañar.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
     </object>
-    <object pk="191" model="main.especial">
+    <object pk="148" model="main.especial">
         <field type="CharField" name="nombre">Aptitud especial: comadreja</field>
         <field type="CharField" name="descripcion">El amo gana un bonificador +3 a las tiradas de salvación de reflejos.</field>
         <field type="BooleanField" name="es_especial_companero_animal">True</field>
+    </object>
+    <object pk="149" model="main.especial">
+        <field type="CharField" name="nombre">Conocimiento del bardo</field>
+        <field type="CharField" name="descripcion">un bardo suma la mitad de su nivel de clase (mínimo 1) a todas las pruebas de habilidades de saber y puede hacer pruebas en todas las de saber sin necesidad de entrenarlas.</field>
     </object>
 <!--PODERES-->
     <!--PODERES DE BÁRBARO-->
@@ -7471,8 +7299,8 @@
         <field type="IntegerField" name="destreza">0</field>
         <field type="IntegerField" name="numero_trucos">1</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
         </field>
     </object>
     <object pk="2" model="main.companeroanimal">
@@ -7490,8 +7318,8 @@
         <field type="IntegerField" name="destreza">0</field>
         <field type="IntegerField" name="numero_trucos">1</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
         </field>
     </object>
     <object pk="3" model="main.companeroanimal">
@@ -7509,9 +7337,9 @@
         <field type="IntegerField" name="destreza">1</field>
         <field type="IntegerField" name="numero_trucos">2</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
         </field>
     </object>
     <object pk="4" model="main.companeroanimal">
@@ -7529,10 +7357,10 @@
         <field type="IntegerField" name="destreza">1</field>
         <field type="IntegerField" name="numero_trucos">2</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="178"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
         </field>
     </object>
     <object pk="5" model="main.companeroanimal">
@@ -7550,9 +7378,9 @@
         <field type="IntegerField" name="destreza">1</field>
         <field type="IntegerField" name="numero_trucos">2</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
         </field>
     </object>
     <object pk="6" model="main.companeroanimal">
@@ -7570,10 +7398,10 @@
         <field type="IntegerField" name="destreza">2</field>
         <field type="IntegerField" name="numero_trucos">3</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
         </field>
     </object>
     <object pk="7" model="main.companeroanimal">
@@ -7591,10 +7419,10 @@
         <field type="IntegerField" name="destreza">2</field>
         <field type="IntegerField" name="numero_trucos">3</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
         </field>
     </object>
     <object pk="8" model="main.companeroanimal">
@@ -7612,10 +7440,10 @@
         <field type="IntegerField" name="destreza">2</field>
         <field type="IntegerField" name="numero_trucos">3</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
         </field>
     </object>
     <object pk="9" model="main.companeroanimal">
@@ -7633,12 +7461,12 @@
         <field type="IntegerField" name="destreza">3</field>
         <field type="IntegerField" name="numero_trucos">4</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
-            <object pk="178"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="135"></object>
         </field>
     </object>
     <object pk="10" model="main.companeroanimal">
@@ -7656,11 +7484,11 @@
         <field type="IntegerField" name="destreza">3</field>
         <field type="IntegerField" name="numero_trucos">4</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
         </field>
     </object>
     <object pk="11" model="main.companeroanimal">
@@ -7678,11 +7506,11 @@
         <field type="IntegerField" name="destreza">3</field>
         <field type="IntegerField" name="numero_trucos">4</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
         </field>
     </object>
     <object pk="12" model="main.companeroanimal">
@@ -7700,11 +7528,11 @@
         <field type="IntegerField" name="destreza">4</field>
         <field type="IntegerField" name="numero_trucos">5</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
         </field>
     </object>
     <object pk="13" model="main.companeroanimal">
@@ -7722,11 +7550,11 @@
         <field type="IntegerField" name="destreza">4</field>
         <field type="IntegerField" name="numero_trucos">5</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
         </field>
     </object>
     <object pk="14" model="main.companeroanimal">
@@ -7744,12 +7572,12 @@
         <field type="IntegerField" name="destreza">4</field>
         <field type="IntegerField" name="numero_trucos">5</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
-            <object pk="178"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="135"></object>
         </field>
     </object>
     <object pk="15" model="main.companeroanimal">
@@ -7767,12 +7595,12 @@
         <field type="IntegerField" name="destreza">5</field>
         <field type="IntegerField" name="numero_trucos">6</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
-            <object pk="181"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
         </field>
     </object>
         <object pk="16" model="main.companeroanimal">
@@ -7790,12 +7618,12 @@
         <field type="IntegerField" name="destreza">5</field>
         <field type="IntegerField" name="numero_trucos">6</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
-            <object pk="181"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
         </field>
     </object>
     <object pk="17" model="main.companeroanimal">
@@ -7813,12 +7641,12 @@
         <field type="IntegerField" name="destreza">5</field>
         <field type="IntegerField" name="numero_trucos">6</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
-            <object pk="181"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
         </field>
     </object>
     <object pk="18" model="main.companeroanimal">
@@ -7836,12 +7664,12 @@
         <field type="IntegerField" name="destreza">6</field>
         <field type="IntegerField" name="numero_trucos">7</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
-            <object pk="181"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
         </field>
     </object>
     <object pk="19" model="main.companeroanimal">
@@ -7859,12 +7687,12 @@
         <field type="IntegerField" name="destreza">6</field>
         <field type="IntegerField" name="numero_trucos">7</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
-            <object pk="181"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
         </field>
     </object>
     <object pk="20" model="main.companeroanimal">
@@ -7882,13 +7710,13 @@
         <field type="IntegerField" name="destreza">6</field>
         <field type="IntegerField" name="numero_trucos">7</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="175"></object>
-            <object pk="176"></object>
-            <object pk="177"></object>
-            <object pk="179"></object>
-            <object pk="180"></object>
-            <object pk="181"></object>
-            <object pk="178"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="135"></object>
         </field>
     </object>
     <!--COMPAÑEROS ANIMALES POR TIPO-->
@@ -7907,7 +7735,7 @@
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">22</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
+            <object pk="139"></object>
         </field>
     </object>
     <object pk="22" model="main.companeroanimal">
@@ -7923,7 +7751,7 @@
         <field type="IntegerField" name="sabiduria">14</field>
         <field type="IntegerField" name="carisma">6</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
+            <object pk="139"></object>
         </field>
     </object>
     <object pk="23" model="main.companeroanimal">
@@ -7941,8 +7769,8 @@
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">24</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="24" model="main.companeroanimal">
@@ -7958,8 +7786,8 @@
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">6</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="25" model="main.companeroanimal">
@@ -7977,8 +7805,8 @@
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">26</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="26" model="main.companeroanimal">
@@ -7994,8 +7822,8 @@
         <field type="IntegerField" name="sabiduria">11</field>
         <field type="IntegerField" name="carisma">4</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="27" model="main.companeroanimal">
@@ -8013,8 +7841,8 @@
         <field type="IntegerField" name="nivel_cambio">7</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">28</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="28" model="main.companeroanimal">
@@ -8030,8 +7858,8 @@
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">6</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="29" model="main.companeroanimal">
@@ -8049,8 +7877,8 @@
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">30</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="30" model="main.companeroanimal">
@@ -8066,8 +7894,8 @@
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">6</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="31" model="main.companeroanimal">
@@ -8085,8 +7913,8 @@
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">32</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="32" model="main.companeroanimal">
@@ -8102,8 +7930,8 @@
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">6</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="33" model="main.companeroanimal">
@@ -8121,8 +7949,8 @@
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">34</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <object pk="34" model="main.companeroanimal">
@@ -8138,8 +7966,8 @@
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">7</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="182"></object>
-            <object pk="183"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
         </field>
     </object>
     <!--FAMILIARES-->
@@ -8149,7 +7977,7 @@
         <field type="CharField" name="velocidad">3 metros, volando 24 metros (regular)</field>
         <field type="BooleanField" name="es_familiar">True</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="184"></object>
+            <object pk="141"></object>
         </field>
     </object>
     <object pk="36" model="main.companeroanimal">
@@ -8158,7 +7986,7 @@
         <field type="CharField" name="velocidad">9 metros, trepando 9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="185"></object>
+            <object pk="142"></object>
         </field>
     </object>
     <object pk="37" model="main.companeroanimal">
@@ -8167,7 +7995,7 @@
         <field type="CharField" name="velocidad">3 metros, trepando 9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="186"></object>
+            <object pk="143"></object>
         </field>
     </object>
     <object pk="38" model="main.companeroanimal">
@@ -8176,7 +8004,7 @@
         <field type="CharField" name="velocidad">9 metros, trepando 9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="187"></object>
+            <object pk="144"></object>
         </field>
     </object>
     <object pk="39" model="main.companeroanimal">
@@ -8185,7 +8013,7 @@
         <field type="CharField" name="velocidad">3 metros, trepando 9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="188"></object>
+            <object pk="145"></object>
         </field>
     </object>
     <object pk="40" model="main.companeroanimal">
@@ -8194,7 +8022,7 @@
         <field type="CharField" name="velocidad">3 metros, volando 24 metros (regular)</field>
         <field type="BooleanField" name="es_familiar">True</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="189"></object>
+            <object pk="146"></object>
         </field>
     </object>
     <object pk="41" model="main.companeroanimal">
@@ -8203,7 +8031,7 @@
         <field type="CharField" name="velocidad">3 metros, trepando 9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="190"></object>
+            <object pk="147"></object>
         </field>
     </object>
     <object pk="42" model="main.companeroanimal">
@@ -8212,7 +8040,622 @@
         <field type="CharField" name="velocidad">9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
         <field to="main.especial" name="especial" rel="ManyToManyRel">
-            <object pk="191"></object>
+            <object pk="148"></object>
         </field>
+    </object>
+<!--CLASES--><!--FALTA AÑADIR LOS CONJUROS A LAS CLASES CON NIVELES Y A LAS DE NIVEL 0-->
+    <!--BÁRBARO-->
+    <object pk="1" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d12</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">4 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">acrobacias(des), artesanía(int), intimidar(car), montar(des), nadar(fue), percepción(sab), saber(naturaleza)(int), supervivencia(sab), trato con animales(car), trepar(fue).</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 43-->
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+        </field>
+    </object>
+    <object pk="2" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">0</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="1"></object><!--ACROBACIAS-->
+            <object pk="54"></object><!--TREPAR-->
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="53"></object><!--TRATO CON ANIMALES-->
+            <object pk="24"></object><!--INTIMIDAR-->
+            <object pk="47"></object><!--SABER (NATURALEZA)-->
+            <object pk="30"></object><!--PERCEPCIÓN-->
+            <object pk="28"></object><!--MONTAR-->
+            <object pk="51"></object><!--SUPERVIVENCIA-->
+            <object pk="29"></object><!--NADAR-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+        </field>
+    </object>
+    <object pk="3" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">0</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object pk="4" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+        </field>
+    </object>
+    <object pk="5" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="3"></object>
+        </field>
+    </object>
+    <object pk="6" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+        </field>
+    </object>
+    <object pk="7" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="3"></object>
+        </field>
+    </object>
+    <object pk="8" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+        </field>
+    </object>
+    <object pk="9" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="3"></object>
+        </field>
+    </object>
+    <object pk="10" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+        </field>
+    </object>
+    <object pk="11" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="3"></object>
+        </field>
+    </object>
+    <object pk="12" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="13" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="3"></object>
+        </field>
+    </object>
+    <object pk="14" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="15" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="3"></object>
+        </field>
+    </object>
+    <object pk="16" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+        </field>
+    </object>
+    <object pk="17" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+16/+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="3"></object>
+        </field>
+    </object>
+    <object pk="18" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+17/+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+        </field>
+    </object>
+    <object pk="19" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+18/+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="3"></object>
+        </field>
+    </object>
+    <object pk="20" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+19/+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+        </field>
+    </object>
+    <object pk="21" model="main.clase">
+        <field type="CharField" name="clase">Bárbaro</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+20/+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">12</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 11-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="3"></object>
+        </field>
+    </object>
+    <!--BARDO-->
+    <object pk="22" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d8</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">6 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">acrobacias, artesanía, averiguar intenciones, conocimiento de conjuros, diplomacia, disfrazarse, engañar, escapismo, interpretar, intimidar, juego de manos, lingüística, profesión, percepción, saber (todas), tasación, trepar, sigilo y usar objeto mágico.</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="44"></object><!--DEL 44 AL 52-->
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="51"></object>
+            <object pk="52"></object>
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="12"></object><!--DEL 12 AL 31-->
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+        </field>
+    </object>
+    <object pk="23" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="fortaleza">0</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="1"></object><!--ACROBACIAS-->
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object><!--AVERIGUAR INTENCIONES-->
+            <object pk="9"></object><!--CONOCIMIENTO DE CONJUROS-->
+            <object pk="11"></object><!--DIPLOMACIA-->
+            <object pk="12"></object><!--DISFRAZARSE-->
+            <object pk="13"></object><!--ENGAÑAR-->
+            <object pk="14"></object><!--ESCAPISMO-->
+            <object pk="15"></object><!--INTERPRETAR-->
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object><!--INTIMIDAR-->
+            <object pk="26"></object><!--JUEGO DE MANOS-->
+            <object pk="27"></object><!--LINGÜÍSTICA-->
+            <object pk="30"></object><!--PERCEPCIÓN-->
+            <object pk="31"></object><!--PROFESIÓN-->
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object><!--SABERES-->
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="52"></object><!--TASACIÓN-->
+            <object pk="54"></object><!--TREPAR-->
+            <object pk="50"></object><!--SIGILO-->
+            <object pk="55"></object><!--USAR OBJETO MÁGICO-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="2"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="1"></object>
+        </field>
+    </object>
+    <object pk="1" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="2" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="1" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="24" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">0</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="4"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="2"></object>
+        </field>
+    </object>
+    <object pk="3" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="4" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="2" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="cantidad">2</field>
     </object>
 </django-objects>

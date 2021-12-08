@@ -54,6 +54,7 @@ class Personaje(models.Model):
     sabiduria = models.IntegerField(verbose_name='Sabiduría',
      default=10)
     carisma = models.IntegerField(verbose_name='Carisma', default=10)
+    dinero = models.FloatField(verbose_name='Dinero', default=0.0)
     es_publico = models.BooleanField(verbose_name='Es público', default=False)
     idiomas = models.ManyToManyField('Idioma')
     inmune = models.ManyToManyField('Inmune')
@@ -162,7 +163,7 @@ class Personaje(models.Model):
 
     class Clase(models.Model):
         clase = models.TextField(verbose_name='Clase')
-        nivel = models.IntegerField(verbose_name='Nivel', default=1, null=True)
+        nivel = models.IntegerField(verbose_name='Nivel', default=0)
         dados_de_golpe = models.IntegerField(verbose_name='Dados de golpe',
         default=6, null=True)
         ataque_base = models.TextField(verbose_name='Ataque base',
@@ -176,14 +177,18 @@ class Personaje(models.Model):
         dano_desarmado = models.TextField(verbose_name='Daño desarmado', null = True)
         bonificacion_ac = models.IntegerField(verbose_name='Bonificación AC', null = True)
         movimiento_rapido = models.IntegerField(verbose_name='Movimiento rápido', null =True)
-        puntos_de_habilidad_por_nivel = models.TextField(verbose_name='Puntos de habilidad por nivel', null=True)
+        puntos_de_habilidad_por_nivel = models.IntegerField(verbose_name='Puntos de habilidad', null=True)
+        descripcion_dados_de_golpe = models.TextField(verbose_name='Dado de golpe', null=True)
+        descripcion_puntos_de_habilidad = models.TextField(verbose_name='Puntos de habilidad por nivel', null=True)
+        descripcion_habilidades = models.TextField(verbose_name='Competente con las habilidades', null=True)
         nivel_conjuro_diario = models.ManyToManyField('NivelConjuroDiario')
         cantidad_conjuros_conocidos = models.ManyToManyField('CantidadConjuroConocido')
         poderes = models.ManyToManyField('Poder')
         especiales = models.ManyToManyField('Especial')
         companero_animal = models.ManyToManyField('CompaneroAnimal')
-        habilidad = models.ManyToManyField('Habilidad')
+        habilidades = models.ManyToManyField('Habilidad')
         linaje = models.ForeignKey('Linaje', null=True, on_delete=models.SET_NULL)
+        conjuros = models.ManyToManyField('Conjuro')
 
         def __str__(self):
             return self.clase
@@ -276,7 +281,6 @@ class Personaje(models.Model):
         nombre = models.TextField(verbose_name='Nombre')
         descripcion = models.TextField(verbose_name='Descripción')
         es_especial_companero_animal = models.BooleanField(verbose_name='Es especial de compañero animal', default=False)
-        clase_perteneciente = models.ForeignKey('Clase', on_delete=models.CASCADE, null=True)
 
         def __str__(self):
             return nombre
