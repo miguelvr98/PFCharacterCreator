@@ -8658,4 +8658,214 @@
         <field type="IntegerField" name="nivel">1</field>
         <field type="IntegerField" name="cantidad">2</field>
     </object>
+    <object pk="25" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="6"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+        </field>
+    </object>
+    <object pk="5" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="6" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="3" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="26" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="6"></object>
+            <object pk="7"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object pk="7" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="4" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="27" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="6"></object>
+            <object pk="8"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="6"></object>
+        </field>
+    </object>
+    <object pk="8" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="5" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="6" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="28" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="28"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="6"></object>
+            <object pk="8"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="7"></object>
+        </field>
+    </object>
+    <object pk="9" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="7" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="29" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="28"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="6"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="9" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="8" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
 </django-objects>
