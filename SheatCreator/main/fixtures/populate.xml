@@ -2252,10 +2252,6 @@
         <field type="CharField" name="nombre">Conjuros del druida</field>
         <field type="CharField" name="descripcion">Los druidas lanzan conjuros de la lista de conjuros del druida. Su alineamiento puede restringir el lanzamiento de ciertos conjuros opuestos a sus creencias morales o éticas. Un druida debe seleccionar y preparar sus conjuros por adelantado meditando 1 hora. Para preparar o lanzar un conjuro, el druida debe poseer una puntuación de sabiduría al menos igual a 10 + nivel del conjuro. La CD para la tirada de salvación contra los conjuros de un druida es 10 + nivel del conjuro + el modificador de sabiduría del druida.</field>
     </object>
-    <object pk="38" model="main.especial">
-        <field type="CharField" name="nombre">Conjuros del druida</field>
-        <field type="CharField" name="descripcion">Los druidas lanzan conjuros de la lista de conjuros del druida. Su alineamiento puede restringir el lanzamiento de ciertos conjuros opuestos a sus creencias morales o éticas. Un druida debe seleccionar y preparar sus conjuros por adelantado meditando 1 hora. Para preparar o lanzar un conjuro, el druida debe poseer una puntuación de sabiduría al menos igual a 10 + nivel del conjuro. La CD para la tirada de salvación contra los conjuros de un druida es 10 + nivel del conjuro + el modificador de sabiduría del druida.</field>
-    </object>
     <object pk="39" model="main.especial">
         <field type="CharField" name="nombre">Oraciones del druida</field>
         <field type="CharField" name="descripcion">Son los conjuros de nivel 0 del druida.</field>
@@ -8675,7 +8671,6 @@
             <object pk="15"></object>
             <object pk="16"></object>
             <object pk="17"></object>
-            <object pk="28"></object>
             <object pk="29"></object>
             <object pk="18"></object>
         </field>
@@ -8716,7 +8711,6 @@
             <object pk="15"></object>
             <object pk="16"></object>
             <object pk="17"></object>
-            <object pk="28"></object>
             <object pk="29"></object>
             <object pk="18"></object>
         </field>
@@ -8755,7 +8749,6 @@
             <object pk="15"></object>
             <object pk="16"></object>
             <object pk="17"></object>
-            <object pk="28"></object>
             <object pk="29"></object>
             <object pk="18"></object>
             <object pk="30"></object>
@@ -8799,7 +8792,6 @@
             <object pk="15"></object>
             <object pk="16"></object>
             <object pk="17"></object>
-            <object pk="28"></object>
             <object pk="29"></object>
             <object pk="18"></object>
             <object pk="30"></object>
@@ -8841,12 +8833,10 @@
             <object pk="15"></object>
             <object pk="16"></object>
             <object pk="17"></object>
-            <object pk="28"></object>
             <object pk="29"></object>
             <object pk="18"></object>
             <object pk="30"></object>
             <object pk="19"></object>
-            <object pk="28"></object>
         </field>
         <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
             <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
@@ -8867,5 +8857,1940 @@
     <object pk="8" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">3</field>
         <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="30" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="6"></object>
+            <object pk="8"></object>
+            <object pk="10"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="9"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="10" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="9" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="10" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="31" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="6"></object>
+            <object pk="8"></object>
+            <object pk="11"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="9"></object>
+            <object pk="12"></object>
+        </field>
+    </object>
+    <object pk="11" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="11" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="12" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="32" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">7</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="28"></object>
+            <object pk="31"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="6"></object>
+            <object pk="8"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="12" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="13" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="13" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="33" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">7</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="28"></object>
+            <object pk="31"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="8"></object>
+            <object pk="12"></object>
+            <object pk="15"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="9"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+        </field>
+    </object>
+    <object pk="14" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="15" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="14" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="15" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="34" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="28"></object>
+            <object pk="31"></object>
+            <object pk="22"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="8"></object>
+            <object pk="12"></object>
+            <object pk="16"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="16"></object><!--NIVEL 2 CANTIDAD 5-->
+            <object pk="14"></object>
+            <object pk="17"></object>
+        </field>
+    </object>
+    <object pk="16" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="16" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="17" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="35" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="28"></object>
+            <object pk="31"></object>
+            <object pk="22"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="8"></object>
+            <object pk="17"></object>
+            <object pk="16"></object>
+            <object pk="18"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="16"></object><!--NIVEL 2 CANTIDAD 5-->
+            <object pk="14"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+        </field>
+    </object>
+    <object pk="17" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="18" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="18" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="36" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="31"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="28"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="19"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="17"></object>
+            <object pk="16"></object>
+            <object pk="20"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="16"></object><!--NIVEL 2 CANTIDAD 5-->
+            <object pk="14"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+        </field>
+    </object>
+    <object pk="19" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="20" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="19" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="20" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="37" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="31"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="19"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="17"></object>
+            <object pk="16"></object>
+            <object pk="21"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="16"></object><!--NIVEL 2 CANTIDAD 5-->
+            <object pk="21"></object><!--NIVEL 3 CANTIDAD 5-->
+            <object pk="19"></object>
+            <object pk="22"></object>
+        </field>
+    </object>
+    <object pk="21" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="21" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="22" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="38" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">10</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="31"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="19"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="17"></object>
+            <object pk="22"></object>
+            <object pk="21"></object>
+            <object pk="23"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="16"></object><!--NIVEL 2 CANTIDAD 5-->
+            <object pk="21"></object><!--NIVEL 3 CANTIDAD 5-->
+            <object pk="19"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+        </field>
+    </object>
+    <object pk="22" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="23" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="23" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="39" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">10</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="31"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="19"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="24"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="22"></object>
+            <object pk="21"></object>
+            <object pk="25"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="16"></object><!--NIVEL 2 CANTIDAD 5-->
+            <object pk="21"></object><!--NIVEL 3 CANTIDAD 5-->
+            <object pk="19"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+        </field>
+    </object>
+    <object pk="24" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="25" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="24" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="25" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="40" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">11</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="31"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="28"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="19"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="24"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="22"></object>
+            <object pk="21"></object>
+            <object pk="26"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="16"></object><!--NIVEL 2 CANTIDAD 5-->
+            <object pk="21"></object><!--NIVEL 3 CANTIDAD 5-->
+            <object pk="26"></object><!--NIVEL 4 CANTIDAD 5-->
+            <object pk="24"></object>
+            <object pk="27"></object>
+        </field>
+    </object>
+    <object pk="26" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="26" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="27" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="41" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">11</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="31"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="19"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="24"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="22"></object>
+            <object pk="27"></object>
+            <object pk="26"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="16"></object><!--NIVEL 2 CANTIDAD 5-->
+            <object pk="21"></object><!--NIVEL 3 CANTIDAD 5-->
+            <object pk="26"></object><!--NIVEL 4 CANTIDAD 5-->
+            <object pk="28"></object><!--NIVEL 5 CANTIDAD 5-->
+            <object pk="29"></object>
+        </field>
+    </object>
+    <object pk="27" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="28" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="29" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="42" model="main.clase">
+        <field type="CharField" name="clase">Bardo</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">12</field>
+        <field type="IntegerField" name="voluntad">12</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="149"></object><!--149 ES UNA QUE SE OLVIDÓ-->
+            <object pk="27"></object><!--TRUCOS DEL BARDO-->
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="29"></object>
+            <object pk="18"></object>
+            <object pk="30"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="31"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
+            <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="19"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="24"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="28"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="27"></object>
+            <object pk="29"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
+            <object pk="16"></object><!--NIVEL 2 CANTIDAD 5-->
+            <object pk="21"></object><!--NIVEL 3 CANTIDAD 5-->
+            <object pk="26"></object><!--NIVEL 4 CANTIDAD 5-->
+            <object pk="28"></object><!--NIVEL 5 CANTIDAD 5-->
+            <object pk="30"></object><!--NIVEL 6 CANTIDAD 5-->
+        </field>
+    </object>
+    <object pk="28" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="29" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="30" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <!--CLÉRIGO-->
+    <object pk="43" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d8</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">2 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">artesanía, averiguar intenciones, conocimiento de conjuros, curar, diplomacia, lingüística, profesión, saber (arcano), saber (historia), saber (los planos), saber (nobleza), saber (religión) y tasación.</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.linaje" name="linajes" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object><!--DEL 32 AL 36-->
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+        </field>
+    </object>
+    <object pk="44" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object><!--AVERIGUAR INTENCIONES-->
+            <object pk="9"></object><!--CONOCIMIENTO DE CONJUROS-->
+            <object pk="10"></object><!--CURAR-->
+            <object pk="11"></object><!--DIPLOMACIA-->
+            <object pk="27"></object><!--LINGÜÍSTICA-->
+            <object pk="31"></object><!--PROFESIÓN-->
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object><!--SABERES--><!--SABER ARCANO-->
+            <object pk="43"></object><!--SABER HISTORIA-->
+            <object pk="46"></object><!--SABER LOS PLANOS-->
+            <object pk="48"></object><!--SABER NOBLEZA-->
+            <object pk="49"></object><!--SABER RELIGION-->
+            <object pk="52"></object><!--TASACIÓN-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="31"></object>
+            <object pk="1"></object>
+        </field>
+    </object>
+    <object pk="31" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="45" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="2"></object>
+        </field>
+    </object>
+    <object pk="32" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="46" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object pk="47" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="3"></object>
+            <object pk="6"></object>
+        </field>
+    </object>
+    <object pk="48" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="3"></object>
+            <object pk="6"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="49" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="3"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+        </field>
+    </object>
+    <object pk="50" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="51" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="7"></object>
+            <object pk="12"></object>
+            <object pk="15"></object>
+        </field>
+    </object>
+    <object pk="52" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="12"></object>
+            <object pk="15"></object>
+            <object pk="18"></object>
+        </field>
+    </object>
+    <object pk="53" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="12"></object>
+            <object pk="17"></object>
+            <object pk="20"></object>
+        </field>
+    </object>
+    <object pk="54" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="17"></object>
+            <object pk="20"></object>
+            <object pk="23"></object>
+        </field>
+    </object>
+    <object pk="55" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="17"></object>
+            <object pk="22"></object>
+            <object pk="25"></object>
+        </field>
+    </object>
+    <object pk="56" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="22"></object>
+            <object pk="25"></object>
+            <object pk="33"></object>
+        </field>
+    </object>
+    <object pk="33" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="57" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="22"></object>
+            <object pk="27"></object>
+            <object pk="34"></object>
+        </field>
+    </object>
+    <object pk="34" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="58" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="27"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+    </object>
+    <object pk="35" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="59" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="27"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+        </field>
+    </object>
+    <object pk="36" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="37" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="60" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+        </field>
+    </object>
+    <object pk="38" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="61" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="39"></object>
+        </field>
+    </object>
+    <object pk="39" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="62" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="40"></object><!--NIVEL 7 CANTIDAD 4-->
+            <object pk="37"></object>
+            <object pk="41"></object>
+        </field>
+    </object>
+    <object pk="40" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="41" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="63" model="main.clase">
+        <field type="CharField" name="clase">Clérigo</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">12</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">12</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="40"></object><!--NIVEL 7 CANTIDAD 4-->
+            <object pk="42"></object><!--NIVEL 8 CANTIDAD 4-->
+            <object pk="43"></object><!--NIVEL 9 CANTIDAD 4-->
+        </field>
+    </object>
+    <object pk="42" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="43" model="main.nivelconjurodiario">
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <!--DRUIDA-->
+    <object pk="64" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d8</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">4 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">artesanía, conocimiento de conjuros, curar, montar, nadar, percepción, profesión, saber (geografía), saber (naturaleza), supervivencia, trato con animales, trepar y volar. Además tienen un bonificador +4 a las tiradas relacionadas con su compañero animal.</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object><!--DEL 37 AL 50--><!--MENOS EL 38 QUE SE BORRÓ POR REPETIDO-->
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+        </field>
+    </object>
+    <object pk="65" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="9"></object><!--CONOCIMIENTO DE CONJUROS-->
+            <object pk="10"></object><!--CURAR-->
+            <object pk="28"></object><!--MONTAR-->
+            <object pk="29"></object><!--NADAR-->
+            <object pk="30"></object><!--PERCEPCIÓN-->
+            <object pk="31"></object><!--PROFESIÓN-->
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="42"></object><!--SABERES--><!--SABER GEOGRAFÍA-->
+            <object pk="47"></object><!--SABER NATURALEZA-->
+            <object pk="51"></object><!--SUPERVIVENCIA-->
+            <object pk="53"></object><!--TRATO CON ANIMALES-->
+            <object pk="54"></object><!--TREPAR-->
+            <object pk="56"></object><!--VOLAR-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="31"></object>
+            <object pk="1"></object>
+        </field>
+    </object>
+    <object pk="66" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="31"></object>
+            <object pk="1"></object>
+        </field>
+    </object>
+    <object pk="67" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="2"></object>
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object pk="68" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="3"></object>
+            <object pk="6"></object>
+        </field>
+    </object>
+    <object pk="69" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="3"></object>
+            <object pk="6"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="70" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="3"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+        </field>
+    </object>
+    <object pk="71" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="72" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="7"></object>
+            <object pk="12"></object>
+            <object pk="15"></object>
+        </field>
+    </object>
+    <object pk="73" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="12"></object>
+            <object pk="15"></object>
+            <object pk="18"></object>
+        </field>
+    </object>
+    <object pk="74" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="12"></object>
+            <object pk="17"></object>
+            <object pk="20"></object>
+        </field>
+    </object>
+    <object pk="75" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="17"></object>
+            <object pk="20"></object>
+            <object pk="23"></object>
+        </field>
+    </object>
+    <object pk="76" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="17"></object>
+            <object pk="22"></object>
+            <object pk="25"></object>
+        </field>
+    </object>
+    <object pk="77" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="22"></object>
+            <object pk="25"></object>
+            <object pk="33"></object>
+        </field>
+    </object>
+    <object pk="78" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="22"></object>
+            <object pk="27"></object>
+            <object pk="34"></object>
+        </field>
+    </object>
+    <object pk="79" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="27"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+    </object>
+    <object pk="80" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="27"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+        </field>
+    </object>
+    <object pk="81" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+        </field>
+    </object>
+    <object pk="82" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="39"></object>
+        </field>
+    </object>
+    <object pk="83" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="40"></object><!--NIVEL 7 CANTIDAD 4-->
+            <object pk="37"></object>
+            <object pk="41"></object>
+        </field>
+    </object>
+    <object pk="84" model="main.clase">
+        <field type="CharField" name="clase">Druida</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">12</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">12</field>
+        <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="37"></object>
+            <object pk="39"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="40"></object><!--NIVEL 7 CANTIDAD 4-->
+            <object pk="42"></object><!--NIVEL 8 CANTIDAD 4-->
+            <object pk="43"></object><!--NIVEL 9 CANTIDAD 4-->
+        </field>
     </object>
 </django-objects>

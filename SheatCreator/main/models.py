@@ -187,7 +187,7 @@ class Personaje(models.Model):
         especiales = models.ManyToManyField('Especial')
         companero_animal = models.ManyToManyField('CompaneroAnimal')
         habilidades = models.ManyToManyField('Habilidad')
-        linaje = models.ForeignKey('Linaje', null=True, on_delete=models.SET_NULL)
+        linajes = models.ManyToManyField('Linaje')
         conjuros = models.ManyToManyField('Conjuro')
 
         def __str__(self):
