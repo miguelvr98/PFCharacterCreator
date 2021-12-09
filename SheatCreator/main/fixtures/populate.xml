@@ -8047,6 +8047,8 @@
         <field type="CharField" name="descripcion_puntos_de_habilidad">4 + modificador de inteligencia.</field>
         <field type="CharField" name="descripcion_habilidades">acrobacias(des), artesanía(int), intimidar(car), montar(des), nadar(fue), percepción(sab), saber(naturaleza)(int), supervivencia(sab), trato con animales(car), trepar(fue).</field>
         <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
+        <field type="IntegerField" name="dados_de_golpe">12</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">4</field>
         <field to="main.poder" name="poderes" rel="ManyToManyRel">
             <object pk="1"></object><!--DEL 1 AL 43-->
             <object pk="2"></object>
@@ -8490,6 +8492,8 @@
         <field type="CharField" name="descripcion_puntos_de_habilidad">6 + modificador de inteligencia.</field>
         <field type="CharField" name="descripcion_habilidades">acrobacias, artesanía, averiguar intenciones, conocimiento de conjuros, diplomacia, disfrazarse, engañar, escapismo, interpretar, intimidar, juego de manos, lingüística, profesión, percepción, saber (todas), tasación, trepar, sigilo y usar objeto mágico.</field>
         <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
+        <field type="IntegerField" name="dados_de_golpe">8</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">6</field>
         <field to="main.poder" name="poderes" rel="ManyToManyRel">
             <object pk="44"></object><!--DEL 44 AL 52-->
             <object pk="45"></object>
@@ -9591,6 +9595,8 @@
         <field type="CharField" name="descripcion_puntos_de_habilidad">2 + modificador de inteligencia.</field>
         <field type="CharField" name="descripcion_habilidades">artesanía, averiguar intenciones, conocimiento de conjuros, curar, diplomacia, lingüística, profesión, saber (arcano), saber (historia), saber (los planos), saber (nobleza), saber (religión) y tasación.</field>
         <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
+        <field type="IntegerField" name="dados_de_golpe">8</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
         <field to="main.linaje" name="linajes" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="2"></object>
@@ -10163,6 +10169,8 @@
         <field type="CharField" name="descripcion_puntos_de_habilidad">4 + modificador de inteligencia.</field>
         <field type="CharField" name="descripcion_habilidades">artesanía, conocimiento de conjuros, curar, montar, nadar, percepción, profesión, saber (geografía), saber (naturaleza), supervivencia, trato con animales, trepar y volar. Además tienen un bonificador +4 a las tiradas relacionadas con su compañero animal.</field>
         <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
+        <field type="IntegerField" name="dados_de_golpe">8</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">4</field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="37"></object><!--DEL 37 AL 50--><!--MENOS EL 38 QUE SE BORRÓ POR REPETIDO-->
             <object pk="39"></object>
@@ -10791,6 +10799,606 @@
             <object pk="40"></object><!--NIVEL 7 CANTIDAD 4-->
             <object pk="42"></object><!--NIVEL 8 CANTIDAD 4-->
             <object pk="43"></object><!--NIVEL 9 CANTIDAD 4-->
+        </field>
+    </object>
+    <!--EXPLORADOR-->
+    <object pk="85" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d10</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">6 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">artesanía, conocimiento de conjuros, curar, intimidar, montar, nadar, percepción, profesión, saber (dungeons), saber (geografía), saber (naturaleza), sigilo, supervivencia, trato con animales y trepar. Además tienen un +4 adicional a las tiradas de trato con animales relacionadas con su compañero animal.</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field type="IntegerField" name="dados_de_golpe">10</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">6</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="51"></object><!--DEL 51 AL 67-->
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+        </field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="53"></object><!--DEL 53 AL 80-->
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+        </field>
+        <field to="main.companeroanimal" name="companero_animal" rel="ManyToManyRel">
+            <object pk="21"></object><!--DEL 21 AL 34-->
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+        </field>
+    </object>
+    <object pk="86" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">0</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object><!--AVERIGUAR INTENCIONES-->
+            <object pk="9"></object><!--CONOCIMIENTO DE CONJUROS-->
+            <object pk="10"></object><!--CURAR-->
+            <object pk="24"></object><!--INTIMIDAR-->
+            <object pk="28"></object><!--MONTAR-->
+            <object pk="29"></object><!--NADAR-->
+            <object pk="30"></object><!--PERCEPCIÓN-->
+            <object pk="31"></object><!--PROFESIÓN-->
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="41"></object><!--SABERES--><!--SABER DUNGEONS-->
+            <object pk="42"></object><!--SABER GEOGRAFÍA-->
+            <object pk="47"></object><!--SABER NATURALEZA-->
+            <object pk="50"></object><!--SIGILO-->
+            <object pk="51"></object><!--SUPERVIVENCIA-->
+            <object pk="53"></object><!--TRATO CON ANIMALES-->
+            <object pk="54"></object><!--TREPAR-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="51"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+        </field>
+        <object pk="87" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">0</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+        </field>
+        <object pk="88" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+        </field>
+        <object pk="89" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="44"></object>
+        </field>
+        <object pk="44" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">1</field>
+            <field type="IntegerField" name="cantidad">0</field>
+        </object>
+    </object>
+    <object pk="90" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="51"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="1"></object>
+        </field>
+    </object>
+    <object pk="91" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="54"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="1"></object>
+        </field>
+    </object>
+    <object pk="92" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="45"></object>
+        </field>
+    </object>
+    <object pk="45" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">2</field>
+            <field type="IntegerField" name="cantidad">0</field>
+    </object>
+    <object pk="93" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="56"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object pk="94" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object pk="95" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">7</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="51"></object>
+            <object pk="54"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="44"></object>
+        </field>
+    </object>
+    <object pk="44" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">3</field>
+            <field type="IntegerField" name="cantidad">0</field>
+    </object>
+    <object pk="96" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">7</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="97" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="6"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="98" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="56"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="6"></object>
+            <object pk="8"></object>
+            <object pk="45"></object>
+        </field>
+    </object>
+    <object pk="45" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">4</field>
+            <field type="IntegerField" name="cantidad">0</field>
+    </object>
+    <object pk="99" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="54"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="6"></object>
+            <object pk="8"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="100" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="51"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="6"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="101" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+16/+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">10</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="102" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+17/+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">10</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="103" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+18/+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">11</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="54"></object>
+            <object pk="56"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="15"></object>
+        </field>
+    </object>
+    <object pk="104" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+19/+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">11</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="12"></object>
+            <object pk="15"></object>
+        </field>
+    </object>
+    <object pk="105" model="main.clase">
+        <field type="CharField" name="clase">Explorador</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+20/+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">12</field>
+        <field type="IntegerField" name="reflejos">12</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="55"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="51"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="17"></object>
         </field>
     </object>
 </django-objects>
