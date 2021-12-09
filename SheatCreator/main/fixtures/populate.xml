@@ -10921,7 +10921,8 @@
             <object pk="52"></object>
             <object pk="53"></object>
         </field>
-        <object pk="87" model="main.clase">
+    </object>
+    <object pk="87" model="main.clase">
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+2</field>
@@ -10934,7 +10935,8 @@
             <object pk="53"></object>
             <object pk="54"></object>
         </field>
-        <object pk="88" model="main.clase">
+    </object>
+    <object pk="88" model="main.clase">
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+3</field>
@@ -10948,7 +10950,8 @@
             <object pk="55"></object>
             <object pk="56"></object>
         </field>
-        <object pk="89" model="main.clase">
+    </object>
+    <object pk="89" model="main.clase">
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+4</field>
@@ -10966,10 +10969,10 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="44"></object>
         </field>
-        <object pk="44" model="main.nivelconjurodiario">
+    </object>
+    <object pk="44" model="main.nivelconjurodiario">
             <field type="IntegerField" name="nivel">1</field>
             <field type="IntegerField" name="cantidad">0</field>
-        </object>
     </object>
     <object pk="90" model="main.clase">
         <field type="CharField" name="clase">Explorador</field>
