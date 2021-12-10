@@ -8805,7 +8805,7 @@
         <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
             <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
             <object pk="6"></object>
-            <object pk="8"></object>
+            <object pk="33"></object>
         </field>
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="5"></object>
@@ -8844,8 +8844,8 @@
         </field>
         <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
             <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
-            <object pk="6"></object>
-            <object pk="8"></object>
+            <object pk="34"></object>
+            <object pk="33"></object>
             <object pk="9"></object>
         </field>
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
@@ -8887,8 +8887,8 @@
         </field>
         <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
             <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
-            <object pk="6"></object>
-            <object pk="8"></object>
+            <object pk="34"></object>
+            <object pk="33"></object>
             <object pk="10"></object>
         </field>
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
@@ -8935,8 +8935,8 @@
         </field>
         <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
             <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
-            <object pk="6"></object>
-            <object pk="8"></object>
+            <object pk="34"></object>
+            <object pk="33"></object>
             <object pk="11"></object>
         </field>
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
@@ -8985,9 +8985,9 @@
         </field>
         <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
             <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
-            <object pk="6"></object>
-            <object pk="8"></object>
+            <object pk="34"></object>
             <object pk="12"></object>
+            <object pk="11"></object>
             <object pk="13"></object>
         </field>
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
@@ -8998,7 +8998,7 @@
         </field>
     </object>
     <object pk="12" model="main.cantidadconjuroconocido">
-        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="nivel">2</field>
         <field type="IntegerField" name="cantidad">5</field>
     </object>
     <object pk="13" model="main.cantidadconjuroconocido">
@@ -9038,8 +9038,8 @@
         <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
             <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
             <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
-            <object pk="8"></object>
             <object pk="12"></object>
+            <object pk="11"></object>
             <object pk="15"></object>
         </field>
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
@@ -9095,8 +9095,8 @@
         <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
             <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
             <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
-            <object pk="8"></object>
             <object pk="12"></object>
+            <object pk="11"></object>
             <object pk="16"></object>
         </field>
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
@@ -9148,7 +9148,7 @@
         <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
             <object pk="5"></object><!--NIVEL 0 CANTIDAD 6-->
             <object pk="14"></object><!--NIVEL 1 CANTIDAD 6-->
-            <object pk="8"></object>
+            <object pk="12"></object>
             <object pk="17"></object>
             <object pk="16"></object>
             <object pk="18"></object>
@@ -9522,7 +9522,7 @@
     </object>
     <object pk="28" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">5</field>
-        <field type="IntegerField" name="cantidad">6</field>
+        <field type="IntegerField" name="cantidad">5</field>
     </object>
     <object pk="29" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">6</field>
@@ -10084,7 +10084,7 @@
             <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
             <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
             <object pk="36"></object>
-            <object pk="37"></object>
+            <object pk="53"></object>
             <object pk="39"></object>
         </field>
     </object>
@@ -10115,7 +10115,7 @@
             <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
             <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
             <object pk="40"></object><!--NIVEL 7 CANTIDAD 4-->
-            <object pk="37"></object>
+            <object pk="53"></object>
             <object pk="41"></object>
         </field>
     </object>
@@ -10727,7 +10727,7 @@
             <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
             <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
             <object pk="36"></object>
-            <object pk="37"></object>
+            <object pk="53"></object>
             <object pk="39"></object>
         </field>
     </object>
@@ -10762,7 +10762,7 @@
             <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
             <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
             <object pk="40"></object><!--NIVEL 7 CANTIDAD 4-->
-            <object pk="37"></object>
+            <object pk="53"></object>
             <object pk="41"></object>
         </field>
     </object>
@@ -11403,5 +11403,1079 @@
             <object pk="12"></object>
             <object pk="17"></object>
         </field>
+    </object>
+    <!--GUERRERO-->
+    <object pk="106" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d10</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">2 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">artesanía, intimidar, montar, nadar, profesión, saber (dungeons), saber (ingeniería), supervivencia, trato con animales y trepar.</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field type="IntegerField" name="dados_de_golpe">10</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="68"></object><!--DEL 68 AL 73-->
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="72"></object>
+            <object pk="73"></object>
+        </field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="81"></object><!--DEL 81 AL 88-->
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+        </field>
+    </object>
+    <object pk="107" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">0</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="24"></object><!--INTIMIDAR-->
+            <object pk="28"></object><!--MONTAR-->
+            <object pk="29"></object><!--NADAR-->
+            <object pk="31"></object><!--PROFESIÓN-->
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="41"></object><!--SABERES--><!--SABER DUNGEONS-->
+            <object pk="44"></object><!--SABER INGENIERÍA-->
+            <object pk="51"></object><!--SUPERVIVENCIA-->
+            <object pk="53"></object><!--TRATO CON ANIMALES-->
+            <object pk="54"></object><!--TREPAR-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="108" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">0</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="68"></object>
+            <object pk="69"></object>
+        </field>
+    </object>
+    <object pk="109" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+        </field>
+    </object>
+    <object pk="110" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="111" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+        </field>
+    </object>
+    <object pk="112" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="113" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+        </field>
+    </object>
+    <object pk="114" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="115" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+        </field>
+    </object>
+    <object pk="116" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="117" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+        </field>
+    </object>
+    <object pk="118" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="119" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+        </field>
+    </object>
+    <object pk="120" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="121" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+        </field>
+    </object>
+    <object pk="122" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+16/+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="123" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+17/+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+        </field>
+    </object>
+    <object pk="124" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+18/+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="68"></object>
+        </field>
+    </object>
+    <object pk="125" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+19/+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="72"></object>
+        </field>
+    </object>
+    <object pk="126" model="main.clase">
+        <field type="CharField" name="clase">Guerrero</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+20/+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">12</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="69"></object>
+            <object pk="70"></object>
+            <object pk="71"></object>
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="68"></object>
+        </field>
+    </object>
+    <!--HECHICERO-->
+    <object pk="127" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d6</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">2 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">artesanía, conocimiento de conjuros, engañar, intimidar, profesión, saber (arcano), tasación, usar objeto mágico y volar.</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field type="IntegerField" name="dados_de_golpe">6</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="75"></object><!--DEL 75 AL 78-->
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.linaje" name="linajes" rel="ManyToManyRel">
+            <object pk="1"></object><!--DEL 1 AL 6-->
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+        </field>
+    </object>
+    <object pk="128" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="fortaleza">0</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="9"></object><!--CONOCIMIENTO DE CONJUROS-->
+            <object pk="13"></object><!--ENGAÑAR-->
+            <object pk="24"></object><!--INTIMIDAR-->
+            <object pk="31"></object><!--PROFESIÓN-->
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object><!--SABERES--><!--SABER ARCANO-->
+            <object pk="52"></object><!--TASACIÓN-->
+            <object pk="55"></object><!--USAR OBJETO MÁGICO-->
+            <object pk="56"></object><!--VOLAR-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="2"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+        </field>
+    </object>
+    <object pk="129" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">0</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="2"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="5"></object>
+        </field>
+    </object>
+    <object pk="130" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="4"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="6"></object>
+        </field>
+    </object>
+    <object pk="131" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="4"></object>
+            <object pk="30"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="7"></object>
+        </field>
+    </object>
+    <object pk="30" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="46" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">1</field>
+            <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="132" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="9"></object>
+        </field>
+    </object>
+    <object pk="133" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="31"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="32"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="16"></object>
+            <object pk="12"></object>
+        </field>
+    </object>
+    <object pk="31" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="IntegerField" name="cantidad">7</field>
+    </object>
+    <object pk="32" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="134" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="31"></object>
+            <object pk="34"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="14"></object>
+        </field>
+    </object>
+    <object pk="33" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="cantidad">4</field>
+    </object>
+    <object pk="34" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="47" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">2</field>
+            <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="135" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="35"></object>
+            <object pk="34"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="36"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="21"></object>
+            <object pk="17"></object>
+        </field>
+    </object>
+    <object pk="35" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="IntegerField" name="cantidad">8</field>
+    </object>
+    <object pk="36" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="136" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="35"></object>
+            <object pk="34"></object>
+            <object pk="33"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="19"></object>
+        </field>
+    </object>
+    <object pk="48" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">3</field>
+            <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="137" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="33"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+            <object pk="38"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="26"></object>
+            <object pk="22"></object>
+        </field>
+    </object>
+    <object pk="37" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">0</field>
+        <field type="IntegerField" name="cantidad">9</field>
+    </object>
+    <object pk="38" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="138" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="12"></object>
+            <object pk="11"></object>
+            <object pk="15"></object>
+            <object pk="18"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="49"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="24"></object>
+        </field>
+    </object>
+    <object pk="49" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">4</field>
+            <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="139" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="12"></object>
+            <object pk="11"></object>
+            <object pk="15"></object>
+            <object pk="18"></object>
+            <object pk="39"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="49"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="28"></object>
+            <object pk="27"></object>
+        </field>
+    </object>
+    <object pk="39" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="140" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="12"></object>
+            <object pk="11"></object>
+            <object pk="16"></object>
+            <object pk="20"></object>
+            <object pk="23"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="49"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="50"></object><!--NIVEL 5 CANTIDAD 6-->
+            <object pk="29"></object>
+        </field>
+    </object>
+    <object pk="50" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">5</field>
+            <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="141" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="12"></object>
+            <object pk="11"></object>
+            <object pk="16"></object>
+            <object pk="20"></object>
+            <object pk="23"></object>
+            <object pk="40"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="49"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="50"></object><!--NIVEL 5 CANTIDAD 6-->
+            <object pk="30"></object>
+            <object pk="36"></object>
+        </field>
+    </object>
+    <object pk="40" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="142" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="12"></object>
+            <object pk="11"></object>
+            <object pk="16"></object>
+            <object pk="21"></object>
+            <object pk="25"></object>
+            <object pk="41"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="49"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="50"></object><!--NIVEL 5 CANTIDAD 6-->
+            <object pk="51"></object><!--NIVEL 6 CANTIDAD 6-->
+            <object pk="40"></object>
+        </field>
+    </object>
+    <object pk="41" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="51" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">6</field>
+            <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="143" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="12"></object>
+            <object pk="11"></object>
+            <object pk="16"></object>
+            <object pk="21"></object>
+            <object pk="25"></object>
+            <object pk="41"></object>
+            <object pk="42"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="49"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="50"></object><!--NIVEL 5 CANTIDAD 6-->
+            <object pk="51"></object><!--NIVEL 6 CANTIDAD 6-->
+            <object pk="52"></object>
+            <object pk="53"></object>
+        </field>
+    </object>
+    <object pk="42" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="52" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">7</field>
+            <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="53" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">8</field>
+            <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="144" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="12"></object>
+            <object pk="11"></object>
+            <object pk="16"></object>
+            <object pk="21"></object>
+            <object pk="25"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="49"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="50"></object><!--NIVEL 5 CANTIDAD 6-->
+            <object pk="51"></object><!--NIVEL 6 CANTIDAD 6-->
+            <object pk="54"></object><!--NIVEL 7 CANTIDAD 6-->
+            <object pk="42"></object>
+        </field>
+    </object>
+    <object pk="43" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="44" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="54" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">7</field>
+            <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="145" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="12"></object>
+            <object pk="11"></object>
+            <object pk="16"></object>
+            <object pk="21"></object>
+            <object pk="25"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="49"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="50"></object><!--NIVEL 5 CANTIDAD 6-->
+            <object pk="51"></object><!--NIVEL 6 CANTIDAD 6-->
+            <object pk="54"></object><!--NIVEL 7 CANTIDAD 6-->
+            <object pk="55"></object>
+            <object pk="41"></object>
+        </field>
+    </object>
+    <object pk="45" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="IntegerField" name="cantidad">1</field>
+    </object>
+    <object pk="55" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">8</field>
+            <field type="IntegerField" name="cantidad">5</field>
+    </object>
+    <object pk="146" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="12"></object>
+            <object pk="11"></object>
+            <object pk="16"></object>
+            <object pk="21"></object>
+            <object pk="25"></object>
+            <object pk="43"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="49"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="50"></object><!--NIVEL 5 CANTIDAD 6-->
+            <object pk="51"></object><!--NIVEL 6 CANTIDAD 6-->
+            <object pk="54"></object><!--NIVEL 7 CANTIDAD 6-->
+            <object pk="56"></object><!--NIVEL 8 CANTIDAD 6-->
+            <object pk="43"></object>
+        </field>
+    </object>
+    <object pk="46" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="47" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="IntegerField" name="cantidad">2</field>
+    </object>
+    <object pk="56" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">8</field>
+            <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <object pk="147" model="main.clase">
+        <field type="CharField" name="clase">Hechicero</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">12</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="77"></object>
+            <object pk="78"></object>
+        </field>
+        <field to="main.cantidadconjuroconocido" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="37"></object><!--NIVEL 0 CANTIDAD 9-->
+            <object pk="34"></object>
+            <object pk="12"></object>
+            <object pk="11"></object>
+            <object pk="16"></object>
+            <object pk="21"></object>
+            <object pk="25"></object>
+            <object pk="43"></object>
+            <object pk="46"></object>
+            <object pk="48"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="46"></object><!--NIVEL 1 CANTIDAD 6-->
+            <object pk="47"></object><!--NIVEL 2 CANTIDAD 6-->
+            <object pk="48"></object><!--NIVEL 3 CANTIDAD 6-->
+            <object pk="49"></object><!--NIVEL 4 CANTIDAD 6-->
+            <object pk="50"></object><!--NIVEL 5 CANTIDAD 6-->
+            <object pk="51"></object><!--NIVEL 6 CANTIDAD 6-->
+            <object pk="54"></object><!--NIVEL 7 CANTIDAD 6-->
+            <object pk="56"></object><!--NIVEL 8 CANTIDAD 6-->
+            <object pk="57"></object><!--NIVEL 9 CANTIDAD 6-->
+        </field>
+    </object>
+    <object pk="48" model="main.cantidadconjuroconocido">
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="IntegerField" name="cantidad">3</field>
+    </object>
+    <object pk="57" model="main.nivelconjurodiario">
+            <field type="IntegerField" name="nivel">9</field>
+            <field type="IntegerField" name="cantidad">6</field>
     </object>
 </django-objects>
