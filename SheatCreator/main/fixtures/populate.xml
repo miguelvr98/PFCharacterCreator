@@ -11108,10 +11108,10 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="2"></object>
             <object pk="4"></object>
-            <object pk="44"></object>
+            <object pk="58"></object>
         </field>
     </object>
-    <object pk="44" model="main.nivelconjurodiario">
+    <object pk="58" model="main.nivelconjurodiario">
             <field type="IntegerField" name="nivel">3</field>
             <field type="IntegerField" name="cantidad">0</field>
     </object>
@@ -11191,10 +11191,10 @@
             <object pk="3"></object>
             <object pk="6"></object>
             <object pk="8"></object>
-            <object pk="45"></object>
+            <object pk="59"></object>
         </field>
     </object>
-    <object pk="45" model="main.nivelconjurodiario">
+    <object pk="59" model="main.nivelconjurodiario">
             <field type="IntegerField" name="nivel">4</field>
             <field type="IntegerField" name="cantidad">0</field>
     </object>
@@ -13624,6 +13624,1066 @@
             <object pk="104"></object>
             <object pk="105"></object>
             <object pk="106"></object>
+        </field>
+    </object>
+    <!--PALADÍN-->
+    <object pk="190" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d10</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">2 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">artesanía, averiguar intenciones, conocimiento de conjuros, curar, diplomacia, montar, profesión, saber (nobleza), saber (religión) y trato con animales</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field type="IntegerField" name="dados_de_golpe">10</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object><!--DEL 107 AL 122-->
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+        </field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="89"></object><!--DEL 89 AL 102-->
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+            <object pk="101"></object>
+            <object pk="102"></object>
+        </field>
+    </object>
+    <object pk="191" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object><!--AVERIGUAR INTENCIONES-->
+            <object pk="9"></object><!--CONOCIMIENTO DE CONJUROS-->
+            <object pk="10"></object><!--CURAR-->
+            <object pk="11"></object><!--DIPLOMACIA-->
+            <object pk="28"></object><!--MONTAR-->
+            <object pk="31"></object><!--PROFESIÓN-->
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="48"></object><!--SABERES--><!--SABER NOBLEZA-->
+            <object pk="49"></object><!--SABER RELIGIÓN-->
+            <object pk="53"></object><!--TRATO CON ANIMALES-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+        </field>
+    </object>
+    <object pk="192" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+        </field>
+    </object>
+    <object pk="193" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+        </field>
+    </object>
+    <object pk="194" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="44"></object>
+        </field>
+    </object>
+    <object pk="195" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="1"></object>
+        </field>
+    </object>
+    <object pk="196" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="114"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="1"></object>
+        </field>
+    </object>
+    <object pk="197" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="45"></object>
+        </field>
+    </object>
+    <object pk="198" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="1"></object>
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object pk="199" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="114"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object pk="200" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="58"></object>
+        </field>
+    </object>
+    <object pk="201" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="4"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="202" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="114"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="6"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="203" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="6"></object>
+            <object pk="8"></object>
+            <object pk="59"></object>
+        </field>
+    </object>
+    <object pk="204" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="6"></object>
+            <object pk="8"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="205" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="114"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="6"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="206" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+16/+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="3"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="207" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+17/+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="13"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="208" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+18/+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="114"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="13"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="15"></object>
+        </field>
+    </object>
+    <object pk="209" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+19/+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="13"></object>
+            <object pk="7"></object>
+            <object pk="12"></object>
+            <object pk="15"></object>
+        </field>
+    </object>
+    <object pk="210" model="main.clase">
+        <field type="CharField" name="clase">Paladín</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+20/+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">12</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">12</field>
+        <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="115"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
+            <object pk="13"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="17"></object>
+        </field>
+    </object>
+    <!--PÍCARO-->
+    <object pk="211" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d8</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">8 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">acrobacias, artesanía, averiguar intenciones, diplomacia, disfrazarse, engañar, escapismo, interpretar, intimidar, inutilizar mecanismo, juego de manos, lingüística, nadar, percepción, profesión, saber (dungeons), saber (local), sigilo, tasación, trepar y usar objeto mágico</field>
+        <field type="CharField" name="competencia">Competentes con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field type="IntegerField" name="dados_de_golpe">8</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">8</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object><!--DEL 123 AL 131-->
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+        </field>
+        <field to="main.poder" name="poderes" rel="ManyToManyRel">
+            <object pk="103"></object><!--DEL 103 AL 160-->
+            <object pk="104"></object>
+            <object pk="105"></object>
+            <object pk="106"></object>
+            <object pk="107"></object>
+            <object pk="108"></object>
+            <object pk="109"></object>
+            <object pk="110"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="156"></object>
+            <object pk="157"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <object pk="163"></object>
+        </field>
+    </object>
+    <object pk="212" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="fortaleza">0</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">0</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="1"></object><!--ACROBACIAS-->
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object><!--AVERIGUAR INTENCIONES-->
+            <object pk="11"></object><!--DIPLOMACIA-->
+            <object pk="12"></object><!--DISFRAZARSE-->
+            <object pk="13"></object><!--ENGAÑAR-->
+            <object pk="14"></object><!--ESCAPISMO-->
+            <object pk="15"></object><!--INTERPRETAR-->
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object><!--INTIMIDAR-->
+            <object pk="25"></object><!--INUTILIZAR MECANISMO-->
+            <object pk="26"></object><!--JUEGO DE MANOS-->
+            <object pk="27"></object><!--LINGÜÍSTICA-->
+            <object pk="29"></object><!--NADAR-->
+            <object pk="30"></object><!--PERCEPCIÓN-->
+            <object pk="31"></object><!--PROFESIÓN-->
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="41"></object><!--SABERES--><!--SABER DUNGEONS-->
+            <object pk="45"></object><!--SABER LOCAL-->
+            <object pk="50"></object><!--SIGILO-->
+            <object pk="52"></object><!--TASACIÓN-->
+            <object pk="54"></object><!--TREPAR-->
+            <object pk="55"></object><!--USAR OBJETO MÁGICO-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+        </field>
+    </object>
+    <object pk="213" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">0</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">0</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+        </field>
+    </object>
+    <object pk="214" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+        </field>
+    </object>
+    <object pk="215" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="126"></object>
+        </field>
+    </object>
+    <object pk="216" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">1</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+        </field>
+    </object>
+    <object pk="217" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="126"></object>
+        </field>
+    </object>
+    <object pk="218" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+        </field>
+    </object>
+    <object pk="219" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="126"></object>
+        </field>
+    </object>
+    <object pk="220" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+        </field>
+    </object>
+    <object pk="221" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">7</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="126"></object>
+        </field>
+    </object>
+    <object pk="222" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">7</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+        </field>
+    </object>
+    <object pk="223" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="126"></object>
+        </field>
+    </object>
+    <object pk="224" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+        </field>
+    </object>
+    <object pk="225" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="126"></object>
+        </field>
+    </object>
+    <object pk="226" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+        </field>
+    </object>
+    <object pk="227" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">10</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="126"></object>
+        </field>
+    </object>
+    <object pk="228" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">10</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+        </field>
+    </object>
+    <object pk="229" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">11</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="126"></object>
+        </field>
+    </object>
+    <object pk="230" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">11</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+        </field>
+    </object>
+    <object pk="231" model="main.clase">
+        <field type="CharField" name="clase">Pícaro</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">12</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competente con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="126"></object>
         </field>
     </object>
 </django-objects>
