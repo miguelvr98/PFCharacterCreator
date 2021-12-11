@@ -2470,7 +2470,7 @@
     </object>
     <object pk="94" model="main.especial">
         <field type="CharField" name="nombre">Caída lentificada</field>
-        <field type="CharField" name="descripcion">Un monje cuyos brazos alcancen un muro puede usarlo para frenar su caída. La capacidad del monje para frenar su caída mejora con su nivel de monje.</field>
+        <field type="CharField" name="descripcion">Un monje cuyos brazos alcancen un muro puede usarlo para frenar su caída. La capacidad del monje para frenar su caída mejora con su nivel de monje. A nivel 4 se reduce en 6 metros y cada 2 niveles se reduce en 3 metros más, hasta que a nivel 20 no sufre daño por caída.</field>
     </object>
     <object pk="95" model="main.especial">
         <field type="CharField" name="nombre">Gran salto</field>
@@ -12477,5 +12477,1153 @@
     <object pk="57" model="main.nivelconjurodiario">
             <field type="IntegerField" name="nivel">9</field>
             <field type="IntegerField" name="cantidad">6</field>
+    </object>
+    <!--MAGO-->
+    <object pk="148" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d6</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">2 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">artesanía, conocimiento de conjuros, lingüística, profesión, saber (todos), tasación y volar.</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field type="IntegerField" name="dados_de_golpe">6</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object><!--DEL 79 AL 83-->
+            <object pk="80"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+        </field>
+    </object>
+    <object pk="149" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="fortaleza">0</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="9"></object><!--CONOCIMIENTO DE CONJUROS-->
+            <object pk="27"></object><!--LINGÜÍSTICA-->
+            <object pk="31"></object><!--PROFESIÓN-->
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object><!--SABERES--><!--SABER ARCANO-->
+            <object pk="41"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="52"></object><!--TASACIÓN-->
+            <object pk="56"></object><!--VOLAR-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="31"></object>
+            <object pk="1"></object>
+        </field>
+    </object>
+    <object pk="150" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">0</field>
+        <field type="IntegerField" name="reflejos">0</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="2"></object>
+        </field>
+    </object>
+    <object pk="151" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="4"></object>
+        </field>
+    </object>
+    <object pk="152" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="3"></object>
+            <object pk="6"></object>
+        </field>
+    </object>
+    <object pk="153" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">1</field>
+        <field type="IntegerField" name="reflejos">1</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="3"></object>
+            <object pk="6"></object>
+            <object pk="8"></object>
+        </field>
+    </object>
+    <object pk="154" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="3"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+        </field>
+    </object>
+    <object pk="155" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="10"></object>
+            <object pk="13"></object>
+        </field>
+    </object>
+    <object pk="156" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="5"></object>
+            <object pk="7"></object>
+            <object pk="12"></object>
+            <object pk="15"></object>
+        </field>
+    </object>
+    <object pk="157" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="5"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="15"></object>
+            <object pk="18"></object>
+        </field>
+    </object>
+    <object pk="158" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="5"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="17"></object>
+            <object pk="20"></object>
+        </field>
+    </object>
+    <object pk="159" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="5"></object>
+            <object pk="9"></object>
+            <object pk="14"></object>
+            <object pk="17"></object>
+            <object pk="20"></object>
+            <object pk="23"></object>
+        </field>
+    </object>
+    <object pk="160" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object>
+            <object pk="5"></object>
+            <object pk="9"></object>
+            <object pk="14"></object>
+            <object pk="17"></object>
+            <object pk="22"></object>
+            <object pk="25"></object>
+        </field>
+    </object>
+    <object pk="161" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="22"></object>
+            <object pk="25"></object>
+            <object pk="33"></object>
+        </field>
+    </object>
+    <object pk="162" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="22"></object>
+            <object pk="27"></object>
+            <object pk="34"></object>
+        </field>
+    </object>
+    <object pk="163" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="27"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+        </field>
+    </object>
+    <object pk="164" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="27"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+        </field>
+    </object>
+    <object pk="165" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+        </field>
+    </object>
+    <object pk="166" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="36"></object>
+            <object pk="53"></object>
+            <object pk="39"></object>
+        </field>
+    </object>
+    <object pk="167" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="40"></object><!--NIVEL 7 CANTIDAD 4-->
+            <object pk="53"></object>
+            <object pk="41"></object>
+        </field>
+    </object>
+    <object pk="168" model="main.clase">
+        <field type="CharField" name="clase">Mago</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">12</field>
+        <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+        </field>
+        <field to="main.nivelconjurodiario" name="cantidad_conjuros_conocidos" rel="ManyToManyRel">
+            <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
+            <object pk="5"></object><!--NIVEL 1 CANTIDAD 4-->
+            <object pk="9"></object><!--NIVEL 2 CANTIDAD 4-->
+            <object pk="14"></object><!--NIVEL 3 CANTIDAD 4-->
+            <object pk="19"></object><!--NIVEL 4 CANTIDAD 4-->
+            <object pk="24"></object><!--NIVEL 5 CANTIDAD 4-->
+            <object pk="29"></object><!--NIVEL 6 CANTIDAD 4-->
+            <object pk="40"></object><!--NIVEL 7 CANTIDAD 4-->
+            <object pk="42"></object><!--NIVEL 8 CANTIDAD 4-->
+            <object pk="43"></object><!--NIVEL 9 CANTIDAD 4-->
+        </field>
+    </object>
+    <!--MONJE-->
+    <object pk="169" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="CharField" name="descripcion_dados_de_golpe">d8</field>
+        <field type="CharField" name="descripcion_puntos_de_habilidad">4 + modificador de inteligencia.</field>
+        <field type="CharField" name="descripcion_habilidades">acrobacias, artesanía, averiguar intenciones, escapismo, interpretar, intimidar, montar, nadar, percepción, profesión, saber (historia), saber (religión), sigilo y trepar</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field type="IntegerField" name="dados_de_golpe">8</field>
+        <field type="IntegerField" name="puntos_de_habilidad_por_nivel">4</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="84"></object><!--DEL 84 AL 106-->
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+            <object pk="101"></object>
+            <object pk="102"></object>
+            <object pk="103"></object>
+            <object pk="104"></object>
+            <object pk="105"></object>
+            <object pk="106"></object>
+        </field>
+    </object>
+    <object pk="170" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="fortaleza">2</field>
+        <field type="IntegerField" name="reflejos">2</field>
+        <field type="IntegerField" name="voluntad">2</field>
+        <field type="CharField" name="rafaga_de_golpes">-1/-1</field>
+        <field type="CharField" name="dano_desarmado">1d6</field>
+        <field type="IntegerField" name="bonificacion_ac">0</field>
+        <field type="IntegerField" name="movimiento_rapido">0</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.habilidad" name="habilidades" rel="ManyToManyRel">
+            <object pk="1"></object><!--ACROBACIAS-->
+            <object pk="2"></object><!--ARTESANÍAS-->
+            <object pk="3"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object><!--AVERIGUAR INTENCIONES-->
+            <object pk="14"></object><!--ESCAPISMO-->
+            <object pk="15"></object><!--INTERPRETAR-->
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object><!--INTIMIDAR-->
+            <object pk="28"></object><!--MONTAR-->
+            <object pk="29"></object><!--NADAR-->
+            <object pk="30"></object><!--PERCEPCIÓN-->
+            <object pk="31"></object><!--PROFESIÓN-->
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="43"></object><!--SABERES--><!--SABER HISTORIA-->
+            <object pk="49"></object><!--SABER RELIGIÓN-->
+            <object pk="50"></object><!--SIGILO-->
+            <object pk="54"></object><!--TREPAR-->
+        </field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+        </field>
+    </object>
+    <object pk="171" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="rafaga_de_golpes">+0/+0</field>
+        <field type="CharField" name="dano_desarmado">1d6</field>
+        <field type="IntegerField" name="bonificacion_ac">0</field>
+        <field type="IntegerField" name="movimiento_rapido">0</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+        </field>
+    </object>
+    <object pk="172" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="fortaleza">3</field>
+        <field type="IntegerField" name="reflejos">3</field>
+        <field type="IntegerField" name="voluntad">3</field>
+        <field type="CharField" name="rafaga_de_golpes">+1/+1</field>
+        <field type="CharField" name="dano_desarmado">1d6</field>
+        <field type="IntegerField" name="bonificacion_ac">0</field>
+        <field type="IntegerField" name="movimiento_rapido">3</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+        </field>
+    </object>
+    <object pk="173" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="rafaga_de_golpes">+2/+2</field>
+        <field type="CharField" name="dano_desarmado">1d8</field>
+        <field type="IntegerField" name="bonificacion_ac">1</field>
+        <field type="IntegerField" name="movimiento_rapido">3</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+        </field>
+    </object>
+    <object pk="174" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="fortaleza">4</field>
+        <field type="IntegerField" name="reflejos">4</field>
+        <field type="IntegerField" name="voluntad">4</field>
+        <field type="CharField" name="rafaga_de_golpes">+3/+3</field>
+        <field type="CharField" name="dano_desarmado">1d8</field>
+        <field type="IntegerField" name="bonificacion_ac">1</field>
+        <field type="IntegerField" name="movimiento_rapido">3</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+        </field>
+    </object>
+    <object pk="175" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="rafaga_de_golpes">+4/+4/-1</field>
+        <field type="CharField" name="dano_desarmado">1d8</field>
+        <field type="IntegerField" name="bonificacion_ac">1</field>
+        <field type="IntegerField" name="movimiento_rapido">6</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="87"></object>
+        </field>
+    </object>
+    <object pk="176" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="fortaleza">5</field>
+        <field type="IntegerField" name="reflejos">5</field>
+        <field type="IntegerField" name="voluntad">5</field>
+        <field type="CharField" name="rafaga_de_golpes">+5/+5/+0</field>
+        <field type="CharField" name="dano_desarmado">1d8</field>
+        <field type="IntegerField" name="bonificacion_ac">1</field>
+        <field type="IntegerField" name="movimiento_rapido">6</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+        </field>
+    </object>
+    <object pk="177" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="rafaga_de_golpes">+6/+6/+1/+1</field>
+        <field type="CharField" name="dano_desarmado">1d10</field>
+        <field type="IntegerField" name="bonificacion_ac">2</field>
+        <field type="IntegerField" name="movimiento_rapido">6</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+        </field>
+    </object>
+    <object pk="178" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="fortaleza">6</field>
+        <field type="IntegerField" name="reflejos">6</field>
+        <field type="IntegerField" name="voluntad">6</field>
+        <field type="CharField" name="rafaga_de_golpes">+7/+7/+2/+2</field>
+        <field type="CharField" name="dano_desarmado">1d10</field>
+        <field type="IntegerField" name="bonificacion_ac">2</field>
+        <field type="IntegerField" name="movimiento_rapido">9</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+        </field>
+    </object>
+    <object pk="179" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">10</field>
+        <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">7</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="rafaga_de_golpes">+8/+8/+3/+3</field>
+        <field type="CharField" name="dano_desarmado">1d10</field>
+        <field type="IntegerField" name="bonificacion_ac">2</field>
+        <field type="IntegerField" name="movimiento_rapido">9</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="87"></object>
+        </field>
+    </object>
+    <object pk="180" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">11</field>
+        <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="fortaleza">7</field>
+        <field type="IntegerField" name="reflejos">7</field>
+        <field type="IntegerField" name="voluntad">7</field>
+        <field type="CharField" name="rafaga_de_golpes">+9/+9/+4/+4/-1</field>
+        <field type="CharField" name="dano_desarmado">1d10</field>
+        <field type="IntegerField" name="bonificacion_ac">2</field>
+        <field type="IntegerField" name="movimiento_rapido">9</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+        </field>
+    </object>
+    <object pk="181" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">12</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="rafaga_de_golpes">+10/+10/+5/+5/+0</field>
+        <field type="CharField" name="dano_desarmado">2d6</field>
+        <field type="IntegerField" name="bonificacion_ac">3</field>
+        <field type="IntegerField" name="movimiento_rapido">12</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+        </field>
+    </object>
+    <object pk="182" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">13</field>
+        <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="fortaleza">8</field>
+        <field type="IntegerField" name="reflejos">8</field>
+        <field type="IntegerField" name="voluntad">8</field>
+        <field type="CharField" name="rafaga_de_golpes">+11/+11/+6/+6/+1/+1</field>
+        <field type="CharField" name="dano_desarmado">2d6</field>
+        <field type="IntegerField" name="bonificacion_ac">3</field>
+        <field type="IntegerField" name="movimiento_rapido">12</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+            <object pk="101"></object>
+        </field>
+    </object>
+    <object pk="183" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">14</field>
+        <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="rafaga_de_golpes">+12/+12/+7/+7/+2/+2</field>
+        <field type="CharField" name="dano_desarmado">2d6</field>
+        <field type="IntegerField" name="bonificacion_ac">3</field>
+        <field type="IntegerField" name="movimiento_rapido">12</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+            <object pk="101"></object>
+            <object pk="87"></object>
+        </field>
+    </object>
+    <object pk="184" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">15</field>
+        <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="fortaleza">9</field>
+        <field type="IntegerField" name="reflejos">9</field>
+        <field type="IntegerField" name="voluntad">9</field>
+        <field type="CharField" name="rafaga_de_golpes">+13/+13/+8/+8/+3/+3</field>
+        <field type="CharField" name="dano_desarmado">2d6</field>
+        <field type="IntegerField" name="bonificacion_ac">3</field>
+        <field type="IntegerField" name="movimiento_rapido">15</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+            <object pk="101"></object>
+            <object pk="102"></object>
+        </field>
+    </object>
+    <object pk="185" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">16</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">10</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="rafaga_de_golpes">+14/+14/+9/+9/+4/+4/-1</field>
+        <field type="CharField" name="dano_desarmado">2d8</field>
+        <field type="IntegerField" name="bonificacion_ac">4</field>
+        <field type="IntegerField" name="movimiento_rapido">15</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+            <object pk="101"></object>
+            <object pk="102"></object>
+        </field>
+    </object>
+    <object pk="186" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">17</field>
+        <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="fortaleza">10</field>
+        <field type="IntegerField" name="reflejos">10</field>
+        <field type="IntegerField" name="voluntad">10</field>
+        <field type="CharField" name="rafaga_de_golpes">+15/+15/+10/+10/+5/+5/+0</field>
+        <field type="CharField" name="dano_desarmado">2d8</field>
+        <field type="IntegerField" name="bonificacion_ac">4</field>
+        <field type="IntegerField" name="movimiento_rapido">15</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+            <object pk="101"></object>
+            <object pk="102"></object>
+            <object pk="103"></object>
+            <object pk="104"></object>
+        </field>
+    </object>
+    <object pk="187" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">18</field>
+        <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">11</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="rafaga_de_golpes">+16/+16/+11/+11/+6/+6/+1</field>
+        <field type="CharField" name="dano_desarmado">2d8</field>
+        <field type="IntegerField" name="bonificacion_ac">4</field>
+        <field type="IntegerField" name="movimiento_rapido">18</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+            <object pk="101"></object>
+            <object pk="102"></object>
+            <object pk="103"></object>
+            <object pk="104"></object>
+            <object pk="87"></object>
+        </field>
+    </object>
+    <object pk="188" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">19</field>
+        <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="fortaleza">11</field>
+        <field type="IntegerField" name="reflejos">11</field>
+        <field type="IntegerField" name="voluntad">11</field>
+        <field type="CharField" name="rafaga_de_golpes">+17/+17/+12/+12/+7/+7/+2</field>
+        <field type="CharField" name="dano_desarmado">2d8</field>
+        <field type="IntegerField" name="bonificacion_ac">4</field>
+        <field type="IntegerField" name="movimiento_rapido">18</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+            <object pk="101"></object>
+            <object pk="102"></object>
+            <object pk="103"></object>
+            <object pk="104"></object>
+            <object pk="105"></object>
+        </field>
+    </object>
+    <object pk="189" model="main.clase">
+        <field type="CharField" name="clase">Monje</field>
+        <field type="IntegerField" name="nivel">20</field>
+        <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="fortaleza">12</field>
+        <field type="IntegerField" name="reflejos">12</field>
+        <field type="IntegerField" name="voluntad">12</field>
+        <field type="CharField" name="rafaga_de_golpes">+18/+18/+13/+13/+8/+8/+3</field>
+        <field type="CharField" name="dano_desarmado">2d10</field>
+        <field type="IntegerField" name="bonificacion_ac">5</field>
+        <field type="IntegerField" name="movimiento_rapido">18</field>
+        <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="85"></object>
+            <object pk="86"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="91"></object>
+            <object pk="92"></object>
+            <object pk="93"></object>
+            <object pk="94"></object>
+            <object pk="95"></object>
+            <object pk="96"></object>
+            <object pk="97"></object>
+            <object pk="98"></object>
+            <object pk="99"></object>
+            <object pk="100"></object>
+            <object pk="101"></object>
+            <object pk="102"></object>
+            <object pk="103"></object>
+            <object pk="104"></object>
+            <object pk="105"></object>
+            <object pk="106"></object>
+        </field>
     </object>
 </django-objects>
