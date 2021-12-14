@@ -118,28 +118,7 @@
     <object pk="31" model="main.idioma">
         <field type="CharField" name="idioma">Vishkanya</field>
     </object>
-<!--INMUNE-->
-    <object pk="1" model="main.inmune">
-        <field type="CharField" name="inmune">Veneno</field>
-    </object>
-    <object pk="2" model="main.inmune">
-        <field type="CharField" name="inmune">Frío</field>
-    </object>
-    <object pk="3" model="main.inmune">
-        <field type="CharField" name="inmune">Fuego</field>
-    </object>
-    <object pk="4" model="main.inmune">
-        <field type="CharField" name="inmune">Electricidad</field>
-    </object>
-    <object pk="5" model="main.inmune">
-        <field type="CharField" name="inmune">Efectos de dormir</field>
-    </object>
-    <object pk="6" model="main.inmune">
-        <field type="CharField" name="inmune">Parálisis</field>
-    </object>
-    <object pk="7" model="main.inmune">
-        <field type="CharField" name="inmune">Ilusión (fantasma)</field>
-    </object>
+
 <!--BONIFICACIONES RAZAS-->
     <object pk="1" model="main.bonificacionraza">
         <field type="CharField" name="nombre">Bonificadores de características élficos</field>
@@ -14685,5 +14664,36 @@
             <object pk="131"></object>
             <object pk="126"></object>
         </field>
+    </object>
+<!--PERSONAJES-->
+    <object pk="1" model="main.personaje">
+        <field to="main.perfil" name="perfil" rel="OneToOneRel">2</field>
+        <field type="CharField" name="nombre">Lautaro</field>
+        <field type="main.alineamiento" name="alineamiento">NB</field>
+        <field type="IntegerField" name="puntos_de_golpe">10</field>
+        <field type="IntegerField" name="clase_armadura">12</field>
+        <field type="IntegerField" name="desprevenido">10</field>
+        <field type="IntegerField" name="toque">16</field>
+        <field type="IntegerField" name="fuerza">10</field>
+        <field type="IntegerField" name="destreza">14</field>
+        <field type="IntegerField" name="constitucion">12</field>
+        <field type="IntegerField" name="inteligencia">10</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">10</field>
+        <field type="IntegerField" name="iniciativa">2</field>
+        <field type="BooleanField" name="es_publico">False</field>
+        <field to="main.raza" name="raza" rel="OneToOneRel">4</field>
+        <field to="main.clase" name="clase" rel="OneToOneRel">170</field>
+        <field to="main.idioma" name="idiomas" rel="ManyToManyRel">
+            <object pk="6"></object>
+        </field>
+        <field to="main.dote" name="dotes" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="5"></object>
+        </field>
+    </object>
+    <object pk="1" model="main.puntuacionhabilidad">
+        <field type="IntegerField" name="puntuacion">1</field>
+        <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
     </object>
 </django-objects>

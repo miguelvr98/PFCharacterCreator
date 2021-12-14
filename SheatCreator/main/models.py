@@ -54,10 +54,10 @@ class Personaje(models.Model):
     sabiduria = models.IntegerField(verbose_name='Sabiduría',
      default=10)
     carisma = models.IntegerField(verbose_name='Carisma', default=10)
+    iniciativa = models.IntegerField(verbose_name='Iniciativa', default=0)
     dinero = models.FloatField(verbose_name='Dinero', default=0.0)
     es_publico = models.BooleanField(verbose_name='Es público', default=False)
     idiomas = models.ManyToManyField('Idioma')
-    inmune = models.ManyToManyField('Inmune')
     raza = models.ForeignKey('Raza', on_delete=models.CASCADE, null=True)
     clase = models.ManyToManyField('Clase')
     dotes = models.ManyToManyField('Dote')
@@ -97,15 +97,6 @@ class Personaje(models.Model):
 
         def __str__(self):
             return self.idioma
-
-        class Meta:
-            ordering = ('pk', )
-
-    class Inmune(models.Model):
-        inmune = models.TextField(verbose_name='Inmune')
-
-        def __str__(self):
-            return self.inmune
 
         class Meta:
             ordering = ('pk', )
@@ -312,7 +303,7 @@ class Personaje(models.Model):
         numero_trucos = models.IntegerField(verbose_name='Número de trucos', null=True)
         nivel_cambio = models.IntegerField(verbose_name='Nivel de cambio', null=True)
         es_familiar = models.BooleanField(verbose_name='Es familiar', default=False)
-        companero_animal_cambio = models.ForeignKey('CompaneroAnimal', null=True, on_delete=models.SET_NULL)
+        companero_animal_cambio = models.ForeignKey('self', null=True, on_delete=models.SET_NULL)
         especial = models.ManyToManyField('Especial')
 
         def __str__(self):
@@ -325,7 +316,7 @@ class Personaje(models.Model):
         nombre = models.TextField(verbose_name='Nombre')
         dotes = models.ManyToManyField('Dote')
         trucos = models.ManyToManyField('Truco')
-        puntuacion_habilidad = models.ManyToManyField('PuntuacionHabilidadCA')
+        puntuacion_habilidad = models.ManyToManyField('PuntuacionHabilidad')
 
     class Truco(models.Model):
         nombre = models.TextField(verbose_name='Nombre')
@@ -338,16 +329,6 @@ class Personaje(models.Model):
         
         class Meta:
             ordering = ('nombre', )
-
-    class PuntuacionHabilidadCA(models.Model):
-        puntuacion = models.IntegerField(verbose_name='Puntuación')
-        habilidad = models.ForeignKey('Habilidad', on_delete=models.CASCADE)
-
-        def __str__(self):
-            return self.habilidad.habilidad
-        
-        class Meta:
-            ordering = ('pk', )
 
     class PropiedadObjeto(models.Model):
         equipado = models.BooleanField(verbose_name='Está equipado', default=False)
