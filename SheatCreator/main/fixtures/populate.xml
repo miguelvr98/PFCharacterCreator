@@ -14665,6 +14665,2842 @@
             <object pk="126"></object>
         </field>
     </object>
+<!--PUNTOS POR HABILIDAD-->
+    <!--ACROBACIAS-->
+    <object pk="1" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="2" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="3" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="4" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="5" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="6" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="7" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="8" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="9" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="10" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="11" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="12" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="13" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="14" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="15" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="16" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="17" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="18" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="19" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <object pk="20" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">1</field>
+    </object>
+    <!--ARTESANÍA (ALQUIMIA)-->
+    <object pk="21" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="22" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="23" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="24" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="25" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="26" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="27" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="28" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="29" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="30" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="31" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="32" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="33" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="34" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="35" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="36" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="37" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="38" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="39" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <object pk="40" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+    </object>
+    <!--ARTESANÍA (ARCOS)-->
+    <object pk="41" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="42" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="43" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="44" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="45" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="46" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="47" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="48" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="49" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="50" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="51" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="52" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="53" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="54" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="55" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="56" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="57" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="58" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="59" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <object pk="60" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">3</field>
+    </object>
+    <!--ARTESANÍA (ARMADURAS)-->
+    <object pk="61" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="62" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="63" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="64" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="65" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="66" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="67" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="68" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="69" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="70" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="71" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="72" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="73" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="74" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="75" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="76" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="77" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="78" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="79" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <object pk="80" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">4</field>
+    </object>
+    <!--ARTESANÍA (ARMAS)-->
+    <object pk="81" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="82" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="83" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="84" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="85" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="86" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="87" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="88" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="89" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="90" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="91" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="92" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="93" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="94" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="95" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="96" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="97" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="98" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="99" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <object pk="100" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">5</field>
+    </object>
+    <!--ARTESANÍA (TRAMPAS)-->
+    <object pk="101" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="102" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="103" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="104" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="105" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="106" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="107" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="108" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="109" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="110" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="111" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="112" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="113" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="114" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="115" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="116" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="117" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="118" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="119" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <object pk="120" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">6</field>
+    </object>
+    <!--ARTESANÍA (VARIOS)-->
+    <object pk="121" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="122" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="123" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="124" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="125" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="126" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="127" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="128" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="129" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="130" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="131" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="132" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="133" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="134" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="135" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="136" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="137" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="138" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="139" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <object pk="140" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">7</field>
+    </object>
+    <!--AVERIGUAR INTENCIONES-->
+    <object pk="141" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="142" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="143" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="144" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="145" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="146" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="147" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="148" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="149" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="150" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="151" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="152" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="153" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="154" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="155" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="156" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="157" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="158" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="159" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <object pk="160" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">8</field>
+    </object>
+    <!--CONOCIMIENTO DE CONJUROS-->
+    <object pk="161" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="162" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="163" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="164" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="165" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="166" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="167" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="168" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="169" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="170" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="171" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="172" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="173" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="174" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="175" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="176" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="177" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="178" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="179" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <object pk="180" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">9</field>
+    </object>
+    <!--CURAR-->
+    <object pk="181" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="182" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="183" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="184" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="185" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="186" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="187" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="188" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="189" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="190" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="191" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="192" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="193" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="194" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="195" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="196" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="197" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="198" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="199" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <object pk="200" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">10</field>
+    </object>
+    <!--DIPLOMACIA-->
+    <object pk="201" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="202" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="203" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="204" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="205" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="206" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="207" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="208" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="209" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="210" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="211" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="212" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="213" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="214" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="215" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="216" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="217" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="218" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="219" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <object pk="220" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">11</field>
+    </object>
+    <!--DISFRAZARSE-->
+    <object pk="221" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="222" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="223" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="224" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="225" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="226" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="227" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="228" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="229" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="230" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="231" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="232" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="233" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="234" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="235" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="236" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="237" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="238" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="239" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <object pk="240" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">12</field>
+    </object>
+    <!--ENGAÑAR-->
+    <object pk="241" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="242" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="243" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="244" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="245" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="246" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="247" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="248" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="249" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="250" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="251" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="252" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="253" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="254" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="255" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="256" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="257" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="258" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="259" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <object pk="260" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">13</field>
+    </object>
+    <!--ESCAPISMO-->
+    <object pk="261" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="262" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="263" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="264" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="265" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="266" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="267" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="268" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="269" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="270" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="271" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="272" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="273" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="274" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="275" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="276" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="277" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="278" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="279" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <object pk="280" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">14</field>
+    </object>
+    <!--INTERPRETAR (ACTUAR)-->
+    <object pk="281" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="282" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="283" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="284" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="285" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="286" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="287" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="288" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="289" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="290" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="291" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="292" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="293" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="294" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="295" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="296" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="297" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="298" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="299" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <object pk="300" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">15</field>
+    </object>
+    <!--INTERPRETAR (CANTO)-->
+    <object pk="301" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="302" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="303" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="304" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="305" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="306" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="307" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="308" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="309" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="310" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="311" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="312" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="313" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="314" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="315" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="316" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="317" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="318" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="319" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <object pk="320" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">16</field>
+    </object>
+    <!--INTERPRETAR (COMEDIA)-->
+    <object pk="321" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="322" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="323" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="324" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="325" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="326" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="327" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="328" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="329" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="330" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="331" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="332" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="333" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="334" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="335" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="336" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="337" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="338" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="339" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <object pk="340" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">17</field>
+    </object>
+    <!--INTERPRETAR (DANZA)-->
+    <object pk="341" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="342" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="343" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="344" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="345" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="346" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="347" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="348" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="349" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="350" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="351" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="352" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="353" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="354" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="355" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="356" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="357" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="358" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="359" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <object pk="360" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">18</field>
+    </object>
+    <!--INTERPRETAR (CUERDA)-->
+    <object pk="361" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="362" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="363" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="364" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="365" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="366" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="367" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="368" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="369" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="370" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="371" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="372" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="373" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="374" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="375" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="376" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="377" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="378" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="379" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <object pk="380" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">19</field>
+    </object>
+    <!--INTERPRETAR (PERCUSIÓN)-->
+    <object pk="381" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="382" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="383" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="384" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="385" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="386" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="387" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="388" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="389" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="390" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="391" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="392" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="393" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="394" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="395" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="396" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="397" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="398" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="399" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <object pk="400" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">20</field>
+    </object>
+    <!--INTERPRETAR (TECLADO)-->
+    <object pk="401" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="402" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="403" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="404" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="405" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="406" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="407" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="408" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="409" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="410" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="411" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="412" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="413" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="414" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="415" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="416" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="417" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="418" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="419" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <object pk="420" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">21</field>
+    </object>
+    <!--INTERPRETAR (VIENTO)-->
+    <object pk="421" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="422" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="423" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="424" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="425" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="426" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="427" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="428" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="429" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="430" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="431" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="432" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="433" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="434" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="435" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="436" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="437" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="438" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="439" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <object pk="440" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">22</field>
+    </object>
+    <!--INTERPRETAR (ORATORIA)-->
+    <object pk="441" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="442" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="443" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="444" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="445" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="446" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="447" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="448" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="449" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="450" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="451" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="452" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="453" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="454" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="455" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="456" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="457" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="458" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="459" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <object pk="460" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">23</field>
+    </object>
+    <!--INTIMIDAR-->
+    <object pk="461" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="462" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="463" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="464" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="465" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="466" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="467" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="468" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="469" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="470" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="471" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="472" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="473" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="474" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="475" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="476" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="477" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="478" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="479" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <object pk="480" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">24</field>
+    </object>
+    <!--INUTILIZAR MECANISMO-->
+    <object pk="481" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="482" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="483" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="484" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="485" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="486" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="487" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="488" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="489" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="490" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="491" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="492" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="493" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="494" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="495" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="496" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="497" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="498" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="499" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <object pk="500" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">25</field>
+    </object>
+    <!--JUEGO DE MANOS-->
+    <object pk="501" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="502" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="503" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="504" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="505" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="506" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="507" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="508" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="509" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="510" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="511" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="512" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="513" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="514" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="515" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="516" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="517" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="518" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="519" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <object pk="520" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">26</field>
+    </object>
+    <!--LINGÜÍSTICA-->
+    <object pk="521" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="522" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="523" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="524" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="525" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="526" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="527" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="528" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="529" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="530" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="531" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="532" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="533" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="534" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="535" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="536" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="537" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="538" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="539" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <object pk="540" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">27</field>
+    </object>
+    <!--MONTAR-->
+    <object pk="541" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="542" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="543" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="544" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="545" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="546" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="547" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="548" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="549" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="550" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="551" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="552" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="553" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="554" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="555" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="556" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="557" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="558" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="559" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <object pk="560" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">28</field>
+    </object>
+    <!--NADAR-->
+    <object pk="561" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="562" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="563" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="564" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="565" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="566" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="567" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="568" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="569" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="570" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="571" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="572" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="573" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="574" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="575" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="576" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="577" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="578" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="579" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <object pk="580" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">29</field>
+    </object>
+    <!--PERCEPCIÓN-->
+    <object pk="581" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="582" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="583" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="584" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="585" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="586" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="587" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="588" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="589" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="590" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="591" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="592" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="593" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="594" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="595" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="596" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="597" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="598" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="599" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <object pk="600" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">30</field>
+    </object>
+    <!--PROFESIÓN (BOTICARIO)-->
+    <object pk="601" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="602" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="603" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="604" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="605" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="606" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="607" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="608" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="609" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="610" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="611" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="612" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="613" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="614" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="615" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="616" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="617" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="618" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="619" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <object pk="620" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">31</field>
+    </object>
+    <!--PROFESIÓN (COCINERO)-->
+    <object pk="621" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="622" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="623" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="624" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="625" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="626" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="627" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="628" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="629" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="630" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="631" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="632" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="633" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="634" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="635" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="636" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="637" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="638" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="639" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <object pk="640" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">32</field>
+    </object>
+    <!--PROFESIÓN (CURTIDOR)-->
+    <object pk="641" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="642" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="643" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="644" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="645" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="646" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="647" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="648" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="649" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="650" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="651" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="652" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="653" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="654" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="655" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="656" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="657" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="658" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="659" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <object pk="660" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">33</field>
+    </object>
+    <!--PROFESIÓN (HERRERO)-->
+    <object pk="661" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="662" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="663" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="664" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="665" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="666" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="667" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="668" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="669" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="670" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="671" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="672" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="673" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="674" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="675" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="676" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="677" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="678" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="679" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <object pk="680" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">34</field>
+    </object>
+    <!--PROFESIÓN (LEÑADOR)-->
+    <object pk="681" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">1</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="682" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">2</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="683" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">3</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="684" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">4</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="685" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">5</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="686" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">6</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="687" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">7</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="688" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">8</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="689" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">9</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="690" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">10</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="691" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">11</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="692" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">12</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="693" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">13</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="694" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">14</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="695" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">15</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="696" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">16</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="697" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">17</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="698" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">18</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="699" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">19</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
+    <object pk="700" model="main.puntuacionhabilidad">
+            <field type="IntegerField" name="puntuacion">20</field>
+            <field to="main.habilidad" name="habilidad" rel="OneToOneRel">35</field>
+    </object>
 <!--PERSONAJES-->
     <object pk="1" model="main.personaje">
         <field to="main.perfil" name="perfil" rel="OneToOneRel">2</field>
