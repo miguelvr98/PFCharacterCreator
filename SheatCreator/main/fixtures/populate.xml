@@ -8091,6 +8091,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">0</field>
@@ -8122,6 +8123,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">0</field>
@@ -8137,6 +8139,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -8152,6 +8155,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -8168,6 +8172,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -8184,6 +8189,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -8201,6 +8207,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -8218,6 +8225,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -8236,6 +8244,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -8253,6 +8262,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -8271,6 +8281,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">11</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -8289,6 +8300,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -8308,6 +8320,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">13</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -8326,6 +8339,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">14</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -8346,6 +8360,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">15</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -8365,6 +8380,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+16/+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">16</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -8385,6 +8401,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+17/+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">17</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -8405,6 +8422,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+18/+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">18</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -8426,6 +8444,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+19/+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">19</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -8446,6 +8465,7 @@
         <field type="CharField" name="clase">Bárbaro</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+20/+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">20</field>
         <field type="IntegerField" name="fortaleza">12</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -8511,6 +8531,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="ataque_base_int">0</field>
         <field type="IntegerField" name="fortaleza">0</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -8601,6 +8622,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">0</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -8641,6 +8663,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -8681,6 +8704,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -8719,6 +8743,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -8762,6 +8787,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -8803,6 +8829,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -8845,6 +8872,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -8892,6 +8920,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -8940,6 +8969,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">7</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -8992,6 +9022,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">7</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -9048,6 +9079,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">8</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -9101,6 +9133,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">8</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -9156,6 +9189,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">9</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -9216,6 +9250,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">11</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">9</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -9272,6 +9307,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">10</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -9330,6 +9366,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">10</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -9392,6 +9429,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">13</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">11</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -9452,6 +9490,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">14</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">11</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -9511,6 +9550,7 @@
         <field type="CharField" name="clase">Bardo</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">15</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">12</field>
         <field type="IntegerField" name="voluntad">12</field>
@@ -9596,6 +9636,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="ataque_base_int">0</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -9648,6 +9689,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -9671,6 +9713,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -9691,6 +9734,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -9711,6 +9755,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -9732,6 +9777,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -9753,6 +9799,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -9775,6 +9822,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -9797,6 +9845,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -9820,6 +9869,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -9843,6 +9893,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -9867,6 +9918,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -9891,6 +9943,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -9920,6 +9973,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -9949,6 +10003,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">11</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -9979,6 +10034,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -10013,6 +10069,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -10044,6 +10101,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">13</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -10075,6 +10133,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">14</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -10110,6 +10169,7 @@
         <field type="CharField" name="clase">Clérigo</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">15</field>
         <field type="IntegerField" name="fortaleza">12</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">12</field>
@@ -10170,6 +10230,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="ataque_base_int">0</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -10219,6 +10280,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -10240,6 +10302,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -10263,6 +10326,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -10288,6 +10352,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -10314,6 +10379,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -10340,6 +10406,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -10367,6 +10434,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -10394,6 +10462,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -10423,6 +10492,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -10452,6 +10522,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -10482,6 +10553,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -10512,6 +10584,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -10544,6 +10617,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -10576,6 +10650,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">11</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -10610,6 +10685,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -10644,6 +10720,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -10679,6 +10756,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">13</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -10714,6 +10792,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">14</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -10749,6 +10828,7 @@
         <field type="CharField" name="clase">Druida</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">15</field>
         <field type="IntegerField" name="fortaleza">12</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">12</field>
@@ -10859,6 +10939,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">0</field>
@@ -10905,6 +10986,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">0</field>
@@ -10919,6 +11001,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -10934,6 +11017,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -10957,6 +11041,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -10977,6 +11062,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -10997,6 +11083,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -11022,6 +11109,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -11045,6 +11133,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -11068,6 +11157,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">7</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -11098,6 +11188,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">11</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">7</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -11123,6 +11214,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">8</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -11149,6 +11241,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">13</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">8</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -11181,6 +11274,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">14</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">9</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -11209,6 +11303,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">15</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">9</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -11237,6 +11332,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+16/+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">16</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">10</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -11265,6 +11361,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+17/+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">17</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">10</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -11294,6 +11391,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+18/+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">18</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">11</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -11325,6 +11423,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+19/+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">19</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">11</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -11355,6 +11454,7 @@
         <field type="CharField" name="clase">Explorador</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+20/+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">20</field>
         <field type="IntegerField" name="fortaleza">12</field>
         <field type="IntegerField" name="reflejos">12</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -11415,6 +11515,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">0</field>
@@ -11453,6 +11554,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">0</field>
@@ -11466,6 +11568,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -11479,6 +11582,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -11493,6 +11597,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -11507,6 +11612,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -11522,6 +11628,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -11536,6 +11643,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -11551,6 +11659,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -11565,6 +11674,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -11580,6 +11690,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">11</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -11594,6 +11705,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -11609,6 +11721,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">13</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -11623,6 +11736,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">14</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -11638,6 +11752,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">15</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -11652,6 +11767,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+16/+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">16</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -11667,6 +11783,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+17/+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">17</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -11681,6 +11798,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+18/+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">18</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -11696,6 +11814,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+19/+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">19</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -11711,6 +11830,7 @@
         <field type="CharField" name="clase">Guerrero</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+20/+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">20</field>
         <field type="IntegerField" name="fortaleza">12</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -11752,6 +11872,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="ataque_base_int">0</field>
         <field type="IntegerField" name="fortaleza">0</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -11797,6 +11918,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">0</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -11817,6 +11939,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -11837,6 +11960,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -11867,6 +11991,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -11889,6 +12014,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -11921,6 +12047,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -11957,6 +12084,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -11991,6 +12119,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -12021,6 +12150,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -12057,6 +12187,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -12089,6 +12220,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -12123,6 +12255,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -12157,6 +12290,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -12193,6 +12327,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -12233,6 +12368,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -12279,6 +12415,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -12325,6 +12462,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -12369,6 +12507,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -12417,6 +12556,7 @@
         <field type="CharField" name="clase">Hechicero</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">12</field>
@@ -12478,6 +12618,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="ataque_base_int">0</field>
         <field type="IntegerField" name="fortaleza">0</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -12528,6 +12669,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">0</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -12546,6 +12688,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -12564,6 +12707,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -12583,6 +12727,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -12604,6 +12749,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -12624,6 +12770,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -12645,6 +12792,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -12666,6 +12814,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -12688,6 +12837,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -12711,6 +12861,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -12734,6 +12885,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -12757,6 +12909,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -12781,6 +12934,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -12805,6 +12959,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -12831,6 +12986,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -12856,6 +13012,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -12882,6 +13039,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -12908,6 +13066,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -12934,6 +13093,7 @@
         <field type="CharField" name="clase">Mago</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">12</field>
@@ -12996,6 +13156,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="ataque_base_int">0</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -13053,6 +13214,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -13073,6 +13235,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -13095,6 +13258,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -13119,6 +13283,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -13145,6 +13310,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -13172,6 +13338,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -13199,6 +13366,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -13226,6 +13394,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -13254,6 +13423,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">7</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -13283,6 +13453,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">7</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -13312,6 +13483,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">8</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -13342,6 +13514,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">8</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -13373,6 +13546,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">9</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -13405,6 +13579,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">11</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">9</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -13437,6 +13612,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">10</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -13469,6 +13645,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">10</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -13503,6 +13680,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">13</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">11</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -13538,6 +13716,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">14</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">11</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -13573,6 +13752,7 @@
         <field type="CharField" name="clase">Monje</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">15</field>
         <field type="IntegerField" name="fortaleza">12</field>
         <field type="IntegerField" name="reflejos">12</field>
         <field type="IntegerField" name="voluntad">12</field>
@@ -13653,6 +13833,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -13693,6 +13874,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">0</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -13709,6 +13891,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -13728,6 +13911,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -13750,6 +13934,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">1</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -13773,6 +13958,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -13797,6 +13983,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -13821,6 +14008,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -13846,6 +14034,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -13872,6 +14061,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -13898,6 +14088,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">11</field>
         <field type="IntegerField" name="fortaleza">7</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">7</field>
@@ -13925,6 +14116,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -13953,6 +14145,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">13</field>
         <field type="IntegerField" name="fortaleza">8</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">8</field>
@@ -13981,6 +14174,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">14</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -14010,6 +14204,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">15</field>
         <field type="IntegerField" name="fortaleza">9</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">9</field>
@@ -14040,6 +14235,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+16/+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">16</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -14069,6 +14265,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+17/+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">17</field>
         <field type="IntegerField" name="fortaleza">10</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">10</field>
@@ -14099,6 +14296,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+18/+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">18</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -14130,6 +14328,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+19/+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">19</field>
         <field type="IntegerField" name="fortaleza">11</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">11</field>
@@ -14160,6 +14359,7 @@
         <field type="CharField" name="clase">Paladín</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+20/+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">20</field>
         <field type="IntegerField" name="fortaleza">12</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">12</field>
@@ -14275,6 +14475,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="ataque_base">+0</field>
+        <field type="IntegerField" name="ataque_base_int">0</field>
         <field type="IntegerField" name="fortaleza">0</field>
         <field type="IntegerField" name="reflejos">2</field>
         <field type="IntegerField" name="voluntad">0</field>
@@ -14333,6 +14534,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="ataque_base">+1</field>
+        <field type="IntegerField" name="ataque_base_int">1</field>
         <field type="IntegerField" name="fortaleza">0</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">0</field>
@@ -14348,6 +14550,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">3</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">3</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -14363,6 +14566,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="ataque_base">+2</field>
+        <field type="IntegerField" name="ataque_base_int">2</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -14380,6 +14584,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="ataque_base">+3</field>
+        <field type="IntegerField" name="ataque_base_int">3</field>
         <field type="IntegerField" name="fortaleza">1</field>
         <field type="IntegerField" name="reflejos">4</field>
         <field type="IntegerField" name="voluntad">1</field>
@@ -14396,6 +14601,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="ataque_base">+4</field>
+        <field type="IntegerField" name="ataque_base_int">4</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -14413,6 +14619,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">7</field>
         <field type="CharField" name="ataque_base">+5</field>
+        <field type="IntegerField" name="ataque_base_int">5</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">5</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -14429,6 +14636,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">8</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">2</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">2</field>
@@ -14447,6 +14655,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="ataque_base">+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">6</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">6</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -14464,6 +14673,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">10</field>
         <field type="CharField" name="ataque_base">+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">7</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">7</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -14483,6 +14693,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">11</field>
         <field type="CharField" name="ataque_base">+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">8</field>
         <field type="IntegerField" name="fortaleza">3</field>
         <field type="IntegerField" name="reflejos">7</field>
         <field type="IntegerField" name="voluntad">3</field>
@@ -14501,6 +14712,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">12</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">8</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -14520,6 +14732,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">13</field>
         <field type="CharField" name="ataque_base">+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">9</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">8</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -14538,6 +14751,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">14</field>
         <field type="CharField" name="ataque_base">+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">10</field>
         <field type="IntegerField" name="fortaleza">4</field>
         <field type="IntegerField" name="reflejos">9</field>
         <field type="IntegerField" name="voluntad">4</field>
@@ -14557,6 +14771,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">15</field>
         <field type="CharField" name="ataque_base">+11/+6/+1</field>
+        <field type="IntegerField" name="ataque_base_int">11</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">9</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -14575,6 +14790,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">16</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">10</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -14594,6 +14810,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">17</field>
         <field type="CharField" name="ataque_base">+12/+7/+2</field>
+        <field type="IntegerField" name="ataque_base_int">12</field>
         <field type="IntegerField" name="fortaleza">5</field>
         <field type="IntegerField" name="reflejos">10</field>
         <field type="IntegerField" name="voluntad">5</field>
@@ -14612,6 +14829,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">18</field>
         <field type="CharField" name="ataque_base">+13/+8/+3</field>
+        <field type="IntegerField" name="ataque_base_int">13</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">11</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -14631,6 +14849,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">19</field>
         <field type="CharField" name="ataque_base">+14/+9/+4</field>
+        <field type="IntegerField" name="ataque_base_int">14</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">11</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -14649,6 +14868,7 @@
         <field type="CharField" name="clase">Pícaro</field>
         <field type="IntegerField" name="nivel">20</field>
         <field type="CharField" name="ataque_base">+15/+10/+5</field>
+        <field type="IntegerField" name="ataque_base_int">15</field>
         <field type="IntegerField" name="fortaleza">6</field>
         <field type="IntegerField" name="reflejos">12</field>
         <field type="IntegerField" name="voluntad">6</field>
@@ -19208,19 +19428,17 @@
         <field type="CharField" name="nombre">Lautaro</field>
         <field type="main.alineamiento" name="alineamiento">NB</field>
         <field type="IntegerField" name="puntos_de_golpe">10</field>
-        <field type="IntegerField" name="clase_armadura">12</field>
-        <field type="IntegerField" name="desprevenido">10</field>
-        <field type="IntegerField" name="toque">16</field>
         <field type="IntegerField" name="fuerza">10</field>
         <field type="IntegerField" name="destreza">14</field>
         <field type="IntegerField" name="constitucion">12</field>
         <field type="IntegerField" name="inteligencia">10</field>
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">10</field>
-        <field type="IntegerField" name="iniciativa">2</field>
         <field type="BooleanField" name="es_publico">False</field>
         <field to="main.raza" name="raza" rel="OneToOneRel">4</field>
-        <field to="main.clase" name="clase" rel="OneToOneRel">170</field>
+        <field to="main.clase" name="clases" rel="ManyToMany">
+            <object pk="170"></object>
+        </field>
         <field to="main.idioma" name="idiomas" rel="ManyToManyRel">
             <object pk="6"></object>
         </field>

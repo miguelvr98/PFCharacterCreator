@@ -13,6 +13,7 @@ class Perfil(models.Model):
     class Meta:
         ordering = ('pk', )
 
+# Falta por pensar como hacer los dados de golpe
 class Personaje(models.Model):
     perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE, null=False)
     nombre = models.TextField(verbose_name='Nombre')
@@ -29,22 +30,12 @@ class Personaje(models.Model):
         CM = 'CM', 'Caótico Malo'
     alineamiento = models.CharField(verbose_name='alineamiento', 
     max_length=2, choices=Alineamiento.choices, null=True)
-    carga = models.TextField(verbose_name='Carga', null=True)
     puntos_de_golpe = models.IntegerField(verbose_name='Puntos de golpe',
     null=True)
     resistencia_dano = models.IntegerField(verbose_name='Resistencia al daño',
     null=True)
     resistencia_conjuros = models.IntegerField(verbose_name='Resistencia a Conjuros',
     null=True)
-    clase_armadura = models.IntegerField(verbose_name='Clase de armadura',
-    default=10)
-    desprevenido = models.IntegerField(verbose_name='Desprevenido',
-    default=10)
-    toque = models.IntegerField(verbose_name='Toque', default=10)
-    bmc = models.IntegerField(verbose_name='Bonus maniobra de combate',
-    default=10)
-    dmc = models.IntegerField(verbose_name='Defensa maniobra de combate',
-    default=10)
     fuerza = models.IntegerField(verbose_name='Fuerza', default=10)
     destreza = models.IntegerField(verbose_name='Destreza', default=10)
     constitucion = models.IntegerField(verbose_name='Constitución',
@@ -54,12 +45,11 @@ class Personaje(models.Model):
     sabiduria = models.IntegerField(verbose_name='Sabiduría',
      default=10)
     carisma = models.IntegerField(verbose_name='Carisma', default=10)
-    iniciativa = models.IntegerField(verbose_name='Iniciativa', default=0)
     dinero = models.FloatField(verbose_name='Dinero', default=0.0)
     es_publico = models.BooleanField(verbose_name='Es público', default=False)
     idiomas = models.ManyToManyField('Idioma')
     raza = models.ForeignKey('Raza', on_delete=models.CASCADE, null=True)
-    clase = models.ManyToManyField('Clase')
+    clases = models.ManyToManyField('Clase')
     dotes = models.ManyToManyField('Dote')
     puntuaciones_habilidad = models.ManyToManyField('PuntuacionHabilidad')
     propiedades_objeto = models.ManyToManyField('PropiedadObjeto')
@@ -68,23 +58,161 @@ class Personaje(models.Model):
     poderes_conocidos = models.ManyToManyField('Poder')
     linaje = models.ForeignKey('Linaje', null=True, on_delete=models.SET_NULL)
 
-    def BonificadorFuerza(self):
+    @property
+    def bonificadorFuerza(self):
         return int((fuerza-10)/2)
     
-    def BonificadorDestreza(self):
+    @property
+    def bonificadorDestreza(self):
         return int((destreza-10)/2)
 
-    def BonificadorConstitucion(self):
+    @property
+    def bonificadorConstitucion(self):
         return int((constitucion-10)/2)
 
-    def BonificadorInteligencia(self):
+    @property
+    def bonificadorInteligencia(self):
         return int((inteligencia-10)/2)
 
-    def BonificadorSabiduria(self):
+    @property
+    def bonificadorSabiduria(self):
         return int((sabiduria-10)/2)
 
-    def BonificadorCarisma(self):
+    @property
+    def bonificadorCarisma(self):
         return int((carisma-10)/2)
+    
+    @property
+    def iniciativa(self):
+        return bonificadorDestreza
+
+    @property
+    def carga(self):
+        carga = 0.0
+        for propiedad_objeto in self.propiedades_objeto:
+            carga_objeto = propiedad_objeto.objeto.peso * propiedad_objeto.objeto.cantidad
+            carga = carga + carga_objeto
+        return carga
+
+    @property
+    def carga_ligera(self):
+        carga_ligera = 0.0
+        libra = 0.45
+        diccionario = {10:33, 11:38, 12:43, 13:50, 14:58, 15:66, 16:76, 17:86, 18:100, 19:116}
+        if self.fuerza < 10:
+            carga_ligera = self.fuerza * 3.33
+        elif self.fuerza >= 10 and self.fuerza <= 19:
+            carga_ligera = diccionario.get(self.fuerza) * libra
+        elif self.fuerza > 19:
+            carga_ligera = diccionario.get(self.fuerza%10) * libra
+        if self.raza.tamano == 'Pequeño':
+            carga_ligera = carga_ligera/2
+        return carga_ligera
+    
+    @property
+    def carga_media(self):
+        return carga_ligera(self) * 2
+    
+    @property
+    def carga_maxima(self):
+        return carga_media(self) * 2
+
+    @property
+    def clase_armadura(self):
+        clase_armadura = 10
+        for propiedad_objeto in self.propiedades_objeto:
+            for propiedad in propiedad_objeto.propiedades:
+                if propiedad.equipado == True and ('Armadura' in propiedad_objeto.objeto.clase or 'Escudo' in propiedad_objeto.objeto.clase):
+                    bonif_arm = propiedad_objeto.objeto.bonif_arm
+                    bonif_max_des = []
+                    bonif_max_des.append(propiedad_objeto.objeto.bonif_max_des)
+                    max = max(bonif_max_des)
+                    clase_armadura = clase_armadura + bonif_arm
+                if max >= bonificadorDestreza(self):
+                    clase_armadura = clase_armadura + bonificadorDestreza(self)
+                else:
+                    clase_armadura = clase_armadura + max
+        return clase_armadura
+    
+    @property
+    def desprevenido(self):
+        desprevenido = 10
+        for propiedad_objeto in self.propiedades_objeto:
+            for propiedad in propiedad_objeto.propiedades:
+                if propiedad.equipado == True and ('Armadura' in propiedad_objeto.objeto.clase or 'Escudo' in propiedad_objeto.objeto.clase):
+                    bonif_arm = propiedad_objeto.objeto.bonif_arm
+                    desprevenido = desprevenido + bonif_arm
+        return desprevenido
+
+    @property
+    def toque(self):
+        toque = 10
+        for propiedad_objeto in self.propiedades_objeto:
+            for propiedad in propiedad_objeto.propiedades:
+                if propiedad.equipado == True and ('Armadura' in propiedad_objeto.objeto.clase or 'Escudo' in propiedad_objeto.objeto.clase):
+                    bonif_max_des = []
+                    bonif_max_des.append(propiedad_objeto.objeto.bonif_max_des)
+                    max = max(bonif_max_des)
+                    if max >= bonificadorDestreza(self):
+                        toque = toque + bonificadorDestreza(self)
+                    else:
+                        toque = toque + max 
+        return toque
+
+    @property
+    def bmc(self):
+        ataque_base_sum = 0
+        for clase in self.clases:
+            ataque_base_sum = ataque_base_sum + clase.ataque_base_int
+        bmc = '+' + str(bmc + ataque_base_sum + bonificadorFuerza(self))
+        return bmc
+
+    @property
+    def dmc(self):
+        ataque_base_sum = 0
+        for clase in self.clases:
+            ataque_base_sum = ataque_base_sum + clase.ataque_base_int
+        dmc = 10 + ataque_base_sum + bonificadorFuerza(self) + bonificadorDestreza(self)
+        return dmc
+    
+    @property
+    def fortaleza(self):
+        fortaleza = 0
+        for clase in self.clases:
+            fortaleza = fortaleza + clase.fortaleza
+        fortaleza = fortaleza + bonificadorConstitucion(self)
+        return fortaleza
+    
+    @property
+    def reflejos(self):
+        reflejos = 0
+        for clase in self.clases:
+            reflejos = reflejos + clase.reflejos
+        reflejos = reflejos + bonificadorDestreza(self)
+        return reflejos
+
+    @property
+    def voluntad(self):
+        voluntad = 0
+        for clase in self.clases:
+            voluntad = voluntad + clase.voluntad
+        voluntad = voluntad + bonificadorSabiduria(self)
+        return voluntad
+
+    @property
+    def ataque_base(self):
+        ataque_base_sum = 0
+        ataque_base = '+'
+        for clase in self.clases:
+            ataque_base_sum = ataque_base_sum + clase.ataque_base_int
+        if ataque_base_sum >= 6:
+            while ataque_base_sum >= 6:
+                ataque_base = ataque_base + str(ataque_base_sum) + '/'
+                ataque_base_sum = ataque_base_sum - 5
+            ataque_base = ataque_base + str(ataque_base_sum)
+        else:
+            ataque_base = ataque_base + str(ataque_base_sum)
+        return ataque_base
 
     def __str__(self):
         return self.nombre
@@ -159,6 +287,7 @@ class Personaje(models.Model):
         default=6, null=True)
         ataque_base = models.TextField(verbose_name='Ataque base',
          null=True)
+        ataque_base_int = models.IntegerField(verbose_name='Ataque base', null=False, default=0)
         fortaleza = models.IntegerField(verbose_name='Fortaleza', 
         null=True)
         reflejos = models.IntegerField(verbose_name='Reflejos', null=True)
@@ -331,7 +460,6 @@ class Personaje(models.Model):
             ordering = ('nombre', )
 
     class PropiedadObjeto(models.Model):
-        equipado = models.BooleanField(verbose_name='Está equipado', default=False)
         cantidad = models.IntegerField(verbose_name='Cantidad', default=1)
         propiedades = models.ManyToManyField('Propiedad')
         objeto = models.ForeignKey('Objeto', on_delete=models.CASCADE)
@@ -341,6 +469,7 @@ class Personaje(models.Model):
         descripcion = models.TextField(verbose_name='Descripción')
         coste = models.IntegerField(verbose_name='Coste', null=True)
         coste_dinero = models.IntegerField(verbose_name='Coste dinero', null=True)
+        equipado = models.BooleanField(verbose_name='Está equipado', default=False)
         es_propiedad_arma = models.BooleanField(verbose_name='Es propiedad de arma', default=False)
         es_propiedad_armadura = models.BooleanField(verbose_name='Es propiedad de armadura', default=False)
         prerrequisito_propiedad = models.ForeignKey('self', null=True, on_delete=models.SET_NULL)
