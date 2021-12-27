@@ -357,7 +357,6 @@ class Personaje(models.Model):
         tiro_de_salvacion = models.TextField(verbose_name='Tiro de salvación')
         resistencia_conjuros = models.TextField(verbose_name='Resistencia a conjuros')
         descripcion = models.TextField(verbose_name='Descripción')
-        clases = models.ManyToManyField('Clase')
 
         def __str__(self):
             return self.nombre
