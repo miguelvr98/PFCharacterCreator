@@ -382,7 +382,7 @@
     </object>
     <object pk="62" model="main.bonificacionraza">
         <field type="CharField" name="nombre">Uso de venenos drow</field>
-        <field type="CharField" name="descripcion">Los drow están entrenados en el uso de venenos y nunca corren el riesgo de envenenarse accidentalmente a sí mismos. Crean un veneno que hace que sus víctimas caigan en la inconsciencia. Veneno drow – daño; salvación de Fortaleza CD 13; frecuencia 1/minuto a dos minutos; efecto inicial inconsciencia durante 1 minuto; efecto secundario inconsciencia durante 2d4 horas; curación 1 salvación.</field>
+        <field type="CharField" name="descripcion">Los drow están entrenados en el uso de venenos y nunca corren el riesgo de envenenarse accidentalmente a sí mismos. Crean un veneno que hace que sus víctimas caigan en la inconsciencia. Veneno drow - daño; salvación de fortaleza CD 13; frecuencia 1/minuto a dos minutos; efecto inicial inconsciencia durante 1 minuto; efecto secundario inconsciencia durante 2d4 horas; curación 1 salvación.</field>
     </object>
     <object pk="63" model="main.bonificacionraza">
         <field type="CharField" name="nombre">Familiaridad con las armas drow</field>
@@ -7896,6 +7896,137 @@
         <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
         <field type="CharField" name="resistencia_conjuros">Sí</field>
         <field type="CharField" name="descripcion">Este conjuro funciona como Endecha azote de fantasmas, excepto en que afecta a múltiples objetivos</field>
+    </object>
+    <object pk="166" model="main.conjuro">
+        <field type="CharField" name="nombre">Fortuna heroica</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD, M (polvo de diamante por valor de 100 po)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro concede 1 punto de héroe al objetivo. Este punto de héroe debe gastarse antes de que expire la duración, o se perderá. El punto de héroe adicional se gasta antes de cualquier otro punto de héroe que el objetivo pueda poseer.</field>
+    </object>
+    <object pk="167" model="main.conjuro">
+        <field type="CharField" name="nombre">Fortuna heroica en grupo</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD, M (polvo de diamante por valor de 1.000 po)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una o más criaturas, ninguna de las cuales puede estar a más de 9 metros de las demás</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Fortuna heroica excepto que puede afectar a más criaturas.</field>
+    </object>
+    <object pk="168" model="main.conjuro">
+        <field type="CharField" name="nombre">Hablar con las plantas</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Puedes comunicarte con plantas normales y criaturas tipo planta, y puedes hacerle preguntas y recibir respuestas de ellas. Los sentidos de una planta normal sobre su entorno son limitados, por lo que no sera capaz de dar (o reconocer) descripciones detalladas de criaturas o responder preguntas sobre hechos más allá de su cercanía inmediata. El conjuro no hace que las criaturas tipo planta sean más amistosas o cooperativas de lo normal. Por otra parte las criaturas tipo planta astutas y cautelosas es probable que sean concisas y evasivas, mientras que las más estúpidas harán comentarios vanos. Si una criatura tipo planta es amistosa, podría hacer algún favor o servicio para ti.</field>
+    </object>
+    <object pk="169" model="main.conjuro">
+        <field type="CharField" name="nombre">Inmovilizar monstruo</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Encantamiento (enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (una barra o trozo de metal duro, que puede ser del tamaño de un clavo)</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="objetivo">Una criatura viva</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Puedes comunicarte con plantas normales y criaturas tipo planta, y puedes hacerle preguntas y recibir respuestas de ellas. Los sentidos de una planta normal sobre su entorno son limitados, por lo que no sera capaz de dar (o reconocer) descripciones detalladas de criaturas o responder preguntas sobre hechos más allá de su cercanía inmediata. El conjuro no hace que las criaturas tipo planta sean más amistosas o cooperativas de lo normal. Por otra parte las criaturas tipo planta astutas y cautelosas es probable que sean concisas y evasivas, mientras que las más estúpidas harán comentarios vanos. Si una criatura tipo planta es amistosa, podría hacer algún favor o servicio para ti.</field>
+    </object>
+    <object pk="170" model="main.conjuro">
+        <field type="CharField" name="nombre">Invisibilidad mayor</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Ilusión (engaño)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Personal o toque</field>
+        <field type="CharField" name="objetivo">Tú o criatura tocada</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como invisibilidad, excepto que no finaliza si el sujeto ataca.</field>
+    </object>
+    <object pk="171" model="main.conjuro">
+        <field type="CharField" name="nombre">Localizar criatura</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Ilusión (engaño)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (piel de un sabueso)</field>
+        <field type="CharField" name="alcance">Personal o toque</field>
+        <field type="CharField" name="objetivo">Tú o criatura tocada</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como invisibilidad, excepto que no finaliza si el sujeto ataca.</field>
+    </object>
+    <object pk="172" model="main.conjuro">
+        <field type="CharField" name="nombre">Neutralizar veneno</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (carbón)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura u objeto</field>
+        <field type="CharField" name="duracion">Instantáneo o 10 min por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Eliminas cualquier cualquier clase de veneno en una criatura u objeto tocado. Si el objetivo es una criatura, debes hacer una prueba de nivel de lanzador (1d20 + nivel de lanzador) contra la CD de cada veneno que afecte al objetivo. El éxito en la tirada indica que el veneno es neutralizado. Este conjuro puede neutralizar el veneno en una criatura venenosa durante 10 minutos por nivel. Si se lanza sobre una criatura, ésta recibe una salvación de Voluntad para negar el efecto.</field>
+    </object>
+    <object pk="173" model="main.conjuro">
+        <field type="CharField" name="nombre">Repeler sabandijas</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">3 metros</field>
+        <field type="CharField" name="area">Area de 3 metros centrada en ti</field>
+        <field type="CharField" name="duracion">10 min por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Una barrera invisible rechaza a las sabandijas. Una sabandija con DG inferiores a un tercio de tu nivel no pueden penetrar la barrera. Una sabandija con DG con un tercio de tu nivel o más puede penetrar la barrera si tiene éxito en una salvación de voluntad. Aun así, atravesar la barrera inflige 2d6 puntos de daño a la sabandija, y presionar contra la barrera causa dolor, lo que disuade a la mayoría de las sabandijas.</field>
+    </object>
+    <object pk="174" model="main.conjuro">
+        <field type="CharField" name="nombre">Terreno alucinatorio</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Ilusión (engaño)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
+        <field type="CharField" name="componentes">V, S, M (una piedra, una rama y una hoja verde)</field>
+        <field type="CharField" name="alcance">120 metros + 12 metros por nivel</field>
+        <field type="CharField" name="area">Un cubo de 9 metros por nivel</field>
+        <field type="CharField" name="duracion">2 horas por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad descree (si interactúa)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Haces que un terreno natural parezca, suena y huela como algún otro tipo de terreno natural. Las estructuras, equipamientos y criaturas dentro del área no están ocultos o cambiados en su aspecto.</field>
+    </object>
+    <!--CONJUROS DE BARDO DE Nº5-->
+    <object pk="175" model="main.conjuro">
+        <field type="CharField" name="nombre">Curar heridas leves en grupo</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura por nivel, ninguna de las cuales puede estar a más de 9 metros de distancia unos de otros</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad mitad (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo</field>
+        <field type="CharField" name="descripcion">Canalizas energía positiva para curar 1d8 puntos de daño +1 punto por nivel de lanzador (máximo +25) a cada criatura elegida. Puede usarse contra muertos vivientes. Cada muerto viviente afectado puede hacer un tiro de salvación de voluntad para recibir la mitad del daño.</field>
     </object>
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
