@@ -8251,6 +8251,189 @@
         <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
         <field type="CharField" name="descripcion">Alinear arma hace que un arma se vuelva buena, caótica, legal o malvada, según elijas. Un arma que esté alineada puede superar la reducción del daño de ciertas criaturas. Este conjuro no tiene efecto sobre un arma que ya posea un alineamiento.</field>
     </object>
+    <object pk="193" model="main.conjuro">
+        <field type="CharField" name="nombre">Apacible descanso</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (sal y una pieza de cobre por cada ojo del cadáver)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Cadáver tocado</field>
+        <field type="CharField" name="duracion">1 día por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (objeto)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (objeto)</field>
+        <field type="CharField" name="descripcion">Preservas los restos de una criatura muerta de forma que no se corrompan. Hacerlo extiende efectivamente el límite de tiempo para resucitar a la criatura. Los días pasados bajo la influencia de este conjuro no cuentan para el límite de tiempo. Además, este conjuro hace que transportar a un camarada muerto (y pudriéndose) sea menos desagradable. El conjuro también funciona sobre partes del cuerpo cercenadas y similares.</field>
+    </object>
+    <object pk="194" model="main.conjuro">
+        <field type="CharField" name="nombre">Auxilio divino</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura viva tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Auxilio divino concede al receptor un bonificador +1 de moral a las tiradas de ataque y tiradas de salvación contra efectos de miedo, más 1d8 + nivel de lanzador puntos de golpe temporales (hasta un máximo de 1d8+10 puntos de golpe temporales a nivel 10 de lanzador).</field>
+    </object>
+    <object pk="195" model="main.conjuro">
+        <field type="CharField" name="nombre">Bendición de coraje y vida</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura viva</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Con esta oración proporcionas socorro duradero a una criatura herida. Mientras dure el efecto, el objetivo recibe un bonificador +2 de moral a los tiros de salvación contra efectos de miedo y muerte. En cualquier momento mientras el conjuro está activo, el objetivo puede decidir finalizar el conjuro como acción rápida para obtener una explosión de energía curativa. El objetivo pierde el bonificador al tiro de salvación, pero se cura 1d8 puntos de daño +1 punto por nivel del lanzador (máximo +10).</field>
+    </object>
+    <object pk="196" model="main.conjuro">
+        <field type="CharField" name="nombre">Campanas fúnebres</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Nigromancia (muerte)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura viva tocada</field>
+        <field type="CharField" name="duracion">Instantáneo y 10 minutos por DG del objetivo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Extraes la menguante fuerza vital de una criatura y la utilizas para alimentar tu propio poder. Al lanzar este conjuro, tocas a una criatura viva que tenga -1 o menos puntos de golpe. Si el objetivo falla su tirada de salvación, muere y tú ganas 1d8 puntos de golpe temporales y un bonificador +2 a la fuerza. Además, tu nivel de lanzador efectivo aumenta en +1, mejorando los efectos de conjuro dependientes del nivel de lanzador. Este aumento del nivel efectivo de lanzador no concede acceso a más conjuros. Estos efectos duran 10 minutos por cada DG de la criatura objetivo.</field>
+    </object>
+    <object pk="197" model="main.conjuro">
+        <field type="CharField" name="nombre">Capacidad de carga de la hormiga comunitario</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (una pequeña polea)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criaturas tocadas</field>
+        <field type="CharField" name="duracion">2 horas por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (objeto)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como capacidad de carga de la hormiga, excepto en que puedes dividir la duración en intervalos de 2 horas entre las criaturas tocadas.</field>
+    </object>
+    <object pk="198" model="main.conjuro">
+        <field type="CharField" name="nombre">Conferir competencia con un arma</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (limaduras metálicas)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (objeto)</field>
+        <field type="CharField" name="descripcion">Confieres al objetivo la habilidad de usar un único tipo de arma con el que no sea competente como si fuera competente con ella. El arma puede ser de cualquier tipo, incluyendo un arma exótica, pero el objetivo del conjuro debe estar empuñando el arma.</field>
+    </object>
+    <object pk="199" model="main.conjuro">
+        <field type="CharField" name="nombre">Encontrar trampas</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Obtienes una percepción intuitiva sobre el funcionamiento de las trampas. Obtienes un bonificador introspectivo igual a la mitad de tu nivel de lanzador (máximo +10) a las pruebas de percepción que hagas para encontrar trampas mientras el conjuro está funcionando. Recibes una prueba para advertir trampas a 10 pies de ti, incluso si no estás buscándolas activamente. Ten en cuenta que encontrar trampas no te concede la capacidad para desactivar las trampas que encuentres.</field>
+    </object>
+    <object pk="200" model="main.conjuro">
+        <field type="CharField" name="nombre">Fuerza de toro</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (algunos pelos o una pizca de estiércol de toro)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El receptor se vuelve más fuerte. El conjuro concede un bonificador +4 de mejora a fuerza, añadiendo los beneficios habituales a las tiradas de ataque cuerpo a cuerpo, tiradas de daño cuerpo a cuerpo y otros usos del modificador de fuerza.</field>
+    </object>
+    <object pk="201" model="main.conjuro">
+        <field type="CharField" name="nombre">Inflingir heridas moderadas</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Infligir heridas leves excepto en que causas 2d8 puntos de daño +1 punto por nivel de lanzador (máximo +10).</field>
+    </object>
+    <object pk="202" model="main.conjuro">
+        <field type="CharField" name="nombre">Integrar</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Un objeto de hasta 3 metros cúbicos por nivel o un constructo de cualquier tamaño</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo, objeto)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo, objeto)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Remendar, excepto en que repara 1d6 puntos de daño por nivel cuando se lanza sobre una criatura tipo constructo (máximo 5d6).</field>
+    </object>
+    <object pk="203" model="main.conjuro">
+        <field type="CharField" name="nombre">Quitar paralisis</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Hasta cuatro criaturas, ninguna de las cuales puede estar a más de 9 metros de las demás</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Puedes liberar a una o más criaturas de los efectos de la parálisis temporal o magia relacionada, incluyendo conjuros y efectos que hagan que una criatura adquiera la condición de grogui. Si el conjuro se lanza sobre una criatura, la parálisis queda negada. Si se lanza sobre dos criaturas, cada una recibe otra salvación con un bonificador +4 de resistencia contra el efecto que está sufriendo. Si se lanza sobre tres o cuatro criaturas, cada una recibe otra salvación con un bonificador +2 de resistencia.</field>
+    </object>
+    <object pk="204" model="main.conjuro">
+        <field type="CharField" name="nombre">Resistencia de oso</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (algunos pelos o una pizca de estiercol de oso)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">La criatura afectada gana una mayor vitalidad y resistencia. El conjuro concede al receptor un bonificador +4 de mejora a la constitución, lo que añade los beneficios habituales a los puntos de golpe, salvaciones de fortaleza, pruebas de constitución, etc. Los puntos de golpe obtenidos por un aumento temporal de constitución no son puntos de golpe temporales. Se pierden cuando la constitución del receptor vuelve a su nivel normal. No son los primeros en perderse como en el caso de los puntos de golpe temporales.</field>
+    </object>
+    <object pk="205" model="main.conjuro">
+        <field type="CharField" name="nombre">Sabiduría de buho</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (plumas o heces de buho)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">La criatura trasmutada se vuelve más sabia. El conjuro garantiza un bonificador +4 de mejora a la sabiduría , añadiendo el beneficio de costumbre a las habilidades relacionadas con sabiduría. Clérigos, druidas y exploradores (y otros lanzadores de conjuros basados en la sabiduría) que reciban sabiduría de búho no ganan conjuros adicionales por su sabiduría incrementada, pero las CD de sus conjuros aumenta.</field>
+    </object>
+    <object pk="206" model="main.conjuro">
+        <field type="CharField" name="nombre">Zona de verdad</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="area">Área de 6 metros de radio</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Las criaturas dentro del área de la emanación (o aquellas que entren en ella) no pueden decir mentiras de forma deliberada e intencionada. A cada criatura potencialmente afectada se le permite una salvación para evitar los efectos cuando se lance el conjuro o cuando la criatura entre por primera vez en le área de la emanación. Las criaturas afectadas son conscientes de este encantamiento. Así pueden evitar responder a las preguntas a las que normalmente podrían responder con una mentira o pueden utilizar evasivas mientras permanezcan en los límites de la verdad. Las criaturas que abandonen el área son libres de hablar como deseen.</field>
+    </object>
+    <!--CONJUROS DE CLÉRIGO DE Nº3-->
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
     <object pk="1" model="main.companeroanimal">
