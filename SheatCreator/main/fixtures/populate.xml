@@ -8644,6 +8644,495 @@
         <field type="CharField" name="descripcion">Imbuyes una armadura o escudo con un bonificador de mejora de +1 por cada cuatro niveles de lanzador (máximo +5 a nivel 20). La ropa normal cuenta como una armadura que no proporciona bonificador a la CA a efectos de este conjuro.</field>
     </object>
     <!--CONJUROS DE CLÉRIGO DE Nº4-->
+    <object pk="223" model="main.conjuro">
+        <field type="CharField" name="nombre">Adaptación planaria</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Adaptación planaria de concede inmunidad a los efectos perjudiciales del ambiente en un plano de existencia particular, incluyendo peligrod como toxicidad, temperaturas extremas y falta de aire. Adicionalmente, obtienes resistencia a la energía 20 contra un único tipo de energía principal en ese plano (elige uno si hay más de un tipo con la misma importancia). La adaptación planaria no tiene efectos cuando lo lanzas en tu plano nativo.</field>
+    </object>
+    <object pk="224" model="main.conjuro">
+        <field type="CharField" name="nombre">Custodia contra la muerte</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura viva tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo obtiene un bonificador +4 de moral a las salvaciones contra todos los conjuros de muerte y efectos mágicos de muerte. El objetivo recibe una salvación para negar dichos efectos incluso si normalmente no se le permitiría. El objetivo es inmune a la consunción de energía y cualquier efecto de energía negativa, incluyendo la canalización de energía negativa. Este conjuro no elimina niveles negativos que el objetivo ya haya recibido, pero sí elimina los penalizadores debidos a niveles negativos mientras duren sus efectos. Custodia contra la muerte no protege contra otros tipos de ataque, incluso si esos ataques pudieran ser letales.</field>
+    </object>
+    <object pk="225" model="main.conjuro">
+        <field type="CharField" name="nombre">Descanso eterno</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S, FD/M (cenizas y un vial de agua bendita o sacrílega)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Una criatura muerta tocada</field>
+        <field type="CharField" name="duracion">Permanente</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Sitúas una maldición sobre una criatura muerta que impide que su espíritu regrese. Cualquiera que lance un conjuro que se comunicaría con la criatura muerta, la devolvería a la vida o la convertiría en una criatura muerta viviente deberá superar una prueba de nivel de lanzador contra una CD 11 + tu nivel de lanzador. Descanso eterno no puede ser disipado, pero puede ser negado mediante Quitar maldición.</field>
+    </object>
+    <object pk="226" model="main.conjuro">
+        <field type="CharField" name="nombre">Discernir mentiras</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura por nivel, ninguna de las cuales puede estar a más de 9 metros de las otras</field>
+        <field type="CharField" name="duracion">Concentración, hasta 1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Cada asalto te concentras en un objetivo, que debe estar dentro del alacance. Sabes si el objetivo dice una mentira deliberadamente y a sabiendas detectando distorsiones en su aura causadas por la mentira. El conjuro no revela la verdad, descubre imprecisiones involuntarias o necesariamente revela evasivas. Cada asalto, puedes concentrarte sobre un objetivo diferente.</field>
+    </object>
+    <object pk="227" model="main.conjuro">
+        <field type="CharField" name="nombre">Exorcismo</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura extraplanar</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro fuerza a una criatura extraplanar a regresar a su propio plano si falla un tirada de salvación de voluntad. Si el conjuro tiene éxito, la criatura es instantáneamente alejada, pero hay un 20% de probabilidades de enviar al objetivo a un plano que no es el suyo.</field>
+    </object>
+    <object pk="228" model="main.conjuro">
+        <field type="CharField" name="nombre">Inflingir heridas críticas</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como infligir heridas leves excepto en que causas 4d8 puntos de daño +1 punto por nivel de lanzador (máximo +20).</field>
+    </object>
+    <object pk="229" model="main.conjuro">
+        <field type="CharField" name="nombre">Poder divino</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Llamando al poder divino de tu deidad patrona, te llenas con fuerza y habilidad en combate. Obtienes un bonificador +1 de suerte a las tiradas de ataque, tiradas de daño con armas, pruebas de fuerza y pruebas de habilidades basadas en fuerza por cada tres niveles de lanzador que poseas (máximo +6). Además obtienes 1 punto de golpe temporal por nivel de lanzador. Cuando lleves a cabo una acción de ataque completo, puedes hacer un ataque adicional con tu bonificador de ataque base completo, más cualquier modificador apropiado. Este ataque adicional no es acumulable con efectos similares, como Acelerar o armas con la cualidad especial de veloz.</field>
+    </object>
+    <object pk="230" model="main.conjuro">
+        <field type="CharField" name="nombre">Recado</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
+        <field type="CharField" name="componentes">V, S, M/FD (alambre de cobre fino)</field>
+        <field type="CharField" name="alcance">Ilimitado</field>
+        <field type="CharField" name="objetivo">Una criatura</field>
+        <field type="CharField" name="duracion">1 asalto</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Contactas con una criatura concreta con la que estés familiarizado y envías un mensaje breve de 25 palabras o menos al objetivo. Este te reconoce y ya te conocía. Puede responder de forma similar inmediatamente. Una criatura con una puntuación de inteligencia de 1 puede comprender el recado, aunque su capacidad para reaccionar está limitada por su inteligencia de forma normal. Incluso si el recado se recibe, el objetivo no está obligado a actuar de ninguna manera. Si la criatura en cuestión no está en el mismo plano de existencia que tú, hay un 5% de probabilidades de que el recado no llegue a su destino (las condiciones locales en otros planos pueden empeorar estas probabilidades considerablemente).</field>
+    </object>
+    <object pk="231" model="main.conjuro">
+        <field type="CharField" name="nombre">Veneno</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura viva tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Invocando los poderes venenosos de los depredadores naturales, infectas al objetivo con un horrible veneno superando un ataque de toque cuerpo a cuerpo. Este veneno causa 1d3 puntos de daño de constitución por asalto durante 6 asaltos. Las criaturas envenenadas pueden realizar una salvación de fortaleza cada asalto para negar el daño y terminar la aflicción.</field>
+    </object>
+    <!--CONJUROS DE CLÉRIGO DE Nº5-->
+    <object pk="232" model="main.conjuro">
+        <field type="CharField" name="nombre">Armas disruptora</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Un arma cuerpo a cuerpo</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro vuelve un arma cuerpo a cuerpo mortífera contra los muertos vivientes. Cualquier muerto viviente con DG iguales o menores que tu nivel de lanzador debe superar una salvación de voluntad o ser destruido por completo si es golpeado en combate con esta arma. La resistencia a conjuros no se aplica contra el efecto de destrucción.</field>
+    </object>
+    <object pk="233" model="main.conjuro">
+        <field type="CharField" name="nombre">Descarga flamígera</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="area">Cilindro de 3 metros de radio y 12 metros de alto</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Reflejos mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Una Descarga flamígera evoca una columna vertical de fuego divino. El conjuro causa 1d6 puntos de daño por nivel del lanzador (máximo 15d6). La mitad del daño es por fuego, pero la otra mitad proviene directamente del poder divino y por tanto no se ve afectada por la resistencia a ataques basados en el fuego.</field>
+    </object>
+    <object pk="234" model="main.conjuro">
+        <field type="CharField" name="nombre">Desplazamiento de plano</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Conjuración (teletransporte)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (una barra de metal bifurcada sintonizada con el plano de viaje)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada o hasta ocho criaturas voluntarias que unan sus manos</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Te mueves tú o a alguna otra criatura a otro plano de existencia o dimensión alternativa. Si varias personas voluntarias unen sus manos en un círculo, un máximo de ocho pueden ser afectadas por Desplazamiento de plano al mismo tiempo. Conseguir una gran precisión como un lugar de llegada concreto en el plano elegido es casi imposible. Desde el plano material puedes llegar a cualquier otro plano, aunque apareces a entre 5 y 500 millas de tu destino elegido. Desplazamiento de plano transporta criaturas instantáneamente y después termina. Las criaturas necesitan encontrar otros medios para viajar de vuelta (incluyendo lanzar Desplazamiento de plano de nuevo).</field>
+    </object>
+    <object pk="235" model="main.conjuro">
+        <field type="CharField" name="nombre">Marca de la justicia</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Permanente</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Marcas un objetivo y estableces un comportamiento por parte del objetivo que activará la marca. Cuando se active, la marca maldice al objetivo. Normalmente, designas un tipo de comportamiento indeseable que activa la marca, pero puedes elegir cualquier acto que desees. El efecto de la marca es idéntico al efecto de Lanzar maldición.</field>
+    </object>
+    <object pk="236" model="main.conjuro">
+        <field type="CharField" name="nombre">Plaga de insectos</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Conjuración (convocación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">120 metros + 12 metros por nivel</field>
+        <field type="CharField" name="efecto">Una plaga de avispas por cada 3 niveles, cada una de las cuales debe estar adyacente al menos a otra de las plagas</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Convocas un grupo de plagas de avispas (una por cada 3 niveles, hasta un máximo de 6 plagas á nivel 18). Las plagas deben ser convocadas de modo que cada una esté adyacente al menos a otra plaga (esto es, que las plagas deben formar una zona continua). Puedes convocar a las plagas de avispas de modo que compartan el área con otras criaturas. Cada plaga ataca a todas las criaturas que ocupen su área. Las plagas son estacionarias después de ser convocadas, y no persiguen a las criaturas que huyen.</field>
+    </object>
+    <object pk="237" model="main.conjuro">
+        <field type="CharField" name="nombre">Rematar a los vivos</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura viva tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza parcial</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Puedes intentar matar a cualquier criatura viva. Cuando lanzas este conjuro, tu mano arde con un misterioso fuego oscuro. Debes tener éxito con un ataque de toque cuerpo a cuerpo para tocar al objetivo. Entonces recibe 12d6 puntos de daño + 1 punto por nivel del lanzador. Si el objetivo supera su salvación de fortaleza, sólo recibe 3d6 puntos de daño + 1 punto por nivel del lanzador. El objetivo podría morir debido al daño incluso si supera su tiro de salvación.</field>
+    </object>
+    <object pk="238" model="main.conjuro">
+        <field type="CharField" name="nombre">Resistencia a los conjuros</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo adquiere resistencia a los conjuros igual a 12 + tu nivel de lanzador.</field>
+    </object>
+    <!--CONJUROS DE CLÉRIGO DE Nº6-->
+    <object pk="239" model="main.conjuro">
+        <field type="CharField" name="nombre">Adaptación planaria en grupo</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura por nivel, ninguna de las cuales puede estar a más de 9 metros</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensiva)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensiva)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como adaptación planaria, excepto que puedes hacerlo en grupo.</field>
+    </object>
+    <object pk="240" model="main.conjuro">
+        <field type="CharField" name="nombre">Barrera de cuchillas</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros cada nivel</field>
+        <field type="CharField" name="efecto">Muro de cuchillas giratorias de hasta 6 metros de largo por nivel o un muro circular de cuchillas giratorias con un radio de hasta 1.5 metros por cada dos niveles; en ambas formas mide 6 metros de altura</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Reflejos mitad o reflejos niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Una cortina inmóvil vertical de cuchillas giratorias hechas de pura fuerza aparece de la nada. Cualquier criatura que atraviese el muro recibe 1d6 puntos de daño por nivel del lanzador (máximo 15d6, con una salvación de reflejos para mitad de daño. Si evocas la barrera de forma que aparezca donde hay criaturas, cada criatura recibe daño como si atravesara el muro. Cada una de esas criaturas puede evitar el muro (terminando en el lado a su elección) y así no recibir daño si supera una salvación de reflejos. Una Barrera de cuchillas proporciona cobertura (bonificador +4 a la CA, bonificador +2 a las salvaciones de reflejos) contra los ataques que se hagan atravesándola.</field>
+    </object>
+    <object pk="241" model="main.conjuro">
+        <field type="CharField" name="nombre">Caparazón antivida</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">3 metros</field>
+        <field type="CharField" name="area">Área de 3 metros de radio centrada en ti</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Traes a la existencia un campo de energía móvil semiesférico que evita la entrada de la mayoría de criaturas vivientes. El efecto mantiene a raya a aberraciones, animales, bestias mágicas, cienos, dragones, gigantes, hadas, humanoides, humanoides monstruosos, plantas y sabandijas, pero no a constructos, elementales, ajenos o muertos vivientes. Este conjuro sólo puede usarse defensivamente, no de forma agresiva. Forzar una barrera de abjuración contra criaturas que el conjuro mantiene a raya colapsará la barrera.</field>
+    </object>
+    <object pk="242" model="main.conjuro">
+        <field type="CharField" name="nombre">Dañar</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Dañar carga a un sujeto con energía negativa que casusa 10 puntos de daño por nivel de lanzador (hasta un máximo de 150 puntos a nivel 15). Si la criatura supera una salvación, dañar causa la mitad de esta cantidad. Dañar no puede reducir los puntos de daño del objetivo a menos de 1. Si se usa sobre una criatura muerta viviente, dañar actúa como Sanar.</field>
+    </object>
+    <!--ESTE CONJURO ES DE MAGO PERO ESTÁ RELACIONADO CON EL DE ABAJO-->
+    <object pk="243" model="main.conjuro">
+        <field type="CharField" name="nombre">Círculo de muerte</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una perla negra machacada por valor de 500 po)</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="objetivo">Varias criaturas vivas en una explosión de 12 metros de radio</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Círculo de muerte absorbe la fuerza vital de las criaturas vivas, matándolas instantáneamente. El conjuro mata 1d4 DG de criaturas vivas por nivel de lanzador (máximo 20d4). Las criaturas con menos DG son afectadas primero; entre las criaturas con los mismos DG, aquellas más cercanas al punto de origen de la explosión son afectadas primero. Ninguna criatura de 9 o más DG puede verse afectada y los DG que no sean suficientes para afectar a una criatura se pierden.</field>
+    </object>
+    <object pk="244" model="main.conjuro">
+        <field type="CharField" name="nombre">Matar muertos vivientes</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (polvo de diamante por valor de 500 po)</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="objetivo">Varias criaturas vivas en una explosión de 12 metros de radio</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Círculo de muerte, excepto en que destruye a las criaturas muertas vivientes como se indica en el conjuro como se indica en ese conjuro.</field>
+    </object>
+    <object pk="245" model="main.conjuro">
+        <field type="CharField" name="nombre">Sanar</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Sanar te permite canalizar energía positiva hacia una criatura para quitar heridas y aflicciones. Finaliza inmediatamente cualquiera de las siguientes condiciones adversas que afecten al objetivo: atontado, aturdido, cegado, confuso, daño de característica, deslumbrado, enfermo, ensordecido, envenenado, exhausto, fatigado, indispuesto, locura, mareado y víctima de la debilidad mental. También cura 10 puntos de golpe por nivel del lanzador, hasta un máximo de 150 puntos a nivel 15. Sanar no elimina niveles negativos ni restaura puntuaciones de característica consumidos permanentemente. Si se usa contra una criatura muerta viviente, Sanar actúa como Dañar.</field>
+    </object>
+    <!--CONJUROS DE CLÉRIGO DE Nº7-->
+    <object pk="246" model="main.conjuro">
+        <field type="CharField" name="nombre">Curar heridas graves en grupo</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad mitad (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como curar heridas leves en grupo, excepto en que cura 3d8 puntos de daño +1 punto por nivel de lanzador (máximo +35).</field>
+    </object>
+    <object pk="247" model="main.conjuro">
+        <field type="CharField" name="nombre">Destrucción</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (símbolo sagrado o sacrílego con un valor de 500 po)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza parcial</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro provoca instantáneamente 10 puntos de daño por nivel de lanzador. Si el conjuro mata al objetivo, consume sus restos en un fuego sagrado (o sacrílego) (aunque no su equipo o posesiones. Si el tiro de salvación de fortaleza tiene éxito, en su lugar recibe 10d6 puntos de daño.</field>
+    </object>
+    <object pk="248" model="main.conjuro">
+        <field type="CharField" name="nombre">Rechazo</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F/DF (un par de estatuillas caninas valoradas en 50 po)</field>
+        <field type="CharField" name="alcance">Hasta 3 metros por nivel</field>
+        <field type="CharField" name="area">Área de hasta 3 metros por nivel centrada en ti</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un campo móvil e invisible te rodea y evita que las criaturas se te acerquen. Tú decides lo grande que será el campo en el momento del lanzamiento (hasta el límite que permita tu nivel). Cualquier criatura dentro o que entre en el campo debe superar una salvación. Si falla, es incapaz de moverse hacia ti mientras dure el conjuro. Las acciones de las criaturas repelidas no se ven restringidas de ninguna otra forma. Pueden luchar contra otras criaturas, lanzar conjuros y atacarte con armas a distancia. Si te acercas a una criatura afectada, no ocurre nada. La criatura no es forzada hacia atrás. La criatura es libre de hacer ataques cuerpo a cuerpo contra ti si te acercas hasta su alcance. Si una criatura repelida se aleja de ti y luego trata de volver hacia ti, no podrá volver a acercarse si está dentro del área del conjuro.</field>
+    </object>
+    <!--HAY 1 DE NIVEL 4 QUE NO HE METIDO ANTES-->
+    <object pk="249" model="main.conjuro">
+        <field type="CharField" name="nombre">Restablecimiento</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 minuto</field>
+        <field type="CharField" name="componentes">V, S, M (polvo de diamante por valor de 100 po o 1.000)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como restablecimiento menor, excepto en que también disipa niveles negativos temporales o un nivel negativo permanente. Si se usa este conjuro para disipar un nivel negativo permanente, tiene un coste material de polvo de diamante por valor de 1.000 po. Este conjuro no puede usarse para disipar más de un nivel negativo permanente que posea un objetivo en un periodo de 1 semana. Restablecimiento cura todo el daño de característica temporal y restaura todos los puntos permamentemente consumidos de una única puntuación de característica (a tu elección si hay más de una consumida). También elimina cualquier estado de fatigado o exhausto del objetivo.</field>
+    </object>
+    <object pk="250" model="main.conjuro">
+        <field type="CharField" name="nombre">Restablecimiento mayor</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 minuto</field>
+        <field type="CharField" name="componentes">V, S, M (polvo de diamante por valor de 5.000 po)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como restablecimiento menor excepto en que disipa todos los niveles negativos temporales y permanentes que afecten a la criatura sanada. Restablecimiento mayor también disipa todos los efectos mágicos que penalicen las características de la criatura, cura todo el daño temporal de característica y restaura todos los puntos consumidos permanentemente de todas las puntuaciones de característica. También elimina las condiciones de fatigado y exhausto y anula todas las formas de locura, confusión y efectos mentales similares.</field>
+    </object>
+    <!--CONJUROS DE CLÉRIGO DE Nº8-->
+    <object pk="251" model="main.conjuro">
+        <field type="CharField" name="nombre">Centellas</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (un cetro de cobre)</field>
+        <field type="CharField" name="alcance">9 metros</field>
+        <field type="CharField" name="area">Área de 9 metros de radio centrada en ti</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza parcial</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Cuando lanzas este conjuro, los relámpagos brotan de tu cuerpo en todas direcciones. Los relámpagos no dañan la vegetación natural ni a las criaturas en el área que desees excluir del daño. Cualquier otra criatura dentro del área recibe 1d8 puntos de daño de electricidad por nivel de lanzador (máximo 20d8) y quedan aturdidas durante 1 asalto. Una salvación con éxito de Fortaleza reduce el daño a la mitad y niega le efecto de aturdimiento.</field>
+    </object>
+    <object pk="252" model="main.conjuro">
+        <field type="CharField" name="nombre">Tormenta de fuego</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="area">Dos cubos de 3 metros por nivel</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Reflejos mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Cuando se lanza un conjuro de tormenta de fuego, toda el área es atravesada con chorros de llamas rugientes. Las llamas no dañan vegetación natural, cobertura del terreno o a las criaturas vegetales de cualquier tipo en el área que quieras excluir del daño. Cualquier otra criatura recibe 1d6 puntos de daño por fuego por nivel del lanzador (máximo 20d6). Las criaturas que fallen su salvación de reflejos prenden fuego, recibiendo 4d6 puntos de daño por fuego cada asalto hasta que las llamas se extingan. Extinguir las llamas es una acción de asalto completo que requiere una Salvación de reflejos (CD 20).</field>
+    </object>
+    <!--AQUÍ HAY UNO DE Nº4 QUE NO HE PUESTO ANTES Y TIENE QUE VER CON EL DE ABAJO-->
+    <object pk="253" model="main.conjuro">
+        <field type="CharField" name="nombre">Inmunidad a los conjuros</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">La criatura custodiada es inmune a los efectos de un conjuro específico por cada cuatro niveles que poseas. Los conjuros deben ser de nivel 4 o inferior. La criatura protegida tiene una resistencia a conjuros invencible en lo que se refiere al conjuro o conjuros especificados. Naturalmente, esta inmunidad no protege a la criatura de conjuros para los que la resistencia a conjuros no se aplique. Inmunidad a los conjuros protege contra conjuros, efectos de apritudes sortílegas de objetos mágicos y aptitudes sortílegas innatas de criaturas. No protege contra aptitudes extraordinarias o sobrenaturales, como armas de aliento o ataques de mirada. Sólo te puedes proteger contra un conjuro en particular, no contra un dominio o escuela de conjuros o un grupo de conjuros que posean efectos similares. Una criatura sólo puede tener un conjuro de inmunidad a los conjuros o inmunidad a los conjuros mayor activo al mismo tiempo.</field>
+    </object>
+    <object pk="254" model="main.conjuro">
+        <field type="CharField" name="nombre">Inmunidad a los conjuros mayor</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como inmunidad a los conjuros, excepto que se aplica a conjuros de nivel 8 o inferior. Una criatura sólo puede tener un conjuro de inmunidad a los conjuros o inmunidad a los conjuros mayor activo al mismo tiempo.</field>
+    </object>
+    <!--CONJUROS DE CLÉRIGO DE Nº9-->
+    <object pk="255" model="main.conjuro">
+        <field type="CharField" name="nombre">Curar heridas críticas</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad mitad (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Curar heridas leves en grupo, excepto en que cura 4d8 puntos de daño +1 punto por nivel de lanzador (máximo +40).</field>
+    </object>
+    <object pk="256" model="main.conjuro">
+        <field type="CharField" name="nombre">Falange de madera</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Conjuración (creación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="efecto">Tres o más golems de madera, ninguno de los cuales puede estar a más de 9 metros de los otros</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Creas 1d4+2 golems de madera con la plantilla de criatura avanzada. Los golems te ayudan en combate o en batalla, realizando una misión específica o sirviendo como guardaespaldas. Sólo puedes tener un conjuro de falange de madera en efecto al mismo tiempo. Si lanzas este conjuro mientras otro lanzamiento está activo, el lanzamiento previo es disipado.</field>
+    </object>
+    <object pk="257" model="main.conjuro">
+        <field type="CharField" name="nombre">Implosión</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura corpórea por asalto</field>
+        <field type="CharField" name="duracion">Concentración (hasta 1 asalto cada 2 niveles)</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro provoca una resonancia destructiva en el cuerpo de una criatura corpórea. Cada asalto en que te concentres (incluido el primero) puedes hacer que una criatura se colapse sobre sí misma, infligiendo 10 puntos de daño por nivel de lanzador. Si rompes tu concentración, el conjuro termina, aunque cualquier implosión que ya haya tenido lugar permanece en efecto. Puedes afectar a una criatura en concreto sólo una vez por caza lanzamiento del conjuro. Implosión no tiene efecto sobre criaturas en forma gaseosa o sobre criaturas incorpóreas.</field>
+    </object>
+    <object pk="258" model="main.conjuro">
+        <field type="CharField" name="nombre">Inflingir heridas críticas en grupo</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Infligir heridas leves en grupo excepto en que causa 4d8 puntos de daño +1 punto por nivel de lanzador (máximo +40).</field>
+    </object>
+    <object pk="259" model="main.conjuro">
+        <field type="CharField" name="nombre">Sanar en grupo</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una o más criaturas, ninguna de las cuales puede estar separada más de 9 metros</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Sanar excepto en lo indicado más arriba. El número máximo de puntos de golpe restaurados a cada criatura es de 250.</field>
+    </object>
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
     <object pk="1" model="main.companeroanimal">
