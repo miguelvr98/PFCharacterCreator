@@ -9133,6 +9133,431 @@
         <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
         <field type="CharField" name="descripcion">Este conjuro funciona como Sanar excepto en lo indicado más arriba. El número máximo de puntos de golpe restaurados a cada criatura es de 250.</field>
     </object>
+    <!--CONJUROS DE DRUIDA DE Nº2-->
+    <object pk="260" model="main.conjuro">
+        <field type="CharField" name="nombre">Agarre firme</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (una bola de alquitrán menuda)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El agarre y las pisadas del objetivo se vuelven seguras, ganando un bonificador +4 de competencia en las pruebas de trepar, acrobacias para mantener el equilibrio y a la DMC contra intentos de embestida, arrestre y derribo. Mientras esté afectado por este conjuro, el objetivo también es inmune a la maniobra de combate de desarmar.</field>
+    </object>
+    <object pk="261" model="main.conjuro">
+        <field type="CharField" name="nombre">Corriente de desplazamiento</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Conjuración (creación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (unas pocas gotas de aceite y agua)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Reflejos niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Creas una pequeña onda de agua que transporta al objetivo a lo largo de la superficie del agua o del suelo. Al moverte al nivel del suelo, la velocidad del objetivo aumenta en 3 metros. Si se desplaza cuesta abajo, en su lugar la velocidad aumenta en 6 metros, pero Corriente de deslizamiento no proporciona bonificadores al movimiento cuando se va cuesta arriba. Mientras nada, la Corriente de desplazamiento aumenta la velocidad de nado del objetivo en 6 metros. Si este no posee una velocidad de nado, este conjuro le proporciona una velocidad de nado de 6 metros.</field>
+    </object>
+    <object pk="262" model="main.conjuro">
+        <field type="CharField" name="nombre">Escalada de araña</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una araña viva)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo puede trepar y caminar sobre superficies verticales e incluso caminar por techos como haría una araña. La criatura afectada debe tener sus manos libres para trepar de esta forma. El objetivo adquiere una velocidad trepando de 6 metros y un bonificador +8 racial a las pruebas de habilidad de trepar; además, no necesita hacer pruebas de trepar para recorrer una superficie vertical u horizontal (incluso boca abajo). Una criatura que trepe cual arácnido mantiene su bonificador de Destreza a la CA (si lo tiene) mientras trepa y sus oponentes no reciben bonificadores especiales a sus ataques contra él. Sin embargo, no puede usar la acción de correr mientras trepa.</field>
+    </object>
+    <object pk="263" model="main.conjuro">
+        <field type="CharField" name="nombre">Filo flamígero</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">0 metros</field>
+        <field type="CharField" name="efecto">Llama con forma de espada</field>
+        <field type="CharField" name="duracion">1 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Una llama de 3 pies de largo de fuego rojo brota de tu mano. Manejas esta llama con forma de filo como si fuera una cimitarra. Los ataques con el Filo flamígero son ataques de toque cuerpo a cuerpo. El filo causa 1d8 puntos de daño de fuego + 1 punto por cada dos niveles del lanzador (máximo +10). Ya que el filo es inmaterial, tu modificador de fuerza no se aplica al daño. Un Filo flamígero puede prender materiales combustibles como pergamino, paja, ramas secas y ropa.</field>
+    </object>
+    <object pk="264" model="main.conjuro">
+        <field type="CharField" name="nombre">Inmovilizar animal</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="objetivo">Un animal</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Inmovilizar persona , excepto que afecta a un animal en lugar de a un humanoide.</field>
+    </object>
+    <object pk="265" model="main.conjuro">
+        <field type="CharField" name="nombre">Llamar a la piedra</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Conjuración (creación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="area">Cilindro 12 metros de radio y 6 metros de altura</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Una lluvia de tierra, grava y pequeños guijarros cubre el área causando 2d6 puntos de daño contundente a todas las criaturas en el área. Este daño sólo ocurre una vez, cuando el conjuro se lanza.Una lluvia de tierra, grava y pequeños guijarros cubre el área causando 2d6 puntos de daño contundente a todas las criaturas en el área. Este daño sólo ocurre una vez, cuando el conjuro se lanza. Durante el resto de la duración del conjuro, estos escombros cubren el suelo, convirtiendo el área en terreno difícil. Al final de la duración, las rocas desaparecen, sin dejar ninguna consecuencia, excepto el daño causado.</field>
+    </object>
+    <object pk="266" model="main.conjuro">
+        <field type="CharField" name="nombre">Nube brumosa</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Conjuración (creación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="area">Área de 6 metros de radio y 6 metros de alto</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Un banco de niebla se extiende desde el punto que designes. La niebla oscurece la visión, incluyendo la visión en la oscuridad, más allá de 5 pies. Una criatura que esté a 5 pies o menos posee ocultación (los ataques tienen un 20% de probabilidad de fallo). Las criaturas a más distancia poseen ocultación total (50% de probabilidad de fallo y el atacante no puede usar la vista para localizar al objetivo). Un viento moderado (11 millas por hora o más) dispersa la niebla en 4 asaltos; un viento fuerte (21 millas por hora o más) disipa la niebla en 1 asalto. Este conjuro no funciona bajo el agua.</field>
+    </object>
+    <object pk="267" model="main.conjuro">
+        <field type="CharField" name="nombre">Piel robliza</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Una criatura viva tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Piel robliza endurece la piel de una criatura. El efecto concede un bonificador +2 de mejora al bonificador de armadura natural existente de la criatura. Este bonificador de mejora aumenta en 1 por cada tres niveles de lanzador más allá del 3, hasta un máximo de +5. El bonificador de mejora proporcionado por Piel robliza se apila con el bonificador de armadura natural del receptor, pero no con otros bonificadores de mejora a la armadura natural. Una criatura sin armadura natural tiene un bonificador efectivo de armadura natural de +0.</field>
+    </object>
+    <object pk="268" model="main.conjuro">
+        <field type="CharField" name="nombre">Planear</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (una hoja)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">Hasta aterrizar o 1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">No recibes daño de las caídas. Además, puedes moverte hasta 1.5 metros en cualquier dirección horizontal por cada metro de caída, a una velocidad de 18 metros por asalto. No puedes usar este conjuro para ganar altura, únicamente deplazarte en otras direcciones a medida que caes. Si resultas sujeto a un viento fuerto o a otro efecto que te haga elevarte, puedes aprovecharte de ello para aumentar la distancia a la que puedes planear. El conjuro finaliza tan pronto como tus pies tocan el suelo, independientemente de la duración restante. Si el conjuro expira mientras todavía estás en el aire, caes la distancia restante de forma normal.</field>
+    </object>
+    <object pk="269" model="main.conjuro">
+        <field type="CharField" name="nombre">Reducir animal</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Un animal voluntario de tamaño pequeño, mediano, grande o enorme</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona igual que Reducir persona, excepto que afecta a un único animal voluntario. Reduce el daño infligido por los ataques naturales del animal como sea apropiado a su nuevo tamaño.</field>
+    </object>
+    <object pk="270" model="main.conjuro">
+        <field type="CharField" name="nombre">Transformar madera</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Un trozo de madera tocado no mayor de 3 metros cúbicos + 0.3 metros cúbicos por nivel</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (objeto)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (objeto)</field>
+        <field type="CharField" name="descripcion">Transformar madera te permnite dar forma a un trozo de madera existente para que se adapte a tus necesidades. Aunque es posible hacer cofres toscos, puertas y similares, los detalles delicados son imposibles de conseguir. Hay un 30% de probabilidades de que cualquier forma que incluya partes móviles simplemente no funcione.</field>
+    </object>
+    <!--CONJUROS DE DRUIDA DE Nº3-->
+    <object pk="271" model="main.conjuro">
+        <field type="CharField" name="nombre">Colmillo mágico mayor</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Criatura viva tocada</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Colmillo mágico, excepto que el bonificador de mejora a las tiradas de ataque y daño es +1 por cada cuatro niveles de lanzador (máximo +5). Este bonificador no permite que un arma natural o impacto sin arma supere una reducción del daño aparte de la mágica. Alternativamente, puedes imbuir todas las armas naturales de la criatura con un bonificador de mejora +1 (independientemente de tu nivel de lanzador).</field>
+    </object>
+    <object pk="272" model="main.conjuro">
+        <field type="CharField" name="nombre">Tormenta de aguanieve</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Conjuración (creación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (polvo y agua)</field>
+        <field type="CharField" name="alcance">120 metros + 12 metros por nivel</field>
+        <field type="CharField" name="area">Cilindro de 12 metros de radio y 6 metros de alto</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">La cellisca bloquea toda la visión (incluida la visión en la oscuridad) en su interior y hace que el suelo del área quede helado. Una criatura puede caminar por dentro o atravesar el área de la tormenta a la mitad de su velocidad normal con una prueba de acrobacias (CD 10). El fallo indica que no se puede mover en ese asalto, mientras que fallar por 5 o más significa que cae. La tormenta extingue antorchas y fuegos pequeños.</field>
+    </object>
+    <!--CONJUROS DE DRUIDA DE Nº4-->
+    <object pk="273" model="main.conjuro">
+        <field type="CharField" name="nombre">Asolar</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Una planta</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro marchita una única planta de cualquier tamaño. Una criatura tipo planta afectada recibe 1d6 puntos de daño por nivel (máximo 15d6) y puede intentar una salvación de fortaleza para mitad de daño. Una planta que no sea una criatura no recibe una salvación y se marchita y muere inmediatamente. Este conjuro no tiene efectos en la tierra ni en la vida vegetal circundante.</field>
+    </object>
+    <object pk="274" model="main.conjuro">
+        <field type="CharField" name="nombre">Caparazón antivegetal</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">3 metros</field>
+        <field type="CharField" name="area">Área de 3 metros centrada en ti</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">El conjuro de Caparazón antivegetal crea una barrera móvil invisible que mantiene a todas las criaturas en su interior protegidas por ataques de criaturas de tipo planta o plantas animadas. Como sucede con otros conjuros de abjuración, forzar la barrera contra las criaturas de las que protégé el conjuro hace que se colapse el campo.</field>
+    </object>
+    <object pk="275" model="main.conjuro">
+        <field type="CharField" name="nombre">Comandar plantas</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Hasta 2 DG por nivel de criaturas tipo planta, ninguna de las cuales puede estar a más de 9 metros de otra.</field>
+        <field type="CharField" name="duracion">1 día por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro te permite un cierto grado de control sobre una o más criaturas tipo planta. Las criaturas tipo planta afectadas pueden entenderte, y perciben tus palabras y acciones de la forma más favorable (trata su actitud como amistosa). No te atacarán mientras dure el conjuro. Puedes intentar dar órdenes a los objetivos, pero debes ganar una prueba enfrentada de carisma para convencerle de que haga algo que no haría normalmente (no se puede reintentar). Una criatura tipo planta comandada nunca obedece las órdenes suicidas u obviamente dañinas, pero puede ser convencida de que algo muy peligroso vale la pena hacerlo. Puedes afectar a un número de criaturas tipo planta cuyos DG o niveles combinados no excedan el doble de tu nivel.</field>
+    </object>
+    <object pk="276" model="main.conjuro">
+        <field type="CharField" name="nombre">Cuerpo espinoso</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro hace que broten espinas de tu piel expuesta, dañando a las criaturas que te golpeen. Cualquier criatura que te golpee con un arma cuerpo a cuerpo, un impacto sin armas o un arma natural, recibe 1d6 puntos de daño perforante +1 punto por nivel de lanzador (máximo +15). Las criaturas que utilicen armas cuerpo a cuerpo con alcance no se ven afectadas por este conjuro. Las criaturas que consiguen una presa con éxito sobre ti reciben 2d6 puntos de daño perforante +1 punto por nivel de lanzador (máximo +15). Además, tus ataques naturales y tus impactos sin armas causan 1d6 puntos de daño perforante adicionales.</field>
+    </object>
+    <object pk="277" model="main.conjuro">
+        <field type="CharField" name="nombre">Tormenta de hielo</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (polvo y agua)</field>
+        <field type="CharField" name="alcance">120 metros + 12 metros por nivel</field>
+        <field type="CharField" name="area">Cilindro de 6 metros de radio y 12 metros de altura</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Enormes piedras de granizo mágico martillean donde es lanzado este conjuro, infligiendo 3d6 puntos de daño contundente y 2d6 puntos de daño por frío a cada criatura en el área. Este daño sólo se produce una vez, cuando se lanza el conjuro. Durante el resto de la duración del conjuro, una fuerte nevada y lluvias de granizo caen en el área. Las criaturas dentro de esta área reciben un penalizador -4 a las pruebas de habilidad de percepción y el área entera es tratada como terreno difícil. Al final de la duración, la nieve y el granizo desaparecen, sin dejar huellas (salvo el daño infligido).</field>
+    </object>
+    <!--CONJUROS DE DRUIDA DE Nº5-->
+    <object pk="278" model="main.conjuro">
+        <field type="CharField" name="nombre">Comunión con la naturaleza</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Te conviertes en uno con la naturaleza, alcanzando el conocimiento del territorio circundante. Instantáneamente tienes conocimiento de al menos tres hechos de entre los siguientes temas: el tipo de terreno, plantas, minerales, cuerpos de agua, personas, población animal general, presencia de criaturas del bosque, presencia de poderosas criaturas antinaturales, o incluso el estado general del entorno natural. En los lugares al aire libre, el conjuro opera en un radio de 1 milla por nivel de lanzador. En los lugares subterráneos naturales (cuevas, cavernas y otras) el conjuro es menos poderoso, y su radio está limitado a 30 metros por nivel de lanzador. El conjuro no funciona en los lugares donde la naturaleza ha sido reemplazada por construcciones o asentamientos, como serían los dungeons y las ciudades.</field>
+    </object>
+    <object pk="279" model="main.conjuro">
+        <field type="CharField" name="nombre">Piel pétrea</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (granito y y polvo de diamante por valor de 250 mo)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel o hasta descargar</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">La criatura protegida gana resistencia a golpes, cortes, pinchazos y cortes. El objetivo gana RD 10/adamantita. Ignora los primeros 10 puntos de daño cada vez que recibe daño de un arma, aunque un arma adamantina supera la reducción. Una vez que el conjuro ha impedido un total de 10 puntos de daño por nivel de lanzador (máximo 150 puntos), se descarga.</field>
+    </object>
+    <object pk="280" model="main.conjuro">
+        <field type="CharField" name="nombre">Transmutar barro en roca</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (arena, limo y agua)</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="area">Hasta 2 cubos de 3 metros por nivel</field>
+        <field type="CharField" name="duracion">Permanente</field>
+        <field type="CharField" name="tiro_de_salvacion">Reflejos</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro transforma permanentemente el barro o arenas movedizas normales de cualquier profundidad en piedra blanda (arenisca o materiales similares). Las criaturas en el barro disponen de una salvación de reflejos para escapar antes de que el área se endurezca como la piedra.</field>
+    </object>
+    <!--CONJUROS DE DRUIDA DE Nº6-->
+    <object pk="281" model="main.conjuro">
+        <field type="CharField" name="nombre">Bastón de conjuro</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
+        <field type="CharField" name="componentes">V, S, F (el bastón que almacena el conjuro)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Bastón de madera tocado</field>
+        <field type="CharField" name="duracion">Permanente hasta descargar</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (objeto)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (objeto)</field>
+        <field type="CharField" name="descripcion">Almacenas un conjuro que puedas lanzar normalmente en un bastón de madera. Sólo se puede almacenar un único conjuro en un bastón al mismo tiempo y no puedes tener más de un bastón de conjuro al mismo tiempo. Puedes lanzar un conjuro almacenado dentro de un bastón como si estuviera entre tus conjuros preparados, pero no cuenta para tu límite diario. Usas los componentes materiales requeridos para lanzar el conjuro cuando lo almacenas en el Bastón de conjuro.</field>
+    </object>
+    <object pk="282" model="main.conjuro">
+        <field type="CharField" name="nombre">Piedra parlante</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Obtienes la aptitud de hablar con las piedras, que te cuentan quién o qué las ha tocado así como lo que está cubierto u oculto debajo o tras ellas. Las piedras transmiten descripciones completas si se les pide. La perspectiva, percepción y conocimientos de la piedra pueden evitar que proporcione los detalles que estás buscando. Puedes hablar con piedras naturales o trabajadas.</field>
+    </object>
+    <object pk="283" model="main.conjuro">
+        <field type="CharField" name="nombre">Roble parlante</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Árbol tocado</field>
+        <field type="CharField" name="duracion">1 día por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro convierte un roble en un protector o guardián. El conjuro sólo puede lanzarse sobre un único árbol a la vez; mientras roble guardián siga en efecto, no puedes lanzarlo de nuevo sobre otro árbol. Roble guardián debe lanzarse sobre un roble enorme sano. Una frase desencadenante de hasta una palabra por nivel del lanzador se coloca sobre el roble objetivo. El conjuro Roble guardian hace que el árbol se anime como un ent. Si Roble guardián es disipado, el árbol enraíza inmediatamente donde se encuentre. Si es liberado por ti, el árbol trata de volver a su lugar de origen antes de echar raíces.</field>
+    </object>
+    <object pk="284" model="main.conjuro">
+        <field type="CharField" name="nombre">Siroco</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (puñado de arena fina lanzada al aire)</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="area">Cilindro de 6 metros de radio y 18 metros de altura</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza parcial</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un estallido de viento caliente como un horno se lanza hacia abajo, provocando 4d6 puntos de daño por fuego +1 punto por nivel del lanzador a todas las criaturas atrapadas en el área y derribándolas. Un tiro de salvación de fortaleza con éxito reduce el daño a la mitad y niega el derribo. Las criaturas voladoras son obligadas hacia el suelo por la poderosa corriente, recibiendo daño como si hubieran caído a menos que superen una prueba de volar (CD 15), en cuyo caso permanecen a su altura original. Cualquier criatura que reciba daño de un siroco queda fatigada (o exhausta, si ya estaba fatigada, por ejemplo por un asalto previo de exposición al conjuro de siroco). Las criaturas del subtipo de agua reciben un penalizador -4 a todos los tiros de salvación contra este conjuro y reciben el doble del daño normal.</field>
+    </object>
+    <!--CONJUROS DE DRUIDA DE Nº7-->
+    <object pk="285" model="main.conjuro">
+        <field type="CharField" name="nombre">Rayo solar</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">18 metros</field>
+        <field type="CharField" name="area">Línea desde tu mano</field>
+        <field type="CharField" name="duracion">1 asalto por nivel o hasta que todos los rayos se hayan gastado</field>
+        <field type="CharField" name="tiro_de_salvacion">Reflejos niega y reflejos parcial</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Mientras dure este conjuro, puedes usar una acción estándar para evocar un reluciente haz de luz intensa cada asalto. Puedes llamar hasta un rayo por cada tres niveles de lanzador (máximo de seis rayos a nivel 18). El conjuro finaliza cuando termina su duración o si tu cantidad de rayos se ha terminado. Cada criatura en el haz queda cegada y recibe 4d6 puntos de daño. Las criaturas a para las que la luz solar es dañina o antinatural reciben doble daño. Una salvación de reflejos con éxito niega la ceguera y reduce el daño a la mitad. Una criatura muerta viviente atrapada en el haz recibe 1d6 puntos de daño por nivel del lanzador (máximo 20d6) o la mitad del daño si supera su salvación de reflejos. Además, el haz provoca la destrucción de cualquier muerto viviente dañado específicamente por la luz brillante si falla su salvación. La luz ultravioleta generada por el conjuro daña a hongos, mohos, cienos y limos como si fueran muertos vivientes.</field>
+    </object>
+    <!--CONJUROS DE DRUIDA DE Nº8-->
+    <object pk="286" model="main.conjuro">
+        <field type="CharField" name="nombre">Controlar plantas</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, FD</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Hasta 2 DG por nivel de criaturas tipo planta, ninguna de las cuales puede estar a más de 9 metros de las demás</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro te permite controlar las acciones de una o más criaturas tipo planta durante un corto periodo de tiempo. Das órdenes a las criaturas mediante la voz y ellas pueden entenderte, no importa el idioma que hables. Incluso si la comunicación vocal es imposible, las plantas controladas no te atacarán. Al final del conjuro, el objetivo vuelve a su comportamiento normal. Las órdenes suicidas o autodestructivas simplemente son ignoradas.</field>
+    </object>
+    <object pk="287" model="main.conjuro">
+        <field type="CharField" name="nombre">Dedo de la muerte</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza parcial</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro provoca instantáneamente 10 puntos de daño por nivel del lanzador. Si la tirada de salvación de fortaleza del objetivo tiene éxito, en su lugar recibe 3d6 puntos de daño + 1 punto por nivel del lanzador. El objetivo podría morir debido al daño incluso si supera su tirada de salvación.</field>
+    </object>
+    <!--CONJUROS DE DRUIDA DE Nº9-->
+    <object pk="288" model="main.conjuro">
+        <field type="CharField" name="nombre">Antipatía</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 hora</field>
+        <field type="CharField" name="componentes">V, S, M/FD (un trozo de alumbre empapado en vinagre)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Un lugar (hasta un cubo de 3 metros por nivel) o un objeto</field>
+        <field type="CharField" name="duracion">2 horas por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad parcial</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Haces que un objeto o lugar emane vibraciones mágicas que repelen a un tipo específico de criatura inteligente o a criaturas de un alineamiento particular, según lo definas. El tipo de criatura que va a ser afectada debe nombrarse espefícicamente. Un subtipo de criatura no es lo bastante específico. De forma similar, el alineamiento específico que va a ser repelido debe nombrarse. Las criaturas de la clase o alineamiento designado sienten la necesidad de abandonar el área o de evitar el objeto afectado. Una compulsión les fuerza a abandonar el área u objeto, evitándolo y no volver nunca voluntariamente mientras el conjuro esté activo. Una criatura que supere una tirada de salvación puede permanecer en el área o tocar el objeto, pero se siente incómodo al hacerlo. La incomodidad reduce la puntuación de destreza de la criatura en 4 puntos.</field>
+    </object>
+    <object pk="289" model="main.conjuro">
+        <field type="CharField" name="nombre">Desbrozar</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Conjuración (creación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="efecto">Tres o más brozas movedizas, ninguna de las cuales puede estar a más de 9 metros de las otras</field>
+        <field type="CharField" name="duracion">7 días o 7 meses</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">El conjuro de Desbrozar crea 1d4+2 brozas movedizas. Las criaturas te ayudan voluntariamente en combate , realizar una misión específica o sirven como guardaespaldas. Las criaturas permanecen contigo durante 7 días a menos que las despidas. Si las brozas se crean sólo con la función de guardia, sin embargo, la duración del conjuro es 7 meses. En este caso, a las brozas sólo se les puede ordenar guardar un lugar específico. Las brozas convocadas para tareas de guardia no pueden moverse fuera del alcance del conjuro, que se mide desde el punto en el que aparecieron por primera vez. Sólo puedes tener un conjuro de desbrozar activo a la vez. Si lanzas este conjuro mientras otro sigue en efecto, el lanzamiento previo se disipa. Las brozas tienen resistencia al fuego de forma normal sólo si el terreno en el que se les ha convocado es lluvioso o pantanoso.</field>
+    </object>
+    <object pk="290" model="main.conjuro">
+        <field type="CharField" name="nombre">Enjambre elemental</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Conjuración (convocación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="efecto">Dos o más criaturas convocadas, ninguna de las cuales puede estar a más de 9 metros</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro abre un portal a un Plano Elemental y convoca elementales de él. Un druida puede elegir cualquier plano (Aire, Agua, Fuego o Tierra). Cuando el conjuro se complete, aparecen 2d4 elementales grandes. Diez minutos después, aparecen 1d4 elementales enormes. Diez minutos después de eso, aparece un elemental mayor. Cada elemental tiene el máximo de puntos de golpe por DG. Una vez que estas criaturas aparezcan, te sirven mientras dure el conjuro. Los elementales te obedecen explíticamente y nunca te atacan, incluso si otra persona consigue obtener el control sobre ellos. No necesitas concentrarte para mantener el control sobre los elementales. Puedes despedirlos uno a uno o en grupos en cualquier momento. Cuando usas un conjuro de convocación para convocar una criatura de aire, agua, fuego o tierra, este es un conjuro de ese tipo.</field>
+    </object>
+    <object pk="291" model="main.conjuro">
+        <field type="CharField" name="nombre">Simpatía</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 hora</field>
+        <field type="CharField" name="componentes">V, S, M (una gota de miel y perlas pulverizadas por valor de 1.500 po)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros por nivel</field>
+        <field type="CharField" name="objetivo">Un lugar (hasta un cubo de 3 metros por nivel) o un objeto</field>
+        <field type="CharField" name="duracion">2 horas por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Haces que un objeto o lugar emane vibraciones mágicas que atraen a un tipo específico de criatura inteligente o criaturas de un alineamiento específico, según lo definas. El tipo particular de criatura a ser afectado debe nombrarse específicamente. Un subtipo de criatura no es lo bastante específico. De forma similar, un alineamiento específico debe ser nombrado. Las criaturas de un tipo o alineamiento específico se siente atraído y a gusto en el área o desea tocar o poseer el objeto. La compulsión de permanecer en el área o tocar el objeto abrumadora. Si la salvación tiene éxito, la criatura queda liberada del encantamiento, pero debe superar una nueva salvación 1d6x10 minutos después. Si esta salvación falla, la criatura afectada trata de volver al área o al objeto.</field>
+    </object>
+    <!--CONJUROS DE EXPLORADOR Nº2-->
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
     <object pk="1" model="main.companeroanimal">
