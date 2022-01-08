@@ -9626,6 +9626,285 @@
         <field type="CharField" name="descripcion">Con este conjuro puedes revivir a tu compañero animal siempre que no lleve muerta más de 1 día por nivel de lanzador.</field>
     </object>
     <!--CONJUROS DE PALADÍN Nº2-->
+    <object pk="297" model="main.conjuro">
+        <field type="CharField" name="nombre">Vínculo sagrado</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S, F (un par de pulseras doradas con un valor de 100 po cada uno equipados por ti y por el objetivo)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Para usar este conjuro, primero debes tocar al receptor, creando un campo simpático de energías curativas entre vosotros. Una vez que el conjuro se lance, tú y el objetivo podéis lanzar conjuros de conjuración (curación) con alcance de toque uno sobre el otro siempre que estéis dentro del alcance corto (7.5 metros + 1.5 metros cada 2 niveles). Si alguno de vosotros se quita la pulsera, el conjuro finaliza inmediatamente.</field>
+    </object>
+    <!--CONJUROS DE PALADÍN Nº3-->
+    <object pk="298" model="main.conjuro">
+        <field type="CharField" name="nombre">Santificar armadura</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Armadura tocada</field>
+        <field type="CharField" name="duracion">1 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Cargas tu armadura con un aura de rectitud. Obtiene un bonificador +1 de mejora por cada cuatro niveles (máximo +5 a nivel 20). Cuando usas tu aptitud de juicio o castigar, obtienes RD 5/mal. Una conjunto de ropa normal cuenta como armadura que no proporciona bonificador a la CA a efectos de este conjuro.</field>
+    </object>
+    <!--CONJUROS DE MAGO/HECHICERO DE Nº2-->
+    <object pk="299" model="main.conjuro">
+        <field type="CharField" name="nombre">Arma protectora</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (un arma cuerpo a cuerpo con la que seas competente y que estés empuñando)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">El foco de este conjuro vuela hacia arriba sobre tu cabeza y adopta una posición defensiva dentro de tu espacio. Se encara con un oponente como si estuviera guiada por una mano entrenada marcialmente, parando y rechazando los ataques cuerpo a cuerpo dirigidos contra ti, pero no contraataca contra ningún oponente ni tampoco los daña. El arma sólo sirve como defensa. Mientras te protege, puedes lanzar conjuros sin provocar ataques de oportunida, sin necesidad de lanzarlos a la defensiva.</field>
+    </object>
+    <object pk="300" model="main.conjuro">
+        <field type="CharField" name="nombre">Cerradura arcana</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (polvo de oro por valor de 25 po)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Puerta, cofre o portal tocado, hasta 9 metros cuadrados por nivel</field>
+        <field type="CharField" name="duracion">Permanente</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Un conjuro de cerradura arcana lanzado sobre una puerta, cofre o portal lo cierra mágicamente. Puedes abrir libremente tu propia cerradura arcana sin afectarla. Si el objeto cerrado posee una cerradura, la CD para abrirla aumenta en 10 mientras permanezca en el objeto. Si el objeto no posee una cerradura, este conjuro crea una que sólo puede abrirse con una prueba de habilidad de inutilizar mecanismo (CD 20). Una puerta u objeto asegurado con este conjuro sólo puede abrirse rompiéndolo o con un conjuro de Disipar magia y suma 10 a a la CD normal para romper una puerta o portal afectado.</field>
+    </object>
+    <object pk="301" model="main.conjuro">
+        <field type="CharField" name="nombre">Protección contra las flechas</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (un fragmento de caparazón de tortuga o galápago)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 hora por nivel o hasta descargarse</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">La criatura custodiada estará protegida contra las armas de ataque a distancia, obteniendo una reducción del daño de 10/magia contra ellas. Este conjuro no te otorga la aptitud de causar daño a criaturas con una reducción del daño similar. El conjuro se agotará una vez haya evitado un total de 10 puntos de daño por nivel de lanzador (máximo 100 puntos).</field>
+    </object>
+    <object pk="302" model="main.conjuro">
+        <field type="CharField" name="nombre">Flecha ácida</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Conjuración (creación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una hoja de ruibarbo y el estómago de una víbora), F (un dardo)</field>
+        <field type="CharField" name="alcance">120 metros + 12 metros por nivel</field>
+        <field type="CharField" name="efecto">Una flecha de ácido</field>
+        <field type="CharField" name="duracion">1 asalto + 1 asalto cada 3 niveles</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Una flecha de ácido surge de tu mano y se dirige hacia su objetivo. Debes tener éxito en un ataque de toque a distancia para impactar sobre tu objetivo. La flecha causa 2d4 puntos de daño por ácido sin daño de salpicadura. Por cada tres niveles de lanzador que poseas, el ácido, a menos que sea neutralizado, dura un asalto más (hasta un máximo de 6 asaltos adicionales a nivel 18), causando otros 2d4 puntos de daño en cada asalto.</field>
+    </object>
+    <object pk="303" model="main.conjuro">
+        <field type="CharField" name="nombre">Toque de idiotez</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura viva tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Con un toque, reduces las facultades mentales del receptor. Un ataque de toque cuerpo a cuerpo con éxito aplpica un penalizador 1d6 a la inteligencia, la sabiduría y el carisma del objetivo, penalizador que no puede reducir ninguna de estas puntuaciones por debajo de 1. El efecto de este conjuro puede hacer imposible para el objetivo lanzar alguno o todos sus conjuros, si el valor de la característica requisito cae por debajo del mínimo requerido para lanzar un conjuro de ese nivel.</field>
+    </object>
+    <object pk="304" model="main.conjuro">
+        <field type="CharField" name="nombre">Aliento de fuego</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una guindilla picante)</field>
+        <field type="CharField" name="alcance">4.5 metros</field>
+        <field type="CharField" name="area">Explosión en forma de cono</field>
+        <field type="CharField" name="duracion">1 asalto por nivel o hasta descargar</field>
+        <field type="CharField" name="tiro_de_salvacion">Reflejos mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Hasta tres veces durante la duración del conjuro, puedes vomitar un cono de fuego como acción estándar. El primer cono causa 4d6 puntos de daño por fuego a todas las criaturas en el área. El segundo cono de llamas causa 2d6 puntos de daño por fuego a todas las criaturas en el área. El tercer cono de llamas causa 1d6 puntos de daño por fuego a todas las criaturas en el área. Una salvación de reflejos con éxito reduce el daño a la mitad. Tras el tercer cono de llamas, el conjuro finaliza.</field>
+    </object>
+    <object pk="305" model="main.conjuro">
+        <field type="CharField" name="nombre">Rayo abrasador</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="efecto">Uno o más rayos</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Atacas a tus enemigos con un abrasador chorro de fuego. Puedes disparar un rayo, más un rayo adicional por cada cuatro niveles más allá del tercero (hasta un máximo de tres raños a nivel 11). Cada rayo requiere una tirada de ataque de toque a distancia para impactar y causa 4d6 puntos de daño por fuego. Los rayos pueden dispararse al mismo objetivo o a objetivos distintos, pero todos los rayos deben apuntarse a objetivos que se encuentren a un máximo de 9 metros unos de otros y se disparan simultáneamente.</field>
+    </object>
+    <object pk="306" model="main.conjuro">
+        <field type="CharField" name="nombre">Trampa fantasmal</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Ilusión (engaño)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (polvo especial por valor de 50 po)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Objeto tocado</field>
+        <field type="CharField" name="duracion">Permanente</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro hace que una cerradura u otro mecanismo pequeño parezca que contiene una trampa para cualquiera que pueda detectar trampas. Colocas el conjuros sobre un mecanismo o dispositivo pequeño, como una cerradura, bisagra, pasador, tapón, tapa o trinquete. Cualquier personaje capaz de detectar trampas o que use cualquier conjuro u objeto que permita la detección de trampas, estará convencido de que existe una trampa real. Por supuesto, el efecto es ilusorio y no ocurre nada si la trampa es disparada; su propósito principal es  asustar a los ladrones o hacerles gastar un tiempo precioso. Si hay otra Trampa fantasmal activa a una distancia de 15 metros, el lanzamiento falla.</field>
+    </object>
+    <object pk="307" model="main.conjuro">
+        <field type="CharField" name="nombre">Falsa vida</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una gota de sangre)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 hora por nivel o hasta descargar</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Empleas el poder de la no-vida para obtener una capacidad limitada para evitar la muerte. Mientras este hechizo esté en efecto, ganas puntos de golpe temporales iguales a 1d10 + 1 por nivel de lanzador (máximo +10).</field>
+    </object>
+    <object pk="308" model="main.conjuro">
+        <field type="CharField" name="nombre">Toque de gul</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (tela de un gul o tierra de la guarida de un gul)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Humanoide vivo tocado</field>
+        <field type="CharField" name="duracion">1d6 + 2 asaltos</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Cargándote con energía negativa, este conjuro te permite paralizar a un único humanoide vivo mientras dure el conjuro con un ataque de toque cuerpo a cuerpo con éxito. Un objetivo paralizado exuda un olor a carroña que hace que todas las criaturas vivas en una expansión de 3 metros de radio (excepto tú) queden indispuestos (fortaleza niega). Un conjuro de neutralizar veneno elimina el efecto de una criatura indispuesta , y las criaturas inmunes al veneno no se ven afectadas por el olor.</field>
+    </object>
+    <!--CONJUROS DE HECHICERO/MAGO DE Nº3-->
+    <object pk="309" model="main.conjuro">
+        <field type="CharField" name="nombre">Rayo relampagueante</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (pelo y una vara de cristal)</field>
+        <field type="CharField" name="alcance">36 metros</field>
+        <field type="CharField" name="area">Línea de 36 metros</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Reflejos mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Liberas un poderoso impacto de energía eléctrica que causa 1d6 puntos de daño por electricidad por nivel del lanzador (máximo 10d6) a cada criatura en el área. El relámpago comienza en la punta de tus dedos. El Rayo relampagueante prende fuego a los combustibles y daña objetos en su camino. Puede derretir metales con un bajo punto de fusión, como plomo, oro, cobre, plata o bronce. Si el daño causado a una barrera interpuesta la destruye o la atraviesa, el rayo puede continuar más allá de la barrera si el alcance del conjuro lo permite; si no, se detiene en la barrera como hace cualquier otro efecto de conjuro.</field>
+    </object>
+    <object pk="310" model="main.conjuro">
+        <field type="CharField" name="nombre">Rayo agotador</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una gota de sudor)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="efecto">Rayo</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza parcial</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un rayo negro se proyecta desde tu dedo índice. Debes hacer una tirada de ataque de toque a distancia con el rayo para impactar a un objetivo. El blanco queda exhausto inmediatamente mientras dure el conjuro. Una salvación de Fortaleza con éxito indica que la criatura sólo queda fatigada. Un personaje que ya esté fatigado, en su lugar queda exhausto. Este conjuro no tiene efecto sobre una criatura que ya esté exhausta. Al contrario que el agotamiento o la fatiga normales, el efecto finaliza en cuanto expira la duración del conjuro.</field>
+    </object>
+    <object pk="311" model="main.conjuro">
+        <field type="CharField" name="nombre">Toque vampírico</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura viva tocada</field>
+        <field type="CharField" name="duracion">Instantáneo o 1 hora</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Debes tener éxito con un ataque de toque cuerpo a cuerpo. Tu toque causa 1d6 puntos de daño por cada dos niveles de lanzador (máximo 10d6). Obtienes puntos de golpe temporales iguales al daño causado. No puedes obtener más que los puntos de golpe actuales del objetivo + su puntuación de constitución (lo que es suficiente para matar al objetivo). Los puntos de golpe temporales desaparecen 1 hora después.</field>
+    </object>
+    <object pk="312" model="main.conjuro">
+        <field type="CharField" name="nombre">Flecha flamígera</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una gota de aceite y un pequeño trozo de pedernal)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Cincuenta proyectiles, que deben estar juntos en el momento del lanzamiento</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro te permite convertir munición (como flechas, virotes de ballesta, shurikens y piedras de honda) en proyectiles ardientes. Cada pieza de munición causa 1d6 puntos adicionales de daño por fuego a cualquier objetivo que impacte. Un proyectil flamígero prende en objetos o estructuras inflamables pero no prenderá fuego a una criatura a la que impacte.</field>
+    </object>
+    <object pk="313" model="main.conjuro">
+        <field type="CharField" name="nombre">Arma mágica mayor</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (cal y carbón en polvo)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Un arma o 50 proyectiles (que deben estar juntos en el momento del lanzamiento)</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como arma mágica, excepto en que concede al arma un bonificador de mejora a las tiradas de ataque y daño de +1 por cada cuatro niveles (máximo +5). Este bonificador no permite a un arma ignorar la reducción de daño que no sea mágica. Alternativamente, puedes afectar un máximo de 50 flechas, virotes o balas. Los proyectiles deben ser del mismo tipo y deben estar juntos (en el mismo carcaj o contenedor). Los proyectiles, pero no las armas arrojadizas, pierden su transmutación una vez se usan.</field>
+    </object>
+    <object pk="314" model="main.conjuro">
+        <field type="CharField" name="nombre">Volar</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (una pluma de ala)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El receptor puede volar a una velocidad de 18 metros (o 12 metros si lleva una armadura intermedia o pesada o si transporta una carga intermedia o pesada). Puede ascender a la mitad de su velocidad y descender al doble de ésta y su maniobrabilidad es buena. Usar un conjuro de volar requiere tanta concentración como caminar, así que el receptor puede atacar o lanzar conjuros normalmente. El receptor del conjuro puede cargar, pero no correr, y no puede transportar más peso que su carga máxima, más cualquier armadura que lleve puesta. El objetivo gana un bonificador a las pruebas de volar igual a la mitad de tu nivel de lanzador. Si la duración del conjuro expira mientras el receptor todavía está en el aire, la magia falla lentamente. El receptor flota hacia el suelo a 18 metros por asalto durante 1d6 asaltos.</field>
+    </object>
+    <!--CONJUROS DE HECHICERO/MAGO DE Nº4-->
+    <object pk="315" model="main.conjuro">
+        <field type="CharField" name="nombre">Muro ilusorio</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Ilusión (quimera)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="efecto">Imagen de 0.3 metros x 3 metros x 3 metros</field>
+        <field type="CharField" name="duracion">Permanente</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad descree (si interactúa)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro crea la ilusión de un muro, piso, techo o superficie similar. Aparenta ser absolutamente real cuando es visto, pero los objetos físicos pueden pasar a su través sin dificultad. Cuando el conjuro es usado para ocultar pozos, trampas o puertas normales, cualquier habilidad de detección que no requiera la vista funciona normalmente. Tocar o una búsqueda minuciosa revela la verdadera naturaleza de la superficie, aunque estas medidas no hacen que la ilusión desaparezca. Aunque el lanzador puede ver a través de su Muro ilusorio, otras criaturas no pueden, incluso aunque tengan éxito en su tirada de salvación (pero se enteran que no es real).</field>
+    </object>
+    <!--AQUÍ VA UNO DE BARDO QUE NO LO METÍ ANTES-->
+    <object pk="316" model="main.conjuro">
+        <field type="CharField" name="nombre">Miedo</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (el corazón de una gallina o una pluma blanca)</field>
+        <field type="CharField" name="alcance">9 metros</field>
+        <field type="CharField" name="area">Explosión en forma de cono</field>
+        <field type="CharField" name="duracion">1 asalto por nivel o 1 asalto</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad parcial</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un invisible cono de terror hace que cada criatura viviente en el área sea quede despavorida a no ser que supere una tirada de salvación de voluntad. Si es acorralada, una criatura despavorida pasa a estar aterrada. Si la tirada de salvación de voluntad tiene éxito, la criatura queda estremecida durante un asalto.</field>
+    </object>
+    <object pk="317" model="main.conjuro">
+        <field type="CharField" name="nombre">Reducir persona en grupo</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S, M (polvo de hierro)</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="objetivo">Una criatura humanoide por nivel, ninguna de las cuales puede estar a más de 9 metros de otra</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona igual que Reducir persona, excepto que afecta a múltiples criaturas.</field>
+    </object>
+    <!--CONJUROS DE HECHICERO/MAGO DE Nº5-->
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
     <object pk="1" model="main.companeroanimal">
