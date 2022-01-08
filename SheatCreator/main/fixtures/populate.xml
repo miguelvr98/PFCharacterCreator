@@ -9558,6 +9558,74 @@
         <field type="CharField" name="descripcion">Haces que un objeto o lugar emane vibraciones mágicas que atraen a un tipo específico de criatura inteligente o criaturas de un alineamiento específico, según lo definas. El tipo particular de criatura a ser afectado debe nombrarse específicamente. Un subtipo de criatura no es lo bastante específico. De forma similar, un alineamiento específico debe ser nombrado. Las criaturas de un tipo o alineamiento específico se siente atraído y a gusto en el área o desea tocar o poseer el objeto. La compulsión de permanecer en el área o tocar el objeto abrumadora. Si la salvación tiene éxito, la criatura queda liberada del encantamiento, pero debe superar una nueva salvación 1d6x10 minutos después. Si esta salvación falla, la criatura afectada trata de volver al área o al objeto.</field>
     </object>
     <!--CONJUROS DE EXPLORADOR Nº2-->
+    <object pk="292" model="main.conjuro">
+        <field type="CharField" name="nombre">Percibir pistas</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una gota de agua)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Tus sentidos se vuelven sobrenaturalmente agudos, y obtienes una intuición sobre pistas y comportamientos sutiles. Mientras dure el conjuro, recibirás un bonificador +5 de competencia a las pruebas de averiguar intenciones y percepción.</field>
+    </object>
+    <object pk="293" model="main.conjuro">
+        <field type="CharField" name="nombre">Sabueso</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una gota de sangre y una pizca de canela)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Obtienes la aptitud especial de olfato, incluyendo la capacidad de reastrear mediante el olor. Recibes un bonificador +8 de competencia a las pruebas de percepción que impliquen el olfato y un bonificador +4 de competencia a las pruebas de supervivencia para rastrear usando el olfato. Recibes un penalizador -4 a los tiros de salvación contra efectos relacionados con el olor. Una criatura bajo los efectos de sabueso puede detectar veneno mediante el olfato con una prueba de percepción con CD 20.</field>
+    </object>
+    <!--CONJUROS DE EXPLORADOR Nº3-->
+    <object pk="294" model="main.conjuro">
+        <field type="CharField" name="nombre">Paso de pluma en grupo</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura por nivel, ninguna de las cuales puede estar a más de 9 metros de las otras</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Como Paso de pluma, excepto en que este conjuro afecta a múltiples criaturas.</field>
+    </object>
+    <object pk="295" model="main.conjuro">
+        <field type="CharField" name="nombre">Visión en la oscuridad</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una pizca de zanahoria seca o un ágata)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo gana la capacidad de ver 18 metros incluso en oscuridad total. La visión en la oscuridad es en blanco y negro pero por lo demás funciona como la visión normal.</field>
+    </object>
+    <!--CONJUROS DE EXPLORADOR Nº4-->
+    <object pk="296" model="main.conjuro">
+        <field type="CharField" name="nombre">Revivir compañero animal</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 minuto</field>
+        <field type="CharField" name="componentes">V, S, M (diamante por valor de 1.000 po)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Compañero animal tocado muerto</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguno</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Con este conjuro puedes revivir a tu compañero animal siempre que no lleve muerta más de 1 día por nivel de lanzador.</field>
+    </object>
+    <!--CONJUROS DE PALADÍN Nº2-->
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
     <object pk="1" model="main.companeroanimal">
