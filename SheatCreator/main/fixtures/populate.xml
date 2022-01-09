@@ -9893,11 +9893,11 @@
     </object>
     <object pk="317" model="main.conjuro">
         <field type="CharField" name="nombre">Reducir persona en grupo</field>
-        <field type="IntegerField" name="nivel">1</field>
+        <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
         <field type="CharField" name="componentes">V, S, M (polvo de hierro)</field>
-        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
         <field type="CharField" name="objetivo">Una criatura humanoide por nivel, ninguna de las cuales puede estar a más de 9 metros de otra</field>
         <field type="CharField" name="duracion">1 minuto por nivel</field>
         <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
@@ -9905,6 +9905,231 @@
         <field type="CharField" name="descripcion">Este conjuro funciona igual que Reducir persona, excepto que afecta a múltiples criaturas.</field>
     </object>
     <!--CONJUROS DE HECHICERO/MAGO DE Nº5-->
+    <object pk="318" model="main.conjuro">
+        <field type="CharField" name="nombre">Vínculo telepático</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (dos cáscaras de huevo de dos criaturas diferentes)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Tú más una criatura voluntaria por cada tres niveles, ninguna de las cuales puede estar a más de 9 metros de otra</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Creas un vínculo telepático entre tú y un número de criaturas voluntarias, cada uno de los cuales debe tener una puntuación de inteligencia de 3 o mayor. Cada criatura incluida en el vínculo es vinculada con todas las demás. Las criaturas pueden comunicarse telepáticamente a través del vínculo sin importar el idioma. Ningún poder o influencia especial es establecida como resultado del vínculo. Una vez que el vínculo se forma, funciona sobre cualquier distancia (aunque no desde un plano a otro). Si lo deseas, puedes dejarte a ti mismo fuera del vínculo telepático creado. La decisión debe tomarse en el momento del lanzamiento.</field>
+    </object>
+    <object pk="319" model="main.conjuro">
+        <field type="CharField" name="nombre">Debilidad mental</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (un puñado es esferas de arcilla, cristal o vidrio)</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="objetivo">Una criatura</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">La puntuación de inteligencia y carisma de la criatura objetivo bajan a 1. La criatura afectada no puede usar las habilidades basadas en inteligencia o carisma, lanzar conjuros, entender idiomas o comunicarse coherentemente. Aun así, sabe quienes son sus amigos y puede seguirlos e incluso protegerlos. El sujeto permanece en este estado hasta que un conjuro de Sanar sea usado para cancelar el efecto del debilidad mental. Una criatura que pueda lanzar conjuros arcanos, como un hechicero o mago, recibe un penalizador de -4 en su tirada de salvación.</field>
+    </object>
+    <object pk="320" model="main.conjuro">
+        <field type="CharField" name="nombre">Cono de frío</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (un pequeño cono de cristal o vidrio)</field>
+        <field type="CharField" name="alcance">18 metros</field>
+        <field type="CharField" name="area">Explosión en forma de cono</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Reflejos mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Cono de frío crea un área de frío extremo que se origina en tu mano y se extiende hacia adelante en forma de cono. Consume el calor, causando 1d6 puntos de daño de frío por nivel de lanzador (máximo 15d6).</field>
+    </object>
+    <object pk="321" model="main.conjuro">
+        <field type="CharField" name="nombre">Olas de fatiga</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">9 metros</field>
+        <field type="CharField" name="area">Explosión en forma de cono</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Oleadas de energía negativa dejan fatigadas a todas las criaturas en el área del conjuro. Este conjuro no tiene efectos sobre una criatura que ya está fatigada.</field>
+    </object>
+    <!--CONJUROS DE HECHICERO/MAGO DE Nº6-->
+    <object pk="322" model="main.conjuro">
+        <field type="CharField" name="nombre">Bruma ácida</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Conjuración (curación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (guisantes en polvo y una pezuña animal)</field>
+        <field type="CharField" name="alcance">30 + 3 metros por nivel</field>
+        <field type="CharField" name="efecto">Niebla que se expande en un radio de 6 metros y 6 metros de alto</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Bruma ácida crea una masa ondulante de vapores neblinosos. Además de ralentizar a las criaturas y oscurecer la visión, los vapores de este conjuro son altamente ácidos. Cada asalto en tu turno, comenzando cuando lances el conjuro, la niebla causa 2d6 puntos de daño por ácido a cada criatura y objeto en su interior.</field>
+    </object>
+    <object pk="323" model="main.conjuro">
+        <field type="CharField" name="nombre">Elucubración de mago</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Preparas instantáneamente cualquier otro conjuro de nivel 5 o inferior que hayas usado durante las últimas 24 horas. El conjuro debe haber sido lanzado durante ese periodo. El conjuro elegido queda almacenado en tu mente como si lo hubieras preparado de la forma normal. Si el conjuro recordado requiere componentes materiales, debes proporcionarlos. El conjuro recuperado no puede usarse hasta que los componentes materiales estén disponibles.</field>
+    </object>
+    <!--CONJURO DE HECHICERO/MAGO DE Nº7-->
+    <object pk="324" model="main.conjuro">
+        <field type="CharField" name="nombre">Estatua</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S, M (cal, arena y una gota de agua revueltos con un clavo de hierro)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Un conjuro de Estatua convierte al objetivo en piedra sólida, junto con cualquier ropa o equipo sujeto o transportado. En forma de estatua, el objetivo obtiene dureza 8. El objetivo mantiene sus propios puntos de golpe. El objetivo puede ver, oír y olfatear normalmente, pero no necesita comer ni respirar. El tacto está limitado a aquellas sensaciones que puedan afectar a la sustancia dura como el granito del cuerpo del individuo. Astillarse es igual que un simple arañazo, pero romper uno de los brazos de la Estatua constituye un grave daño. El objetivo del conjuro de estatua puede volver a su estado normal, actuar y después volver instantáneamente a su estado de estatua (como acción gratuita) si lo desea, mientras el conjuro permanezca activo.</field>
+    </object>
+    <!--CONJUROS DE HECHICERO/MAGO DE Nº8-->
+    <object pk="325" model="main.conjuro">
+        <field type="CharField" name="nombre">Mente en blanco</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura</field>
+        <field type="CharField" name="duracion">24 horas</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo queda protegido de todos los dispositivos y conjuros que reúnan información sobre el objetivo mediante magia de adivinación. Este conjuro también proporciona un bonificador +8 de resistencia a las tiradas de salvación contra conjuros y efectos enajenadores.</field>
+    </object>
+    <object pk="326" model="main.conjuro">
+        <field type="CharField" name="nombre">Protección contra los conjuros</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (diamante valorado en 500 po), F (un diamante de 1.000 por objetivo. Cada uno debe portar la gema mientras dure el conjuro. Si alguno pierde la gema, el conjuro deja de afectarle)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Hasta una criatura tocada cada cuatro niveles</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">El objetivo obtiene un bonificador +8 de resistencia a los tiros de salvación contra conjuros y aptitudes sortílegas (pero no contra aptitudes sobrenaturales y extraordinarias).</field>
+    </object>
+    <object pk="327" model="main.conjuro">
+        <field type="CharField" name="nombre">Instante de presciencia</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 hora por nivel o hasta descargar</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro te proporciona un bonificador introspectivo igual a tu nivel de lanzador (máximo +25) a una única tirada de ataque, prueba de maniobra de combate, prueba enfrentada, prueba de habilidad o tirada de salvación. Alternativamente, puedes aplicar el bonificador introspectivo a tu CA contra un único ataque (incluso si estás desprevenido). Activar el efecto no requiere una acción; puedes activarlo incluso en el turno de otro personaje. Debes elegir si activas el instante de presciencia antes de hacer la tirada que va a modificar. Una vez usado, el conjuro termina. No puedes tener más de un instante de presciencia activo sobre ti al mismo tiempo.</field>
+    </object>
+    <object pk="328" model="main.conjuro">
+        <field type="CharField" name="nombre">Rayo polar</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (un cono o prisma blanco de cerámica)</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="efecto">Rayo</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Un rayo blancoazulado de hielo y aire helado brota de tu mano. Debes superar una tirada de ataque toque a distancia con el rayo para dañar a un objetivo. El rayo causa 1d6 puntos de daño de frío por nivel del lanzador (máximo 25d6) y 1d4 puntos de consunción de destreza.</field>
+    </object>
+    <object pk="329" model="main.conjuro">
+        <field type="CharField" name="nombre">Horrible marchitamiento</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (un trozo de esponja)</field>
+        <field type="CharField" name="alcance">120 metros + 12 metros por nivel</field>
+        <field type="CharField" name="objetivo">Criaturas vivas, ninguna de las cuales puede estar a más de 18 metros de las otras</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro evapora la humedad del cuerpo de una cada criatura viva afectada, haciendo que la carne se marchite, se agriete y se desmorone convertida en polvo. Esto causa 1d6 puntos de daño por nivel del lanzador (máximo 20d6). Este conjuro es especialmente devastador sobre elementales de agua y criaturas de tipo planta, que reciben 1d8 puntos de daño por nivel del lanzador (máximo 20d8).</field>
+    </object>
+    <object pk="330" model="main.conjuro">
+        <field type="CharField" name="nombre">Estasis temporal</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (polvo de diamante, esmeralda, rubí y zafiro por valor de 5.000 po)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Permanente</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Debes tener éxito con un ataque de toque cuerpo a cuerpo. Colocas al objetivo en un estado de animación suspendida. Para la criatura, el tiempo deja de fluir y su estado queda fijado. La criatura no envejece. Sus funciones corporales cesan y ninguna fuerza o efecto puede dañarlo. Este estado persiste hasta que la magia es eliminada.</field>
+    </object>
+    <!--CONJUROS DE HECHICERO/MAGO DE Nº9-->
+    <object pk="331" model="main.conjuro">
+        <field type="CharField" name="nombre">Libertad</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">El objetivo es liberado de conjuros y efectos que restringen el movimiento y estados como apresado, aturdido o sujeto.</field>
+    </object>
+    <object pk="332" model="main.conjuro">
+        <field type="CharField" name="nombre">Inmovilizar monstruo en grupo</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Encantamiento (enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (una barra o trozo de metal duro, que puede ser del tamaño de un clavo)</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="objetivo">Una o más criaturas, ninguna de las cuales puede estar a más de 9 metros de las otras</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Inmovilizar persona excepto en que afecta a múltiples criaturas e inmoviliza a cualquier criatura viva que falle su salvación de voluntad.</field>
+    </object>
+    <object pk="333" model="main.conjuro">
+        <field type="CharField" name="nombre">Palabra de poder mortal</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="objetivo">Una criatura viva con 100 PG o menos</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Pronuncias una única palabra de poder que mata instantáneamente a una criatura a tu elección, pueda ésta oír o no la palabra. Cualquier criatura que posea actualmente 101 o más puntos de golpe no se ve afectada por la Palabra de poder mortal.</field>
+    </object>
+    <object pk="334" model="main.conjuro">
+        <field type="CharField" name="nombre">Lamento de la banshee</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura viva por nivel en una expansión de 12 metros de radio</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Cuando lanzas este conjuro, emites un terrible aullido que hiela el alma que posiblemente mate a las criaturas que lo oigan (excepto a ti mismo). El conjuro afecta a una criatura por nivel de lanzador, infligiendo 10 puntos de daño por nivel de lanzador. Las criaturas más cercanas al punto de origen son afectadas primero.</field>
+    </object>
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
     <object pk="1" model="main.companeroanimal">
