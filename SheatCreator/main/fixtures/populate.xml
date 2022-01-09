@@ -3616,6 +3616,26 @@
             <object pk="164"></object>
             <object pk="165"></object>
         </field>
+        <field to="main.dote" name="dotes" rel="ManyToManyRel">
+            <object pk="17"></object>
+            <object pk="116"></object>
+            <object pk="103"></object>
+            <object pk="117"></object>
+            <object pk="63"></object>
+            <object pk="47"></object>
+            <object pk="110"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <object pk="107"></object>
+            <object pk="162"></object>
+            <object pk="128"></object>
+            <object pk="335"></object>
+            <object pk="319"></object>
+            <object pk="336"></object>
+            <object pk="234"></object>
+            <object pk="325"></object>
+            <object pk="337"></object>
+        </field>
     </object>
     <object pk="2" model="main.linaje">
         <field type="CharField" name="nombre">Abisal</field>
@@ -3628,6 +3648,26 @@
             <object pk="168"></object>
             <object pk="169"></object>
             <object pk="170"></object>
+        </field>
+        <field to="main.dote" name="dotes" rel="ManyToManyRel">
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="114"></object>
+            <object pk="27"></object>
+            <object pk="94"></object>
+            <object pk="120"></object>
+            <object pk="50"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <object pk="24"></object>
+            <object pk="200"></object>
+            <object pk="132"></object>
+            <object pk="279"></object>
+            <object pk="227"></object>
+            <object pk="338"></object>
+            <object pk="340"></object>
+            <object pk="341"></object>
+            <object pk="342"></object>
         </field>
     </object>
     <object pk="3" model="main.linaje">
@@ -4495,6 +4535,45 @@
         <field type="CharField" name="nombre">Prolongar conjuro</field>
         <field type="CharField" name="descripcion">Un conjuro prolongado dura el doble de lo normal.</field>
         <field type="CharField" name="tipo">Metamágica</field>
+    </object>
+    <object pk="116" model="main.dote">
+        <field type="CharField" name="nombre">Desarmar mejorado</field>
+        <field type="CharField" name="descripcion">Un conjuro prolongado dura el doble de lo normal.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="inteligencia">13</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="58"></object>
+        </field>
+    </object>
+    <object pk="117" model="main.dote">
+        <field type="CharField" name="nombre">Iniciativa mejorada</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador +4 a las tiradas de iniciativa.</field>
+        <field type="CharField" name="tipo">Combate</field>
+    </object>
+    <object pk="118" model="main.dote">
+        <field type="CharField" name="nombre">Aumentar convocación</field>
+        <field type="CharField" name="descripcion">Cada criatura que conjures con cualquier conjuro de convocación obtiene un bonificador +4 por mejora a la fuerza y constitución a lo largo de la la duración del conjuro con el que lo has convocado.</field>
+        <field type="CharField" name="tipo">General</field>
+    </object>
+    <object pk="119" model="main.dote">
+        <field type="CharField" name="nombre">Hendedura</field>
+        <field type="CharField" name="descripcion">Como acción estándar, puedes hacer un único ataque con tu ataque base completo contra un enemigo a tu alcance. Si impactas, haces el daño normalmente y puedes hacer un ataque adicional (usando tu ataque base completo) contra un enemigo que esté adyacente al primero y también dentro de tu alcance. Sólo puedes hacer un ataque adicional por asalto con esta dote. Cuando uses esta dote, tienes un penalizador de -2 a tu CA hasta tu próximo turno.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+        </field>
+    </object>
+    <object pk="120" model="main.dote">
+        <field type="CharField" name="nombre">Romper arma mejorado</field>
+        <field type="CharField" name="descripcion">No provocas un ataque de oportunidad cuando realizas una maniobra de combate de romper arma. Además, recibes un bonificador +2 a las tiradas para romper un objeto. También recibes un bonificador +2 a tu DMC cada vez que un oponente intente dañar tu equipo.</field>
+        <field type="CharField" name="tipo">Combate</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field type="IntegerField" name="ataque_base">1</field>
+        <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
+            <object pk="50"></object>
+        </field>
     </object>
 <!--PROPIEDADES OBJETOS-->
     <object pk="1" model="main.propiedad">
@@ -10129,6 +10208,111 @@
         <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
         <field type="CharField" name="resistencia_conjuros">Sí</field>
         <field type="CharField" name="descripcion">Cuando lanzas este conjuro, emites un terrible aullido que hiela el alma que posiblemente mate a las criaturas que lo oigan (excepto a ti mismo). El conjuro afecta a una criatura por nivel de lanzador, infligiendo 10 puntos de daño por nivel de lanzador. Las criaturas más cercanas al punto de origen son afectadas primero.</field>
+    </object>
+    <!--CONJUROS QUE HE TENIDO QUE METER A POSTERIORI-->
+    <object pk="335" model="main.conjuro">
+        <field type="CharField" name="nombre">Tentáculos negros</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Conjuración (creación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (tentáculo de pulpo o calamar)</field>
+        <field type="CharField" name="alcance">30 metros + 3 metros por nivel</field>
+        <field type="CharField" name="area">Área de 6 metros de radio</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro hace aparecer un campo de gomosos tentáculos negros, penetrando desde el suelo y alcanzando a cualquier criatura en el área. Cada criatura dentro del área del conjuro es objetivo de una prueba de maniobra de combate hecha para apresar cada asalto al comienzo de tu turno, incluido el asalto en que los Tentáculos negros son conjurados. Las criaturas que entren en el área de efecto también son atacadas automáticamente. Los tentáculos no provocan ataques de oportunidad. Al determinar el BMC de los tentáculos usa tu nivel de lanzador como su bonificador de ataque base y reciben un bonificador +4 debido a su fuerza y un bonificador +1 por tamaño. Haz sólo una tirada para todo el efecto del conjuro cada asalto y aplica el resultado a todas las criaturas en el área de efecto. Si los tentáculos logran apresar un enemigo, este enemigo recibe 1d6+4 puntos de daño y recibe la condición de apresado.</field>
+    </object>
+    <object pk="336" model="main.conjuro">
+        <field type="CharField" name="nombre">Velo</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Ilusión (engaño)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">120 metros + 12 metros por nivel</field>
+        <field type="CharField" name="objetivo">Una o más criaturas, ninguna de las cuales puede estar a más de 9 metros de las demás</field>
+        <field type="CharField" name="duracion">Concentración + 1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Cambias instantáneamente la apariencia de los objetivos y la mantienes mientras dure el conjuro. Puedes hacer que los objetivos aparenten ser cualquier cosa que desees. El objetivo aparenta, se siente y huele igual que las criaturas a las que el conjuro hace que se parezca. Las criaturas afectadas recuperan sus aspectos normales si mueren. Debes superar una prueba de disfraz para duplicar la apariencia de un individuo específico. Este conjuro te proporciona un bonificador +10 a la prueba.</field>
+    </object>
+    <object pk="337" model="main.conjuro">
+        <field type="CharField" name="nombre">Cambiar de forma</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Transmutación (polimorfismo)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (aro de jade por valor de 1.500 po)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro te permite adoptar una variedad de formas de criaturas. Puedes cambiar de forma una vez por asalto como acción gratuita. El cambio tiene lugar inmediatamente antes de tu acción normal o inmediatamente después de esta, pero no durante la acción.</field>
+    </object>
+    <object pk="338" model="main.conjuro">
+        <field type="CharField" name="nombre">Transformación</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una poción de fuerza de toro, que debes beber y cuyos efectos son absorbidos por los efectos del conjuro)</field>
+        <field type="CharField" name="alcance">Personal</field>
+        <field type="CharField" name="objetivo">Tú</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Obtienes un bonificador +4 a fuerza, destreza y constitución, un bonificador +4 de armadura natural a tu CA, un bonificador +5 de competencia a las salvaciones de fortaleza y competencia con todas las armas sencillas y marciales. Tu bonificador de ataque base es igual a tu nivel de personaje (lo que te puede proporcionar ataques múltiples). Pierdes tu capacidad de lanzamiento de conjuros, incluyendo tu aptitud para utilizar objetos mediante activación por conjuro o finalización de conjuro, como si los conjuros ya no pertenecieran a la lista de tu clase.</field>
+    </object>
+    <object pk="339" model="main.conjuro">
+        <field type="CharField" name="nombre">Teletransportar</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Conjuración (teletransporte)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V</field>
+        <field type="CharField" name="alcance">Personal y toque</field>
+        <field type="CharField" name="objetivo">Tú y objetos tocados u otras criaturas voluntarias tocadas</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro te transporte instantáneamente a una posición designada, que puede estar tan lejos como 1.000 millas por nivel de lanzador. El viaje entre planos no es posible. Puedes transportar objetos mientras que su peso no exceda tu carga máxima. También puedes llevar una criatura adicional voluntaria de tamaño Medio o más pequeño (llevando equipo u objetos hasta su carga máxima) o su equivalente por cada tres niveles de lanzador. Debes tener una idea clara de la localización y disposición del destino. Cuando más clara sea tu imagen mental, más probable es que funcione el teletransporte. Las zonas de energía física o mágica fuerte pueden hacer el teletransporte más peligroso o incluso imposible.</field>
+    </object>
+    <object pk="340" model="main.conjuro">
+        <field type="CharField" name="nombre">Teletransportar mayor</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="escuela">Conjuración (teletransporte)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V</field>
+        <field type="CharField" name="alcance">Personal y toque</field>
+        <field type="CharField" name="objetivo">Tú y objetos tocados u otras criaturas voluntarias tocadas</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como teletransportar , excepto que no tiene límite de alcance y no hay ninguna posibilidad de llegar desviado. Además, no necesitas haber visto el destino, pero en este caso debes tener al menos una descripción fiable del sitio al que te quieres teletransportar.</field>
+    </object>
+    <object pk="341" model="main.conjuro">
+        <field type="CharField" name="nombre">Aura sacrílega</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (un pequeño relicario valorado en 500 po)</field>
+        <field type="CharField" name="alcance">6 metros</field>
+        <field type="CharField" name="objetivo">Una criatura por nivel en una explosión de 6 metros de radio, centrada en ti</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Una malévola oscuridad rodea a los receptores, protegiéndolos de los ataques, concediéndoles resistencia a los conjuros lanzados por criaturas buenas y debilitando a las criaturas de este alineamiento que logren alcanzarlos con sus ataques. En primer lugar, las criaturas custodiadas obtienen un boníficador +4 de desvío a la CA y un bonificador +4 de resistencia en sus tiradas de salvación. Las criaturas custodiadas ganan RC 25 contra los conjuros buenos y los conjuros lanzados por criaturas buenas. La abjuración bloquea la posesión y la influencia mental de parte de las criaturas benignas. Por último, las criaturas buenas que logren alcanzar con un ataque a un defensor custodiado por el conjuro sufrirán 1d6 puntos de daño temporal de fuerza (fortaleza niega).</field>
+    </object>
+    <object pk="342" model="main.conjuro">
+        <field type="CharField" name="nombre">Convocar monstruo IX</field>
+        <field type="IntegerField" name="nivel">9</field>
+        <field type="CharField" name="escuela">Conjuración (convocación)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S, F/FD (una diminuta bolsa y una pequeña vela)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="efecto">Una criatura convocada</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Puedes convocar a una criatura de la lista de nivel 9, 1d3 criaturas del mismo tipo de la lista de nivel 8 o 1d4+1 criaturas del mismo tipo de cualquier lista de nivel inferior.</field>
     </object>
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
