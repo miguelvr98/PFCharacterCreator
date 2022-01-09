@@ -214,6 +214,13 @@ class Personaje(models.Model):
             ataque_base = ataque_base + str(ataque_base_sum)
         return ataque_base
 
+    @property
+    def nivel(self):
+        nivel = 0
+        for clase in self.clases:
+            nivel = nivel + clase.nivel
+        return nivel
+
     def __str__(self):
         return self.nombre
     
