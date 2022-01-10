@@ -4844,7 +4844,7 @@
     </object>
     <object pk="21" model="main.propiedad">
         <field type="CharField" name="nombre">Bloqueador de fase</field>
-        <field type="CharField" name="descripcion">Una criatura dañada por esta arma se ve afectada como si fuera objetivo del hechizo Ancla Dimensional durante 1 turno.</field>
+        <field type="CharField" name="descripcion">Una criatura dañada por esta arma no puede teletransportarse durante 1 turno.</field>
         <field type="IntegerField" name="coste">2</field>
         <field type="BooleanField" name="es_propiedad_arma">True</field>
         <field to="main.propiedad" name="prerrequisito_propiedad" rel="OneToOneRel">1</field>
@@ -6803,7 +6803,7 @@
         <field type="CharField" name="resistencia_conjuros">No</field>
         <field type="CharField" name="descripcion">Este conjuro funciona como protección contra el mal, excepto en que los bonificadores por desvío y resistencia se aplican a los ataques que provengan de criaturas buenas. El objetivo recibe un nuevo tiro de salvación contra el control por parte de criaturas buenas y las criaturas buenas convocadas no pueden tocar al objetivo.</field>
     </object>
-    <object pk="69" model="main.conjuro">
+    <object pk="369" model="main.conjuro">
         <field type="CharField" name="nombre">Protección contra el caos</field>
         <field type="IntegerField" name="nivel">1</field>
         <field type="CharField" name="escuela">Abjuración (legal)</field>
@@ -8953,7 +8953,7 @@
     </object>
     <!--CONJUROS DE CLÉRIGO DE Nº5-->
     <object pk="232" model="main.conjuro">
-        <field type="CharField" name="nombre">Armas disruptora</field>
+        <field type="CharField" name="nombre">Arma disruptora</field>
         <field type="IntegerField" name="nivel">5</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -9259,7 +9259,7 @@
     </object>
     <!--CONJUROS DE CLÉRIGO DE Nº9-->
     <object pk="255" model="main.conjuro">
-        <field type="CharField" name="nombre">Curar heridas críticas</field>
+        <field type="CharField" name="nombre">Curar heridas críticas en grupo</field>
         <field type="IntegerField" name="nivel">9</field>
         <field type="CharField" name="escuela">Conjuración (curación)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -10761,6 +10761,150 @@
         <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
         <field type="CharField" name="resistencia_conjuros">Sí</field>
         <field type="CharField" name="descripcion">Para usar el conjuro caminar por la sombra, debe estar en un área de penumbra. Tú y cualquier criatura que toques sois entonces transportados a lo largo de un camino en espiral de materia de sombra en el límite del Plano Material, donde este limita con el Plano de Sombra. El efecto es en gran parte ilusorio, pero el camino es casi real. Puedes llevar a más de una criatura contigo (dentro de tu límite de nivel), pero todos deben tocarse entre si. En la región de sombra, te mueves a una velocidad de 50 millas por hora, moviéndose generalmente en los límites del Plano de Sombra pero mucho más rápidamente en relación al Plano Material. Así, puedes usar este conjuro para viajar rápidamente caminando en el Plano de Sombra, moviendo la distancia deseada, y entonces volver a pisar el Plano Material.</field>
+    </object>
+    <!--EL 369 ES PROTECCIÓN CONTRA EL CAOS QUE TENÍA LA PK REPETIDA-->
+    <object pk="370" model="main.conjuro">
+        <field type="CharField" name="nombre">Círculo mágico contra el bien</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (un círculo de 1 metro de diámetro de polvo de plata)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="area">Emanación de 3 metros radio desde la criatura tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Círculo mágico contra el mal excepto que es efectivo contra el bien.</field>
+    </object>
+    <object pk="371" model="main.conjuro">
+        <field type="CharField" name="nombre">Círculo mágico contra el caos</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (un círculo de 1 metro de diámetro de polvo de plata)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="area">Emanación de 3 metros radio desde la criatura tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Círculo mágico contra el mal excepto que es efectivo contra el caos.</field>
+    </object>
+    <object pk="372" model="main.conjuro">
+        <field type="CharField" name="nombre">Círculo mágico contra la ley</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (un círculo de 1 metro de diámetro de polvo de plata)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="area">Emanación de 3 metros radio desde la criatura tocada</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Círculo mágico contra el mal excepto que es efectivo contra la ley.</field>
+    </object>
+    <object pk="373" model="main.conjuro">
+        <field type="CharField" name="nombre">Inflingir heridas leves en grupo</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura por nivel ninguna de las cuales puede estar a más de 9 metros de otra</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">La energía negativa se expande en todas direcciones desde el punto de origen, causando 1d8 puntos de daño +1 punto por nivel de lanzador (máximo +25) a los enemigos vivos cercanos.</field>
+    </object>
+    <object pk="374" model="main.conjuro">
+        <field type="CharField" name="nombre">Visión verdadera</field>
+        <field type="IntegerField" name="nivel">5</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (un ungüento para el ojo que cuesta 250 po)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Proporcionas al sujeto la aptitud de ver todas las cosas tal como son. El objetivo ve a través de la oscuridad mágica y normal, advierte puertas secretas ocultas por la magia. ve criaturas y objetos invisibles normalmente, ve a través de ilusiones y ve la auténtica forma de las cosas polimorfadas, cambiadas o transmutadas. Además, el objetivo puede concentrar su visión para ver en el plano etéreo (pero no en espacios extradimensionales). El alcance de la visión verdadera es de 36 metros.</field>
+    </object>
+    <object pk="375" model="main.conjuro">
+        <field type="CharField" name="nombre">Fuerza de toro en grupo</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (algunos pelos o una pizca de estiércol de toro)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura por nivel ninguna de las cuales puede estar más lejos de 9 metros de distancia</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Fuerza de toro, excepto en que afecta a múltiples criaturas.</field>
+    </object>
+    <object pk="376" model="main.conjuro">
+        <field type="CharField" name="nombre">Inflingir heridas moderadas en grupo</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Infligir heridas leves en grupo excepto en que causa 2d8 puntos de daño +1 punto por nivel de lanzador (máximo +30).</field>
+    </object>
+    <object pk="377" model="main.conjuro">
+        <field type="CharField" name="nombre">Resistencia de oso en grupo</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (algunos pelos o una pizca de estiercol de oso)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura por nivel, ninguna de las cuales puede estar a más de 9 metros de distancia unos de otros.</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Resistencia de oso en grupo funciona como Resistencia de oso excepto en que afecta a múltiples criaturas.</field>
+    </object>
+    <object pk="378" model="main.conjuro">
+        <field type="CharField" name="nombre">Sabiduría de buho en grupo</field>
+        <field type="IntegerField" name="nivel">6</field>
+        <field type="CharField" name="escuela">Transmutación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M/FD (plumas o heces de buho)</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Una criatura por nivel, ninguna de las cuales puede estar a más de 9 metros de distancia unos de otros.</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Sabiduría de búho, excepto que afecta a multiples criaturas.</field>
+    </object>
+    <object pk="379" model="main.conjuro">
+        <field type="CharField" name="nombre">Inflingir heridas graves en grupo</field>
+        <field type="IntegerField" name="nivel">7</field>
+        <field type="CharField" name="escuela">Nigromancia</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">Instantáneo</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad mitad</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro funciona como Infligir heridas leves en grupo excepto en que causa 3d8 puntos de daño +1 punto por nivel de lanzador (máximo +35).</field>
+    </object>
+    <object pk="380" model="main.conjuro">
+        <field type="CharField" name="nombre">Aura sagrada</field>
+        <field type="IntegerField" name="nivel">8</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, F (un pequeño relicario valorado en 500 po)</field>
+        <field type="CharField" name="alcance">6 metros</field>
+        <field type="CharField" name="objetivo">Una criatura por nivel en una explosión de 6 metros de radio, centrada en ti</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Una benévola oscuridad rodea a los receptores, protegiéndolos de los ataques, concediéndoles resistencia a los conjuros lanzados por criaturas malignas y debilitando a las criaturas de este alineamiento que logren alcanzarlos con sus ataques. En primer lugar, las criaturas custodiadas obtienen un boníficador +4 de desvío a la CA y un bonificador +4 de resistencia en sus tiradas de salvación. Las criaturas custodiadas ganan RC 25 contra los conjuros malignos y los conjuros lanzados por criaturas malignas. La abjuración bloquea la posesión y la influencia mental de parte de las criaturas malignas. Por último, las criaturas buenas que logren alcanzar con un ataque a un defensor custodiado por el conjuro sufrirán 1d6 puntos de daño temporal de fuerza (fortaleza niega).</field>
     </object>
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
@@ -15428,6 +15572,177 @@
             <object pk="35"></object>
             <object pk="36"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº7-->
+            <object pk="355"></object>
+            <object pk="246"></object>
+            <object pk="247"></object>
+            <object pk="379"></object>
+            <object pk="248"></object>
+            <object pk="250"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº8-->
+            <object pk="341"></object>
+            <object pk="251"></object>
+            <object pk="253"></object>
+            <object pk="252"></object>
+            <object pk="380"></object>
+            <object pk="360"></object>
+            <object pk="356"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº9-->
+            <object pk="342"></object>
+            <object pk="364"></object>
+            <object pk="255"></object>
+            <object pk="256"></object>
+            <object pk="257"></object>
+            <object pk="258"></object>
+            <object pk="259"></object>
+            <object pk="357"></object>
+        </field>
     </object>
     <object pk="44" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15477,6 +15792,55 @@
             <object pk="31"></object>
             <object pk="1"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
     </object>
     <object pk="31" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">0</field>
@@ -15501,6 +15865,55 @@
             <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
             <object pk="2"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
     </object>
     <object pk="32" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">0</field>
@@ -15526,6 +15939,80 @@
             <object pk="2"></object>
             <object pk="4"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
     </object>
     <object pk="47" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15547,6 +16034,80 @@
             <object pk="3"></object>
             <object pk="6"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
     </object>
     <object pk="48" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15569,6 +16130,107 @@
             <object pk="6"></object>
             <object pk="8"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
     </object>
     <object pk="49" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15591,6 +16253,107 @@
             <object pk="7"></object>
             <object pk="10"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
     </object>
     <object pk="50" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15614,6 +16377,124 @@
             <object pk="10"></object>
             <object pk="13"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
     </object>
     <object pk="51" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15637,6 +16518,124 @@
             <object pk="12"></object>
             <object pk="15"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
     </object>
     <object pk="52" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15661,6 +16660,137 @@
             <object pk="15"></object>
             <object pk="18"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
     </object>
     <object pk="53" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15685,6 +16815,137 @@
             <object pk="17"></object>
             <object pk="20"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
     </object>
     <object pk="54" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15710,6 +16971,151 @@
             <object pk="20"></object>
             <object pk="23"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
     </object>
     <object pk="55" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15735,6 +17141,151 @@
             <object pk="22"></object>
             <object pk="25"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
     </object>
     <object pk="56" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -15761,6 +17312,158 @@
             <object pk="25"></object>
             <object pk="33"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº7-->
+            <object pk="355"></object>
+            <object pk="246"></object>
+            <object pk="247"></object>
+            <object pk="379"></object>
+            <object pk="248"></object>
+            <object pk="250"></object>
     </object>
     <object pk="33" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">7</field>
@@ -15791,6 +17494,158 @@
             <object pk="27"></object>
             <object pk="34"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº7-->
+            <object pk="355"></object>
+            <object pk="246"></object>
+            <object pk="247"></object>
+            <object pk="379"></object>
+            <object pk="248"></object>
+            <object pk="250"></object>
     </object>
     <object pk="34" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">7</field>
@@ -15822,6 +17677,166 @@
             <object pk="34"></object>
             <object pk="35"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº7-->
+            <object pk="355"></object>
+            <object pk="246"></object>
+            <object pk="247"></object>
+            <object pk="379"></object>
+            <object pk="248"></object>
+            <object pk="250"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº8-->
+            <object pk="341"></object>
+            <object pk="251"></object>
+            <object pk="253"></object>
+            <object pk="252"></object>
+            <object pk="380"></object>
+            <object pk="360"></object>
+            <object pk="356"></object>
     </object>
     <object pk="35" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">8</field>
@@ -15853,6 +17868,166 @@
             <object pk="36"></object>
             <object pk="37"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº7-->
+            <object pk="355"></object>
+            <object pk="246"></object>
+            <object pk="247"></object>
+            <object pk="379"></object>
+            <object pk="248"></object>
+            <object pk="250"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº8-->
+            <object pk="341"></object>
+            <object pk="251"></object>
+            <object pk="253"></object>
+            <object pk="252"></object>
+            <object pk="380"></object>
+            <object pk="360"></object>
+            <object pk="356"></object>
     </object>
     <object pk="36" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">7</field>
@@ -15889,6 +18064,175 @@
             <object pk="37"></object>
             <object pk="38"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº7-->
+            <object pk="355"></object>
+            <object pk="246"></object>
+            <object pk="247"></object>
+            <object pk="379"></object>
+            <object pk="248"></object>
+            <object pk="250"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº8-->
+            <object pk="341"></object>
+            <object pk="251"></object>
+            <object pk="253"></object>
+            <object pk="252"></object>
+            <object pk="380"></object>
+            <object pk="360"></object>
+            <object pk="356"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº9-->
+            <object pk="342"></object>
+            <object pk="364"></object>
+            <object pk="255"></object>
+            <object pk="256"></object>
+            <object pk="257"></object>
+            <object pk="258"></object>
+            <object pk="259"></object>
+            <object pk="357"></object>
     </object>
     <object pk="38" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">9</field>
@@ -15921,6 +18265,175 @@
             <object pk="53"></object>
             <object pk="39"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº7-->
+            <object pk="355"></object>
+            <object pk="246"></object>
+            <object pk="247"></object>
+            <object pk="379"></object>
+            <object pk="248"></object>
+            <object pk="250"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº8-->
+            <object pk="341"></object>
+            <object pk="251"></object>
+            <object pk="253"></object>
+            <object pk="252"></object>
+            <object pk="380"></object>
+            <object pk="360"></object>
+            <object pk="356"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº9-->
+            <object pk="342"></object>
+            <object pk="364"></object>
+            <object pk="255"></object>
+            <object pk="256"></object>
+            <object pk="257"></object>
+            <object pk="258"></object>
+            <object pk="259"></object>
+            <object pk="357"></object>
     </object>
     <object pk="39" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">9</field>
@@ -15953,6 +18466,175 @@
             <object pk="53"></object>
             <object pk="41"></object>
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº7-->
+            <object pk="355"></object>
+            <object pk="246"></object>
+            <object pk="247"></object>
+            <object pk="379"></object>
+            <object pk="248"></object>
+            <object pk="250"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº8-->
+            <object pk="341"></object>
+            <object pk="251"></object>
+            <object pk="253"></object>
+            <object pk="252"></object>
+            <object pk="380"></object>
+            <object pk="360"></object>
+            <object pk="356"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº9-->
+            <object pk="342"></object>
+            <object pk="364"></object>
+            <object pk="255"></object>
+            <object pk="256"></object>
+            <object pk="257"></object>
+            <object pk="258"></object>
+            <object pk="259"></object>
+            <object pk="357"></object>
     </object>
     <object pk="40" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">7</field>
@@ -15989,6 +18671,175 @@
             <object pk="42"></object><!--NIVEL 8 CANTIDAD 4-->
             <object pk="43"></object><!--NIVEL 9 CANTIDAD 4-->
         </field>
+        <!--CONJUROS DE Nº0 DE CLÉRIGO-->
+            <object pk="4"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="46"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE Nº1 DE CLÉRIGO-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="24"></object>
+            <object pk="51"></object>
+            <object pk="25"></object>
+            <object pk="27"></object>
+            <object pk="52"></object>
+            <object pk="53"></object>
+            <object pk="54"></object>
+            <object pk="55"></object>
+            <object pk="56"></object>
+            <object pk="57"></object>
+            <object pk="58"></object>
+            <object pk="59"></object>
+            <object pk="60"></object>
+            <object pk="61"></object>
+            <object pk="62"></object>
+            <object pk="63"></object>
+            <object pk="64"></object>
+            <object pk="65"></object>
+            <object pk="66"></object>
+            <object pk="67"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="38"></object>
+            <object pk="19"></object>
+            <object pk="365"></object>
+            <object pk="111"></object>
+            <object pk="112"></object>
+            <object pk="91"></object>
+            <object pk="116"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº2-->
+            <object pk="192"></object>
+            <object pk="193"></object>
+            <object pk="194"></object>
+            <object pk="195"></object>
+            <object pk="196"></object>
+            <object pk="197"></object>
+            <object pk="198"></object>
+            <object pk="126"></object>
+            <object pk="199"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="201"></object>
+            <object pk="136"></object>
+            <object pk="202"></object>
+            <object pk="366"></object>
+            <object pk="203"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="206"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº3-->
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="207"></object>
+            <object pk="208"></object>
+            <object pk="209"></object>
+            <object pk="150"></object>
+            <object pk="210"></object>
+            <object pk="211"></object>
+            <object pk="155"></object>
+            <object pk="212"></object>
+            <object pk="213"></object>
+            <object pk="214"></object>
+            <object pk="215"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="218"></object>
+            <object pk="219"></object>
+            <object pk="220"></object>
+            <object pk="354"></object>
+            <object pk="362"></object>
+            <object pk="221"></object>
+            <object pk="222"></object>
+            <object pk="313"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº4-->
+            <object pk="223"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="226"></object>
+            <object pk="128"></object>
+            <object pk="227"></object>
+            <object pk="228"></object>
+            <object pk="253"></object>
+            <object pk="172"></object>
+            <object pk="229"></object>
+            <object pk="230"></object>
+            <object pk="173"></object>
+            <object pk="249"></object>
+            <object pk="231"></object>
+            <object pk="165"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº5-->
+            <object pk="232"></object>
+            <object pk="175"></object>
+            <object pk="233"></object>
+            <object pk="234"></object>
+            <object pk="167"></object>
+            <object pk="373"></object>
+            <object pk="235"></object>
+            <object pk="236"></object>
+            <object pk="237"></object>
+            <object pk="238"></object>
+            <object pk="374"></object>
+            <object pk="359"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº6-->
+            <object pk="239"></object>
+            <object pk="240"></object>
+            <object pk="241"></object>
+            <object pk="187"></object>
+            <object pk="242"></object>
+            <object pk="176"></object>
+            <object pk="188"></object>
+            <object pk="375"></object>
+            <object pk="376"></object>
+            <object pk="244"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº7-->
+            <object pk="355"></object>
+            <object pk="246"></object>
+            <object pk="247"></object>
+            <object pk="379"></object>
+            <object pk="248"></object>
+            <object pk="250"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº8-->
+            <object pk="341"></object>
+            <object pk="251"></object>
+            <object pk="253"></object>
+            <object pk="252"></object>
+            <object pk="380"></object>
+            <object pk="360"></object>
+            <object pk="356"></object>
+            <!--CONJUROS DE CLÉRIGO DE Nº9-->
+            <object pk="342"></object>
+            <object pk="364"></object>
+            <object pk="255"></object>
+            <object pk="256"></object>
+            <object pk="257"></object>
+            <object pk="258"></object>
+            <object pk="259"></object>
+            <object pk="357"></object>
     </object>
     <object pk="42" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">8</field>
