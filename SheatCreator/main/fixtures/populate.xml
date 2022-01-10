@@ -5905,19 +5905,6 @@
         <field type="CharField" name="resistencia_conjuros">Sí</field>
         <field type="CharField" name="descripcion">Confundes la mente del objetivo. El objetivo tiene dificultad para distinguir a sus aliados de los enemigos durante un corto periodo de tiempo. El objetivo se considera aliado al flanquear. El objetivo no toma acciones hostiles contra sus aliados.</field>
     </object>
-    <object pk="2" model="main.conjuro">
-        <field type="CharField" name="nombre">Aliado involuntario</field>
-        <field type="IntegerField" name="nivel">0</field>
-        <field type="CharField" name="escuela">Encantamiento (enajenador)</field>
-        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
-        <field type="CharField" name="componentes">V, S</field>
-        <field type="CharField" name="alcance">Corto (7.5 metros + 1.5 metros cada 2 niveles)</field>
-        <field type="CharField" name="objetivo">Una criatura viva</field>
-        <field type="CharField" name="duracion">1 asalto</field>
-        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
-        <field type="CharField" name="resistencia_conjuros">Sí</field>
-        <field type="CharField" name="descripcion">Confundes la mente del objetivo. El objetivo tiene dificultad para distinguir a sus aliados de los enemigos durante un corto periodo de tiempo. El objetivo se considera aliado al flanquear. El objetivo no toma acciones hostiles contra sus aliados.</field>
-    </object>
     <object pk="3" model="main.conjuro">
         <field type="CharField" name="nombre">Atontar</field>
         <field type="IntegerField" name="nivel">0</field>
@@ -10723,6 +10710,58 @@
         <field type="CharField" name="resistencia_conjuros">Sí</field>
         <field type="CharField" name="descripcion">Este conjuro funciona como Enervación, excepto en que la criatura impactada obtiene 2d4 niveles negativos temporales. Veinticuatro horas después de obtenerlos, el objetivo debe realizar una salvación de fortaleza (CD = CD de la salvación de consumir energía) para cada nivel negativo. Si la supera, ese nivel negativo desaparece. Si falla, el nivel negativo se convierte en permanente. Una criatura muerta viviente impactada por el rayo obtiene 2d4 × 5 puntos de golpe temporales durante 1 hora.</field>
     </object>
+    <object pk="365" model="main.conjuro">
+        <field type="CharField" name="nombre">Compartir idioma</field>
+        <field type="IntegerField" name="nivel">1</field>
+        <field type="CharField" name="escuela">Adivinación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (una página de un diccionario)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura tocada</field>
+        <field type="CharField" name="duracion">24 horas</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">Puedes compartir tu facilidad para un idioma en concreto con otra criatura. Durante 24 horas el objetivo puede leer, comprender y comunicarse al máximo de su capacidad en uno de los idiomas que tú conozcas. Por cada 5 niveles que poseas, puedes conceder el uso de otro idioma que conozcas, hasta un máximo de 5 idiomas a nivel 20.</field>
+    </object>
+    <object pk="366" model="main.conjuro">
+        <field type="CharField" name="nombre">Oscuridad</field>
+        <field type="IntegerField" name="nivel">2</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, M/FD (pelo de murciélago y un trozo de carbón)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Objeto tocado</field>
+        <field type="CharField" name="duracion">1 minuto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Este conjuro hace que un objeto irradie oscuridad hasta un radio de 6 metros. Esta oscuridad hace que el nivel de iluminación de un área descienda en un paso, de luz brillante a luz normal, de luz normal a luz tenue y de luz tenue a oscuridad. Este conjuro no tiene efecto sobre un área que ya está oscura.</field>
+    </object>
+    <object pk="367" model="main.conjuro">
+        <field type="CharField" name="nombre">Luz del día</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Evocación</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Objeto tocado</field>
+        <field type="CharField" name="duracion">10 minutos por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Ninguna</field>
+        <field type="CharField" name="resistencia_conjuros">No</field>
+        <field type="CharField" name="descripcion">Tocas un objeto cuando lanzas este conjuro, haciendo que el objeto irradie luz brillante en un radio de 18 metros. Esta iluminación aumenta el nivel de luz en 18 metros adicionales en un paso (la oscuridad pasa a luz tenue, la luz tenue pasa a luz normal y la luz normal pasa a luz brillante). Las criaturas que sufren penalizadores en zonas de luz brillante los reciben mientras estén en los 18 metros de radio de esta luz mágica. A pesar de su nombre, este conjuro no es equivalente a la luz del día en lo que se refiere a criaturas dañadas o destruidas por esa luz.</field>
+    </object>
+    <object pk="368" model="main.conjuro">
+        <field type="CharField" name="nombre">Caminar por la sombra</field>
+        <field type="IntegerField" name="nivel">4</field>
+        <field type="CharField" name="escuela">Ilusión</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Hasta una criatura por nivel</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Para usar el conjuro caminar por la sombra, debe estar en un área de penumbra. Tú y cualquier criatura que toques sois entonces transportados a lo largo de un camino en espiral de materia de sombra en el límite del Plano Material, donde este limita con el Plano de Sombra. El efecto es en gran parte ilusorio, pero el camino es casi real. Puedes llevar a más de una criatura contigo (dentro de tu límite de nivel), pero todos deben tocarse entre si. En la región de sombra, te mueves a una velocidad de 50 millas por hora, moviéndose generalmente en los límites del Plano de Sombra pero mucho más rápidamente en relación al Plano Material. Así, puedes usar este conjuro para viajar rápidamente caminando en el Plano de Sombra, moviendo la distancia deseada, y entonces volver a pisar el Plano Material.</field>
+    </object>
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
     <object pk="1" model="main.companeroanimal">
@@ -11992,6 +12031,145 @@
             <object pk="30"></object>
             <object pk="31"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+            <!--CONJUROS DE BARDO DE Nº5-->
+            <object pk="368"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+            <object pk="182"></object>
+            <object pk="183"></object>
+            <!--CONJUROS DE BARDO DE Nº6-->
+            <object pk="336"></object>
+            <object pk="184"></object>
+            <object pk="185"></object>
+            <object pk="186"></object>
+            <object pk="187"></object>
+            <object pk="188"></object>
+            <object pk="189"></object>
+            <object pk="190"></object>
+            <object pk="191"></object>
+        </field>
     </object>
     <object pk="23" model="main.clase">
         <field type="CharField" name="clase">Bardo</field>
@@ -12071,6 +12249,59 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="1"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+        </field>
     </object>
     <object pk="1" model="main.cantidadconjuroconocido">
         <field type="IntegerField" name="nivel">0</field>
@@ -12112,6 +12343,59 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="2"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+        </field>
     </object>
     <object pk="3" model="main.cantidadconjuroconocido">
         <field type="IntegerField" name="nivel">0</field>
@@ -12152,6 +12436,59 @@
         </field>
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="3"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
         </field>
     </object>
     <object pk="5" model="main.cantidadconjuroconocido">
@@ -12196,6 +12533,87 @@
             <object pk="3"></object>
             <object pk="4"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        </field>
     </object>
     <object pk="7" model="main.cantidadconjuroconocido">
         <field type="IntegerField" name="nivel">2</field>
@@ -12235,6 +12653,87 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="5"></object>
             <object pk="6"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
         </field>
     </object>
     <object pk="8" model="main.cantidadconjuroconocido">
@@ -12282,6 +12781,87 @@
             <object pk="5"></object>
             <object pk="7"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        </field>
     </object>
     <object pk="9" model="main.cantidadconjuroconocido">
         <field type="IntegerField" name="nivel">2</field>
@@ -12324,6 +12904,111 @@
             <object pk="5"></object>
             <object pk="7"></object>
             <object pk="8"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
         </field>
     </object>
     <object pk="9" model="main.cantidadconjuroconocido">
@@ -12368,6 +13053,111 @@
             <object pk="5"></object>
             <object pk="9"></object>
             <object pk="8"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
         </field>
     </object>
     <object pk="10" model="main.cantidadconjuroconocido">
@@ -12417,6 +13207,111 @@
             <object pk="11"></object><!--NIVEL 1 CANTIDAD 5-->
             <object pk="9"></object>
             <object pk="12"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
         </field>
     </object>
     <object pk="11" model="main.cantidadconjuroconocido">
@@ -12471,6 +13366,124 @@
             <object pk="12"></object>
             <object pk="13"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+        </field>
     </object>
     <object pk="12" model="main.cantidadconjuroconocido">
         <field type="IntegerField" name="nivel">2</field>
@@ -12523,6 +13536,124 @@
             <object pk="9"></object>
             <object pk="14"></object>
             <object pk="15"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
         </field>
     </object>
     <object pk="14" model="main.cantidadconjuroconocido">
@@ -12582,6 +13713,124 @@
             <object pk="14"></object>
             <object pk="17"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+        </field>
     </object>
     <object pk="16" model="main.cantidadconjuroconocido">
         <field type="IntegerField" name="nivel">4</field>
@@ -12637,6 +13886,135 @@
             <object pk="14"></object>
             <object pk="17"></object>
             <object pk="18"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+            <!--CONJUROS DE BARDO DE Nº5-->
+            <object pk="368"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+            <object pk="182"></object>
+            <object pk="183"></object>
         </field>
     </object>
     <object pk="17" model="main.cantidadconjuroconocido">
@@ -12694,6 +14072,135 @@
             <object pk="14"></object>
             <object pk="19"></object>
             <object pk="20"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+            <!--CONJUROS DE BARDO DE Nº5-->
+            <object pk="368"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+            <object pk="182"></object>
+            <object pk="183"></object>
         </field>
     </object>
     <object pk="19" model="main.cantidadconjuroconocido">
@@ -12756,6 +14263,135 @@
             <object pk="19"></object>
             <object pk="22"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+            <!--CONJUROS DE BARDO DE Nº5-->
+            <object pk="368"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+            <object pk="182"></object>
+            <object pk="183"></object>
+        </field>
     </object>
     <object pk="21" model="main.cantidadconjuroconocido">
         <field type="IntegerField" name="nivel">5</field>
@@ -12815,6 +14451,145 @@
             <object pk="22"></object>
             <object pk="23"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+            <!--CONJUROS DE BARDO DE Nº5-->
+            <object pk="368"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+            <object pk="182"></object>
+            <object pk="183"></object>
+            <!--CONJUROS DE BARDO DE Nº6-->
+            <object pk="336"></object>
+            <object pk="184"></object>
+            <object pk="185"></object>
+            <object pk="186"></object>
+            <object pk="187"></object>
+            <object pk="188"></object>
+            <object pk="189"></object>
+            <object pk="190"></object>
+            <object pk="191"></object>
+        </field>
     </object>
     <object pk="22" model="main.cantidadconjuroconocido">
         <field type="IntegerField" name="nivel">4</field>
@@ -12873,6 +14648,145 @@
             <object pk="19"></object>
             <object pk="24"></object>
             <object pk="25"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+            <!--CONJUROS DE BARDO DE Nº5-->
+            <object pk="368"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+            <object pk="182"></object>
+            <object pk="183"></object>
+            <!--CONJUROS DE BARDO DE Nº6-->
+            <object pk="336"></object>
+            <object pk="184"></object>
+            <object pk="185"></object>
+            <object pk="186"></object>
+            <object pk="187"></object>
+            <object pk="188"></object>
+            <object pk="189"></object>
+            <object pk="190"></object>
+            <object pk="191"></object>
         </field>
     </object>
     <object pk="24" model="main.cantidadconjuroconocido">
@@ -12939,6 +14853,145 @@
             <object pk="24"></object>
             <object pk="27"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+            <!--CONJUROS DE BARDO DE Nº5-->
+            <object pk="368"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+            <object pk="182"></object>
+            <object pk="183"></object>
+            <!--CONJUROS DE BARDO DE Nº6-->
+            <object pk="336"></object>
+            <object pk="184"></object>
+            <object pk="185"></object>
+            <object pk="186"></object>
+            <object pk="187"></object>
+            <object pk="188"></object>
+            <object pk="189"></object>
+            <object pk="190"></object>
+            <object pk="191"></object>
+        </field>
     </object>
     <object pk="26" model="main.cantidadconjuroconocido">
         <field type="IntegerField" name="nivel">6</field>
@@ -12998,6 +15051,145 @@
             <object pk="26"></object><!--NIVEL 4 CANTIDAD 5-->
             <object pk="28"></object><!--NIVEL 5 CANTIDAD 5-->
             <object pk="29"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+            <!--CONJUROS DE BARDO DE Nº5-->
+            <object pk="368"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+            <object pk="182"></object>
+            <object pk="183"></object>
+            <!--CONJUROS DE BARDO DE Nº6-->
+            <object pk="336"></object>
+            <object pk="184"></object>
+            <object pk="185"></object>
+            <object pk="186"></object>
+            <object pk="187"></object>
+            <object pk="188"></object>
+            <object pk="189"></object>
+            <object pk="190"></object>
+            <object pk="191"></object>
         </field>
     </object>
     <object pk="27" model="main.cantidadconjuroconocido">
@@ -13059,6 +15251,145 @@
             <object pk="26"></object><!--NIVEL 4 CANTIDAD 5-->
             <object pk="28"></object><!--NIVEL 5 CANTIDAD 5-->
             <object pk="30"></object><!--NIVEL 6 CANTIDAD 5-->
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE Nº0 DE BARDO-->
+            <object pk="1"></object>
+            <object pk="2"></object>
+            <object pk="3"></object>
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="6"></object>
+            <object pk="7"></object>
+            <object pk="8"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="11"></object>
+            <object pk="12"></object>
+            <object pk="13"></object>
+            <object pk="14"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="17"></object>
+            <!--CONJUROS DE Nº1 DE BARDO-->
+            <object pk="18"></object>
+            <object pk="19"></object>
+            <object pk="20"></object>
+            <object pk="21"></object>
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+            <object pk="35"></object>
+            <object pk="36"></object>
+            <object pk="37"></object>
+            <object pk="38"></object>
+            <object pk="39"></object>
+            <object pk="40"></object>
+            <object pk="365"></object>
+            <object pk="102"></object>
+            <object pk="166"></object>
+            <object pk="343"></object>
+            <object pk="111"></object>
+            <object pk="113"></object>
+            <object pk="91"></object>
+            <object pk="156"></object>
+            <object pk="83"></object>
+            <!--CONJUROS DE BARDO DE Nº2-->
+            <object pk="118"></object>
+            <object pk="119"></object>
+            <object pk="120"></object>
+            <object pk="121"></object>
+            <object pk="122"></object>
+            <object pk="123"></object>
+            <object pk="124"></object>
+            <object pk="125"></object>
+            <object pk="126"></object>
+            <object pk="127"></object>
+            <object pk="128"></object>
+            <object pk="129"></object>
+            <object pk="130"></object>
+            <object pk="131"></object>
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="135"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="139"></object>
+            <object pk="140"></object>
+            <object pk="141"></object>
+            <object pk="142"></object>
+            <object pk="143"></object>
+            <object pk="366"></object>
+        <!--CONJUROS DE BARDO DE Nº3-->
+            <object pk="144"></object>
+            <object pk="145"></object>
+            <object pk="146"></object>
+            <object pk="147"></object>
+            <object pk="148"></object>
+            <object pk="149"></object>
+            <object pk="150"></object>
+            <object pk="151"></object>
+            <object pk="152"></object>
+            <object pk="153"></object>
+            <object pk="154"></object>
+            <object pk="155"></object>
+            <object pk="157"></object>
+            <object pk="344"></object>
+            <object pk="367"></object>
+            <object pk="316"></object>
+            <object pk="294"></object>
+            <object pk="354"></object>
+            <object pk="158"></object>
+            <object pk="159"></object>
+            <object pk="160"></object>
+            <object pk="161"></object>
+            <object pk="162"></object>
+            <!--CONJUROS DE BARDO DE Nº4-->
+            <object pk="163"></object>
+            <object pk="164"></object>
+            <object pk="358"></object>
+            <object pk="165"></object>
+            <object pk="167"></object>
+            <object pk="168"></object>
+            <object pk="169"></object>
+            <object pk="170"></object>
+            <object pk="171"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="174"></object>
+            <!--CONJUROS DE BARDO DE Nº5-->
+            <object pk="368"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="177"></object>
+            <object pk="178"></object>
+            <object pk="179"></object>
+            <object pk="180"></object>
+            <object pk="181"></object>
+            <object pk="182"></object>
+            <object pk="183"></object>
+            <!--CONJUROS DE BARDO DE Nº6-->
+            <object pk="336"></object>
+            <object pk="184"></object>
+            <object pk="185"></object>
+            <object pk="186"></object>
+            <object pk="187"></object>
+            <object pk="188"></object>
+            <object pk="189"></object>
+            <object pk="190"></object>
+            <object pk="191"></object>
         </field>
     </object>
     <object pk="28" model="main.cantidadconjuroconocido">
