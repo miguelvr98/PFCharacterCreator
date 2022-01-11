@@ -33349,6 +33349,64 @@
             <object pk="101"></object>
             <object pk="102"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
+            <!--CONJUROS DE PALADÍN DE Nº4-->
+            <object pk="226"></object>
+            <object pk="165"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="172"></object>
+            <object pk="249"></object>
+            <object pk="296"></object>
+        </field>
     </object>
     <object pk="191" model="main.clase">
         <field type="CharField" name="clase">Paladín</field>
@@ -33450,6 +33508,30 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="44"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+        </field>
     </object>
     <object pk="195" model="main.clase">
         <field type="CharField" name="clase">Paladín</field>
@@ -33473,6 +33555,30 @@
         </field>
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="1"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
         </field>
     </object>
     <object pk="196" model="main.clase">
@@ -33499,6 +33605,30 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="1"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+        </field>
     </object>
     <object pk="197" model="main.clase">
         <field type="CharField" name="clase">Paladín</field>
@@ -33523,6 +33653,42 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="45"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
         </field>
     </object>
     <object pk="198" model="main.clase">
@@ -33549,6 +33715,42 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="4"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
         </field>
     </object>
     <object pk="199" model="main.clase">
@@ -33577,6 +33779,42 @@
             <object pk="2"></object>
             <object pk="4"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+        </field>
     </object>
     <object pk="200" model="main.clase">
         <field type="CharField" name="clase">Paladín</field>
@@ -33603,6 +33841,56 @@
             <object pk="2"></object>
             <object pk="4"></object>
             <object pk="58"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
         </field>
     </object>
     <object pk="201" model="main.clase">
@@ -33631,6 +33919,56 @@
             <object pk="2"></object>
             <object pk="4"></object>
             <object pk="8"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
         </field>
     </object>
     <object pk="202" model="main.clase">
@@ -33661,6 +33999,56 @@
             <object pk="6"></object>
             <object pk="8"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
+        </field>
     </object>
     <object pk="203" model="main.clase">
         <field type="CharField" name="clase">Paladín</field>
@@ -33689,6 +34077,64 @@
             <object pk="6"></object>
             <object pk="8"></object>
             <object pk="59"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
+            <!--CONJUROS DE PALADÍN DE Nº4-->
+            <object pk="226"></object>
+            <object pk="165"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="172"></object>
+            <object pk="249"></object>
+            <object pk="296"></object>
         </field>
     </object>
     <object pk="204" model="main.clase">
@@ -33719,6 +34165,64 @@
             <object pk="6"></object>
             <object pk="8"></object>
             <object pk="13"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
+            <!--CONJUROS DE PALADÍN DE Nº4-->
+            <object pk="226"></object>
+            <object pk="165"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="172"></object>
+            <object pk="249"></object>
+            <object pk="296"></object>
         </field>
     </object>
     <object pk="205" model="main.clase">
@@ -33751,6 +34255,64 @@
             <object pk="10"></object>
             <object pk="13"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
+            <!--CONJUROS DE PALADÍN DE Nº4-->
+            <object pk="226"></object>
+            <object pk="165"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="172"></object>
+            <object pk="249"></object>
+            <object pk="296"></object>
+        </field>
     </object>
     <object pk="206" model="main.clase">
         <field type="CharField" name="clase">Paladín</field>
@@ -33780,6 +34342,64 @@
             <object pk="7"></object>
             <object pk="10"></object>
             <object pk="13"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
+            <!--CONJUROS DE PALADÍN DE Nº4-->
+            <object pk="226"></object>
+            <object pk="165"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="172"></object>
+            <object pk="249"></object>
+            <object pk="296"></object>
         </field>
     </object>
     <object pk="207" model="main.clase">
@@ -33811,6 +34431,64 @@
             <object pk="7"></object>
             <object pk="10"></object>
             <object pk="13"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
+            <!--CONJUROS DE PALADÍN DE Nº4-->
+            <object pk="226"></object>
+            <object pk="165"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="172"></object>
+            <object pk="249"></object>
+            <object pk="296"></object>
         </field>
     </object>
     <object pk="208" model="main.clase">
@@ -33844,6 +34522,64 @@
             <object pk="10"></object>
             <object pk="15"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
+            <!--CONJUROS DE PALADÍN DE Nº4-->
+            <object pk="226"></object>
+            <object pk="165"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="172"></object>
+            <object pk="249"></object>
+            <object pk="296"></object>
+        </field>
     </object>
     <object pk="209" model="main.clase">
         <field type="CharField" name="clase">Paladín</field>
@@ -33874,6 +34610,64 @@
             <object pk="7"></object>
             <object pk="12"></object>
             <object pk="15"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
+            <!--CONJUROS DE PALADÍN DE Nº4-->
+            <object pk="226"></object>
+            <object pk="165"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="172"></object>
+            <object pk="249"></object>
+            <object pk="296"></object>
         </field>
     </object>
     <object pk="210" model="main.clase">
@@ -33906,6 +34700,64 @@
             <object pk="9"></object>
             <object pk="12"></object>
             <object pk="17"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE PALADÍN DE Nº1-->
+            <object pk="48"></object>
+            <object pk="49"></object>
+            <object pk="50"></object>
+            <object pk="110"></object>
+            <object pk="27"></object>
+            <object pk="56"></object>
+            <object pk="90"></object>
+            <object pk="111"></object>
+            <object pk="61"></object>
+            <object pk="112"></object>
+            <object pk="113"></object>
+            <object pk="114"></object>
+            <object pk="68"></object>
+            <object pk="69"></object>
+            <object pk="369"></object>
+            <object pk="70"></object>
+            <object pk="115"></object>
+            <object pk="116"></object>
+            <object pk="117"></object>
+            <object pk="19"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE PALADÍN DE Nº2-->
+            <object pk="195"></object>
+            <object pk="198"></object>
+            <object pk="130"></object>
+            <object pk="166"></object>
+            <object pk="200"></object>
+            <object pk="203"></object>
+            <object pk="352"></object>
+            <object pk="205"></object>
+            <object pk="297"></object>
+            <object pk="206"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE PALADÍN DE Nº3-->
+            <object pk="313"></object>
+            <object pk="353"></object>
+            <object pk="370"></object>
+            <object pk="371"></object>
+            <object pk="372"></object>
+            <object pk="150"></object>
+            <object pk="367"></object>
+            <object pk="216"></object>
+            <object pk="217"></object>
+            <object pk="219"></object>
+            <object pk="354"></object>
+            <object pk="298"></object>
+            <object pk="147"></object>
+            <!--CONJUROS DE PALADÍN DE Nº4-->
+            <object pk="226"></object>
+            <object pk="165"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="172"></object>
+            <object pk="249"></object>
+            <object pk="296"></object>
         </field>
     </object>
     <!--PÍCARO-->
