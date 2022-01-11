@@ -9338,7 +9338,7 @@
         <field type="CharField" name="descripcion">El agarre y las pisadas del objetivo se vuelven seguras, ganando un bonificador +4 de competencia en las pruebas de trepar, acrobacias para mantener el equilibrio y a la DMC contra intentos de embestida, arrestre y derribo. Mientras esté afectado por este conjuro, el objetivo también es inmune a la maniobra de combate de desarmar.</field>
     </object>
     <object pk="261" model="main.conjuro">
-        <field type="CharField" name="nombre">Corriente de desplazamiento</field>
+        <field type="CharField" name="nombre">Corriente de deslizamiento</field>
         <field type="IntegerField" name="nivel">2</field>
         <field type="CharField" name="escuela">Conjuración (creación)</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
@@ -9348,7 +9348,7 @@
         <field type="CharField" name="duracion">10 minutos por nivel</field>
         <field type="CharField" name="tiro_de_salvacion">Reflejos niega (inofensivo)</field>
         <field type="CharField" name="resistencia_conjuros">No</field>
-        <field type="CharField" name="descripcion">Creas una pequeña onda de agua que transporta al objetivo a lo largo de la superficie del agua o del suelo. Al moverte al nivel del suelo, la velocidad del objetivo aumenta en 3 metros. Si se desplaza cuesta abajo, en su lugar la velocidad aumenta en 6 metros, pero Corriente de deslizamiento no proporciona bonificadores al movimiento cuando se va cuesta arriba. Mientras nada, la Corriente de desplazamiento aumenta la velocidad de nado del objetivo en 6 metros. Si este no posee una velocidad de nado, este conjuro le proporciona una velocidad de nado de 6 metros.</field>
+        <field type="CharField" name="descripcion">Creas una pequeña onda de agua que transporta al objetivo a lo largo de la superficie del agua o del suelo. Al moverte al nivel del suelo, la velocidad del objetivo aumenta en 3 metros. Si se desplaza cuesta abajo, en su lugar la velocidad aumenta en 6 metros, pero Corriente de deslizamiento no proporciona bonificadores al movimiento cuando se va cuesta arriba. Mientras nada, la Corriente de deslizamiento aumenta la velocidad de nado del objetivo en 6 metros. Si este no posee una velocidad de nado, este conjuro le proporciona una velocidad de nado de 6 metros.</field>
     </object>
     <object pk="262" model="main.conjuro">
         <field type="CharField" name="nombre">Escalada de araña</field>
@@ -9563,7 +9563,7 @@
     <!--CONJUROS DE DRUIDA DE Nº5-->
     <object pk="278" model="main.conjuro">
         <field type="CharField" name="nombre">Comunión con la naturaleza</field>
-        <field type="IntegerField" name="nivel">5</field>
+        <field type="IntegerField" name="nivel">4</field>
         <field type="CharField" name="escuela">Adivinación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
         <field type="CharField" name="componentes">V, S</field>
@@ -9628,7 +9628,7 @@
         <field type="CharField" name="descripcion">Obtienes la aptitud de hablar con las piedras, que te cuentan quién o qué las ha tocado así como lo que está cubierto u oculto debajo o tras ellas. Las piedras transmiten descripciones completas si se les pide. La perspectiva, percepción y conocimientos de la piedra pueden evitar que proporcione los detalles que estás buscando. Puedes hablar con piedras naturales o trabajadas.</field>
     </object>
     <object pk="283" model="main.conjuro">
-        <field type="CharField" name="nombre">Roble parlante</field>
+        <field type="CharField" name="nombre">Roble guardian</field>
         <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">10 minutos</field>
@@ -10856,7 +10856,7 @@
     </object>
     <object pk="377" model="main.conjuro">
         <field type="CharField" name="nombre">Resistencia de oso en grupo</field>
-        <field type="IntegerField" name="nivel">2</field>
+        <field type="IntegerField" name="nivel">6</field>
         <field type="CharField" name="escuela">Transmutación</field>
         <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
         <field type="CharField" name="componentes">V, S, M/FD (algunos pelos o una pizca de estiercol de oso)</field>
@@ -10905,6 +10905,32 @@
         <field type="CharField" name="tiro_de_salvacion">Fortaleza niega</field>
         <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
         <field type="CharField" name="descripcion">Una benévola oscuridad rodea a los receptores, protegiéndolos de los ataques, concediéndoles resistencia a los conjuros lanzados por criaturas malignas y debilitando a las criaturas de este alineamiento que logren alcanzarlos con sus ataques. En primer lugar, las criaturas custodiadas obtienen un boníficador +4 de desvío a la CA y un bonificador +4 de resistencia en sus tiradas de salvación. Las criaturas custodiadas ganan RC 25 contra los conjuros malignos y los conjuros lanzados por criaturas malignas. La abjuración bloquea la posesión y la influencia mental de parte de las criaturas malignas. Por último, las criaturas buenas que logren alcanzar con un ataque a un defensor custodiado por el conjuro sufrirán 1d6 puntos de daño temporal de fuerza (fortaleza niega).</field>
+    </object>
+    <object pk="381" model="main.conjuro">
+        <field type="CharField" name="nombre">Dominar animal</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Encantamiento (compulsión, enajenador)</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">1 asalto</field>
+        <field type="CharField" name="componentes">V, S</field>
+        <field type="CharField" name="alcance">7.5 metros + 1.5 metros cada 2 niveles</field>
+        <field type="CharField" name="objetivo">Un animal</field>
+        <field type="CharField" name="duracion">1 asalto por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega</field>
+        <field type="CharField" name="resistencia_conjuros">Sí</field>
+        <field type="CharField" name="descripcion">Este conjuro te permite encantar al animal objetivo y dirigirlo con órdenes sencillas como "ataca", "corre" y "trae". Las órdenes suicidas o autodestructivas (incluyendo atacar a una criatura dos o más categorías de tamaño mayor que el animal dominado) simplemente se ignoran. Dominar animal establece un vínculo mental entre tú y la criatura. El animal puede ser dirigido mediante órdenes mentales silenciosas mientras permanezca dentro del alcance. No necesitas ver a la criatura para controlarla.</field>
+    </object>
+    <object pk="382" model="main.conjuro">
+        <field type="CharField" name="nombre">Indetectabilidad</field>
+        <field type="IntegerField" name="nivel">3</field>
+        <field type="CharField" name="escuela">Abjuración</field>
+        <field type="CharField" name="tiempo_de_lanzamiento">Acción estándar</field>
+        <field type="CharField" name="componentes">V, S, M (polvo de diamantes valorado en 50 mo)</field>
+        <field type="CharField" name="alcance">Toque</field>
+        <field type="CharField" name="objetivo">Criatura u objeto tocado</field>
+        <field type="CharField" name="duracion">1 hora por nivel</field>
+        <field type="CharField" name="tiro_de_salvacion">Voluntad niega (inofensivo)</field>
+        <field type="CharField" name="resistencia_conjuros">Sí (inofensivo)</field>
+        <field type="CharField" name="descripcion">La criatura u objeto custodiado se hace difícil de detectar por conjuros de adivinación. Si se intenta una adivinación contra la criatura u objeto custodiado, el lanzador de la adivinación debe tener éxito en una prueba de nivel de lanzador (1d20 + nivel de lanzador) contra una CD de 11 + el nivel de lanzador del lanzador del conjuro de Indetectabilidad . Si lanzas Indetectabilidad sobre ti mismo o un objeto en tu posesión, la CD es 15 + tu nivel de lanzador.</field>
     </object>
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
@@ -15792,6 +15818,7 @@
             <object pk="31"></object>
             <object pk="1"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -15841,6 +15868,7 @@
             <object pk="112"></object>
             <object pk="91"></object>
             <object pk="116"></object>
+        </field>
     </object>
     <object pk="31" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">0</field>
@@ -15865,6 +15893,7 @@
             <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
             <object pk="2"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -15914,6 +15943,7 @@
             <object pk="112"></object>
             <object pk="91"></object>
             <object pk="116"></object>
+        </field>
     </object>
     <object pk="32" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">0</field>
@@ -15939,6 +15969,7 @@
             <object pk="2"></object>
             <object pk="4"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -16013,6 +16044,7 @@
             <object pk="206"></object>
             <object pk="121"></object>
             <object pk="122"></object>
+        </field>
     </object>
     <object pk="47" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -16034,6 +16066,7 @@
             <object pk="3"></object>
             <object pk="6"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -16108,6 +16141,7 @@
             <object pk="206"></object>
             <object pk="121"></object>
             <object pk="122"></object>
+        </field>
     </object>
     <object pk="48" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -16130,6 +16164,7 @@
             <object pk="6"></object>
             <object pk="8"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -16231,6 +16266,7 @@
             <object pk="221"></object>
             <object pk="222"></object>
             <object pk="313"></object>
+        </field>
     </object>
     <object pk="49" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -16253,6 +16289,7 @@
             <object pk="7"></object>
             <object pk="10"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -16354,6 +16391,7 @@
             <object pk="221"></object>
             <object pk="222"></object>
             <object pk="313"></object>
+        </field>
     </object>
     <object pk="50" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -16377,6 +16415,7 @@
             <object pk="10"></object>
             <object pk="13"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -16495,6 +16534,7 @@
             <object pk="249"></object>
             <object pk="231"></object>
             <object pk="165"></object>
+        </field>
     </object>
     <object pk="51" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -16518,6 +16558,7 @@
             <object pk="12"></object>
             <object pk="15"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -16636,6 +16677,7 @@
             <object pk="249"></object>
             <object pk="231"></object>
             <object pk="165"></object>
+        </field>
     </object>
     <object pk="52" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -16660,6 +16702,7 @@
             <object pk="15"></object>
             <object pk="18"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -16791,6 +16834,7 @@
             <object pk="238"></object>
             <object pk="374"></object>
             <object pk="359"></object>
+        </field>
     </object>
     <object pk="53" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -16815,6 +16859,7 @@
             <object pk="17"></object>
             <object pk="20"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -16946,6 +16991,7 @@
             <object pk="238"></object>
             <object pk="374"></object>
             <object pk="359"></object>
+        </field>
     </object>
     <object pk="54" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -16971,6 +17017,7 @@
             <object pk="20"></object>
             <object pk="23"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -17116,6 +17163,7 @@
             <object pk="377"></object>
             <object pk="378"></object>
             <object pk="245"></object>
+        </field>
     </object>
     <object pk="55" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -17141,6 +17189,7 @@
             <object pk="22"></object>
             <object pk="25"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -17286,6 +17335,7 @@
             <object pk="377"></object>
             <object pk="378"></object>
             <object pk="245"></object>
+        </field>
     </object>
     <object pk="56" model="main.clase">
         <field type="CharField" name="clase">Clérigo</field>
@@ -17312,6 +17362,7 @@
             <object pk="25"></object>
             <object pk="33"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -17464,6 +17515,7 @@
             <object pk="379"></object>
             <object pk="248"></object>
             <object pk="250"></object>
+        </field>
     </object>
     <object pk="33" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">7</field>
@@ -17494,6 +17546,7 @@
             <object pk="27"></object>
             <object pk="34"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -17646,6 +17699,7 @@
             <object pk="379"></object>
             <object pk="248"></object>
             <object pk="250"></object>
+        </field>
     </object>
     <object pk="34" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">7</field>
@@ -17677,6 +17731,7 @@
             <object pk="34"></object>
             <object pk="35"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -17837,6 +17892,7 @@
             <object pk="380"></object>
             <object pk="360"></object>
             <object pk="356"></object>
+        </field>
     </object>
     <object pk="35" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">8</field>
@@ -17868,6 +17924,7 @@
             <object pk="36"></object>
             <object pk="37"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -18028,6 +18085,7 @@
             <object pk="380"></object>
             <object pk="360"></object>
             <object pk="356"></object>
+        </field>
     </object>
     <object pk="36" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">7</field>
@@ -18064,6 +18122,7 @@
             <object pk="37"></object>
             <object pk="38"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -18233,6 +18292,7 @@
             <object pk="258"></object>
             <object pk="259"></object>
             <object pk="357"></object>
+        </field>
     </object>
     <object pk="38" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">9</field>
@@ -18265,6 +18325,7 @@
             <object pk="53"></object>
             <object pk="39"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -18434,6 +18495,7 @@
             <object pk="258"></object>
             <object pk="259"></object>
             <object pk="357"></object>
+        </field>
     </object>
     <object pk="39" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">9</field>
@@ -18466,6 +18528,7 @@
             <object pk="53"></object>
             <object pk="41"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -18635,6 +18698,7 @@
             <object pk="258"></object>
             <object pk="259"></object>
             <object pk="357"></object>
+        </field>
     </object>
     <object pk="40" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">7</field>
@@ -18671,6 +18735,7 @@
             <object pk="42"></object><!--NIVEL 8 CANTIDAD 4-->
             <object pk="43"></object><!--NIVEL 9 CANTIDAD 4-->
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
         <!--CONJUROS DE Nº0 DE CLÉRIGO-->
             <object pk="4"></object>
             <object pk="41"></object>
@@ -18840,6 +18905,7 @@
             <object pk="258"></object>
             <object pk="259"></object>
             <object pk="357"></object>
+        </field>
     </object>
     <object pk="42" model="main.nivelconjurodiario">
         <field type="IntegerField" name="nivel">8</field>
@@ -18872,6 +18938,146 @@
             <object pk="48"></object>
             <object pk="49"></object>
             <object pk="50"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE DRUIDA DE Nº7-->
+            <object pk="285"></object>
+            <object pk="324"></object>
+            <object pk="250"></object>
+            <object pk="246"></object>
+            <object pk="348"></object>
+            <!--CONJUROS DE DRUIDA DE Nº8-->
+            <object pk="252"></object>
+            <object pk="251"></object>
+            <object pk="286"></object>
+            <object pk="287"></object>
+            <object pk="356"></object>
+            <!--CONJUROS DE DRUIDA DE Nº9-->
+            <object pk="288"></object>
+            <object pk="255"></object>
+            <object pk="337"></object>
+            <object pk="289"></object>
+            <object pk="290"></object>
+            <object pk="291"></object>
         </field>
     </object>
     <object pk="65" model="main.clase">
@@ -18923,6 +19129,52 @@
             <object pk="31"></object>
             <object pk="1"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+        </field>
     </object>
     <object pk="66" model="main.clase">
         <field type="CharField" name="clase">Druida</field>
@@ -18944,6 +19196,75 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="31"></object>
             <object pk="1"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
         </field>
     </object>
     <object pk="67" model="main.clase">
@@ -18968,6 +19289,88 @@
             <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
             <object pk="2"></object>
             <object pk="4"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
         </field>
     </object>
     <object pk="68" model="main.clase">
@@ -18994,6 +19397,75 @@
             <object pk="32"></object><!--NIVEL 0 CANTIDAD 4-->
             <object pk="3"></object>
             <object pk="6"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
         </field>
     </object>
     <object pk="69" model="main.clase">
@@ -19022,6 +19494,88 @@
             <object pk="6"></object>
             <object pk="8"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+        </field>
     </object>
     <object pk="70" model="main.clase">
         <field type="CharField" name="clase">Druida</field>
@@ -19048,6 +19602,88 @@
             <object pk="3"></object>
             <object pk="7"></object>
             <object pk="10"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
         </field>
     </object>
     <object pk="71" model="main.clase">
@@ -19077,6 +19713,103 @@
             <object pk="10"></object>
             <object pk="13"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+        </field>
     </object>
     <object pk="72" model="main.clase">
         <field type="CharField" name="clase">Druida</field>
@@ -19104,6 +19837,103 @@
             <object pk="7"></object>
             <object pk="12"></object>
             <object pk="15"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
         </field>
     </object>
     <object pk="73" model="main.clase">
@@ -19135,6 +19965,115 @@
             <object pk="15"></object>
             <object pk="18"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+        </field>
     </object>
     <object pk="74" model="main.clase">
         <field type="CharField" name="clase">Druida</field>
@@ -19164,6 +20103,115 @@
             <object pk="12"></object>
             <object pk="17"></object>
             <object pk="20"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
         </field>
     </object>
     <object pk="75" model="main.clase">
@@ -19196,6 +20244,127 @@
             <object pk="20"></object>
             <object pk="23"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
+        </field>
     </object>
     <object pk="76" model="main.clase">
         <field type="CharField" name="clase">Druida</field>
@@ -19226,6 +20395,127 @@
             <object pk="17"></object>
             <object pk="22"></object>
             <object pk="25"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
         </field>
     </object>
     <object pk="77" model="main.clase">
@@ -19260,6 +20550,133 @@
             <object pk="25"></object>
             <object pk="33"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE DRUIDA DE Nº7-->
+            <object pk="285"></object>
+            <object pk="324"></object>
+            <object pk="250"></object>
+            <object pk="246"></object>
+            <object pk="348"></object>
+        </field>
     </object>
     <object pk="78" model="main.clase">
         <field type="CharField" name="clase">Druida</field>
@@ -19292,6 +20709,133 @@
             <object pk="22"></object>
             <object pk="27"></object>
             <object pk="34"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE DRUIDA DE Nº7-->
+            <object pk="285"></object>
+            <object pk="324"></object>
+            <object pk="250"></object>
+            <object pk="246"></object>
+            <object pk="348"></object>
         </field>
     </object>
     <object pk="79" model="main.clase">
@@ -19328,6 +20872,139 @@
             <object pk="34"></object>
             <object pk="35"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE DRUIDA DE Nº7-->
+            <object pk="285"></object>
+            <object pk="324"></object>
+            <object pk="250"></object>
+            <object pk="246"></object>
+            <object pk="348"></object>
+            <!--CONJUROS DE DRUIDA DE Nº8-->
+            <object pk="252"></object>
+            <object pk="251"></object>
+            <object pk="286"></object>
+            <object pk="287"></object>
+            <object pk="356"></object>
+        </field>
     </object>
     <object pk="80" model="main.clase">
         <field type="CharField" name="clase">Druida</field>
@@ -19362,6 +21039,139 @@
             <object pk="27"></object>
             <object pk="36"></object>
             <object pk="37"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE DRUIDA DE Nº7-->
+            <object pk="285"></object>
+            <object pk="324"></object>
+            <object pk="250"></object>
+            <object pk="246"></object>
+            <object pk="348"></object>
+            <!--CONJUROS DE DRUIDA DE Nº8-->
+            <object pk="252"></object>
+            <object pk="251"></object>
+            <object pk="286"></object>
+            <object pk="287"></object>
+            <object pk="356"></object>
         </field>
     </object>
     <object pk="81" model="main.clase">
@@ -19399,6 +21209,146 @@
             <object pk="37"></object>
             <object pk="38"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE DRUIDA DE Nº7-->
+            <object pk="285"></object>
+            <object pk="324"></object>
+            <object pk="250"></object>
+            <object pk="246"></object>
+            <object pk="348"></object>
+            <!--CONJUROS DE DRUIDA DE Nº8-->
+            <object pk="252"></object>
+            <object pk="251"></object>
+            <object pk="286"></object>
+            <object pk="287"></object>
+            <object pk="356"></object>
+            <!--CONJUROS DE DRUIDA DE Nº9-->
+            <object pk="288"></object>
+            <object pk="255"></object>
+            <object pk="337"></object>
+            <object pk="289"></object>
+            <object pk="290"></object>
+            <object pk="291"></object>
+        </field>
     </object>
     <object pk="82" model="main.clase">
         <field type="CharField" name="clase">Druida</field>
@@ -19434,6 +21384,146 @@
             <object pk="36"></object>
             <object pk="53"></object>
             <object pk="39"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE DRUIDA DE Nº7-->
+            <object pk="285"></object>
+            <object pk="324"></object>
+            <object pk="250"></object>
+            <object pk="246"></object>
+            <object pk="348"></object>
+            <!--CONJUROS DE DRUIDA DE Nº8-->
+            <object pk="252"></object>
+            <object pk="251"></object>
+            <object pk="286"></object>
+            <object pk="287"></object>
+            <object pk="356"></object>
+            <!--CONJUROS DE DRUIDA DE Nº9-->
+            <object pk="288"></object>
+            <object pk="255"></object>
+            <object pk="337"></object>
+            <object pk="289"></object>
+            <object pk="290"></object>
+            <object pk="291"></object>
         </field>
     </object>
     <object pk="83" model="main.clase">
@@ -19471,6 +21561,146 @@
             <object pk="53"></object>
             <object pk="41"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE DRUIDA DE Nº7-->
+            <object pk="285"></object>
+            <object pk="324"></object>
+            <object pk="250"></object>
+            <object pk="246"></object>
+            <object pk="348"></object>
+            <!--CONJUROS DE DRUIDA DE Nº8-->
+            <object pk="252"></object>
+            <object pk="251"></object>
+            <object pk="286"></object>
+            <object pk="287"></object>
+            <object pk="356"></object>
+            <!--CONJUROS DE DRUIDA DE Nº9-->
+            <object pk="288"></object>
+            <object pk="255"></object>
+            <object pk="337"></object>
+            <object pk="289"></object>
+            <object pk="290"></object>
+            <object pk="291"></object>
+        </field>
     </object>
     <object pk="84" model="main.clase">
         <field type="CharField" name="clase">Druida</field>
@@ -19506,6 +21736,146 @@
             <object pk="40"></object><!--NIVEL 7 CANTIDAD 4-->
             <object pk="42"></object><!--NIVEL 8 CANTIDAD 4-->
             <object pk="43"></object><!--NIVEL 9 CANTIDAD 4-->
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+            <!--CONJUROS DE DRUIDA DE Nº2-->
+            <object pk="260"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="125"></object>
+            <object pk="262"></object>
+            <object pk="263"></object>
+            <object pk="200"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="266"></object>
+            <object pk="267"></object>
+            <object pk="268"></object>
+            <object pk="269"></object>
+            <object pk="204"></object>
+            <object pk="352"></object>
+            <object pk="116"></object>
+            <object pk="205"></object>
+            <object pk="143"></object>
+            <object pk="270"></object>
+            <object pk="122"></object>
+            <object pk="126"></object>
+            <!--CONJUROS DE DRUIDA DE Nº3-->
+            <object pk="155"></object>
+            <object pk="271"></object>
+            <object pk="207"></object>
+            <object pk="381"></object>
+            <object pk="345"></object>
+            <object pk="367"></object>
+            <object pk="220"></object>
+            <object pk="294"></object>
+            <object pk="221"></object>
+            <object pk="272"></object>
+            <object pk="147"></object>
+            <object pk="150"></object>
+            <!--CONJUROS DE DRUIDA DE Nº4-->
+            <object pk="168"></object>
+            <object pk="172"></object>
+            <object pk="231"></object>
+            <object pk="273"></object>
+            <object pk="274"></object>
+            <object pk="275"></object>
+            <object pk="276"></object>
+            <object pk="173"></object>
+            <object pk="277"></object>
+            <object pk="278"></object>
+            <object pk="164"></object>
+            <object pk="224"></object>
+            <object pk="225"></object>
+            <object pk="296"></object>
+            <!--CONJUROS DE DRUIDA DE Nº5-->
+            <object pk="233"></object>
+            <object pk="346"></object>
+            <object pk="279"></object>
+            <object pk="236"></object>
+            <object pk="280"></object>
+            <object pk="175"></object>
+            <object pk="176"></object>
+            <object pk="318"></object>
+            <object pk="320"></object>
+            <object pk="374"></object>
+            <object pk="238"></object>
+            <!--CONJUROS DE DRUIDA DE Nº6-->
+            <object pk="281"></object>
+            <object pk="241"></object>
+            <object pk="375"></object>
+            <object pk="189"></object>
+            <object pk="282"></object>
+            <object pk="377"></object>
+            <object pk="378"></object>
+            <object pk="283"></object>
+            <object pk="284"></object>
+            <object pk="187"></object>
+            <object pk="245"></object>
+            <!--CONJUROS DE DRUIDA DE Nº7-->
+            <object pk="285"></object>
+            <object pk="324"></object>
+            <object pk="250"></object>
+            <object pk="246"></object>
+            <object pk="348"></object>
+            <!--CONJUROS DE DRUIDA DE Nº8-->
+            <object pk="252"></object>
+            <object pk="251"></object>
+            <object pk="286"></object>
+            <object pk="287"></object>
+            <object pk="356"></object>
+            <!--CONJUROS DE DRUIDA DE Nº9-->
+            <object pk="288"></object>
+            <object pk="255"></object>
+            <object pk="337"></object>
+            <object pk="289"></object>
+            <object pk="290"></object>
+            <object pk="291"></object>
         </field>
     </object>
     <!--EXPLORADOR-->
@@ -19581,6 +21951,59 @@
             <object pk="32"></object>
             <object pk="33"></object>
             <object pk="34"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº4-->
+            <object pk="168"></object>
+            <object pk="275"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="278"></object>
+            <object pk="296"></object>
+            <object pk="164"></object>
         </field>
     </object>
     <object pk="86" model="main.clase">
@@ -19680,6 +22103,28 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="44"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+        </field>
     </object>
     <object pk="44" model="main.nivelconjurodiario">
             <field type="IntegerField" name="nivel">1</field>
@@ -19701,6 +22146,28 @@
             <object pk="57"></object>
             <object pk="58"></object>
             <object pk="51"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
         </field>
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="1"></object>
@@ -19726,6 +22193,28 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="1"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+        </field>
     </object>
     <object pk="92" model="main.clase">
         <field type="CharField" name="clase">Explorador</field>
@@ -19747,6 +22236,43 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="45"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
         </field>
     </object>
     <object pk="45" model="main.nivelconjurodiario">
@@ -19776,6 +22302,43 @@
             <object pk="1"></object>
             <object pk="4"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+        </field>
     </object>
     <object pk="94" model="main.clase">
         <field type="CharField" name="clase">Explorador</field>
@@ -19799,6 +22362,43 @@
         <field to="main.nivelconjurodiario" name="nivel_conjuro_diario" rel="ManyToManyRel">
             <object pk="2"></object>
             <object pk="4"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
         </field>
     </object>
     <object pk="95" model="main.clase">
@@ -19826,6 +22426,51 @@
             <object pk="2"></object>
             <object pk="4"></object>
             <object pk="58"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
         </field>
     </object>
     <object pk="58" model="main.nivelconjurodiario">
@@ -19857,6 +22502,51 @@
             <object pk="4"></object>
             <object pk="8"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
+        </field>
     </object>
     <object pk="97" model="main.clase">
         <field type="CharField" name="clase">Explorador</field>
@@ -19883,6 +22573,51 @@
             <object pk="2"></object>
             <object pk="6"></object>
             <object pk="8"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
         </field>
     </object>
     <object pk="98" model="main.clase">
@@ -19912,6 +22647,59 @@
             <object pk="6"></object>
             <object pk="8"></object>
             <object pk="59"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº4-->
+            <object pk="168"></object>
+            <object pk="275"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="278"></object>
+            <object pk="296"></object>
+            <object pk="164"></object>
         </field>
     </object>
     <object pk="59" model="main.nivelconjurodiario">
@@ -19946,6 +22734,59 @@
             <object pk="8"></object>
             <object pk="13"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº4-->
+            <object pk="168"></object>
+            <object pk="275"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="278"></object>
+            <object pk="296"></object>
+            <object pk="164"></object>
+        </field>
     </object>
     <object pk="100" model="main.clase">
         <field type="CharField" name="clase">Explorador</field>
@@ -19974,6 +22815,59 @@
             <object pk="6"></object>
             <object pk="10"></object>
             <object pk="13"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº4-->
+            <object pk="168"></object>
+            <object pk="275"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="278"></object>
+            <object pk="296"></object>
+            <object pk="164"></object>
         </field>
     </object>
     <object pk="101" model="main.clase">
@@ -20004,6 +22898,59 @@
             <object pk="10"></object>
             <object pk="13"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº4-->
+            <object pk="168"></object>
+            <object pk="275"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="278"></object>
+            <object pk="296"></object>
+            <object pk="164"></object>
+        </field>
     </object>
     <object pk="102" model="main.clase">
         <field type="CharField" name="clase">Explorador</field>
@@ -20033,6 +22980,59 @@
             <object pk="7"></object>
             <object pk="10"></object>
             <object pk="13"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº4-->
+            <object pk="168"></object>
+            <object pk="275"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="278"></object>
+            <object pk="296"></object>
+            <object pk="164"></object>
         </field>
     </object>
     <object pk="103" model="main.clase">
@@ -20066,6 +23066,59 @@
             <object pk="10"></object>
             <object pk="15"></object>
         </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº4-->
+            <object pk="168"></object>
+            <object pk="275"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="278"></object>
+            <object pk="296"></object>
+            <object pk="164"></object>
+        </field>
     </object>
     <object pk="104" model="main.clase">
         <field type="CharField" name="clase">Explorador</field>
@@ -20096,6 +23149,59 @@
             <object pk="7"></object>
             <object pk="12"></object>
             <object pk="15"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº4-->
+            <object pk="168"></object>
+            <object pk="275"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="278"></object>
+            <object pk="296"></object>
+            <object pk="164"></object>
         </field>
     </object>
     <object pk="105" model="main.clase">
@@ -20129,6 +23235,59 @@
             <object pk="9"></object>
             <object pk="12"></object>
             <object pk="17"></object>
+        </field>
+        <field to="main.conjuro" name="conjuros" rel="ManyToManyRel">
+            <!--CONJUROS DE EXPLORADOR DE Nº1-->
+            <object pk="18"></object>
+            <object pk="72"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="76"></object>
+            <object pk="77"></object>
+            <object pk="78"></object>
+            <object pk="90"></object>
+            <object pk="80"></object>
+            <object pk="83"></object>
+            <object pk="84"></object>
+            <object pk="91"></object>
+            <object pk="86"></object>
+            <object pk="87"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="27"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº2-->
+            <object pk="268"></object>
+            <object pk="352"></object>
+            <object pk="197"></object>
+            <object pk="261"></object>
+            <object pk="133"></object>
+            <object pk="264"></object>
+            <object pk="265"></object>
+            <object pk="292"></object>
+            <object pk="267"></object>
+            <object pk="204"></object>
+            <object pk="205"></object>
+            <object pk="293"></object>
+            <object pk="126"></object>
+            <object pk="269"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº3-->
+            <object pk="211"></object>
+            <object pk="271"></object>
+            <object pk="294"></object>
+            <object pk="220"></object>
+            <object pk="295"></object>
+            <object pk="147"></object>
+            <object pk="382"></object>
+            <!--CONJUROS DE EXPLORADOR DE Nº4-->
+            <object pk="168"></object>
+            <object pk="275"></object>
+            <object pk="172"></object>
+            <object pk="173"></object>
+            <object pk="278"></object>
+            <object pk="296"></object>
+            <object pk="164"></object>
         </field>
     </object>
     <!--GUERRERO-->
