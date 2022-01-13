@@ -19,9 +19,11 @@ from main import views
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
+    path('', views.index, name="index"),
     path('admin/', admin.site.urls),
     path('login/', LoginView.as_view(), name="login_url"),
     path('logout/', LogoutView.as_view(), name="logout_url"),
+    path('paginaError/', views.error, name="error_url"),
     path('raza/list/', views.listar_razas, name='listar_razas_url'),
     path('dote/list/', views.listar_dotes, name='listar_dotes_url'),
     path('clase/list/', views.listar_clases, name='listar_clases_url'),
@@ -47,4 +49,5 @@ urlpatterns = [
     path('linaje/show/<int:pk>/', views.mostrar_linaje, name='mostrar_linaje_url'),
     path('objeto/show/<int:pk>/', views.mostrar_objeto, name='mostrar_objeto_url'),
     path('personaje/show/<int:pk>/', views.mostrar_personaje, name='mostrar_personaje_url'),
+    path('companero_animal_personaje/show/<int:pk>/', views.mostrar_companero_animal_personaje, name='mostrar_companero_animal_personaje_url'),
 ]

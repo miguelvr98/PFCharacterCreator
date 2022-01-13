@@ -30,7 +30,7 @@
     <object pk="2" model="auth.user">
         <!--usuario1/usuario1-->
         <field type="CharField" name="username">usuario1</field>
-        <field type="CharField" name="password">usuario1</field>
+        <field type="CharField" name="password">pbkdf2_sha256$180000$iCtKpsP66YmY$QJZ8l4KaEjRt8vJoA0tvhJjlMsgvxkjwv+qyu/McmPY=</field>
     </object>
     <object pk="2" model="main.perfil">
         <field to="auth.user" name="usuario" rel="OneToOneRel">2</field>
@@ -39820,9 +39820,8 @@
             <object pk="2"></object>
             <object pk="5"></object>
         </field>
-    </object>
-    <object pk="1" model="main.puntuacionhabilidad">
-        <field type="IntegerField" name="puntuacion">1</field>
-        <field to="main.habilidad" name="habilidad" rel="OneToOneRel">2</field>
+        <field to="main.puntuacionhabilidad" name="puntuaciones_habilidad" rel="ManyToManyRel">
+            <object pk="2"></object>
+        </field>
     </object>
 </django-objects>
