@@ -341,14 +341,14 @@ class Dote(models.Model):
     carisma = models.IntegerField(verbose_name='Carisma', null=True)
     creador = models.OneToOneField('Perfil', null=True, on_delete=models.SET_NULL)
     es_dote_companero_animal = models.BooleanField(verbose_name='Es dote de compañero animal', default=False)
-    prerrequisito_dote = models.ManyToManyField('self')
+    prerrequisito_dote = models.ManyToManyField('self', symmetrical=False, related_name='pr_dote')
     prerrequisito_raza = models.ForeignKey('Raza', on_delete=models.SET_NULL, null=True)
     
     def __str__(self):
         return self.nombre
         
     class Meta: 
-        ordering = ('nombre', )
+        ordering = ('tipo', 'nombre' )
 
 class Conjuro(models.Model):
     nombre = models.TextField(verbose_name='Nombre')
@@ -375,7 +375,7 @@ class Poder(models.Model):
     nombre = models.TextField(verbose_name='Nombre')
     descripcion = models.TextField(verbose_name='Descripción')
     nivel = models.IntegerField(verbose_name='Nivel', default=1)
-    prerrequisito_poder = models.ManyToManyField('self')
+    prerrequisito_poder = models.ManyToManyField('self', symmetrical=False, related_name='pr_poder')
 
     def __str__(self):
         return nombre
@@ -439,7 +439,7 @@ class CompaneroAnimal(models.Model):
     nivel_cambio = models.IntegerField(verbose_name='Nivel de cambio', null=True)
     es_familiar = models.BooleanField(verbose_name='Es familiar', default=False)
     companero_animal_cambio = models.ForeignKey('self', null=True, on_delete=models.SET_NULL)
-    especial = models.ManyToManyField('Especial')
+    especiales = models.ManyToManyField('Especial')
 
     def __str__(self):
         return tipo
@@ -457,10 +457,10 @@ class Truco(models.Model):
     nombre = models.TextField(verbose_name='Nombre')
     descripcion = models.TextField(verbose_name='Descripción')
     cd = models.TextField(verbose_name='CD')
-    prerrequisito_truco = models.ManyToManyField('self')
+    prerrequisito_truco = models.ManyToManyField('self', symmetrical=False, related_name='pr_truco')
 
     def __str__(self):
-        return nombre
+        return self.nombre
         
     class Meta:
         ordering = ('nombre', )
@@ -478,7 +478,7 @@ class Propiedad(models.Model):
     equipado = models.BooleanField(verbose_name='Está equipado', default=False)
     es_propiedad_arma = models.BooleanField(verbose_name='Es propiedad de arma', default=False)
     es_propiedad_armadura = models.BooleanField(verbose_name='Es propiedad de armadura', default=False)
-    prerrequisito_propiedad = models.ForeignKey('self', null=True, on_delete=models.SET_NULL)
+    prerrequisito_propiedad = models.ForeignKey('self', null=True, on_delete=models.SET_NULL, related_name='pr_propiedad')
 
     def __str__(self):
         return self.nombre

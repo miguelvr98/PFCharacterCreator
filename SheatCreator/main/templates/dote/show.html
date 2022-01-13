@@ -1,0 +1,7 @@
+{% block content %}
+    {{dote.nombre}}
+    {% for pr in prerrequisito_dote %}
+        {{pr.nombre}}
+    {% endfor %}
+    {{prerrequisito_raza.raza}}
+{% endblock %}

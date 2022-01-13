@@ -1,0 +1,6 @@
+{% block content %}
+    {{truco.nombre}}
+    {% for pt in prerrequisito_truco %}
+        {{pt.nombre}}
+    {% endfor %}
+{% endblock %}

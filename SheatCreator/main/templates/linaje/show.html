@@ -1,0 +1,12 @@
+{% block content %}
+    {{linaje.nombre}}
+    {% for conjuro in conjuros %}
+        {{conjuro.nombre}}
+    {% endfor %}
+    {% for dote in dotes %}
+        {{dote.nombre}}
+    {% endfor %}
+    {% for poder in poderes %}
+        {{poder.nombre}}
+    {% endfor %}
+{% endblock %}

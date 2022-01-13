@@ -3,9 +3,9 @@
 <django-objects version="1.0">
 <!--DJANGO ADMINISTRATOR-->
     <object pk="1" model="auth.user">
-        <!--administrator/administrator-->
+        <!--administrator/administrator1-->
         <field type="CharField" name="username">administrator</field>
-        <field type="CharField" name="password">administrator</field>
+        <field type="CharField" name="password">pbkdf2_sha256$180000$7SLMjkH6GOFO$IBuruNzWos2xQBdHLoD2hV7V106gPgBlmIr2xuwaFKE=</field>
         <field type="BooleanField" name="is_superuser">True</field>
         <field type="BooleanField" name="is_staff">True</field>
     </object>
@@ -15,9 +15,9 @@
         <field type="BooleanField" name="es_admin">True</field>
     </object>
     <object pk="2" model="auth.user">
-        <!--admin2/admin2-->
+        <!--admin2/administrator2-->
         <field type="CharField" name="username">admin2</field>
-        <field type="CharField" name="password">admin2</field>
+        <field type="CharField" name="password">pbkdf2_sha256$180000$5GD07klA94cS$Vp57saDcgZOb5KNhb79PdzpPu/p20rMzMimxhvR9yWI=</field>
         <field type="BooleanField" name="is_superuser">True</field>
         <field type="BooleanField" name="is_staff">True</field>
     </object>
@@ -27,13 +27,13 @@
         <field type="BooleanField" name="es_admin">True</field>
     </object>
 <!--USUARIOS Y PERFILES-->
-    <object pk="2" model="auth.user">
+    <object pk="3" model="auth.user">
         <!--usuario1/usuario1-->
         <field type="CharField" name="username">usuario1</field>
         <field type="CharField" name="password">pbkdf2_sha256$180000$iCtKpsP66YmY$QJZ8l4KaEjRt8vJoA0tvhJjlMsgvxkjwv+qyu/McmPY=</field>
     </object>
-    <object pk="2" model="main.perfil">
-        <field to="auth.user" name="usuario" rel="OneToOneRel">2</field>
+    <object pk="3" model="main.perfil">
+        <field to="auth.user" name="usuario" rel="OneToOneRel">3</field>
         <field type="CharField" name="nickname">usuario1_perfil</field>
     </object>
 <!--IDIOMAS-->
@@ -11014,6 +11014,18 @@
     </object>
 <!--COMPAÑEROS ANIMALES-->
     <!--COMPAÑEROS ANIMALES POR NIVEL-->
+    <object pk="43" model="main.companeroanimal">
+        <field type="IntegerField" name="nivel">0</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="132"></object>
+            <object pk="133"></object>
+            <object pk="134"></object>
+            <object pk="136"></object>
+            <object pk="137"></object>
+            <object pk="138"></object>
+            <object pk="135"></object>
+        </field>
+    </object>
     <object pk="1" model="main.companeroanimal">
         <field type="IntegerField" name="nivel">1</field>
         <field type="IntegerField" name="dados_de_golpe">2</field>
@@ -11028,7 +11040,7 @@
         <field type="IntegerField" name="fuerza">0</field>
         <field type="IntegerField" name="destreza">0</field>
         <field type="IntegerField" name="numero_trucos">1</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
         </field>
@@ -11047,7 +11059,7 @@
         <field type="IntegerField" name="fuerza">0</field>
         <field type="IntegerField" name="destreza">0</field>
         <field type="IntegerField" name="numero_trucos">1</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
         </field>
@@ -11066,7 +11078,7 @@
         <field type="IntegerField" name="fuerza">1</field>
         <field type="IntegerField" name="destreza">1</field>
         <field type="IntegerField" name="numero_trucos">2</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11086,7 +11098,7 @@
         <field type="IntegerField" name="fuerza">1</field>
         <field type="IntegerField" name="destreza">1</field>
         <field type="IntegerField" name="numero_trucos">2</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11107,7 +11119,7 @@
         <field type="IntegerField" name="fuerza">1</field>
         <field type="IntegerField" name="destreza">1</field>
         <field type="IntegerField" name="numero_trucos">2</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11127,7 +11139,7 @@
         <field type="IntegerField" name="fuerza">2</field>
         <field type="IntegerField" name="destreza">2</field>
         <field type="IntegerField" name="numero_trucos">3</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11148,7 +11160,7 @@
         <field type="IntegerField" name="fuerza">2</field>
         <field type="IntegerField" name="destreza">2</field>
         <field type="IntegerField" name="numero_trucos">3</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11169,7 +11181,7 @@
         <field type="IntegerField" name="fuerza">2</field>
         <field type="IntegerField" name="destreza">2</field>
         <field type="IntegerField" name="numero_trucos">3</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11190,7 +11202,7 @@
         <field type="IntegerField" name="fuerza">3</field>
         <field type="IntegerField" name="destreza">3</field>
         <field type="IntegerField" name="numero_trucos">4</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11213,7 +11225,7 @@
         <field type="IntegerField" name="fuerza">3</field>
         <field type="IntegerField" name="destreza">3</field>
         <field type="IntegerField" name="numero_trucos">4</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11235,7 +11247,7 @@
         <field type="IntegerField" name="fuerza">3</field>
         <field type="IntegerField" name="destreza">3</field>
         <field type="IntegerField" name="numero_trucos">4</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11257,7 +11269,7 @@
         <field type="IntegerField" name="fuerza">4</field>
         <field type="IntegerField" name="destreza">4</field>
         <field type="IntegerField" name="numero_trucos">5</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11279,7 +11291,7 @@
         <field type="IntegerField" name="fuerza">4</field>
         <field type="IntegerField" name="destreza">4</field>
         <field type="IntegerField" name="numero_trucos">5</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11301,7 +11313,7 @@
         <field type="IntegerField" name="fuerza">4</field>
         <field type="IntegerField" name="destreza">4</field>
         <field type="IntegerField" name="numero_trucos">5</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11324,7 +11336,7 @@
         <field type="IntegerField" name="fuerza">5</field>
         <field type="IntegerField" name="destreza">5</field>
         <field type="IntegerField" name="numero_trucos">6</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11347,7 +11359,7 @@
         <field type="IntegerField" name="fuerza">5</field>
         <field type="IntegerField" name="destreza">5</field>
         <field type="IntegerField" name="numero_trucos">6</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11370,7 +11382,7 @@
         <field type="IntegerField" name="fuerza">5</field>
         <field type="IntegerField" name="destreza">5</field>
         <field type="IntegerField" name="numero_trucos">6</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11393,7 +11405,7 @@
         <field type="IntegerField" name="fuerza">6</field>
         <field type="IntegerField" name="destreza">6</field>
         <field type="IntegerField" name="numero_trucos">7</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11416,7 +11428,7 @@
         <field type="IntegerField" name="fuerza">6</field>
         <field type="IntegerField" name="destreza">6</field>
         <field type="IntegerField" name="numero_trucos">7</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11439,7 +11451,7 @@
         <field type="IntegerField" name="fuerza">6</field>
         <field type="IntegerField" name="destreza">6</field>
         <field type="IntegerField" name="numero_trucos">7</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="132"></object>
             <object pk="133"></object>
             <object pk="134"></object>
@@ -11464,7 +11476,7 @@
         <field type="IntegerField" name="carisma">6</field>
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">22</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
         </field>
     </object>
@@ -11480,7 +11492,7 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="sabiduria">14</field>
         <field type="IntegerField" name="carisma">6</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
         </field>
     </object>
@@ -11498,7 +11510,7 @@
         <field type="IntegerField" name="carisma">6</field>
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">24</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11515,7 +11527,7 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">6</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11534,7 +11546,7 @@
         <field type="IntegerField" name="carisma">4</field>
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">26</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11551,7 +11563,7 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="sabiduria">11</field>
         <field type="IntegerField" name="carisma">4</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11570,7 +11582,7 @@
         <field type="IntegerField" name="carisma">6</field>
         <field type="IntegerField" name="nivel_cambio">7</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">28</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11587,7 +11599,7 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">6</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11606,7 +11618,7 @@
         <field type="IntegerField" name="carisma">6</field>
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">30</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11623,7 +11635,7 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">6</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11642,7 +11654,7 @@
         <field type="IntegerField" name="carisma">6</field>
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">32</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11659,7 +11671,7 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">6</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11678,7 +11690,7 @@
         <field type="IntegerField" name="carisma">7</field>
         <field type="IntegerField" name="nivel_cambio">4</field>
         <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">34</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11695,7 +11707,7 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="sabiduria">12</field>
         <field type="IntegerField" name="carisma">7</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>
         </field>
@@ -11706,7 +11718,7 @@
         <field type="CharField" name="tamano">Pequeño</field>
         <field type="CharField" name="velocidad">3 metros, volando 24 metros (regular)</field>
         <field type="BooleanField" name="es_familiar">True</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="141"></object>
         </field>
     </object>
@@ -11715,7 +11727,7 @@
         <field type="CharField" name="tamano">Pequeño</field>
         <field type="CharField" name="velocidad">9 metros, trepando 9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="142"></object>
         </field>
     </object>
@@ -11724,7 +11736,7 @@
         <field type="CharField" name="tamano">Pequeño</field>
         <field type="CharField" name="velocidad">3 metros, trepando 9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="143"></object>
         </field>
     </object>
@@ -11733,7 +11745,7 @@
         <field type="CharField" name="tamano">Pequeño</field>
         <field type="CharField" name="velocidad">9 metros, trepando 9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="144"></object>
         </field>
     </object>
@@ -11742,7 +11754,7 @@
         <field type="CharField" name="tamano">Pequeño</field>
         <field type="CharField" name="velocidad">3 metros, trepando 9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="145"></object>
         </field>
     </object>
@@ -11751,7 +11763,7 @@
         <field type="CharField" name="tamano">Pequeño</field>
         <field type="CharField" name="velocidad">3 metros, volando 24 metros (regular)</field>
         <field type="BooleanField" name="es_familiar">True</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="146"></object>
         </field>
     </object>
@@ -11760,7 +11772,7 @@
         <field type="CharField" name="tamano">Pequeño</field>
         <field type="CharField" name="velocidad">3 metros, trepando 9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="147"></object>
         </field>
     </object>
@@ -11769,7 +11781,7 @@
         <field type="CharField" name="tamano">Pequeño</field>
         <field type="CharField" name="velocidad">9 metros</field>
         <field type="BooleanField" name="es_familiar">True</field>
-        <field to="main.especial" name="especial" rel="ManyToManyRel">
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="148"></object>
         </field>
     </object>

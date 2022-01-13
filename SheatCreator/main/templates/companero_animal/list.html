@@ -1,0 +1,20 @@
+{% block content %}
+    {% for ca in companeros_animales_por_tipo %}
+        {{ca.tipo}}
+    {% endfor %}
+</n>
+</n>
+    {% for ca in companeros_animales_por_nivel %}
+        {{ca.nivel}}
+    {% endfor %}
+</n>
+</n>
+    {% for familiar in familiares %}
+        {{familiar.tipo}}
+    {% endfor %}
+</n>
+</n>
+    {% for especial in especiales %}
+        {{especial.nombre}}
+    {% endfor %}
+{% endblock %}

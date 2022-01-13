@@ -1,0 +1,13 @@
+{% block content %}
+    {{clase.clase}}
+    {{clase.nivel}}
+    {% for c in clases_nivel %}
+        {{c.nivel}}
+    {% endfor %}
+    {% for especial in especiales %}
+        {{e.nombre}}
+    {% endfor %}
+    {% for habilidad in habilidades %}
+        {{habilidad.habilidad}}
+    {% endfor %}
+{% endblock %}

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from main.models import Personaje, Perfil, Raza
+from main.models import *
 from main.forms import EditarUsernameForm
 
 # Create your views here.
@@ -62,11 +62,12 @@ def listar_habilidades(request):
 
 def listar_companeros_animales(request):
     try:
-        companeros_animales_por_nivel = CompaneroAnimal.objects.all().filter(es_familiar=False).exclude(nivel=None)
+        companeros_animales_por_nivel = CompaneroAnimal.objects.all().filter(es_familiar=False).exclude(nivel=None).exclude(nivel=0)
         companeros_animales_por_tipo = CompaneroAnimal.objects.all().filter(es_familiar=False).exclude(tipo=None)
         familiares = CompaneroAnimal.objects.all().filter(es_familiar=True).exclude(tipo=None)
-        especiales = companero_animal_por_nivel.especiales
-        return render(request, 'companero_animal/list.html', {'companero_animal_por_nivel':companero_animal_por_nivel, 'companero_animales_por_tipo':companeros_animales_por_tipo, 'familiares':familiares, 'especiales':especiales})
+        aux_ca = CompaneroAnimal.objects.get(nivel=0)
+        especiales = aux_ca.especiales.all()
+        return render(request, 'companero_animal/list.html', {'companeros_animales_por_nivel':companeros_animales_por_nivel, 'companeros_animales_por_tipo':companeros_animales_por_tipo, 'familiares':familiares, 'especiales':especiales})
     except:
         return redirect('error_url')
 
@@ -122,7 +123,7 @@ def listar_poderes_por_clase(request, pk):
     try:
         clase = Clase.objects.get(pk=pk)
         assert clase.nivel == 0
-        poderes = clase.poderes
+        poderes = clase.poderes.all()
         return render(request, 'poder/list.html', {'poderes':poderes})
     except:
         return redirect('error_url')
@@ -131,7 +132,7 @@ def listar_especiales_por_clase(request, pk):
     try:
         clase = Clase.objects.get(pk=pk)
         assert clase.nivel == 0
-        especiales = clase.especiales
+        especiales = clase.especiales.all()
         return render(request, 'especial/list.html', {'especiales':especiales})
     except:
         return redirect('error_url')
@@ -140,34 +141,39 @@ def listar_conjuros_por_clase(request, pk):
     try:
         clase = Clase.objects.get(pk=pk)
         assert clase.nivel == 0
-        conjuros = clase.conjuros
-        return render(request, 'conjuro/list.html', {'conjuros':conjuro})
+        conjuros = clase.conjuros.all()
+        return render(request, 'conjuro/list.html', {'conjuros':conjuros})
     except:
         return redirect('error_url')
 
 def mostrar_raza(request, pk):
     try:
         raza = Raza.objects.get(pk=pk)
-        bonificaciones_raza = raza.bonificaciones_raza
+        bonificaciones_raza = raza.bonificaciones_raza.all()
         return render(request, 'raza/show.html', {'raza':raza, 'bonificaciones_raza':bonificaciones_raza})
     except:
         return redirect('error_url')
 
 def mostrar_dote(request, pk):
-    try:
-        dote = Dote.objects.get(pk=pk)
-        prerrequisito_dote = dote.prerrequisito_dote
+    dote = Dote.objects.get(pk=pk)
+    if dote.prerrequisito_dote.all() and dote.prerrequisito_raza != None:
+        prerrequisito_dote = dote.prerrequisito_dote.all()
+        prerrequisito_raza = dote.prerrequisito_raza
+        return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_dote':prerrequisito_dote, 'prerrequisito_raza':prerrequisito_raza})
+    elif dote.prerrequisito_dote.all() and dote.prerrequisito_raza == None:
+        prerrequisito_dote = dote.prerrequisito_dote.all()
         return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_dote':prerrequisito_dote})
-    except:
-        return redirect('error_url')
+    prerrequisito_raza = dote.prerrequisito_raza
+    return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_raza':prerrequisito_raza})
 
 def mostrar_clase(request, pk):
     try:
         clase = Clase.objects.get(pk=pk)
         assert clase.nivel == 0
         clases_nivel = Clase.objects.all().filter(clase=clase.clase).exclude(nivel=0)
-        especiales = clase.especiales
-        habilidades = clase.habilidades
+        clase_1 = Clase.objects.filter(clase=clase.clase).get(nivel=1)
+        especiales = clase.especiales.all()
+        habilidades = clase_1.habilidades.all()
         return render(request, 'clase/show.html', {'clase':clase, 'clases_nivel':clases_nivel, 'especiales':especiales, 'habilidades':habilidades})
     except:
         return redirect('error_url')
@@ -190,7 +196,7 @@ def mostrar_companero_animal(request, pk):
     try:
         companero_animal = CompaneroAnimal.objects.get(pk=pk)
         assert companero_animal.tipo != None
-        especiales = companero_animal.especiales
+        especiales = companero_animal.especiales.all()
         return render(request, 'companero_animal/show.html', {'companero_animal':companero_animal, 'especiales':especiales})
     except:
         return redirect('error_url')
@@ -202,10 +208,10 @@ def mostrar_companero_animal_personaje(request, pk):
         if personaje.es_publico==True:
             perfil = usuario_logueado(request)
             assert perfil == personaje.perfil
-        dotes = companero_animal-dotes
-        trucos = companero_animal.trucos
-        especiales = companero_animal.especiales
-        puntuaciones_habilidad = companero_animal.puntuacion_habilidad
+        dotes = companero_animal.dotes.all()
+        trucos = companero_animal.trucos.all()
+        especiales = companero_animal.especiales.all()
+        puntuaciones_habilidad = companero_animal.puntuacion_habilidad.all()
         for ph in puntuaciones_habilidad:
             diccionario_habilidad[ph.habilidad.habilidad] = ph.puntuacion
         return render(request, 'companero_animal/show.html', {'companero_animal':companero_animal, 'dotes':dotes, 'trucos':trucos, 'especiales':especiales, 'habilidades':diccionario_habilidad})
@@ -213,12 +219,12 @@ def mostrar_companero_animal_personaje(request, pk):
         return redirect('error_url')
 
 def mostrar_truco(request, pk):
-    try:
-        truco = Truco.objects.get(pk=pk)
-        prerrequisito_truco = truco.prerrequisito_truco
+    truco = Truco.objects.get(pk=pk)
+    print(truco.prerrequisito_truco.all())
+    if truco.prerrequisito_truco.all():
+        prerrequisito_truco = truco.prerrequisito_truco.all()
         return render(request, 'truco/show.html', {'truco':truco, 'prerrequisito_truco':prerrequisito_truco})
-    except:
-        return redirect('error_url')
+    return render(request, 'truco/show.html', {'truco':truco})
 
 def mostrar_propiedad(request, pk):
     try:
@@ -230,9 +236,9 @@ def mostrar_propiedad(request, pk):
 def mostrar_linaje(request, pk):
     try:
         linaje = Linaje.objects.get(pk=pk)
-        conjuros = linaje.conjuros
-        dotes = linaje.dotes
-        poderes = linaje.poderes
+        conjuros = linaje.conjuros.all()
+        dotes = linaje.dotes.all()
+        poderes = linaje.poderes.all()
         return render(request, 'linaje/show.html', {'linaje':linaje, 'conjuros':conjuros, 'dotes':dotes, 'poderes':poderes})
     except:
         return redirect('error_url')
@@ -253,13 +259,13 @@ def mostrar_personaje(request, pk):
         if personaje.es_publico == False:
             perfil = usuario_logueado(request)
             assert personaje.perfil == perfil
-        idiomas = personaje.idiomas
-        clases = personaje.clases
-        dotes = personaje.dotes
-        conjuros = personaje.conjuros
-        poderes = personaje.poderes
-        inventario = personaje.propiedad_objeto
-        puntuaciones_habilidad = personaje.puntuaciones_habilidad
+        idiomas = personaje.idiomas.all()
+        clases = personaje.clases.all()
+        dotes = personaje.dotes.all()
+        conjuros = personaje.conjuros.all()
+        poderes = personaje.poderes.all()
+        inventario = personaje.propiedades_objeto.all()
+        puntuaciones_habilidad = personaje.puntuaciones_habilidad.all()
         for ph in puntuaciones_habilidad:
            diccionario_habilidad[ph.habilidad.habilidad] = ph.puntuacion
         return render(request, 'personaje/show.html', {'personaje':personaje, 'habilidades':diccionario_habilidad, 'conjuros':conjuros, 'poderes':poderes, 'inventario':inventario})

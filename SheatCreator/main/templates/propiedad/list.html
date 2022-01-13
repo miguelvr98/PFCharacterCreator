@@ -1,0 +1,11 @@
+{% block content %}
+    {% for p_arma in propiedades_arma %}
+        {{p_arma.nombre}}
+    {% endfor %}
+    {% for p_armadura in propiedades_armadura %}
+        {{p_armadura.nombre}}
+    {% endfor %}
+    {% for p_comun in propiedades_comun %}
+        {{p_comun.nombre}}
+    {% endfor %}
+{% endblock %}
