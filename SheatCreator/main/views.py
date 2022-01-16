@@ -271,6 +271,7 @@ def cambiar_personaje_a_publico(request, pk):
         perfil = usuario_logueado(request)
         personaje = Personaje.objects.get(pk=pk)
         assert personaje.perfil == perfil
+        assert personaje.es_publico == False
         personaje.es_publico = True
         personaje.save()
 
@@ -285,6 +286,7 @@ def cambiar_personaje_a_privado(request, pk):
         perfil = usuario_logueado(request)
         personaje = Personaje.objects.get(pk=pk)
         assert personaje.perfil == perfil
+        assert personaje.es_publico == True
         personaje.es_publico = False
         personaje.save()
 

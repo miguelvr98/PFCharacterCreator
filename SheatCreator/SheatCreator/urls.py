@@ -50,4 +50,6 @@ urlpatterns = [
     path('objeto/show/<int:pk>/', views.mostrar_objeto, name='mostrar_objeto_url'),
     path('personaje/show/<int:pk>/', views.mostrar_personaje, name='mostrar_personaje_url'),
     path('companero_animal_personaje/show/<int:pk>/', views.mostrar_companero_animal_personaje, name='mostrar_companero_animal_personaje_url'),
+    path('personaje/publico/<int:pk>/', views.cambiar_personaje_a_publico, name='cambiar_personaje_a_publico_url'),
+    path('personaje/privado/<int:pk>/', views.cambiar_personaje_a_privado, name='cambiar_personaje_a_privado_url'),
 ]
