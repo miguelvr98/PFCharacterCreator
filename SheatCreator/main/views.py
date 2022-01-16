@@ -265,6 +265,35 @@ def mostrar_personaje(request, pk):
     except:
         return redirect('error_url')
 
+@login_required(login_url="/login/")
+def cambiar_personaje_a_publico(request, pk):
+    try:
+        perfil = usuario_logueado(request)
+        personaje = Personaje.objects.get(pk=pk)
+        assert personaje.perfil == perfil
+        personaje.es_publico = True
+        personaje.save()
+
+        personajes = Personaje.objects.all().filter(perfil=perfil)
+        return render(request, 'personaje/list.html', {'personajes':personajes})
+    except:
+        return redirect('error_url')
+
+@login_required(login_url="/login/")
+def cambiar_personaje_a_privado(request, pk):
+    try:
+        perfil = usuario_logueado(request)
+        personaje = Personaje.objects.get(pk=pk)
+        assert personaje.perfil == perfil
+        personaje.es_publico = False
+        personaje.save()
+
+        personajes = Personaje.objects.all().filter(perfil=perfil)
+        return render(request, 'personaje/list.html', {'personajes':personajes})
+    except:
+        return redirect('error_url')
+
+
 def index(request):
     return render(request, 'index.html')
 
