@@ -220,6 +220,12 @@ class Personaje(models.Model):
         for clase in self.clases:
             nivel = nivel + clase.nivel
         return nivel
+    
+    @property
+    def habilidades(self):
+        for ph in self.puntuaciones_habilidad:
+           habilidades[ph.habilidad.habilidad] = ph.puntuacion
+        return habilidades
 
     def __str__(self):
         return self.nombre
@@ -452,6 +458,12 @@ class CompaneroAnimalPersonaje(CompaneroAnimal):
     dotes = models.ManyToManyField('Dote')
     trucos = models.ManyToManyField('Truco')
     puntuacion_habilidad = models.ManyToManyField('PuntuacionHabilidad')
+
+    @property
+    def habilidades(self):
+        for ph in self.puntuaciones_habilidad:
+           habilidades[ph.habilidad.habilidad] = ph.puntuacion
+        return habilidades
 
 class Truco(models.Model):
     nombre = models.TextField(verbose_name='Nombre')

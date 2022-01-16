@@ -1,0 +1,9 @@
+{% block content %}
+    {{personaje.nombre}}
+    {% for conjuro in conjuros %}
+        {{conjuro.nombre}}
+    {% endfor %}
+    {% for poder in poderes %}
+        {{poder.nombre}}
+    {% endfor %}
+{% endblock %}

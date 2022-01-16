@@ -39815,15 +39815,16 @@
         <field type="main.alineamiento" name="alineamiento">NB</field>
         <field type="IntegerField" name="puntos_de_golpe">10</field>
         <field type="IntegerField" name="fuerza">10</field>
-        <field type="IntegerField" name="destreza">14</field>
-        <field type="IntegerField" name="constitucion">12</field>
+        <field type="IntegerField" name="destreza">10</field>
+        <field type="IntegerField" name="constitucion">10</field>
         <field type="IntegerField" name="inteligencia">10</field>
-        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="sabiduria">10</field>
         <field type="IntegerField" name="carisma">10</field>
-        <field type="BooleanField" name="es_publico">False</field>
+        <field type="BooleanField" name="es_publico">True</field>
         <field to="main.raza" name="raza" rel="OneToOneRel">4</field>
+        <field to="main.companeroanimalpersonaje" name="companero_animal" rel="OneToOneRel">43</field>
         <field to="main.clase" name="clases" rel="ManyToMany">
-            <object pk="170"></object>
+            <object pk="65"></object>
         </field>
         <field to="main.idioma" name="idiomas" rel="ManyToManyRel">
             <object pk="6"></object>
@@ -39832,8 +39833,85 @@
             <object pk="2"></object>
             <object pk="5"></object>
         </field>
+        <field to="main.conjuro" name="conjuros_conocidos" rel="ManyToManyRel">
+            <!--CONJUROS DE DRUIDA DE Nº0-->
+            <object pk="4"></object>
+            <object pk="5"></object>
+            <object pk="41"></object>
+            <object pk="8"></object>
+            <object pk="42"></object>
+            <object pk="43"></object>
+            <object pk="9"></object>
+            <object pk="10"></object>
+            <object pk="12"></object>
+            <object pk="44"></object>
+            <object pk="71"></object>
+            <object pk="45"></object>
+            <object pk="15"></object>
+            <object pk="16"></object>
+            <object pk="47"></object>
+            <!--CONJUROS DE DRUIDA DE Nº1-->
+            <object pk="72"></object>
+            <object pk="73"></object>
+            <object pk="74"></object>
+            <object pk="51"></object>
+            <object pk="75"></object>
+            <object pk="27"></object>
+            <object pk="76"></object>
+            <object pk="78"></object>
+            <object pk="77"></object>
+            <object pk="79"></object>
+            <object pk="80"></object>
+            <object pk="102"></object>
+            <object pk="81"></object>
+            <object pk="82"></object>
+            <object pk="83"></object>
+            <object pk="85"></object>
+            <object pk="84"></object>
+            <object pk="86"></object>
+            <object pk="64"></object>
+            <object pk="87"></object>
+            <object pk="37"></object>
+            <object pk="67"></object>
+            <object pk="88"></object>
+            <object pk="89"></object>
+            <object pk="90"></object>
+            <object pk="365"></object>
+            <object pk="91"></object>
+        </field>
         <field to="main.puntuacionhabilidad" name="puntuaciones_habilidad" rel="ManyToManyRel">
             <object pk="2"></object>
+        </field>
+    </object>
+<!--COMPAÑERO ANIMAL PERSONAJE-->
+    <object pk="43" model="main.companeroanimalpersonaje">
+        <field type="CharField" name="tipo">Simio</field>
+        <field type="CharField" name="tamano">Mediano</field>
+        <field type="CharField" name="velocidad">9 metros, trepando 9 metros</field>
+        <field type="IntegerField" name="ca">1</field>
+        <field type="CharField" name="ataque">Mordisco (1d4), 2 garras (1d4)</field>
+        <field type="IntegerField" name="fuerza">13</field>
+        <field type="IntegerField" name="destreza">17</field>
+        <field type="IntegerField" name="constitucion">10</field>
+        <field type="IntegerField" name="inteligencia">2</field>
+        <field type="IntegerField" name="sabiduria">12</field>
+        <field type="IntegerField" name="carisma">7</field>
+        <field type="IntegerField" name="nivel_cambio">4</field>
+        <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">34</field>
+        <field to="main.especial" name="especiales" rel="ManyToManyRel">
+            <object pk="139"></object>
+            <object pk="140"></object>
+        </field>
+        <field type="CharField" name="nombre">Amelio</field>
+        <field to="main.puntuacionhabilidad" name="puntuacion_habilidad" rel="ManyToManyRel">
+            <object pk="2"></object>
+        </field>
+        <field to="main.dote" name="dotes" rel="ManyToManyRel">
+            <object pk="2"></object>
+            <object pk="5"></object>
+        </field>
+        <field to="main.truco" name="trucos" rel="ManyToManyRel">
+            <object pk="1"></object>
         </field>
     </object>
 </django-objects>

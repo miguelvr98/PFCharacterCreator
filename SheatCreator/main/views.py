@@ -114,10 +114,10 @@ def listar_personajes_publicos(request):
 def listar_personajes_propios(request):
     try:
         perfil = usuario_logueado(request)
-        personajes = Personaje.objects().all().filter(perfil=perfil)
+        personajes = Personaje.objects.all().filter(perfil=perfil)
         return render(request, 'personaje/list.html', {'personajes':personajes})
     except:
-        return redirect('error_url')
+        redirect('error_url')
 
 def listar_poderes_por_clase(request, pk):
     try:
@@ -201,22 +201,17 @@ def mostrar_companero_animal(request, pk):
     except:
         return redirect('error_url')
 
+@login_required(login_url="/login/")
 def mostrar_companero_animal_personaje(request, pk):
-    try:
-        companero_animal = CompaneroAnimalPersonaje.objects.get(pk=pk)
-        personaje = companero_animal.personaje
-        if personaje.es_publico==True:
-            perfil = usuario_logueado(request)
-            assert perfil == personaje.perfil
-        dotes = companero_animal.dotes.all()
-        trucos = companero_animal.trucos.all()
-        especiales = companero_animal.especiales.all()
-        puntuaciones_habilidad = companero_animal.puntuacion_habilidad.all()
-        for ph in puntuaciones_habilidad:
-            diccionario_habilidad[ph.habilidad.habilidad] = ph.puntuacion
-        return render(request, 'companero_animal/show.html', {'companero_animal':companero_animal, 'dotes':dotes, 'trucos':trucos, 'especiales':especiales, 'habilidades':diccionario_habilidad})
-    except:
-        return redirect('error_url')
+    personaje = Personaje.objects.get(pk=pk)
+    if personaje.es_publico==True:
+        perfil = usuario_logueado(request)
+        assert perfil == personaje.perfil
+    companero_animal = personaje.companero_animal
+    dotes = companero_animal.dotes.all()
+    trucos = companero_animal.trucos.all()
+    especiales = companero_animal.especiales.all()
+    return render(request, 'companero_animal/show.html', {'companero_animal':companero_animal, 'dotes':dotes, 'trucos':trucos, 'especiales':especiales})
 
 def mostrar_truco(request, pk):
     truco = Truco.objects.get(pk=pk)
@@ -253,6 +248,7 @@ def mostrar_objeto(request, pk):
     except:
         return redirect('error_url')
 
+@login_required(login_url="/login/")
 def mostrar_personaje(request, pk):
     try:
         personaje = Personaje.objects.get(pk=pk)
@@ -262,15 +258,12 @@ def mostrar_personaje(request, pk):
         idiomas = personaje.idiomas.all()
         clases = personaje.clases.all()
         dotes = personaje.dotes.all()
-        conjuros = personaje.conjuros.all()
-        poderes = personaje.poderes.all()
+        conjuros = personaje.conjuros_conocidos.all()
+        poderes = personaje.poderes_conocidos.all()
         inventario = personaje.propiedades_objeto.all()
-        puntuaciones_habilidad = personaje.puntuaciones_habilidad.all()
-        for ph in puntuaciones_habilidad:
-           diccionario_habilidad[ph.habilidad.habilidad] = ph.puntuacion
-        return render(request, 'personaje/show.html', {'personaje':personaje, 'habilidades':diccionario_habilidad, 'conjuros':conjuros, 'poderes':poderes, 'inventario':inventario})
+        return render(request, 'personaje/show.html', {'personaje':personaje, 'conjuros':conjuros, 'poderes':poderes, 'inventario':inventario})
     except:
-        return redirect('login_url')
+        return redirect('error_url')
 
 def index(request):
     return render(request, 'index.html')

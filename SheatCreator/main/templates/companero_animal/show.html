@@ -1,6 +1,13 @@
 {% block content %}
-    {{truco.nombre}}
+    {{companero_animal.nombre}}
+    {{companero_animal.tipo}}
     {% for especial in especiales %}
         {{especial.nombre}}
+    {% endfor %}
+    {% for dote in dotes %}
+        {{dote.nombre}}
+    {% endfor %}
+    {% for truco in trucos %}
+        {{truco.nombre}}
     {% endfor %}
 {% endblock %}
