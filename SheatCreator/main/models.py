@@ -8,7 +8,7 @@ class Perfil(models.Model):
     es_admin = models.BooleanField(verbose_name='Admin', default=False)
 
     def __str__(self):
-        return self.nickname
+        return self.usuario.username
 
     class Meta:
         ordering = ('pk', )

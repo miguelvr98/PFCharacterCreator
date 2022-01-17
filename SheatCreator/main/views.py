@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login, authenticate
 from main.models import *
-from main.forms import EditarUsernameForm
+from main.forms import *
 
 # Create your views here.
 
@@ -295,6 +296,36 @@ def cambiar_personaje_a_privado(request, pk):
     except:
         return redirect('error_url')
 
+def registrar_usuario(request):
+    try:
+        if request.user.is_authenticated == True:
+            return redirect('error_url')
+
+        if request.method == 'POST':
+            form_usuario = UserForm(request.POST)
+            form_perfil = PerfilForm(request.POST)
+            form_gdpr = GDPRForm(request.POST)
+            if form_usuario.is_valid() and form_perfil.is_valid() and form_gdpr.is_valid():
+                usuario = form_usuario.save()
+                perfil = form_perfil.save(commit=False)
+                perfil.usuario = usuario
+                perfil.save()
+
+                username = form_usuario.cleaned_data['username']
+                password = form_usuario.cleaned_data['password1']
+                user = authenticate(username=username, password=password)
+                login(request, user)
+                return redirect('/')
+        else:
+            form_usuario = UserForm()
+            form_perfil = PerfilForm()
+            form_gdpr = GDPRForm()
+        return render(request, 'registration/register.html', {'form_usuario':form_usuario, 'form_perfil':form_perfil, 'form_gdpr':form_gdpr})
+    except:
+        redirect('error_url')
+
+def gdpr(request):
+    return render(request, 'gdpr.html')
 
 def index(request):
     return render(request, 'index.html')
