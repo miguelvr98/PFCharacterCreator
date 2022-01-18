@@ -47,6 +47,15 @@ def listar_dotes(request):
     except:
         return redirect('error_url')
 
+@login_required(login_url="/login/")
+def listar_dotes_propias(request):
+    try:
+        perfil = usuario_logueado(request)
+        dotes = Dote.objects.all().filter(creador=perfil)
+        return render(request, 'dote/list.html', {'dotes':dotes})
+    except:
+        return redirect('error_url')
+
 def listar_clases(request):
     try:
         clases = Clase.objects.all().filter(nivel=0)
@@ -338,6 +347,18 @@ def crear_dote(request):
     else:
         form_dote = DoteForm()
     return render(request, 'dote/create.html', {'form_dote':form_dote})
+
+@login_required(login_url="/login/")
+def borrar_dote(request, pk):
+    try:
+        perfil = usuario_logueado(request)
+        dote = Dote.objects.get(pk=pk)
+        assert dote.creador == perfil
+        dote.delete()
+        return redirect('/dote/perfil/list')
+    except:
+        return redirect('error_url')
+
 
 def gdpr(request):
     return render(request, 'gdpr.html')

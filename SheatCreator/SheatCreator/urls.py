@@ -28,6 +28,7 @@ urlpatterns = [
     path('gdpr/', views.gdpr, name="gdpr_url"),
     path('raza/list/', views.listar_razas, name='listar_razas_url'),
     path('dote/list/', views.listar_dotes, name='listar_dotes_url'),
+    path('dote/perfil/list/', views.listar_dotes_propias, name='listar_dotes_url'),
     path('clase/list/', views.listar_clases, name='listar_clases_url'),
     path('conjuro/list/<int:pk>/', views.listar_conjuros_por_clase, name='listar_conjuros_por_clase_url'),
     path('habilidad/list/', views.listar_habilidades, name='listar_habilidades_url'),
@@ -55,4 +56,5 @@ urlpatterns = [
     path('personaje/publico/<int:pk>/', views.cambiar_personaje_a_publico, name='cambiar_personaje_a_publico_url'),
     path('personaje/privado/<int:pk>/', views.cambiar_personaje_a_privado, name='cambiar_personaje_a_privado_url'),
     path('dote/create/', views.crear_dote, name='crear_dote_url'),
+    path('dote/delete/<int:pk>/', views.borrar_dote, name='borrar_dote_url'),
 ]
