@@ -277,7 +277,7 @@ def cambiar_personaje_a_publico(request, pk):
         personaje.save()
 
         personajes = Personaje.objects.all().filter(perfil=perfil)
-        return render(request, 'personaje/list.html', {'personajes':personajes})
+        return redirect('listar_personajes_propios_url')
     except:
         return redirect('error_url')
 
@@ -292,7 +292,7 @@ def cambiar_personaje_a_privado(request, pk):
         personaje.save()
 
         personajes = Personaje.objects.all().filter(perfil=perfil)
-        return render(request, 'personaje/list.html', {'personajes':personajes})
+        return redirect('listar_personajes_propios_url')
     except:
         return redirect('error_url')
 
@@ -323,6 +323,21 @@ def registrar_usuario(request):
         return render(request, 'registration/register.html', {'form_usuario':form_usuario, 'form_perfil':form_perfil, 'form_gdpr':form_gdpr})
     except:
         redirect('error_url')
+
+@login_required(login_url="/login/")
+def crear_dote(request):
+    if request.method == 'POST':
+        form_dote = DoteForm(request.POST)
+        perfil = usuario_logueado(request)
+        if form_dote.is_valid():
+            dote = form_dote.save(commit=False)
+            dote.creador = perfil
+            dote.save()
+
+            return redirect('/dote/show/'+ str(dote.pk))
+    else:
+        form_dote = DoteForm()
+    return render(request, 'dote/create.html', {'form_dote':form_dote})
 
 def gdpr(request):
     return render(request, 'gdpr.html')

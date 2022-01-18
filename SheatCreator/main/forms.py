@@ -172,3 +172,50 @@ class PerfilForm(forms.ModelForm):
 
 class GDPRForm(forms.Form):
     checkbox = forms.BooleanField(label="", required=True, widget=forms.CheckboxInput())
+
+class DoteForm(forms.ModelForm):
+
+    error_messages = {
+        'nombre_letters': ("El nickname solo puede contener letras"),
+        'nombre_exists': ("Ese nombre ya existe"),
+        'nivel_range': ("El nivel tiene que estar entre 1 y 20"),
+        'ataque_base_range': ("El ataque base tiene que estar entre 1 y 20"),
+        'fuerza_range': ("La fuerza tiene que ser mayor que 0"),
+        'destreza_range': ("La destreza tiene que ser mayor que 0"),
+        'constitucion_range': ("La constitución tiene que ser mayor  que 0"),
+        'inteligencia_range': ("La inteligencia tiene que ser mayor que 0"),
+        'sabiduria_range': ("La sabiduria tiene que ser mayor que 0"),
+        'carisma_range': ("La carisma tiene que ser mayor que 0"),
+    }
+
+    #Este esta hecho por si no funciona el de models.
+    TIPO_CHOICES = (('General', 'General'), ('Combate', 'Combate'), ('Metamágica', 'Metamágica'), )
+
+    nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+    descripcion = forms.CharField(label='Descripcon', required=True, widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Descripción'}))
+    tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
+    nivel = forms.IntegerField(label='Nivel', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Nivel', 'min':1, 'max':20}))
+    ataque_base = forms.IntegerField(label='Ataque base', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Ataque base', 'min':1, 'max':20}))
+    fuerza = forms.IntegerField(label='Fuerza', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Fuerza', 'min':1}))
+    destreza = forms.IntegerField(label='Destreza', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Destreza', 'min':1}))
+    constitucion = forms.IntegerField(label='Constitucion', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Constitución', 'min':1}))
+    inteligencia = forms.IntegerField(label='Inteligencia', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Inteligencia', 'min':1}))
+    sabiduria = forms.IntegerField(label='Sabiduria', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Sabiduría', 'min':1}))
+    carisma = forms.IntegerField(label='Carisma', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Carisma', 'min':1}))
+    es_dote_companero_animal = forms.BooleanField(widget=forms.CheckboxInput(), required=False)
+    prerrequisito_raza = forms.ModelChoiceField(queryset=Raza.objects, widget=forms.Select(), required=False)
+    prerrequisito_dote = forms.ModelMultipleChoiceField(queryset=Dote.objects, widget=forms.CheckboxSelectMultiple(), required=False)
+
+    class Meta:
+        model = Dote
+        fields = ('nombre', 'tipo', 'nivel', 'ataque_base', 'fuerza', 'destreza', 'constitucion', 'inteligencia', 'sabiduria', 'carisma', 'es_dote_companero_animal', 'prerrequisito_raza', 'prerrequisito_dote')
+
+    def clean_nombre(self):
+        nombre = self.cleaned_data.get('nombre')
+        print('Entra aqui')
+        if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+            raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
+        
+        if Dote.objects.exclude(pk=self.instance.pk).filter(nombre=nombre).exists():
+            raise forms.ValidationError(self.error_messages['nombre_exists'],code='nombre_exists',)
+        return nombre

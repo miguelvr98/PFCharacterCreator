@@ -1,0 +1,71 @@
+{% block content %}
+<div class="bottom-footer">
+    <div class="container">
+      <div class="row">
+          <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto ">
+                <h1 class="display-4 py-2 text-center">Crear dote</h1>
+                {% if form_dote.errors %}
+                    {% for field in form_dote %}
+                        {% for error in field.errors %}
+                            <div class="alert alert-danger">
+                                {{error}}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+                <div class="px-2">
+                    <form  role="form"  enctype="multipart/form-data" action="" method="POST" id="upload-image-form"> 
+                        {% csrf_token %}
+                        <div class="text-center">Nombre</div>
+                            {{form_dote.nombre}}
+                            <br>
+                        <div class="text-center">Descripción</div>
+                            {{form_dote.descripcion}}
+                            <br>
+                        <div class="text-center">Tipo</div>
+                            {{form_dote.tipo}}
+                            <br>
+                        <div class="text-center">Prerrequisito de nivel</div>
+                            {{form_dote.nivel}}
+                            <br>
+                        <div class="text-center">Prerrequisito de ataque base</div>
+                            {{form_dote.ataque_base}}
+                        <br>
+                        <div class="text-center">Prerrequisito de fuerza</div>
+                            {{form_dote.fuerza}}
+                        <br>
+                        <div class="text-center">Prerrequisito de destreza</div>
+                            {{form_dote.destreza}}
+                        <br>
+                        <div class="text-center">Prerrequisito de constitución</div>
+                            {{form_dote.constitucion}}
+                        <br>
+                        <div class="text-center">Prerrequisito de inteligencia</div>
+                            {{form_dote.inteligencia}}
+                        <br>
+                        <div class="text-center">Prerrequisito de sabiduria</div>
+                            {{form_dote.sabiduria}}
+                        <br>
+                        <div class="text-center">Prerrequisito de carisma</div>
+                            {{form_dote.carisma}}
+                        <br>
+                        <div class="text-center">¿Puede aprenderla un compañero animal?</div>
+                            {{form_dote.es_dote_companero_animal}}
+                        <br>
+                        <div class="text-center">Dotes que tiene como prerrequisito</div>
+                            {{form_dote.prerrequisito_dote}}
+                        <br>
+                        <div class="text-center">Raza que tiene como prerrequisito</div>
+                            {{form_dote.prerrequisito_raza}}
+                        <br>
+                        <div class="text-center">
+                            <button type='submit' class="btn btn-primary btn-dark">Crear</button>
+                        </div>
+                        </div>
+                    </form>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
