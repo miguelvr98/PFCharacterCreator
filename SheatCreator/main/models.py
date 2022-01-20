@@ -132,6 +132,8 @@ class Personaje(models.Model):
                     clase_armadura = clase_armadura + bonificadorDestreza(self)
                 else:
                     clase_armadura = clase_armadura + max
+        for clase in self.clases:
+            clase_armadura = clase_armadura + clase.bonificacion_ac
         return clase_armadura
     
     @property
@@ -308,7 +310,7 @@ class Clase(models.Model):
     competencia = models.TextField(verbose_name='Competente con', null=True)
     rafaga_de_golpes = models.TextField(verbose_name='Ráfaga de golpes', null=True)
     dano_desarmado = models.TextField(verbose_name='Daño desarmado', null = True)
-    bonificacion_ac = models.IntegerField(verbose_name='Bonificación AC', null = True)
+    bonificacion_ac = models.IntegerField(verbose_name='Bonificación AC', null = True, default=0)
     movimiento_rapido = models.IntegerField(verbose_name='Movimiento rápido', null =True)
     puntos_de_habilidad_por_nivel = models.IntegerField(verbose_name='Puntos de habilidad', null=True)
     descripcion_dados_de_golpe = models.TextField(verbose_name='Dado de golpe', null=True)

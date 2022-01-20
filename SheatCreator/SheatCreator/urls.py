@@ -59,7 +59,8 @@ urlpatterns = [
     path('personaje/privado/<int:pk>/', views.cambiar_personaje_a_privado, name='cambiar_personaje_a_privado_url'),
     path('dote/create/', views.crear_dote, name='crear_dote_url'),
     path('dote/delete/<int:pk>/', views.eliminar_dote, name='eliminar_dote_url'),
-    path('perfil/edit/', views.editar_usuario, name='editar_usuario_url'),
-    path('perfil/edit_contrasena/', views.editar_contrasena, name='editar_contrasena_url'),
+    path('perfil/edit/usuario/', views.editar_usuario, name='editar_usuario_url'),
+    path('perfil/edit/contrasena/', views.editar_contrasena, name='editar_contrasena_url'),
+    path('perfil/edit/', views.editar_perfil, name='editar_perfil_url'),
     path('perfil/delete/', views.eliminar_usuario, name='eliminar_usuario_url'),
 ]

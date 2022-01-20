@@ -364,35 +364,33 @@ def mostrar_perfil_propio(request):
     try:
         perfil = usuario_logueado(request)
         personajes = Personaje.objects.all().filter(perfil=perfil)
-        return render(request, 'perfil/mostrar.html', {'perfil':perfil, 'personajes':personajes})
+        return render(request, 'perfil/show.html', {'perfil':perfil, 'personajes':personajes})
     except:
         return redirect('error_url')
     
 @login_required(login_url="/login/")
 def mostrar_perfil(request, pk):
     try:
-        perfil = usuario_logueado(request)
-        personajes = Personaje.objects.all().filter(Perfil=perfil).filter(es_publico=True)
-        return render(request, 'perfil/mostrar.html', {'perfil':perfil, 'personajes':personajes})
+        perfil = Perfil.objects.get(pk=pk)
+        personajes = Personaje.objects.all().filter(perfil=perfil).filter(es_publico=True)
+        return render(request, 'perfil/show.html', {'perfil':perfil, 'personajes':personajes})
     except:
         return redirect('error_url')
 
 @login_required(login_url="/login/")
 def editar_usuario(request):
     try:
-        usuario = User.objects.get(pk=request.user.id)
-        perfil = Perfil.objects.get(usuario=usuario)       
+        usuario = User.objects.get(pk=request.user.id)   
         if request.method == 'POST':
             form_editar_username = EditarUsernameForm(request.POST)
-            form_editar_perfil = EditarPerfilForm(request.POST)
-            if form_editar_perfil.is_valid() and form_editar_username.is_valid():
-                form_editar_username.save()
-                form_editar_perfil.save()
+            if form_editar_username.is_valid():
+                username = form_editar_username.cleaned_data.get('username')
+                usuario.username = username
+                usuario.save()
                 return redirect('mostrar_perfil_propio_url')
         else:
             form_editar_username = EditarUsernameForm()
-            form_editar_perfil = EditarPerfilForm()
-        return render(request, 'perfil/editar.html', {'form_editar_username':form_editar_username, 'form_editar_perfil':form_editar_perfil})
+        return render(request, 'perfil/edit.html', {'form_editar_username':form_editar_username})
     except:
         return redirect('error_url')
 
@@ -403,15 +401,29 @@ def editar_contrasena(request):
         if request.method == 'POST':
             form_editar_contrasena = EditarContrasenaForm(request.POST)
             if form_editar_contrasena.is_valid():
-                password = form_editar_contrasena.cleaned_data.get('password')
+                password = form_editar_contrasena.cleaned_data.get('password1')
                 usuario.set_password(password)
                 usuario.save()
                 return redirect('/login')
         else:
             form_editar_contrasena = EditarContrasenaForm()
-        return render(request, 'perfil/editar_contrasena.html', {'form_editar_contrasena':form_editar_contrasena})
+        return render(request, 'perfil/edit.html', {'form_editar_contrasena':form_editar_contrasena})
     except:
         return redirect('error_url')
+
+@login_required(login_url="/login/")
+def editar_perfil(request):
+    perfil = usuario_logueado(request)
+    if request.method == 'POST':
+        form_editar_perfil = PerfilForm(request.POST)
+        if form_editar_perfil.is_valid():
+            nickname = form_editar_perfil.cleaned_data.get('nickname')
+            perfil.nickname = nickname
+            perfil.save()
+            return redirect('mostrar_perfil_propio_url')
+    else:
+        form_editar_perfil = PerfilForm()
+    return render(request, 'perfil/edit.html', {'form_editar_perfil':form_editar_perfil})
 
 @login_required(login_url="/login/")
 def eliminar_usuario(request):

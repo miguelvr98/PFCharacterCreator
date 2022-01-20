@@ -5,84 +5,60 @@ from django.contrib.auth.models import *
 import re
 
 class EditarUsernameForm(forms.ModelForm):
-    username = forms.CharField(label="Username", widget=forms.TextInput(
-        attrs={'class': 'form-control', 'placeholder': 'Username'}))
+
+    error_messages = {
+        'username_short': ("El nombre de usuario debe tener al menos 6 caracteres"),
+        'username_exists': ("Ya existe ese nombre de usuario"),
+        'username_letters': ("El nombre de usuario solo puede contener letras y numeros"),
+    }
+
+    username = forms.CharField(label="Username", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}))
 
     class Meta:
         model = User
         fields = ('username', )
 
-    def clean(self):
-        cleaned_data = self.cleaned_data
-        username = cleaned_data.get("username")
+    def clean_username(self):
+        username = self.cleaned_data.get("username")
 
         if len(username) < 6:
-            msg = "El nombre de usuario debe tener al menos 6 caracteres"
-            raise ValidationError({'username': [msg, ]})
+            raise forms.ValidationError(self.error_messages['username_short'], code='username_short', )
 
-        if not re.match("^[A-Za-z0-9\u00f1\u00d1]*$", username):
-            msg = "El nombre de usuario solo puede contener letras y numeros"
-            raise ValidationError({'username': [msg, ]})
+        """if not re.match("^[A-Za-z0-9\u00f1\u00d1]*$", username):
+                raise forms.ValidationError(self.error_messages['username_letters'], code='username_letters', )"""
 
         if User.objects.exclude(pk=self.instance.pk).filter(username=username).exists():
-            msg = "El nombre de usuario ya esta en uso"
-            raise ValidationError({'username': [msg, ]})
+            raise forms.ValidationError(self.error_messages['username_exists'], code='username_exists', )
+        return username
     
-class EditarPasswordForm(forms.Form):
+class EditarContrasenaForm(forms.Form):
 
-    password = forms.CharField(
-        label="Contraseña",
-        widget=forms.PasswordInput(
-            attrs={'class': 'form-control', 'placeholder': 'Contraseña'})
-    )
-    check_pw = forms.CharField(
-        label="Confirmar contraseña",
-        widget=forms.PasswordInput(
-            attrs={'class': 'form-control', 'placeholder': 'Contraseña'})
-    )
+    error_messages = {
+        'password_mismatch': ("Las contraseñas no coinciden"),
+        'password_short': ("La contraseña debe tener al menos 8 caracteres"),
+        'password_letters': ("La contraseña solo puede contener letras y números"),
+        'password_capital': ("La contraseña debe tener al menos una mayúscula"),
+    }
 
-    def clean(self):
-        cleaned_data = self.cleaned_data
-        password = cleaned_data.get("password")
-        check_pw = cleaned_data.get("check_pw")
-        if password != check_pw:
-            msg = "La contraseña no coincide"
-            raise ValidationError({'password': [msg, ]})
+    password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Contraseña'}))
+    password2 = forms.CharField(label="Confirmar contraseña",widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Contraseña'}))
 
-        if len(password) < 8:
-            msg = "La contraseña debe tener al menos 8 caracteres"
-            raise ValidationError({'password': [msg, ]})
-
-        if not re.match("^[A-Za-z0-9\u00f1\u00d1]*$", password):
-            msg = "La contraseña solo puede contener letras y numeros"
-            raise ValidationError({'password': [msg, ]})
-
-        if not any(x.isupper() for x in password):
-            msg = "La contraseña debe contener al menos una mayuscula"
-            raise ValidationError({'password': [msg, ]})
-
-class EditarPerfilForm(forms.ModelForm):
-
-    nickname = forms.CharField(label="Nickname", widget=forms.TextInput(
-        attrs={'class': 'form-control', 'placeholder': 'Nickname'}))
-    class Meta:
-        model = Perfil
-        fields = (
-            "nickname",
-        )
-
-    def clean_nickname(self):
-        nickname = self.cleaned_data.get('nickname')
-
-        if not re.match("^[A-Za-zÀ-ÿ\u00f1\u00d1\u0020]*$", nickname):
-            msg = 'El nombre solo puede contener letras y símbolos'
-            raise ValidationError({'nickname': [msg, ]})
+    def clean_password2(self):
+        password1 = self.cleaned_data.get("password1")
+        password2 = self.cleaned_data.get("password2")
         
-        if Perfil.objects.exclude(pk=self.instance.pk).filter(nickname=nickname).exists():
-            msg = "El nickname ya esta en uso"
-            raise ValidationError({'nickname': [msg, ]})
+        if password1 and password2 and password1 != password2:
+            raise forms.ValidationError(self.error_messages['password_mismatch'], code='password_mismatch', )
 
-        return nickname
+        """if len(password1) < 8:
+            raise forms.ValidationError(self.error_messages['password_short'], code='password_short', )
+
+        if not re.match("^[A-Za-z0-9\u00f1\u00d1]*$", password1):
+            raise forms.ValidationError(self.error_messages['password_letters'], code='password_letters', )
+
+        if not any(x.isupper() for x in password1):
+            raise forms.ValidationError(self.error_messages['password_capital'], code='password_capital', )"""
+        return password2
     
 class UserForm(forms.ModelForm):
 
@@ -96,12 +72,8 @@ class UserForm(forms.ModelForm):
         'username_letters': ("El nombre de usuario solo puede contener letras y numeros"),
     }
 
-    password1 = forms.CharField(label=("Password"),
-                                widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Contraseña'}))
-    password2 = forms.CharField(label=("Password confirmation"),
-                                widget=forms.PasswordInput(
-                                    attrs={'class': 'form-control', 'placeholder': 'Confirme su contraseña'}),
-                                help_text=("Enter the same password as above, for verification."))
+    password1 = forms.CharField(label=("Password"), widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Contraseña'}))
+    password2 = forms.CharField(label=("Password confirmation"), widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Confirme su contraseña'}), help_text=("Enter the same password as above, for verification."))
 
     class Meta:
         model = User
@@ -153,8 +125,7 @@ class PerfilForm(forms.ModelForm):
         'nickname_exists': ("El nickname ya existe"),
     }
 
-    nickname = forms.CharField(label="Nickname", widget=forms.TextInput(
-        attrs={'class': 'form-control', 'placeholder': 'Nickname'}))
+    nickname = forms.CharField(label="Nickname", widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nickname'}))
     
     class Meta:
         model = Perfil
