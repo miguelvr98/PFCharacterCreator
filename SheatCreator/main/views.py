@@ -389,7 +389,7 @@ def editar_usuario(request):
                 usuario.save()
                 return redirect('mostrar_perfil_propio_url')
         else:
-            form_editar_username = EditarUsernameForm()
+            form_editar_username = EditarUsernameForm(instance=usuario)
         return render(request, 'perfil/edit.html', {'form_editar_username':form_editar_username})
     except:
         return redirect('error_url')
@@ -422,7 +422,7 @@ def editar_perfil(request):
             perfil.save()
             return redirect('mostrar_perfil_propio_url')
     else:
-        form_editar_perfil = PerfilForm()
+        form_editar_perfil = PerfilForm(instance=perfil)
     return render(request, 'perfil/edit.html', {'form_editar_perfil':form_editar_perfil})
 
 @login_required(login_url="/login/")
@@ -438,7 +438,7 @@ def gdpr(request):
     return render(request, 'gdpr.html')
 
 def index(request):
-    return render(request, 'index.html')
+    return redirect('login_url')
 
 def home(request):
     return render(request, 'index.html')
