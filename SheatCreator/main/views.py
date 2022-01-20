@@ -335,18 +335,40 @@ def registrar_usuario(request):
 
 @login_required(login_url="/login/")
 def crear_dote(request):
-    if request.method == 'POST':
-        form_dote = DoteForm(request.POST)
-        perfil = usuario_logueado(request)
-        if form_dote.is_valid():
-            dote = form_dote.save(commit=False)
-            dote.creador = perfil
-            dote.save()
+    try:
+        if request.method == 'POST':
+            form_dote = DoteForm(request.POST)
+            perfil = usuario_logueado(request)
+            if form_dote.is_valid():
+                dote = form_dote.save(commit=False)
+                dote.creador = perfil
+                dote.save()
 
-            return redirect('/dote/show/'+ str(dote.pk))
-    else:
-        form_dote = DoteForm()
-    return render(request, 'dote/create.html', {'form_dote':form_dote})
+                return redirect('/dote/show/'+ str(dote.pk))
+        else:
+            form_dote = DoteForm()
+        return render(request, 'dote/edit.html', {'form_dote':form_dote})
+    except:
+        return redirect('error_url')
+
+@login_required(login_url="/login/")
+def editar_dote(request, pk):
+    try:
+        dote = Dote.objects.get(pk=pk)
+        perfil = usuario_logueado(request)
+        assert dote.creador == perfil
+        if request.method == 'POST':
+            form_dote = DoteForm(request.POST, instance=dote)
+            perfil = usuario_logueado(request)
+            if form_dote.is_valid():
+                form_dote.save()
+
+                return redirect('/dote/show/'+ str(dote.pk))
+        else:
+            form_dote = DoteForm(instance=dote)
+        return render(request, 'dote/edit.html', {'form_dote':form_dote})
+    except:
+        return redirect('error_url')
 
 @login_required(login_url="/login/")
 def eliminar_dote(request, pk):
@@ -438,7 +460,7 @@ def gdpr(request):
     return render(request, 'gdpr.html')
 
 def index(request):
-    return redirect('login_url')
+    return render(request, 'index.html')
 
 def home(request):
     return render(request, 'index.html')
