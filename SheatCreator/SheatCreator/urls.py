@@ -64,4 +64,5 @@ urlpatterns = [
     path('perfil/edit/contrasena/', views.editar_contrasena, name='editar_contrasena_url'),
     path('perfil/edit/', views.editar_perfil, name='editar_perfil_url'),
     path('perfil/delete/', views.eliminar_usuario, name='eliminar_usuario_url'),
+    path('dote/search/', views.buscar_dote, name='buscar_dote_url'),
 ]

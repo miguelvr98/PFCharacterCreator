@@ -183,10 +183,27 @@ class DoteForm(forms.ModelForm):
 
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
-        print('Entra aqui')
         if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
             raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         
         if Dote.objects.exclude(pk=self.instance.pk).filter(nombre=nombre).exists():
-            raise forms.ValidationError(self.error_messages['nombre_exists'],code='nombre_exists',)
+            raise forms.ValidationError(self.error_messages['nombre_exists'],code='nombre_exists')
+        return nombre
+
+class BuscarDoteForm(forms.Form):
+
+    error_messages = {
+        'nombre_letters': ("El nombre solo puede contener letras"),
+    }
+    TIPO_CHOICES = (('General', 'General'), ('Combate', 'Combate'), ('Metamágica', 'Metamágica'), (None, '---------'), )
+
+    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+    tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=False, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
+    es_dote_companero_animal = forms.BooleanField(widget=forms.CheckboxInput(), required=False)
+
+    def clean_nombre(self):
+        nombre = self.cleaned_data.get('nombre')
+        if nombre is not None:
+            if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+                raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         return nombre

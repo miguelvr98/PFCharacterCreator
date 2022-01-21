@@ -43,7 +43,8 @@ def listar_razas(request):
 def listar_dotes(request):
     try:
         dotes = Dote.objects.all()
-        return render(request, 'dote/list.html', {'dotes':dotes})
+        buscador = BuscarDoteForm()
+        return render(request, 'dote/list.html', {'dotes':dotes, 'buscador':buscador})
     except:
         return redirect('error_url')
 
@@ -435,17 +436,20 @@ def editar_contrasena(request):
 
 @login_required(login_url="/login/")
 def editar_perfil(request):
-    perfil = usuario_logueado(request)
-    if request.method == 'POST':
-        form_editar_perfil = PerfilForm(request.POST)
-        if form_editar_perfil.is_valid():
-            nickname = form_editar_perfil.cleaned_data.get('nickname')
-            perfil.nickname = nickname
-            perfil.save()
-            return redirect('mostrar_perfil_propio_url')
-    else:
-        form_editar_perfil = PerfilForm(instance=perfil)
-    return render(request, 'perfil/edit.html', {'form_editar_perfil':form_editar_perfil})
+    try:
+        perfil = usuario_logueado(request)
+        if request.method == 'POST':
+            form_editar_perfil = PerfilForm(request.POST)
+            if form_editar_perfil.is_valid():
+                nickname = form_editar_perfil.cleaned_data.get('nickname')
+                perfil.nickname = nickname
+                perfil.save()
+                return redirect('mostrar_perfil_propio_url')
+        else:
+            form_editar_perfil = PerfilForm(instance=perfil)
+        return render(request, 'perfil/edit.html', {'form_editar_perfil':form_editar_perfil})
+    except:
+        return redirect('error_url')
 
 @login_required(login_url="/login/")
 def eliminar_usuario(request):
@@ -453,6 +457,29 @@ def eliminar_usuario(request):
         usuario = User.objects.get(pk=request.user.id)
         usuario.delete()
         return redirect('/login')
+    except:
+        return redirect('error_url')
+
+def buscar_dote(request):
+    try:
+        dotes = Dote.objects.all()
+        if request.method == 'POST':
+            buscador = BuscarDoteForm(request.POST)
+            if buscador.is_valid():
+                nombre = buscador.cleaned_data.get('nombre')
+                print(nombre)
+                tipo = buscador.cleaned_data.get('tipo')
+                es_dote_companero_animal = buscador.cleaned_data.get('es_dote_companero_animal')
+
+                if nombre != None and nombre != '':
+                    dotes = dotes.filter(nombre__icontains=nombre)
+                if tipo != '':
+                    dotes = dotes.filter(tipo=tipo)
+                if es_dote_companero_animal == True:
+                    dotes = dotes.filter(es_dote_companero_animal=True)
+        else:
+            buscador = BuscarDoteForm()
+        return render(request, 'dote/list.html', {'dotes':dotes, 'buscador':buscador})
     except:
         return redirect('error_url')
         

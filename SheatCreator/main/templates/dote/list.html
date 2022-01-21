@@ -1,4 +1,21 @@
 {% block content %}
+<div class="px-2">
+    <form  role="form"  enctype="multipart/form-data" action="/dote/search/" method="POST" id="upload-image-form"> 
+        {% csrf_token %}
+        <div class="text-center">Nombre</div>
+            {{buscador.nombre}}
+            <br>
+        <div class="text-center">Tipo</div>
+            {{buscador.tipo}}
+            <br>
+        <div class="text-center">¿Es dote de compañero animal?</div>
+            {{buscador.es_dote_companero_animal}}
+            <br>
+        <div class="text-center">
+            <button type="submit" class="btn btn-dark mr-2">Buscar</button>
+        </div>
+    </form>
+</div>
     {% for dote in dotes %}
         {{dote.nombre}}
     {% endfor %}

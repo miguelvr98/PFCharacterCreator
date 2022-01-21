@@ -3804,7 +3804,7 @@
             <object pk="364"></object>
         </field>
     </object>
-<!--DOTES-->
+<!--DOTES--> <!--FALTA PONER LAS DOTES DE COMPAÑERO ANIMAL-->
     <object pk="1" model="main.dote">
         <field type="CharField" name="nombre">Abstención de materiales</field>
         <field type="CharField" name="descripcion">Puedes lanzar cualquier conjuro con un costo en componentes materiales de una moneda de oro o menos sin necesidad de dicho componente. Lanzar el conjuro sigue provocando ataques de oportunidad de manera habitual. Si el conjuro requiere un componente material cuyo costo sea mayor de 1 mo, debes poseer el componente material a mano para lanzarlo, de la manera normal.</field>
@@ -3814,6 +3814,7 @@
         <field type="CharField" name="nombre">Acrobático</field>
         <field type="CharField" name="descripcion">Obtienes un bonificador de +2 en todas las pruebas de acrobacias y volar. Si tienes 10 o más rangos en una de estas habilidades, el bonificador se incrementa a +4 en esa habilidad.</field>
         <field type="CharField" name="tipo">General</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="3" model="main.dote">
         <field type="CharField" name="nombre">Afinidad con la piedra mejorada</field>
@@ -3831,6 +3832,7 @@
         <field type="CharField" name="nombre">Aguante</field>
         <field type="CharField" name="descripcion">Ganas un bonificador +4 en las siguientes pruebas y salvaciones: pruebas de nadar para resistir el daño no letal de la extenuación, pruebas para continuar corriendo, pruebas para evitar el daño no letal de una marcha forzada, pruebas para aguantar la respiración, pruebas para evitar el daño no letal del hambre o la sed, tiradas de salvación para evitar el daño no letal de ambientes calientes o fríos y tiradas de salvación para resistir el daño de la asfixia. Puedes dormir con armadura ligera o intermedia sin quedar fatigado.</field>
         <field type="CharField" name="tipo">General</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="6" model="main.dote">
         <field type="CharField" name="nombre">Alerta</field>
@@ -3859,6 +3861,7 @@
         <field type="CharField" name="nombre">Atlético</field>
         <field type="CharField" name="descripcion">Obtienes un bonificador +2 a las pruebas de habilidad de trepar y nadar. Si tienes 10 o más rangos en una de esas habilidades, el bonificador se incrementa a +4 en esa habilidad.</field>
         <field type="CharField" name="tipo">General</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="11" model="main.dote">
         <field type="CharField" name="nombre">Autosuficiente</field>
@@ -3919,11 +3922,13 @@
         <field type="CharField" name="nombre">Correr</field>
         <field type="CharField" name="descripcion">Cuando corres, te mueves cinco veces tu velocidad normal (si llevas armadura intermedia, ligera o sin armadura y no transportas más que una carga media) o cuatro veces tu velocidad (si llevas una armadura pesada o una carga pesada). Si haces un salto tras comenzar a correr ganas un bonificador +4 a tu pruebas de acrobacias. Mientras corres, puedes mantener tu bonificador de destreza a tu CA.</field>
         <field type="CharField" name="tipo">General</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="22" model="main.dote">
         <field type="CharField" name="nombre">Dureza</field>
         <field type="CharField" name="descripcion">Ganas 1 PG por nivel.</field>
         <field type="CharField" name="tipo">General</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="23" model="main.dote">
         <field type="CharField" name="nombre">Engañoso</field>
@@ -3952,6 +3957,7 @@
         <field type="CharField" name="nombre">Gran fortaleza</field>
         <field type="CharField" name="descripcion">Obtienes un bonificador de +2 a todas las tiradas de salvación de fortaleza.</field>
         <field type="CharField" name="tipo">General</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="28" model="main.dote">
         <field type="CharField" name="nombre">Gran fortaleza mejorada</field>
@@ -4039,6 +4045,7 @@
         <field type="CharField" name="nombre">Reflejos rápidos</field>
         <field type="CharField" name="descripcion">Obtienes un bonificador +2 a todos los tiros de salvación de reflejos.</field>
         <field type="CharField" name="tipo">General</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="42" model="main.dote">
         <field type="CharField" name="nombre">Reflejos rápidos mejorados</field>
@@ -4058,6 +4065,7 @@
         <field type="CharField" name="nombre">Sigiloso</field>
         <field type="CharField" name="descripcion">Recibes un bonificador +2 a todas las pruebas de escapismo y sigilo. Si tienes 10 o más rangos en alguna de esas habilidades, el bonificador aumenta a +4 para esa habilidad.</field>
         <field type="CharField" name="tipo">General</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="45" model="main.dote">
         <field type="CharField" name="nombre">Sociable</field>
@@ -4076,6 +4084,7 @@
         <field type="CharField" name="nombre">Voluntad de hierro</field>
         <field type="CharField" name="descripcion">Obtienes un bonificador +2 a los tiros de salvación de voluntad.</field>
         <field type="CharField" name="tipo">General</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="48" model="main.dote">
         <field type="CharField" name="nombre">Voluntad de hierro mejorada</field>
@@ -4123,6 +4132,7 @@
         <field type="CharField" name="nombre">Arrollar mejorado</field>
         <field type="CharField" name="descripcion">No provocas un ataque de oportunidad cuando realizas una maniobra de combate de arrollar. Además, recibes un bonificador +2 a las pruebas para arrollar a un enemigo. También recibes un bonificador +2 a tu DMC cada vez que un oponente intente arrollarte. Los objetivos de tu intento de arrollar no pueden elegir evitarte.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
         <field type="IntegerField" name="ataque_base">1</field>
         <field type="IntegerField" name="fuerza">13</field>
         <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
@@ -4180,12 +4190,14 @@
         <field type="CharField" name="nombre">Esquiva</field>
         <field type="CharField" name="descripcion">Obtienes un bonificador de esquiva de +1 a tu CA. Una situación que te haga perder tu bonificador de destreza a la CA también te hacer perder los beneficios de esta dote.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
         <field type="IntegerField" name="destreza">13</field>
     </object>
     <object pk="60" model="main.dote">
         <field type="CharField" name="nombre">Movilidad</field>
         <field type="CharField" name="descripcion">Obtienes un bonificador +4 de esquiva a la CA contra ataques de oportunidad causados cuando te mueves saliendo o entrando en un área amenazada. Una condición que te haga perder el bonificador de destreza a la CA también te hace perder los bonificadores de esquiva. Los bonificadores de esquiva se apilan con cualquier otro, a diferencia de la mayoría de otros bonificadores.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
         <field type="IntegerField" name="destreza">13</field>
         <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
             <object pk="59"></object>
@@ -4195,6 +4207,7 @@
         <field type="CharField" name="nombre">Ataque elástico</field>
         <field type="CharField" name="descripcion">Puedes moverte hasta el máximo de tu velocidad y hacer un único ataque cuerpo a cuerpo sin provotar ataques de oportunidad del objetivo al que estás atacando. Puedes moverte tanto antes como después del ataque, pero debes moverte al menos 3 metros antes del ataque y la distancia total no puede superar tu velocidad. No puedes usar esta aptitud para atacar a un enemigo que esté adyacente a ti al comienzo de tu turno.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
         <field type="IntegerField" name="destreza">13</field>
         <field type="IntegerField" name="ataque_base">4</field>
         <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
@@ -4297,16 +4310,19 @@
         <field type="CharField" name="nombre">Competencia con armadura intermedia</field>
         <field type="CharField" name="descripcion">Eres competente con todas las armaduras intermedias.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="73" model="main.dote">
         <field type="CharField" name="nombre">Competencia con armadura ligera</field>
         <field type="CharField" name="descripcion">Eres competente con todas las armaduras ligeras.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="74" model="main.dote">
         <field type="CharField" name="nombre">Competencia con armadura pesada</field>
         <field type="CharField" name="descripcion">Eres competente con todas las armaduras pesadas.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="75" model="main.dote">
         <field type="CharField" name="nombre">Competencia con escudos</field>
@@ -4477,6 +4493,7 @@
         <field type="CharField" name="nombre">Embestida mejorada</field>
         <field type="CharField" name="descripcion">No provocas un ataque de oportunidad cuando realizas una maniobra de combate de embestida. Además, recibes un bonificador +2 a las pruebas para embestir a un enemigo. También recibes un bonificador +2 a tu DMC cada vez que un oponente intente embestirte a ti.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
         <field type="IntegerField" name="fuerza">13</field>
         <field type="IntegerField" name="ataque_base">1</field>
         <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
@@ -4527,6 +4544,7 @@
         <field type="CharField" name="nombre">Maniobras ágiles</field>
         <field type="CharField" name="descripcion">Puedes añadir tu bonificador de destreza a tu bonificador de ataque base y tamaño cuando determines tu bonificador total de BMC en lugar de tu bonificador de fuerza.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="101" model="main.dote">
         <field type="CharField" name="nombre">Paso adelante</field>
@@ -4538,6 +4556,7 @@
         <field type="CharField" name="nombre">Poderío intimidante</field>
         <field type="CharField" name="descripcion">Suma tu modificador de fuerza a las pruebas de intimidar además de tu modificador de carisma.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="103" model="main.dote">
         <field type="CharField" name="nombre">Presa mejorada</field>
@@ -4563,6 +4582,7 @@
         <field type="CharField" name="nombre">Reflejos de combate</field>
         <field type="CharField" name="descripcion">Puedes hacer un número de ataques de oportunidad adicionales por asalto igual a tu bonificador de destreza. Con esta dote, además puedes hacer ataques de oportunidad aunque estés desprevenido.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="106" model="main.dote">
         <field type="CharField" name="nombre">Soltura con el escudo</field>
@@ -4631,6 +4651,7 @@
         <field type="CharField" name="nombre">Iniciativa mejorada</field>
         <field type="CharField" name="descripcion">Obtienes un bonificador +4 a las tiradas de iniciativa.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="118" model="main.dote">
         <field type="CharField" name="nombre">Aumentar convocación</field>
@@ -4667,6 +4688,7 @@
         <field type="CharField" name="nombre">Lucha a ciegas</field>
         <field type="CharField" name="descripcion">En combate cuerpo a cuerpo, cada vez que falles por culpa de la ocultación, puedes volver a tirar el porcentaje de posibilidad de fallo una vez para ver si consigues impactar. Un atacante invisible no tiene ventaja cuando te ataca en cuerpo a cuerpo. No pierdes tu bonificador de destreza a la CA y el atacante no obtiene el bonificador habitual de +2 por ser invisible. Sin embargo, los bonificadores a los ataques a distancia de un atacante invisible se siguen aplicando.</field>
         <field type="CharField" name="tipo">Combate</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
     </object>
     <object pk="123" model="main.dote">
         <field type="CharField" name="nombre">Combatir desde una montura</field>
@@ -4685,6 +4707,7 @@
         <field type="CharField" name="nombre">Duro de pelar</field>
         <field type="CharField" name="descripcion">Cuando tus puntos de golpe totales están por debajo de cero, pero no estás muerto, te estabilizas automáticamente.</field>
         <field type="CharField" name="tipo">General</field>
+        <field type="BooleanField" name="es_dote_companero_animal">True</field>
         <field to="main.dote" name="prerrequisito_dote" rel="ManyToManyRel">
             <object pk="5"></object>
         </field>
