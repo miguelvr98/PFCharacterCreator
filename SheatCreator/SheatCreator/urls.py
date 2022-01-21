@@ -65,4 +65,7 @@ urlpatterns = [
     path('perfil/edit/', views.editar_perfil, name='editar_perfil_url'),
     path('perfil/delete/', views.eliminar_usuario, name='eliminar_usuario_url'),
     path('dote/search/', views.buscar_dote, name='buscar_dote_url'),
+    path('poder/search/<int:pk>/', views.buscar_poder, name='buscar_poder_url'),
+    path('conjuro/search/<int:pk>/', views.buscar_conjuro, name='buscar_conjuro_url'),
+    path('personaje/search/', views.buscar_personaje, name='buscar_personaje_url'),
 ]

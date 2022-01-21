@@ -117,7 +117,8 @@ def listar_objetos(request):
 def listar_personajes_publicos(request):
     try:
         personajes = Personaje.objects.all().filter(es_publico=True)
-        return render(request, 'personaje/list.html', {'personajes':personajes})
+        buscador = BuscarPersonajeForm()
+        return render(request, 'personaje/list.html', {'personajes':personajes, 'buscador':buscador})
     except:
         return redirect('error_url')
 
@@ -126,7 +127,8 @@ def listar_personajes_propios(request):
     try:
         perfil = usuario_logueado(request)
         personajes = Personaje.objects.all().filter(perfil=perfil)
-        return render(request, 'personaje/list.html', {'personajes':personajes})
+        buscador = BuscarPersonajeForm()
+        return render(request, 'personaje/list.html', {'personajes':personajes, 'buscador':buscador})
     except:
         redirect('error_url')
 
@@ -135,7 +137,8 @@ def listar_poderes_por_clase(request, pk):
         clase = Clase.objects.get(pk=pk)
         assert clase.nivel == 0
         poderes = clase.poderes.all()
-        return render(request, 'poder/list.html', {'poderes':poderes})
+        buscador = BuscarPoderForm()
+        return render(request, 'poder/list.html', {'poderes':poderes, 'buscador':buscador, 'pk':pk})
     except:
         return redirect('error_url')
 
@@ -153,7 +156,8 @@ def listar_conjuros_por_clase(request, pk):
         clase = Clase.objects.get(pk=pk)
         assert clase.nivel == 0
         conjuros = clase.conjuros.all()
-        return render(request, 'conjuro/list.html', {'conjuros':conjuros})
+        buscador = BuscarConjuroForm()
+        return render(request, 'conjuro/list.html', {'conjuros':conjuros, 'buscador':buscador, 'pk':pk})
     except:
         return redirect('error_url')
 
@@ -467,7 +471,6 @@ def buscar_dote(request):
             buscador = BuscarDoteForm(request.POST)
             if buscador.is_valid():
                 nombre = buscador.cleaned_data.get('nombre')
-                print(nombre)
                 tipo = buscador.cleaned_data.get('tipo')
                 es_dote_companero_animal = buscador.cleaned_data.get('es_dote_companero_animal')
 
@@ -480,6 +483,73 @@ def buscar_dote(request):
         else:
             buscador = BuscarDoteForm()
         return render(request, 'dote/list.html', {'dotes':dotes, 'buscador':buscador})
+    except:
+        return redirect('error_url')
+
+def buscar_poder(request, pk):
+    try:
+        clase = Clase.objects.get(pk=pk)
+        assert clase.nivel == 0
+        poderes = clase.poderes.all()
+        if request.method == 'POST':
+            buscador = BuscarPoderForm(request.POST)
+            if buscador.is_valid():
+                nombre = buscador.cleaned_data.get('nombre')
+
+                if nombre != None and nombre != '':
+                    poderes = poderes.filter(nombre__icontains=nombre)
+        else:
+            buscador = BuscarPoderForm()
+        return render(request, 'poder/list.html', {'poderes':poderes, 'buscador':buscador, 'pk':pk})
+    except:
+        return redirect('error_url')
+
+def buscar_conjuro(request, pk):
+    try:
+        clase = Clase.objects.get(pk=pk)
+        assert clase.nivel == 0
+        conjuros = clase.conjuros.all()
+        if request.method == 'POST':
+            buscador = BuscarConjuroForm(request.POST)
+            if buscador.is_valid():
+                nombre = buscador.cleaned_data.get('nombre')
+                nivel = buscador.cleaned_data.get('nivel')
+
+                if nombre != None and nombre != '':
+                    conjuros = conjuros.filter(nombre__icontains=nombre)
+                
+                if nivel != None:
+                    conjuros = conjuros.filter(nivel=nivel)
+        else:
+            buscador = BuscarConjuroForm()
+        return render(request, 'conjuro/list.html', {'conjuros':conjuros, 'buscador':buscador, 'pk':pk})
+    except:
+        return redirect('error_url')
+
+def buscar_personaje(request):
+    try:
+        personajes = Personaje.objects.all()
+        if request.user.is_authenticated:
+            perfil = usuario_logueado(request)
+            personajes_aux = personajes.filter(perfil=perfil)
+        else:
+            personajes = personajes.filter().exclude(es_publico=False)
+        if request.method == 'POST':
+            buscador = BuscarPersonajeForm(request.POST)
+            if buscador.is_valid():
+                nombre = buscador.cleaned_data.get('nombre')
+                clase = buscador.cleaned_data.get('clase')
+                personajes = personajes | personajes_aux
+
+                if nombre != None and nombre != '':
+                    personajes = personajes.filter(nombre__icontains=nombre)
+                
+                if clase != None:
+                    clases = Clase.objects.all().filter(clase=clase.clase)
+                    personajes = personajes.filter(clases__in=clases)
+        else:
+            buscador = BuscarPersonajeForm()
+        return render(request, 'personaje/list.html', {'personajes':personajes, 'buscador':buscador})
     except:
         return redirect('error_url')
         

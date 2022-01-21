@@ -207,3 +207,50 @@ class BuscarDoteForm(forms.Form):
             if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
                 raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         return nombre
+
+class BuscarPoderForm(forms.Form):
+
+    error_messages = {
+        'nombre_letters': ("El nombre solo puede contener letras"),
+    }
+
+    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+
+    def clean_nombre(self):
+        nombre = self.cleaned_data.get('nombre')
+        if nombre is not None:
+            if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+                raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
+        return nombre
+
+class BuscarConjuroForm(forms.Form):
+
+    error_messages = {
+        'nombre_letters': ("El nombre solo puede contener letras"),
+    }
+
+    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+    nivel = forms.IntegerField(label='Nivel', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Nivel', 'min':0, 'max':9}))
+
+    def clean_nombre(self):
+        nombre = self.cleaned_data.get('nombre')
+        if nombre is not None:
+            if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+                raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
+        return nombre
+
+class BuscarPersonajeForm(forms.Form):
+
+    error_messages = {
+        'nombre_letters': ("El nombre solo puede contener letras"),
+    }
+
+    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+    clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=0), widget=forms.Select(), required=False)
+
+    def clean_nombre(self):
+        nombre = self.cleaned_data.get('nombre')
+        if nombre is not None:
+            if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+                raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
+        return nombre
