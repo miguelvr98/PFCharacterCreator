@@ -254,3 +254,27 @@ class BuscarPersonajeForm(forms.Form):
             if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
                 raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         return nombre
+
+class PersonajeForm(forms.ModelForm):
+
+    error_messages = {
+        'nombre_letters': ("El nombre solo puede contener letras"),
+    }
+
+    #Este esta hecho por si no funciona el de models.
+    TIPO_CHOICES = (('Estándar', 'Estándar'), ('Alta fantasía', 'Alta fantasía'), ('Épica', 'Épica'), )
+
+    nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+    tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
+    raza = forms.ModelChoiceField(queryset=Raza.objects, widget=forms.Select(), required=True)
+
+    class Meta:
+        model = Personaje
+        fields = ('nombre', 'raza')
+
+    def clean_nombre(self):
+        nombre = self.cleaned_data.get('nombre')
+        if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+            raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
+        
+        return nombre

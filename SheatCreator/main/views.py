@@ -552,6 +552,28 @@ def buscar_personaje(request):
         return render(request, 'personaje/list.html', {'personajes':personajes, 'buscador':buscador})
     except:
         return redirect('error_url')
+
+#Este método está planteado pero hay que hacerlo bien
+@login_required(login_url="/login/")
+def crear_personaje_1(request):
+    try:
+        perfil = usuario_logueado(request)
+        puntos_a_elegir = 15
+        if request.method == 'POST':
+            formulario = PersonajeForm(request.POST)
+            if formulario.is_valid():
+                tipo = formulario.cleaned_data.get('tipo')
+                if tipo == 'Alta fantasía':
+                    puntos_a_elegir = 20
+                elif tipo == 'Épica':
+                    puntos_a_elegir = 25
+                formulario_paso_2 = PersonajeForm2()
+                return render(request, 'personaje/paso2.html', {'formulario':formulario, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
+        else:
+            formulario = PersonajeForm():
+        return render(request, 'personaje/paso1.html', {'formulario':formulario})
+    except:
+        return redirect('error_url')
         
 def gdpr(request):
     return render(request, 'gdpr.html')
