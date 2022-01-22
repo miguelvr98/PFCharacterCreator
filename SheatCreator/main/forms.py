@@ -278,3 +278,22 @@ class PersonajeForm(forms.ModelForm):
             raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         
         return nombre
+
+class PersonajeForm2(forms.ModelForm):
+
+    error_messages = {
+        'nombre_letters': ("El nombre solo puede contener letras"),
+    }
+
+    nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+
+    class Meta:
+        model = Personaje
+        fields = ('nombre', )
+
+    def clean_nombre(self):
+        nombre = self.cleaned_data.get('nombre')
+        if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+            raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
+        
+        return nombre

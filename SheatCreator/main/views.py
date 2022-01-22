@@ -570,8 +570,19 @@ def crear_personaje_1(request):
                 formulario_paso_2 = PersonajeForm2()
                 return render(request, 'personaje/paso2.html', {'formulario':formulario, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
         else:
-            formulario = PersonajeForm():
+            formulario = PersonajeForm()
         return render(request, 'personaje/paso1.html', {'formulario':formulario})
+    except:
+        return redirect('error_url')
+
+def crear_personaje_2(request):
+    try:
+        if request.method == 'POST':
+            formulario_paso_1 = PersonajeForm(request.POST)
+            formulario_paso_2 = PersonajeForm2(request.POST)
+            if formulario_paso_2.is_valid() and formulario_paso_1.is_valid():
+                nombre = formulario_paso_2.cleaned_data.get('nombre')
+            return render(request, 'personaje/paso2.html', {'formulario_paso_1':formulario_paso_1, 'formulario_paso_2':formulario_paso_2})
     except:
         return redirect('error_url')
         
