@@ -562,29 +562,39 @@ def crear_personaje_1(request):
         if request.method == 'POST':
             formulario = PersonajeForm(request.POST)
             if formulario.is_valid():
+                nombre = formulario.cleaned_data.get('nombre')
+                raza = formulario.cleaned_data.get('raza')
+                clase = formulario.cleaned_data.get('clase')
                 tipo = formulario.cleaned_data.get('tipo')
                 if tipo == 'Alta fantasía':
                     puntos_a_elegir = 20
                 elif tipo == 'Épica':
                     puntos_a_elegir = 25
                 formulario_paso_2 = PersonajeForm2()
-                return render(request, 'personaje/paso2.html', {'formulario':formulario, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
+                return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
         else:
             formulario = PersonajeForm()
         return render(request, 'personaje/paso1.html', {'formulario':formulario})
     except:
         return redirect('error_url')
 
+#Falta redirigir al crear_personaje_3 (elección de dotes)
 def crear_personaje_2(request):
-    try:
-        if request.method == 'POST':
-            formulario_paso_1 = PersonajeForm(request.POST)
-            formulario_paso_2 = PersonajeForm2(request.POST)
-            if formulario_paso_2.is_valid() and formulario_paso_1.is_valid():
-                nombre = formulario_paso_2.cleaned_data.get('nombre')
-            return render(request, 'personaje/paso2.html', {'formulario_paso_1':formulario_paso_1, 'formulario_paso_2':formulario_paso_2})
-    except:
-        return redirect('error_url')
+    if request.method == 'POST':
+        formulario_paso_2 = PersonajeForm2(request.POST)
+        nombre = request.POST.get('nombre')
+        raza = request.POST.get('raza')
+        clase = request.POST.get('clase')
+        puntos_a_elegir = request.POST.get('puntos_a_elegir')
+        if formulario_paso_2.is_valid():
+            fuerza = formulario_paso_2.cleaned_data.get('fuerza')
+            destreza = formulario_paso_2.cleaned_data.get('destreza')
+            constitucion = formulario_paso_2.cleaned_data.get('constitucion')
+            inteligencia = formulario_paso_2.cleaned_data.get('inteligencia')
+            sabiduria = formulario_paso_2.cleaned_data.get('sabiduria')
+            carisma = formulario_paso_2.cleaned_data.get('carisma')
+            return redirect('listar_personajes_propios_url')
+    return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
         
 def gdpr(request):
     return render(request, 'gdpr.html')

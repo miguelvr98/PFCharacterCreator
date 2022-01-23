@@ -267,6 +267,7 @@ class PersonajeForm(forms.ModelForm):
     nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
     tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
     raza = forms.ModelChoiceField(queryset=Raza.objects, widget=forms.Select(), required=True)
+    clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=0), widget=forms.Select(), required=True)
 
     class Meta:
         model = Personaje
@@ -281,19 +282,13 @@ class PersonajeForm(forms.ModelForm):
 
 class PersonajeForm2(forms.ModelForm):
 
-    error_messages = {
-        'nombre_letters': ("El nombre solo puede contener letras"),
-    }
-
-    nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+    fuerza = forms.IntegerField(label='Fuerza', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Fuerza', 'min':7, 'max':18}))
+    destreza = forms.IntegerField(label='Destreza', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Destreza', 'min':7, 'max':18}))
+    constitucion = forms.IntegerField(label='Constitucion', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Constitución', 'min':7, 'max':18}))
+    inteligencia = forms.IntegerField(label='Inteligencia', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Inteligencia', 'min':7, 'max':18}))
+    sabiduria = forms.IntegerField(label='Sabiduria', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Sabiduría', 'min':7, 'max':18}))
+    carisma = forms.IntegerField(label='Carisma', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Carisma', 'min':7, 'max':18}))
 
     class Meta:
         model = Personaje
-        fields = ('nombre', )
-
-    def clean_nombre(self):
-        nombre = self.cleaned_data.get('nombre')
-        if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
-            raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
-        
-        return nombre
+        fields = ('fuerza', 'destreza', 'constitucion', 'inteligencia', 'sabiduria', 'carisma', )

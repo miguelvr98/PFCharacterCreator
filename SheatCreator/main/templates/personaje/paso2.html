@@ -16,9 +16,28 @@
                 <div class="px-2">
                     <form  role="form"  enctype="multipart/form-data" action="/personaje/create/2/" method="POST" id="upload-image-form"> 
                         {% csrf_token %}
-                        <div class="text-center">Nombre</div>
-                            {{formulario_paso_2.nombre}}
+                        <div class="text-center">Fuerza</div>
+                            {{formulario_paso_2.fuerza}}
                             <br>
+                        <div class="text-center">Destreza</div>
+                            {{formulario_paso_2.destreza}}
+                            <br>
+                        <div class="text-center">Constitución</div>
+                            {{formulario_paso_2.constitucion}}
+                            <br>
+                        <div class="text-center">Inteligencia</div>
+                            {{formulario_paso_2.inteligencia}}
+                            <br>
+                        <div class="text-center">Sabiduría</div>
+                            {{formulario_paso_2.sabiduria}}
+                            <br>
+                        <div class="text-center">Carisma</div>
+                            {{formulario_paso_2.carisma}}
+                            <br>
+                        <input type="hidden" id="nombre" name="nombre" value="{{nombre}}">
+                        <input type="hidden" id="puntos_a_elegir" name="puntos_a_elegir" value="{{puntos_a_elegir}}">
+                        <input type="hidden" id="raza" name="raza" value="{{raza}}">
+                        <input type="hidden" id="clase" name="clase" value="{{clase}}">
                         <div class="text-center">
                             <button type='submit' class="btn btn-primary btn-dark">Siguiente</button>
                         </div>

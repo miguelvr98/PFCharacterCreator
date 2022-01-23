@@ -69,5 +69,5 @@ urlpatterns = [
     path('conjuro/search/<int:pk>/', views.buscar_conjuro, name='buscar_conjuro_url'),
     path('personaje/search/', views.buscar_personaje, name='buscar_personaje_url'),
     path('personaje/create/', views.crear_personaje_1, name='crear_personaje_1_url'),
-    path('personaje/create/2', views.crear_personaje_2, name='crear_personaje_2_url'),
+    path('personaje/create/2/', views.crear_personaje_2, name='crear_personaje_2_url'),
 ]
