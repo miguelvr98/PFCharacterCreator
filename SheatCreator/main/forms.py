@@ -175,7 +175,7 @@ class DoteForm(forms.ModelForm):
     carisma = forms.IntegerField(label='Carisma', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Carisma', 'min':1}))
     es_dote_companero_animal = forms.BooleanField(widget=forms.CheckboxInput(), required=False)
     prerrequisito_raza = forms.ModelChoiceField(queryset=Raza.objects, widget=forms.Select(), required=False)
-    prerrequisito_dote = forms.ModelMultipleChoiceField(queryset=Dote.objects, widget=forms.CheckboxSelectMultiple(), required=False)
+    prerrequisito_dote = forms.ModelMultipleChoiceField(queryset=Dote.objects, widget=forms.SelectMultiple(), required=False)
 
     class Meta:
         model = Dote
@@ -259,6 +259,7 @@ class PersonajeForm(forms.ModelForm):
 
     error_messages = {
         'nombre_letters': ("El nombre solo puede contener letras"),
+        'caracteristica_choice_error': ('Debes elegir una característica por escoger humano como raza'),
     }
 
     #Este esta hecho por si no funciona el de models.
@@ -267,7 +268,7 @@ class PersonajeForm(forms.ModelForm):
     nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
     tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
     raza = forms.ModelChoiceField(queryset=Raza.objects, widget=forms.Select(), required=True)
-    clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=0), widget=forms.Select(), required=True)
+    clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=1), widget=forms.Select(), required=True)
 
     class Meta:
         model = Personaje
@@ -277,10 +278,15 @@ class PersonajeForm(forms.ModelForm):
         nombre = self.cleaned_data.get('nombre')
         if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
             raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
-        
         return nombre
 
 class PersonajeForm2(forms.ModelForm):
+
+    error_messages = {
+        'caracteristica_choice_error': ('Debes elegir una característica por escoger humano como raza'),
+    }
+
+    CARACTERISTICA_CHOICES = (('Fuerza', 'Fuerza'), ('Destreza', 'Destreza'), ('Constitucion', 'Constitución'), ('Inteligencia', 'Inteligencia'), ('Sabiduria', 'Sabiduría'), ('Carisma', 'Carisma'), )
 
     fuerza = forms.IntegerField(label='Fuerza', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Fuerza', 'min':7, 'max':18}))
     destreza = forms.IntegerField(label='Destreza', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Destreza', 'min':7, 'max':18}))
@@ -288,7 +294,53 @@ class PersonajeForm2(forms.ModelForm):
     inteligencia = forms.IntegerField(label='Inteligencia', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Inteligencia', 'min':7, 'max':18}))
     sabiduria = forms.IntegerField(label='Sabiduria', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Sabiduría', 'min':7, 'max':18}))
     carisma = forms.IntegerField(label='Carisma', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Carisma', 'min':7, 'max':18}))
+    caracteristica_choice = forms.ChoiceField(choices=CARACTERISTICA_CHOICES, widget=forms.Select(), required=False)
 
     class Meta:
         model = Personaje
         fields = ('fuerza', 'destreza', 'constitucion', 'inteligencia', 'sabiduria', 'carisma', )
+    
+    def clean_caracteristica_choice(self):
+        raza = self.raza
+        humano = Raza.objects.get(raza='Humano')
+        caracteristica_choice = self.cleaned_data.get('caracteristica_choice')
+        if raza == humano and not caracteristica_choice:
+            raise forms.ValidationError(self.error_messages['caracteristica_choice_error'], code='caracteristica_choice_error')
+        return caracteristica_choice
+
+    def __init__(self, *args, **kwargs):
+        raza = kwargs.pop('raza')
+        super(PersonajeForm2, self).__init__(*args, **kwargs)
+        self.raza = Raza.objects.get(raza=raza)
+
+class PersonajeForm3(forms.ModelForm):
+
+    error_messages = {
+        'dote_max_value': ("Solo puedes elegir una dote (o 2 si la raza del personaje es humano)"),
+        'dote_prerrequisito_raza': ('El personaje no es de la raza que puede aprender esta dote'),
+    }
+
+    dotes = forms.ModelMultipleChoiceField(queryset=Dote.objects, widget=forms.SelectMultiple(), required=True)
+
+    def __init__(self, *args, **kwargs):
+        raza = kwargs.pop('raza')
+        super(PersonajeForm3, self).__init__(*args, **kwargs)
+        self.raza = Raza.objects.get(raza=raza)
+
+    class Meta:
+        model = Personaje
+        fields = ('dotes', )
+    
+    def clean_dotes(self):
+        dotes = self.cleaned_data.get('dotes')
+        numero_dotes = 1
+        humano = Raza.objects.get(raza='Humano')
+        if self.raza == humano:
+            numero_dotes = 2
+        if len(dotes) != numero_dotes:
+            raise forms.ValidationError(self.error_messages['dote_max_value'], code='dote_max_value')
+        for dote in dotes:
+            if dote.prerrequisito_raza and dote.prerrequisito_raza != self.raza:
+                raise forms.ValidationError(self.error_messages['dote_prerrequisito_raza'], code='dote_prerrequisito_raza')
+        return dotes
+        

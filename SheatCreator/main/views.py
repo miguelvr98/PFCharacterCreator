@@ -553,7 +553,7 @@ def buscar_personaje(request):
     except:
         return redirect('error_url')
 
-#Este método está planteado pero hay que hacerlo bien
+#Elección de puntos, nombre, raza y clase
 @login_required(login_url="/login/")
 def crear_personaje_1(request):
     try:
@@ -570,7 +570,7 @@ def crear_personaje_1(request):
                     puntos_a_elegir = 20
                 elif tipo == 'Épica':
                     puntos_a_elegir = 25
-                formulario_paso_2 = PersonajeForm2()
+                formulario_paso_2 = PersonajeForm2(raza=raza)
                 return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
         else:
             formulario = PersonajeForm()
@@ -578,23 +578,75 @@ def crear_personaje_1(request):
     except:
         return redirect('error_url')
 
-#Falta redirigir al crear_personaje_3 (elección de dotes)
+#Elección de puntos de características
 def crear_personaje_2(request):
     if request.method == 'POST':
-        formulario_paso_2 = PersonajeForm2(request.POST)
+        raza = Raza.objects.get(raza=request.POST.get('raza'))
+        formulario_paso_2 = PersonajeForm2(request.POST, raza=raza)
         nombre = request.POST.get('nombre')
-        raza = request.POST.get('raza')
         clase = request.POST.get('clase')
         puntos_a_elegir = request.POST.get('puntos_a_elegir')
         if formulario_paso_2.is_valid():
+            caracteristica_choice = formulario_paso_2.cleaned_data.get('caracteristica_choice')
             fuerza = formulario_paso_2.cleaned_data.get('fuerza')
             destreza = formulario_paso_2.cleaned_data.get('destreza')
             constitucion = formulario_paso_2.cleaned_data.get('constitucion')
             inteligencia = formulario_paso_2.cleaned_data.get('inteligencia')
             sabiduria = formulario_paso_2.cleaned_data.get('sabiduria')
             carisma = formulario_paso_2.cleaned_data.get('carisma')
-            return redirect('listar_personajes_propios_url')
-    return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
+            if caracteristica_choice:
+                fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
+            else:
+                fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
+            formulario_paso_3 = PersonajeForm3(raza=raza)
+            return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3})
+    return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
+
+def modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma):
+    if caracteristica_choice == 'Fuerza':
+        fuerza = fuerza + 2
+    elif caracteristica_choice == 'Destreza':
+        destreza == destreza + 2
+    elif caracteristica_choice == 'Constitucion':
+        constitucion = constitucion + 2
+    elif caracteristica_choice == 'Inteligencia':
+        inteligencia = inteligencia + 2
+    elif caracteristica_choice == 'Sabiduria':
+        sabiduria = sabiduria + 2
+    elif caracteristica_choice == 'Carisma':
+        carisma = carisma + 2
+    return fuerza, destreza, constitucion, inteligencia, sabiduria, carisma
+
+def modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma):
+    fuerza = fuerza + raza.fuerza
+    destreza = destreza + raza.fuerza
+    constitucion = constitucion + raza.constitucion
+    inteligencia = inteligencia + raza.inteligencia
+    sabiduria = sabiduria + raza.sabiduria
+    carisma = carisma + raza.carisma
+    return fuerza, destreza, constitucion, inteligencia, sabiduria, carisma
+
+#Elección de dotes (hay que filtrar y validar mejor las dotes) ¿Quizas añadir aqui elección de linaje y conjuros y poderes?
+def crear_personaje_3(request):
+    try:
+        if request.method == 'POST':
+            nombre = request.POST.get('nombre')
+            raza = request.POST.get('raza')
+            formulario_paso_3 = PersonajeForm3(request.POST, raza=raza)
+            clase = request.POST.get('clase')
+            fuerza = request.POST.get('fuerza')
+            destreza = request.POST.get('destreza')
+            constitucion = request.POST.get('constitucion')
+            inteligencia = request.POST.get('inteligencia')
+            sabiduria = request.POST.get('sabiduria')
+            carisma = request.POST.get('carisma')
+            if formulario_paso_3.is_valid():
+                dotes = formulario_paso_3.cleaned_data.get('dotes')
+                return redirect('listar_personajes_propios_url')
+        return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3})
+    except:
+        return redirect('error_url')
+
         
 def gdpr(request):
     return render(request, 'gdpr.html')

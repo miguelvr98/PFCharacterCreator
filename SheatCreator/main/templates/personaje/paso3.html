@@ -1,0 +1,41 @@
+{% block content %}
+<div class="bottom-footer">
+    <div class="container">
+      <div class="row">
+          <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto ">
+                <h1 class="display-4 py-2 text-center">Crear personaje</h1>
+                {% if formulario_paso_3.errors %}
+                    {% for field in formulario_paso_3 %}
+                        {% for error in field.errors %}
+                            <div class="alert alert-danger">
+                                {{error}}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+                <div class="px-2">
+                    <form  role="form"  enctype="multipart/form-data" action="/personaje/create/3/" method="POST" id="upload-image-form"> 
+                        {% csrf_token %}
+                        <div class="text-center">Dotes</div>
+                            {{formulario_paso_3.dotes}}
+                            <br>
+                        <input type="hidden" id="nombre" name="nombre" value="{{nombre}}">
+                        <input type="hidden" id="puntos_a_elegir" name="puntos_a_elegir" value="{{puntos_a_elegir}}">
+                        <input type="hidden" id="raza" name="raza" value="{{raza}}">
+                        <input type="hidden" id="clase" name="clase" value="{{clase}}">
+                        <input type="hidden" id="clase" name="fuerza" value="{{fuerza}}">
+                        <input type="hidden" id="clase" name="destreza" value="{{destreza}}">
+                        <input type="hidden" id="clase" name="constitucion" value="{{constitucion}}">
+                        <input type="hidden" id="clase" name="inteligencia" value="{{inteligencia}}">
+                        <input type="hidden" id="clase" name="sabiduria" value="{{sabiduria}}">
+                        <input type="hidden" id="clase" name="carisma" value="{{carisma}}">
+                        <div class="text-center">
+                            <button type='submit' class="btn btn-primary btn-dark">Siguiente</button>
+                        </div>
+                    </form>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
