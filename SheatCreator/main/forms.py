@@ -320,12 +320,14 @@ class PersonajeForm3(forms.ModelForm):
         'dote_prerrequisito_raza': ('El personaje no es de la raza que puede aprender esta dote'),
     }
 
-    dotes = forms.ModelMultipleChoiceField(queryset=Dote.objects, widget=forms.SelectMultiple(), required=True)
-
     def __init__(self, *args, **kwargs):
         raza = kwargs.pop('raza')
         super(PersonajeForm3, self).__init__(*args, **kwargs)
         self.raza = Raza.objects.get(raza=raza)
+        queryset1 = Dote.objects.all().filter(prerrequisito_raza=raza)
+        queryset2 = Dote.objects.all().filter(prerrequisito_raza=None)
+        self.fields['dotes'].queryset = queryset1 | queryset2
+        self.fields['dotes'].required = True
 
     class Meta:
         model = Personaje

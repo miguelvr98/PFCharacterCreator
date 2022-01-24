@@ -631,7 +631,7 @@ def crear_personaje_3(request):
     try:
         if request.method == 'POST':
             nombre = request.POST.get('nombre')
-            raza = request.POST.get('raza')
+            raza = Raza.objects.get(raza=request.POST.get('raza'))
             formulario_paso_3 = PersonajeForm3(request.POST, raza=raza)
             clase = request.POST.get('clase')
             fuerza = request.POST.get('fuerza')
