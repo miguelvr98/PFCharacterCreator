@@ -601,8 +601,10 @@ def crear_personaje_2(request):
                     fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
                 else:
                     fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
-                formulario_paso_3 = PersonajeForm3(raza=raza, clase=clase)
-                return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3})
+                formulario_paso_3 = PersonajeForm3(raza=raza, clase=clase, inteligencia=inteligencia)
+                clase_nivel_0 = Clase.objects.get(clase=request.POST.get('clase'), nivel=0)
+                numero_habilidades_eleccion = clase_nivel_0.puntos_de_habilidad_por_nivel + int((inteligencia-10)/2)
+                return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion})
         return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir, 'alineamiento':alineamiento})
     except:
         return redirect('error_url')
@@ -631,30 +633,31 @@ def modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia
     carisma = carisma + raza.carisma
     return fuerza, destreza, constitucion, inteligencia, sabiduria, carisma
 
-#Elección de dotes y linaje hay que reenviar al paso 4 (elección de habilidades o elección de compañero animal)
+#Elección de dotes y linaje hay que reenviar al paso 4 (elección de habilidades o meterlas en este) ¿Quizás hacer las habilidades haciendo que escojan x y esas suben 1 punto?
 def crear_personaje_3(request):
     try:
         if request.method == 'POST':
             nombre = request.POST.get('nombre')
             raza = Raza.objects.get(raza=request.POST.get('raza'))
             clase = Clase.objects.get(nivel=1, clase=request.POST.get('clase'))
-            formulario_paso_3 = PersonajeForm3(request.POST, raza=raza, clase=clase)
+            inteligencia = request.POST.get('inteligencia')
+            formulario_paso_3 = PersonajeForm3(request.POST, raza=raza, clase=clase, inteligencia=inteligencia)
             alineamiento = request.POST.get('alineamiento')
             fuerza = request.POST.get('fuerza')
             destreza = request.POST.get('destreza')
             constitucion = request.POST.get('constitucion')
-            inteligencia = request.POST.get('inteligencia')
             sabiduria = request.POST.get('sabiduria')
             carisma = request.POST.get('carisma')
+            numero_habilidades_eleccion = request.POST.get('numero_habilidades_eleccion')
             if formulario_paso_3.is_valid():
                 dotes = formulario_paso_3.cleaned_data.get('dotes')
                 linaje = formulario_paso_3.cleaned_data.get('linaje')
+                habilidades = formulario_paso_3.cleaned_data.get('habilidades')
                 formulario_paso_4 = PersonajeForm4()
-                return render(request, 'personaje/paso4.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'dotes':dotes, 'linaje':linaje, 'formulario_paso_4':formulario_paso_4})
-        return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3})
+                return render(request, 'personaje/paso4.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'dotes':dotes, 'linaje':linaje, 'habilidades':habilidades, 'formulario_paso_4':formulario_paso_4})
+        return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion})
     except:
         return redirect('error_url')
-
         
 def gdpr(request):
     return render(request, 'gdpr.html')

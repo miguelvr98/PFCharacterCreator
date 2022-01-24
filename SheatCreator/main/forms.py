@@ -320,17 +320,21 @@ class PersonajeForm3(forms.ModelForm):
     error_messages = {
         'dote_max_value': ("Solo puedes elegir una dote, 1 dote extra por ser humano y 1 dote extra al escoger el guerrero o monje"),
         'dote_prerrequisito_raza': ('El personaje no es de la raza que puede aprender esta dote'),
-        'linaje_choice': ('Debes elegir un linaje por escoger el hechicero como clase')
+        'linaje_choice': ('Debes elegir un linaje por escoger el hechicero como clase'),
+        'habilidades_number': ('No ha elegido el número de habilidades correcto'),
     }
 
     linaje = forms.ModelChoiceField(queryset=Linaje.objects, widget=forms.Select(), required=False)
+    habilidades = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.SelectMultiple(), required=True)
 
     def __init__(self, *args, **kwargs):
         raza = kwargs.pop('raza')
         clase = kwargs.pop('clase')
+        inteligencia = kwargs.pop('inteligencia')
         super(PersonajeForm3, self).__init__(*args, **kwargs)
         self.raza = Raza.objects.get(raza=raza)
         self.clase = Clase.objects.get(clase=clase, nivel=1)
+        self.inteligencia = inteligencia
         queryset1 = Dote.objects.all().filter(prerrequisito_raza=raza)
         queryset2 = Dote.objects.all().filter(prerrequisito_raza=None).filter(nivel=None).filter(ataque_base=None).filter(prerrequisito_dote=None)
         self.fields['dotes'].queryset = queryset1 | queryset2
@@ -356,6 +360,17 @@ class PersonajeForm3(forms.ModelForm):
             if dote.prerrequisito_raza and dote.prerrequisito_raza != self.raza:
                 raise forms.ValidationError(self.error_messages['dote_prerrequisito_raza'], code='dote_prerrequisito_raza')
         return dotes
+    
+    def clean_habilidades(self):
+        habilidades = self.cleaned_data.get('habilidades')
+        clase = Clase.objects.get(clase=self.clase.clase, nivel=0)
+        numero_habilidades_eleccion = clase.puntos_de_habilidad_por_nivel
+        inteligencia = int(self.inteligencia)
+        bonificador_inteligencia = (inteligencia-10)/2
+        numero_habilidades_eleccion = numero_habilidades_eleccion + bonificador_inteligencia
+        if numero_habilidades_eleccion != len(habilidades):
+            raise forms.ValidationError(self.error_messages['habilidades_number'], code='habilidades_number')
+        return habilidades
     
     def clean_linaje(self):
         linaje = self.cleaned_data.get('linaje')
