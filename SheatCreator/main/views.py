@@ -553,7 +553,7 @@ def buscar_personaje(request):
     except:
         return redirect('error_url')
 
-#Elección de puntos, nombre, raza y clase
+#Elección de puntos, nombre, raza y clase (falta poner como quiere el usuario que sean los puntos de golpe)
 @login_required(login_url="/login/")
 def crear_personaje_1(request):
     try:
@@ -566,12 +566,13 @@ def crear_personaje_1(request):
                 raza = formulario.cleaned_data.get('raza')
                 clase = formulario.cleaned_data.get('clase')
                 tipo = formulario.cleaned_data.get('tipo')
+                alineamiento = formulario.cleaned_data.get('alineamiento')
                 if tipo == 'Alta fantasía':
                     puntos_a_elegir = 20
                 elif tipo == 'Épica':
                     puntos_a_elegir = 25
                 formulario_paso_2 = PersonajeForm2(raza=raza)
-                return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
+                return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
         else:
             formulario = PersonajeForm()
         return render(request, 'personaje/paso1.html', {'formulario':formulario})
@@ -580,27 +581,31 @@ def crear_personaje_1(request):
 
 #Elección de puntos de características
 def crear_personaje_2(request):
-    if request.method == 'POST':
-        raza = Raza.objects.get(raza=request.POST.get('raza'))
-        formulario_paso_2 = PersonajeForm2(request.POST, raza=raza)
-        nombre = request.POST.get('nombre')
-        clase = request.POST.get('clase')
-        puntos_a_elegir = request.POST.get('puntos_a_elegir')
-        if formulario_paso_2.is_valid():
-            caracteristica_choice = formulario_paso_2.cleaned_data.get('caracteristica_choice')
-            fuerza = formulario_paso_2.cleaned_data.get('fuerza')
-            destreza = formulario_paso_2.cleaned_data.get('destreza')
-            constitucion = formulario_paso_2.cleaned_data.get('constitucion')
-            inteligencia = formulario_paso_2.cleaned_data.get('inteligencia')
-            sabiduria = formulario_paso_2.cleaned_data.get('sabiduria')
-            carisma = formulario_paso_2.cleaned_data.get('carisma')
-            if caracteristica_choice:
-                fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
-            else:
-                fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
-            formulario_paso_3 = PersonajeForm3(raza=raza)
-            return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3})
-    return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
+    try:
+        if request.method == 'POST':
+            raza = Raza.objects.get(raza=request.POST.get('raza'))
+            formulario_paso_2 = PersonajeForm2(request.POST, raza=raza)
+            nombre = request.POST.get('nombre')
+            clase = Clase.objects.get(clase=request.POST.get('clase'), nivel=1)
+            puntos_a_elegir = request.POST.get('puntos_a_elegir')
+            alineamiento = request.POST.get('alineamiento')
+            if formulario_paso_2.is_valid():
+                caracteristica_choice = formulario_paso_2.cleaned_data.get('caracteristica_choice')
+                fuerza = formulario_paso_2.cleaned_data.get('fuerza')
+                destreza = formulario_paso_2.cleaned_data.get('destreza')
+                constitucion = formulario_paso_2.cleaned_data.get('constitucion')
+                inteligencia = formulario_paso_2.cleaned_data.get('inteligencia')
+                sabiduria = formulario_paso_2.cleaned_data.get('sabiduria')
+                carisma = formulario_paso_2.cleaned_data.get('carisma')
+                if caracteristica_choice:
+                    fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
+                else:
+                    fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
+                formulario_paso_3 = PersonajeForm3(raza=raza, clase=clase)
+                return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3})
+        return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir, 'alineamiento':alineamiento})
+    except:
+        return redirect('error_url')
 
 def modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma):
     if caracteristica_choice == 'Fuerza':
@@ -626,14 +631,15 @@ def modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia
     carisma = carisma + raza.carisma
     return fuerza, destreza, constitucion, inteligencia, sabiduria, carisma
 
-#Elección de dotes (hay que filtrar y validar mejor las dotes) ¿Quizas añadir aqui elección de linaje y conjuros y poderes?
+#Elección de dotes y linaje hay que reenviar al paso 4 (elección de habilidades o elección de compañero animal)
 def crear_personaje_3(request):
     try:
         if request.method == 'POST':
             nombre = request.POST.get('nombre')
             raza = Raza.objects.get(raza=request.POST.get('raza'))
-            formulario_paso_3 = PersonajeForm3(request.POST, raza=raza)
-            clase = request.POST.get('clase')
+            clase = Clase.objects.get(nivel=1, clase=request.POST.get('clase'))
+            formulario_paso_3 = PersonajeForm3(request.POST, raza=raza, clase=clase)
+            alineamiento = request.POST.get('alineamiento')
             fuerza = request.POST.get('fuerza')
             destreza = request.POST.get('destreza')
             constitucion = request.POST.get('constitucion')
@@ -642,8 +648,10 @@ def crear_personaje_3(request):
             carisma = request.POST.get('carisma')
             if formulario_paso_3.is_valid():
                 dotes = formulario_paso_3.cleaned_data.get('dotes')
-                return redirect('listar_personajes_propios_url')
-        return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3})
+                linaje = formulario_paso_3.cleaned_data.get('linaje')
+                formulario_paso_4 = PersonajeForm4()
+                return render(request, 'personaje/paso4.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'dotes':dotes, 'linaje':linaje, 'formulario_paso_4':formulario_paso_4})
+        return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3})
     except:
         return redirect('error_url')
 

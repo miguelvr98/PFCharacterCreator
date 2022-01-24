@@ -264,11 +264,13 @@ class PersonajeForm(forms.ModelForm):
 
     #Este esta hecho por si no funciona el de models.
     TIPO_CHOICES = (('Estándar', 'Estándar'), ('Alta fantasía', 'Alta fantasía'), ('Épica', 'Épica'), )
+    ALINEAMIENTO_CHOICES = (('LB', 'Legal bueno'), ('LN', 'Legal neutro'), ('LM', 'Legal maligno'), ('NB', 'Neutral bueno'), ('N', 'Neutral'), ('NM', 'Neutral maligno'), ('CB', 'Caótico bueno'), ('CN', 'Caótico neutral'), ('CM', 'Caótico maligno'), )
 
     nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
     tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
     raza = forms.ModelChoiceField(queryset=Raza.objects, widget=forms.Select(), required=True)
     clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=1), widget=forms.Select(), required=True)
+    alineamiento = forms.ChoiceField(choices=ALINEAMIENTO_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Alineamiento'}))
 
     class Meta:
         model = Personaje
@@ -316,16 +318,21 @@ class PersonajeForm2(forms.ModelForm):
 class PersonajeForm3(forms.ModelForm):
 
     error_messages = {
-        'dote_max_value': ("Solo puedes elegir una dote (o 2 si la raza del personaje es humano)"),
+        'dote_max_value': ("Solo puedes elegir una dote, 1 dote extra por ser humano y 1 dote extra al escoger el guerrero o monje"),
         'dote_prerrequisito_raza': ('El personaje no es de la raza que puede aprender esta dote'),
+        'linaje_choice': ('Debes elegir un linaje por escoger el hechicero como clase')
     }
+
+    linaje = forms.ModelChoiceField(queryset=Linaje.objects, widget=forms.Select(), required=False)
 
     def __init__(self, *args, **kwargs):
         raza = kwargs.pop('raza')
+        clase = kwargs.pop('clase')
         super(PersonajeForm3, self).__init__(*args, **kwargs)
         self.raza = Raza.objects.get(raza=raza)
+        self.clase = Clase.objects.get(clase=clase, nivel=1)
         queryset1 = Dote.objects.all().filter(prerrequisito_raza=raza)
-        queryset2 = Dote.objects.all().filter(prerrequisito_raza=None)
+        queryset2 = Dote.objects.all().filter(prerrequisito_raza=None).filter(nivel=None).filter(ataque_base=None).filter(prerrequisito_dote=None)
         self.fields['dotes'].queryset = queryset1 | queryset2
         self.fields['dotes'].required = True
 
@@ -337,12 +344,24 @@ class PersonajeForm3(forms.ModelForm):
         dotes = self.cleaned_data.get('dotes')
         numero_dotes = 1
         humano = Raza.objects.get(raza='Humano')
+        clase = self.clase
+        especiales_clase = Especial.objects.all().filter(clase=clase).filter(nombre__icontains='Dotes adicionales')
         if self.raza == humano:
-            numero_dotes = 2
+            numero_dotes = numero_dotes + 1
+        if especiales_clase:
+            numero_dotes = numero_dotes + 1
         if len(dotes) != numero_dotes:
             raise forms.ValidationError(self.error_messages['dote_max_value'], code='dote_max_value')
         for dote in dotes:
             if dote.prerrequisito_raza and dote.prerrequisito_raza != self.raza:
                 raise forms.ValidationError(self.error_messages['dote_prerrequisito_raza'], code='dote_prerrequisito_raza')
         return dotes
+    
+    def clean_linaje(self):
+        linaje = self.cleaned_data.get('linaje')
+        clase = self.clase
+        hechicero = Clase.objects.get(nivel=1, clase='Hechicero')
+        if hechicero == clase and not linaje:
+            raise forms.ValidationError(self.error_messages['linaje_choice'], code='linaje_choice')
+        return linaje
         

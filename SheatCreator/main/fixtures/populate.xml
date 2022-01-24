@@ -3804,7 +3804,7 @@
             <object pk="364"></object>
         </field>
     </object>
-<!--DOTES--> <!--FALTA PONER LAS DOTES DE COMPAÑERO ANIMAL-->
+<!--DOTES-->
     <object pk="1" model="main.dote">
         <field type="CharField" name="nombre">Abstención de materiales</field>
         <field type="CharField" name="descripcion">Puedes lanzar cualquier conjuro con un costo en componentes materiales de una moneda de oro o menos sin necesidad de dicho componente. Lanzar el conjuro sigue provocando ataques de oportunidad de manera habitual. Si el conjuro requiere un componente material cuyo costo sea mayor de 1 mo, debes poseer el componente material a mano para lanzarlo, de la manera normal.</field>
