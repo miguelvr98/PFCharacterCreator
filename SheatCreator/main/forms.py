@@ -315,7 +315,7 @@ class PersonajeForm2(forms.ModelForm):
         super(PersonajeForm2, self).__init__(*args, **kwargs)
         self.raza = Raza.objects.get(raza=raza)
 
-class PersonajeForm3(forms.ModelForm):
+class PersonajeForm3(forms.Form):
 
     error_messages = {
         'dote_max_value': ("Solo puedes elegir una dote, 1 dote extra por ser humano y 1 dote extra al escoger el guerrero o monje"),
@@ -323,6 +323,8 @@ class PersonajeForm3(forms.ModelForm):
         'linaje_choice': ('Debes elegir un linaje por escoger el hechicero como clase'),
         'habilidades_number': ('No ha elegido el número de habilidades correcto'),
         'idiomas_number': ('No ha elegido el número de idiomas correcto'),
+        'conjuros_conocidos_0_number': ('No ha elegido el número de conjuros de nivel 0 correcto'),
+        'conjuros_conocidos_1_number': ('No ha elegido el número de conjuros de nivel 1 correcto'),
     }
 
     linaje = forms.ModelChoiceField(queryset=Linaje.objects, widget=forms.Select(), required=False)
@@ -338,14 +340,10 @@ class PersonajeForm3(forms.ModelForm):
         self.inteligencia = inteligencia
         queryset1 = Dote.objects.all().filter(prerrequisito_raza=raza)
         queryset2 = Dote.objects.all().filter(prerrequisito_raza=None).filter(nivel=None).filter(ataque_base=None).filter(prerrequisito_dote=None)
-        self.fields['dotes'].queryset = queryset1 | queryset2
-        self.fields['dotes'].required = True
-        self.fields['idiomas'].queryset = raza.idiomas_eleccion
-        self.fields['idiomas'].required = False
-
-    class Meta:
-        model = Personaje
-        fields = ('dotes', 'idiomas',)
+        self.fields['dotes'] = forms.ModelMultipleChoiceField(queryset=queryset1 | queryset2, widget=forms.SelectMultiple(), required=True)
+        self.fields['idiomas'] = forms.ModelMultipleChoiceField(queryset=raza.idiomas_eleccion, widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_0'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0), widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_1'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=1), widget=forms.SelectMultiple(), required=False)
     
     def clean_dotes(self):
         dotes = self.cleaned_data.get('dotes')
@@ -392,3 +390,21 @@ class PersonajeForm3(forms.ModelForm):
         if numero_idiomas_eleccion != len(idiomas):
             raise forms.ValidationError(self.error_messages['idiomas_number'], code='idiomas_number')
         return idiomas
+
+    def clean_conjuros_conocidos_0(self):
+        clase = self.clase
+        conjuros_conocidos_0 = self.cleaned_data.get('conjuros_conocidos_0')
+        if conjuros_conocidos_0:
+            cantidad_conjuros_conocidos_0 = clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad
+            if len(conjuros_conocidos_0) != cantidad_conjuros_conocidos_0:
+                raise forms.ValidationError(self.error_messages['conjuros_conocidos_0_number'], code='conjuros_conocidos_0_number')
+        return conjuros_conocidos_0
+    
+    def clean_conjuros_conocidos_1(self):
+        clase = self.clase
+        conjuros_conocidos_1 = self.cleaned_data.get('conjuros_conocidos_1')
+        if conjuros_conocidos_1:
+            cantidad_conjuros_conocidos_1 = clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad
+            if len(conjuros_conocidos_1) != cantidad_conjuros_conocidos_1:
+                raise forms.ValidationError(self.error_messages['conjuros_conocidos_1_number'], code='conjuros_conocidos_1_number')
+        return conjuros_conocidos_1

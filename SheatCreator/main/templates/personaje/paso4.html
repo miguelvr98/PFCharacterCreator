@@ -4,8 +4,8 @@
       <div class="row">
           <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto ">
                 <h1 class="display-4 py-2 text-center">Crear personaje</h1>
-                {% if formulario_paso_3.errors %}
-                    {% for field in formulario_paso_3 %}
+                {% if formulario_paso_4.errors %}
+                    {% for field in formulario_paso_4 %}
                         {% for error in field.errors %}
                             <div class="alert alert-danger">
                                 {{error}}
@@ -14,37 +14,16 @@
                     {% endfor %}
                 {% endif %}
                 <div class="px-2">
-                    <form  role="form"  enctype="multipart/form-data" action="/personaje/create/3/" method="POST" id="upload-image-form"> 
+                    <form  role="form"  enctype="multipart/form-data" action="/personaje/create/4/" method="POST" id="upload-image-form"> 
                         {% csrf_token %}
-                        <div class="text-center">Dotes</div>
-                            {{formulario_paso_3.dotes}}
-                            <br>
-                        Debes elegir {{numero_habilidades_eleccion}} para subir un punto en ellas</br>
-                        Las habilidades de clase son: {{clase_nivel_0.descripcion_habilidades}}
-                        <div class="text-center">Habilidades</div>
-                            {{formulario_paso_3.habilidades}}
-                            <br>
-                        Debes elegir {{numero_idiomas_eleccion}} idiomas extra por la inteligencia del personaje
-                        <div class="text-center">Idiomas</div>
-                            {{formulario_paso_3.idiomas}}
-                            <br>
-                        {% if clase.clase == 'Hechicero' %}
-                        <div class="text-center">Linaje</div>
-                            {{formulario_paso_3.linaje}}
-                            <br>
-                        {% endif %}
-                        {% if clase.cantidad_conjuros_conocidos.all %}
                         <div class="text-center">Conjuros de nivel 0</div>
                             Debes elegir {{cantidad_conjuros_conocidos_0_eleccion}} conjuros de nivel 0<br>
-                            {{formulario_paso_3.conjuros_conocidos_0}}
+                            {{formulario_paso_4.conjuros_conocidos_0}}
                             <br>
-                        {% endif %}
-                        {% if clase.cantidad_conjuros_conocidos.all %}
                         <div class="text-center">Conjuros de nivel 1</div>
                             Debes elegir {{cantidad_conjuros_conocidos_1_eleccion}} conjuros de nivel 1<br>
-                            {{formulario_paso_3.conjuros_conocidos_1}}
+                            {{formulario_paso_4.conjuros_conocidos_1}}
                             <br>
-                        {% endif %}
                         <input type="hidden" id="nombre" name="nombre" value={{nombre}}>
                         <input type="hidden" id="raza" name="raza" value={{raza}}>
                         <input type="hidden" id="clase" name="clase" value={{clase}}>
@@ -55,8 +34,10 @@
                         <input type="hidden" id="inteligencia" name="inteligencia" value={{inteligencia}}>
                         <input type="hidden" id="sabiduria" name="sabiduria" value={{sabiduria}}>
                         <input type="hidden" id="carisma" name="carisma" value={{carisma}}>
-                        <input type="hidden" id="numero_habilidades_eleccion" name="numero_habilidades_eleccion" value={{numero_habilidades_eleccion}}>
-                        <input type="hidden" id="numero_idiomas_eleccion" name="numero_idiomas_eleccion" value={{numero_idiomas_eleccion}}>
+                        <input type="hidden" id="linaje" name="linaje" value={{linaje}}>
+                        <input type="hidden" id="dotes" name="dotes" value={{dotes}}>
+                        <input type="hidden" id="habilidades" name="habilidades" value={{habilidades}}>
+                        <input type="hidden" id="idiomas" name="idiomas" value={{idiomas}}>
                         <input type="hidden" id="cantidad_conjuros_conocidos_0_eleccion" name="cantidad_conjuros_conocidos_0_eleccion" value={{cantidad_conjuros_conocidos_0_eleccion}}>
                         <input type="hidden" id="cantidad_conjuros_conocidos_1_eleccion" name="cantidad_conjuros_conocidos_1_eleccion" value={{cantidad_conjuros_conocidos_1_eleccion}}>
                         <div class="text-center">

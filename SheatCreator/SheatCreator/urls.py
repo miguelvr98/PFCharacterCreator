@@ -71,6 +71,4 @@ urlpatterns = [
     path('personaje/create/', views.crear_personaje_1, name='crear_personaje_1_url'),
     path('personaje/create/2/', views.crear_personaje_2, name='crear_personaje_2_url'),
     path('personaje/create/3/', views.crear_personaje_3, name='crear_personaje_3_url'),
-    path('personaje/create/4/', views.crear_personaje_4, name='crear_personaje_4_url'),
-    path('personaje/create/5/', views.crear_personaje_5, name='crear_personaje_5_url'),
 ]
