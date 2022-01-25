@@ -322,6 +322,7 @@ class PersonajeForm3(forms.ModelForm):
         'dote_prerrequisito_raza': ('El personaje no es de la raza que puede aprender esta dote'),
         'linaje_choice': ('Debes elegir un linaje por escoger el hechicero como clase'),
         'habilidades_number': ('No ha elegido el número de habilidades correcto'),
+        'idiomas_number': ('No ha elegido el número de idiomas correcto'),
     }
 
     linaje = forms.ModelChoiceField(queryset=Linaje.objects, widget=forms.Select(), required=False)
@@ -339,10 +340,12 @@ class PersonajeForm3(forms.ModelForm):
         queryset2 = Dote.objects.all().filter(prerrequisito_raza=None).filter(nivel=None).filter(ataque_base=None).filter(prerrequisito_dote=None)
         self.fields['dotes'].queryset = queryset1 | queryset2
         self.fields['dotes'].required = True
+        self.fields['idiomas'].queryset = raza.idiomas_eleccion
+        self.fields['idiomas'].required = False
 
     class Meta:
         model = Personaje
-        fields = ('dotes', )
+        fields = ('dotes', 'idiomas',)
     
     def clean_dotes(self):
         dotes = self.cleaned_data.get('dotes')
@@ -379,4 +382,13 @@ class PersonajeForm3(forms.ModelForm):
         if hechicero == clase and not linaje:
             raise forms.ValidationError(self.error_messages['linaje_choice'], code='linaje_choice')
         return linaje
-        
+    
+    def clean_idiomas(self):
+        idiomas = self.cleaned_data.get('idiomas')
+        inteligencia = int(self.inteligencia)
+        numero_idiomas_eleccion = (inteligencia-10)/2
+        if numero_idiomas_eleccion < 0:
+            numero_idiomas_eleccion = 0
+        if numero_idiomas_eleccion != len(idiomas):
+            raise forms.ValidationError(self.error_messages['idiomas_number'], code='idiomas_number')
+        return idiomas

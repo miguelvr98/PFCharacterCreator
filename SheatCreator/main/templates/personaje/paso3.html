@@ -19,9 +19,14 @@
                         <div class="text-center">Dotes</div>
                             {{formulario_paso_3.dotes}}
                             <br>
-                        Debes elegir {{numero_habilidades_eleccion}} para subir un punto en ellas
-                            <div class="text-center">Habilidades</div>
+                        Debes elegir {{numero_habilidades_eleccion}} para subir un punto en ellas</br>
+                        Las habilidades de clase son: {{clase_nivel_0.descripcion_habilidades}}
+                        <div class="text-center">Habilidades</div>
                             {{formulario_paso_3.habilidades}}
+                            <br>
+                        Debes elegir {{numero_idiomas_eleccion}} idiomas extra por la inteligencia del personaje
+                        <div class="text-center">Idiomas</div>
+                            {{formulario_paso_3.idiomas}}
                             <br>
                         {% if clase.clase == 'Hechicero' %}
                         <div class="text-center">Linaje</div>
@@ -39,6 +44,7 @@
                         <input type="hidden" id="clase" name="sabiduria" value="{{sabiduria}}">
                         <input type="hidden" id="clase" name="carisma" value="{{carisma}}">
                         <input type="hidden" id="clase" name="numero_habilidades_eleccion" value="{{numero_habilidades_eleccion}}">
+                        <input type="hidden" id="clase" name="numero_idiomas_eleccion" value="{{numero_idiomas_eleccion}}">
                         <div class="text-center">
                             <button type='submit' class="btn btn-primary btn-dark">Siguiente</button>
                         </div>
