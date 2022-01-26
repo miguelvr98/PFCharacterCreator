@@ -582,34 +582,39 @@ def crear_personaje_1(request):
 #Elección de puntos de características
 @login_required(login_url="/login/")
 def crear_personaje_2(request):
-    if request.method == 'POST':
-        raza = Raza.objects.get(raza=request.POST.get('raza'))
-        formulario_paso_2 = PersonajeForm2(request.POST, raza=raza)
-        nombre = request.POST.get('nombre')
-        clase = Clase.objects.get(clase=request.POST.get('clase'), nivel=1)
-        puntos_a_elegir = request.POST.get('puntos_a_elegir')
-        alineamiento = request.POST.get('alineamiento')
-        if formulario_paso_2.is_valid():
-            caracteristica_choice = formulario_paso_2.cleaned_data.get('caracteristica_choice')
-            fuerza = formulario_paso_2.cleaned_data.get('fuerza')
-            destreza = formulario_paso_2.cleaned_data.get('destreza')
-            constitucion = formulario_paso_2.cleaned_data.get('constitucion')
-            inteligencia = formulario_paso_2.cleaned_data.get('inteligencia')
-            sabiduria = formulario_paso_2.cleaned_data.get('sabiduria')
-            carisma = formulario_paso_2.cleaned_data.get('carisma')
-            if caracteristica_choice:
-                fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
-            else:
-                fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
-            formulario_paso_3 = PersonajeForm3(raza=raza, clase=clase, inteligencia=inteligencia)
-            clase_nivel_0 = Clase.objects.get(clase=request.POST.get('clase'), nivel=0)
-            numero_habilidades_eleccion = clase_nivel_0.puntos_de_habilidad_por_nivel + int((inteligencia-10)/2)
-            numero_idiomas_eleccion = int((inteligencia-10)/2)
-            if clase.cantidad_conjuros_conocidos.all():
-                cantidad_conjuros_conocidos_0_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad
-                cantidad_conjuros_conocidos_1_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad
-            return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion, 'numero_idiomas_eleccion':numero_idiomas_eleccion, 'cantidad_conjuros_conocidos_0_eleccion':cantidad_conjuros_conocidos_0_eleccion, 'cantidad_conjuros_conocidos_1_eleccion':cantidad_conjuros_conocidos_1_eleccion, 'clase_nivel_0':clase_nivel_0})
-    return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir, 'alineamiento':alineamiento})
+    try:
+        if request.method == 'POST':
+            raza = Raza.objects.get(raza=request.POST.get('raza'))
+            formulario_paso_2 = PersonajeForm2(request.POST, raza=raza)
+            nombre = request.POST.get('nombre')
+            clase = Clase.objects.get(clase=request.POST.get('clase'), nivel=1)
+            puntos_a_elegir = request.POST.get('puntos_a_elegir')
+            alineamiento = request.POST.get('alineamiento')
+            if formulario_paso_2.is_valid():
+                caracteristica_choice = formulario_paso_2.cleaned_data.get('caracteristica_choice')
+                fuerza = formulario_paso_2.cleaned_data.get('fuerza')
+                destreza = formulario_paso_2.cleaned_data.get('destreza')
+                constitucion = formulario_paso_2.cleaned_data.get('constitucion')
+                inteligencia = formulario_paso_2.cleaned_data.get('inteligencia')
+                sabiduria = formulario_paso_2.cleaned_data.get('sabiduria')
+                carisma = formulario_paso_2.cleaned_data.get('carisma')
+                if caracteristica_choice:
+                    fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
+                else:
+                    fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
+                formulario_paso_3 = PersonajeForm3(raza=raza, clase=clase, inteligencia=inteligencia)
+                clase_nivel_0 = Clase.objects.get(clase=request.POST.get('clase'), nivel=0)
+                numero_habilidades_eleccion = clase_nivel_0.puntos_de_habilidad_por_nivel + int((inteligencia-10)/2)
+                numero_idiomas_eleccion = int((inteligencia-10)/2)
+                cantidad_conjuros_conocidos_0_eleccion = None
+                cantidad_conjuros_conocidos_1_eleccion = None
+                if clase.cantidad_conjuros_conocidos.all():
+                    cantidad_conjuros_conocidos_0_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad
+                    cantidad_conjuros_conocidos_1_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad
+                return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion, 'numero_idiomas_eleccion':numero_idiomas_eleccion, 'cantidad_conjuros_conocidos_0_eleccion':cantidad_conjuros_conocidos_0_eleccion, 'cantidad_conjuros_conocidos_1_eleccion':cantidad_conjuros_conocidos_1_eleccion, 'clase_nivel_0':clase_nivel_0})
+        return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir, 'alineamiento':alineamiento})
+    except:
+        return redirect('error_url')
 
 def modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma):
     if caracteristica_choice == 'Fuerza':
@@ -638,43 +643,49 @@ def modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia
 #Habria que meter todos los querysets aqui para que funcione y hacer solo 3 pasos. ¿Añadir el compañero animal una vez esté creado el personaje?
 @login_required(login_url="/login/")
 def crear_personaje_3(request):
-    if request.method == 'POST':
-        nombre = request.POST.get('nombre')
-        raza = Raza.objects.get(raza=request.POST.get('raza'))
-        clase = Clase.objects.get(nivel=1, clase=request.POST.get('clase'))
-        clase_nivel_0 = Clase.objects.get(clase=request.POST.get('clase'), nivel=0)
-        inteligencia = request.POST.get('inteligencia')
-        formulario_paso_3 = PersonajeForm3(request.POST, raza=raza, clase=clase, inteligencia=inteligencia)
-        alineamiento = request.POST.get('alineamiento')
-        fuerza = request.POST.get('fuerza')
-        destreza = request.POST.get('destreza')
-        constitucion = request.POST.get('constitucion')
-        sabiduria = request.POST.get('sabiduria')
-        carisma = request.POST.get('carisma')
-        numero_habilidades_eleccion = request.POST.get('numero_habilidades_eleccion')
-        numero_idiomas_eleccion = request.POST.get('numero_idiomas_eleccion')
-        cantidad_conjuros_conocidos_0_eleccion = 0
-        cantidad_conjuros_conocidos_1_eleccion = 0
-        if clase.cantidad_conjuros_conocidos.all():
-            cantidad_conjuros_conocidos_0_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad
-            cantidad_conjuros_conocidos_1_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad
-        if formulario_paso_3.is_valid():
-            dotes = formulario_paso_3.cleaned_data.get('dotes')
-            linaje = formulario_paso_3.cleaned_data.get('linaje')
-            habilidades = formulario_paso_3.cleaned_data.get('habilidades')
-            idiomas = formulario_paso_3.cleaned_data.get('idiomas')
-            conjuros_conocidos_0 = formulario_paso_3.cleaned_data.get('conjuros_conocidos_0')
-            conjuros_conocidos_1 = formulario_paso_3.cleaned_data.get('conjuros_conocidos_1')
-            conjuros_conocidos = conjuros_conocidos_0 | conjuros_conocidos_1
-            guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma, dotes, linaje, habilidades, idiomas, conjuros_conocidos)
-            return redirect('listar_personajes_propios_url')
-    return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion, 'numero_idiomas_eleccion':numero_idiomas_eleccion, 'clase_nivel_0':clase_nivel_0, 'cantidad_conjuros_conocidos_0_eleccion':cantidad_conjuros_conocidos_0_eleccion, 'cantidad_conjuros_conocidos_1_eleccion':cantidad_conjuros_conocidos_1_eleccion})
+    try:
+        if request.method == 'POST':
+            nombre = request.POST.get('nombre')
+            raza = Raza.objects.get(raza=request.POST.get('raza'))
+            clase = Clase.objects.get(nivel=1, clase=request.POST.get('clase'))
+            clase_nivel_0 = Clase.objects.get(clase=request.POST.get('clase'), nivel=0)
+            inteligencia = request.POST.get('inteligencia')
+            formulario_paso_3 = PersonajeForm3(request.POST, raza=raza, clase=clase, inteligencia=inteligencia)
+            alineamiento = request.POST.get('alineamiento')
+            fuerza = request.POST.get('fuerza')
+            destreza = request.POST.get('destreza')
+            constitucion = request.POST.get('constitucion')
+            sabiduria = request.POST.get('sabiduria')
+            carisma = request.POST.get('carisma')
+            numero_habilidades_eleccion = request.POST.get('numero_habilidades_eleccion')
+            numero_idiomas_eleccion = request.POST.get('numero_idiomas_eleccion')
+            cantidad_conjuros_conocidos_0_eleccion = 0
+            cantidad_conjuros_conocidos_1_eleccion = 0
+            if clase.cantidad_conjuros_conocidos.all():
+                cantidad_conjuros_conocidos_0_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad
+                cantidad_conjuros_conocidos_1_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad
+            if formulario_paso_3.is_valid():
+                dotes = formulario_paso_3.cleaned_data.get('dotes')
+                linaje = formulario_paso_3.cleaned_data.get('linaje')
+                habilidades = formulario_paso_3.cleaned_data.get('habilidades')
+                idiomas = formulario_paso_3.cleaned_data.get('idiomas')
+                conjuros_conocidos_0 = formulario_paso_3.cleaned_data.get('conjuros_conocidos_0')
+                conjuros_conocidos_1 = formulario_paso_3.cleaned_data.get('conjuros_conocidos_1')
+                conjuros_conocidos = conjuros_conocidos_0 | conjuros_conocidos_1
+                guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma, dotes, linaje, habilidades, idiomas, conjuros_conocidos)
+                return redirect('listar_personajes_propios_url')
+        return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion, 'numero_idiomas_eleccion':numero_idiomas_eleccion, 'clase_nivel_0':clase_nivel_0, 'cantidad_conjuros_conocidos_0_eleccion':cantidad_conjuros_conocidos_0_eleccion, 'cantidad_conjuros_conocidos_1_eleccion':cantidad_conjuros_conocidos_1_eleccion})
+    except:
+        return redirect('error_url')
 
 def guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma, dotes, linaje, habilidades, idiomas, conjuros_conocidos):
     perfil = usuario_logueado(request)
     clase_nivel_0 = Clase.objects.get(clase=clase, nivel=0)
     dados_de_golpe = clase_nivel_0.dados_de_golpe
     puntuaciones_habilidad = []
+    for habilidad in habilidades:
+        puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=1, habilidad=habilidad)
+        puntuaciones_habilidad.append(puntuacion_habilidad)
     personaje = Personaje.objects.create(perfil=perfil, nombre=nombre, raza=raza, alineamiento=alineamiento, 
     fuerza=fuerza, destreza=destreza, constitucion=constitucion, inteligencia=inteligencia, sabiduria=sabiduria, carisma=carisma,
     puntos_de_golpe=dados_de_golpe)
@@ -697,7 +708,80 @@ def guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destre
             personaje.puntuaciones_habilidad.add(ph)
     personaje.clases.add(clase)
     personaje.save()
-        
+
+#Pensar si quitar los familiares (no vale la pena tenerlos para lo poco que hacen ya) (de momento están quitados)
+@login_required(login_url="/login/")
+def asignar_companero_animal(request, pk):
+    perfil = usuario_logueado(request)
+    personaje = Personaje.objects.get(pk=pk)
+    assert perfil == personaje.perfil
+    assert personaje.companero_animal == None
+    druida_1 = Clase.objects.get(clase='Druida', nivel=1)
+    #mago_1 = Clase.objects.get(clase='Mago', nivel=1) habria que incluir or (mago_1 in personaje.clases en el assert de debajo)
+    explorador_4 = Clase.objects.get(clase='Explorador', nivel=4)
+    assert (druida_1 in personaje.clases.all()) or (explorador_4 in personaje.clases.all())
+    companero_animal_nivel = CompaneroAnimal.objects.get(nivel=1, tipo=None)
+    if request.method == 'POST':
+        formulario = CompaneroAnimalForm(request.POST)
+        if formulario.is_valid():
+            nombre = formulario.cleaned_data.get('nombre')
+            dotes = formulario.cleaned_data.get('dotes')
+            trucos = formulario.cleaned_data.get('trucos')
+            habilidades = formulario.cleaned_data.get('habilidades')
+            companero_animal_tipo = formulario.cleaned_data.get('companero_animal_tipo')
+            guardar_companero_animal(personaje, nombre, dotes, trucos, habilidades, companero_animal_tipo, companero_animal_nivel)
+            return redirect('listar_personajes_propios_url')
+    else:
+        formulario = CompaneroAnimalForm()
+    return render(request, 'personaje/companero_animal/asignar.html', {'formulario':formulario, 'personaje':personaje, 'companero_animal_nivel':companero_animal_nivel})
+
+def guardar_companero_animal(personaje, nombre, dotes, trucos, habilidades, companero_animal_tipo, companero_animal_nivel):
+    nivel = companero_animal_nivel.nivel
+    dados_de_golpe = companero_animal_nivel.dados_de_golpe
+    puntos_de_golpe = companero_animal_nivel.puntos_de_golpe
+    ataque_base = companero_animal_nivel.ataque_base
+    fortaleza = companero_animal_nivel.fortaleza
+    reflejos = companero_animal_nivel.reflejos
+    voluntad = companero_animal_nivel.voluntad
+    puntos_habilidad = companero_animal_nivel.puntos_habilidad
+    numero_dotes = companero_animal_nivel.numero_dotes
+    numero_trucos = companero_animal_nivel.numero_trucos
+    tipo = companero_animal_tipo.tipo
+    tamano = companero_animal_tipo.tamano
+    velocidad = companero_animal_tipo.velocidad
+    ataque = companero_animal_tipo.ataque
+    constitucion = companero_animal_tipo.constitucion
+    inteligencia = companero_animal_tipo.inteligencia
+    sabiduria = companero_animal_tipo.sabiduria
+    carisma = companero_animal_tipo.carisma
+    nivel_cambio = companero_animal_tipo.nivel_cambio
+    companero_animal_cambio = companero_animal_tipo.companero_animal_cambio
+    especiales = companero_animal_tipo.especiales
+    ca = companero_animal_tipo.ca + companero_animal_nivel.ca
+    fuerza = companero_animal_tipo.fuerza + companero_animal_nivel.fuerza
+    destreza = companero_animal_tipo.destreza + companero_animal_nivel.destreza
+
+    companero_animal_personaje = CompaneroAnimalPersonaje.objects.create(tipo=tipo, nivel=nivel, dados_de_golpe=dados_de_golpe, 
+    puntos_de_golpe=puntos_de_golpe, tamano=tamano, velocidad=velocidad, ca=ca, ataque_base=ataque_base, ataque=ataque, 
+    fuerza=fuerza, destreza=destreza, constitucion=constitucion, inteligencia=inteligencia, sabiduria=sabiduria, carisma=carisma, 
+    fortaleza=fortaleza, reflejos=reflejos, voluntad=voluntad, numero_dotes=numero_dotes, puntos_habilidad=puntos_habilidad, 
+    numero_trucos=numero_trucos, nivel_cambio=nivel_cambio, companero_animal_cambio=companero_animal_cambio, nombre=nombre)
+    for especial in especiales.all():
+        companero_animal_personaje.especiales.add(especial)
+    companero_animal_personaje.dotes.add(dotes)
+    for truco in trucos:
+        companero_animal_personaje.trucos.add(truco)
+    puntuaciones_habilidad = []
+    for habilidad in habilidades:
+        puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=1, habilidad=habilidad)
+        puntuaciones_habilidad.append(puntuacion_habilidad)
+    if puntuaciones_habilidad:
+        for ph in puntuaciones_habilidad:
+            companero_animal_personaje.puntuacion_habilidad.add(ph)
+    companero_animal_personaje.save()
+    personaje.companero_animal = companero_animal_personaje
+    personaje.save()
+
 def gdpr(request):
     return render(request, 'gdpr.html')
 

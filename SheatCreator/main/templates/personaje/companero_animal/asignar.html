@@ -1,0 +1,45 @@
+{% block content %}
+<div class="bottom-footer">
+    <div class="container">
+      <div class="row">
+          <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto ">
+                <h1 class="display-4 py-2 text-center">Asignar compañero animal</h1>
+                {% if formulario.errors %}
+                    {% for field in formulario %}
+                        {% for error in field.errors %}
+                            <div class="alert alert-danger">
+                                {{error}}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+                <div class="px-2">
+                    <form  role="form"  enctype="multipart/form-data" action="/personaje/companero_animal/asignar/{{personaje.pk}}/" method="POST" id="upload-image-form"> 
+                        {% csrf_token %}
+                        <div class="text-center">Nombre</div>
+                            {{formulario.nombre}}
+                            <br>
+                        <div class="text-center">Dotes</div>
+                            {{formulario.dotes}}
+                            <br>
+                        Debes elegir {{companero_animal_nivel.numero_trucos}} trucos</br>
+                        <div class="text-center">Habilidades</div>
+                            {{formulario.trucos}}
+                            <br>
+                        Debes elegir {{companero_animal_nivel.puntos_habilidad}} para subir un punto en ellas</br>
+                        <div class="text-center">Habilidades</div>
+                            {{formulario.habilidades}}
+                            <br>
+                        <div class="text-center">Tipo de compañero animal</div>
+                            {{formulario.companero_animal_tipo}}
+                            <br>
+                        <div class="text-center">
+                            <button type='submit' class="btn btn-primary btn-dark">Asignar</button>
+                        </div>
+                    </form>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

@@ -451,7 +451,7 @@ class CompaneroAnimal(models.Model):
     especiales = models.ManyToManyField('Especial')
 
     def __str__(self):
-        return tipo
+        return self.tipo
 
     class Meta:
         ordering = ('tipo', )

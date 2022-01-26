@@ -11736,6 +11736,7 @@
         </field>
     </object>
     <!--FAMILIARES-->
+    <!--
     <object pk="35" model="main.companeroanimal">
         <field type="CharField" name="tipo">Murciélago</field>
         <field type="CharField" name="tamano">Pequeño</field>
@@ -11808,6 +11809,7 @@
             <object pk="148"></object>
         </field>
     </object>
+    -->
 <!--CLASES-->
     <!--BÁRBARO-->
     <object pk="1" model="main.clase">

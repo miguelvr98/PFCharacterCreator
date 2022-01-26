@@ -408,3 +408,41 @@ class PersonajeForm3(forms.Form):
             if len(conjuros_conocidos_1) != cantidad_conjuros_conocidos_1:
                 raise forms.ValidationError(self.error_messages['conjuros_conocidos_1_number'], code='conjuros_conocidos_1_number')
         return conjuros_conocidos_1
+
+class CompaneroAnimalForm(forms.Form):
+
+    error_messages = {
+        'nombre_letters': ("El nombre solo puede contener letras"),
+        'trucos_number': ('No ha seleccionado el número de trucos correctos'),
+        'habilidades_number': ('No ha seleccionado el número de habilidades correctos'),
+    }
+
+    nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+    dotes = forms.ModelChoiceField(queryset=Dote.objects.all().filter(es_dote_companero_animal=True), widget=forms.Select(), required=True)
+    trucos = forms.ModelMultipleChoiceField(queryset=Truco.objects.all().filter(prerrequisito_truco=None), widget=forms.SelectMultiple(), required=True)
+    habilidades = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.SelectMultiple(), required=True)
+    companero_animal_tipo = forms.ModelChoiceField(queryset=CompaneroAnimal.objects.all().exclude(tipo=None).filter(nivel=None).exclude(nivel_cambio=None), widget=forms.Select(), required=True)
+
+    def __init__(self, *args, **kwargs):
+        super(CompaneroAnimalForm, self).__init__(*args, **kwargs)
+        self.companero_animal_nivel = CompaneroAnimal.objects.get(nivel=1, tipo=None)
+
+    def clean_nombre(self):
+        nombre = self.cleaned_data.get('nombre')
+        if nombre is not None:
+            if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+                raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
+        return nombre
+    
+    def clean_trucos(self):
+        trucos = self.cleaned_data.get('trucos')
+        if len(trucos) != self.companero_animal_nivel.numero_trucos:
+            raise forms.ValidationError(self.error_messages['trucos_number'], code='trucos_number')
+        return trucos
+    
+    def clean_habilidades(self):
+        habilidades = self.cleaned_data.get('habilidades')
+        if len(habilidades) != self.companero_animal_nivel.puntos_habilidad:
+            raise forms.ValidationError(self.error_messages['habilidades_number'], code='habilidades_number')
+        return habilidades
+
