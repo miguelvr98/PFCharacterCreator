@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+import math
 
 # Create your models here.
 class Perfil(models.Model):
@@ -60,27 +61,27 @@ class Personaje(models.Model):
 
     @property
     def bonificadorFuerza(self):
-        return int((fuerza-10)/2)
+        return math.floor((fuerza-10)/2)
     
     @property
     def bonificadorDestreza(self):
-        return int((destreza-10)/2)
+        return math.floor((destreza-10)/2)
 
     @property
     def bonificadorConstitucion(self):
-        return int((constitucion-10)/2)
+        return math.floor((constitucion-10)/2)
 
     @property
     def bonificadorInteligencia(self):
-        return int((inteligencia-10)/2)
+        return math.floor((inteligencia-10)/2)
 
     @property
     def bonificadorSabiduria(self):
-        return int((sabiduria-10)/2)
+        return math.floor((sabiduria-10)/2)
 
     @property
     def bonificadorCarisma(self):
-        return int((carisma-10)/2)
+        return math.floor((carisma-10)/2)
     
     @property
     def iniciativa(self):

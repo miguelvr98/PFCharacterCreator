@@ -3,6 +3,7 @@ from main.models import *
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import *
 import re
+import math
 
 class EditarUsernameForm(forms.ModelForm):
 
@@ -183,7 +184,7 @@ class DoteForm(forms.ModelForm):
 
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
-        if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+        if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
             raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         
         if Dote.objects.exclude(pk=self.instance.pk).filter(nombre=nombre).exists():
@@ -204,7 +205,7 @@ class BuscarDoteForm(forms.Form):
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
         if nombre is not None:
-            if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+            if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
                 raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         return nombre
 
@@ -219,7 +220,7 @@ class BuscarPoderForm(forms.Form):
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
         if nombre is not None:
-            if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+            if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
                 raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         return nombre
 
@@ -235,7 +236,7 @@ class BuscarConjuroForm(forms.Form):
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
         if nombre is not None:
-            if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+            if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
                 raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         return nombre
 
@@ -251,7 +252,7 @@ class BuscarPersonajeForm(forms.Form):
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
         if nombre is not None:
-            if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+            if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
                 raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         return nombre
 
@@ -278,7 +279,7 @@ class PersonajeForm(forms.ModelForm):
 
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
-        if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+        if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
             raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         return nombre
 
@@ -318,7 +319,7 @@ class PersonajeForm2(forms.ModelForm):
 class PersonajeForm3(forms.Form):
 
     error_messages = {
-        'dote_max_value': ("Solo puedes elegir una dote, 1 dote extra por ser humano y 1 dote extra al escoger el guerrero o monje"),
+        'dote_max_value': ("Solo puedes elegir una dote, 1 dote extra por ser humano, semielfo o semiorco y 1 dote extra al escoger el guerrero o monje"),
         'dote_prerrequisito_raza': ('El personaje no es de la raza que puede aprender esta dote'),
         'linaje_choice': ('Debes elegir un linaje por escoger el hechicero como clase'),
         'habilidades_number': ('No ha elegido el número de habilidades correcto'),
@@ -349,9 +350,11 @@ class PersonajeForm3(forms.Form):
         dotes = self.cleaned_data.get('dotes')
         numero_dotes = 1
         humano = Raza.objects.get(raza='Humano')
+        semielfo = Raza.objects.get(raza='Semielfo')
+        semiorco = Raza.objects.get(raza='Semiorco')
         clase = self.clase
         especiales_clase = Especial.objects.all().filter(clase=clase).filter(nombre__icontains='Dotes adicionales')
-        if self.raza == humano:
+        if self.raza == humano or self.raza == semielfo or self.raza == semiorco:
             numero_dotes = numero_dotes + 1
         if especiales_clase:
             numero_dotes = numero_dotes + 1
@@ -366,8 +369,8 @@ class PersonajeForm3(forms.Form):
         habilidades = self.cleaned_data.get('habilidades')
         clase = Clase.objects.get(clase=self.clase.clase, nivel=0)
         numero_habilidades_eleccion = clase.puntos_de_habilidad_por_nivel
-        inteligencia = int(self.inteligencia)
-        bonificador_inteligencia = (inteligencia-10)/2
+        inteligencia = math.floor(int(self.inteligencia))
+        bonificador_inteligencia = math.floor((inteligencia-10)/2)
         numero_habilidades_eleccion = numero_habilidades_eleccion + bonificador_inteligencia
         if numero_habilidades_eleccion != len(habilidades):
             raise forms.ValidationError(self.error_messages['habilidades_number'], code='habilidades_number')
@@ -383,8 +386,8 @@ class PersonajeForm3(forms.Form):
     
     def clean_idiomas(self):
         idiomas = self.cleaned_data.get('idiomas')
-        inteligencia = int(self.inteligencia)
-        numero_idiomas_eleccion = (inteligencia-10)/2
+        inteligencia = math.floor(int(self.inteligencia))
+        numero_idiomas_eleccion = math.floor((inteligencia-10)/2)
         if numero_idiomas_eleccion < 0:
             numero_idiomas_eleccion = 0
         if numero_idiomas_eleccion != len(idiomas):
@@ -430,7 +433,7 @@ class CompaneroAnimalForm(forms.Form):
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
         if nombre is not None:
-            if not re.match("^[A-Za-zÀ-ÿ]*$", nombre):
+            if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
                 raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         return nombre
     

@@ -34,7 +34,7 @@
                         <div class="text-center">Carisma</div>
                             {{formulario_paso_2.carisma}}
                             <br>
-                        {% if raza.raza == 'Humano' %}
+                        {% if raza.raza == 'Humano' or raza.raza == 'Semielfo' or raza.raza == 'Semiorco' %}
                         <div class="text-center">Elección de característica</div>
                             {{formulario_paso_2.caracteristica_choice}}
                             <br>

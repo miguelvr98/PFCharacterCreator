@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from main.models import *
 from main.forms import *
+import math
 
 # Create your views here.
 
@@ -553,7 +554,8 @@ def buscar_personaje(request):
     except:
         return redirect('error_url')
 
-#Elección de puntos, nombre, raza y clase (falta poner como quiere el usuario que sean los puntos de golpe)
+#Elección de puntos, nombre, raza y clase (falta poner como quiere el usuario que sean los puntos de golpe). No se pueden poner
+#nombre y apellidos porque en input hidden solo coge la primera palabra
 @login_required(login_url="/login/")
 def crear_personaje_1(request):
     try:
@@ -572,6 +574,7 @@ def crear_personaje_1(request):
                 elif tipo == 'Épica':
                     puntos_a_elegir = 25
                 formulario_paso_2 = PersonajeForm2(raza=raza)
+                print(nombre)
                 return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
         else:
             formulario = PersonajeForm()
@@ -604,8 +607,12 @@ def crear_personaje_2(request):
                     fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
                 formulario_paso_3 = PersonajeForm3(raza=raza, clase=clase, inteligencia=inteligencia)
                 clase_nivel_0 = Clase.objects.get(clase=request.POST.get('clase'), nivel=0)
-                numero_habilidades_eleccion = clase_nivel_0.puntos_de_habilidad_por_nivel + int((inteligencia-10)/2)
-                numero_idiomas_eleccion = int((inteligencia-10)/2)
+                numero_habilidades_eleccion = clase_nivel_0.puntos_de_habilidad_por_nivel + math.floor((inteligencia-10)/2)
+                if numero_habilidades_eleccion < 0:
+                    numero_habilidades_eleccion = 0
+                numero_idiomas_eleccion = math.floor((inteligencia-10)/2)
+                if numero_idiomas_eleccion < 0:
+                    numero_idiomas_eleccion = 0
                 cantidad_conjuros_conocidos_0_eleccion = None
                 cantidad_conjuros_conocidos_1_eleccion = None
                 if clase.cantidad_conjuros_conocidos.all():
@@ -712,28 +719,31 @@ def guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destre
 #Pensar si quitar los familiares (no vale la pena tenerlos para lo poco que hacen ya) (de momento están quitados)
 @login_required(login_url="/login/")
 def asignar_companero_animal(request, pk):
-    perfil = usuario_logueado(request)
-    personaje = Personaje.objects.get(pk=pk)
-    assert perfil == personaje.perfil
-    assert personaje.companero_animal == None
-    druida_1 = Clase.objects.get(clase='Druida', nivel=1)
-    #mago_1 = Clase.objects.get(clase='Mago', nivel=1) habria que incluir or (mago_1 in personaje.clases en el assert de debajo)
-    explorador_4 = Clase.objects.get(clase='Explorador', nivel=4)
-    assert (druida_1 in personaje.clases.all()) or (explorador_4 in personaje.clases.all())
-    companero_animal_nivel = CompaneroAnimal.objects.get(nivel=1, tipo=None)
-    if request.method == 'POST':
-        formulario = CompaneroAnimalForm(request.POST)
-        if formulario.is_valid():
-            nombre = formulario.cleaned_data.get('nombre')
-            dotes = formulario.cleaned_data.get('dotes')
-            trucos = formulario.cleaned_data.get('trucos')
-            habilidades = formulario.cleaned_data.get('habilidades')
-            companero_animal_tipo = formulario.cleaned_data.get('companero_animal_tipo')
-            guardar_companero_animal(personaje, nombre, dotes, trucos, habilidades, companero_animal_tipo, companero_animal_nivel)
-            return redirect('listar_personajes_propios_url')
-    else:
-        formulario = CompaneroAnimalForm()
-    return render(request, 'personaje/companero_animal/asignar.html', {'formulario':formulario, 'personaje':personaje, 'companero_animal_nivel':companero_animal_nivel})
+    try:
+        perfil = usuario_logueado(request)
+        personaje = Personaje.objects.get(pk=pk)
+        assert perfil == personaje.perfil
+        assert personaje.companero_animal == None
+        druida_1 = Clase.objects.get(clase='Druida', nivel=1)
+        #mago_1 = Clase.objects.get(clase='Mago', nivel=1) habria que incluir or (mago_1 in personaje.clases en el assert de debajo)
+        explorador_4 = Clase.objects.get(clase='Explorador', nivel=4)
+        assert (druida_1 in personaje.clases.all()) or (explorador_4 in personaje.clases.all())
+        companero_animal_nivel = CompaneroAnimal.objects.get(nivel=1, tipo=None)
+        if request.method == 'POST':
+            formulario = CompaneroAnimalForm(request.POST)
+            if formulario.is_valid():
+                nombre = formulario.cleaned_data.get('nombre')
+                dotes = formulario.cleaned_data.get('dotes')
+                trucos = formulario.cleaned_data.get('trucos')
+                habilidades = formulario.cleaned_data.get('habilidades')
+                companero_animal_tipo = formulario.cleaned_data.get('companero_animal_tipo')
+                guardar_companero_animal(personaje, nombre, dotes, trucos, habilidades, companero_animal_tipo, companero_animal_nivel)
+                return redirect('listar_personajes_propios_url')
+        else:
+            formulario = CompaneroAnimalForm()
+        return render(request, 'personaje/companero_animal/asignar.html', {'formulario':formulario, 'personaje':personaje, 'companero_animal_nivel':companero_animal_nivel})
+    except:
+        return redirect('error_url')
 
 def guardar_companero_animal(personaje, nombre, dotes, trucos, habilidades, companero_animal_tipo, companero_animal_nivel):
     nivel = companero_animal_nivel.nivel
