@@ -460,7 +460,7 @@ def eliminar_usuario(request):
     try:
         usuario = User.objects.get(pk=request.user.id)
         usuario.delete()
-        return redirect('/login')
+        return redirect('/')
     except:
         return redirect('error_url')
 
