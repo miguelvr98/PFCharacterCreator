@@ -372,6 +372,8 @@ class PersonajeForm3(forms.Form):
         inteligencia = math.floor(int(self.inteligencia))
         bonificador_inteligencia = math.floor((inteligencia-10)/2)
         numero_habilidades_eleccion = numero_habilidades_eleccion + bonificador_inteligencia
+        if numero_habilidades_eleccion <= 0:
+            numero_habilidades_eleccion = 1
         if numero_habilidades_eleccion != len(habilidades):
             raise forms.ValidationError(self.error_messages['habilidades_number'], code='habilidades_number')
         return habilidades
@@ -423,7 +425,7 @@ class CompaneroAnimalForm(forms.Form):
     nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
     dotes = forms.ModelChoiceField(queryset=Dote.objects.all().filter(es_dote_companero_animal=True), widget=forms.Select(), required=True)
     trucos = forms.ModelMultipleChoiceField(queryset=Truco.objects.all().filter(prerrequisito_truco=None), widget=forms.SelectMultiple(), required=True)
-    habilidades = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.SelectMultiple(), required=True)
+    habilidades = forms.ModelMultipleChoiceField(queryset=Habilidad.objects.filter(es_habilidad_companero_animal=True), widget=forms.SelectMultiple(), required=True)
     companero_animal_tipo = forms.ModelChoiceField(queryset=CompaneroAnimal.objects.all().exclude(tipo=None).filter(nivel=None).exclude(nivel_cambio=None), widget=forms.Select(), required=True)
 
     def __init__(self, *args, **kwargs):

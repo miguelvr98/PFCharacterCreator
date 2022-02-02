@@ -54,7 +54,6 @@ class Personaje(models.Model):
     dotes = models.ManyToManyField('Dote')
     puntuaciones_habilidad = models.ManyToManyField('PuntuacionHabilidad')
     propiedades_objeto = models.ManyToManyField('PropiedadObjeto')
-    companero_animal = models.ForeignKey('CompaneroAnimalPersonaje', on_delete=models.CASCADE, null=True)
     conjuros_conocidos = models.ManyToManyField('Conjuro')
     poderes_conocidos = models.ManyToManyField('Poder')
     linaje = models.ForeignKey('Linaje', null=True, on_delete=models.SET_NULL)
@@ -289,6 +288,7 @@ class PuntuacionHabilidad(models.Model):
 class Habilidad(models.Model):
     habilidad = models.TextField(verbose_name='Habilidad')
     caracteristica = models.TextField(verbose_name='Característica', null=True)
+    es_habilidad_companero_animal = models.BooleanField(verbose_name='Es habilidad de compañero animal', default=False)
 
     def __str__(self):
         return self.habilidad
@@ -462,6 +462,7 @@ class CompaneroAnimalPersonaje(CompaneroAnimal):
     dotes = models.ManyToManyField('Dote')
     trucos = models.ManyToManyField('Truco')
     puntuacion_habilidad = models.ManyToManyField('PuntuacionHabilidad')
+    personaje = models.ForeignKey('Personaje', on_delete=models.CASCADE, null=True, related_name='companero_animal_personaje')
 
     @property
     def habilidades(self):

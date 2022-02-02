@@ -231,7 +231,6 @@ def mostrar_companero_animal_personaje(request, pk):
 
 def mostrar_truco(request, pk):
     truco = Truco.objects.get(pk=pk)
-    print(truco.prerrequisito_truco.all())
     if truco.prerrequisito_truco.all():
         prerrequisito_truco = truco.prerrequisito_truco.all()
         return render(request, 'truco/show.html', {'truco':truco, 'prerrequisito_truco':prerrequisito_truco})
@@ -574,7 +573,6 @@ def crear_personaje_1(request):
                 elif tipo == 'Épica':
                     puntos_a_elegir = 25
                 formulario_paso_2 = PersonajeForm2(raza=raza)
-                print(nombre)
                 return render(request, 'personaje/paso2.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
         else:
             formulario = PersonajeForm()
@@ -608,8 +606,8 @@ def crear_personaje_2(request):
                 formulario_paso_3 = PersonajeForm3(raza=raza, clase=clase, inteligencia=inteligencia)
                 clase_nivel_0 = Clase.objects.get(clase=request.POST.get('clase'), nivel=0)
                 numero_habilidades_eleccion = clase_nivel_0.puntos_de_habilidad_por_nivel + math.floor((inteligencia-10)/2)
-                if numero_habilidades_eleccion < 0:
-                    numero_habilidades_eleccion = 0
+                if numero_habilidades_eleccion <= 0:
+                    numero_habilidades_eleccion = 1
                 numero_idiomas_eleccion = math.floor((inteligencia-10)/2)
                 if numero_idiomas_eleccion < 0:
                     numero_idiomas_eleccion = 0
@@ -679,6 +677,8 @@ def crear_personaje_3(request):
                 conjuros_conocidos_0 = formulario_paso_3.cleaned_data.get('conjuros_conocidos_0')
                 conjuros_conocidos_1 = formulario_paso_3.cleaned_data.get('conjuros_conocidos_1')
                 conjuros_conocidos = conjuros_conocidos_0 | conjuros_conocidos_1
+                if not conjuros_conocidos and clase.conjuros:
+                    conjuros_conocidos = clase.conjuros
                 guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma, dotes, linaje, habilidades, idiomas, conjuros_conocidos)
                 return redirect('listar_personajes_propios_url')
         return render(request, 'personaje/paso3.html', {'nombre':nombre, 'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion, 'numero_idiomas_eleccion':numero_idiomas_eleccion, 'clase_nivel_0':clase_nivel_0, 'cantidad_conjuros_conocidos_0_eleccion':cantidad_conjuros_conocidos_0_eleccion, 'cantidad_conjuros_conocidos_1_eleccion':cantidad_conjuros_conocidos_1_eleccion})
@@ -696,9 +696,6 @@ def guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destre
     personaje = Personaje.objects.create(perfil=perfil, nombre=nombre, raza=raza, alineamiento=alineamiento, 
     fuerza=fuerza, destreza=destreza, constitucion=constitucion, inteligencia=inteligencia, sabiduria=sabiduria, carisma=carisma,
     puntos_de_golpe=dados_de_golpe)
-    if conjuros_conocidos != None:
-        for conjuro in conjuros_conocidos:
-            personaje.conjuros_conocidos.add(conjuro)
     if linaje != None:
         linaje_save = Linaje.objects.get(nombre=linaje)
         personaje.linaje = linaje_save
@@ -708,7 +705,7 @@ def guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destre
         for idioma in idiomas:
             personaje.idiomas.add(idioma)
     if conjuros_conocidos:
-        for conjuro in conjuros_conocidos:
+        for conjuro in conjuros_conocidos.all():
             personaje.conjuros_conocidos.add(conjuro)
     if puntuaciones_habilidad:
         for ph in puntuaciones_habilidad:
@@ -723,7 +720,7 @@ def asignar_companero_animal(request, pk):
         perfil = usuario_logueado(request)
         personaje = Personaje.objects.get(pk=pk)
         assert perfil == personaje.perfil
-        assert personaje.companero_animal == None
+        assert not personaje.companero_animal_personaje.all()
         druida_1 = Clase.objects.get(clase='Druida', nivel=1)
         #mago_1 = Clase.objects.get(clase='Mago', nivel=1) habria que incluir or (mago_1 in personaje.clases en el assert de debajo)
         explorador_4 = Clase.objects.get(clase='Explorador', nivel=4)
@@ -788,9 +785,19 @@ def guardar_companero_animal(personaje, nombre, dotes, trucos, habilidades, comp
     if puntuaciones_habilidad:
         for ph in puntuaciones_habilidad:
             companero_animal_personaje.puntuacion_habilidad.add(ph)
+    companero_animal_personaje.personaje = personaje
     companero_animal_personaje.save()
-    personaje.companero_animal = companero_animal_personaje
-    personaje.save()
+
+@login_required(login_url="/login/")
+def eliminar_personaje(request, pk):
+    try:
+        personaje = Personaje.objects.get(pk=pk)
+        perfil = usuario_logueado(request)
+        assert personaje.perfil == perfil
+        personaje.delete()
+        return redirect('listar_personajes_propios_url')
+    except:
+        return redirect('error_url')
 
 def gdpr(request):
     return render(request, 'gdpr.html')

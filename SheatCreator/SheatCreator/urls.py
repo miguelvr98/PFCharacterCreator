@@ -72,4 +72,5 @@ urlpatterns = [
     path('personaje/create/2/', views.crear_personaje_2, name='crear_personaje_2_url'),
     path('personaje/create/3/', views.crear_personaje_3, name='crear_personaje_3_url'),
     path('personaje/companero_animal/asignar/<int:pk>/', views.asignar_companero_animal, name='asignar_companero_animal_url'),
+    path('personaje/delete/<int:pk>/', views.eliminar_personaje, name='eliminar_personaje_url'),
 ]
