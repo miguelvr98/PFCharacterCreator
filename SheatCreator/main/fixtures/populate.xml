@@ -39856,9 +39856,7 @@
         <field type="IntegerField" name="carisma">10</field>
         <field type="BooleanField" name="es_publico">True</field>
         <field to="main.raza" name="raza" rel="OneToOneRel">4</field>
-        <field to="main.clase" name="clases" rel="ManyToMany">
-            <object pk="65"></object>
-        </field>
+        <field to="main.clase" name="clase" rel="OneToOneRel">65</field>
         <field to="main.idioma" name="idiomas" rel="ManyToManyRel">
             <object pk="6"></object>
         </field>

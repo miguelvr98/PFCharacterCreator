@@ -50,7 +50,7 @@ class Personaje(models.Model):
     es_publico = models.BooleanField(verbose_name='Es público', default=False)
     idiomas = models.ManyToManyField('Idioma')
     raza = models.ForeignKey('Raza', on_delete=models.CASCADE, null=True)
-    clases = models.ManyToManyField('Clase')
+    clase = models.ForeignKey('Clase', on_delete=models.CASCADE, null=True)
     dotes = models.ManyToManyField('Dote')
     puntuaciones_habilidad = models.ManyToManyField('PuntuacionHabilidad')
     propiedades_objeto = models.ManyToManyField('PropiedadObjeto')
@@ -132,8 +132,7 @@ class Personaje(models.Model):
                     clase_armadura = clase_armadura + bonificadorDestreza(self)
                 else:
                     clase_armadura = clase_armadura + max
-        for clase in self.clases:
-            clase_armadura = clase_armadura + clase.bonificacion_ac
+                clase_armadura = clase_armadura + clase.bonificacion_ac
         return clase_armadura
     
     @property
@@ -164,40 +163,35 @@ class Personaje(models.Model):
     @property
     def bmc(self):
         ataque_base_sum = 0
-        for clase in self.clases:
-            ataque_base_sum = ataque_base_sum + clase.ataque_base_int
+        ataque_base_sum = ataque_base_sum + clase.ataque_base_int
         bmc = '+' + str(bmc + ataque_base_sum + bonificadorFuerza(self))
         return bmc
 
     @property
     def dmc(self):
         ataque_base_sum = 0
-        for clase in self.clases:
-            ataque_base_sum = ataque_base_sum + clase.ataque_base_int
+        ataque_base_sum = ataque_base_sum + clase.ataque_base_int
         dmc = 10 + ataque_base_sum + bonificadorFuerza(self) + bonificadorDestreza(self)
         return dmc
     
     @property
     def fortaleza(self):
         fortaleza = 0
-        for clase in self.clases:
-            fortaleza = fortaleza + clase.fortaleza
+        fortaleza = fortaleza + clase.fortaleza
         fortaleza = fortaleza + bonificadorConstitucion(self)
         return fortaleza
     
     @property
     def reflejos(self):
         reflejos = 0
-        for clase in self.clases:
-            reflejos = reflejos + clase.reflejos
+        reflejos = reflejos + clase.reflejos
         reflejos = reflejos + bonificadorDestreza(self)
         return reflejos
 
     @property
     def voluntad(self):
         voluntad = 0
-        for clase in self.clases:
-            voluntad = voluntad + clase.voluntad
+        voluntad = voluntad + clase.voluntad
         voluntad = voluntad + bonificadorSabiduria(self)
         return voluntad
 
@@ -205,8 +199,7 @@ class Personaje(models.Model):
     def ataque_base(self):
         ataque_base_sum = 0
         ataque_base = '+'
-        for clase in self.clases:
-            ataque_base_sum = ataque_base_sum + clase.ataque_base_int
+        ataque_base_sum = ataque_base_sum + clase.ataque_base_int
         if ataque_base_sum >= 6:
             while ataque_base_sum >= 6:
                 ataque_base = ataque_base + str(ataque_base_sum) + '/'
@@ -219,8 +212,7 @@ class Personaje(models.Model):
     @property
     def nivel(self):
         nivel = 0
-        for clase in self.clases:
-            nivel = nivel + clase.nivel
+        nivel = nivel + clase.nivel
         return nivel
     
     @property

@@ -223,7 +223,7 @@ def mostrar_companero_animal_personaje(request, pk):
     if personaje.es_publico==True:
         perfil = usuario_logueado(request)
         assert perfil == personaje.perfil
-    companero_animal = personaje.companero_animal
+    companero_animal = personaje.companero_animal_personaje
     dotes = companero_animal.dotes.all()
     trucos = companero_animal.trucos.all()
     especiales = companero_animal.especiales.all()
@@ -271,7 +271,7 @@ def mostrar_personaje(request, pk):
             perfil = usuario_logueado(request)
             assert personaje.perfil == perfil
         idiomas = personaje.idiomas.all()
-        clases = personaje.clases.all()
+        clase = personaje.clase
         dotes = personaje.dotes.all()
         conjuros = personaje.conjuros_conocidos.all()
         poderes = personaje.poderes_conocidos.all()
@@ -546,7 +546,7 @@ def buscar_personaje(request):
                 
                 if clase != None:
                     clases = Clase.objects.all().filter(clase=clase.clase)
-                    personajes = personajes.filter(clases__in=clases)
+                    personajes = personajes.filter(clase__in=clases)
         else:
             buscador = BuscarPersonajeForm()
         return render(request, 'personaje/list.html', {'personajes':personajes, 'buscador':buscador})
@@ -710,7 +710,7 @@ def guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destre
     if puntuaciones_habilidad:
         for ph in puntuaciones_habilidad:
             personaje.puntuaciones_habilidad.add(ph)
-    personaje.clases.add(clase)
+    personaje.clase = clase
     personaje.save()
 
 #Pensar si quitar los familiares (no vale la pena tenerlos para lo poco que hacen ya) (de momento están quitados)
@@ -724,7 +724,7 @@ def asignar_companero_animal(request, pk):
         druida_1 = Clase.objects.get(clase='Druida', nivel=1)
         #mago_1 = Clase.objects.get(clase='Mago', nivel=1) habria que incluir or (mago_1 in personaje.clases en el assert de debajo)
         explorador_4 = Clase.objects.get(clase='Explorador', nivel=4)
-        assert (druida_1 in personaje.clases.all()) or (explorador_4 in personaje.clases.all())
+        assert (druida_1 == personaje.clase) or (explorador_4 == personaje.clase)
         companero_animal_nivel = CompaneroAnimal.objects.get(nivel=1, tipo=None)
         if request.method == 'POST':
             formulario = CompaneroAnimalForm(request.POST)
@@ -798,6 +798,62 @@ def eliminar_personaje(request, pk):
         return redirect('listar_personajes_propios_url')
     except:
         return redirect('error_url')
+
+@login_required(login_url="/login/") #No se puede multiclasear, falta por meter los conjuros
+def subir_nivel(request, pk):
+    personaje = Personaje.objects.get(pk=pk)
+    clase = Clase.objects.get(clase=personaje.clase.clase, nivel=personaje.nivel+1)
+    perfil = usuario_logueado(request)
+    assert personaje.perfil == perfil
+    assert personaje.nivel < 20 and personaje.nivel >= 1
+    druida_1 = Clase.objects.get(clase='Druida', nivel=1)
+    explorador_4 = Clase.objects.get(clase='Explorador', nivel=4)
+    if druida_1 == personaje.clase or explorador_4 in personaje.clase:
+        assert personaje.companero_animal_personaje.all()
+    numero_eleccion_dotes = 0
+    if clase.nivel%2 == 1:
+        numero_eleccion_dotes = numero_eleccion_dotes + 1
+    especiales_clase_dotes = Especial.objects.all().filter(clase=clase).filter(nombre__icontains='Dotes adicionales')
+    if especiales_clase_dotes:
+        numero_eleccion_dotes = numero_eleccion_dotes + 1
+    clase_nivel_0 = Clase.objects.get(clase=clase.clase, nivel=0)
+    numero_eleccion_habilidades = clase_nivel_0.puntos_de_habilidad_por_nivel + math.floor((personaje.inteligencia-10)/2)
+    if numero_eleccion_habilidades <= 0:
+            numero_eleccion_habilidades = 1
+    numero_poderes = 0
+    especiales_clase_poderes = clase.especiales.all()
+    especiales_nombre = ['Poder de furia', 'Enemigo predilecto', 'Entrenamiento en armas', 'Merced', 'Talentos del pícaro']
+    for especial in especiales_clase_poderes:
+        if especial.nombre in especiales_nombre:
+            numero_poderes = numero_poderes + 1
+    companero_animal_personaje = personaje.companero_animal_personaje
+    if companero_animal_personaje != None:
+        companero_animal_nivel = CompaneroAnimal.objects.get(nivel=companero_animal_personaje.nivel+1, tipo=None)
+    if request.method == 'POST':
+        formulario = SubirNivelForm(request.POST)
+        if formulario.is_valid():
+            dotes_personaje = formulario.cleaned_data.get('dotes_personaje')
+            poderes = formulario.cleaned_data.get('poderes')
+            habilidades_personaje = formulario.cleaned_data.get('habilidades_personaje')
+            eleccion_puntos_de_golpe = formulario.cleaned_data.get('eleccion_puntos_de_golpe')
+            eleccion_caracteristica_personaje = formulario.cleaned_data.get('eleccion_caracteristica_personaje')
+            trucos = formulario.cleaned_data.get('trucos')
+            habilidades_companero_animal = formulario.cleaned_data.get('habilidades_companero_animal')
+            dotes_companero_animal = formulario.cleaned_data.get('dotes_companero_animal')
+            eleccion_caracteristica_companero_animal = formulario.cleaned_data.get('eleccion_caracteristica_companero_animal')
+            guardar_subir_nivel_personaje(personaje, clase, dotes_personaje, poderes, habilidades_personaje, eleccion_puntos_de_golpe, eleccion_caracteristica_personaje)
+            if companero_animal_personaje != None:
+                guardar_subir_nivel_companero_animal(companero_animal_personaje, trucos, habilidades_companero_animal, dotes_companero_animal, eleccion_caracteristica_companero_animal)
+            return render(request, 'personaje/show/'+str(personaje.pk))
+    else:
+        formulario = SubirNivelForm(personaje=personaje, clase=clase, numero_eleccion_dotes=numero_eleccion_dotes, numero_eleccion_habilidades=numero_eleccion_habilidades, 'numero_poderes':numero_poderes, companero_animal_nivel=companero_animal_nivel)
+    return render(request, 'personaje/subir_nivel.html', {'formulario':formulario})
+
+def guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, habilidades_personaje, eleccion_puntos_de_golpe, eleccion_caracteristica_personaje):
+    return None
+
+def guardar_subir_nivel_companero_animal(companero_animal_personaje, trucos, habilidades_companero_animal, dotes_companero_animal, eleccion_caracteristica_companero_animal):
+    return None
 
 def gdpr(request):
     return render(request, 'gdpr.html')

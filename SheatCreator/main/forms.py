@@ -451,3 +451,123 @@ class CompaneroAnimalForm(forms.Form):
             raise forms.ValidationError(self.error_messages['habilidades_number'], code='habilidades_number')
         return habilidades
 
+class SubirNivelForm(forms.Form):
+
+    error_messages = {
+        'dotes_number': ("No ha elegido el número de dotes correcto"),
+        'habilidades_number': ('No ha elegido el número de habilidades correcto'),
+        'trucos_number': ('No ha seleccionado el número de trucos correctos'),
+    }
+
+    CARACTERISTICA_CHOICES = (('Fuerza', 'Fuerza'), ('Destreza', 'Destreza'), ('Constitucion', 'Constitución'), ('Inteligencia', 'Inteligencia'), ('Sabiduria', 'Sabiduría'), ('Carisma', 'Carisma'), )
+
+    eleccion_caracteristica_personaje = forms.ChoiceField(choices=CARACTERISTICA_CHOICES, widget=forms.Select(), required=False)
+    eleccion_caracteristica_companero_animal = forms.ChoiceField(choices=CARACTERISTICA_CHOICES, widget=forms.Select(), required=False)
+    eleccion_puntos_de_golpe = forms.BooleanField(label="", required=False, widget=forms.CheckboxInput())
+
+    def __init__(self, *args, **kwargs):
+        personaje = kwargs.pop('personaje')
+        clase = kwargs.pop('clase')
+        numero_eleccion_dotes = kwargs.pop('numero_eleccion_dotes')
+        numero_eleccion_habilidades = kwargs.pop('numero_eleccion_habilidades')
+        numero_poderes = kwargs.pop('numero_poderes')
+        companero_animal_nivel = kwargs.pop('companero_animal_nivel')
+        super(SubirNivelForm, self).__init__(*args, **kwargs)
+        self.personaje = Personaje.objects.get(pk=personaje.pk)
+        self.clase = Clase.objects.get(pk=clase.pk)
+        self.numero_eleccion_dotes = numero_eleccion_dotes
+        self.numero_eleccion_habilidades = numero_eleccion_habilidades
+        self.companero_animal_nivel = CompaneroAnimal.objects.get(pk=companero_animal_nivel.pk)
+        dotes_personaje_nombre = []
+        clase_nivel_0 = Clase.objects.get(clase=clase, nivel=0)
+        for dote in personaje.dotes.all():
+            dotes_personaje_nombre.append(dote.nombre)
+        poderes_personaje_nombre = []
+        for poder in personaje.poderes.all():
+            poderes_personaje_nombre.append(poder.nombre)
+        companero_animal_personaje = personaje.companero_animal_personaje
+        trucos_nombre = []
+        for truco in companero_animal_personaje.trucos.all():
+            trucos_nombre.append(truco.nombre)
+        dotes_companero_animal_nombre = []
+        for dote in companero_animal_personaje.dotes.all():
+            dotes_companero_animal_nombre.append(dote.nombre)
+        especiales_nombre = []
+        for especial in clase.especiales.all():
+            especiales_nombre.append(especial.nombre)
+        queryset1 = Dote.objects.all().filter(prerrequisito_raza=raza).exclude(nombre__in=dotes_personaje_nombre)
+        queryset2 = Dote.objects.all().filter(prerrequisito_raza=None).filter(nivel__lte=clase.nivel).filter(ataque_base__lte=clase.ataque_base_int).filter(prerrequisito_dote=None).exclude(pr_dote__in=personaje.dotes).exclude(nombre__in=dotes_personaje_nombre)
+        queryset3 = Dote.objects.all().filter(pr_dote__in=personaje.dotes).exclude(nombre__in=dotes_personaje_nombre)
+        queryset4 = clase_nivel_0.poderes.all().filter(nivel__lte=clase.nivel).exclude(pr_poder__in=personaje.poderes)
+        queryset5 = Poder.objects.all().filter(pr_poder__in=personaje.poderes).exclude(nombre__in=poderes_personaje_nombre)
+        if not 'Talentos mejorados del pícaro' in especiales_nombre and clase.clase == 'Pícaro':
+            queryset5 = queryset5.exclude(nivel__lt=10)
+        queryset6 = Truco.objects.all().filter(prerrequisito_truco=None).exclude(nombre__in=trucos_nombre)
+        queryset7 = Truco.objects.all().filter(pr_truco__in=companero_animal_personaje.trucos).exclude(nombre__in=trucos_nombre)
+        self.fields['dotes_personaje'] = forms.ModelMultipleChoiceField(queryset=queryset1 | queryset2 | queryset3, widget=forms.SelectMultiple(), required=True)
+        self.fields['habilidades_personaje'] = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.SelectMultiple(), required=False)
+        self.fields['poderes'] = forms.ModelChoiceField(queryset=queryset4 | queryset5, widget=forms.Select(), required=False)
+        self.fields['trucos'] = forms.ModelMultipleChoiceField(queryset=queryset6 | queryset7, widget=forms.SelectMultiple(), required=False)
+        self.fields['habilidades_companero_animal'] = forms.ModelMultipleChoiceField(queryset=Habilidad.objects.all().filter(es_habilidad_companero_animal=True), widget=forms.SelectMultiple(), required=False)
+        self.fields['dotes_companero_animal'] = forms.ModelMultipleChoiceField(queryset=Dote.objects.all().filter(es_dote_companero_animal=True).exclude(nombre__in=dotes_companero_animal_nombre), widget=forms.SelectMultiple(), required=True)
+        #Faltan más campos y los cleans, pensar como meter los conjuros
+    
+    def clean_dotes_personaje(self):
+        dotes = self.cleaned_data.get('dotes')
+        numero_dotes = self.numero_eleccion_dotes
+        clase = self.clase
+        if len(dotes) != numero_dotes:
+            raise forms.ValidationError(self.error_messages['dotes_number'], code='dotes_number')
+        return dotes
+    
+    def clean_habilidades_personaje(self):
+        habilidades = self.cleaned_data.get('habilidades')
+        personaje = Personaje.objects.get(pk=self.personaje.pk)
+        clase = Clase.objects.get(clase=self.clase.clase, nivel=0)
+        numero_eleccion_habilidades = self.numero_eleccion_habilidades
+        if numero_eleccion_habilidades != len(habilidades):
+            raise forms.ValidationError(self.error_messages['habilidades_number'], code='habilidades_number')
+        return habilidades
+    
+    #El clean de poderes esta mal, mirar cuales son los especiales en los niveles para ver si se suma 1 en numero_poderes
+    def clean_poderes(self):
+        poderes = self.cleaned_data.get('poderes')
+        clase = self.clase
+        especiales_clase = clase.especiales.all()
+        numero_poderes = self.numero_poderes
+        if numero_poderes != len(poderes):
+            raise forms.ValidationError(self.error_messages['poderes_number'], code='poderes_number')
+        return poderes
+
+    def clean_trucos(self):
+        companero_animal_nivel = self.companero_animal_nivel
+        trucos = self.cleaned_data.get('trucos')
+        numero_trucos = 0
+        if companero_animal_nivel != None:
+            companero_animal_nivel_menos = CompaneroAnimal.objects.get(nivel=companero_animal_nivel-1, tipo=None)
+            numero_trucos = companero_animal_nivel.numero_trucos - companero_animal_nivel_menos.numero_trucos
+        if numero_trucos != len(trucos):
+            raise forms.ValidationError(self.error_messages['trucos_number'], code='trucos_number')
+        return trucos
+
+    def clean_habilidades_companero_animal(self):
+        companero_animal_nivel = self.companero_animal_nivel
+        habilidades_companero_animal = self.cleaned_data.get('habilidades_companero_animal')
+        numero_habilidades = 0
+        if companero_animal_nivel != None:
+            companero_animal_nivel_menos = CompaneroAnimal.objects.get(nivel=companero_animal_nivel-1, tipo=None)
+            numero_habilidades = companero_animal_nivel.puntos_habilidad - companero_animal_nivel_menos.puntos_habilidad
+        if numero_habilidades != len(habilidades_companero_animal):
+            raise forms.ValidationError(self.error_messages['habilidades_companero_animal'], code='habilidades_companero_animal')
+        return habilidades_companero_animal
+    
+    def clean_dotes_companero_animal(self):
+        companero_animal_nivel = self.companero_animal_nivel
+        dotes_companero_animal = self.cleaned_data.get('dotes_companero_animal')
+        numero_dotes = 0
+        if companero_animal_nivel != None:
+            companero_animal_nivel_menos = CompaneroAnimal.objects.get(nivel=companero_animal_nivel-1, tipo=None)
+            numero_habilidades = companero_animal_nivel.numero_dotes - companero_animal_nivel_menos.numero_dotes
+        if numero_dotes != len(dotes_companero_animal):
+            raise forms.ValidationError(self.error_messages['dotes_number'], code='dotes_number')
+        return dotes_companero_animal
