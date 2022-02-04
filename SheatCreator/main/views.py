@@ -834,8 +834,10 @@ def subir_nivel(request, pk):
     caracteristica_companero_animal_eleccion = False
     companero_animal_nivel = []
     if companero_animal_personaje.all():
-        companero_animal_nivel = CompaneroAnimal.objects.get(nivel=companero_animal_personaje.nivel+1, tipo=None)
-        if companero_animal_nivel%4 == 0:
+        for ca in companero_animal_personaje.all():
+            cap = ca
+        companero_animal_nivel = CompaneroAnimal.objects.get(nivel=ca.nivel+1, tipo=None)
+        if companero_animal_nivel.nivel%4 == 0:
             caracteristica_companero_animal_eleccion = True
     cantidad_conjuros_conocidos_0_eleccion = 0
     cantidad_conjuros_conocidos_1_eleccion = 0
@@ -850,37 +852,37 @@ def subir_nivel(request, pk):
     if clase.cantidad_conjuros_conocidos.all():
         cantidad_conjuros_conocidos_0_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad
         cantidad_conjuros_conocidos_1_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all() == 3):
+        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 3:
             cantidad_conjuros_conocidos_2_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=2).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all() > 3):
+        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 3:
             cantidad_conjuros_conocidos_2_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=2).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=2).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all() == 4):
+        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 4:
             cantidad_conjuros_conocidos_3_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=3).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all() > 4):
+        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 4:
             cantidad_conjuros_conocidos_3_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=3).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=3).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all() == 5):
+        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 5:
             cantidad_conjuros_conocidos_4_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=4).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all() > 5):
+        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 5:
             cantidad_conjuros_conocidos_4_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=4).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=4).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all() == 6):
+        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 6:
             cantidad_conjuros_conocidos_5_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=5).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all() > 6):
+        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 6:
             cantidad_conjuros_conocidos_5_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=5).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=5).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all() == 7):
+        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 7:
             cantidad_conjuros_conocidos_6_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=6).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all() > 7):
+        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 7:
             cantidad_conjuros_conocidos_6_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=6).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=6).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all() == 8):
+        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 8:
             cantidad_conjuros_conocidos_7_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=7).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all() > 8):
+        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 8:
             cantidad_conjuros_conocidos_7_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=7).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=7).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all() == 9):
+        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 9:
             cantidad_conjuros_conocidos_8_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=8).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all() > 9):
+        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 9:
             cantidad_conjuros_conocidos_8_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=8).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=8).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all() == 10) and len(personaje.clase.cantidad_conjuros_conocidos.all() == 9):
+        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 10 and len(personaje.clase.cantidad_conjuros_conocidos.all()) == 9:
             cantidad_conjuros_conocidos_9_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=9).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all() == 10):
+        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) == 10:
             cantidad_conjuros_conocidos_9_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=9).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=9).cantidad
     if request.method == 'POST':
         formulario = SubirNivelForm(request.POST, personaje=personaje, clase=clase, numero_eleccion_dotes=numero_eleccion_dotes, 
@@ -919,7 +921,7 @@ def subir_nivel(request, pk):
             if not conjuros_conocidos and clase.conjuros:
                 conjuros_conocidos = clase.conjuros
             guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, habilidades_personaje, eleccion_puntos_de_golpe, eleccion_caracteristica_personaje, conjuros_conocidos)
-            if companero_animal_personaje != None:
+            if not companero_animal_personaje:
                 guardar_subir_nivel_companero_animal(companero_animal_personaje, trucos, habilidades_companero_animal, dotes_companero_animal, eleccion_caracteristica_companero_animal)
             return redirect('/personaje/show/'+str(personaje.pk))
     else:
@@ -940,6 +942,7 @@ def subir_nivel(request, pk):
 #Mirar bien como se meten las habilidades en el personaje
 def guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, habilidades_personaje, eleccion_puntos_de_golpe, eleccion_caracteristica_personaje, conjuros_conocidos):
     clase_nivel_0 = Clase.objects.get(clase=clase, nivel=0)
+    assert clase.nivel - personaje.nivel == 1
     if eleccion_caracteristica_personaje:
         if eleccion_caracteristica_personaje == 'Fuerza':
             personaje.fuerza = personaje.fuerza + 1

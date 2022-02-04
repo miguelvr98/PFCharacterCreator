@@ -505,7 +505,7 @@ class SubirNivelForm(forms.Form):
         numero_habilidades_companero_animal = 0
         if companero_animal_nivel:
             self.companero_animal_nivel = CompaneroAnimal.objects.get(pk=companero_animal_nivel.pk)
-            companero_animal_nivel_menos = CompaneroAnimal.objects.get(nivel=companero_animal_nivel-1, tipo=None)
+            companero_animal_nivel_menos = CompaneroAnimal.objects.get(nivel=companero_animal_nivel.nivel-1, tipo=None)
             self.numero_trucos = self.companero_animal_nivel.numero_trucos - companero_animal_nivel_menos.numero_trucos
             self.numero_dotes_companero_animal = self.companero_animal_nivel.numero_dotes - companero_animal_nivel_menos.numero_dotes
             self.numero_habilidades_companero_animal = self.companero_animal_nivel.puntos_habilidad - companero_animal_nivel_menos.puntos_habilidad
@@ -522,12 +522,14 @@ class SubirNivelForm(forms.Form):
         for poder in personaje.poderes_conocidos.all():
             poderes_personaje_nombre.append(poder.nombre)
         companero_animal_personaje = personaje.companero_animal_personaje
+        for ca in companero_animal_personaje.all():
+            cap = ca
         trucos_nombre = []
         dotes_companero_animal_nombre = []
         if companero_animal_personaje.all():
-            for truco in companero_animal_personaje.trucos.all():
+            for truco in cap.trucos.all():
                 trucos_nombre.append(truco.nombre)
-            for dote in companero_animal_personaje.dotes.all():
+            for dote in cap.dotes.all():
                 dotes_companero_animal_nombre.append(dote.nombre)
         especiales_nombre = []
         for especial in clase.especiales.all():
@@ -544,7 +546,7 @@ class SubirNivelForm(forms.Form):
             queryset5 = queryset5.exclude(nivel__lt=10)
         queryset6 = Truco.objects.all().filter(prerrequisito_truco=None).exclude(nombre__in=trucos_nombre)
         if companero_animal_personaje.all():
-            queryset7 = Truco.objects.all().filter(pr_truco__in=companero_animal_personaje.trucos.all()).exclude(nombre__in=trucos_nombre)
+            queryset7 = Truco.objects.all().filter(pr_truco__in=cap.trucos.all()).exclude(nombre__in=trucos_nombre)
         self.fields['dotes_personaje'] = forms.ModelMultipleChoiceField(queryset=(queryset1 | queryset2 | queryset3).distinct(), widget=forms.SelectMultiple(), required=False)
         self.fields['habilidades_personaje'] = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.SelectMultiple(), required=False)
         self.fields['poderes'] = forms.ModelChoiceField(queryset=queryset4 | queryset5, widget=forms.Select(), required=False)
@@ -555,15 +557,15 @@ class SubirNivelForm(forms.Form):
         self.fields['habilidades_companero_animal'] = forms.ModelMultipleChoiceField(queryset=Habilidad.objects.all().filter(es_habilidad_companero_animal=True), widget=forms.SelectMultiple(), required=False)
         self.fields['dotes_companero_animal'] = forms.ModelMultipleChoiceField(queryset=Dote.objects.all().filter(es_dote_companero_animal=True).exclude(nombre__in=dotes_companero_animal_nombre), widget=forms.SelectMultiple(), required=False)
         self.fields['conjuros_conocidos_0'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_1'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_2'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_3'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_4'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_5'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_6'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_7'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_8'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_9'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_1'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=1).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_2'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=2).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_3'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=3).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_4'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=4).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_5'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=5).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_6'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=6).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_7'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=7).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_8'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=8).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_9'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=9).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
     
     def clean_dotes_personaje(self):
         dotes_personaje = self.cleaned_data.get('dotes_personaje')
