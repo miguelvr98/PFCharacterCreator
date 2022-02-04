@@ -34886,9 +34886,6 @@
             <object pk="158"></object>
             <object pk="159"></object>
             <object pk="160"></object>
-            <object pk="161"></object>
-            <object pk="162"></object>
-            <object pk="163"></object>
         </field>
     </object>
     <object pk="212" model="main.clase">

@@ -826,12 +826,9 @@ def subir_nivel(request, pk):
             numero_eleccion_habilidades = 1
     numero_poderes = 0
     especiales_clase_poderes = clase.especiales.all()
-    print(especiales_clase_poderes)
-    print(personaje.nivel)
     especiales_nombre = ['Poder de furia', 'Enemigo predilecto', 'Entrenamiento en armas', 'Merced', 'Talentos del pícaro']
     for especial in especiales_clase_poderes:
         if especial.nombre in especiales_nombre:
-            print(especial)
             numero_poderes = numero_poderes + 1
     companero_animal_personaje = personaje.companero_animal_personaje
     caracteristica_companero_animal_eleccion = False
@@ -940,13 +937,14 @@ def subir_nivel(request, pk):
         cantidad_conjuros_conocidos_9_eleccion=cantidad_conjuros_conocidos_9_eleccion)
     return render(request, 'personaje/subir_nivel.html', {'formulario':formulario, 'pk':personaje.pk, 'clase_nivel_0':clase_nivel_0, 'caracteristica_personaje_eleccion':caracteristica_personaje_eleccion, 'caracteristica_companero_animal_eleccion':caracteristica_companero_animal_eleccion, 'companero_animal_personaje':companero_animal_personaje})
 
+#Mirar bien como se meten las habilidades en el personaje
 def guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, habilidades_personaje, eleccion_puntos_de_golpe, eleccion_caracteristica_personaje, conjuros_conocidos):
     clase_nivel_0 = Clase.objects.get(clase=clase, nivel=0)
     if eleccion_caracteristica_personaje:
         if eleccion_caracteristica_personaje == 'Fuerza':
             personaje.fuerza = personaje.fuerza + 1
         elif eleccion_caracteristica_personaje == 'Destreza':
-            personaje.destreza == personaje.destreza + 1
+            personaje.destreza = personaje.destreza + 1
         elif eleccion_caracteristica_personaje == 'Constitucion':
             personaje.constitucion = personaje.constitucion + 1
         elif eleccion_caracteristica_personaje == 'Inteligencia':
@@ -969,20 +967,35 @@ def guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, ha
     if conjuros_conocidos:
         for conjuro in conjuros_conocidos.all():
             personaje.conjuros_conocidos.add(conjuro)
-    puntuaciones_habilidad_personaje = []
+    print('Primer print')
+    print(personaje.puntuaciones_habilidad.all())
+    habilidades = []
     for ph in personaje.puntuaciones_habilidad.all():
-        puntuaciones_habilidad_personaje.append(ph)
+        habilidades.append(ph.habilidad)
     for habilidad in habilidades_personaje:
-        for ph in puntuaciones_habilidad_personaje:
-            if ph.habilidad == habilidad:
-                puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=ph.puntuacion+1, habilidad=habilidad)
-                puntuaciones_habilidad_personaje.remove(ph)
-                puntuaciones_habilidad_personaje.append(puntuacion_habilidad)
-            else:
-                puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=1, habilidad=habilidad)
-                puntuaciones_habilidad_personaje.append(puntuacion_habilidad)
-    for ph in puntuaciones_habilidad_personaje:
-        personaje.puntuaciones_habilidad.add(ph)
+        if habilidad in habilidades:
+            ph = personaje.puntuaciones_habilidad.get(habilidad=habilidad)
+            puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=ph.puntuacion+1, habilidad=habilidad)
+            print('Segundo print')
+            print(puntuacion_habilidad.habilidad)
+            print('Tercer print')
+            print(puntuacion_habilidad.puntuacion)
+            personaje.puntuaciones_habilidad.remove(ph)
+            print('Cuarto print')
+            print(personaje.puntuaciones_habilidad.all())
+            personaje.puntuaciones_habilidad.add(puntuacion_habilidad)
+            print('Quinto print')
+            print(personaje.puntuaciones_habilidad.all())
+        else:
+            print('Sexto print')
+            print(ph.habilidad)
+            print('Septimo print')
+            print(ph.puntuacion)
+            puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=1, habilidad=habilidad)
+            personaje.puntuaciones_habilidad.add(puntuacion_habilidad)
+            print('Octavo print')
+            print(personaje.puntuaciones_habilidad.all())
+        print('Fin bucle')
     personaje.clase = clase
     personaje.save()
 

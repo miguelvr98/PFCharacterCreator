@@ -1,10 +1,15 @@
 {% block content %}
     {{personaje.nombre}}
     {{personaje.clase}}
+    {{personaje.nivel}}
     {% for conjuro in conjuros %}
         {{conjuro.nombre}}
     {% endfor %}
     {% for poder in poderes %}
         {{poder.nombre}}
+    {% endfor %}
+    {% for ph in personaje.puntuaciones_habilidad.all %}
+        {{ph.habilidad.habilidad}}
+        {{ph.puntuacion}}
     {% endfor %}
 {% endblock %}

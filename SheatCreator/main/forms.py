@@ -458,6 +458,7 @@ class SubirNivelForm(forms.Form):
         'habilidades_number': ('No ha elegido el número de habilidades correcto'),
         'trucos_number': ('No ha seleccionado el número de trucos correctos'),
         'conjuros_number': ('No ha seleccionado el número de conjuros correctos'),
+        'poderes_number': ('No ha seleccionado el número de poderes correcto')
     }
 
     CARACTERISTICA_CHOICES = (('Fuerza', 'Fuerza'), ('Destreza', 'Destreza'), ('Constitucion', 'Constitución'), ('Inteligencia', 'Inteligencia'), ('Sabiduria', 'Sabiduría'), ('Carisma', 'Carisma'), )
@@ -583,7 +584,7 @@ class SubirNivelForm(forms.Form):
         set_poderes = []
         set_poderes.append(poderes)
         numero_poderes = self.numero_poderes
-        if numero_poderes != len(set_poderes):
+        if numero_poderes != len(set_poderes) and poderes != None:
             raise forms.ValidationError(self.error_messages['poderes_number'], code='poderes_number')
         return poderes
 
