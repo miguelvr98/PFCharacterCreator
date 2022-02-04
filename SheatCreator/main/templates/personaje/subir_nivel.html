@@ -1,0 +1,150 @@
+{% block content %}
+<div class="bottom-footer">
+    <div class="container">
+      <div class="row">
+          <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto ">
+                <h1 class="display-4 py-2 text-center">Crear personaje</h1>
+                {% if formulario.errors %}
+                    {% for field in formulario %}
+                        {% for error in field.errors %}
+                            <div class="alert alert-danger">
+                                {{error}}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+                <div class="px-2">
+                    <form  role="form"  enctype="multipart/form-data" action="/personaje/subir_nivel/{{pk}}/" method="POST" id="upload-image-form"> 
+                        {% csrf_token %}
+                        {% if formulario.numero_eleccion_dotes > 0 %}
+                            Debes elegir {{formulario.numero_eleccion_dotes}} dotes
+                            <div class="text-center">Dotes</div>
+                                {{formulario.dotes_personaje}}
+                                <br>
+                        {% endif %}
+                        {% if formulario.numero_poderes > 0 %}
+                            Debes elegir {{formulario.numero_poderes}} poder
+                            <div class="text-center">Poderes</div>
+                                {{formulario.poderes}}
+                                <br>
+                        {% endif %}
+                        Debes elegir {{formulario.numero_eleccion_habilidades}} habilidades para subir un punto en ellas</br>
+                        Las habilidades de clase son: {{clase_nivel_0.descripcion_habilidades}}
+                        <div class="text-center">Habilidades</div>
+                            {{formulario.habilidades_personaje}}
+                            <br>
+                        {% if formulario.cantidad_conjuros_conocidos_0_eleccion > 0 %}
+                        <div class="text-center">Conjuros de nivel 0</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_0_eleccion}} conjuros de nivel 0<br>
+                            {{formulario.conjuros_conocidos_0}}
+                            <br>
+                        {% endif %}
+                        {% if formulario.cantidad_conjuros_conocidos_1_eleccion %}
+                        <div class="text-center">Conjuros de nivel 1</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_1_eleccion}} conjuros de nivel 1<br>
+                            {{formulario.conjuros_conocidos_1}}
+                            <br>
+                        {% endif %}
+                        {% if formulario.cantidad_conjuros_conocidos_2_eleccion %}
+                        <div class="text-center">Conjuros de nivel 2</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_2_eleccion}} conjuros de nivel 2<br>
+                            {{formulario.conjuros_conocidos_2}}
+                            <br>
+                        {% endif %}
+                        {% if formulario.cantidad_conjuros_conocidos_3_eleccion %}
+                        <div class="text-center">Conjuros de nivel 3</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_3_eleccion}} conjuros de nivel 3<br>
+                            {{formulario.conjuros_conocidos_3}}
+                            <br>
+                        {% endif %}
+                        {% if formulario.cantidad_conjuros_conocidos_4_eleccion %}
+                        <div class="text-center">Conjuros de nivel 4</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_4_eleccion}} conjuros de nivel 4<br>
+                            {{formulario.conjuros_conocidos_4}}
+                            <br>
+                        {% endif %}
+                        {% if formulario.cantidad_conjuros_conocidos_5_eleccion %}
+                        <div class="text-center">Conjuros de nivel 5</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_5_eleccion}} conjuros de nivel 5<br>
+                            {{formulario.conjuros_conocidos_5}}
+                            <br>
+                        {% endif %}
+                        {% if formulario.cantidad_conjuros_conocidos_6_eleccion %}
+                        <div class="text-center">Conjuros de nivel 6</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_6_eleccion}} conjuros de nivel 6<br>
+                            {{formulario.conjuros_conocidos_6}}
+                            <br>
+                        {% endif %}
+                        {% if formulario.cantidad_conjuros_conocidos_7_eleccion %}
+                        <div class="text-center">Conjuros de nivel 7</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_7_eleccion}} conjuros de nivel 7<br>
+                            {{formulario.conjuros_conocidos_7}}
+                            <br>
+                        {% endif %}
+                        {% if formulario.cantidad_conjuros_conocidos_8_eleccion %}
+                        <div class="text-center">Conjuros de nivel 8</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_8_eleccion}} conjuros de nivel 8<br>
+                            {{formulario.conjuros_conocidos_8}}
+                            <br>
+                        {% endif %}
+                        {% if formulario.cantidad_conjuros_conocidos_9_eleccion %}
+                        <div class="text-center">Conjuros de nivel 9</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_9_eleccion}} conjuros de nivel 9<br>
+                            {{formulario.conjuros_conocidos_9}}
+                            <br>
+                        {% endif %}
+                        {% if clase %}
+                        <div class="text-center">Conjuros de nivel 9</div>
+                            Debes elegir {{formulario.cantidad_conjuros_conocidos_9_eleccion}} conjuros de nivel 9<br>
+                            {{formulario.conjuros_conocidos_9}}
+                            <br>
+                        {% endif %}
+                        {% if caracteristica_personaje_eleccion %}
+                        <div class="text-center">Característica</div>
+                            Debes elegir una característica que aumentará en uno<br>
+                            {{formulario.eleccion_caracteristica_personaje}}
+                            <br>
+                        {% endif %}
+                        <div class="text-center">Marque la casilla si quiere que los puntos de golpe por subir sean aleatorios</div>
+                            {{formulario.eleccion_puntos_de_golpe}}
+                        {% if companero_animal_personaje.all %}
+                            {% if formulario.numero_trucos > 0 %}
+                                Debes elegir {{formulario.numero_trucos}} trucos
+                                <div class="text-center">Trucos</div>
+                                {{formulario.trucos}}
+                                <br>
+                            {% endif %}
+                            {% if formulario.numero_dotes_companero_animal > 0 %}
+                                Debes elegir {{formulario.numero_dotes_companero_animal}} dotes
+                                <div class="text-center">Dotes</div>
+                                {{formulario.dotes_companero_animal}}
+                                <br>
+                            {% endif %}
+                            {% if formulario.numero_habilidades_companero_animal > 0 %}
+                                Debes elegir {{formulario.numero_habilidades_companero_animal}} habilidades para subir un punto en ellas
+                                <div class="text-center">Habilidades</div>
+                                {{formulario.habilidades_companero_animal}}
+                                <br>
+                            {% endif %}
+                            {% if caracteristica_companero_animal_eleccion %}
+                                <div class="text-center">Característica</div>
+                                Debes elegir una característica que aumentará en uno<br>
+                                {{formulario.eleccion_caracteristica_companero_animal}}
+                                <br>
+                            {% endif %}
+                        {% endif %}
+                        <input type="hidden" id="pk" name="pk" value={{pk}}>
+                        <input type="hidden" id="clase_nivel_0" name="clase_nivel_0" value={{clase_nivel_0}}>
+                        <input type="hidden" id="caracteristica_personaje_eleccion" name="caracteristica_personaje_eleccion" value={{caracteristica_personaje_eleccion}}>
+                        <input type="hidden" id="caracteristica_companero_animal_eleccion" name="caracteristica_companero_animal_eleccion" value={{caracteristica_companero_animal_eleccion}}>
+                        <input type="hidden" id="companero_animal_personaje" name="companero_animal_personaje" value={{companero_animal_personaje}}>
+                        <div class="text-center">
+                            <button type='submit' class="btn btn-primary btn-dark">Subir de nivel</button>
+                        </div>
+                    </form>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

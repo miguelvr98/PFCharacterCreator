@@ -60,27 +60,27 @@ class Personaje(models.Model):
 
     @property
     def bonificadorFuerza(self):
-        return math.floor((fuerza-10)/2)
+        return math.floor((self.fuerza-10)/2)
     
     @property
     def bonificadorDestreza(self):
-        return math.floor((destreza-10)/2)
+        return math.floor((self.destreza-10)/2)
 
     @property
     def bonificadorConstitucion(self):
-        return math.floor((constitucion-10)/2)
+        return math.floor((self.constitucion-10)/2)
 
     @property
     def bonificadorInteligencia(self):
-        return math.floor((inteligencia-10)/2)
+        return math.floor((self.inteligencia-10)/2)
 
     @property
     def bonificadorSabiduria(self):
-        return math.floor((sabiduria-10)/2)
+        return math.floor((self.sabiduria-10)/2)
 
     @property
     def bonificadorCarisma(self):
-        return math.floor((carisma-10)/2)
+        return math.floor((self.carisma-10)/2)
     
     @property
     def iniciativa(self):
@@ -163,35 +163,35 @@ class Personaje(models.Model):
     @property
     def bmc(self):
         ataque_base_sum = 0
-        ataque_base_sum = ataque_base_sum + clase.ataque_base_int
+        ataque_base_sum = ataque_base_sum + self.clase.ataque_base_int
         bmc = '+' + str(bmc + ataque_base_sum + bonificadorFuerza(self))
         return bmc
 
     @property
     def dmc(self):
         ataque_base_sum = 0
-        ataque_base_sum = ataque_base_sum + clase.ataque_base_int
+        ataque_base_sum = ataque_base_sum + self.clase.ataque_base_int
         dmc = 10 + ataque_base_sum + bonificadorFuerza(self) + bonificadorDestreza(self)
         return dmc
     
     @property
     def fortaleza(self):
         fortaleza = 0
-        fortaleza = fortaleza + clase.fortaleza
+        fortaleza = fortaleza + self.clase.fortaleza
         fortaleza = fortaleza + bonificadorConstitucion(self)
         return fortaleza
     
     @property
     def reflejos(self):
         reflejos = 0
-        reflejos = reflejos + clase.reflejos
+        reflejos = reflejos + self.clase.reflejos
         reflejos = reflejos + bonificadorDestreza(self)
         return reflejos
 
     @property
     def voluntad(self):
         voluntad = 0
-        voluntad = voluntad + clase.voluntad
+        voluntad = voluntad + self.clase.voluntad
         voluntad = voluntad + bonificadorSabiduria(self)
         return voluntad
 
@@ -199,7 +199,7 @@ class Personaje(models.Model):
     def ataque_base(self):
         ataque_base_sum = 0
         ataque_base = '+'
-        ataque_base_sum = ataque_base_sum + clase.ataque_base_int
+        ataque_base_sum = ataque_base_sum + self.clase.ataque_base_int
         if ataque_base_sum >= 6:
             while ataque_base_sum >= 6:
                 ataque_base = ataque_base + str(ataque_base_sum) + '/'
@@ -212,7 +212,7 @@ class Personaje(models.Model):
     @property
     def nivel(self):
         nivel = 0
-        nivel = nivel + clase.nivel
+        nivel = nivel + self.clase.nivel
         return nivel
     
     @property
@@ -332,8 +332,8 @@ class Dote(models.Model):
         COMBATE = 'Combate'
         METAMAGICA = 'Metamágica'
     tipo = models.CharField(max_length=10, choices=Tipo.choices, verbose_name='Tipo', null=True)
-    nivel = models.IntegerField(verbose_name='Nivel', null=True)
-    ataque_base = models.IntegerField(verbose_name='Ataque base', null=True)
+    nivel = models.IntegerField(verbose_name='Nivel', null=True, default=0)
+    ataque_base = models.IntegerField(verbose_name='Ataque base', null=True, default=0)
     fuerza = models.IntegerField(verbose_name='Fuerza', null=True)
     destreza = models.IntegerField(verbose_name='Destreza', null=True)
     constitucion = models.IntegerField(verbose_name='Constitución', null=True)
@@ -380,7 +380,7 @@ class Poder(models.Model):
     prerrequisito_poder = models.ManyToManyField('self', symmetrical=False, related_name='pr_poder')
 
     def __str__(self):
-        return nombre
+        return self.nombre
         
     class Meta:
         ordering = ('nivel', 'nombre', )
@@ -390,7 +390,7 @@ class NivelConjuroDiario(models.Model):
     nivel = models.IntegerField(verbose_name='Nivel', null=True)
 
     def __str__(self):
-        return str(nivel)+": "+str(cantidad)
+        return str(self.nivel)+": "+str(self.cantidad)
         
     class Meta:
         ordering = ('nivel', )
@@ -400,7 +400,7 @@ class CantidadConjuroConocido(models.Model):
     nivel = models.IntegerField(verbose_name='Nivel')
 
     def __str__(self):
-        return str(nivel)+": "+str(cantidad)
+        return str(self.nivel)+": "+str(self.cantidad)
         
     class Meta:
         ordering = ('nivel', )
