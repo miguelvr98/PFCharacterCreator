@@ -967,8 +967,6 @@ def guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, ha
     if conjuros_conocidos:
         for conjuro in conjuros_conocidos.all():
             personaje.conjuros_conocidos.add(conjuro)
-    print('Primer print')
-    print(personaje.puntuaciones_habilidad.all())
     habilidades = []
     for ph in personaje.puntuaciones_habilidad.all():
         habilidades.append(ph.habilidad)
@@ -976,26 +974,11 @@ def guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, ha
         if habilidad in habilidades:
             ph = personaje.puntuaciones_habilidad.get(habilidad=habilidad)
             puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=ph.puntuacion+1, habilidad=habilidad)
-            print('Segundo print')
-            print(puntuacion_habilidad.habilidad)
-            print('Tercer print')
-            print(puntuacion_habilidad.puntuacion)
             personaje.puntuaciones_habilidad.remove(ph)
-            print('Cuarto print')
-            print(personaje.puntuaciones_habilidad.all())
             personaje.puntuaciones_habilidad.add(puntuacion_habilidad)
-            print('Quinto print')
-            print(personaje.puntuaciones_habilidad.all())
         else:
-            print('Sexto print')
-            print(ph.habilidad)
-            print('Septimo print')
-            print(ph.puntuacion)
             puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=1, habilidad=habilidad)
             personaje.puntuaciones_habilidad.add(puntuacion_habilidad)
-            print('Octavo print')
-            print(personaje.puntuaciones_habilidad.all())
-        print('Fin bucle')
     personaje.clase = clase
     personaje.save()
 
@@ -1004,7 +987,7 @@ def guardar_subir_nivel_companero_animal(companero_animal_personaje, trucos, hab
         if eleccion_caracteristica_companero_animal == 'Fuerza':
             companero_animal_personaje.fuerza = companero_animal_personaje.fuerza + 1
         elif eleccion_caracteristica_companero_animal == 'Destreza':
-            companero_animal_personaje.companero_animal_personaje == personaje.destreza + 1
+            companero_animal_personaje.companero_animal_personaje = personaje.destreza + 1
         elif eleccion_caracteristica_companero_animal == 'Constitucion':
             companero_animal_personaje.constitucion = companero_animal_personaje.constitucion + 1
         elif eleccion_caracteristica_companero_animal == 'Inteligencia':
@@ -1013,23 +996,26 @@ def guardar_subir_nivel_companero_animal(companero_animal_personaje, trucos, hab
             companero_animal_personaje.sabiduria = companero_animal_personaje.sabiduria + 1
         elif eleccion_caracteristica_companero_animal == 'Carisma':
            companero_animal_personaje.carisma = companero_animal_personaje.carisma + 1
-        if trucos:
-            for truco in trucos:
-                companero_animal_personaje.trucos.add(truco)
-        if dotes_companero_animal:
-            for dote in dotes_companero_animal:
-                companero_animal_personaje.dotes.add(dote)
-        puntuaciones_habilidad_companero_animal_personaje = companero_animal_personaje.puntuaciones_habilidad.all()
-        for habilidad in habilidades:
-            for ph in puntuaciones_habilidad_companero_animal_personaje:
-                if ph.habilidad == habilidad:
-                    puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=ph.puntuacion+1, habilidad=habilidad)
-                    puntuaciones_habilidad_companero_animal_personaje.remove(ph)
-                    puntuaciones_habilidad_companero_animal_personaje.append(puntuacion_habilidad)
-                else:
-                    puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=1, habilidad=habilidad)
-        companero_animal_personaje.puntuaciones_habilidad = puntuaciones_habilidad_companero_animal_personaje
-        companero_animal_personaje.save()
+    if trucos:
+        for truco in trucos:
+            companero_animal_personaje.trucos.add(truco)
+    if dotes_companero_animal:
+        for dote in dotes_companero_animal:
+            companero_animal_personaje.dotes.add(dote)
+    habilidades = []
+    for ph in companero_animal_personaje.puntuacion_habilidad.all():
+        habilidades.append(ph.habilidad)
+    for habilidad in habilidades_companero_animal:
+        if habilidad in habilidades:
+            ph = companero_animal_personaje.puntuacion_habilidad.get(habilidad=habilidad)
+            puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=ph.puntuacion+1, habilidad=habilidad)
+            personaje.puntuaciones_habilidad.remove(ph)
+            personaje.puntuaciones_habilidad.add(puntuacion_habilidad)
+        else:
+            puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=1, habilidad=habilidad)
+            companero_animal_personaje.puntuacion_habilidad.add(puntuacion_habilidad)
+    companero_animal_personaje.puntuaciones_habilidad = puntuaciones_habilidad_companero_animal_personaje
+    companero_animal_personaje.save()
 
 def gdpr(request):
     return render(request, 'gdpr.html')
