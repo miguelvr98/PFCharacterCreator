@@ -832,7 +832,8 @@ def subir_nivel(request, pk):
             numero_poderes = numero_poderes + 1
     companero_animal_personaje = personaje.companero_animal_personaje
     caracteristica_companero_animal_eleccion = False
-    companero_animal_nivel = []
+    cap = None
+    companero_animal_nivel = None
     if companero_animal_personaje.all():
         for ca in companero_animal_personaje.all():
             cap = ca
@@ -921,8 +922,8 @@ def subir_nivel(request, pk):
             if not conjuros_conocidos and clase.conjuros:
                 conjuros_conocidos = clase.conjuros
             guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, habilidades_personaje, eleccion_puntos_de_golpe, eleccion_caracteristica_personaje, conjuros_conocidos)
-            if not companero_animal_personaje:
-                guardar_subir_nivel_companero_animal(companero_animal_personaje, trucos, habilidades_companero_animal, dotes_companero_animal, eleccion_caracteristica_companero_animal)
+            if cap != None:
+                guardar_subir_nivel_companero_animal(cap, companero_animal_nivel, trucos, habilidades_companero_animal, dotes_companero_animal, eleccion_caracteristica_companero_animal)
             return redirect('/personaje/show/'+str(personaje.pk))
     else:
         formulario = SubirNivelForm(personaje=personaje, clase=clase, numero_eleccion_dotes=numero_eleccion_dotes, 
@@ -985,7 +986,7 @@ def guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, ha
     personaje.clase = clase
     personaje.save()
 
-def guardar_subir_nivel_companero_animal(companero_animal_personaje, trucos, habilidades_companero_animal, dotes_companero_animal, eleccion_caracteristica_companero_animal):
+def guardar_subir_nivel_companero_animal(companero_animal_personaje, companero_animal_nivel, trucos, habilidades_companero_animal, dotes_companero_animal, eleccion_caracteristica_companero_animal):
     if eleccion_caracteristica_companero_animal:
         if eleccion_caracteristica_companero_animal == 'Fuerza':
             companero_animal_personaje.fuerza = companero_animal_personaje.fuerza + 1
@@ -1012,12 +1013,46 @@ def guardar_subir_nivel_companero_animal(companero_animal_personaje, trucos, hab
         if habilidad in habilidades:
             ph = companero_animal_personaje.puntuacion_habilidad.get(habilidad=habilidad)
             puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=ph.puntuacion+1, habilidad=habilidad)
-            personaje.puntuaciones_habilidad.remove(ph)
-            personaje.puntuaciones_habilidad.add(puntuacion_habilidad)
+            companero_animal_personaje.puntuacion_habilidad.remove(ph)
+            companero_animal_personaje.puntuacion_habilidad.add(puntuacion_habilidad)
         else:
             puntuacion_habilidad = PuntuacionHabilidad.objects.get(puntuacion=1, habilidad=habilidad)
             companero_animal_personaje.puntuacion_habilidad.add(puntuacion_habilidad)
-    companero_animal_personaje.puntuaciones_habilidad = puntuaciones_habilidad_companero_animal_personaje
+    companero_animal_personaje.nivel = companero_animal_nivel.nivel
+    companero_animal_personaje.dados_de_golpe = companero_animal_nivel.dados_de_golpe
+    companero_animal_personaje.puntos_de_golpe = companero_animal_nivel.puntos_de_golpe
+    companero_animal_personaje.ataque_base = companero_animal_nivel.ataque_base
+    companero_animal_personaje.fortaleza = companero_animal_nivel.fortaleza
+    companero_animal_personaje.reflejos = companero_animal_nivel.reflejos
+    companero_animal_personaje.voluntad = companero_animal_nivel.voluntad
+    companero_animal_personaje.puntos_habilidad = companero_animal_nivel.puntos_habilidad
+    companero_animal_personaje.numero_dotes = companero_animal_nivel.numero_dotes
+    companero_animal_personaje.numero_trucos = companero_animal_nivel.numero_trucos
+    for especial in companero_animal_personaje.especiales.all():
+        companero_animal_personaje.especiales.remove(especial)
+    for especial in companero_animal_nivel.especiales.all():
+        companero_animal_personaje.especiales.add(especial)
+    companero_animal_nivel_menos = CompaneroAnimal.objects.get(nivel=companero_animal_nivel.nivel-1, tipo=None)
+    companero_animal_personaje.ca = companero_animal_personaje.ca - companero_animal_nivel_menos.ca + companero_animal_nivel.ca
+    companero_animal_personaje.fuerza = companero_animal_personaje.fuerza - companero_animal_nivel_menos.fuerza + companero_animal_nivel.fuerza
+    companero_animal_personaje.destreza = companero_animal_personaje.destreza - companero_animal_nivel_menos.destreza + companero_animal_nivel.destreza
+    if companero_animal_personaje.nivel == companero_animal_personaje.nivel_cambio:
+        companero_animal_tipo_list = CompaneroAnimal.objects.all().filter(tipo__icontains=companero_animal_personaje.tipo).filter(nivel=None).exclude(nivel_cambio=None)
+        for ca in companero_animal_tipo_list:
+            companero_animal_tipo = ca
+        companero_animal_tipo_cambio = ca.companero_animal_cambio
+        companero_animal_personaje.tipo = companero_animal_tipo_cambio.tipo
+        companero_animal_personaje.tamano = companero_animal_tipo_cambio.tamano
+        companero_animal_personaje.velocidad = companero_animal_tipo_cambio.velocidad
+        companero_animal_personaje.ataque = companero_animal_tipo_cambio.ataque
+        companero_animal_personaje.ca = companero_animal_personaje.ca - companero_animal_tipo.ca + companero_animal_tipo_cambio.ca
+        companero_animal_personaje.fuerza = companero_animal_personaje.fuerza - companero_animal_tipo.fuerza + companero_animal_tipo_cambio.fuerza
+        companero_animal_personaje.destreza = companero_animal_personaje.destreza - companero_animal_tipo.destreza + companero_animal_tipo_cambio.destreza
+        companero_animal_personaje.constitucion = companero_animal_personaje.constitucion - companero_animal_tipo.constitucion + companero_animal_tipo_cambio.constitucion
+        companero_animal_personaje.inteligencia = companero_animal_personaje.inteligencia - companero_animal_tipo.inteligencia + companero_animal_tipo_cambio.inteligencia
+        companero_animal_personaje.sabiduria = companero_animal_personaje.sabiduria - companero_animal_tipo.sabiduria + companero_animal_tipo_cambio.sabiduria
+        companero_animal_personaje.carisma = companero_animal_personaje.carisma - companero_animal_tipo.carisma + companero_animal_tipo_cambio.carisma
+        companero_animal_personaje.companero_animal_cambio = None
     companero_animal_personaje.save()
 
 def gdpr(request):

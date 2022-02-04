@@ -551,7 +551,7 @@ class SubirNivelForm(forms.Form):
         self.fields['habilidades_personaje'] = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.SelectMultiple(), required=False)
         self.fields['poderes'] = forms.ModelChoiceField(queryset=queryset4 | queryset5, widget=forms.Select(), required=False)
         if companero_animal_personaje.all():
-            self.fields['trucos'] = forms.ModelMultipleChoiceField(queryset=queryset6 | queryset7, widget=forms.SelectMultiple(), required=False)
+            self.fields['trucos'] = forms.ModelMultipleChoiceField(queryset=(queryset6 | queryset7).distinct(), widget=forms.SelectMultiple(), required=False)
         else:
             self.fields['trucos'] = forms.ModelMultipleChoiceField(queryset=queryset6, widget=forms.SelectMultiple(), required=False)
         self.fields['habilidades_companero_animal'] = forms.ModelMultipleChoiceField(queryset=Habilidad.objects.all().filter(es_habilidad_companero_animal=True), widget=forms.SelectMultiple(), required=False)
