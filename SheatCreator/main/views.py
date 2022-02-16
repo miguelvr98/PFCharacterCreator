@@ -530,6 +530,7 @@ def buscar_conjuro(request, pk):
 def buscar_personaje(request):
     try:
         personajes = Personaje.objects.all()
+        personajes_aux = []
         if request.user.is_authenticated:
             perfil = usuario_logueado(request)
             personajes_aux = personajes.filter(perfil=perfil)
@@ -803,10 +804,10 @@ def eliminar_personaje(request, pk):
 @login_required(login_url="/login/") #No se puede multiclasear, falta por meter los conjuros
 def subir_nivel(request, pk):
     personaje = Personaje.objects.get(pk=pk)
-    clase = Clase.objects.get(clase=personaje.clase.clase, nivel=personaje.nivel+1)
     perfil = usuario_logueado(request)
     assert personaje.perfil == perfil
     assert personaje.nivel < 20 and personaje.nivel >= 1
+    clase = Clase.objects.get(clase=personaje.clase.clase, nivel=personaje.nivel+1)
     druida_1 = Clase.objects.get(clase='Druida', nivel=1)
     explorador_4 = Clase.objects.get(clase='Explorador', nivel=4)
     if druida_1 == personaje.clase or explorador_4 == personaje.clase:
@@ -853,35 +854,35 @@ def subir_nivel(request, pk):
     if clase.cantidad_conjuros_conocidos.all():
         cantidad_conjuros_conocidos_0_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad
         cantidad_conjuros_conocidos_1_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 3:
+        if len(clase.cantidad_conjuros_conocidos.all()) == 3 and len(personaje.clase.cantidad_conjuros_conocidos.all()) == 2:
             cantidad_conjuros_conocidos_2_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=2).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 3:
+        elif len(clase.cantidad_conjuros_conocidos.all()) > 3 or len(personaje.clase.cantidad_conjuros_conocidos.all()) == 3:
             cantidad_conjuros_conocidos_2_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=2).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=2).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 4:
+        if len(clase.cantidad_conjuros_conocidos.all()) == 4 and len(personaje.clase.cantidad_conjuros_conocidos.all()) == 3:
             cantidad_conjuros_conocidos_3_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=3).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 4:
+        elif len(clase.cantidad_conjuros_conocidos.all()) > 4 or len(personaje.clase.cantidad_conjuros_conocidos.all()) == 4:
             cantidad_conjuros_conocidos_3_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=3).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=3).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 5:
+        if len(clase.cantidad_conjuros_conocidos.all()) == 5 and len(personaje.clase.cantidad_conjuros_conocidos.all()) == 4:
             cantidad_conjuros_conocidos_4_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=4).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 5:
+        elif len(clase.cantidad_conjuros_conocidos.all()) > 5 or len(personaje.clase.cantidad_conjuros_conocidos.all()) == 5:
             cantidad_conjuros_conocidos_4_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=4).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=4).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 6:
+        if len(clase.cantidad_conjuros_conocidos.all()) == 6 and len(personaje.clase.cantidad_conjuros_conocidos.all()) == 5:
             cantidad_conjuros_conocidos_5_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=5).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 6:
+        elif len(clase.cantidad_conjuros_conocidos.all()) > 6 or len(personaje.clase.cantidad_conjuros_conocidos.all()) == 6:
             cantidad_conjuros_conocidos_5_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=5).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=5).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 7:
+        if len(clase.cantidad_conjuros_conocidos.all()) == 7 and len(personaje.clase.cantidad_conjuros_conocidos.all()) == 6:
             cantidad_conjuros_conocidos_6_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=6).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 7:
+        elif len(clase.cantidad_conjuros_conocidos.all()) > 7 or len(personaje.clase.cantidad_conjuros_conocidos.all()) == 7:
             cantidad_conjuros_conocidos_6_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=6).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=6).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 8:
+        if len(clase.cantidad_conjuros_conocidos.all()) == 8 and len(personaje.clase.cantidad_conjuros_conocidos.all()) == 7:
             cantidad_conjuros_conocidos_7_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=7).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 8:
+        elif len(clase.cantidad_conjuros_conocidos.all()) > 8 or len(personaje.clase.cantidad_conjuros_conocidos.all()) == 8:
             cantidad_conjuros_conocidos_7_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=7).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=7).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 9:
+        if len(clase.cantidad_conjuros_conocidos.all()) == 9 and len(personaje.clase.cantidad_conjuros_conocidos.all()) == 8:
             cantidad_conjuros_conocidos_8_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=8).cantidad
-        elif len(personaje.clase.cantidad_conjuros_conocidos.all()) > 9:
+        elif len(clase.cantidad_conjuros_conocidos.all()) > 9 or len(personaje.clase.cantidad_conjuros_conocidos.all()) == 9:
             cantidad_conjuros_conocidos_8_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=8).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=8).cantidad
-        if len(personaje.clase.cantidad_conjuros_conocidos.all()) == 10 and len(personaje.clase.cantidad_conjuros_conocidos.all()) == 9:
+        if len(clase.cantidad_conjuros_conocidos.all()) == 10 and len(personaje.clase.cantidad_conjuros_conocidos.all()) == 9:
             cantidad_conjuros_conocidos_9_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=9).cantidad
         elif len(personaje.clase.cantidad_conjuros_conocidos.all()) == 10:
             cantidad_conjuros_conocidos_9_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=9).cantidad - personaje.clase.cantidad_conjuros_conocidos.get(nivel=9).cantidad
@@ -918,8 +919,8 @@ def subir_nivel(request, pk):
             conjuros_conocidos_7 = formulario.cleaned_data.get('conjuros_conocidos_7')
             conjuros_conocidos_8 = formulario.cleaned_data.get('conjuros_conocidos_8')
             conjuros_conocidos_9 = formulario.cleaned_data.get('conjuros_conocidos_9')
-            conjuros_conocidos = conjuros_conocidos_0 | conjuros_conocidos_1 | conjuros_conocidos_2 | conjuros_conocidos_3 | conjuros_conocidos_4 | conjuros_conocidos_5 | conjuros_conocidos_6 | conjuros_conocidos_7 | conjuros_conocidos_8 | conjuros_conocidos_9
-            if not conjuros_conocidos and clase.conjuros:
+            conjuros_conocidos = personaje.conjuros_conocidos.all() | conjuros_conocidos_0 | conjuros_conocidos_1 | conjuros_conocidos_2 | conjuros_conocidos_3 | conjuros_conocidos_4 | conjuros_conocidos_5 | conjuros_conocidos_6 | conjuros_conocidos_7 | conjuros_conocidos_8 | conjuros_conocidos_9
+            if not clase.cantidad_conjuros_conocidos.all():
                 conjuros_conocidos = clase.conjuros
             guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, habilidades_personaje, eleccion_puntos_de_golpe, eleccion_caracteristica_personaje, conjuros_conocidos)
             if cap != None:
