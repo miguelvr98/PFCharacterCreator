@@ -202,6 +202,11 @@ class BuscarDoteForm(forms.Form):
     tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=False, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
     es_dote_companero_animal = forms.BooleanField(widget=forms.CheckboxInput(), required=False)
 
+    def __init__(self, *args, **kwargs):
+        var = kwargs.pop('var')
+        super(BuscarDoteForm, self).__init__(*args, **kwargs)
+        self.var = var
+
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
         if nombre is not None:
@@ -246,20 +251,18 @@ class BuscarPersonajeForm(forms.Form):
         'nombre_letters': ("El nombre solo puede contener letras"),
     }
 
-    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
     clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=0), widget=forms.Select(), required=False)
+    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
 
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
-        if nombre is not None:
-            if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
-                raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
+        if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
+            raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
         return nombre
 
 class PersonajeForm(forms.ModelForm):
 
     error_messages = {
-        'nombre_letters': ("El nombre solo puede contener letras"),
         'caracteristica_choice_error': ('Debes elegir una característica por escoger humano como raza'),
     }
 
@@ -267,7 +270,6 @@ class PersonajeForm(forms.ModelForm):
     TIPO_CHOICES = (('Estándar', 'Estándar'), ('Alta fantasía', 'Alta fantasía'), ('Épica', 'Épica'), )
     ALINEAMIENTO_CHOICES = (('LB', 'Legal bueno'), ('LN', 'Legal neutro'), ('LM', 'Legal maligno'), ('NB', 'Neutral bueno'), ('N', 'Neutral'), ('NM', 'Neutral maligno'), ('CB', 'Caótico bueno'), ('CN', 'Caótico neutral'), ('CM', 'Caótico maligno'), )
 
-    nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
     tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
     raza = forms.ModelChoiceField(queryset=Raza.objects, widget=forms.Select(), required=True)
     clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=1), widget=forms.Select(), required=True)
@@ -275,13 +277,7 @@ class PersonajeForm(forms.ModelForm):
 
     class Meta:
         model = Personaje
-        fields = ('nombre', 'raza')
-
-    def clean_nombre(self):
-        nombre = self.cleaned_data.get('nombre')
-        if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
-            raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
-        return nombre
+        fields = ('raza', )
 
 class PersonajeForm2(forms.ModelForm):
 
@@ -326,10 +322,12 @@ class PersonajeForm3(forms.Form):
         'idiomas_number': ('No ha elegido el número de idiomas correcto'),
         'conjuros_conocidos_0_number': ('No ha elegido el número de conjuros de nivel 0 correcto'),
         'conjuros_conocidos_1_number': ('No ha elegido el número de conjuros de nivel 1 correcto'),
+        'nombre_letters': ("El nombre solo puede contener letras"),
     }
 
     linaje = forms.ModelChoiceField(queryset=Linaje.objects, widget=forms.Select(), required=False)
-    habilidades = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.SelectMultiple(), required=True)
+    habilidades = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.CheckboxSelectMultiple(), required=True)
+    nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
 
     def __init__(self, *args, **kwargs):
         raza = kwargs.pop('raza')
@@ -341,10 +339,10 @@ class PersonajeForm3(forms.Form):
         self.inteligencia = inteligencia
         queryset1 = Dote.objects.all().filter(prerrequisito_raza=raza)
         queryset2 = Dote.objects.all().filter(prerrequisito_raza=None).filter(nivel=0).filter(ataque_base__lte=self.clase.ataque_base_int).filter(prerrequisito_dote=None)
-        self.fields['dotes'] = forms.ModelMultipleChoiceField(queryset=(queryset1 | queryset2).distinct(), widget=forms.SelectMultiple(), required=True)
-        self.fields['idiomas'] = forms.ModelMultipleChoiceField(queryset=raza.idiomas_eleccion, widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_0'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_1'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=1), widget=forms.SelectMultiple(), required=False)
+        self.fields['dotes'] = forms.ModelMultipleChoiceField(queryset=(queryset1 | queryset2).distinct(), widget=forms.CheckboxSelectMultiple(), required=True)
+        self.fields['idiomas'] = forms.ModelMultipleChoiceField(queryset=raza.idiomas_eleccion, widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_0'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_1'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=1), widget=forms.CheckboxSelectMultiple(), required=False)
     
     def clean_dotes(self):
         dotes = self.cleaned_data.get('dotes')
@@ -413,6 +411,13 @@ class PersonajeForm3(forms.Form):
             if len(conjuros_conocidos_1) != cantidad_conjuros_conocidos_1:
                 raise forms.ValidationError(self.error_messages['conjuros_conocidos_1_number'], code='conjuros_conocidos_1_number')
         return conjuros_conocidos_1
+    
+    def clean_nombre(self):
+        nombre = self.cleaned_data.get('nombre')
+        if nombre is not None:
+            if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):
+                raise forms.ValidationError(self.error_messages['nombre_letters'], code='nombre_letters')
+        return nombre
 
 class CompaneroAnimalForm(forms.Form):
 
@@ -424,8 +429,8 @@ class CompaneroAnimalForm(forms.Form):
 
     nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
     dotes = forms.ModelChoiceField(queryset=Dote.objects.all().filter(es_dote_companero_animal=True), widget=forms.Select(), required=True)
-    trucos = forms.ModelMultipleChoiceField(queryset=Truco.objects.all().filter(prerrequisito_truco=None), widget=forms.SelectMultiple(), required=True)
-    habilidades = forms.ModelMultipleChoiceField(queryset=Habilidad.objects.filter(es_habilidad_companero_animal=True), widget=forms.SelectMultiple(), required=True)
+    trucos = forms.ModelMultipleChoiceField(queryset=Truco.objects.all().filter(prerrequisito_truco=None), widget=forms.CheckboxSelectMultiple(), required=True)
+    habilidades = forms.ModelMultipleChoiceField(queryset=Habilidad.objects.filter(es_habilidad_companero_animal=True), widget=forms.CheckboxSelectMultiple(), required=True)
     companero_animal_tipo = forms.ModelChoiceField(queryset=CompaneroAnimal.objects.all().exclude(tipo=None).filter(nivel=None).exclude(nivel_cambio=None), widget=forms.Select(), required=True)
 
     def __init__(self, *args, **kwargs):
@@ -547,25 +552,25 @@ class SubirNivelForm(forms.Form):
         queryset6 = Truco.objects.all().filter(prerrequisito_truco=None).exclude(nombre__in=trucos_nombre)
         if companero_animal_personaje.all():
             queryset7 = Truco.objects.all().filter(pr_truco__in=cap.trucos.all()).exclude(nombre__in=trucos_nombre)
-        self.fields['dotes_personaje'] = forms.ModelMultipleChoiceField(queryset=(queryset1 | queryset2 | queryset3).distinct(), widget=forms.SelectMultiple(), required=False)
-        self.fields['habilidades_personaje'] = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.SelectMultiple(), required=False)
+        self.fields['dotes_personaje'] = forms.ModelMultipleChoiceField(queryset=(queryset1 | queryset2 | queryset3).distinct(), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['habilidades_personaje'] = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.CheckboxSelectMultiple(), required=False)
         self.fields['poderes'] = forms.ModelChoiceField(queryset=queryset4 | queryset5, widget=forms.Select(), required=False)
         if companero_animal_personaje.all():
-            self.fields['trucos'] = forms.ModelMultipleChoiceField(queryset=(queryset6 | queryset7).distinct(), widget=forms.SelectMultiple(), required=False)
+            self.fields['trucos'] = forms.ModelMultipleChoiceField(queryset=(queryset6 | queryset7).distinct(), widget=forms.CheckboxSelectMultiple(), required=False)
         else:
-            self.fields['trucos'] = forms.ModelMultipleChoiceField(queryset=queryset6, widget=forms.SelectMultiple(), required=False)
+            self.fields['trucos'] = forms.ModelMultipleChoiceField(queryset=queryset6, widget=forms.CheckboxSelectMultiple(), required=False)
         self.fields['habilidades_companero_animal'] = forms.ModelMultipleChoiceField(queryset=Habilidad.objects.all().filter(es_habilidad_companero_animal=True), widget=forms.SelectMultiple(), required=False)
-        self.fields['dotes_companero_animal'] = forms.ModelMultipleChoiceField(queryset=Dote.objects.all().filter(es_dote_companero_animal=True).exclude(nombre__in=dotes_companero_animal_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_0'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_1'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=1).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_2'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=2).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_3'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=3).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_4'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=4).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_5'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=5).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_6'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=6).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_7'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=7).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_8'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=8).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
-        self.fields['conjuros_conocidos_9'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=9).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.SelectMultiple(), required=False)
+        self.fields['dotes_companero_animal'] = forms.ModelMultipleChoiceField(queryset=Dote.objects.all().filter(es_dote_companero_animal=True).exclude(nombre__in=dotes_companero_animal_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_0'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_1'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=1).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_2'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=2).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_3'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=3).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_4'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=4).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_5'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=5).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_6'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=6).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_7'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=7).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_8'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=8).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
+        self.fields['conjuros_conocidos_9'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=9).exclude(nombre__in=conjuros_personaje_nombre), widget=forms.CheckboxSelectMultiple(), required=False)
     
     def clean_dotes_personaje(self):
         dotes_personaje = self.cleaned_data.get('dotes_personaje')

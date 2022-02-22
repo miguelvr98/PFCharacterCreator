@@ -16,9 +16,6 @@
                 <div class="px-2">
                     <form  role="form"  enctype="multipart/form-data" action="/personaje/create/" method="POST" id="upload-image-form"> 
                         {% csrf_token %}
-                        <div class="text-center">Nombre</div>
-                            {{formulario.nombre}}
-                            <br>
                         <div class="text-center">Raza</div>
                             {{formulario.raza}}
                             <br>
