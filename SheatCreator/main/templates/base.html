@@ -37,7 +37,7 @@
                       <div class="dropdown show">
                         <a class="nav-item nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Perfil</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                          <a class="dropdown-item" href="/perfil/{{user.perfil.id}}">Mi Perfil</a>
+                          <a class="dropdown-item" href="/perfil/">Mi Perfil</a>
                           <a class="dropdown-item" href="/personaje/perfil/list/">Mis personajes</a>
                           <a class="dropdown-item" href="/dote/perfil/list/">Mis dotes</a>
                           <a class="dropdown-item" href="/logout">Cerrar Sesión</a>
@@ -56,7 +56,7 @@
         </nav>
         {% block content%} {% endblock %}
    
-        <footer class="bg-dark text-white mt-4 w-100">
+        <footer class="bg-dark text-white mt-4 w-100 fixed-bottom">
             <div class="container-fluid py-3">
             <div class="d-flex justify-content-around">
             <div class="col-lg-4 text-light text-lg-center" >© 2022 Copyright: SheatCreator

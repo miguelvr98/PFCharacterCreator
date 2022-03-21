@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from main.models import *
 from main.forms import *
+from django.core.paginator import Paginator
 import math
 import random
 
@@ -40,13 +41,19 @@ def editar_usuario(request):
 
 def listar_razas(request):
         razas = Raza.objects.all()
-        return render(request, 'raza/list.html', {'razas':razas})
+        paginator = Paginator(razas, 5)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        return render(request, 'raza/list.html', {'razas':page_obj})
 
 def listar_dotes(request):
     try:
         dotes = Dote.objects.all()
         buscador = BuscarDoteForm(var=False)
-        return render(request, 'dote/list.html', {'dotes':dotes, 'buscador':buscador})
+        paginator = Paginator(dotes, 5)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        return render(request, 'dote/list.html', {'dotes':page_obj, 'buscador':buscador})
     except:
         return redirect('error_url')
 
@@ -56,7 +63,10 @@ def listar_dotes_propias(request):
         perfil = usuario_logueado(request)
         dotes = Dote.objects.all().filter(creador=perfil)
         buscador = BuscarDoteForm(var=True)
-        return render(request, 'dote/list.html', {'dotes':dotes, 'buscador':buscador})
+        paginator = Paginator(dotes, 5)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        return render(request, 'dote/list.html', {'dotes':page_obj, 'buscador':buscador})
     except:
         return redirect('error_url')
 
@@ -70,7 +80,10 @@ def listar_clases(request):
 def listar_habilidades(request):
     try:
         habilidades = Habilidad.objects.all()
-        return render(request, 'habilidad/list.html', {'habilidades':habilidades})
+        paginator = Paginator(habilidades, 5)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        return render(request, 'habilidad/list.html', {'habilidades':page_obj})
     except:
         return redirect('error_url')
 
@@ -116,7 +129,6 @@ def listar_objetos(request):
     except:
         return redirect('error_url')
 
-@login_required(login_url="/login/")
 def listar_personajes_publicos(request):
     try:
         personajes = Personaje.objects.all().filter(es_publico=True)
@@ -466,6 +478,7 @@ def eliminar_usuario(request):
     except:
         return redirect('error_url')
 
+#NO FUNCIONA LA PAGINACIÓN CON EL BUSCADOR ¿Probar con poner en el enlace un botton y los campos hidden del buscador?
 def buscar_dote(request):
     try:
         dotes = Dote.objects.all().filter(creador=None)
@@ -538,32 +551,29 @@ def buscar_conjuro(request, pk):
         return redirect('error_url')
 
 def buscar_personaje(request):
-    try:
-        personajes = Personaje.objects.all()
-        personajes_aux = []
-        if request.user.is_authenticated:
-            perfil = usuario_logueado(request)
-            personajes_aux = personajes.filter(perfil=perfil)
-        else:
-            personajes = personajes.filter().exclude(es_publico=False)
-        if request.method == 'POST':
-            buscador = BuscarPersonajeForm(request.POST)
-            if buscador.is_valid():
-                nombre = buscador.cleaned_data.get('nombre')
-                clase = buscador.cleaned_data.get('clase')
-                personajes = personajes | personajes_aux
+    personajes = Personaje.objects.all()
+    personajes_aux = Personaje.objects.none()
+    if request.user.is_authenticated:
+        perfil = usuario_logueado(request)
+        personajes_aux = personajes.filter(perfil=perfil)
+    else:
+        personajes = personajes.filter().exclude(es_publico=False)
+    if request.method == 'POST':
+        buscador = BuscarPersonajeForm(request.POST)
+        if buscador.is_valid():
+            nombre = buscador.cleaned_data.get('nombre')
+            clase = buscador.cleaned_data.get('clase')
+            personajes = personajes | personajes_aux
 
-                if nombre != None and nombre != '':
-                    personajes = personajes.filter(nombre__icontains=nombre)
+            if nombre != None and nombre != '':
+                personajes = personajes.filter(nombre__icontains=nombre)
                 
-                if clase != None:
-                    clases = Clase.objects.all().filter(clase=clase.clase)
-                    personajes = personajes.filter(clase__in=clases)
-        else:
-            buscador = BuscarPersonajeForm()
-        return render(request, 'personaje/list.html', {'personajes':personajes, 'buscador':buscador})
-    except:
-        return redirect('error_url')
+            if clase != None:
+                clases = Clase.objects.all().filter(clase=clase.clase)
+                personajes = personajes.filter(clase__in=clases)
+    else:
+        buscador = BuscarPersonajeForm()
+    return render(request, 'personaje/list.html', {'personajes':personajes, 'buscador':buscador})
 
 #Elección de puntos, nombre, raza y clase (falta poner como quiere el usuario que sean los puntos de golpe). No se pueden poner
 #nombre y apellidos porque en input hidden solo coge la primera palabra
