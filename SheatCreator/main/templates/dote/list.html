@@ -26,13 +26,20 @@
     <div class="container">
       <ul class="pagination d-flex justify-content-center">
         {% if dotes.has_previous %}
-        <li class="page-item"><a class="page-link" href="?page={{dotes.previous_page_number}}">Anterior</a></li>
-        {% else %}
-        {% if not buscador %}
-        <li class="page-item disabled">
-          <span class="page-link">Anterior</span>
-        </li>
+        <form  role="form"  enctype="multipart/form-data" action="/dote/search/?page={{dotes.previous_page_number}}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">Anterior</button></li>
+        <input type="hidden" id="var" name="var" value={{buscador.var.value}}>
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
         {% endif %}
+        {% if buscador.tipo.value != None %}
+        <input type="hidden" id="nombre" name="tipo" value={{buscador.tipo.value}}>
+        {% endif %}
+        {% if buscador.es_dote_companero_animal.value != None %}
+        <input type="hidden" id="es_dote_companero_animal" name="es_dote_companero_animal" value={{buscador.es_dote_companero_animal.value}}>
+        {% endif %}
+        </form>
         {% endif %}
         {% for num in dotes.paginator.page_range %}
         {% ifequal num dotes.number %}
@@ -43,21 +50,38 @@
           </span>
         </li>
         {% else %}
-        <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+        <form  role="form"  enctype="multipart/form-data" action="/dote/search/?page={{ num }}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">{{ num }}</button></li>
+        <input type="hidden" id="var" name="var" value={{buscador.var.value}}>
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
+        {% endif %}
+        {% if buscador.tipo.value != None %}
+        <input type="hidden" id="nombre" name="tipo" value={{buscador.tipo.value}}>
+        {% endif %}
+        {% if buscador.es_dote_companero_animal.value != None %}
+        <input type="hidden" id="es_dote_companero_animal" name="es_dote_companero_animal" value={{buscador.es_dote_companero_animal.value}}>
+        {% endif %}
+        </form>
         {% endifequal %}
         {% endfor %}
         {% if dotes.has_next %}
-        <li class="page-item">
-          <a class="page-link" href="?page={{dotes.next_page_number }}">Siguiente</a>
-        </li>
-        {%else%}
-        {% if not buscador %}
-        <li class="page-item disabled">
-          <span class="page-link">Siguiente</span>
-        </li>
+        <form  role="form"  enctype="multipart/form-data" action="/dote/search/?page={{dotes.next_page_number}}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">Siguiente</button></li>
+        <input type="hidden" id="var" name="var" value={{buscador.var.value}}>
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
         {% endif %}
+        {% if buscador.tipo.value != None %}
+        <input type="hidden" id="nombre" name="tipo" value={{buscador.tipo.value}}>
         {% endif %}
-  
+        {% if buscador.es_dote_companero_animal.value != None %}
+        <input type="hidden" id="es_dote_companero_animal" name="es_dote_companero_animal" value={{buscador.es_dote_companero_animal.value}}>
+        {% endif %}
+        </form>
+        {% endif %}
       </ul>
     </div>
     {%endif%}

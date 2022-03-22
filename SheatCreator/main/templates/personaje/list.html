@@ -17,4 +17,58 @@
     {% for personaje in personajes %}
         {{personaje.nombre}}
     {% endfor %}
-{% endblock %}
+    
+    {% if personajes %}
+    <div class="container">
+      <ul class="pagination d-flex justify-content-center">
+        {% if personajes.has_previous %}
+        <form  role="form"  enctype="multipart/form-data" action="/personaje/search/?page={{personajes.previous_page_number}}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">Anterior</button></li>
+        {% if buscador.clase.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.clase.value}}>
+        {% endif %}
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="tipo" value={{buscador.nombre.value}}>
+        {% endif %}
+        </form>
+        {% endif %}
+        {% for num in personajes.paginator.page_range %}
+        {% ifequal num personajes.number %}
+        <li class="page-item active">
+          <span class="page-link">
+            {{ num }}
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        {% else %}
+        <form  role="form"  enctype="multipart/form-data" action="/personaje/search/?page={{ num }}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">{{ num }}</button></li>
+        {% if buscador.clase.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.clase.value}}>
+        {% endif %}
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="tipo" value={{buscador.nombre.value}}>
+        {% endif %}
+        </form>
+        {% endifequal %}
+        {% endfor %}
+        {% if personajes.has_next %}
+        <form  role="form"  enctype="multipart/form-data" action="/personaje/search/?page={{personajes.next_page_number}}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">Siguiente</button></li>
+        {% if buscador.clase.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.clase.value}}>
+        {% endif %}
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="tipo" value={{buscador.nombre.value}}>
+        {% endif %}
+        </form>
+        {%else%}
+        {% endif %}
+  
+      </ul>
+    </div>
+    {%endif%}
+    {% endblock %}
