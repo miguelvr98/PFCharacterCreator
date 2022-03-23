@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
@@ -8,6 +7,9 @@ from main.forms import *
 from django.core.paginator import Paginator
 import math
 import random
+import io
+from django.http import FileResponse
+from reportlab.pdfgen import canvas
 
 # Create your views here.
 
@@ -41,7 +43,7 @@ def editar_usuario(request):
 
 def listar_razas(request):
         razas = Raza.objects.all()
-        paginator = Paginator(razas, 5)
+        paginator = Paginator(razas, 6)
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'raza/list.html', {'razas':page_obj})
@@ -1122,3 +1124,13 @@ def home(request):
 
 def error(request):
     return render(request, 'paginaError.html')
+
+#Esto escribe un pdf y lo descarga pero no se como meter la vista que quiero descargar
+# def export_pdf(request, pk):
+#     buffer = io.BytesIO()
+#     p = canvas.Canvas(buffer)
+#     p.drawString(100, 100, "Hello world.")
+#     p.showPage()
+#     p.save()
+#     buffer.seek(0)
+#     return FileResponse(buffer, as_attachment=True, filename='hello.pdf')

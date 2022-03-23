@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container">
     {% for clase in clases %}
         {{clase.clase}}
     {% endfor %}
+</div>
 {% endblock %}

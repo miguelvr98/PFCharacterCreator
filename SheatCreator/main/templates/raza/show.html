@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container">
+<div class="container">
     <div class="text-center">
         <h1>{{raza.raza}}</h5>
     </div>
+</div>
+    <div class="container">
     <div class="row">
         <div class="col">
         </div>
@@ -11,6 +13,9 @@
             <h4>Descripción</h5>
         </div>
     </div>
+    </div>
+</div>
+    <div class="container">
     {% for br in bonificaciones_raza %}
     <div class="row">
         <div class="col align-self-center">

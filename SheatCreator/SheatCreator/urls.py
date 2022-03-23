@@ -74,4 +74,5 @@ urlpatterns = [
     path('personaje/companero_animal/asignar/<int:pk>/', views.asignar_companero_animal, name='asignar_companero_animal_url'),
     path('personaje/delete/<int:pk>/', views.eliminar_personaje, name='eliminar_personaje_url'),
     path('personaje/subir_nivel/<int:pk>/', views.subir_nivel, name='subir_nivel_url'),
+    #path('personaje/export/<int:pk>/', views.export_pdf, name="export_pdf_url" )
 ]
