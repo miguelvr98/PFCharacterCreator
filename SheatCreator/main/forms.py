@@ -254,6 +254,11 @@ class BuscarPersonajeForm(forms.Form):
     clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=0), widget=forms.Select(), required=False)
     nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
 
+    def __init__(self, *args, **kwargs):
+        var = kwargs.pop('var')
+        super(BuscarPersonajeForm, self).__init__(*args, **kwargs)
+        self.var = var
+
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
         if not re.match("^[A-Za-zÀ-ÿ ]*$", nombre):

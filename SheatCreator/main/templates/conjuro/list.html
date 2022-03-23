@@ -17,4 +17,56 @@
     {% for conjuro in conjuros %}
         {{conjuro.nombre}}
     {% endfor %}
+
+    {% if conjuros %}
+    <div class="container">
+      <ul class="pagination d-flex justify-content-center">
+        {% if conjuros.has_previous %}
+        <form  role="form"  enctype="multipart/form-data" action="/conjuro/search/{{pk}}/?page={{conjuros.previous_page_number}}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">Anterior</button></li>
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
+        {% endif %}
+        {% if buscador.nivel.value != None %}
+        <input type="hidden" id="nivel" name="nivel" value={{buscador.nivel.value}}>
+        {% endif %}
+        </form>
+        {% endif %}
+        {% for num in conjuros.paginator.page_range %}
+        {% ifequal num conjuros.number %}
+        <li class="page-item active">
+          <span class="page-link">
+            {{ num }}
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        {% else %}
+        <form  role="form"  enctype="multipart/form-data" action="/conjuro/search/{{pk}}/?page={{ num }}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">{{ num }}</button></li>
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
+        {% endif %}
+        {% if buscador.nivel.value != None %}
+        <input type="hidden" id="nivel" name="nivel" value={{buscador.nivel.value}}>
+        {% endif %}
+        </form>
+        {% endifequal %}
+        {% endfor %}
+        {% if conjuros.has_next %}
+        <form  role="form"  enctype="multipart/form-data" action="/conjuro/search/{{pk}}/?page={{conjuros.next_page_number}}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">Siguiente</button></li>
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
+        {% endif %}
+        {% if buscador.nivel.value != None %}
+        <input type="hidden" id="nivel" name="nivel" value={{buscador.nivel.value}}>
+        {% endif %}
+        </form>
+        {% endif %}
+      </ul>
+    </div>
+    {%endif%}
 {% endblock %}

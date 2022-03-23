@@ -87,7 +87,7 @@ def listar_habilidades(request):
     except:
         return redirect('error_url')
 
-#Mirar como meter paginación aquí
+#Mirar como meter paginación aquí y revisar las queries
 def listar_companeros_animales(request):
     try:
         companeros_animales_por_nivel = CompaneroAnimal.objects.all().filter(es_familiar=False).exclude(nivel=None).exclude(nivel=0)
@@ -133,11 +133,10 @@ def listar_objetos(request):
     except:
         return redirect('error_url')
 
-#Mirar si meter paginación aquí y en las vistas con buscadores
 def listar_personajes_publicos(request):
     try:
         personajes = Personaje.objects.all().filter(es_publico=True)
-        buscador = BuscarPersonajeForm()
+        buscador = BuscarPersonajeForm(var=False)
         paginator = Paginator(personajes, 5)
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
@@ -150,7 +149,7 @@ def listar_personajes_propios(request):
     try:
         perfil = usuario_logueado(request)
         personajes = Personaje.objects.all().filter(perfil=perfil)
-        buscador = BuscarPersonajeForm()
+        buscador = BuscarPersonajeForm(var=True)
         paginator = Paginator(personajes, 5)
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
@@ -164,7 +163,10 @@ def listar_poderes_por_clase(request, pk):
         assert clase.nivel == 0
         poderes = clase.poderes.all()
         buscador = BuscarPoderForm()
-        return render(request, 'poder/list.html', {'poderes':poderes, 'buscador':buscador, 'pk':pk})
+        paginator = Paginator(poderes, 5)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        return render(request, 'poder/list.html', {'poderes':page_obj, 'buscador':buscador, 'pk':pk})
     except:
         return redirect('error_url')
 
@@ -177,13 +179,17 @@ def listar_especiales_por_clase(request, pk):
     except:
         return redirect('error_url')
 
+#Mirar si meter paginación
 def listar_conjuros_por_clase(request, pk):
     try:
         clase = Clase.objects.get(pk=pk)
         assert clase.nivel == 0
         conjuros = clase.conjuros.all()
         buscador = BuscarConjuroForm()
-        return render(request, 'conjuro/list.html', {'conjuros':conjuros, 'buscador':buscador, 'pk':pk})
+        paginator = Paginator(conjuros, 5)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        return render(request, 'conjuro/list.html', {'conjuros':page_obj, 'buscador':buscador, 'pk':pk})
     except:
         return redirect('error_url')
 
@@ -534,9 +540,12 @@ def buscar_poder(request, pk):
 
                 if nombre != None and nombre != '':
                     poderes = poderes.filter(nombre__icontains=nombre)
+            paginator = Paginator(poderes, 5)
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
         else:
             buscador = BuscarPoderForm()
-        return render(request, 'poder/list.html', {'poderes':poderes, 'buscador':buscador, 'pk':pk})
+        return render(request, 'poder/list.html', {'poderes':page_obj, 'buscador':buscador, 'pk':pk})
     except:
         return redirect('error_url')
 
@@ -556,28 +565,36 @@ def buscar_conjuro(request, pk):
                 
                 if nivel != None:
                     conjuros = conjuros.filter(nivel=nivel)
+            paginator = Paginator(conjuros, 5)
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
         else:
             buscador = BuscarConjuroForm()
-        return render(request, 'conjuro/list.html', {'conjuros':conjuros, 'buscador':buscador, 'pk':pk})
+        return render(request, 'conjuro/list.html', {'conjuros':page_obj, 'buscador':buscador, 'pk':pk})
     except:
         return redirect('error_url')
 
-#Hay que meter la variable var como en buscar_dotes para diferenciar entre mis personajes y el resto
 def buscar_personaje(request):
     try:
-        personajes = Personaje.objects.all()
+        personajes = Personaje.objects.all().exclude(es_publico=False)
         personajes_aux = Personaje.objects.none()
         if request.user.is_authenticated:
             perfil = usuario_logueado(request)
-            personajes_aux = personajes.filter(perfil=perfil)
-        else:
-            personajes = personajes.filter().exclude(es_publico=False)
+            personajes_aux = Personaje.objects.all().filter(perfil=perfil).filter(es_publico=True)
         if request.method == 'POST':
-            buscador = BuscarPersonajeForm(request.POST)
+            var = request.POST.get('var')
+            if var == 'True':
+                var = True
+            elif var == 'False':
+                var = False
+            buscador = BuscarPersonajeForm(request.POST, var=var)
             if buscador.is_valid():
                 nombre = buscador.cleaned_data.get('nombre')
                 clase = buscador.cleaned_data.get('clase')
                 personajes = (personajes | personajes_aux).distinct()
+
+                if var == True:
+                    personajes = Personaje.objects.all().filter(perfil=perfil)
 
                 if nombre != None and nombre != '':
                     personajes = personajes.filter(nombre__icontains=nombre)
@@ -593,8 +610,7 @@ def buscar_personaje(request):
     except:
         return redirect('error_url')
 
-#Elección de puntos, nombre, raza y clase (falta poner como quiere el usuario que sean los puntos de golpe). No se pueden poner
-#nombre y apellidos porque en input hidden solo coge la primera palabra
+#Elección de puntos, nombre, raza y clase (falta poner como quiere el usuario que sean los puntos de golpe)
 @login_required(login_url="/login/")
 def crear_personaje_1(request):
     try:

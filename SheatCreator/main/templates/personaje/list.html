@@ -12,6 +12,7 @@
         <div class="text-center">
             <button type="submit" class="btn btn-dark mr-2">Buscar</button>
         </div>
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
     </form>
 </div>
     {% for personaje in personajes %}
@@ -25,11 +26,12 @@
         <form  role="form"  enctype="multipart/form-data" action="/personaje/search/?page={{personajes.previous_page_number}}" method="POST" id="upload-image-form">
           {% csrf_token %}
         <li class="page-item"><button type="submit" class="page-link">Anterior</button></li>
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
         {% if buscador.clase.value != None %}
-        <input type="hidden" id="nombre" name="nombre" value={{buscador.clase.value}}>
+        <input type="hidden" id="clase" name="clase" value={{buscador.clase.value}}>
         {% endif %}
         {% if buscador.nombre.value != None %}
-        <input type="hidden" id="nombre" name="tipo" value={{buscador.nombre.value}}>
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
         {% endif %}
         </form>
         {% endif %}
@@ -45,11 +47,12 @@
         <form  role="form"  enctype="multipart/form-data" action="/personaje/search/?page={{ num }}" method="POST" id="upload-image-form">
           {% csrf_token %}
         <li class="page-item"><button type="submit" class="page-link">{{ num }}</button></li>
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
         {% if buscador.clase.value != None %}
-        <input type="hidden" id="nombre" name="nombre" value={{buscador.clase.value}}>
+        <input type="hidden" id="clase" name="clase" value={{buscador.clase.value}}>
         {% endif %}
         {% if buscador.nombre.value != None %}
-        <input type="hidden" id="nombre" name="tipo" value={{buscador.nombre.value}}>
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
         {% endif %}
         </form>
         {% endifequal %}
@@ -58,16 +61,16 @@
         <form  role="form"  enctype="multipart/form-data" action="/personaje/search/?page={{personajes.next_page_number}}" method="POST" id="upload-image-form">
           {% csrf_token %}
         <li class="page-item"><button type="submit" class="page-link">Siguiente</button></li>
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
         {% if buscador.clase.value != None %}
-        <input type="hidden" id="nombre" name="nombre" value={{buscador.clase.value}}>
+        <input type="hidden" id="clase" name="clase" value={{buscador.clase.value}}>
         {% endif %}
         {% if buscador.nombre.value != None %}
-        <input type="hidden" id="nombre" name="tipo" value={{buscador.nombre.value}}>
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
         {% endif %}
         </form>
         {%else%}
         {% endif %}
-  
       </ul>
     </div>
     {%endif%}

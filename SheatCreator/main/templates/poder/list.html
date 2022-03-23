@@ -14,4 +14,47 @@
 {% for poder in poderes %}
     {{poder.nombre}}
 {% endfor %}
+
+{% if poderes %}
+    <div class="container">
+      <ul class="pagination d-flex justify-content-center">
+        {% if poderes.has_previous %}
+        <form  role="form"  enctype="multipart/form-data" action="/poder/search/{{pk}}/?page={{poderes.previous_page_number}}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">Anterior</button></li>
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
+        {% endif %}
+        </form>
+        {% endif %}
+        {% for num in poderes.paginator.page_range %}
+        {% ifequal num poderes.number %}
+        <li class="page-item active">
+          <span class="page-link">
+            {{ num }}
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        {% else %}
+        <form  role="form"  enctype="multipart/form-data" action="/poder/search/{{pk}}/?page={{ num }}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">{{ num }}</button></li>
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
+        {% endif %}
+        </form>
+        {% endifequal %}
+        {% endfor %}
+        {% if poderes.has_next %}
+        <form  role="form"  enctype="multipart/form-data" action="/poder/search/{{pk}}/?page={{poderes.next_page_number}}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">Siguiente</button></li>
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
+        {% endif %}
+        </form>
+        {% endif %}
+      </ul>
+    </div>
+    {%endif%}
 {% endblock %}
