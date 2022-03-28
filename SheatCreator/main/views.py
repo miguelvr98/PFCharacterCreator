@@ -424,7 +424,21 @@ def mostrar_perfil_propio(request):
     try:
         perfil = usuario_logueado(request)
         personajes = Personaje.objects.all().filter(perfil=perfil)
-        return render(request, 'perfil/show.html', {'perfil':perfil, 'personajes':personajes})
+        num_barbaro = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Bárbaro").count()
+        num_bardo = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Bardo").count()
+        num_clerigo = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Clérigo").count()
+        num_druida = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Druida").count()
+        num_explorador = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Explorador").count()
+        num_guerrero = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Guerrero").count()
+        num_hechicero = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Hechicero").count()
+        num_mago = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Mago").count()
+        num_monje = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Monje").count()
+        num_paladin = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Paladín").count()
+        num_picaro = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Pícaro").count()
+        return render(request, 'perfil/show.html', {'perfil':perfil, 'personajes':personajes, 'num_barbaro':num_barbaro,
+         'num_bardo':num_bardo, 'num_clerigo':num_clerigo, 'num_druida':num_druida, 'num_explorador':num_explorador,
+          'num_guerrero':num_guerrero, 'num_hechicero':num_hechicero, 'num_mago':num_mago, 'num_monje':num_monje,
+          'num_paladin':num_paladin, 'num_picaro':num_picaro})
     except:
         return redirect('error_url')
     

@@ -1,4 +1,62 @@
 {% extends 'base.html' %}
 {% block content %}
     {{perfil.nickname}}
+
+    <div class="bottom-footer">
+        <div class="container">
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <div class="display-6 text-center">Clases favoritas</div>
+      <br>
+      <div class="d-flex justify-content-center">
+      <canvas id="myChart" width="300" height="300"></canvas>
+      </div>
+    </div>
+</div>
+      <script>
+        var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: ['Bárbaro', 'Bardo', 'Clérigo', 'Druida', 'Explorador', 'Guerrero', 'Hechicero', 'Mago', 'Monje', 'Paladín', 'Pícaro'],
+    datasets: [{
+      data: ["{{num_barbaro}}","{{num_bardo}}", "{{num_clerigo}}", "{{num_druida}}", "{{num_explorador}}", "{{num_guerrero}}", "{{num_hechicero}}", "{{num_mago}}", "{{num_monje}}", "{{num_paladin}}", "{{num_picaro}}"],
+      backgroundColor: [
+        'rgba(255, 0, 0, 1)',
+        'rgba(255, 0, 255, 0.5)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(142, 170, 0, 1)',
+        'rgba(191, 124, 0, 1)',
+        'rgba(0, 255, 200, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 198, 134, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(110, 110, 110, 1)',
+      ],
+      borderColor: [
+        'rgba(255, 0, 0, 1)',
+        'rgba(255, 0, 255, 1)',
+        'rgba(255, 255, 0, 1)',
+        'rgba(0, 255, 0, 1)',
+        'rgba(142, 170, 0, 1)',
+        'rgba(191, 124, 0, 1)',
+        'rgba(0, 255, 200, 1)',
+        'rgba(0, 0, 255, 1)',
+        'rgba(0, 198, 134, 1)',
+        'rgba(255, 0, 255, 1)',
+        'rgba(110, 110, 110, 1)',
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+   	//cutoutPercentage: 40,
+    responsive: false,
+
+  }
+});
+      </script>
+      
+    
 {% endblock %}
