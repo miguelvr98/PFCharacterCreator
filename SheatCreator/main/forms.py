@@ -288,6 +288,8 @@ class PersonajeForm2(forms.ModelForm):
 
     error_messages = {
         'caracteristica_choice_error': ('Debes elegir una característica por escoger humano como raza'),
+        'puntos_a_elegir_menor_error': ('Sobran puntos de característica'),
+        'puntos_a_elegir_mayor_error': ('Faltan puntos de característica'),
     }
 
     CARACTERISTICA_CHOICES = (('Fuerza', 'Fuerza'), ('Destreza', 'Destreza'), ('Constitucion', 'Constitución'), ('Inteligencia', 'Inteligencia'), ('Sabiduria', 'Sabiduría'), ('Carisma', 'Carisma'), )
@@ -312,10 +314,33 @@ class PersonajeForm2(forms.ModelForm):
             raise forms.ValidationError(self.error_messages['caracteristica_choice_error'], code='caracteristica_choice_error')
         return caracteristica_choice
 
+    def clean(self):
+        puntos_a_elegir = int(self.puntos_a_elegir)
+        diccionario = {7:-4, 8:-2, 9:-1, 10:0, 11:1, 12:2, 13:3, 14:5, 15:7, 16:10, 17:13, 18:17}
+        fuerza = self.cleaned_data.get('fuerza')
+        destreza = self.cleaned_data.get('destreza')
+        constitucion = self.cleaned_data.get('constitucion')
+        inteligencia = self.cleaned_data.get('inteligencia')
+        sabiduria = self.cleaned_data.get('sabiduria')
+        carisma = self.cleaned_data.get('carisma')
+        puntos_fuerza = diccionario[fuerza]
+        puntos_destreza = diccionario[destreza]
+        puntos_constitucion = diccionario[constitucion]
+        puntos_inteligencia = diccionario[inteligencia]
+        puntos_sabiduria = diccionario[sabiduria]
+        puntos_carisma = diccionario[carisma]
+        sumatorio = puntos_fuerza + puntos_destreza + puntos_constitucion + puntos_inteligencia + puntos_sabiduria + puntos_carisma
+        if sumatorio > puntos_a_elegir:
+            raise forms.ValidationError(self.error_messages['puntos_a_elegir_menor_error'], code='puntos_a_elegir_menor_error')
+        elif sumatorio < puntos_a_elegir:
+            raise forms.ValidationError(self.error_messages['puntos_a_elegir_mayor_error'], code='puntos_a_elegir_mayor_error')
+
     def __init__(self, *args, **kwargs):
         raza = kwargs.pop('raza')
+        puntos_a_elegir = kwargs.pop('puntos_a_elegir')
         super(PersonajeForm2, self).__init__(*args, **kwargs)
         self.raza = Raza.objects.get(raza=raza)
+        self.puntos_a_elegir = puntos_a_elegir
 
 class PersonajeForm3(forms.Form):
 

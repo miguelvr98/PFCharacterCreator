@@ -643,7 +643,7 @@ def crear_personaje_1(request):
                     puntos_a_elegir = 20
                 elif tipo == 'Épica':
                     puntos_a_elegir = 25
-                formulario_paso_2 = PersonajeForm2(raza=raza)
+                formulario_paso_2 = PersonajeForm2(raza=raza, puntos_a_elegir=puntos_a_elegir)
                 return render(request, 'personaje/paso2.html', {'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir})
         else:
             formulario = PersonajeForm()
@@ -654,42 +654,39 @@ def crear_personaje_1(request):
 #Elección de puntos de características
 @login_required(login_url="/login/")
 def crear_personaje_2(request):
-    try:
-        if request.method == 'POST':
-            raza = Raza.objects.get(raza=request.POST.get('raza'))
-            formulario_paso_2 = PersonajeForm2(request.POST, raza=raza)
-            clase = Clase.objects.get(clase=request.POST.get('clase'), nivel=1)
-            puntos_a_elegir = request.POST.get('puntos_a_elegir')
-            alineamiento = request.POST.get('alineamiento')
-            if formulario_paso_2.is_valid():
-                caracteristica_choice = formulario_paso_2.cleaned_data.get('caracteristica_choice')
-                fuerza = formulario_paso_2.cleaned_data.get('fuerza')
-                destreza = formulario_paso_2.cleaned_data.get('destreza')
-                constitucion = formulario_paso_2.cleaned_data.get('constitucion')
-                inteligencia = formulario_paso_2.cleaned_data.get('inteligencia')
-                sabiduria = formulario_paso_2.cleaned_data.get('sabiduria')
-                carisma = formulario_paso_2.cleaned_data.get('carisma')
-                if caracteristica_choice:
-                    fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
-                else:
-                    fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
-                formulario_paso_3 = PersonajeForm3(raza=raza, clase=clase, inteligencia=inteligencia)
-                clase_nivel_0 = Clase.objects.get(clase=request.POST.get('clase'), nivel=0)
-                numero_habilidades_eleccion = clase_nivel_0.puntos_de_habilidad_por_nivel + math.floor((inteligencia-10)/2)
-                if numero_habilidades_eleccion <= 0:
-                    numero_habilidades_eleccion = 1
-                numero_idiomas_eleccion = math.floor((inteligencia-10)/2)
-                if numero_idiomas_eleccion < 0:
-                    numero_idiomas_eleccion = 0
-                cantidad_conjuros_conocidos_0_eleccion = None
-                cantidad_conjuros_conocidos_1_eleccion = None
-                if clase.cantidad_conjuros_conocidos.all():
-                    cantidad_conjuros_conocidos_0_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad
-                    cantidad_conjuros_conocidos_1_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad
-                return render(request, 'personaje/paso3.html', {'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion, 'numero_idiomas_eleccion':numero_idiomas_eleccion, 'cantidad_conjuros_conocidos_0_eleccion':cantidad_conjuros_conocidos_0_eleccion, 'cantidad_conjuros_conocidos_1_eleccion':cantidad_conjuros_conocidos_1_eleccion, 'clase_nivel_0':clase_nivel_0})
-        return render(request, 'personaje/paso2.html', {'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir, 'alineamiento':alineamiento})
-    except:
-        return redirect('error_url')
+    if request.method == 'POST':
+        raza = Raza.objects.get(raza=request.POST.get('raza'))
+        puntos_a_elegir = request.POST.get('puntos_a_elegir')
+        formulario_paso_2 = PersonajeForm2(request.POST, raza=raza, puntos_a_elegir=puntos_a_elegir)
+        clase = Clase.objects.get(clase=request.POST.get('clase'), nivel=1)
+        alineamiento = request.POST.get('alineamiento')
+        if formulario_paso_2.is_valid():
+            caracteristica_choice = formulario_paso_2.cleaned_data.get('caracteristica_choice')
+            fuerza = formulario_paso_2.cleaned_data.get('fuerza')
+            destreza = formulario_paso_2.cleaned_data.get('destreza')
+            constitucion = formulario_paso_2.cleaned_data.get('constitucion')
+            inteligencia = formulario_paso_2.cleaned_data.get('inteligencia')
+            sabiduria = formulario_paso_2.cleaned_data.get('sabiduria')
+            carisma = formulario_paso_2.cleaned_data.get('carisma')
+            if caracteristica_choice:
+                fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
+            else:
+                fuerza, destreza, constitucion, inteligencia, sabiduria, carisma = modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma)
+            formulario_paso_3 = PersonajeForm3(raza=raza, clase=clase, inteligencia=inteligencia)
+            clase_nivel_0 = Clase.objects.get(clase=request.POST.get('clase'), nivel=0)
+            numero_habilidades_eleccion = clase_nivel_0.puntos_de_habilidad_por_nivel + math.floor((inteligencia-10)/2)
+            if numero_habilidades_eleccion <= 0:
+                numero_habilidades_eleccion = 1
+            numero_idiomas_eleccion = math.floor((inteligencia-10)/2)
+            if numero_idiomas_eleccion < 0:
+                numero_idiomas_eleccion = 0
+            cantidad_conjuros_conocidos_0_eleccion = None
+            cantidad_conjuros_conocidos_1_eleccion = None
+            if clase.cantidad_conjuros_conocidos.all():
+                cantidad_conjuros_conocidos_0_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=0).cantidad
+                cantidad_conjuros_conocidos_1_eleccion = clase.cantidad_conjuros_conocidos.get(nivel=1).cantidad
+            return render(request, 'personaje/paso3.html', {'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion, 'numero_idiomas_eleccion':numero_idiomas_eleccion, 'cantidad_conjuros_conocidos_0_eleccion':cantidad_conjuros_conocidos_0_eleccion, 'cantidad_conjuros_conocidos_1_eleccion':cantidad_conjuros_conocidos_1_eleccion, 'clase_nivel_0':clase_nivel_0})
+    return render(request, 'personaje/paso2.html', {'raza':raza, 'clase':clase, 'formulario_paso_2':formulario_paso_2, 'puntos_a_elegir':puntos_a_elegir, 'alineamiento':alineamiento})
 
 def modificar_caracteristica(caracteristica_choice, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma):
     if caracteristica_choice == 'Fuerza':
@@ -869,7 +866,7 @@ def eliminar_personaje(request, pk):
     except:
         return redirect('error_url')
 
-@login_required(login_url="/login/") #No se puede multiclasear, falta por meter los conjuros
+@login_required(login_url="/login/")
 def subir_nivel(request, pk):
     try:
         personaje = Personaje.objects.get(pk=pk)

@@ -6,13 +6,9 @@
           <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto ">
                 <h1 class="display-4 py-2 text-center">Crear personaje</h1>
                 {% if formulario_paso_2.errors %}
-                    {% for field in formulario_paso_2 %}
-                        {% for error in field.errors %}
-                            <div class="alert alert-danger">
-                                {{error}}
-                            </div>
-                        {% endfor %}
-                    {% endfor %}
+                <div class="alert alert-danger" role="alert">
+                    Los puntos de característica seleccionados no coinciden con el tipo de campaña
+                </div>
                 {% endif %}
                 <div class="px-2">
                     <form  role="form"  enctype="multipart/form-data" action="/personaje/create/2/" method="POST" id="upload-image-form"> 
