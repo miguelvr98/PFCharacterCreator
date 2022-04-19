@@ -52,7 +52,7 @@ def listar_dotes(request):
     try:
         dotes = Dote.objects.all()
         buscador = BuscarDoteForm(var=False)
-        paginator = Paginator(dotes, 5)
+        paginator = Paginator(dotes, 4)
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'dote/list.html', {'dotes':page_obj, 'buscador':buscador})
@@ -65,7 +65,7 @@ def listar_dotes_propias(request):
         perfil = usuario_logueado(request)
         dotes = Dote.objects.all().filter(creador=perfil)
         buscador = BuscarDoteForm(var=True)
-        paginator = Paginator(dotes, 5)
+        paginator = Paginator(dotes, 4)
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'dote/list.html', {'dotes':page_obj, 'buscador':buscador})
@@ -373,21 +373,20 @@ def registrar_usuario(request):
 
 @login_required(login_url="/login/")
 def crear_dote(request):
-    try:
-        if request.method == 'POST':
-            form_dote = DoteForm(request.POST)
-            perfil = usuario_logueado(request)
-            if form_dote.is_valid():
-                dote = form_dote.save(commit=False)
-                dote.creador = perfil
-                dote.save()
+    if request.method == 'POST':
+        form_dote = DoteForm(request.POST)
+        perfil = usuario_logueado(request)
+        if form_dote.is_valid():
+            dote = form_dote.save(commit=False)
+            dote.creador = perfil
+            dote.nombre = dote.nombre + ' (3er party)'
+            dote.descripcion = form_dote.cleaned_data.get('descripcion')
+            dote.save()
 
-                return redirect('/dote/show/'+ str(dote.pk))
-        else:
-            form_dote = DoteForm()
-        return render(request, 'dote/edit.html', {'form_dote':form_dote})
-    except:
-        return redirect('error_url')
+            return redirect('/dote/show/'+ str(dote.pk))
+    else:
+         form_dote = DoteForm()
+    return render(request, 'dote/edit.html', {'form_dote':form_dote})
 
 @login_required(login_url="/login/")
 def editar_dote(request, pk):
@@ -400,7 +399,6 @@ def editar_dote(request, pk):
             perfil = usuario_logueado(request)
             if form_dote.is_valid():
                 form_dote.save()
-
                 return redirect('/dote/show/'+ str(dote.pk))
         else:
             form_dote = DoteForm(instance=dote)
@@ -447,7 +445,21 @@ def mostrar_perfil(request, pk):
     try:
         perfil = Perfil.objects.get(pk=pk)
         personajes = Personaje.objects.all().filter(perfil=perfil).filter(es_publico=True)
-        return render(request, 'perfil/show.html', {'perfil':perfil, 'personajes':personajes})
+        num_barbaro = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Bárbaro").count()
+        num_bardo = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Bardo").count()
+        num_clerigo = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Clérigo").count()
+        num_druida = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Druida").count()
+        num_explorador = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Explorador").count()
+        num_guerrero = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Guerrero").count()
+        num_hechicero = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Hechicero").count()
+        num_mago = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Mago").count()
+        num_monje = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Monje").count()
+        num_paladin = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Paladín").count()
+        num_picaro = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Pícaro").count()
+        return render(request, 'perfil/show.html', {'perfil':perfil, 'personajes':personajes, 'num_barbaro':num_barbaro,
+         'num_bardo':num_bardo, 'num_clerigo':num_clerigo, 'num_druida':num_druida, 'num_explorador':num_explorador,
+          'num_guerrero':num_guerrero, 'num_hechicero':num_hechicero, 'num_mago':num_mago, 'num_monje':num_monje,
+          'num_paladin':num_paladin, 'num_picaro':num_picaro})
     except:
         return redirect('error_url')
 
@@ -537,7 +549,7 @@ def buscar_dote(request):
                 if es_dote_companero_animal == True:
                     dotes = dotes.filter(es_dote_companero_animal=True)
 
-            paginator = Paginator(dotes, 5)
+            paginator = Paginator(dotes, 4)
             page_number = request.GET.get('page')
             page_obj = paginator.get_page(page_number)
         return render(request, 'dote/list.html', {'dotes':page_obj, 'buscador':buscador})

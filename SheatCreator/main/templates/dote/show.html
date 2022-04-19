@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
     {{dote.nombre}}
+    {{dote.descripcion}}
     {% for dote in prerrequisito_dote %}
         {{dote.nombre}}
     {% endfor %}

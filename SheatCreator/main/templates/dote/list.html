@@ -11,25 +11,48 @@
             <br>
         <div class="text-center">¿Es dote de compañero animal?</div>
             {{buscador.es_dote_companero_animal}}
-            <br>
         <div class="text-center">
             <button type="submit" class="btn btn-dark mr-2">Buscar</button>
         </div>
         <input type="hidden" id="var" name="var" value={{buscador.var}}>
     </form>
 </div>
-    {% for dote in dotes %}
-        {{dote.nombre}}
-    {% endfor %}
-
+<div class="container">
+  <div class="row">
+      <div class="col-lg-2">
+        <p>Nombre</p>
+      </div>
+      <div class="col-lg-1">
+          <p>Tipo</p>
+      </div>
+      <div class="col text-center">
+        <p>Descripción</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  {% for dote in dotes %}
+  <div class="row">
+      <div class="col-lg-2 align-self-center">
+        <a href="/dote/show/{{dote.pk}}">{{dote.nombre}}</a>
+      </div>
+      <div class="col-lg-1 align-self-center">
+          <p class="align-text-middle">{{dote.tipo}}</p>
+      </div>
+      <div class="col align-self-center">
+        <p class="align-text-middle">{{dote.descripcion}}</p>
+    </div>  
+  </div>
+  {% endfor %}
+</div>
     {% if dotes %}
-    <div class="container">
+    <div class="container mb-5">
       <ul class="pagination d-flex justify-content-center">
         {% if dotes.has_previous %}
         <form  role="form"  enctype="multipart/form-data" action="/dote/search/?page={{dotes.previous_page_number}}" method="POST" id="upload-image-form">
           {% csrf_token %}
         <li class="page-item"><button type="submit" class="page-link">Anterior</button></li>
-        <input type="hidden" id="var" name="var" value={{buscador.var.value}}>
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
         {% if buscador.nombre.value != None %}
         <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
         {% endif %}
@@ -53,7 +76,7 @@
         <form  role="form"  enctype="multipart/form-data" action="/dote/search/?page={{ num }}" method="POST" id="upload-image-form">
           {% csrf_token %}
         <li class="page-item"><button type="submit" class="page-link">{{ num }}</button></li>
-        <input type="hidden" id="var" name="var" value={{buscador.var.value}}>
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
         {% if buscador.nombre.value != None %}
         <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
         {% endif %}
@@ -69,8 +92,8 @@
         {% if dotes.has_next %}
         <form  role="form"  enctype="multipart/form-data" action="/dote/search/?page={{dotes.next_page_number}}" method="POST" id="upload-image-form">
           {% csrf_token %}
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
         <li class="page-item"><button type="submit" class="page-link">Siguiente</button></li>
-        <input type="hidden" id="var" name="var" value={{buscador.var.value}}>
         {% if buscador.nombre.value != None %}
         <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
         {% endif %}

@@ -1,8 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% for habilidad in habilidades %}
-        {{habilidad.habilidad}}
-    {% endfor %}
+<div class="container-fluid">
+  {% for habilidad in habilidades %}
+  <div class="row">
+      <div class="col-fluid">
+          <div class="card mx-auto" style="width: 18rem;">
+          <a class="card-block text-decoration-none"></a>
+          <div class="card-body">
+              <h5 class="card-title text-center">{{habilidad.habilidad}}</h5>
+          </div>
+          </div>
+          <br>
+      </div>
+  </div>
+  {% endfor %}
+</div>
     {% if habilidades %}
     <div class="container">
       <ul class="pagination d-flex justify-content-center">

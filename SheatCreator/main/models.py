@@ -340,7 +340,7 @@ class Dote(models.Model):
     inteligencia = models.IntegerField(verbose_name='Inteligencia', null=True)
     sabiduria = models.IntegerField(verbose_name='Sabiduría', null=True)
     carisma = models.IntegerField(verbose_name='Carisma', null=True)
-    creador = models.OneToOneField('Perfil', null=True, on_delete=models.SET_NULL)
+    creador = models.ForeignKey('Perfil', null=True, on_delete=models.SET_NULL)
     es_dote_companero_animal = models.BooleanField(verbose_name='Es dote de compañero animal', default=False)
     #pr_dote son las dotes que la tienen como prerrequisito de dote
     prerrequisito_dote = models.ManyToManyField('self', symmetrical=False, related_name='pr_dote')

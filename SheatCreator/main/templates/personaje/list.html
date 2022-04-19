@@ -15,10 +15,44 @@
         <input type="hidden" id="var" name="var" value={{buscador.var}}>
     </form>
 </div>
-    {% for personaje in personajes %}
-        {{personaje.nombre}}
-    {% endfor %}
-    
+<div class="container">
+  <div class="row d-flex justify-content-center mx-auto mb-1">
+      <div class="col-lg-1">
+        <p>Nombre</p>
+      </div>
+      <div class="col-lg-1">
+          <p>Raza</p>
+      </div>
+      <div class="col-lg-1">
+        <p>Clase</p>
+    </div>
+      <div class="col-lg-1">
+        <p>Nivel</p>
+    </div>
+    <div class="col-lg-1">
+      <p>Creador</p>
+  </div>
+  </div>
+  {% for personaje in personajes %}
+  <div class="row d-flex justify-content-center mx-auto mb-1">
+      <div class="col-lg-1 align-self-center">
+        <a href="/personaje/show/{{personaje.pk}}">{{personaje.nombre}}</a>
+      </div>
+      <div class="col-lg-1 align-self-center">
+          <p class="align-text-middle">{{personaje.raza.raza}}</p>
+      </div>
+      <div class="col-lg-1 align-self-center">
+        <p class="align-text-middle">{{personaje.clase.clase}}</p>
+    </div>
+      <div class="col-lg-1 align-self-center">
+        <p class="align-text-middle">{{personaje.nivel}}</p>
+    </div>  
+    <div class="col-lg-1 align-self-center">
+      <a href="/perfil/show/{{personaje.perfil.pk}}">{{personaje.perfil.nickname}}</a>
+  </div>  
+  </div>
+  {% endfor %}
+</div>
     {% if personajes %}
     <div class="container">
       <ul class="pagination d-flex justify-content-center">

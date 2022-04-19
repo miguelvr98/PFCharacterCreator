@@ -198,9 +198,9 @@ class BuscarDoteForm(forms.Form):
     }
     TIPO_CHOICES = (('General', 'General'), ('Combate', 'Combate'), ('Metamágica', 'Metamágica'), (None, '---------'), )
 
-    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
-    tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=False, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
-    es_dote_companero_animal = forms.BooleanField(widget=forms.CheckboxInput(), required=False)
+    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control w-25 p-3 mx-auto', 'placeholder': 'Nombre'}))
+    tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=False, widget=forms.Select(attrs={'class': 'form-control w-25 mx-auto', 'placeholder': 'Tipo'}))
+    es_dote_companero_animal = forms.BooleanField(widget=forms.CheckboxInput(attrs={'class': 'd-flex justify-content-center mx-auto mb-1'}), required=False)
 
     def __init__(self, *args, **kwargs):
         var = kwargs.pop('var')
@@ -251,8 +251,8 @@ class BuscarPersonajeForm(forms.Form):
         'nombre_letters': ("El nombre solo puede contener letras"),
     }
 
-    clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=0), widget=forms.Select(), required=False)
-    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+    clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=0), widget=forms.Select(attrs={'class': 'd-flex justify-content-center mx-auto mb-1', 'placeholder': 'Clase'}), required=False)
+    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control w-25 p-3 mx-auto', 'placeholder': 'Nombre'}))
 
     def __init__(self, *args, **kwargs):
         var = kwargs.pop('var')
