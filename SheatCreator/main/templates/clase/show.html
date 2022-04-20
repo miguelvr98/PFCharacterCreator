@@ -1,14 +1,78 @@
 {% extends 'base.html' %}
 {% block content %}
-    {{clase.clase}}
-    {{clase.nivel}}
-    {% for c in clases_nivel %}
-        {{c.nivel}}
+<div class="container d-flex justify-content-center mx-auto">
+    <h2>{{clase.clase}}</h2>
+</div>
+<div class="container mx-auto">
+    <h6 class="d-inline">Dados de golpe: </h6><p class="d-inline">d{{clase.dados_de_golpe}}</p>
+    <br>
+    <h6 class="d-inline">Habilidades de clase: </h6>
+    {% for habilidad in habilidades.all %}
+    <p class="d-inline">{{habilidad.habilidad}}</p>
     {% endfor %}
+    </div>
+    <br>
+</div>
+<div class="container mx-auto">
+    <h5>Rasgos de clase</h5>
     {% for especial in especiales %}
-        {{e.nombre}}
+    <h6 class="d-inline">{{especial.nombre}}: </h6>
+    <p class="d-inline">{{especial.descripcion}}</p>
+    <br>
     {% endfor %}
-    {% for habilidad in habilidades %}
-        {{habilidad.habilidad}}
+    {% if clase.conjuros.all %}
+    <a href="/conjuro/list/{{clase.pk}}">Listado de conjuros</a>
+    {% endif %}
+    {% if clase.linajes.all %}
+    <a href="/linaje/list/">Listado de linajes</a>
+    {% endif %}
+    {% if clase.poderes.all %}
+    <a href="/poder/list/{{clase.pk}}">Listado de poderes</a>
+    {% endif %}
+    {% if clase.companero_animal.all %}
+    <a href="/companero_animal/list/">Listado de compañeros animales</a>
+    {% endif %}
+    <br>
+    <br>
+    </div>
+</div>
+<div class="container mx-auto">
+    <h5>{{clase.clase}} por niveles</h5>
+    <div class="row">
+        <div class="col">
+            <h6>Nivel</h6>
+          </div>
+          <div class="col">
+              <h6>Ataque base</h6>
+          </div>
+          <div class="col">
+            <h6>Fortaleza</h6>
+        </div>
+        <div class="col">
+            <h6>Reflejos</h6>
+          </div>
+          <div class="col">
+              <h6>Voluntad</h6>
+          </div>
+    </div>
+    {% for c in clases_nivel %}
+    <div class="row">
+        <div class="col">
+            <p>{{c.nivel}}</p>
+          </div>
+          <div class="col">
+              <p>{{c.ataque_base}}</p>
+          </div>
+          <div class="col">
+            <p>+{{c.fortaleza}}</p>
+        </div>
+        <div class="col">
+            <p>+{{c.reflejos}}</p>
+          </div>
+          <div class="col">
+              <p>+{{c.voluntad}}</p>
+          </div>
+    </div>
     {% endfor %}
+</div>
 {% endblock %}

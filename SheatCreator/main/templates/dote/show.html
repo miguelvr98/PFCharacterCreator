@@ -1,9 +1,80 @@
 {% extends 'base.html' %}
 {% block content %}
-    {{dote.nombre}}
-    {{dote.descripcion}}
-    {% for dote in prerrequisito_dote %}
-        {{dote.nombre}}
-    {% endfor %}
-    {{prerrequisito_raza.raza}}
+<div class="container d-flex justify-content-center mx-auto">
+    <h2>{{dote.nombre}}</h2>
+</div>
+<div class="container mx-auto">
+    {% if dote.creador != None %}
+    <div class="row">
+        <p>Creador: {{dote.creador}}</p>
+    </div>
+    {% endif %}
+    <div class="row">
+        <p>Tipo: {{dote.tipo}}</p>
+    </div>
+    {% if dote.nivel != 0 %}
+    <div class="row">
+        <p>Prerrequisito de nivel: {{dote.nivel}}</p>
+    </div>
+    {% endif %}
+    {% if dote.ataque_base != 0 %}
+    <div class="row">
+        <p>Prerrequisito de ataque base: {{dote.ataque_base}}</p>
+    </div>
+    {% endif %}
+    {% if dote.fuerza != None %}
+    <div class="row">
+        <p>Prerrequisito de fuerza: {{dote.fuerza}}</p>
+    </div>
+    {% endif %}
+    {% if dote.destreza != None %}
+    <div class="row">
+        <p>Prerrequisito de destreza: {{dote.destreza}}</p>
+    </div>
+    {% endif %}
+    {% if dote.constitucion != None %}
+    <div class="row">
+        <p>Prerrequisito de constitucion: {{dote.constitucion}}</p>
+    </div>
+    {% endif %}
+    {% if dote.inteligencia != None %}
+    <div class="row">
+        <p>Prerrequisito de inteligencia: {{dote.inteligencia}}</p>
+    </div>
+    {% endif %}
+    {% if dote.sabiduria != None %}
+    <div class="row">
+        <p>Prerrequisito de sabiduria: {{dote.sabiduria}}</p>
+    </div>
+    {% endif %}
+    {% if dote.carisma != None %}
+    <div class="row">
+        <p>Prerrequisito de carisma: {{dote.carisma}}</p>
+    </div>
+    {% endif %}
+    {% if dote.prerrequisito_raza != None %}
+    <div class="row">
+        <p>Prerrequisito de raza: {{dote.prerrequisito_raza.raza}}</p>
+    </div>
+    {% endif %}
+    {% if dote.prerrequisito_dote.all %}
+            <p class="d-inline">Prerrequisito de dote: </p>
+        {% for d in dote.prerrequisito_dote.all %}
+            <p class="d-inline">{{d.nombre}}</p>
+        {% endfor %}
+    {% endif %}
+    {% if dote.es_dote_companero_animal != False %}
+    <div class="row">
+        <p>No es dote de compañero animal</p>
+    </div>
+    {% endif %}
+    {% if dote.es_dote_companero_animal != True %}
+    <div class="row">
+        <p>Es dote de compañero animal</p>
+    </div>
+    {% endif %}
+</div>
+<div class="container d-flex justify-content-center mx-auto">
+    <h6>{{dote.descripcion}}</h6>
+</div>
 {% endblock %}

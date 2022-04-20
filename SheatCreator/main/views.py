@@ -52,7 +52,7 @@ def listar_dotes(request):
     try:
         dotes = Dote.objects.all()
         buscador = BuscarDoteForm(var=False)
-        paginator = Paginator(dotes, 4)
+        paginator = Paginator(dotes, 5)
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'dote/list.html', {'dotes':page_obj, 'buscador':buscador})
@@ -65,7 +65,7 @@ def listar_dotes_propias(request):
         perfil = usuario_logueado(request)
         dotes = Dote.objects.all().filter(creador=perfil)
         buscador = BuscarDoteForm(var=True)
-        paginator = Paginator(dotes, 4)
+        paginator = Paginator(dotes, 5)
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'dote/list.html', {'dotes':page_obj, 'buscador':buscador})
@@ -219,7 +219,7 @@ def mostrar_clase(request, pk):
     try:
         clase = Clase.objects.get(pk=pk)
         assert clase.nivel == 0
-        clases_nivel = Clase.objects.all().filter(clase=clase.clase).exclude(nivel=0)
+        clases_nivel = Clase.objects.all().filter(clase=clase.clase).exclude(nivel=0).order_by('nivel')
         clase_1 = Clase.objects.filter(clase=clase.clase).get(nivel=1)
         especiales = clase.especiales.all()
         habilidades = clase_1.habilidades.all()
@@ -549,7 +549,7 @@ def buscar_dote(request):
                 if es_dote_companero_animal == True:
                     dotes = dotes.filter(es_dote_companero_animal=True)
 
-            paginator = Paginator(dotes, 4)
+            paginator = Paginator(dotes, 5)
             page_number = request.GET.get('page')
             page_obj = paginator.get_page(page_number)
         return render(request, 'dote/list.html', {'dotes':page_obj, 'buscador':buscador})

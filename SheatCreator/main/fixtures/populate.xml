@@ -19050,6 +19050,22 @@
         <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
         <field type="IntegerField" name="dados_de_golpe">8</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">4</field>
+        <field to="main.companeroanimal" name="companero_animal" rel="ManyToManyRel">
+            <object pk="21"></object><!--DEL 21 AL 34-->
+            <object pk="22"></object>
+            <object pk="23"></object>
+            <object pk="24"></object>
+            <object pk="25"></object>
+            <object pk="26"></object>
+            <object pk="27"></object>
+            <object pk="28"></object>
+            <object pk="29"></object>
+            <object pk="30"></object>
+            <object pk="31"></object>
+            <object pk="32"></object>
+            <object pk="33"></object>
+            <object pk="34"></object>
+        </field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="37"></object><!--DEL 37 AL 50--><!--MENOS EL 38 QUE SE BORRÓ POR REPETIDO-->
             <object pk="39"></object>
