@@ -253,10 +253,10 @@ def mostrar_companero_animal(request, pk):
 @login_required(login_url="/login/")
 def mostrar_companero_animal_personaje(request, pk):
     personaje = Personaje.objects.get(pk=pk)
-    if personaje.es_publico==True:
+    if personaje.es_publico==False:
         perfil = usuario_logueado(request)
         assert perfil == personaje.perfil
-    companero_animal = personaje.companero_animal_personaje
+    companero_animal = CompaneroAnimalPersonaje.objects.get(personaje=personaje)
     dotes = companero_animal.dotes.all()
     trucos = companero_animal.trucos.all()
     especiales = companero_animal.especiales.all()
@@ -298,20 +298,18 @@ def mostrar_objeto(request, pk):
 
 @login_required(login_url="/login/")
 def mostrar_personaje(request, pk):
-    try:
-        personaje = Personaje.objects.get(pk=pk)
-        if personaje.es_publico == False:
-            perfil = usuario_logueado(request)
-            assert personaje.perfil == perfil
-        idiomas = personaje.idiomas.all()
-        clase = personaje.clase
-        dotes = personaje.dotes.all()
-        conjuros = personaje.conjuros_conocidos.all()
-        poderes = personaje.poderes_conocidos.all()
-        inventario = personaje.propiedades_objeto.all()
-        return render(request, 'personaje/show.html', {'personaje':personaje, 'conjuros':conjuros, 'poderes':poderes, 'inventario':inventario})
-    except:
-        return redirect('error_url')
+    personaje = Personaje.objects.get(pk=pk)
+    perfil = usuario_logueado(request)
+    if personaje.es_publico == False:
+        assert personaje.perfil == perfil
+    idiomas = personaje.idiomas.all()
+    clase = personaje.clase
+    clase_nivel_0 = Clase.objects.get(nivel=0, clase=clase.clase)
+    dotes = personaje.dotes.all()
+    conjuros = personaje.conjuros_conocidos.all()
+    poderes = personaje.poderes_conocidos.all()
+    inventario = personaje.propiedades_objeto.all()
+    return render(request, 'personaje/show.html', {'personaje':personaje, 'conjuros':conjuros, 'poderes':poderes, 'inventario':inventario, 'perfil':perfil, 'clase_nivel_0':clase_nivel_0})
 
 @login_required(login_url="/login/")
 def cambiar_personaje_a_publico(request, pk):
@@ -324,7 +322,7 @@ def cambiar_personaje_a_publico(request, pk):
         personaje.save()
 
         personajes = Personaje.objects.all().filter(perfil=perfil)
-        return redirect('listar_personajes_propios_url')
+        return redirect('/personaje/show/'+str(personaje.pk))
     except:
         return redirect('error_url')
 
@@ -339,7 +337,7 @@ def cambiar_personaje_a_privado(request, pk):
         personaje.save()
 
         personajes = Personaje.objects.all().filter(perfil=perfil)
-        return redirect('listar_personajes_propios_url')
+        return redirect('/personaje/show/'+str(personaje.pk))
     except:
         return redirect('error_url')
 

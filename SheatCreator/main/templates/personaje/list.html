@@ -29,9 +29,11 @@
       <div class="col-lg-1">
         <p>Nivel</p>
     </div>
+    {% if buscador.var == False %}
     <div class="col-lg-1">
       <p>Creador</p>
   </div>
+  {% endif %}
   </div>
   {% for personaje in personajes %}
   <div class="row d-flex justify-content-center mx-auto mb-1">
@@ -46,10 +48,12 @@
     </div>
       <div class="col-lg-1 align-self-center">
         <p class="align-text-middle">{{personaje.nivel}}</p>
-    </div>  
+    </div>
+    {% if buscador.var == False %}
     <div class="col-lg-1 align-self-center">
       <a href="/perfil/show/{{personaje.perfil.pk}}">{{personaje.perfil.nickname}}</a>
-  </div>  
+  </div>
+  {% endif %}  
   </div>
   {% endfor %}
 </div>

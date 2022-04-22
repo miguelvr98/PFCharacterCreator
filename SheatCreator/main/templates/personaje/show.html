@@ -1,16 +1,445 @@
 {% extends 'base.html' %}
 {% block content %}
-    {{personaje.nombre}}
-    {{personaje.clase}}
-    {{personaje.nivel}}
-    {% for conjuro in conjuros %}
-        {{conjuro.nombre}}
-    {% endfor %}
-    {% for poder in poderes %}
-        {{poder.nombre}}
-    {% endfor %}
-    {% for ph in personaje.puntuaciones_habilidad.all %}
-        {{ph.habilidad.habilidad}}
-        {{ph.puntuacion}}
-    {% endfor %}
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center mx-auto ">
+            <ul class="nav nav-pills">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-caracteristicas-tab" data-bs-toggle="pill" data-bs-target="#pills-caracteristicas" type="button" role="tab" aria-controls="pills-caracteristicas" aria-selected="true">Características</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-habilidades-tab" data-bs-toggle="pill" data-bs-target="#pills-habilidades" type="button" role="tab" aria-controls="pills-habilidades" aria-selected="false">Habilidades</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-dotes-tab" data-bs-toggle="pill" data-bs-target="#pills-dotes" type="button" role="tab" aria-controls="pills-dotes" aria-selected="false">Dotes</button>
+                </li>
+                {% if personaje.poderes_conocidos.all %}
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-poderes-tab" data-bs-toggle="pill" data-bs-target="#pills-poderes" type="button" role="tab" aria-controls="pills-poderes" aria-selected="false">Poderes</button>
+                </li>
+                {% endif %}
+                {% if personaje.conjuros_conocidos.all %}
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-conjuros-tab" data-bs-toggle="pill" data-bs-target="#pills-conjuros" type="button" role="tab" aria-controls="pills-conjuros" aria-selected="false">Conjuros</button>
+                </li>
+                {% endif %}
+                {% if personaje.clase.clase == 'Hechicero' %}
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-linaje-tab" data-bs-toggle="pill" data-bs-target="#pills-linaje" type="button" role="tab" aria-controls="pills-linaje" aria-selected="false">Linaje</button>
+                </li>
+                {% endif %}
+                {% if personaje.companero_animal_personaje.all %}
+                <li class="nav-item dropdown" role="presentation">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="pills-companero_aniaml-tab" data-toggle="dropdown" aria-haspopup="false" aria-selected="false" aria-expanded="false">Compañero animal</a>
+                    <ul class="dropdown-menu">
+                      <li><button class="dropdown-item" id="pills-companero-animal-caracteristicas-tab" data-bs-toggle="pill" data-bs-target="#pills-companero-animal-caracteristicas" type="button" role="tab" aria-controls="pills-companero-animal-caracteristicas" aria-selected="false">Características</button></li>
+                      <li><button class="dropdown-item" id="pills-companero-animal-habilidades-tab" data-bs-toggle="pill" data-bs-target="#pills-companero-animal-habilidades" type="button" role="tab" aria-controls="pills-companero-animal-habilidades" aria-selected="false">Habilidades</button></li>
+                      <li><button class="dropdown-item" id="pills-companero-animal-dotes-tab" data-bs-toggle="pill" data-bs-target="#pills-companero-animal-dotes" type="button" role="tab" aria-controls="pills-companero-animal-dotes" aria-selected="false">Dotes</button></li>
+                      <li><button class="dropdown-item" id="pills-companero-animal-trucos-tab" data-bs-toggle="pill" data-bs-target="#pills-companero-animal-trucos" type="button" role="tab" aria-controls="pills-companero-animal-trucos" aria-selected="false">Trucos</button></li>
+                    </ul>
+                  </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane show in active" id="pills-caracteristicas" role="tabpanel" aria-labelledby="pills-caracteristicas-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h6 class="d-inline">Nombre: </h6>
+                        <p class="d-inline">{{personaje.nombre}}</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Raza: </h6>
+                        <a class="d-inline" href="/raza/show/{{personaje.raza.pk}}">{{personaje.raza.raza}}</a>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Alineamiento: </h6>
+                        <p class="d-inline">{{personaje.alineamiento}}</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Creador: </h6>
+                        <a class="d-inline" href="/perfil/show/{{personaje.perfil.pk}}">{{personaje.perfil.nickname}}</a>
+                    </div>
+                    <div class="col">
+                        {% if personaje.es_publico == True %}
+                        <h6 class="d-inline">Está público</h6>
+                        {% else %}
+                        <h6 class="d-inline">No está público</h6>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <h6 class="d-inline">Clase: </h6>
+                        <p class="d-inline">{{personaje.clase.clase}}</p>
+                        {% if personaje.linaje != None %}
+                        <p class="d-inline">({{personaje.linaje.nombre}})</p>
+                        {% endif %}
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Nivel: </h6>
+                        <p class="d-inline">{{personaje.nivel}}</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Tamaño: </h6>
+                        <p class="d-inline">{{personaje.raza.tamano}}</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Velocidad: </h6>
+                        <p class="d-inline">{{personaje.raza.velocidad}}</p>
+                        {% if personaje.clase.clase == 'Monje' %}
+                        <p class="d-inline"> (+{{personaje.clase.movimiento_rapido}})</p>
+                        {% endif %}
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Carga ligera: </h6>
+                        <p class="d-inline">{{personaje.carga_ligera}} kg</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <h6 class="d-inline">Fuerza: </h6>
+                        <p class="d-inline">{{personaje.fuerza}}</p>
+                        <p class="d-inline"> ({{personaje.bonificadorFuerza}})</p>
+                        <br>
+                        <h6 class="d-inline">Destreza: </h6>
+                        <p class="d-inline">{{personaje.destreza}}</p>
+                        <p class="d-inline"> ({{personaje.bonificadorDestreza}})</p>
+                        <br>
+                        <h6 class="d-inline">Constitución: </h6>
+                        <p class="d-inline">{{personaje.constitucion}}</p>
+                        <p class="d-inline"> ({{personaje.bonificadorConstitucion}})</p>
+                        <br>
+                        <h6 class="d-inline">Inteligencia: </h6>
+                        <p class="d-inline">{{personaje.inteligencia}}</p>
+                        <p class="d-inline"> ({{personaje.bonificadorInteligencia}})</p>
+                        <br>
+                        <h6 class="d-inline">Sabiduría: </h6>
+                        <p class="d-inline">{{personaje.sabiduria}}</p>
+                        <p class="d-inline"> ({{personaje.bonificadorSabiduria}})</p>
+                        <br>
+                        <h6 class="d-inline">Carisma: </h6>
+                        <p class="d-inline">{{personaje.carisma}}</p>
+                        <p class="d-inline"> ({{personaje.bonificadorCarisma}})</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Iniciativa: </h6>
+                        <p class="d-inline">({{personaje.iniciativa}})</p>
+                        <br>
+                        <h6 class="d-inline">Puntos de golpe: </h6>
+                        <p class="d-inline">{{personaje.puntos_de_golpe}}</p>
+                        <br>
+                        <h6 class="d-inline">BMC: </h6>
+                        <p class="d-inline">{{personaje.bmc}}</p>
+                        <br>
+                        <h6 class="d-inline">DMC: </h6>
+                        <p class="d-inline">{{personaje.dmc}}</p>
+                        <br>
+                        <h6 class="d-inline">Carga media: </h6>
+                        <p class="d-inline">{{personaje.carga_media}}</p>
+                        <br>
+                        <h6 class="d-inline">Carga maxima: </h6>
+                        <p class="d-inline">{{personaje.carga_maxima}}</p>
+                        <br>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Clase de armadura: </h6>
+                        <p class="d-inline">{{personaje.clase_armadura}} + armadura</p>
+                        <br>
+                        <h6 class="d-inline">Toque: </h6>
+                        <p class="d-inline">{{personaje.toque}}</p>
+                        <br>
+                        <h6 class="d-inline">Desprevenido: </h6>
+                        <p class="d-inline">{{personaje.desprevenido}} + armadura</p>
+                        <br>
+                        <h6 class="d-inline">Fortaleza: </h6>
+                        <p class="d-inline">+{{personaje.fortaleza}}</p>
+                        <br>
+                        <h6 class="d-inline">Reflejos: </h6>
+                        <p class="d-inline">+{{personaje.reflejos}}</p>
+                        <br>
+                        <h6 class="d-inline">Voluntad: </h6>
+                        <p class="d-inline">+{{personaje.voluntad}}</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <h6 class="d-inline">Ataque base: </h6>
+                        <p class="d-inline">{{personaje.ataque_base}}</p>
+                    </div>
+                </div>
+                {% if personaje.clase.clase == 'Monje' %}
+                <div class="row">
+                    <div class="col">
+                        <h6 class="d-inline">Ráfaga de golpes: </h6>
+                        <p class="d-inline">{{personaje.clase.rafaga_de_golpes}}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h6 class="d-inline">Daño desarmado: </h6>
+                        <p class="d-inline">{{personaje.clase.dano_desarmado}}</p>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="row mt-3">
+                    <div class="col">
+                        <h6 class="d-inline">Idiomas conocidos: </h6>
+                        {% for idioma in personaje.idiomas.all %}
+                        <p class="d-inline">{{idioma.idioma}}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% if personaje.clase.nivel_conjuro_diario.all %}
+                <h5 class="d-flex justify-content-center">Conjuros diarios por nivel</h5>
+                <div class="row mt-2 d-flex justify-content-center">
+                    <div class="col-1 d-flex justify-content-center">
+                        <p>Nivel</p>
+                    </div>
+                    {% for ncd in personaje.clase.nivel_conjuro_diario.all %}
+                    <div class="col-1 d-flex justify-content-center">
+                        <p>{{ncd.nivel}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-1 d-flex justify-content-center">
+                        <p>Cantidad</p>
+                    </div>
+                    {% for ncd in personaje.clase.nivel_conjuro_diario.all %}
+                    <div class="col-1 d-flex justify-content-center">
+                        <p>{{ncd.cantidad}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if personaje.clase.cantidad_conjuros_conocidos.all %}
+                <h5 class="d-flex justify-content-center">Cantidad de conjuros conocidos por nivel</h5>
+                <div class="row mt-5">
+                    {% for ncd in personaje.clase.cantidad_conjuros_conocidos.all %}
+                    <div class="col">
+                        <p>{{ncd.nivel}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    {% for ncd in personaje.clase.nivel_conjuro_diario.all %}
+                    <div class="col">
+                        <p>{{ncd.cantidad}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <div class="mt-2 d-flex justify-content-center">
+                    {% if personaje.perfil == perfil %}
+                        {% if personaje.es_publico == True %}
+                            <a href="/personaje/privado/{{personaje.pk}}" class="btn btn-md btn-dark ">Cambiar a privado</a>
+                        {% else %}
+                            <a href="/personaje/publico/{{personaje.pk}}" class="btn btn-md btn-dark ">Cambiar a público</a>
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-habilidades" role="tabpanel" aria-labelledby="pills-habilidades-tab">
+                <h6>Las habilidades de clase del personaje son: {{clase_nivel_0.descripcion_habilidades}}</h6>
+                <h6>Recuerda que en las tiradas de habilidad con tus habilidades de clase obtienes un +3 a la tirada extra.</h6>
+                {% if personaje.raza.raza == 'Humano' %}
+                <h6 class="mt-3">Los puntos de habilidad por nivel del personaje son: {{clase_nivel_0.descripcion_puntos_de_habilidad}} (+1 por Humano)</h6>
+                {% else %}
+                <h6 class="mt-3">Los puntos de habilidad por nivel del personaje son: {{clase_nivel_0.descripcion_puntos_de_habilidad}}</h6>
+                {% endif %}
+                <div class="row d-flex justify-content-center mt-4">
+                    <div class="col-3">
+                        <h5 class="d-flex justify-content-center">Habilidad</h5>
+                        {% for ph in personaje.puntuaciones_habilidad.all %}
+                        <p class="d-flex justify-content-center">{{ph.habilidad.habilidad}}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="col-3">
+                        <h5 class="d-flex justify-content-center">Puntuación</h5>
+                        {% for ph in personaje.puntuaciones_habilidad.all %}
+                        <p class="d-flex justify-content-center">{{ph.puntuacion}}</p>
+                        {% endfor %}
+                    </div>         
+                </div>
+        </div>
+        <div class="tab-pane fade" id="pills-dotes" role="tabpanel" aria-labelledby="pills-dotes-tab">
+            <div class="row">
+                <div class="col">
+                    {% for dote in personaje.dotes.all %}
+                    <h6 class="d-inline">{{dote.nombre}}: </h6>
+                    <p class="d-inline">{{dote.descripcion}}</p>
+                    <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-poderes" role="tabpanel" aria-labelledby="pills-poderes-tab">
+            <div class="row">
+                <div class="col">
+                    {% for poder in personaje.poderes_conocidos.all %}
+                    <h6 class="d-inline">{{poder.nombre}}: </h6>
+                    <p class="d-inline">{{poder.descripcion}}</p>
+                    <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-conjuros" role="tabpanel" aria-labelledby="pills-conjuros-tab">
+            <div class="row">
+                <div class="col">
+                    {% for conjuro in personaje.conjuros_conocidos.all %}
+                    <h6><a class="d-inline" href="/conjuro/show/{{conjuro.pk}}">{{conjuro.nombre}} (Nivel {{conjuro.nivel}}): </a></h6>
+                    <p class="d-inline">{{conjuro.descripcion}}</p>
+                    <br>
+                    <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-companero-animal-caracteristicas" role="tabpanel" aria-labelledby="pills-companero-animal-caracteristicas-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h6 class="d-inline">Nombre: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.nombre}}</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Tipo: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.tipo}}</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Nivel: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.nivel}}</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Tamano: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.tamano}}</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Puntos de golpe: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.puntos_de_golpe}}</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <h6 class="d-inline">Velocidad: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.velocidad}}</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">CA: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.ca}}</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Ataque base: </h6>
+                        <p class="d-inline">+{{personaje.companero_animal_personaje.all.0.ataque_base}}</p>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col">
+                        <h6 class="d-inline">Fuerza: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.fuerza}}</p>
+                        <p class="d-inline"> ({{personaje.companero_animal_personaje.all.0.bonificadorFuerza}})</p>
+                        <br>
+                        <h6 class="d-inline">Destreza: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.destreza}}</p>
+                        <p class="d-inline"> ({{personaje.companero_animal_personaje.all.0.bonificadorDestreza}})</p>
+                        <br>
+                        <h6 class="d-inline">Constitución: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.constitucion}}</p>
+                        <p class="d-inline"> ({{personaje.companero_animal_personaje.all.0.bonificadorConstitucion}})</p>
+                        <br>
+                        <h6 class="d-inline">Inteligencia: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.inteligencia}}</p>
+                        <p class="d-inline"> ({{personaje.companero_animal_personaje.all.0.bonificadorInteligencia}})</p>
+                        <br>
+                        <h6 class="d-inline">Sabiduría: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.sabiduria}}</p>
+                        <p class="d-inline"> ({{personaje.companero_animal_personaje.all.0.bonificadorSabiduria}})</p>
+                        <br>
+                        <h6 class="d-inline">Carisma: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.carisma}}</p>
+                        <p class="d-inline"> ({{personaje.companero_animal_personaje.all.0.bonificadorCarisma}})</p>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Iniciativa: </h6>
+                        <p class="d-inline">({{personaje.companero_animal_personaje.all.0.iniciativa}})</p>
+                        <br>
+                        <h6 class="d-inline">BMC: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.bmc}}</p>
+                        <br>
+                        <h6 class="d-inline">DMC: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.dmc}}</p>
+                        <br>
+                    </div>
+                    <div class="col">
+                        <h6 class="d-inline">Fortaleza: </h6>
+                        <p class="d-inline">+{{personaje.companero_animal_personaje.all.0.fortaleza}}</p>
+                        <br>
+                        <h6 class="d-inline">Reflejos: </h6>
+                        <p class="d-inline">+{{personaje.companero_animal_personaje.all.0.reflejos}}</p>
+                        <br>
+                        <h6 class="d-inline">Voluntad: </h6>
+                        <p class="d-inline">+{{personaje.companero_animal_personaje.all.0.voluntad}}</p>
+                        <br>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <h6 class="d-inline">Ataque: </h6>
+                        <p class="d-inline">{{personaje.companero_animal_personaje.all.0.ataque}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-companero-animal-habilidades" role="tabpanel" aria-labelledby="pills-companero-animal-habilidades-tab">
+            <h6 class="d-flex justify-content-center">Las habilidades de clase del compañero animal son: acrobacias, trepar, volar, percepción, sigilo y nadar</h6>
+                <h6 class="d-flex justify-content-center">Recuerda que en las tiradas de habilidad con las habilidades de clase obtienes un +3 a la tirada extra.</h6>
+                <div class="row d-flex justify-content-center mt-4">
+                    <div class="col-3">
+                        <h5 class="d-flex justify-content-center">Habilidad</h5>
+                        {% for ph in personaje.companero_animal_personaje.all.0.puntuacion_habilidad.all %}
+                        <p class="d-flex justify-content-center">{{ph.habilidad.habilidad}}</p>
+                        {% endfor %}
+                    </div>
+                    <div class="col-3">
+                        <h5 class="d-flex justify-content-center">Puntuación</h5>
+                        {% for ph in personaje.companero_animal_personaje.all.0.puntuacion_habilidad.all %}
+                        <p class="d-flex justify-content-center">{{ph.puntuacion}}</p>
+                        {% endfor %}
+                    </div>         
+                </div>
+        </div>
+        <div class="tab-pane fade" id="pills-companero-animal-dotes" role="tabpanel" aria-labelledby="pills-companero-animal-dotes-tab">
+            <div class="row">
+                <div class="col">
+                    {% for dote in personaje.companero_animal_personaje.all.0.dotes.all %}
+                    <h6 class="d-inline">{{dote.nombre}}: </h6>
+                    <p class="d-inline">{{dote.descripcion}}</p>
+                    <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-companero-animal-trucos" role="tabpanel" aria-labelledby="pills-companero-animal-trucos-tab">
+            <div class="row">
+                <div class="col">
+                    {% for truco in personaje.companero_animal_personaje.all.0.trucos.all %}
+                    <h6 class="d-inline">{{truco.nombre}}: </h6>
+                    <p class="d-inline">{{truco.descripcion}}</p>
+                    <h6 class="d-inline">CD: {{truco.cd}}.</h6>
+                    <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

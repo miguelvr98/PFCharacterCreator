@@ -84,7 +84,7 @@ class Personaje(models.Model):
     
     @property
     def iniciativa(self):
-        return bonificadorDestreza
+        return self.bonificadorDestreza
 
     @property
     def carga(self):
@@ -111,16 +111,16 @@ class Personaje(models.Model):
     
     @property
     def carga_media(self):
-        return carga_ligera(self) * 2
+        return self.carga_ligera * 2
     
     @property
     def carga_maxima(self):
-        return carga_media(self) * 2
+        return self.carga_media * 2
 
     @property
     def clase_armadura(self):
         clase_armadura = 10
-        for propiedad_objeto in self.propiedades_objeto:
+        for propiedad_objeto in self.propiedades_objeto.all():
             for propiedad in propiedad_objeto.propiedades:
                 if propiedad.equipado == True and ('Armadura' in propiedad_objeto.objeto.clase or 'Escudo' in propiedad_objeto.objeto.clase):
                     bonif_arm = propiedad_objeto.objeto.bonif_arm
@@ -128,8 +128,8 @@ class Personaje(models.Model):
                     bonif_max_des.append(propiedad_objeto.objeto.bonif_max_des)
                     max = max(bonif_max_des)
                     clase_armadura = clase_armadura + bonif_arm
-                if max >= bonificadorDestreza(self):
-                    clase_armadura = clase_armadura + bonificadorDestreza(self)
+                if max >= self.bonificadorDestreza:
+                    clase_armadura = clase_armadura + self.bonificadorDestreza
                 else:
                     clase_armadura = clase_armadura + max
                 clase_armadura = clase_armadura + clase.bonificacion_ac
@@ -138,24 +138,24 @@ class Personaje(models.Model):
     @property
     def desprevenido(self):
         desprevenido = 10
-        for propiedad_objeto in self.propiedades_objeto:
+        for propiedad_objeto in self.propiedades_objeto.all():
             for propiedad in propiedad_objeto.propiedades:
                 if propiedad.equipado == True and ('Armadura' in propiedad_objeto.objeto.clase or 'Escudo' in propiedad_objeto.objeto.clase):
                     bonif_arm = propiedad_objeto.objeto.bonif_arm
-                    desprevenido = desprevenido + bonif_arm
+                    desprevenido = desprevenido + bonif_arm + clase.bonificacion_ac
         return desprevenido
 
     @property
     def toque(self):
         toque = 10
-        for propiedad_objeto in self.propiedades_objeto:
+        for propiedad_objeto in self.propiedades_objeto.all():
             for propiedad in propiedad_objeto.propiedades:
                 if propiedad.equipado == True and ('Armadura' in propiedad_objeto.objeto.clase or 'Escudo' in propiedad_objeto.objeto.clase):
                     bonif_max_des = []
                     bonif_max_des.append(propiedad_objeto.objeto.bonif_max_des)
                     max = max(bonif_max_des)
-                    if max >= bonificadorDestreza(self):
-                        toque = toque + bonificadorDestreza(self)
+                    if max >= self.bonificadorDestreza:
+                        toque = toque + self.bonificadorDestreza
                     else:
                         toque = toque + max 
         return toque
@@ -164,35 +164,35 @@ class Personaje(models.Model):
     def bmc(self):
         ataque_base_sum = 0
         ataque_base_sum = ataque_base_sum + self.clase.ataque_base_int
-        bmc = '+' + str(bmc + ataque_base_sum + bonificadorFuerza(self))
+        bmc = '+' + str(ataque_base_sum + self.bonificadorFuerza)
         return bmc
 
     @property
     def dmc(self):
         ataque_base_sum = 0
         ataque_base_sum = ataque_base_sum + self.clase.ataque_base_int
-        dmc = 10 + ataque_base_sum + bonificadorFuerza(self) + bonificadorDestreza(self)
+        dmc = 10 + ataque_base_sum + self.bonificadorFuerza + self.bonificadorDestreza
         return dmc
     
     @property
     def fortaleza(self):
         fortaleza = 0
         fortaleza = fortaleza + self.clase.fortaleza
-        fortaleza = fortaleza + bonificadorConstitucion(self)
+        fortaleza = fortaleza + self.bonificadorConstitucion
         return fortaleza
     
     @property
     def reflejos(self):
         reflejos = 0
         reflejos = reflejos + self.clase.reflejos
-        reflejos = reflejos + bonificadorDestreza(self)
+        reflejos = reflejos + self.bonificadorDestreza
         return reflejos
 
     @property
     def voluntad(self):
         voluntad = 0
         voluntad = voluntad + self.clase.voluntad
-        voluntad = voluntad + bonificadorSabiduria(self)
+        voluntad = voluntad + self.bonificadorSabiduria
         return voluntad
 
     @property
@@ -461,6 +461,54 @@ class CompaneroAnimalPersonaje(CompaneroAnimal):
         for ph in self.puntuaciones_habilidad:
            habilidades[ph.habilidad.habilidad] = ph.puntuacion
         return habilidades
+
+    @property
+    def bonificadorFuerza(self):
+        return math.floor((self.fuerza-10)/2)
+    
+    @property
+    def bonificadorDestreza(self):
+        return math.floor((self.destreza-10)/2)
+
+    @property
+    def bonificadorConstitucion(self):
+        return math.floor((self.constitucion-10)/2)
+
+    @property
+    def bonificadorInteligencia(self):
+        return math.floor((self.inteligencia-10)/2)
+
+    @property
+    def bonificadorSabiduria(self):
+        return math.floor((self.sabiduria-10)/2)
+
+    @property
+    def bonificadorCarisma(self):
+        return math.floor((self.carisma-10)/2)
+    
+    @property
+    def iniciativa(self):
+        return self.bonificadorDestreza
+
+    @property
+    def bmc(self):
+        ataque_base_sum = 0
+        ataque_base_sum = ataque_base_sum + self.ataque_base
+        bmc = '+' + str(ataque_base_sum + self.bonificadorFuerza)
+        return bmc
+
+    @property
+    def dmc(self):
+        ataque_base_sum = 0
+        ataque_base_sum = ataque_base_sum + self.ataque_base
+        dmc = 10 + ataque_base_sum + self.bonificadorFuerza + self.bonificadorDestreza
+        return dmc
+
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        ordering = ('nombre', )
 
 class Truco(models.Model):
     nombre = models.TextField(verbose_name='Nombre')
