@@ -221,17 +221,23 @@
                 {% endif %}
                 {% if personaje.clase.cantidad_conjuros_conocidos.all %}
                 <h5 class="d-flex justify-content-center">Cantidad de conjuros conocidos por nivel</h5>
-                <div class="row mt-5">
-                    {% for ncd in personaje.clase.cantidad_conjuros_conocidos.all %}
-                    <div class="col">
-                        <p>{{ncd.nivel}}</p>
+                <div class="row mt-2 d-flex justify-content-center">
+                    <div class="col-1 d-flex justify-content-center">
+                        <p>Nivel</p>
+                    </div>
+                    {% for ncc in personaje.clase.cantidad_conjuros_conocidos.all %}
+                    <div class="col-1 d-flex justify-content-center">
+                        <p>{{ncc.nivel}}</p>
                     </div>
                     {% endfor %}
                 </div>
-                <div class="row">
-                    {% for ncd in personaje.clase.nivel_conjuro_diario.all %}
-                    <div class="col">
-                        <p>{{ncd.cantidad}}</p>
+                <div class="row mt-2 d-flex justify-content-center">
+                    <div class="col-1 d-flex justify-content-center">
+                        <p>Cantidad</p>
+                    </div>
+                    {% for ncc in personaje.clase.cantidad_conjuros_conocidos.all %}
+                    <div class="col-1 d-flex justify-content-center">
+                        <p>{{ncc.cantidad}}</p>
                     </div>
                     {% endfor %}
                 </div>
@@ -304,6 +310,37 @@
                 </div>
             </div>
         </div>
+        {% if personaje.clase.clase == 'Hechicero' %}
+        <div class="tab-pane fade" id="pills-linaje" role="tabpanel" aria-labelledby="pills-linaje-tab">
+            <h4 class="d-flex justify-content-center">Linaje {{personaje.linaje.nombre}}</h4>
+            <br>
+            <h6 class="d-flex">{{personaje.linaje.descripcion}}</h6>
+            <br>
+            <p class="d-inline">Obtienes la habilidad</p>
+            <h6 class="d-inline">{{personaje.linaje.habilidad.habilidad}}</h6>
+            <p class="d-inline"> como habilidad de clase.</p>
+            <br>
+            <h6 class="d-inline">Conjuros adicionales: </h6>
+            {% for conjuro in personaje.linaje.conjuros.all %}
+            <a class="d-inline" href="/conjuro/show/{{conjuro.pk}}">{{conjuro.nombre}}</a>,
+            {% endfor %}
+            <p class="d-inline">a nivel 3, 5, 7, 9, 11, 13, 15, 17, 19 consecutivamente.</p>
+            <br>
+            <h6 class="d-inline">Dotes adicionales: </h6>
+            {% for dote in personaje.linaje.dotes.all %}
+            <a class="d-inline" href="/dote/show/{{dote.pk}}">{{dote.nombre}}</a>,
+            {% endfor %}
+            <br>
+            <h6 class="d-inline">Linaje arcano: </h6>
+            <p class="d-inline">{{personaje.linaje.linaje_arcano}}</p>
+            <h5 class="d-flex justify-content-center">Poderes de linaje</h5>
+            {% for poder in personaje.linaje.poderes.all %}
+            <h6 class="d-inline">{{poder.nombre}}: </h6>
+            <p class="d-inline">{{poder.descripcion}}</p>
+            <br>
+            {% endfor %}
+        </div>
+        {% endif %}
         <div class="tab-pane fade" id="pills-companero-animal-caracteristicas" role="tabpanel" aria-labelledby="pills-companero-animal-caracteristicas-tab">
             <div class="container">
                 <div class="row">
