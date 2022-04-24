@@ -91,15 +91,12 @@ def listar_habilidades(request):
 
 #Mirar como meter paginación aquí y revisar las queries
 def listar_companeros_animales(request):
-    try:
-        companeros_animales_por_nivel = CompaneroAnimal.objects.all().filter(es_familiar=False).exclude(nivel=None).exclude(nivel=0)
-        companeros_animales_por_tipo = CompaneroAnimal.objects.all().filter(es_familiar=False).exclude(tipo=None)
-        familiares = CompaneroAnimal.objects.all().filter(es_familiar=True).exclude(tipo=None)
-        aux_ca = CompaneroAnimal.objects.get(nivel=0)
-        especiales = aux_ca.especiales.all()
-        return render(request, 'companero_animal/list.html', {'companeros_animales_por_nivel':companeros_animales_por_nivel, 'companeros_animales_por_tipo':companeros_animales_por_tipo, 'familiares':familiares, 'especiales':especiales})
-    except:
-        return redirect('error_url')
+    companeros_animales_por_nivel = CompaneroAnimal.objects.all().filter(es_familiar=False).filter(tipo=None).exclude(nivel=0)
+    companeros_animales_por_tipo = CompaneroAnimal.objects.all().filter(es_familiar=False).filter(nivel=None)
+    familiares = CompaneroAnimal.objects.all().filter(es_familiar=True).exclude(tipo=None)
+    aux_ca = CompaneroAnimal.objects.get(nivel=0)
+    especiales = aux_ca.especiales.all()
+    return render(request, 'companero_animal/list.html', {'companeros_animales_por_nivel':companeros_animales_por_nivel, 'companeros_animales_por_tipo':companeros_animales_por_tipo, 'familiares':familiares, 'especiales':especiales})
 
 def listar_trucos(request):
     try:
@@ -188,7 +185,7 @@ def listar_conjuros_por_clase(request, pk):
         assert clase.nivel == 0
         conjuros = clase.conjuros.all()
         buscador = BuscarConjuroForm()
-        paginator = Paginator(conjuros, 5)
+        paginator = Paginator(conjuros, 10)
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         return render(request, 'conjuro/list.html', {'conjuros':page_obj, 'buscador':buscador, 'pk':pk})
@@ -591,7 +588,7 @@ def buscar_conjuro(request, pk):
                 
                 if nivel != None:
                     conjuros = conjuros.filter(nivel=nivel)
-            paginator = Paginator(conjuros, 5)
+            paginator = Paginator(conjuros, 10)
             page_number = request.GET.get('page')
             page_obj = paginator.get_page(page_number)
         else:

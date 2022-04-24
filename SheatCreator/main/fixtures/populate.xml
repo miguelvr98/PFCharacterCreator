@@ -11584,7 +11584,7 @@
         </field>
     </object>
     <object pk="26" model="main.companeroanimal">
-        <field type="CharField" name="tipo">Camello</field>
+        <field type="CharField" name="tipo">Camello avanzado</field>
         <field type="CharField" name="tamano">Grande</field>
         <field type="CharField" name="velocidad">15 metros</field>
         <field type="IntegerField" name="ca">1</field>
@@ -15709,14 +15709,6 @@
         <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
         <field type="IntegerField" name="dados_de_golpe">8</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
-        <field to="main.linaje" name="linajes" rel="ManyToManyRel">
-            <object pk="1"></object>
-            <object pk="2"></object>
-            <object pk="3"></object>
-            <object pk="4"></object>
-            <object pk="5"></object>
-            <object pk="6"></object>
-        </field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="32"></object><!--DEL 32 AL 36-->
             <object pk="33"></object>

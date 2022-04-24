@@ -220,7 +220,7 @@ class BuscarPoderForm(forms.Form):
         'nombre_letters': ("El nombre solo puede contener letras"),
     }
 
-    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control w-25 p-3 mx-auto', 'placeholder': 'Nombre'}))
 
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')
@@ -235,8 +235,8 @@ class BuscarConjuroForm(forms.Form):
         'nombre_letters': ("El nombre solo puede contener letras"),
     }
 
-    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
-    nivel = forms.IntegerField(label='Nivel', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Nivel', 'min':0, 'max':9}))
+    nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control w-25 p-3 mx-auto', 'placeholder': 'Nombre'}))
+    nivel = forms.IntegerField(label='Nivel', required=False, widget=forms.NumberInput(attrs={'class': 'form-control w-25 mx-auto', 'placeholder': 'Nivel', 'min':0, 'max':9}))
 
     def clean_nombre(self):
         nombre = self.cleaned_data.get('nombre')

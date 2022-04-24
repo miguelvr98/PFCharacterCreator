@@ -1,108 +1,132 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container d-flex justify-content-center mx-auto">
-    <h2>{{clase.clase}}</h2>
-</div>
-<div class="container mx-auto">
-    <h6 class="d-inline">Dados de golpe: </h6><p class="d-inline">d{{clase.dados_de_golpe}}</p>
-    <br>
-    <h6 class="d-inline">Habilidades de clase: </h6>
-    {% for habilidad in habilidades.all %}
-    <p class="d-inline">{{habilidad.habilidad}}</p>
-    {% endfor %}
-    <br>
-    <h6>{{clase.competencia}}</h6>
-    </div>
-    <br>
-</div>
-<div class="container mx-auto">
-    <h5>Rasgos de clase</h5>
-    {% for especial in especiales %}
-    <h6 class="d-inline">{{especial.nombre}}: </h6>
-    <p class="d-inline">{{especial.descripcion}}</p>
-    <br>
-    {% endfor %}
-    {% if clase.conjuros.all %}
-    <a href="/conjuro/list/{{clase.pk}}">Listado de conjuros</a>
-    {% endif %}
-    {% if clase.linajes.all %}
-    <a href="/linaje/list/">Listado de linajes</a>
-    {% endif %}
-    {% if clase.poderes.all %}
-    <a href="/poder/list/{{clase.pk}}">Listado de poderes</a>
-    {% endif %}
-    {% if clase.companero_animal.all %}
-    <a href="/companero_animal/list/">Listado de compañeros animales</a>
-    {% endif %}
-    <br>
-    <br>
-    </div>
-</div>
-<div class="container mx-auto">
-    <h5>{{clase.clase}} por niveles</h5>
+<div class="container">
     <div class="row">
-        <div class="col d-flex justify-content-center">
-            <h6>Nivel</h6>
-          </div>
-          <div class="col d-flex justify-content-center">
-              <h6>Ataque base</h6>
-          </div>
-          <div class="col d-flex justify-content-center">
-            <h6>Fortaleza</h6>
+        <div class="col d-flex justify-content-center mx-auto ">
+            <ul class="nav nav-pills">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info" type="button" role="tab" aria-controls="pills-info" aria-selected="true">Información general</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-nivel-tab" data-bs-toggle="pill" data-bs-target="#pills-nivel" type="button" role="tab" aria-controls="pills-nivel" aria-selected="false">Evolución por niveles</button>
+                </li>
+            </ul>
         </div>
-        <div class="col d-flex justify-content-center">
-            <h6>Reflejos</h6>
-          </div>
-          <div class="col d-flex justify-content-center">
-              <h6>Voluntad</h6>
-          </div>
-          {% if clase.clase == 'Monje' %}
-          <div class="col-lg-3 d-flex justify-content-center">
-            <h6>Ráfaga de golpes</h6>
-         </div>
-          <div class="col d-flex justify-content-center">
-            <h6>Daño desarmado</h6>
-        </div>
-          <div class="col d-flex justify-content-center">
-            <h6>Bonificación AC</h6>
-        </div>
-          <div class="col d-flex justify-content-center">
-            <h6>Velocidad</h6>
-        </div>
-          {% endif %}
     </div>
-    {% for c in clases_nivel %}
-    <div class="row">
-        <div class="col d-flex justify-content-center">
-            <p>{{c.nivel}}</p>
-          </div>
-          <div class="col d-flex justify-content-center">
-              <p>{{c.ataque_base}}</p>
-          </div>
-          <div class="col d-flex justify-content-center">
-            <p>+{{c.fortaleza}}</p>
+</div>
+<div class="container">
+    <h2 class="mt-4 d-flex justify-content-center">{{clase.clase}}</h2>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane show in active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h6 class="d-inline">Dados de golpe: </h6>
+                        <p class="d-inline">d{{clase.dados_de_golpe}}</p>
+                        <br>
+                        <h6 class="d-inline">Habilidades de clase: </h6>
+                        {% for habilidad in habilidades.all %}
+                        <p class="d-inline">{{habilidad.habilidad}}</p>
+                        {% endfor %}
+                        <br>
+                        <h6>{{clase.competencia}}</h6>
+                        <br>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h5>Rasgos de clase</h5>
+                        {% for especial in especiales %}
+                        <h6 class="d-inline">{{especial.nombre}}: </h6>
+                        <p class="d-inline">{{especial.descripcion}}</p>
+                        <br>
+                        {% endfor %}
+                        {% if clase.conjuros.all %}
+                        <a href="/conjuro/list/{{clase.pk}}">Listado de conjuros</a>
+                        {% endif %}
+                        {% if clase.linajes.all %}
+                        <a href="/linaje/list/">Listado de linajes</a>
+                        {% endif %}
+                        {% if clase.clase != 'Bardo' %}
+                        {% if clase.poderes.all %}
+                        <a href="/poder/list/{{clase.pk}}">Listado de poderes</a>
+                        {% endif %}
+                        {% endif %}
+                        {% if clase.companero_animal.all %}
+                        <a href="/companero_animal/list/">Listado de compañeros animales</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col d-flex justify-content-center">
-            <p>+{{c.reflejos}}</p>
-          </div>
-          <div class="col d-flex justify-content-center">
-              <p>+{{c.voluntad}}</p>
-          </div>
-          {% if clase.clase == 'Monje' %}
-        <div class="col-lg-3 d-flex justify-content-center">
-            <p>{{c.rafaga_de_golpes}}</p>
+        <div class="tab-pane fade" id="pills-nivel" role="tabpanel" aria-labelledby="pills-nivel-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <h6>Nivel</h6>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <h6>Ataque base</h6>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <h6>Fortaleza</h6>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <h6>Reflejos</h6>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <h6>Voluntad</h6>
+                    </div>
+                    {% if clase.clase == 'Monje' %}
+                    <div class="col-lg-3 d-flex justify-content-center">
+                        <h6>Ráfaga de golpes</h6>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <h6>Daño desarmado</h6>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <h6>Bonificación AC</h6>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <h6>Velocidad</h6>
+                    </div>
+                    {% endif %}
+                </div>
+                {% for c in clases_nivel %}
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <p>{{c.nivel}}</p>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <p>{{c.ataque_base}}</p>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <p>+{{c.fortaleza}}</p>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <p>+{{c.reflejos}}</p>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <p>+{{c.voluntad}}</p>
+                    </div>
+                    {% if clase.clase == 'Monje' %}
+                    <div class="col-lg-3 d-flex justify-content-center">
+                        <p>{{c.rafaga_de_golpes}}</p>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <p>{{c.dano_desarmado}}</p>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <p>+{{c.bonificacion_ac}}</p>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                        <p>+{{c.movimiento_rapido}}</p>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
         </div>
-        <div class="col d-flex justify-content-center">
-            <p>{{c.dano_desarmado}}</p>
-        </div>
-        <div class="col d-flex justify-content-center">
-            <p>+{{c.bonificacion_ac}}</p>
-        </div>
-        <div class="col d-flex justify-content-center">
-            <p>+{{c.movimiento_rapido}}</p>
-        </div>
-        {% endif %}
     </div>
-    {% endfor %}
 </div>
 {% endblock %}

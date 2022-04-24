@@ -14,10 +14,34 @@
         </div>
     </form>
 </div>
-    {% for conjuro in conjuros %}
-        {{conjuro.nombre}}
-    {% endfor %}
-
+<div class="container">
+  <div class="row">
+      <div class="col-lg-2">
+        <p>Nombre</p>
+      </div>
+      <div class="col-lg-1">
+          <p>Nivel</p>
+      </div>
+      <div class="col text-center">
+        <p>Descripción</p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  {% for conjuro in conjuros %}
+  <div class="row">
+      <div class="col-lg-2 align-self-center">
+        <a href="/conjuro/show/{{conjuro.pk}}">{{conjuro.nombre}}</a>
+      </div>
+      <div class="col-lg-1 align-self-center">
+          <p class="align-text-middle">{{conjuro.nivel}}</p>
+      </div>
+      <div class="col align-self-center">
+        <p class="align-text-middle">{{conjuro.descripcion}}</p>
+    </div>  
+  </div>
+  {% endfor %}
+</div>
     {% if conjuros %}
     <div class="container">
       <ul class="pagination d-flex justify-content-center">

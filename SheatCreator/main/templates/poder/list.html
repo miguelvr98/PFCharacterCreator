@@ -11,10 +11,26 @@
         </div>
     </form>
 </div>
-{% for poder in poderes %}
-    {{poder.nombre}}
-{% endfor %}
-
+<div class="container">
+  <div class="row d-flex justify-content-center mt-4">
+    <div class="col-lg-3 ml-5">
+      <p>Nombre</p>
+    </div>
+    <div class="col-lg-5">
+      <p>Descripción</p>
+  </div>
+</div>
+  {% for poder in poderes %}
+  <div class="row d-flex justify-content-center">
+      <div class="col-lg-3 ml-5 d-flex align-items-center">
+        <a class="" href="/poder/show/{{poder.pk}}">{{poder.nombre}}</a>
+      </div>
+      <div class="col-lg-5">
+        <p>{{poder.descripcion}}</p>
+    </div>  
+  </div>
+  {% endfor %}
+</div>
 {% if poderes %}
     <div class="container">
       <ul class="pagination d-flex justify-content-center">

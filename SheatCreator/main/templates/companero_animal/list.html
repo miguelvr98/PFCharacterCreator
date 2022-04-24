@@ -1,21 +1,137 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% for ca in companeros_animales_por_tipo %}
-        {{ca.tipo}}
-    {% endfor %}
-</n>
-</n>
-    {% for ca in companeros_animales_por_nivel %}
-        {{ca.companeros_animales_por_nivel}}
-    {% endfor %}
-</n>
-</n>
-    {% for familiar in familiares %}
-        {{familiar.tipo}}
-    {% endfor %}
-</n>
-</n>
-    {% for especial in especiales %}
-        {{especial.nombre}}
-    {% endfor %}
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center mx-auto ">
+            <ul class="nav nav-pills mb-4">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-informacion-tab" data-bs-toggle="pill" data-bs-target="#pills-informacion" type="button" role="tab" aria-controls="pills-informacion" aria-selected="true">Información general</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-tipo-tab" data-bs-toggle="pill" data-bs-target="#pills-tipo" type="button" role="tab" aria-controls="pills-tipo" aria-selected="false">Tipos de compañeros animales</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-nivel-tab" data-bs-toggle="pill" data-bs-target="#pills-nivel" type="button" role="tab" aria-controls="pills-nivel" aria-selected="false">Evolución por niveles</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane show in active" id="pills-informacion" role="tabpanel" aria-labelledby="pills-informacion-tab">
+            <h5>Habilidades de los compañeros animales</h5>
+            <p>Los compañeros animales pueden tener rangos en cualquiera de las siguientes habilidades: acrobacias*, trepar*, escapismo, volar*, intimidar, percepción*, sigilo*, supervivencia y nadar*. Todas las habilidades marcadas con un (*) son habilidades de clase para los compañeros animales.</p>
+            <h5 class="mt-3">Especiales</h5>
+            {% for especial in especiales %}
+            <h6 class="d-inline">{{especial.nombre}}: </h6>
+            <p class="d-inline">{{especial.descripcion}}</p>
+            <br>
+            {% endfor %}
+            <h5 class="mt-4">Dotes de los compañeros animales</h5>
+            <p>Los compañeros animales pueden seleccionar dotes de la siguiente lista: acrobático, aguante, ataque elástico, ataque poderoso, atlético, competencia con armadura (ligera, intermedia y pesada), correr, dureza, duro de pelar, maniobras ágiles, lucha a ciegas, reflejos de combate, esquiva, gran fortaleza, embestida mejorada, iniciativa mejorada, arrollar mejorado, voluntad de hierro, reflejos rápidos, movilidad, poderío intimidante y sigiloso.</p>
+        </div>
+        <div class="tab-pane fade" id="pills-tipo" role="tabpanel" aria-labelledby="pills-tipo-tab">
+            {% for ca in companeros_animales_por_tipo %}
+            <h5 class="mt-4">{{ca.tipo}}</h5>
+            <h6 class="d-inline">Tamaño: </h6>
+            <p class="d-inline">{{ca.tamano}};</p>
+            <h6 class="d-inline">Velocidad: </h6>
+            <p class="d-inline">{{ca.velocidad}};</p>
+            <h6 class="d-inline">CA: </h6>
+            <p class="d-inline">{{ca.ca}};</p>
+            <h6 class="d-inline">Ataque: </h6>
+            <p class="d-inline">{{ca.ataque}};</p>
+            <h6 class="d-inline">Fuerza: </h6>
+            <p class="d-inline">{{ca.fuerza}};</p>
+            <h6 class="d-inline">Destreza: </h6>
+            <p class="d-inline">{{ca.destreza}};</p>
+            <h6 class="d-inline">Constitución: </h6>
+            <p class="d-inline">{{ca.constitucion}};</p>
+            <h6 class="d-inline">Inteligencia: </h6>
+            <p class="d-inline">{{ca.inteligencia}};</p>
+            <h6 class="d-inline">Sabiduría: </h6>
+            <p class="d-inline">{{ca.sabiduria}};</p>
+            <h6 class="d-inline">Carisma: </h6>
+            <p class="d-inline">{{ca.carisma}};</p>
+            {% if ca.especiales.all %}
+            <h6 class="d-inline">Cualidades especiales: </h6>
+            {% for e in ca.especiales.all %}
+            <p class="d-inline">{{e.nombre}};</p>
+            {% endfor %}
+            {% endif %}
+            {% if ca.nivel_cambio != None %}
+            <h6 class="d-inline">Mejora a nivel </h6>
+            <p class="d-inline">{{ca.nivel_cambio}}.</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="tab-pane fade" id="pills-nivel" role="tabpanel" aria-labelledby="pills-nivel-tab">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <h6>Nivel</h6>
+                  </div>
+                  <div class="col d-flex justify-content-center">
+                      <h6>DG</h6>
+                  </div>
+                  <div class="col d-flex justify-content-center">
+                    <h6>At base</h6>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <h6>Fort</h6>
+                  </div>
+                <div class="col d-flex justify-content-center">
+                    <h6>Ref</h6>
+                  </div>
+                  <div class="col d-flex justify-content-center">
+                      <h6>Vol</h6>
+                  </div>
+                  <div class="col d-flex justify-content-center">
+                    <h6>Num dotes</h6>
+                 </div>
+                  <div class="col d-flex justify-content-center">
+                    <h6>Bonif Arm.</h6>
+                </div>
+                  <div class="col d-flex justify-content-center">
+                    <h6>Bonif Fue/Des</h6>
+                </div>
+                  <div class="col d-flex justify-content-center">
+                    <h6>Trucos adic</h6>
+                </div>
+            </div>
+            {% for ca in companeros_animales_por_nivel %}
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <p>{{ca.nivel}}</p>
+                  </div>
+                  <div class="col d-flex justify-content-center">
+                      <p>{{ca.dados_de_golpe}}</p>
+                  </div>
+                  <div class="col d-flex justify-content-center">
+                    <p>{{ca.ataque_base}}</p>
+                </div>
+                  <div class="col d-flex justify-content-center">
+                    <p>+{{ca.fortaleza}}</p>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <p>+{{ca.reflejos}}</p>
+                  </div>
+                  <div class="col d-flex justify-content-center">
+                      <p>+{{ca.voluntad}}</p>
+                  </div>
+                <div class="col d-flex justify-content-center">
+                    <p>{{ca.numero_dotes}}</p>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <p>+{{ca.ca}}</p>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <p>+{{ca.fuerza}}/+{{ca.destreza}}</p>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <p>{{ca.numero_trucos}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock %}
