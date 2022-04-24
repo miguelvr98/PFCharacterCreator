@@ -43,7 +43,9 @@
                             {{formulario_paso_3.nombre}}
                                 <div class="tab-pane show in active" id="pills-dotes" role="tabpanel" aria-labelledby="pills-dotes-tab">
                                     <div class="text-center">Dotes</div>
-                                    {{formulario_paso_3.dotes}}
+                                    {% for field in formulario_paso_3.dotes%}
+                                    {{field}}
+                                    {% endfor %}
                                 </div>
                                 <div class="tab-pane fade" id="pills-habilidades" role="tabpanel" aria-labelledby="pills-habilidades-tab">
                                     <div class="text-center">Habilidades</div>

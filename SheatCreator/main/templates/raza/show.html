@@ -1,30 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-    <div class="text-center">
-        <h1>{{raza.raza}}</h5>
-    </div>
-</div>
-    <div class="container">
+    <h2 class="text-center">{{raza.raza}}</h2>
+    <h5 class="text-center mt-4 mb-3">Descripción y bonificaciones de la raza</h5>
     <div class="row">
         <div class="col">
-        </div>
-        <div class="col-lg-9 text-center">
-            <h4>Descripción</h5>
+            {% for br in raza.bonificaciones_raza.all %}
+            <h6 class="d-inline">{{br.nombre}}: </h6>
+            <p class="d-inline">{{br.descripcion}}</p>
+            <br>
+            <br>
+            {% endfor %}
         </div>
     </div>
-    </div>
-</div>
-    <div class="container">
-    {% for br in bonificaciones_raza %}
-    <div class="row">
-        <div class="col align-self-center">
-            <p>{{br.nombre}}</p>
-        </div>
-        <div class="col-lg-7 align-self-center">
-            <p class="align-text-middle">{{br.descripcion}}</p>
-        </div>  
-    </div>
-    {% endfor %}
 </div>
 {% endblock %}

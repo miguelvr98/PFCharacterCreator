@@ -242,14 +242,46 @@
                     {% endfor %}
                 </div>
                 {% endif %}
-                <div class="mt-2 d-flex justify-content-center">
-                    {% if personaje.perfil == perfil %}
+                <div class="row mt-2 d-flex justify-content-center">
+                {% if personaje.perfil == perfil %}
+                    <div class="col-sm-3 d-flex justify-content-center">
                         {% if personaje.es_publico == True %}
                             <a href="/personaje/privado/{{personaje.pk}}" class="btn btn-md btn-dark ">Cambiar a privado</a>
                         {% else %}
                             <a href="/personaje/publico/{{personaje.pk}}" class="btn btn-md btn-dark ">Cambiar a público</a>
                         {% endif %}
+                    </div>
+                    {% if not personaje.companero_animal_personaje.all %}
+                        {% if personaje.clase.clase == 'Druida' %}
+                            <div class="col-sm-3 d-flex justify-content-center">
+                                <a href="/personaje/companero_animal/asignar/{{personaje.pk}}" class="btn btn-md btn-dark ">Asignar compañero animal</a>
+                            </div>
+                        {% endif %}
+                        {% if personaje.clase.clase == 'Explorador' and personaje.clase.nivel == 4 %}
+                            <div class="col-sm-3 d-flex justify-content-center">
+                                <a href="/personaje/companero_animal/asignar/{{personaje.pk}}" class="btn btn-md btn-dark ">Asignar compañero animal</a>
+                            </div>
+                        {% endif %}
                     {% endif %}
+                    {% if personaje.companero_animal_personaje.all and personaje.nivel < 20%}
+                        <div class="col-sm-3 d-flex justify-content-center">
+                            <a href="/personaje/subir_nivel/{{personaje.pk}}" class="btn btn-md btn-dark ">Subir de nivel</a>
+                        </div>
+                    {% endif %}
+                    {% if personaje.clase.nivel < 20 and personaje.clase.clase != 'Druida' and personaje.clase.clase != 'Explorador' %}
+                        <div class="col-sm-3 d-flex justify-content-center">
+                            <a href="/personaje/subir_nivel/{{personaje.pk}}" class="btn btn-md btn-dark ">Subir de nivel</a>
+                        </div>
+                    {% endif %}
+                    {% if personaje.clase.clase == 'Explorador' and personaje.nivel < 4%}
+                        <div class="col-sm-3 d-flex justify-content-center">
+                            <a href="/personaje/subir_nivel/{{personaje.pk}}" class="btn btn-md btn-dark ">Subir de nivel</a>
+                        </div>
+                    {% endif %}
+                    <div class="col-sm-3 d-flex justify-content-center">
+                        <a href="/personaje/delete/{{personaje.pk}}" class="btn btn-md btn-dark ">Eliminar personaje</a>
+                    </div>
+                {% endif %}
                 </div>
             </div>
         </div>
@@ -333,7 +365,7 @@
             <br>
             <h6 class="d-inline">Linaje arcano: </h6>
             <p class="d-inline">{{personaje.linaje.linaje_arcano}}</p>
-            <h5 class="d-flex justify-content-center">Poderes de linaje</h5>
+            <h5 class="d-flex justify-content-center mt-4">Poderes de linaje</h5>
             {% for poder in personaje.linaje.poderes.all %}
             <h6 class="d-inline">{{poder.nombre}}: </h6>
             <p class="d-inline">{{poder.descripcion}}</p>

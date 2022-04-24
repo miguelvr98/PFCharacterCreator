@@ -1,18 +1,174 @@
 {% extends 'base.html' %}
 {% block content %}
-    {{perfil.nickname}}
-
-    <div class="bottom-footer">
+<div class="container">
+  <h5 class="text-center">{{perfil.nickname}}</h5>
+  <div class="row">
+    <div class="col d-flex justify-content-center mx-auto ">
+      <ul class="nav nav-pills">
+        {% if personajes %}
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-personajes-tab" data-bs-toggle="pill" data-bs-target="#pills-personajes" type="button" role="tab" aria-controls="pills-personajes" aria-selected="true">Personajes</button>
+      </li>
+      {% endif %}
+      {% if dotes %}
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-dotes-tab" data-bs-toggle="pill" data-bs-target="#pills-dotes" type="button" role="tab" aria-controls="pills-dotes" aria-selected="false">Dotes</button>
+    </li>
+      {% endif %}
+      </ul>
+    </div>
+  </div>
+  <div class="tab-content" id="pills-tabContent">
+  {% if personajes %}
+    <div class="tab-pane show in active" id="pills-personajes" role="tabpanel" aria-labelledby="pills-personajes-tab">
+      <div class="row mt-4">
+        <div class="col">
+          <div class="row d-flex justify-content-center mx-auto mb-1">
+            <div class="col-lg-1 d-flex justify-content-center">
+              <p>Nombre</p>
+            </div>
+            <div class="col-lg-1 d-flex justify-content-center">
+                <p>Raza</p>
+            </div>
+            <div class="col-lg-1 d-flex justify-content-center">
+              <p>Clase</p>
+          </div>
+            <div class="col-lg-1 d-flex justify-content-center">
+              <p>Nivel</p>
+          </div>
+        </div>
+        {% for p in personajes %}
+        <div class="row d-flex justify-content-center mx-auto mb-1">
+          <div class="col-lg-1 d-flex justify-content-center">
+            <a href="/personaje/show/{{personaje.pk}}">{{p.nombre}}</a>
+          </div>
+          <div class="col-lg-1 d-flex justify-content-center">
+              <p class="align-text-middle">{{p.raza.raza}}</p>
+          </div>
+          <div class="col-lg-1 d-flex justify-content-center">
+            <p class="align-text-middle">{{p.clase.clase}}</p>
+        </div>
+          <div class="col-lg-1 d-flex justify-content-center">
+            <p class="align-text-middle">{{p.nivel}}</p>
+        </div>
+        </div>
+          {% endfor %}
+      </div>
+      </div>
         <div class="container">
-          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-
-    <div class="display-6 text-center">Clases favoritas</div>
-      <br>
-      <div class="d-flex justify-content-center">
-      <canvas id="myChart" width="300" height="300"></canvas>
+          <ul class="pagination d-flex justify-content-center">
+            {% if personajes.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page_personaje={{personajes.previous_page_number}}">Anterior</a></li>
+            {% endif %}
+            {% for num in personajes.paginator.page_range %}
+            {% ifequal num personajes.number %}
+            <li class="page-item active">
+              <span class="page-link">
+                {{ num }}
+                <span class="sr-only">(current)</span>
+              </span>
+            </li>
+            {% else %}
+            <li class="page-item"><a class="page-link" href="?page_personaje={{ num }}">{{ num }}</a></button></li>
+            {% endifequal %}
+            {% endfor %}
+            {% if personajes.has_next %}
+            <li class="page-item"><a class="page-link" href="?page_personaje={{personajes.next_page_number }}">Siguiente</a></li>
+            {% endif %}
+          </ul>
+          {% endif %}
+        </div>
+    </div>
+  {% if dotes %}
+  <div class="tab-pane fade" id="pills-dotes" role="tabpanel" aria-labelledby="pills-dotes-tab">
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-lg-2">
+            <p>Nombre</p>
+          </div>
+          <div class="col-lg-1">
+              <p>Tipo</p>
+          </div>
+          <div class="col">
+            <p>Descripción</p>
+        </div>
+      </div>
+        {% for d in dotes %}
+        <div class="row">
+          <div class="col-lg-2 align-self-center">
+            <a href="/dote/show/{{d.pk}}">{{d.nombre}}</a>
+          </div>
+          <div class="col-lg-1 align-self-center">
+              <p class="align-text-middle">{{d.tipo}}</p>
+          </div>
+          <div class="col">
+            <p>{{d.descripcion}}</p>
+        </div>  
+      </div>
+        {% endfor %}
       </div>
     </div>
+    <div class="container">
+      <ul class="pagination d-flex justify-content-center">
+        {% if dotes.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page_dote={{dotes.previous_page_number }}">Anterior</a></li>
+        {% endif %}
+        {% for num in dotes.paginator.page_range %}
+        {% ifequal num dotes.number %}
+        <li class="page-item active">
+          <span class="page-link">
+            {{ num }}
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="?page_dote={{ num }}">{{ num }}</a></button></li>
+        {% endifequal %}
+        {% endfor %}
+        {% if dotes.has_next %}
+        <li class="page-item"><a class="page-link" href="?page_dote={{dotes.next_page_number }}">Siguiente</a></li>
+        {% endif %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
 </div>
+</div>
+
+{% if var == True %}
+<div class="container">
+<div class="row d-flex justify-content-center mt-4">
+  <div class="col-sm-2 d-flex justify-content-center">
+    <a href="/personaje/create/" class="btn btn-md btn-dark ">Crear personaje</a>
+  </div>
+  <div class="col-sm-2">
+    <a href="/dote/create/" class="btn btn-md btn-dark ">Crear dote</a>
+  </div>
+  <div class="col-sm-2">
+    <a href="/perfil/edit/" class="btn btn-md btn-dark ">Editar nickname</a>
+  </div>
+  <div class="col-sm-2">
+    <a href="/perfil/edit/usuario/" class="btn btn-md btn-dark ">Cambiar usuario</a>
+  </div>
+  <div class="col-sm-2">
+    <a href="/perfil/edit/contrasena/" class="btn btn-md btn-dark ">Cambiar contraseña</a>
+  </div>
+  <div class="col-sm-2">
+    <a href="/perfil/delete/" class="btn btn-md btn-dark ">Borrar cuenta</a>
+  </div>
+</div>
+</div>
+{% endif %}
+
+<div class="container">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <h2 class="text-center mb-2 mt-4">Clases favoritas</div>
+      <div class="d-flex justify-content-center">
+      <canvas id="myChart" width="700" height="225"></canvas>
+    </div>
+  </div>
       <script>
         var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {

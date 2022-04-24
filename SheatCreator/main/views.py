@@ -202,6 +202,7 @@ def mostrar_raza(request, pk):
 
 def mostrar_dote(request, pk):
     dote = Dote.objects.get(pk=pk)
+    perfil = usuario_logueado(request)
     if dote.prerrequisito_dote.all() and dote.prerrequisito_raza != None:
         prerrequisito_dote = dote.prerrequisito_dote.all()
         prerrequisito_raza = dote.prerrequisito_raza
@@ -210,7 +211,7 @@ def mostrar_dote(request, pk):
         prerrequisito_dote = dote.prerrequisito_dote.all()
         return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_dote':prerrequisito_dote})
     prerrequisito_raza = dote.prerrequisito_raza
-    return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_raza':prerrequisito_raza})
+    return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_raza':prerrequisito_raza, 'perfil':perfil})
 
 def mostrar_clase(request, pk):
     try:
@@ -293,7 +294,6 @@ def mostrar_objeto(request, pk):
     except:
         return redirect('error_url')
 
-@login_required(login_url="/login/")
 def mostrar_personaje(request, pk):
     personaje = Personaje.objects.get(pk=pk)
     perfil = usuario_logueado(request)
@@ -414,32 +414,45 @@ def eliminar_dote(request, pk):
 
 @login_required(login_url="/login/")
 def mostrar_perfil_propio(request):
-    try:
-        perfil = usuario_logueado(request)
-        personajes = Personaje.objects.all().filter(perfil=perfil)
-        num_barbaro = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Bárbaro").count()
-        num_bardo = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Bardo").count()
-        num_clerigo = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Clérigo").count()
-        num_druida = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Druida").count()
-        num_explorador = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Explorador").count()
-        num_guerrero = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Guerrero").count()
-        num_hechicero = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Hechicero").count()
-        num_mago = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Mago").count()
-        num_monje = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Monje").count()
-        num_paladin = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Paladín").count()
-        num_picaro = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Pícaro").count()
-        return render(request, 'perfil/show.html', {'perfil':perfil, 'personajes':personajes, 'num_barbaro':num_barbaro,
+    perfil = usuario_logueado(request)
+    personajes = Personaje.objects.all().filter(perfil=perfil)
+    paginator_personajes = Paginator(personajes, 5)
+    page_number_personajes = request.GET.get('page_personaje')
+    page_obj_personajes = paginator_personajes.get_page(page_number_personajes)
+    dotes = Dote.objects.all().filter(creador=perfil)
+    paginator_dotes = Paginator(dotes, 5)
+    page_number_dotes = request.GET.get('page_dote')
+    page_obj_dotes = paginator_dotes.get_page(page_number_dotes)
+    var=True
+    num_barbaro = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Bárbaro").count()
+    num_bardo = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Bardo").count()
+    num_clerigo = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Clérigo").count()
+    num_druida = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Druida").count()
+    num_explorador = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Explorador").count()
+    num_guerrero = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Guerrero").count()
+    num_hechicero = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Hechicero").count()
+    num_mago = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Mago").count()
+    num_monje = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Monje").count()
+    num_paladin = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Paladín").count()
+    num_picaro = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Pícaro").count()
+    return render(request, 'perfil/show.html', {'perfil':perfil, 'personajes':page_obj_personajes, 'num_barbaro':num_barbaro,
          'num_bardo':num_bardo, 'num_clerigo':num_clerigo, 'num_druida':num_druida, 'num_explorador':num_explorador,
           'num_guerrero':num_guerrero, 'num_hechicero':num_hechicero, 'num_mago':num_mago, 'num_monje':num_monje,
-          'num_paladin':num_paladin, 'num_picaro':num_picaro})
-    except:
-        return redirect('error_url')
+          'num_paladin':num_paladin, 'num_picaro':num_picaro, 'dotes':page_obj_dotes, 'var':var})
     
 @login_required(login_url="/login/")
 def mostrar_perfil(request, pk):
     try:
         perfil = Perfil.objects.get(pk=pk)
         personajes = Personaje.objects.all().filter(perfil=perfil).filter(es_publico=True)
+        paginator_personajes = Paginator(personajes, 5)
+        page_number_personajes = request.GET.get('page_personaje')
+        page_obj_personajes = paginator_personajes.get_page(page_number_personajes)
+        dotes = Dote.objects.all().filter(creador=perfil)
+        paginator_dotes = Paginator(dotes, 5)
+        page_number_dotes = request.GET.get('page_dote')
+        page_obj_dotes = paginator_dotes.get_page(page_number_dotes)
+        var=False
         num_barbaro = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Bárbaro").count()
         num_bardo = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Bardo").count()
         num_clerigo = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Clérigo").count()
@@ -451,10 +464,10 @@ def mostrar_perfil(request, pk):
         num_monje = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Monje").count()
         num_paladin = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Paladín").count()
         num_picaro = Personaje.objects.all().filter(perfil=perfil).filter(clase__clase="Pícaro").count()
-        return render(request, 'perfil/show.html', {'perfil':perfil, 'personajes':personajes, 'num_barbaro':num_barbaro,
+        return render(request, 'perfil/show.html', {'perfil':perfil, 'personajes':page_obj_personajes, 'num_barbaro':num_barbaro,
          'num_bardo':num_bardo, 'num_clerigo':num_clerigo, 'num_druida':num_druida, 'num_explorador':num_explorador,
           'num_guerrero':num_guerrero, 'num_hechicero':num_hechicero, 'num_mago':num_mago, 'num_monje':num_monje,
-          'num_paladin':num_paladin, 'num_picaro':num_picaro})
+          'num_paladin':num_paladin, 'num_picaro':num_picaro, 'dotes':page_obj_dotes, 'var':var})
     except:
         return redirect('error_url')
 
@@ -520,7 +533,7 @@ def eliminar_usuario(request):
 
 def buscar_dote(request):
     try:
-        dotes = Dote.objects.all().filter(creador=None)
+        dotes = Dote.objects.all()
         if request.method == 'POST':
             var = request.POST.get('var')
             if var == 'True':
@@ -753,8 +766,8 @@ def crear_personaje_3(request):
                 conjuros_conocidos = conjuros_conocidos_0 | conjuros_conocidos_1
                 if not conjuros_conocidos and clase.conjuros:
                     conjuros_conocidos = clase.conjuros
-                guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma, dotes, linaje, habilidades, idiomas, conjuros_conocidos)
-                return redirect('listar_personajes_propios_url')
+                personaje = guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma, dotes, linaje, habilidades, idiomas, conjuros_conocidos)
+                return redirect('/personaje/show/'+str(personaje.pk))
         return render(request, 'personaje/paso3.html', {'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion, 'numero_idiomas_eleccion':numero_idiomas_eleccion, 'clase_nivel_0':clase_nivel_0, 'cantidad_conjuros_conocidos_0_eleccion':cantidad_conjuros_conocidos_0_eleccion, 'cantidad_conjuros_conocidos_1_eleccion':cantidad_conjuros_conocidos_1_eleccion})
     except:
         return redirect('error_url')
@@ -786,6 +799,7 @@ def guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destre
             personaje.puntuaciones_habilidad.add(ph)
     personaje.clase = clase
     personaje.save()
+    return personaje
 
 #Pensar si quitar los familiares (no vale la pena tenerlos para lo poco que hacen ya) (de momento están quitados)
 @login_required(login_url="/login/")
@@ -809,7 +823,7 @@ def asignar_companero_animal(request, pk):
                 habilidades = formulario.cleaned_data.get('habilidades')
                 companero_animal_tipo = formulario.cleaned_data.get('companero_animal_tipo')
                 guardar_companero_animal(personaje, nombre, dotes, trucos, habilidades, companero_animal_tipo, companero_animal_nivel)
-                return redirect('listar_personajes_propios_url')
+                return redirect('/personaje/show/'+str(personaje.pk))
         else:
             formulario = CompaneroAnimalForm()
         return render(request, 'personaje/companero_animal/asignar.html', {'formulario':formulario, 'personaje':personaje, 'companero_animal_nivel':companero_animal_nivel})

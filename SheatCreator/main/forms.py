@@ -369,7 +369,7 @@ class PersonajeForm3(forms.Form):
         self.inteligencia = inteligencia
         queryset1 = Dote.objects.all().filter(prerrequisito_raza=raza)
         queryset2 = Dote.objects.all().filter(prerrequisito_raza=None).filter(nivel=0).filter(ataque_base__lte=self.clase.ataque_base_int).filter(prerrequisito_dote=None)
-        self.fields['dotes'] = forms.ModelMultipleChoiceField(queryset=(queryset1 | queryset2).distinct(), widget=forms.CheckboxSelectMultiple(), required=True)
+        self.fields['dotes'] = forms.ModelMultipleChoiceField(queryset=(queryset1 | queryset2).distinct(), widget=forms.CheckboxSelectMultiple(attrs={'class': ''}), required=True)
         self.fields['idiomas'] = forms.ModelMultipleChoiceField(queryset=raza.idiomas_eleccion, widget=forms.CheckboxSelectMultiple(), required=False)
         self.fields['conjuros_conocidos_0'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0), widget=forms.CheckboxSelectMultiple(), required=False)
         self.fields['conjuros_conocidos_1'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=1), widget=forms.CheckboxSelectMultiple(), required=False)
