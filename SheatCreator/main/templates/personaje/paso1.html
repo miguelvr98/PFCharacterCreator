@@ -17,19 +17,34 @@
                 <div class="px-2">
                     <form  role="form"  enctype="multipart/form-data" action="/personaje/create/" method="POST" id="upload-image-form"> 
                         {% csrf_token %}
-                        <div class="text-center">Raza</div>
+                        <h3 class="text-center">Raza</h3>
+                        <div class="d-flex justify-content-center mt-3">
                             {{formulario.raza}}
                             <br>
-                        <div class="text-center">Clase</div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-2">
+                            <a  href="/raza/list/" target="_blank">Listado de razas</a>
+                        </div>
+                        </div>
+                        <h3 class="text-center mt-4">Clase</h3>
+                        <div class="d-flex justify-content-center mt-3">
                             {{formulario.clase}}
                             <br>
-                        <div class="text-center">Tipo de campaña</div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-2">
+                            <a  href="/clase/list/" target="_blank">Listado de clases</a>
+                        </div>
+                        <h3 class="text-center mt-4">Tipo de campaña</h3>
+                        <div class="d-flex justify-content-center mt-3">
                             {{formulario.tipo}}
                             <br>
-                        <div class="text-center">Alineamiento</div>
+                        </div>
+                        <h3 class="text-center mt-4">Alineamiento</h3>
+                        <div class="d-flex justify-content-center mt-3">
                             {{formulario.alineamiento}}
                             <br>
-                        <div class="text-center">
+                        </div>
+                        <div class="text-center mt-4">
                             <button type='submit' class="btn btn-primary btn-dark">Siguiente</button>
                         </div>
                     </form>

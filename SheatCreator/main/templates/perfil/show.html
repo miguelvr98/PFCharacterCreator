@@ -139,12 +139,6 @@
 {% if var == True %}
 <div class="container">
 <div class="row d-flex justify-content-center mt-4">
-  <div class="col-sm-2 d-flex justify-content-center">
-    <a href="/personaje/create/" class="btn btn-md btn-dark ">Crear personaje</a>
-  </div>
-  <div class="col-sm-2">
-    <a href="/dote/create/" class="btn btn-md btn-dark ">Crear dote</a>
-  </div>
   <div class="col-sm-2">
     <a href="/perfil/edit/" class="btn btn-md btn-dark ">Editar nickname</a>
   </div>
@@ -160,7 +154,7 @@
 </div>
 </div>
 {% endif %}
-
+{% if perfil.personaje_ptr.all %}
 <div class="container">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
@@ -169,6 +163,7 @@
       <canvas id="myChart" width="700" height="225"></canvas>
     </div>
   </div>
+{% endif %}
       <script>
         var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {

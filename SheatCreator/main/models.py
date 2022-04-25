@@ -248,6 +248,7 @@ class Raza(models.Model):
     carisma = models.IntegerField(verbose_name='Carisma', default=0)
     idiomas_conocidos = models.TextField(verbose_name='Idiomas conocidos', null=True)
     idiomas_eleccion = models.ManyToManyField('Idioma')
+    idiomas_iniciales = models.ManyToManyField('Idioma',related_name='idiomas_iniciales')
     bonificaciones_raza = models.ManyToManyField('BonificacionRaza')
 
     def __str__(self):

@@ -16,6 +16,16 @@
         <input type="hidden" id="var" name="var" value={{buscador.var}}>
     </form>
 </div>
+{% if buscador.var == True %}
+<div class="container">
+<div class="row d-flex justify-content-center mt-4 mb-4">
+  <div class="col-sm-2 d-flex justify-content-center">
+    <a href="/personaje/create/" class="btn btn-md btn-dark ">Crear personaje</a>
+  </div>
+</div>
+</div>
+{% endif %}
+{% if personajes %}
 <div class="container">
   <div class="row d-flex justify-content-center mx-auto mb-1">
       <div class="col-lg-1 d-flex justify-content-center">
@@ -58,6 +68,7 @@
   </div>
   {% endfor %}
 </div>
+{% endif %}
     {% if personajes %}
     <div class="container">
       <ul class="pagination d-flex justify-content-center">

@@ -831,6 +831,10 @@
             <object pk="19"></object>
             <object pk="21"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="9"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="2"></object>
@@ -859,6 +863,10 @@
             <object pk="21"></object>
             <object pk="20"></object>
             <object pk="16"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="10"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="9"></object>
@@ -891,6 +899,11 @@
             <object pk="11"></object>
             <object pk="18"></object>
             <object pk="21"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="13"></object>
+            <object pk="19"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="20"></object>
@@ -943,6 +956,9 @@
             <object pk="30"></object>
             <object pk="31"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="30"></object>
             <object pk="2"></object>
@@ -966,6 +982,10 @@
             <object pk="10"></object>
             <object pk="13"></object>
             <object pk="20"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="17"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="34"></object>
@@ -1015,6 +1035,10 @@
             <object pk="30"></object>
             <object pk="31"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="9"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="40"></object>
             <object pk="2"></object>
@@ -1040,6 +1064,10 @@
             <object pk="11"></object>
             <object pk="12"></object>
             <object pk="21"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="18"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="45"></object>
@@ -1068,6 +1096,10 @@
             <object pk="13"></object>
             <object pk="17"></object>
             <object pk="19"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="5"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="51"></object>
@@ -1099,6 +1131,10 @@
             <object pk="13"></object>
             <object pk="21"></object>
             <object pk="22"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="9"></object>
+            <object pk="16"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="57"></object>
@@ -1132,6 +1168,11 @@
             <object pk="20"></object>
             <object pk="21"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="10"></object>
+            <object pk="16"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="65"></object>
             <object pk="2"></object>
@@ -1164,6 +1205,10 @@
             <object pk="20"></object>
             <object pk="21"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="13"></object>
+            <object pk="16"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="70"></object>
             <object pk="21"></object>
@@ -1194,6 +1239,10 @@
             <object pk="15"></object>
             <object pk="18"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="21"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="77"></object>
             <object pk="2"></object>
@@ -1219,6 +1268,10 @@
             <object pk="12"></object>
             <object pk="16"></object>
             <object pk="21"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="18"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="81"></object>
@@ -1269,6 +1322,10 @@
             <object pk="30"></object>
             <object pk="31"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="25"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="85"></object>
             <object pk="2"></object>
@@ -1298,6 +1355,10 @@
             <object pk="24"></object>
             <object pk="19"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="3"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="91"></object>
             <object pk="2"></object>
@@ -1325,6 +1386,9 @@
             <object pk="17"></object>
             <object pk="15"></object>
             <object pk="18"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="51"></object>
@@ -1357,6 +1421,9 @@
             <object pk="17"></object>
             <object pk="18"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="21"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="100"></object>
             <object pk="21"></object>
@@ -1382,6 +1449,9 @@
             <object pk="7"></object>
             <object pk="14"></object>
             <object pk="20"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="103"></object>
@@ -1436,6 +1506,9 @@
             <object pk="30"></object>
             <object pk="31"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="109"></object>
             <object pk="2"></object>
@@ -1468,6 +1541,10 @@
             <object pk="17"></object>
             <object pk="20"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="14"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="115"></object>
             <object pk="2"></object>
@@ -1495,6 +1572,10 @@
             <object pk="13"></object>
             <object pk="21"></object>
             <object pk="19"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="26"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="120"></object>
@@ -1526,6 +1607,10 @@
             <object pk="14"></object>
             <object pk="16"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="20"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="126"></object>
             <object pk="2"></object>
@@ -1554,6 +1639,10 @@
             <object pk="17"></object>
             <object pk="14"></object>
             <object pk="20"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="4"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="131"></object>
@@ -1584,6 +1673,10 @@
             <object pk="14"></object>
             <object pk="20"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="3"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="136"></object>
             <object pk="2"></object>
@@ -1613,6 +1706,10 @@
             <object pk="17"></object>
             <object pk="18"></object>
             <object pk="19"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="28"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="142"></object>
@@ -1645,6 +1742,10 @@
             <object pk="18"></object>
             <object pk="16"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="29"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="147"></object>
             <object pk="21"></object>
@@ -1671,6 +1772,9 @@
             <object pk="7"></object>
             <object pk="14"></object>
             <object pk="20"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="152"></object>
@@ -1700,6 +1804,10 @@
             <object pk="21"></object>
             <object pk="19"></object>
         </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="30"></object>
+        </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="157"></object>
             <object pk="2"></object>
@@ -1727,6 +1835,10 @@
             <object pk="21"></object>
             <object pk="19"></object>
             <object pk="16"></object>
+        </field>
+        <field to="main.idioma" name="idiomas_iniciales" rel="ManyToManyRel">
+            <object pk="6"></object>
+            <object pk="31"></object>
         </field>
         <field to="main.bonificacionraza" name="bonificaciones_raza" rel="ManyToManyRel">
             <object pk="162"></object>

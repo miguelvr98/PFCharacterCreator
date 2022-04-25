@@ -407,7 +407,8 @@ def eliminar_dote(request, pk):
         perfil = usuario_logueado(request)
         dote = Dote.objects.get(pk=pk)
         assert dote.creador == perfil
-        dote.delete()
+        dote.creador = None
+        dote.save()
         return redirect('/dote/perfil/list')
     except:
         return redirect('error_url')
@@ -788,6 +789,8 @@ def guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destre
         personaje.linaje = linaje_save
     for dote in dotes:
         personaje.dotes.add(dote)
+    for idioma in raza.idiomas_iniciales.all():
+        personaje.idiomas.add(idioma)
     if idiomas:
         for idioma in idiomas:
             personaje.idiomas.add(idioma)

@@ -1,52 +1,151 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="bottom-footer">
     <div class="container">
       <div class="row">
-          <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto ">
+          <div class="col">
                 <h1 class="display-4 py-2 text-center">Crear personaje</h1>
+                <p class="text-center mt-3">En la tabla de la izquierda están relacionadas la cantidad de puntos de características (Car) con sus costes (Cos) correspondientes</p>
                 {% if formulario_paso_2.errors %}
                 <div class="alert alert-danger" role="alert">
-                    Los puntos de característica seleccionados no coinciden con el tipo de campaña
+                    Los puntos de característica seleccionados no coinciden con el tipo de campaña (los puntos restantes deben ser igual a 0)
                 </div>
                 {% endif %}
-                <div class="px-2">
-                    <form  role="form"  enctype="multipart/form-data" action="/personaje/create/2/" method="POST" id="upload-image-form"> 
-                        {% csrf_token %}
-                        <div class="text-center">Fuerza</div>
-                            {{formulario_paso_2.fuerza}}
-                            <br>
-                        <div class="text-center">Destreza</div>
-                            {{formulario_paso_2.destreza}}
-                            <br>
-                        <div class="text-center">Constitución</div>
-                            {{formulario_paso_2.constitucion}}
-                            <br>
-                        <div class="text-center">Inteligencia</div>
-                            {{formulario_paso_2.inteligencia}}
-                            <br>
-                        <div class="text-center">Sabiduría</div>
-                            {{formulario_paso_2.sabiduria}}
-                            <br>
-                        <div class="text-center">Carisma</div>
-                            {{formulario_paso_2.carisma}}
-                            <br>
-                        {% if raza.raza == 'Humano' or raza.raza == 'Semielfo' or raza.raza == 'Semiorco' %}
-                        <div class="text-center">Elección de característica</div>
-                            {{formulario_paso_2.caracteristica_choice}}
-                            <br>
-                        {% endif %}
-                        <input type="hidden" id="puntos_a_elegir" name="puntos_a_elegir" value={{puntos_a_elegir}}>
-                        <input type="hidden" id="raza" name="raza" value={{raza}}>
-                        <input type="hidden" id="clase" name="clase" value={{clase}}>
-                        <input type="hidden" id="alineamiento" name="alineamiento" value={{alineamiento}}>
-                        <div class="text-center">
-                            <button type='submit' class="btn btn-primary btn-dark">Siguiente</button>
+                <form  role="form"  enctype="multipart/form-data" action="/personaje/create/2/" method="POST" id="upload-image-form">
+                <div class="row d-flex">
+                    <div class="col-lg-5 ml-5 mr-5 d-flex align-items-center justify-content-end">
+                        <div class="row">
+                            <div class="col">
+                                <h6 class="text-center">Car</h6>
+                                <p class="text-center">7</p>
+                                <p class="text-center">8</p>
+                                <p class="text-center">9</p>
+                                <p class="text-center">10</p>
+                                <p class="text-center">11</p>
+                                <p class="text-center">12</p>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-center">Cos</h6>
+                                <p class="text-center">-4</p>
+                                <p class="text-center">-2</p>
+                                <p class="text-center">-1</p>
+                                <p class="text-center">0</p>
+                                <p class="text-center">1</p>
+                                <p class="text-center">2</p>
+                            </div>
+                            <div class="col ml-2 mr-2">
+
+                            </div>
+                            <div class="col">
+                                <h6 class="text-center">Car</h6>
+                                <p class="text-center">13</p>
+                                <p class="text-center">14</p>
+                                <p class="text-center">15</p>
+                                <p class="text-center">16</p>
+                                <p class="text-center">17</p>
+                                <p class="text-center">18</p>
+                            </div>
+                            <div class="col">
+                                <h6 class="text-center">Cos</h6>
+                                <p class="text-center">3</p>
+                                <p class="text-center">5</p>
+                                <p class="text-center">7</p>
+                                <p class="text-center">10</p>
+                                <p class="text-center">13</p>
+                                <p class="text-center">17</p>
+                            </div>
                         </div>
-                    </form>
-              </div>
+                    </div>
+                    <div class="col-sm-1">
+
+                    </div>
+                    <div class="col align-items-center">
+                            {% csrf_token %}
+                            <div class="row mt-5">
+                                <div class="col-lg-3">
+                                    <h5 class="d-inline mb-3 w-auto text-center align-middle">Fuerza: </h5>
+                                </div>
+                                <div class="col-sm-auto">
+                                    {{formulario_paso_2.fuerza}}
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-3">
+                                    <h5 class="d-inline mb-3 w-auto text-center align-middle">Destreza: </h5>
+                                </div>
+                                <div class="col-sm-auto">
+                                    {{formulario_paso_2.destreza}}
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-3">
+                                    <h5 class="d-inline mb-3 w-auto text-center align-middle">Constitución: </h5>
+                                </div>
+                                <div class="col-sm-auto">
+                                    {{formulario_paso_2.constitucion}}
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-3">
+                                    <h5 class="d-inline mb-3 w-auto text-center align-middle">Inteligencia: </h5>
+                                </div>
+                                <div class="col-sm-auto">
+                                    {{formulario_paso_2.inteligencia}}
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-3">
+                                    <h5 class="d-inline mb-3 w-auto text-center align-middle">Sabiduría: </h5>
+                                </div>
+                                <div class="col-sm-auto">
+                                    {{formulario_paso_2.sabiduria}}
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-3">
+                                    <h5 class="d-inline mb-3 w-auto text-center align-middle">Carisma: </h5>
+                                </div>
+                                <div class="col-sm-auto">
+                                    {{formulario_paso_2.carisma}}
+                                </div>
+                            </div>
+                            <div class="row mt-3 mb-3 d-flex justify-content-center">
+                                <div class="col">
+                                    <h6 class="d-inline">Puntos restantes: </h6>
+                                    <p class="d-inline" id="id_puntosRestantes">{{puntos_a_elegir}}</p>
+                                </div>  
+                            </div>
+                            {% if raza.raza == 'Humano' or raza.raza == 'Semielfo' or raza.raza == 'Semiorco' %}
+                            <div class="row mt-3 mb-3 d-flex justify-content-center">
+                                <h5 class="text-center">Elección de característica</h5>
+                                {{formulario_paso_2.caracteristica_choice}}
+                                <br>
+                            </div>
+                            {% endif %}
+                            <input type="hidden" id="puntos_a_elegir" name="puntos_a_elegir" value={{puntos_a_elegir}}>
+                            <input type="hidden" id="raza" name="raza" value={{raza}}>
+                            <input type="hidden" id="clase" name="clase" value={{clase}}>
+                            <input type="hidden" id="alineamiento" name="alineamiento" value={{alineamiento}}>
+                    </div>
+                    <div class="text-center">
+                        <button type='submit' class="btn btn-primary btn-dark">Siguiente</button>
+                    </div>
+                </div>
+            </form>
           </div>
       </div>
     </div>
-</div>
+    <script>
+        var calcularPuntosRestantes = function(){
+            var dict = {7:-4, 8:-2, 9:-1, 10:0, 11:1, 12:2, 13:3, 14:5, 15:7, 16:10, 17:13, 18:17}
+            var puntos_a_elegir = document.getElementById("puntos_a_elegir").value;
+            var fuerza = document.getElementById("id_fuerza").value
+            var destreza = document.getElementById("id_destreza").value
+            var constitucion = document.getElementById("id_constitucion").value
+            var inteligencia = document.getElementById("id_inteligencia").value
+            var sabiduria = document.getElementById("id_sabiduria").value
+            var carisma = document.getElementById("id_carisma").value
+            var puntosRestantes = puntos_a_elegir - (dict[fuerza] + dict[destreza] + dict[constitucion] + dict[inteligencia] + dict[sabiduria] + dict[carisma])
+            document.getElementById('id_puntosRestantes').innerHTML = puntosRestantes
+        }
+    </script>
 {% endblock %}

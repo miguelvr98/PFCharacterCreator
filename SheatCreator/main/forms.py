@@ -166,8 +166,8 @@ class DoteForm(forms.ModelForm):
     nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
     descripcion = forms.CharField(label='Descripcon', required=True, widget=forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Descripción'}))
     tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
-    nivel = forms.IntegerField(label='Nivel', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Nivel', 'min':1, 'max':20}))
-    ataque_base = forms.IntegerField(label='Ataque base', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Ataque base', 'min':1, 'max':20}))
+    nivel = forms.IntegerField(label='Nivel', initial=1, required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Nivel', 'min':1, 'max':20}))
+    ataque_base = forms.IntegerField(label='Ataque base', initial=0, required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Ataque base', 'min':0, 'max':20}))
     fuerza = forms.IntegerField(label='Fuerza', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Fuerza', 'min':1}))
     destreza = forms.IntegerField(label='Destreza', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Destreza', 'min':1}))
     constitucion = forms.IntegerField(label='Constitucion', required=False, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Constitución', 'min':1}))
@@ -272,12 +272,12 @@ class PersonajeForm(forms.ModelForm):
     }
 
     #Este esta hecho por si no funciona el de models.
-    TIPO_CHOICES = (('Estándar', 'Estándar'), ('Alta fantasía', 'Alta fantasía'), ('Épica', 'Épica'), )
+    TIPO_CHOICES = (('Estándar', 'Estándar (15 puntos a repartir)'), ('Alta fantasía', 'Alta fantasía (20 puntos a repartir)'), ('Épica', 'Épica (25 puntos a repartir)'), )
     ALINEAMIENTO_CHOICES = (('LB', 'Legal bueno'), ('LN', 'Legal neutro'), ('LM', 'Legal maligno'), ('NB', 'Neutral bueno'), ('N', 'Neutral'), ('NM', 'Neutral maligno'), ('CB', 'Caótico bueno'), ('CN', 'Caótico neutral'), ('CM', 'Caótico maligno'), )
 
     tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Tipo'}))
-    raza = forms.ModelChoiceField(queryset=Raza.objects, widget=forms.Select(), required=True)
-    clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=1), widget=forms.Select(), required=True)
+    raza = forms.ModelChoiceField(queryset=Raza.objects, widget=forms.Select(attrs={'class': ''}), required=True)
+    clase = forms.ModelChoiceField(queryset=Clase.objects.all().filter(nivel=1), widget=forms.Select(attrs={'class': ''}), required=True)
     alineamiento = forms.ChoiceField(choices=ALINEAMIENTO_CHOICES, required=True, widget=forms.Select(attrs={'class': 'form-control', 'placeholder': 'Alineamiento'}))
 
     class Meta:
@@ -294,13 +294,13 @@ class PersonajeForm2(forms.ModelForm):
 
     CARACTERISTICA_CHOICES = (('Fuerza', 'Fuerza'), ('Destreza', 'Destreza'), ('Constitucion', 'Constitución'), ('Inteligencia', 'Inteligencia'), ('Sabiduria', 'Sabiduría'), ('Carisma', 'Carisma'), )
 
-    fuerza = forms.IntegerField(label='Fuerza', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Fuerza', 'min':7, 'max':18}))
-    destreza = forms.IntegerField(label='Destreza', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Destreza', 'min':7, 'max':18}))
-    constitucion = forms.IntegerField(label='Constitucion', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Constitución', 'min':7, 'max':18}))
-    inteligencia = forms.IntegerField(label='Inteligencia', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Inteligencia', 'min':7, 'max':18}))
-    sabiduria = forms.IntegerField(label='Sabiduria', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Sabiduría', 'min':7, 'max':18}))
-    carisma = forms.IntegerField(label='Carisma', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Carisma', 'min':7, 'max':18}))
-    caracteristica_choice = forms.ChoiceField(choices=CARACTERISTICA_CHOICES, widget=forms.Select(), required=False)
+    fuerza = forms.IntegerField(label='Fuerza', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control w-auto d-inline', 'placeholder': 'Fuerza', 'min':7, 'max':18, 'onchange':'calcularPuntosRestantes();'}))
+    destreza = forms.IntegerField(label='Destreza', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control w-auto d-inline', 'placeholder': 'Destreza', 'min':7, 'max':18, 'onchange':'calcularPuntosRestantes();'}))
+    constitucion = forms.IntegerField(label='Constitucion', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control w-auto d-inline', 'placeholder': 'Constitución', 'min':7, 'max':18, 'onchange':'calcularPuntosRestantes();'}))
+    inteligencia = forms.IntegerField(label='Inteligencia', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control w-auto d-inline', 'placeholder': 'Inteligencia', 'min':7, 'max':18, 'onchange':'calcularPuntosRestantes();'}))
+    sabiduria = forms.IntegerField(label='Sabiduria', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control w-auto d-inline', 'placeholder': 'Sabiduría', 'min':7, 'max':18, 'onchange':'calcularPuntosRestantes();'}))
+    carisma = forms.IntegerField(label='Carisma', initial=10, required=True, widget=forms.NumberInput(attrs={'class': 'form-control w-auto d-inline', 'placeholder': 'Carisma', 'min':7, 'max':18, 'onchange':'calcularPuntosRestantes();'}))
+    caracteristica_choice = forms.ChoiceField(choices=CARACTERISTICA_CHOICES, widget=forms.Select(attrs={'class': 'w-auto'}), required=False)
 
     class Meta:
         model = Personaje
@@ -369,7 +369,8 @@ class PersonajeForm3(forms.Form):
         self.inteligencia = inteligencia
         queryset1 = Dote.objects.all().filter(prerrequisito_raza=raza)
         queryset2 = Dote.objects.all().filter(prerrequisito_raza=None).filter(nivel=0).filter(ataque_base__lte=self.clase.ataque_base_int).filter(prerrequisito_dote=None)
-        self.fields['dotes'] = forms.ModelMultipleChoiceField(queryset=(queryset1 | queryset2).distinct(), widget=forms.CheckboxSelectMultiple(attrs={'class': ''}), required=True)
+        queryset3 = Dote.objects.all().filter(prerrequisito_raza=None).filter(nivel=1).filter(ataque_base__lte=self.clase.ataque_base_int).filter(prerrequisito_dote=None).exclude(creador=None)
+        self.fields['dotes'] = forms.ModelMultipleChoiceField(queryset=(queryset1 | queryset2 | queryset3).distinct(), widget=forms.CheckboxSelectMultiple(attrs={'class': ''}), required=True)
         self.fields['idiomas'] = forms.ModelMultipleChoiceField(queryset=raza.idiomas_eleccion, widget=forms.CheckboxSelectMultiple(), required=False)
         self.fields['conjuros_conocidos_0'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=0), widget=forms.CheckboxSelectMultiple(), required=False)
         self.fields['conjuros_conocidos_1'] = forms.ModelMultipleChoiceField(queryset=clase.conjuros.all().filter(nivel=1), widget=forms.CheckboxSelectMultiple(), required=False)

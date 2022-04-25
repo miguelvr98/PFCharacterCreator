@@ -17,6 +17,16 @@
         <input type="hidden" id="var" name="var" value={{buscador.var}}>
     </form>
 </div>
+{% if buscador.var == True %}
+<div class="container">
+<div class="row d-flex justify-content-center mt-4">
+  <div class="col-sm-2 d-flex justify-content-center">
+    <a href="/dote/create/" class="btn btn-md btn-dark ">Crear dote</a>
+  </div>
+</div>
+</div>
+{% endif %}
+{% if dotes %}
 <div class="container">
   <div class="row">
       <div class="col-lg-2">
@@ -45,6 +55,7 @@
   </div>
   {% endfor %}
 </div>
+{% endif %}
     {% if dotes %}
     <div class="container mb-5">
       <ul class="pagination d-flex justify-content-center">

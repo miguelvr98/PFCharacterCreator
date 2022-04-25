@@ -12,7 +12,7 @@
             <h6 class="d-inline">Tipo: </h6>
             <p class="d-inline">{{dote.tipo}}</p>
             <br>
-    {% if dote.nivel != 0 %}
+    {% if dote.nivel != 0 and dote.nivel != 1 %}
             <h6 class="d-inline">Prerrequisito de nivel: </h6>
             <p class="d-inline">{{dote.nivel}}</p>
             <br>
@@ -86,7 +86,7 @@
         <div class="col-sm-3 d-flex justify-content-center">
                 <a href="/dote/edit/{{dote.pk}}" class="btn btn-md btn-dark ">Editar dote</a>
         </div>
-        <div class="col-sm-3 d-flex justify-content-center">
+        <div class="col-sm-3 mb-4 d-flex justify-content-center">
                 <a href="/dote/delete/{{dote.pk}}" class="btn btn-md btn-dark ">Eliminar dote</a>
         </div>
 </div>
