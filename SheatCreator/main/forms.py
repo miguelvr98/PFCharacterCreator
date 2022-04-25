@@ -357,7 +357,7 @@ class PersonajeForm3(forms.Form):
 
     linaje = forms.ModelChoiceField(queryset=Linaje.objects, widget=forms.Select(), required=False)
     habilidades = forms.ModelMultipleChoiceField(queryset=Habilidad.objects, widget=forms.CheckboxSelectMultiple(), required=True)
-    nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Nombre'}))
+    nombre = forms.CharField(label='Nombre', required=True, widget=forms.TextInput(attrs={'class': 'form-control w-25', 'placeholder': 'Nombre'}))
 
     def __init__(self, *args, **kwargs):
         raza = kwargs.pop('raza')

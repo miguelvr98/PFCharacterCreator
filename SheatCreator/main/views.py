@@ -769,7 +769,7 @@ def crear_personaje_3(request):
                     conjuros_conocidos = clase.conjuros
                 personaje = guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destreza, constitucion, inteligencia, sabiduria, carisma, dotes, linaje, habilidades, idiomas, conjuros_conocidos)
                 return redirect('/personaje/show/'+str(personaje.pk))
-        return render(request, 'personaje/paso3.html', {'raza':raza, 'clase':clase, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion, 'numero_idiomas_eleccion':numero_idiomas_eleccion, 'clase_nivel_0':clase_nivel_0, 'cantidad_conjuros_conocidos_0_eleccion':cantidad_conjuros_conocidos_0_eleccion, 'cantidad_conjuros_conocidos_1_eleccion':cantidad_conjuros_conocidos_1_eleccion})
+        return render(request, 'personaje/paso3.html', {'raza':raza, 'clase':clase, 'clase_nivel_0':clase_nivel_0, 'alineamiento':alineamiento, 'fuerza':fuerza, 'destreza':destreza, 'constitucion':constitucion, 'inteligencia':inteligencia, 'sabiduria':sabiduria, 'carisma':carisma, 'formulario_paso_3':formulario_paso_3, 'numero_habilidades_eleccion':numero_habilidades_eleccion, 'numero_idiomas_eleccion':numero_idiomas_eleccion, 'clase_nivel_0':clase_nivel_0, 'cantidad_conjuros_conocidos_0_eleccion':cantidad_conjuros_conocidos_0_eleccion, 'cantidad_conjuros_conocidos_1_eleccion':cantidad_conjuros_conocidos_1_eleccion})
     except:
         return redirect('error_url')
 

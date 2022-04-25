@@ -28,7 +28,7 @@
 {% if personajes %}
 <div class="container">
   <div class="row d-flex justify-content-center mx-auto mb-1">
-      <div class="col-lg-1 d-flex justify-content-center">
+      <div class="col-lg-2 d-flex justify-content-center">
         <p>Nombre</p>
       </div>
       <div class="col-lg-1 d-flex justify-content-center">
@@ -48,7 +48,7 @@
   </div>
   {% for personaje in personajes %}
   <div class="row d-flex justify-content-center mx-auto mb-1">
-      <div class="col-lg-1 d-flex justify-content-center">
+      <div class="col-lg-2 d-flex justify-content-center">
         <a href="/personaje/show/{{personaje.pk}}">{{personaje.nombre}}</a>
       </div>
       <div class="col-lg-1 d-flex justify-content-center">
