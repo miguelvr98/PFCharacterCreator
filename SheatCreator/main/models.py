@@ -104,7 +104,7 @@ class Personaje(models.Model):
         elif self.fuerza >= 10 and self.fuerza <= 19:
             carga_ligera = diccionario.get(self.fuerza) * libra
         elif self.fuerza > 19:
-            carga_ligera = diccionario.get(self.fuerza%10) * libra
+            carga_ligera = diccionario.get(self.fuerza%10+10) * libra * 4
         if self.raza.tamano == 'Pequeño':
             carga_ligera = carga_ligera/2
         return carga_ligera

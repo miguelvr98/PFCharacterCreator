@@ -295,18 +295,21 @@ def mostrar_objeto(request, pk):
         return redirect('error_url')
 
 def mostrar_personaje(request, pk):
-    personaje = Personaje.objects.get(pk=pk)
-    perfil = usuario_logueado(request)
-    if personaje.es_publico == False:
-        assert personaje.perfil == perfil
-    idiomas = personaje.idiomas.all()
-    clase = personaje.clase
-    clase_nivel_0 = Clase.objects.get(nivel=0, clase=clase.clase)
-    dotes = personaje.dotes.all()
-    conjuros = personaje.conjuros_conocidos.all()
-    poderes = personaje.poderes_conocidos.all()
-    inventario = personaje.propiedades_objeto.all()
-    return render(request, 'personaje/show.html', {'personaje':personaje, 'conjuros':conjuros, 'poderes':poderes, 'inventario':inventario, 'perfil':perfil, 'clase_nivel_0':clase_nivel_0})
+    try:
+        personaje = Personaje.objects.get(pk=pk)
+        perfil = usuario_logueado(request)
+        if personaje.es_publico == False:
+            assert personaje.perfil == perfil
+        idiomas = personaje.idiomas.all()
+        clase = personaje.clase
+        clase_nivel_0 = Clase.objects.get(nivel=0, clase=clase.clase)
+        dotes = personaje.dotes.all()
+        conjuros = personaje.conjuros_conocidos.all()
+        poderes = personaje.poderes_conocidos.all()
+        inventario = personaje.propiedades_objeto.all()
+        return render(request, 'personaje/show.html', {'personaje':personaje, 'conjuros':conjuros, 'poderes':poderes, 'inventario':inventario, 'perfil':perfil, 'clase_nivel_0':clase_nivel_0})
+    except:
+        return redirect('error_url')
 
 @login_required(login_url="/login/")
 def cambiar_personaje_a_publico(request, pk):

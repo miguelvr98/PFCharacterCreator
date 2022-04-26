@@ -30,12 +30,13 @@
                 {% endif %}
                 {% if personaje.companero_animal_personaje.all %}
                 <li class="nav-item dropdown" role="presentation">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" id="pills-companero_aniaml-tab" data-toggle="dropdown" aria-haspopup="false" aria-selected="false" aria-expanded="false">Compañero animal</a>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="pills-companero_animal-tab" data-toggle="dropdown" aria-haspopup="false" aria-selected="false" aria-expanded="false">Compañero animal</a>
                     <ul class="dropdown-menu">
                       <li><button class="dropdown-item" id="pills-companero-animal-caracteristicas-tab" data-bs-toggle="pill" data-bs-target="#pills-companero-animal-caracteristicas" type="button" role="tab" aria-controls="pills-companero-animal-caracteristicas" aria-selected="false">Características</button></li>
                       <li><button class="dropdown-item" id="pills-companero-animal-habilidades-tab" data-bs-toggle="pill" data-bs-target="#pills-companero-animal-habilidades" type="button" role="tab" aria-controls="pills-companero-animal-habilidades" aria-selected="false">Habilidades</button></li>
                       <li><button class="dropdown-item" id="pills-companero-animal-dotes-tab" data-bs-toggle="pill" data-bs-target="#pills-companero-animal-dotes" type="button" role="tab" aria-controls="pills-companero-animal-dotes" aria-selected="false">Dotes</button></li>
                       <li><button class="dropdown-item" id="pills-companero-animal-trucos-tab" data-bs-toggle="pill" data-bs-target="#pills-companero-animal-trucos" type="button" role="tab" aria-controls="pills-companero-animal-trucos" aria-selected="false">Trucos</button></li>
+                      <li><button class="dropdown-item" id="pills-companero-animal-especiales-tab" data-bs-toggle="pill" data-bs-target="#pills-companero-animal-especiales" type="button" role="tab" aria-controls="pills-companero-animal-especiales" aria-selected="false">Especiales</button></li>
                     </ul>
                   </li>
                 {% endif %}
@@ -504,6 +505,17 @@
                     <h6 class="d-inline">{{truco.nombre}}: </h6>
                     <p class="d-inline">{{truco.descripcion}}</p>
                     <h6 class="d-inline">CD: {{truco.cd}}.</h6>
+                    <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-companero-animal-especiales" role="tabpanel" aria-labelledby="pills-companero-animal-especiales-tab">
+            <div class="row">
+                <div class="col">
+                    {% for especial in personaje.companero_animal_personaje.all.0.especiales.all %}
+                    <h6 class="d-inline">{{especial.nombre}}: </h6>
+                    <p class="d-inline">{{especial.descripcion}}</p>
                     <br>
                     {% endfor %}
                 </div>
