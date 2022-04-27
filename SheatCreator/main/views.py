@@ -1155,7 +1155,8 @@ def gdpr(request):
     return render(request, 'gdpr.html')
 
 def index(request):
-    return render(request, 'index.html')
+    buscador = BuscarPersonajeForm(var=False)
+    return render(request, 'index.html', {'buscador':buscador})
 
 def home(request):
     return render(request, 'index.html')

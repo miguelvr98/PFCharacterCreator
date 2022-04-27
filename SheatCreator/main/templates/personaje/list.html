@@ -3,10 +3,10 @@
 <div class="px-2">
     <form  role="form"  enctype="multipart/form-data" action="/personaje/search/" method="POST" id="upload-image-form"> 
         {% csrf_token %}
-        <div class="text-center">Nombre</div>
+        <h5 class="text-center mt-4">Nombre</h5>
             {{buscador.nombre}}
             <br>
-        <div class="text-center">Clase</div>
+        <h5 class="text-center">Clase</h5>
             {{buscador.clase}}
             <br>
         <div class="text-center">
