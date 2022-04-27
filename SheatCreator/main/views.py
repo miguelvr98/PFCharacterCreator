@@ -7,9 +7,9 @@ from main.forms import *
 from django.core.paginator import Paginator
 import math
 import random
-import io
-from django.http import FileResponse
-from reportlab.pdfgen import canvas
+#import io
+#from django.http import FileResponse
+#from reportlab.pdfgen import canvas
 
 # Create your views here.
 
