@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center">{{raza.raza}}</h2>
+    <h5 class="text-center mt-4 mb-3">Descripción y bonificaciones de la raza</h5>
+    <div class="row">
+        <div class="col">
+            {% for br in raza.bonificaciones_raza.all %}
+            <h6 class="d-inline">{{br.nombre}}: </h6>
+            <p class="d-inline">{{br.descripcion}}</p>
+            <br>
+            <br>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm-1 d-grid gap-2">
+        <input type="button" class="btn btn-dark" value="Atrás" onclick="history.back()">
+      </div>
+    </div>
+</div>
+{% endblock %}

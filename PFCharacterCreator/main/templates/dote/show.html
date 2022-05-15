@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center">{{dote.nombre}}</h2>
+    <div class="row">
+        <div class="col">
+    {% if dote.creador != None %}
+            <h6 class="d-inline">Creador: </h6>
+            <a class="d-inline" href="/perfil/show/{{dote.creador}}">{{dote.creador}}</a>
+            <br>
+    {% endif %}
+            <h6 class="d-inline">Tipo: </h6>
+            <p class="d-inline">{{dote.tipo}}</p>
+            <br>
+    {% if dote.nivel != 0 and dote.nivel != 1 %}
+            <h6 class="d-inline">Prerrequisito de nivel: </h6>
+            <p class="d-inline">{{dote.nivel}}</p>
+            <br>
+    {% endif %}
+    {% if dote.ataque_base != 0 %}
+            <h6 class="d-inline">Prerrequisito de ataque base: </h6>
+            <p class="d-inline">{{dote.ataque_base}}</p>
+            <br>
+    {% endif %}
+    {% if dote.fuerza != None %}
+            <h6 class="d-inline">Prerrequisito de fuerza: </h6>
+            <p class="d-inline">{{dote.fuerza}}</p>
+            <br>
+    {% endif %}
+    {% if dote.destreza != None %}
+            <h6 class="d-inline">Prerrequisito de destreza: </h6>
+            <p class="d-inline">{{dote.destreza}}</p>
+            <br>
+    {% endif %}
+    {% if dote.constitucion != None %}
+            <h6 class="d-inline">Prerrequisito de constitucion: </h6>
+            <p class="d-inline">{{dote.constitucion}}</p>
+            <br>
+    {% endif %}
+    {% if dote.inteligencia != None %}
+
+            <h6 class="d-inline">Prerrequisito de inteligencia: </h6>
+            <p class="d-inline">{{dote.inteligencia}}</p>
+            <br>
+    {% endif %}
+    {% if dote.sabiduria != None %}
+            <h6 class="d-inline">Prerrequisito de sabiduria: </h6>
+            <p class="d-inline">{{dote.sabiduria}}</p>
+            <br>
+    {% endif %}
+    {% if dote.carisma != None %}
+            <h6 class="d-inline">Prerrequisito de carisma: </h6>
+            <p class="d-inline">{{dote.carisma}}</p>
+            <br>
+    {% endif %}
+    {% if dote.prerrequisito_raza != None %}
+            <h6 class="d-inline">Prerrequisito de raza: </h6>
+            <p class="d-inline">{{dote.prerrequisito_raza.raza}}</p>
+            <br>
+    {% endif %}
+    {% if dote.prerrequisito_dote.all %}
+            <h6 class="d-inline">Prerrequisito de dote: </h6>
+            {% for d in dote.prerrequisito_dote.all %}
+            <a class="d-inline" href="/dote/show/{{d.pk}}">{{d.nombre}}</a>
+            {% endfor %}
+            <br>
+    {% endif %}
+    {% if dote.es_dote_companero_animal != False %}
+            <h6 class="d-inline">No es dote de compañero animal</h6>
+            <br>
+    {% endif %}
+    {% if dote.es_dote_companero_animal != True %}
+            <h6 class="d-inline">Es dote de compañero animal</h6>
+            <br>
+    {% endif %}
+</div>
+    </div>
+</div>
+<div class="container mt-4">
+    <h5 class="text-center">Descripción</h5>
+    <p>{{dote.descripcion}}</p>
+</div>
+<div class="container mt-3">
+        {% if dote.creador == perfil %}
+        <div class="row mt-2 d-flex justify-content-center">
+        <div class="col-sm-3 d-flex justify-content-center">
+                <a href="/dote/edit/{{dote.pk}}" class="btn btn-md btn-dark ">Editar dote</a>
+        </div>
+        <div class="col-sm-3 mb-4 d-flex justify-content-center">
+                <a href="/dote/delete/{{dote.pk}}" class="btn btn-md btn-dark ">Eliminar dote</a>
+        </div>
+</div>
+        {% endif %}
+</div>
+<div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-sm-1 d-grid gap-2">
+            <input type="button" class="btn btn-dark" value="Atrás" onclick="history.back()">
+          </div>
+        </div>
+</div>
+{% endblock %}

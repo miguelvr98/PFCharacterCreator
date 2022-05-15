@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h4 class="d-flex justify-content-center">Linaje {{linaje.nombre}}</h4>
+            <br>
+            <h6 class="d-flex">{{linaje.descripcion}}</h6>
+            <br>
+            <p class="d-inline">Obtienes la habilidad</p>
+            <h6 class="d-inline">{{linaje.habilidad.habilidad}}</h6>
+            <p class="d-inline"> como habilidad de clase.</p>
+            <br>
+            <h6 class="d-inline">Conjuros adicionales: </h6>
+            {% for conjuro in linaje.conjuros.all %}
+            <a class="d-inline" href="/conjuro/show/{{conjuro.pk}}">{{conjuro.nombre}}</a>,
+            {% endfor %}
+            <p class="d-inline">a nivel 3, 5, 7, 9, 11, 13, 15, 17, 19 consecutivamente.</p>
+            <br>
+            <h6 class="d-inline">Dotes adicionales: </h6>
+            {% for dote in linaje.dotes.all %}
+            <a class="d-inline" href="/dote/show/{{dote.pk}}">{{dote.nombre}}</a>,
+            {% endfor %}
+            <br>
+            <h6 class="d-inline">Linaje arcano: </h6>
+            <p class="d-inline">{{linaje.linaje_arcano}}</p>
+            <h5 class="d-flex justify-content-center mt-4">Poderes de linaje</h5>
+            {% for poder in linaje.poderes.all %}
+            <h6 class="d-inline">{{poder.nombre}}: </h6>
+            <p class="d-inline">{{poder.descripcion}}</p>
+            <br>
+            {% endfor %}
+        </div>
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm-1 d-grid gap-2">
+        <input type="button" class="btn btn-dark" value="Atrás" onclick="history.back()">
+      </div>
+    </div>
+</div>
+{% endblock %}

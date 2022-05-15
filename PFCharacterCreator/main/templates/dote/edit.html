@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="bottom-footer">
+    <div class="container">
+      <div class="row">
+          <div class="col">
+                <h1 class="display-4 py-2 text-center">Crear dote</h1>
+                {% if form_dote.errors %}
+                    {% for field in form_dote %}
+                        {% for error in field.errors %}
+                            <div class="alert alert-danger text-center">
+                                {{error}}
+                            </div>
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+                <ul class="nav nav-pills d-flex justify-content-center mx-auto">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-general-tab" data-bs-toggle="pill" data-bs-target="#pills-general" type="button" role="tab" aria-controls="pills-general" aria-selected="true">General</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-prerrequisitos-tab" data-bs-toggle="pill" data-bs-target="#pills-prerrequisitos" type="button" role="tab" aria-controls="pills-prerrequisitos" aria-selected="false">Prerrequisitos</button>
+                    </li>
+                </ul>
+                <div class="px-2">
+                    <form  role="form"  enctype="multipart/form-data" action="" method="POST" id="upload-image-form"> 
+                        {% csrf_token %}
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane show in active" id="pills-general" role="tabpanel" aria-labelledby="pills-general-tab">
+                                <h3 class="text-center mb-3 mt-3">Nombre</h3>
+                                <div class="row mt-4 d-flex justify-content-center">
+                                    <div class="col-lg-3">
+                                        {{form_dote.nombre}}
+                                    </div>
+                                </div>
+                                <h3 class="text-center mb-3 mt-3">Descripción</h3>
+                                <div class="row mt-4 d-flex justify-content-center">
+                                    <div class="col-lg-7" style="height: 100px;">
+                                        {{form_dote.descripcion}}
+                                    </div>
+                                </div>
+                                <h3 class="text-center mb-3 mt-3">Tipo</h3>
+                                <div class="row mt-4 d-flex justify-content-center">
+                                    <div class="col-lg-3">
+                                        {{form_dote.tipo}}
+                                    </div>
+                                </div>
+                                <h3 class="text-center mb-1 mt-3">¿Puede aprenderla un compañero animal?</h3>
+                                <div class="row mt-4 d-flex justify-content-center">
+                                    <div class="col-lg-3 d-flex justify-content-center">
+                                        {{form_dote.es_dote_companero_animal}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-prerrequisitos" role="tabpanel" aria-labelledby="pills-prerrequisitos-tab">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3 class="text-center mb-3 mt-3">Prerrequisito de nivel</h3>
+                                        <div class="row mt-4 d-flex justify-content-center">
+                                            <div class="col d-flex justify-content-center">
+                                                {{form_dote.nivel}}
+                                            </div>
+                                        </div>
+                                        <h3 class="text-center mb-3 mt-3">Prerrequisito de ataque base</h3>
+                                        <div class="row mt-4 d-flex justify-content-center">
+                                            <div class="col d-flex justify-content-center">
+                                                {{form_dote.ataque_base}}
+                                            </div>
+                                        </div>
+                                        <h3 class="text-center mb-3 mt-3">Prerrequisito de fuerza</h3>
+                                        <div class="row mt-4 d-flex justify-content-center">
+                                            <div class="col d-flex justify-content-center">
+                                                {{form_dote.fuerza}}
+                                            </div>
+                                        </div>
+                                        <h3 class="text-center mb-3 mt-3">Prerrequisito de destreza</h3>
+                                        <div class="row mt-4 d-flex justify-content-center">
+                                            <div class="col d-flex justify-content-center">
+                                                {{form_dote.destreza}}
+                                            </div>
+                                        </div>
+                                        <h3 class="text-center mb-3 mt-3">Prerrequisito de ataque constitucion</h3>
+                                        <div class="row mt-4 d-flex justify-content-center">
+                                            <div class="col d-flex justify-content-center">
+                                                {{form_dote.constitucion}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <h3 class="text-center mb-3 mt-3">Prerrequisito de inteligencia</h3>
+                                        <div class="row mt-4 d-flex justify-content-center">
+                                            <div class="col d-flex justify-content-center">
+                                                {{form_dote.inteligencia}}
+                                            </div>
+                                        </div>
+                                        <h3 class="text-center mb-3 mt-3">Prerrequisito de sabiduria</h3>
+                                        <div class="row mt-4 d-flex justify-content-center">
+                                            <div class="col d-flex justify-content-center">
+                                                {{form_dote.sabiduria}}
+                                            </div>
+                                        </div>
+                                        <h3 class="text-center mb-3 mt-3">Prerrequisito de carisma</h3>
+                                        <div class="row mt-4 d-flex justify-content-center">
+                                            <div class="col d-flex justify-content-center">
+                                                {{form_dote.carisma}}
+                                            </div>
+                                        </div>
+                                        <h3 class="text-center mb-3 mt-3">Dotes que tiene como prerrequisito</h3>
+                                        <div class="row mt-4 d-flex justify-content-center">
+                                            <div class="col d-flex justify-content-center">
+                                                {{form_dote.prerrequisito_dote}}
+                                            </div>
+                                        </div>
+                                        <h3 class="text-center mb-3 mt-3">Raza que tiene como prerrequisito</h3>
+                                        <div class="row mt-4 d-flex justify-content-center">
+                                            <div class="col d-flex justify-content-center">
+                                                {{form_dote.prerrequisito_raza}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-sm-2 d-grid gap-2">
+                              <input type="button" class="btn btn-dark" value="Atrás" onclick="history.back()">
+                            </div>
+                            <div class="col-sm-2 d-grid gap-2">
+                                <button type='submit' class="btn btn-primary btn-dark">Crear</button>
+                              </div>
+                          </div>
+                        </div>
+                    </form>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

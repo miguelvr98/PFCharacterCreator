@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container d-flex justify-content-center mx-auto">
+    <h2>{{conjuro.nombre}}</h2>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h6 class="d-inline">Nivel: </h6>
+            <p class="d-inline">{{conjuro.nivel}}</p>
+            <br>
+            <h6 class="d-inline">Escuela: </h6>
+            <p class="d-inline">{{conjuro.escuela}}</p>
+            <br>
+            <h6 class="d-inline">Tiempo de lanzamiento: </h6>
+            <p class="d-inline">{{conjuro.tiempo_de_lanzamiento}}</p>
+            <br>
+            {% if conjuro.componentes != None %}
+            <h6 class="d-inline">Componentes: </h6>
+            <p class="d-inline">{{conjuro.componentes}}</p>
+            <br>
+            {% endif %}
+            {% if conjuro.alcance != None %}
+            <h6 class="d-inline">Alcance: </h6>
+            <p class="d-inline">{{conjuro.alcance}}</p>
+            <br>
+            {% endif %}
+            {% if conjuro.efecto != None %}
+            <h6 class="d-inline">Efecto: </h6>
+            <p class="d-inline">{{conjuro.efecto}}</p>
+            <br>
+            {% endif %}
+            {% if conjuro.area != None %}
+            <h6 class="d-inline">área: </h6>
+            <p class="d-inline">{{conjuro.area}}</p>
+            <br>
+            {% endif %}
+            {% if conjuro.objetivo != None %}
+            <h6 class="d-inline">Objetivo: </h6>
+            <p class="d-inline">{{conjuro.objetivo}}</p>
+            <br>
+            {% endif %}
+            {% if conjuro.duracion != None %}
+            <h6 class="d-inline">Duración: </h6>
+            <p class="d-inline">{{conjuro.duracion}}</p>
+            <br>
+            {% endif %}
+            <h6 class="d-inline">Tiro de salvación: </h6>
+            <p class="d-inline">{{conjuro.tiro_de_salvación}}</p>
+            <br>
+            <h6 class="d-inline">Resistencia a conjuros: </h6>
+            <p class="d-inline">{{conjuro.resistencia_a_conjuros}}</p>
+            <br>
+        </div>
+    </div>
+</div>
+<div class="container mt-3">
+    <h4 class="text-center">Descripción</h2>
+    <p>{{conjuro.descripcion}}</p>
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm-1 d-grid gap-2">
+        <input type="button" class="btn btn-dark" value="Atrás" onclick="history.back()">
+      </div>
+    </div>
+</div>
+{% endblock %}

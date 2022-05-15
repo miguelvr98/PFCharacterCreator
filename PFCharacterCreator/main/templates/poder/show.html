@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container d-flex justify-content-center mx-auto">
+    <h2>{{poder.nombre}}</h2>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h6 class="d-inline">Prerrequisito de nivel: </h6>
+            <p class="d-inline">{{poder.nivel}}</p>
+            <br>
+            {% if poder.prerrequisito_poder.all %}
+            <h6 class="d-inline">Poderes que tiene como prerrequisito: </h6>
+            {% for p in poder.prerrequisito_poder.all %}
+            <a class="d-inline" href="/poder/show/{{p.pk}}">{{p.nombre}}</a>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="container mt-3">
+    <h4 class="text-center">Bonificación</h2>
+    <p>{{poder.descripcion}}</p>
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm-1 d-grid gap-2">
+        <input type="button" class="btn btn-dark" value="Atrás" onclick="history.back()">
+      </div>
+    </div>
+</div>
+{% endblock %}

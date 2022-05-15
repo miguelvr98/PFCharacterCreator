@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="px-2">
+    <form  role="form"  enctype="multipart/form-data" action="/personaje/search/" method="POST" id="upload-image-form"> 
+        {% csrf_token %}
+        <h5 class="text-center mt-4">Nombre</h5>
+            {{buscador.nombre}}
+            <br>
+        <h5 class="text-center">Clase</h5>
+            {{buscador.clase}}
+            <br>
+        <div class="text-center">
+            <button type="submit" class="btn btn-dark mr-2">Buscar</button>
+        </div>
+        <br>
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
+    </form>
+</div>
+{% if buscador.var == True %}
+<div class="container">
+<div class="row d-flex justify-content-center mt-4 mb-4">
+  <div class="col-sm-2 d-flex justify-content-center">
+    <a href="/personaje/create/" class="btn btn-md btn-dark ">Crear personaje</a>
+  </div>
+</div>
+</div>
+{% endif %}
+{% if personajes %}
+<div class="container">
+  <div class="row d-flex justify-content-center mx-auto mb-1">
+      <div class="col-lg-2 d-flex justify-content-center">
+        <p>Nombre</p>
+      </div>
+      <div class="col-lg-1 d-flex justify-content-center">
+          <p>Raza</p>
+      </div>
+      <div class="col-lg-1 d-flex justify-content-center">
+        <p>Clase</p>
+    </div>
+      <div class="col-lg-1 d-flex justify-content-center">
+        <p>Nivel</p>
+    </div>
+    {% if buscador.var == False %}
+    <div class="col-lg-1 d-flex justify-content-center">
+      <p>Creador</p>
+  </div>
+  {% endif %}
+  </div>
+  {% for personaje in personajes %}
+  <div class="row d-flex justify-content-center mx-auto mb-1">
+      <div class="col-lg-2 d-flex justify-content-center">
+        <a href="/personaje/show/{{personaje.pk}}">{{personaje.nombre}}</a>
+      </div>
+      <div class="col-lg-1 d-flex justify-content-center">
+          <p class="align-text-middle">{{personaje.raza.raza}}</p>
+      </div>
+      <div class="col-lg-1 d-flex justify-content-center">
+        <p class="align-text-middle">{{personaje.clase.clase}}</p>
+    </div>
+      <div class="col-lg-1 d-flex justify-content-center">
+        <p class="align-text-middle">{{personaje.nivel}}</p>
+    </div>
+    {% if buscador.var == False %}
+    <div class="col-lg-1 d-flex justify-content-center">
+      <a href="/perfil/show/{{personaje.perfil.pk}}">{{personaje.perfil.nickname}}</a>
+  </div>
+  {% endif %}  
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+    {% if personajes %}
+    <div class="container">
+      <ul class="pagination d-flex justify-content-center">
+        {% if personajes.has_previous %}
+        <form  role="form"  enctype="multipart/form-data" action="/personaje/search/?page={{personajes.previous_page_number}}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">Anterior</button></li>
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
+        {% if buscador.clase.value != None %}
+        <input type="hidden" id="clase" name="clase" value={{buscador.clase.value}}>
+        {% endif %}
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
+        {% endif %}
+        </form>
+        {% endif %}
+        {% for num in personajes.paginator.page_range %}
+        {% ifequal num personajes.number %}
+        <li class="page-item active">
+          <span class="page-link">
+            {{ num }}
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        {% else %}
+        <form  role="form"  enctype="multipart/form-data" action="/personaje/search/?page={{ num }}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">{{ num }}</button></li>
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
+        {% if buscador.clase.value != None %}
+        <input type="hidden" id="clase" name="clase" value={{buscador.clase.value}}>
+        {% endif %}
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
+        {% endif %}
+        </form>
+        {% endifequal %}
+        {% endfor %}
+        {% if personajes.has_next %}
+        <form  role="form"  enctype="multipart/form-data" action="/personaje/search/?page={{personajes.next_page_number}}" method="POST" id="upload-image-form">
+          {% csrf_token %}
+        <li class="page-item"><button type="submit" class="page-link">Siguiente</button></li>
+        <input type="hidden" id="var" name="var" value={{buscador.var}}>
+        {% if buscador.clase.value != None %}
+        <input type="hidden" id="clase" name="clase" value={{buscador.clase.value}}>
+        {% endif %}
+        {% if buscador.nombre.value != None %}
+        <input type="hidden" id="nombre" name="nombre" value={{buscador.nombre.value}}>
+        {% endif %}
+        </form>
+        {%else%}
+        {% endif %}
+      </ul>
+    </div>
+    {%endif%}
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-1 d-grid gap-2">
+          <input type="button" class="btn btn-dark" value="Atrás" onclick="history.back()">
+        </div>
+      </div>
+  </div>
+    {% endblock %}

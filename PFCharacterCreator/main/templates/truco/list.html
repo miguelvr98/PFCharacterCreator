@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for truco in trucos %}
+        {{truco.nombre}}
+    {% endfor %}
+
+    {% if trucos %}
+    <div class="container">
+      <ul class="pagination d-flex justify-content-center">
+        {% if trucos.has_previous %}
+        <li class="page-item"><a class="page-link" href="?page={{trucos.previous_page_number}}">Anterior</a></li>
+        {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Anterior</span>
+        </li>
+        {% endif %}
+        {% for num in trucos.paginator.page_range %}
+        {% ifequal num trucos.number %}
+        <li class="page-item active">
+          <span class="page-link">
+            {{ num }}
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        {% else %}
+        <li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+        {% endifequal %}
+        {% endfor %}
+        {% if trucos.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{trucos.next_page_number }}">Siguiente</a>
+        </li>
+        {%else%}
+        <li class="page-item disabled">
+          <span class="page-link">Siguiente</span>
+        </li>
+        {% endif %}
+      </ul>
+    </div>
+    {%endif%}
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-sm-1 d-grid gap-2">
+          <input type="button" class="btn btn-dark" value="Atrás" onclick="history.back()">
+        </div>
+      </div>
+  </div>
+{% endblock %}
