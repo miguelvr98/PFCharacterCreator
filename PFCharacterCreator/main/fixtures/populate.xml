@@ -822,6 +822,9 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="constitucion">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, élfico</field>
+        <field type="ImageField" name="imagen">ElfoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">ElfoPF.jpg</field>
+        <field type="CharField" name="descripcion">Los longevos Elfos son hijos del mundo natural, similares en muchos aspectos superficiales a las criaturas mágicas (como las hadas), pero al mismo tiempo son también diferentes. Valoran su intimidad y sus tradiciones, y aunque se toman su tiempo para forjar amistades, tanto a nivel personal como con otras razas, una vez que un forastero es aceptado como camarada, su alianza puede durar generaciones enteras.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="5"></object>
             <object pk="7"></object>
@@ -856,6 +859,9 @@
         <field type="IntegerField" name="sabiduria">2</field>
         <field type="IntegerField" name="carisma">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, enano</field>
+        <field type="ImageField" name="imagen">EnanoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">EnanoPF.jpg</field>
+        <field type="CharField" name="descripcion">Los enanos son una raza estoica pero dura, instalados en ciudades cavadas en el corazón de las montañas y ferozmente determinados a repeler los estragos de razas salvajes como los orcos y los trasgos. Más que ninguna otra raza, los enanos tienen reputación de ser los más tercos y con menos sentido del humor de todas las criaturas que trabajan la tierra.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="11"></object>
             <object pk="13"></object>
@@ -892,6 +898,9 @@
         <field type="IntegerField" name="carisma">2</field>
         <field type="IntegerField" name="fuerza">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, gnomo, silvano</field>
+        <field type="ImageField" name="imagen">GnomoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">GnomoPF.jpg</field>
+        <field type="CharField" name="descripcion">El linaje de los gnomos tiene su origen en el misterioso reino de la magia, un lugar dónde los colores son más brillantes, las zonas silvestres aún más salvajes, y las emociones aún más primarias. Fuerzas desconocidas se llevaron a sus ancestros de ese reino hasta mucho tiempo, forzándoles a buscar refugio en este mundo.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="7"></object>
             <object pk="9"></object>
@@ -925,6 +934,9 @@
         <field type="CharField" name="tamano">Mediano</field>
         <field type="CharField" name="velocidad">9 metros</field>
         <field type="CharField" name="idiomas_conocidos">Común</field>
+        <field type="ImageField" name="imagen">HumanoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">HumanoPF.jpg</field>
+        <field type="CharField" name="descripcion">Los humanos poseen un extraordinario ímpetu y una gran capacidad para resistir y expandirse, por lo tanto son la raza dominante en el mundo. Sus imperios y naciones son vastos, de crecimiento descontrolado, y los habitantes de estas sociedades se labran un nombre con la fuerza de las espadas y el poder de sus conjuros.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="2"></object>
@@ -977,6 +989,9 @@
         <field type="IntegerField" name="carisma">2</field>
         <field type="IntegerField" name="fuerza">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, mediano</field>
+        <field type="ImageField" name="imagen">MedianoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">MedianoPF.jpg</field>
+        <field type="CharField" name="descripcion">Optimistas y alegres por naturaleza, dotados de una extraordinaria suerte y con una inusitada pasión por los viajes, los medianos compensan su corta estatura con una gran dosis de bravuconería y curiosidad. Son al mismo tiempo excitables y tratables, les gusta mantener un temperamento uniforme y un ojo pendiente de cualquier oportunidad que surja.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="9"></object>
             <object pk="10"></object>
@@ -1005,6 +1020,9 @@
         <field type="CharField" name="tamano">Mediano</field>
         <field type="CharField" name="velocidad">9 metros</field>
         <field type="CharField" name="idiomas_conocidos">Común, élfico</field>
+        <field type="ImageField" name="imagen">SemielfoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">SemielfoPF.jpg</field>
+        <field type="CharField" name="descripcion">Los elfos siempre han acaparado las miradas ambiciosas de otras razas. Su larga esperanza de vida, su afinidad mágica y su inherente gracia, han contribuido tanto a la admiración como a una profunda envidia por parte de sus vecinos. De todas sus características, no obstante, ninguna ha calado tanto en sus relaciones con los humanos como su belleza.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="2"></object>
@@ -1058,6 +1076,9 @@
         <field type="CharField" name="tamano">Mediano</field>
         <field type="CharField" name="velocidad">9 metros</field>
         <field type="CharField" name="idiomas_conocidos">Común, orco</field>
+        <field type="ImageField" name="imagen">SemiorcoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">SemiorcoPF.jpg</field>
+        <field type="CharField" name="descripcion">Los semiorcos son en realidad monstruosidades, sus trágicos nacimientos son el resultado de perversión y violencia o al menos, así es como las demás razas les ven. Es cierto que rara vez son el resultado de una unión romántica, y como tales son por lo general forzados a crecer rápido y muy fuertes, constantemente luchando para protegerse o para labrarse un nombre.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="7"></object>
@@ -1089,6 +1110,9 @@
         <field type="IntegerField" name="sabiduria">2</field>
         <field type="IntegerField" name="carisma">2</field>
         <field type="CharField" name="idiomas_conocidos">Común, celestial</field>
+        <field type="ImageField" name="imagen">AasimarPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">AasimarPF.jpg</field>
+        <field type="CharField" name="descripcion">Los aasimar son humanos con una cantidad significativa de sangre celestial o de algún otro ajeno del bien en su ascendencia. Los aasimar no siempre son buenos, pero sí es una tendencia natural para ellos y gravitan hacia fes buenas o hacia organizaciones asociadas con los celestiales. La herencia de los aasimar puede ocultarse durante generaciones.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="7"></object>
             <object pk="9"></object>
@@ -1122,6 +1146,9 @@
         <field type="IntegerField" name="carisma">2</field>
         <field type="IntegerField" name="constitucion">-2</field>
         <field type="CharField" name="idiomas_conocidos">Élfico, infracomún</field>
+        <field type="ImageField" name="imagen">DrowPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">DrowPF.jpg</field>
+        <field type="CharField" name="descripcion">Aunque relacionados con los elfos, los drow son el primo vil y malvado, en el mejor de los casos. A veces llamados elfos oscuros, estas astutas criaturas merodean por las cuevas y túneles de la suboscuridad, gobernando vastas ciudades subterráneas a través del miedo y el poder.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="2"></object>
@@ -1160,6 +1187,9 @@
         <field type="IntegerField" name="sabiduria">2</field>
         <field type="IntegerField" name="carisma">-4</field>
         <field type="CharField" name="idiomas_conocidos">Común, enano, infracomún</field>
+        <field type="ImageField" name="imagen">DuergarPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">DuergarPF.jpg</field>
+        <field type="CharField" name="descripcion">Primos de los enanos, los duergar son criaturas con mal genio que detestan a los intrusos en sus reinos de la suboscuridad, pero no tanto como lo hacen sus parientes más cercanos a la superficie.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="2"></object>
             <object pk="7"></object>
@@ -1194,6 +1224,9 @@
         <field type="IntegerField" name="carisma">-4</field>
         <field type="IntegerField" name="fuerza">-2</field>
         <field type="CharField" name="idiomas_conocidos">Gnomo, infracomún</field>
+        <field type="ImageField" name="imagen">SvirfneblinPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">Svirfneblin.jpg</field>
+        <field type="CharField" name="descripcion">Los svirfneblin, o “gnomos de las profundidades”, son una solitaria rama de la raza gnoma. Viven bajo tierra en ciudades ocultas, a salvo de los elfos oscuros y otras razas subterráneas.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="2"></object>
             <object pk="6"></object>
@@ -1232,6 +1265,9 @@
         <field type="IntegerField" name="destreza">2</field>
         <field type="IntegerField" name="constitucion">2</field>
         <field type="CharField" name="idiomas_conocidos">Común, trasgo</field>
+        <field type="ImageField" name="imagen">HobgoblinPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">HobgoblinPF.jpg</field>
+        <field type="CharField" name="descripcion">Los grandes trasgos son militaristas y fecundos, una combinación que los hace muy peligrosos en algunas regiones. Se reproducen rápidamente, reemplazando a los miembros caídos con nuevos soldados y manteniendo su número a pesar de los azares de la guerra. Por lo general necesitan pocos motivos para declarar la guerra, pero la mayoría de las veces no hay otro motivo que el capturar nuevos esclavos.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="7"></object>
             <object pk="10"></object>
@@ -1262,6 +1298,9 @@
         <field type="IntegerField" name="sabiduria">-2</field>
         <field type="IntegerField" name="carisma">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, orco</field>
+        <field type="ImageField" name="imagen">OrcoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">OrcoPF.jpg</field>
+        <field type="CharField" name="descripcion">Junto con su fuerza bruta y comparativamente bajo intelecto, la principal diferencia entre los orcos y los humanoides civilizados es su actitud. Como cultura, los orcos son violentos y agresivos, con los más fuertes dominando al resto a través del miedo y la brutalidad.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="10"></object>
             <object pk="11"></object>
@@ -1292,6 +1331,9 @@
         <field type="IntegerField" name="sabiduria">2</field>
         <field type="IntegerField" name="constitucion">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, tengu</field>
+        <field type="ImageField" name="imagen">TenguPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">TenguPF.jpg</field>
+        <field type="CharField" name="descripcion">Los tengu son una raza de humanoides tipo pájaro que se asemejan a los cuervos y cornejas, y con frecuencia sufren el mismo estigma. A pesar de que con frecuentemente escogen vivir entre otras razas en ciudades densamente pobladas, su sociedad es estricta y cerrada, y raramente permiten que otros vean su funcionamiento interno.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="2"></object>
@@ -1347,6 +1389,9 @@
         <field type="IntegerField" name="constitucion">2</field>
         <field type="IntegerField" name="carisma">2</field>
         <field type="CharField" name="idiomas_conocidos">Común, acuano</field>
+        <field type="ImageField" name="imagen">SirenidoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">SirenidoPF.jpg</field>
+        <field type="CharField" name="descripcion">De cintura para arriba, los sirénidos tienen los torsos de humanos bien constituidos y rasgos delicados reminiscentes de elfos y otros humanoides vinculados con el mundo natural. La parte inferior del cuerpo de un sirénido se compone de las aletas y la cola de un gran pez.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="23"></object>
             <object pk="2"></object>
@@ -1376,6 +1421,9 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="carisma">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común</field>
+        <field type="ImageField" name="imagen">TiflinPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">TiflinPF.jpg</field>
+        <field type="CharField" name="descripcion">Los tiflin son humanos con sangre de demonios, diablos u otros ajenos malvados en su ascendencia. A menudo perseguidos por su aspecto extraño y sus peculiaridades antinaturales, la mayoría de los tiflin disfrazan su naturaleza o son obligados a vivir en los límites o en los bajos fondos de las sociedades civilizadas.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="7"></object>
@@ -1412,6 +1460,9 @@
         <field type="IntegerField" name="fuerza">-2</field>
         <field type="IntegerField" name="carisma">-2</field>
         <field type="CharField" name="idiomas_conocidos">Trasgo</field>
+        <field type="ImageField" name="imagen">TrasgoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">TrasgoPF.jpg</field>
+        <field type="CharField" name="descripcion">Los goblin prefieren habitar en cuevas, en medio de grandes y densos matorrales de cardos y zarzas o en estructuras construidas y luego abandonadas por otros. Muy pocos goblin tienen el impulso de construir estructuras por ellos mismos.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="6"></object>
             <object pk="7"></object>
@@ -1442,6 +1493,9 @@
         <field type="IntegerField" name="carisma">2</field>
         <field type="IntegerField" name="sabiduria">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común</field>
+        <field type="ImageField" name="imagen">AparecidoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">AparecidoPF.jpg</field>
+        <field type="CharField" name="descripcion">Los aparecidos son descendientes de generaciones de humanos atrapados en el Plano de la Sombra. Infundidos con la esencia de ese plano, son más y menos que humanos y a menudo sirven como intermediarios en el comercio y la política planaria.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="2"></object>
             <object pk="3"></object>
@@ -1475,6 +1529,9 @@
         <field type="IntegerField" name="carisma">2</field>
         <field type="IntegerField" name="constitucion">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común</field>
+        <field type="ImageField" name="imagen">DhampiroPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">DhampiroPF.jpg</field>
+        <field type="CharField" name="descripcion">Malditos desde su nacimiento, los dhampiros son el resultado de la rara y antinatural unión entre vampiros y humanos. Aunque no se ven impulsados por el consumo de sangre para sobrevivir como sus progenitores muertos vivientes, los dhampiros sin embargo tienen un deseo de por vida por la sangre que nada más puede saciar completamente.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="1"></object>
             <object pk="2"></object>
@@ -1532,6 +1589,9 @@
         <field type="IntegerField" name="carisma">2</field>
         <field type="IntegerField" name="sabiduria">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, ígnaro</field>
+        <field type="ImageField" name="imagen">EfritPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">Efrit.jpg</field>
+        <field type="CharField" name="descripcion">Los efrit son humanos cuyos ancestros incluyen seres de fuego elemental. Los efrit poseen orejas puntiagudas, cuernos rojos o moteados en la frente y un cabello que vibra y ondea como si fuera una llama.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="3"></object>
             <object pk="4"></object>
@@ -1565,6 +1625,9 @@
         <field type="IntegerField" name="sabiduria">2</field>
         <field type="IntegerField" name="fuerza">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, gripo</field>
+        <field type="ImageField" name="imagen">GripoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">Gripo.jpg</field>
+        <field type="CharField" name="descripcion">Estas pequeñas e inteligentes ranas arborícolas humanoides viven en sociedades primitivas en lo profundo de los bosques y pantanos del mundo. Cazan insectos gigantes y comen frutas y flores de sus casas arbóreas. A menudo practican el trueque con criaturas más avanzadas para conseguir metal y ornamentos con piedras preciosas.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="27"></object>
             <object pk="7"></object>
@@ -1597,6 +1660,9 @@
         <field type="IntegerField" name="sabiduria">2</field>
         <field type="IntegerField" name="carisma">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, terrano</field>
+        <field type="ImageField" name="imagen">OreadePF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">OreadePF.jpg</field>
+        <field type="CharField" name="descripcion">Las oréades son humanos cuyos ancestros incluyen el toque de una criatura elemental de tierra en alguna parte de su línea, tratándose a menudo de un genio shaitan. Las oréades son fuertes y de constitución sólida y prefieren vestir en tonos terrosos que encajan con la coloración de su carne y su cabello.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="3"></object>
             <object pk="4"></object>
@@ -1631,6 +1697,9 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="constitucion">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, aurano</field>
+        <field type="ImageField" name="imagen">SilfoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">SilfoPF.jpg</field>
+        <field type="CharField" name="descripcion">Los silfos son humanos cuyos árboles genealógicos incluyen seres elementales del aire, como djinn. Tienden a ser pálidos y delgados hasta el punto de parecer delicados, aunque sus cuerpos flacos son más resistentes de lo que parecen.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="3"></object>
             <object pk="9"></object>
@@ -1664,6 +1733,9 @@
         <field type="IntegerField" name="sabiduria">2</field>
         <field type="IntegerField" name="fuerza">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, acuano</field>
+        <field type="ImageField" name="imagen">OndinaPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">OndinaPF.jpg</field>
+        <field type="CharField" name="descripcion">Las ondinas son humanos cuyos ancestros incluyen seres elementales del agua, como los marid. Esta conexión con el Plano del Agua es más evidentemente manifestada en su coloración, que tiende a imitar la de los lagos u océanos.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="4"></object>
             <object pk="9"></object>
@@ -1698,6 +1770,9 @@
         <field type="IntegerField" name="carisma">2</field>
         <field type="IntegerField" name="sabiduria">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, félido</field>
+        <field type="ImageField" name="imagen">FelidoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">FelidoPF.jpg</field>
+        <field type="CharField" name="descripcion">La mayoría de los félidos son cazadores-recolectores tribales que viven en armonía con la naturaleza, aunque algunas tribus se han aclimatado bien a entornos urbanos. Como cultura, los félidos son leales, generosos y amistosos. Les gusta pertenecer y estar en armonía con un grupo cuyos miembros trabajen juntos para cumplir sus necesidades y deseos.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="9"></object>
             <object pk="12"></object>
@@ -1731,6 +1806,9 @@
         <field type="IntegerField" name="inteligencia">2</field>
         <field type="IntegerField" name="fuerza">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, rátido</field>
+        <field type="ImageField" name="imagen">RatidoPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">RatidoPF.jpg</field>
+        <field type="CharField" name="descripcion">Los rátidos son humanoides pequeños y con aspecto de roedor y se encuentran a menudo viajando en caravanas de comercio nómadas o quizás habitando en colonias en suburbios, alcantarillas y otros sectores urbanos normalmente indeseables. Manitas y acumuladores por naturaleza, muchos rátidos son hábiles mercaderes.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="2"></object>
             <object pk="7"></object>
@@ -1766,6 +1844,9 @@
         <field type="IntegerField" name="carisma">2</field>
         <field type="IntegerField" name="inteligencia">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común</field>
+        <field type="ImageField" name="imagen">SuliPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">SuliPF.jpg</field>
+        <field type="CharField" name="descripcion">Los suli viven entre los humanos. Son altos y aparentan ser hombres y mujeres ordinarios excepto por su anormal belleza y el ocasional reflejo de luz elemental en sus ojos.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="3"></object>
             <object pk="4"></object>
@@ -1796,6 +1877,9 @@
         <field type="IntegerField" name="sabiduria">2</field>
         <field type="IntegerField" name="carisma">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, vanarano</field>
+        <field type="ImageField" name="imagen">VanaraPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">VanaraPF.jpg</field>
+        <field type="CharField" name="descripcion">Los vanara son humanoides simiescos inteligentes que viven en la profundidad de los bosques y junglas. Son ágiles y astutos, pero lastrados por una curiosidad sin límites y un amor a las bromas que, aunque normalmente son inofensivas, dificultan congraciarse con aquellos con quienes se encuentran.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="2"></object>
             <object pk="5"></object>
@@ -1828,6 +1912,9 @@
         <field type="IntegerField" name="carisma">2</field>
         <field type="IntegerField" name="sabiduria">-2</field>
         <field type="CharField" name="idiomas_conocidos">Común, vishkanya</field>
+        <field type="ImageField" name="imagen">VishkanyaPF_P.jpg</field>
+        <field type="ImageField" name="imagen_completa">VishkanyaPF.jpg</field>
+        <field type="CharField" name="descripcion">Los vishkanyas son una raza de humanoides exóticos conocidos por su astucia y afinidad por los venenos de todas clases. La carne de un vishkanya está formada por finas escamas que desde la distancia o incluso a unos pocos pies aparenta ser una piel particularmente suave.</field>
         <field to="main.idioma" name="idiomas_eleccion" rel="ManyToManyRel">
             <object pk="2"></object>
             <object pk="7"></object>
@@ -11941,6 +12028,8 @@
         <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, armadura ligera, armadura media y escudo (excepto escudo pavés)</field>
         <field type="IntegerField" name="dados_de_golpe">12</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">4</field>
+        <field type="ImageField" name="imagen">BarbaroPath_P.jpg</field>
+        <field type="CharField" name="descripcion">Desde los salvajes renos reclamados por demonios hasta los hombres de las tribus de las tierras de reyes más nobles, aquellas gentes primitivas que viven apartadas de las llamadas tierras civilizadas forman el colectivo conocido como bárbaros.</field>
         <field to="main.poder" name="poderes" rel="ManyToManyRel">
             <object pk="1"></object><!--DEL 1 AL 43-->
             <object pk="2"></object>
@@ -12406,6 +12495,8 @@
         <field type="CharField" name="competencia">Competente con todas las armas simples, más espada larga, estoque, cachiporra, espada corta, arco corto y látigo. Los bardos también son competentes con armaduras ligeras y escudos (excepto escudos paveses).</field>
         <field type="IntegerField" name="dados_de_golpe">8</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">6</field>
+        <field type="ImageField" name="imagen">BardoPath_P.jpg</field>
+        <field type="CharField" name="descripcion">Existen incalculables maravillas y secretos para aquellos lo bastantes hábiles como para descubrirlos. A través de la habilidad, talento y magia, esos pocos lo suficientemente astutos desentrañan los misterios del mundo, haciéndose adeptos del arte de la persuasión, la manipulación y la inspiración.</field>
         <field to="main.poder" name="poderes" rel="ManyToManyRel">
             <object pk="44"></object><!--DEL 44 AL 52-->
             <object pk="45"></object>
@@ -15821,6 +15912,8 @@
         <field type="CharField" name="competencia">Competente con todas las armas simples, las armaduras ligeras e intermedias y los escudos (excepto los escudos paveses).</field>
         <field type="IntegerField" name="dados_de_golpe">8</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
+        <field type="ImageField" name="imagen">ClerigoPath_P.jpg</field>
+        <field type="CharField" name="descripcion">En la fe y los milagros divinos, muchos pueden encontrar un propósito mayor. Llamados para servir a poderes más allá del entendimiento mortal, todos los sacerdotes predican maravillas y satisfacen las necesidades espirituales de su gente. Los clérigos son más que simples sacerdotes; estos emisarios de la divinidad hacen la voluntad de sus deidades por medio de la fuerza de las armas y la magia de sus dioses.</field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="32"></object><!--DEL 32 AL 36-->
             <object pk="33"></object>
@@ -19154,6 +19247,8 @@
         <field type="CharField" name="competencia">Competente con las siguientes armas: clava, daga, cimitarra, guadaña, hoz, lanza corta y lanza. También son competentes con todos los ataques naturales. Son competentes con armaduras ligeras e intermedias, pero tienen prohibido vestir armaduras de metal, por lo tanto sólo pueden llevar armadura acolchada, de cuero o de pieles. Un druida también puede llevar armaduras de madera que hayan sido alteradas con el conjuro de madera férrea de forma que funcionen como si fueran de acero. Son competentes con los escudos (excepto los escudos paveses) pero sólo pueden usar aquellos hechos de madera.</field>
         <field type="IntegerField" name="dados_de_golpe">8</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">4</field>
+        <field type="ImageField" name="imagen">DruidaPath_P.jpg</field>
+        <field type="CharField" name="descripcion">En la pureza de los elementos y el orden de la naturaleza existe un poder más allá de las maravillas de la civilización. Furtivo, aunque innegable, esta magia primaria es guardada por los servidores del equilibrio filosófico conocidos como druidas.</field>
         <field to="main.companeroanimal" name="companero_animal" rel="ManyToManyRel">
             <object pk="21"></object><!--DEL 21 AL 34-->
             <object pk="22"></object>
@@ -22133,6 +22228,8 @@
         <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con las armaduras ligeras e intermedias y con los escudos (excepto escudos paveses).</field>
         <field type="IntegerField" name="dados_de_golpe">10</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">6</field>
+        <field type="ImageField" name="imagen">ExploradorPath_P.jpg</field>
+        <field type="CharField" name="descripcion">Para aquellos que saborean la emoción de la caza, sólo hay depredadores y presas. Sean cazadores, rastreadores o cazarrecompensas, los exploradores comparten mucho en común: la maestría única en armas especializadas, la habilidad para acechar incluso a la pieza de caza más evasiva y la capacidad para derrotar a una amplia variedad de presas.</field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="51"></object><!--DEL 51 AL 67-->
             <object pk="52"></object>
@@ -23545,6 +23642,8 @@
         <field type="CharField" name="competencia">Competente con todas las armas sencillas y marciales y con todas las armaduras (pesadas, intermedias y ligeras) y escudos (incluyendo escudos paveses).</field>
         <field type="IntegerField" name="dados_de_golpe">10</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
+        <field type="ImageField" name="imagen">GuerreroPath_P.jpg</field>
+        <field type="CharField" name="descripcion">Algunos toman las armas por la gloria, la riqueza, o la venganza. Otros batallan para probarse a si mismos, proteger a otros, o porque no saben hacer nada más. Incluso otros aprenden los caminos de las armas para afinar sus cuerpos en batalla y demostrar su valía en la forja de la guerra.</field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="68"></object><!--DEL 68 AL 73-->
             <object pk="69"></object>
@@ -23906,6 +24005,8 @@
         <field type="CharField" name="competencia">Competente con todas las armas sencillas. No son competentes con ningún tipo de armadura o escudo.</field>
         <field type="IntegerField" name="dados_de_golpe">6</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
+        <field type="ImageField" name="imagen">HechiceroPath_P.jpg</field>
+        <field type="CharField" name="descripcion">Descendientes de linajes innatamente mágicos, elegidos de los dioses, engendros de los monstruos, peones del destino o simplemente casualidades de la inconstante magia, los hechiceros buscan en su interior en busca de aptitudes mágicas y extraen un poder que pocos mortales podrían imaginar.</field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="75"></object><!--DEL 75 AL 78-->
             <object pk="76"></object>
@@ -28400,6 +28501,8 @@
         <field type="CharField" name="competencia">Competentes con la clava, daga, ballesta ligera, ballesta pesada y bastón, pero no con ningún tipo de armadura o escudo.</field>
         <field type="IntegerField" name="dados_de_golpe">6</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
+        <field type="ImageField" name="imagen">MagoPath_P.jpg</field>
+        <field type="CharField" name="descripcion">Más allá del velo de lo mundano se ocultan los secretos del poder absoluto. Las obras de seres más allá de los mortales, las leyendas de reinos donde caminan dioses y espíritus, el saber de las creaciones maravillosas y terribles, tales misterios llaman a aquellos con la ambición y el intelecto para alzarse por encima de la gente corriente para alcanzar el auténtico poder. Ese es el camino del mago.</field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="79"></object><!--DEL 79 AL 83-->
             <object pk="80"></object>
@@ -32814,6 +32917,8 @@
         <field type="CharField" name="competencia">Competente con la ballesta (ligera o pesada), daga, hacha de mano, jabalina, bastón, lanza corta, espada corta, y lanza. Los monjes no son competentes con ninguna armadura o escudo.</field>
         <field type="IntegerField" name="dados_de_golpe">8</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">4</field>
+        <field type="ImageField" name="imagen">MonjePath_P.jpg</field>
+        <field type="CharField" name="descripcion">Para los verdaderamente ejemplares, las habilidades marciales transcienden el campo de batalla, es un estilo de vida, una doctrina, un estado de la mente. Estos guerreros-artistas buscan métodos de lucha más allá de las espadas y escudos, encontrando armas dentro de sí mismos tan capaces de paralizar o matar como cualquier hoja.</field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="84"></object><!--DEL 84 AL 106-->
             <object pk="85"></object>
@@ -33482,6 +33587,8 @@
         <field type="CharField" name="competencia">Competente con todas las armas simples y marciales, con todos los tipos de armadura (pesada, intermedia y ligera) y con escudos (excepto escudos paveses).</field>
         <field type="IntegerField" name="dados_de_golpe">10</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">2</field>
+        <field type="ImageField" name="imagen">PaladinPath_P.jpg</field>
+        <field type="CharField" name="descripcion">A través de una selección, algunos dignos brillan con el poder de lo divino. Llamados paladines, estas nobles almas dedican sus espadas y vidas a la batalla contra el mal. Caballeros, cruzados y portadores de la ley, los paladines no buscan sólo que se difunda la justicia divina sino incorporar las enseñanzas de las virtuosas deidades a las que sirven.</field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="107"></object><!--DEL 107 AL 122-->
             <object pk="108"></object>
@@ -34936,6 +35043,8 @@
         <field type="CharField" name="competencia">Competentes con todas las armas sencillas, además de la ballesta de mano, estoque, cachiporra, arco corto y espada corta. Los pícaros son competentes con armaduras ligeras, pero no con escudos.</field>
         <field type="IntegerField" name="dados_de_golpe">8</field>
         <field type="IntegerField" name="puntos_de_habilidad_por_nivel">8</field>
+        <field type="ImageField" name="imagen">PicaroPath_P.jpg</field>
+        <field type="CharField" name="descripcion">La vida es una aventura sin fin para los que viven de su ingenio. Siempre un paso por delante del peligro, los pícaros cuentan con su astucia, habilidades y carisma para forzar la suerte a su favor. Sin saber nunca lo que les espera, están preparados para todo, siendo maestros de una gran variedad de habilidades, entrenándose ellos mismos como expertos manipuladores, ágiles acróbatas, acosadores sombríos o maestro de cualquiera de las otras docenas de profesiones o talentos.</field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="123"></object><!--DEL 123 AL 131-->
             <object pk="124"></object>
@@ -40032,21 +40141,8 @@
         </field>
     </object>
 <!--COMPAÑERO ANIMAL PERSONAJE-->
-    <object pk="43" model="main.companeroanimalpersonaje">
-        <field type="CharField" name="tipo">Simio</field>
-        <field type="CharField" name="tamano">Mediano</field>
-        <field type="CharField" name="velocidad">9 metros, trepando 9 metros</field>
-        <field type="IntegerField" name="ca">1</field>
-        <field type="CharField" name="ataque">Mordisco (1d4), 2 garras (1d4)</field>
-        <field type="IntegerField" name="fuerza">13</field>
-        <field type="IntegerField" name="destreza">17</field>
-        <field type="IntegerField" name="constitucion">10</field>
-        <field type="IntegerField" name="inteligencia">2</field>
-        <field type="IntegerField" name="sabiduria">12</field>
-        <field type="IntegerField" name="carisma">7</field>
-        <field type="IntegerField" name="nivel_cambio">4</field>
+    <object pk="33" model="main.companeroanimalpersonaje">
         <field to="main.personaje" name="personaje" rel="OneToOneRel">1</field>
-        <field to="main.companeroanimal" name="companero_animal_cambio" rel="OneToOneRel">34</field>
         <field to="main.especial" name="especiales" rel="ManyToManyRel">
             <object pk="139"></object>
             <object pk="140"></object>

@@ -1,22 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-<div class="container-fluid">
-    {% for raza in razas %}
-    <div class="row">
-        <div class="col-fluid">
-            <div class="card mx-auto" style="width: 18rem;">
-            <a class="card-block stretched-link text-decoration-none" href="/raza/show/{{raza.pk}}"></a>
-            <div class="card-body">
-                <h5 class="card-title text-center">{{raza.raza}}</h5>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col">
+        {% for raza in razas %}
+        <div class="row mt-3">
+            <div class="col-sm-1 d-flex justify-content-center align-items-center">
+                <img class="index-icons align-middle" src="{{raza.imagen.url}}" height="65" width="65">
             </div>
+            <div class="col">
+                <h6><a class="d-inline" href="/raza/show/{{raza.pk}}">{{raza.raza}}: </a></h6>
+                <p class="d-inline">{{raza.descripcion}}</p>
             </div>
-            <br>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
 {% if razas %}
-  <div class="container">
+  <div class="container mt-3">
     <ul class="pagination d-flex justify-content-center">
       {% if razas.has_previous %}
       <li class="page-item"><a class="page-link" href="?page={{razas.previous_page_number}}">Anterior</a></li>

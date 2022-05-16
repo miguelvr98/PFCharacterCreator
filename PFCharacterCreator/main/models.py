@@ -247,6 +247,9 @@ class Raza(models.Model):
     sabiduria = models.IntegerField(verbose_name='Sabiduría', default=0)
     carisma = models.IntegerField(verbose_name='Carisma', default=0)
     idiomas_conocidos = models.TextField(verbose_name='Idiomas conocidos', null=True)
+    descripcion = models.TextField(verbose_name='Descripción', null=True)
+    imagen = models.ImageField(upload_to='', verbose_name='Imagen', null=True)
+    imagen_completa = models.ImageField(upload_to='', verbose_name='Imagen completa', null=True)
     idiomas_eleccion = models.ManyToManyField('Idioma')
     idiomas_iniciales = models.ManyToManyField('Idioma',related_name='idiomas_iniciales')
     bonificaciones_raza = models.ManyToManyField('BonificacionRaza')
@@ -310,6 +313,8 @@ class Clase(models.Model):
     descripcion_dados_de_golpe = models.TextField(verbose_name='Dado de golpe', null=True)
     descripcion_puntos_de_habilidad = models.TextField(verbose_name='Puntos de habilidad por nivel', null=True)
     descripcion_habilidades = models.TextField(verbose_name='Competente con las habilidades', null=True)
+    imagen = models.ImageField(upload_to='', verbose_name='Imagen', null=True)
+    descripcion = models.TextField(verbose_name='Descripción', null=True)
     nivel_conjuro_diario = models.ManyToManyField('NivelConjuroDiario')
     cantidad_conjuros_conocidos = models.ManyToManyField('CantidadConjuroConocido')
     poderes = models.ManyToManyField('Poder')
@@ -494,14 +499,14 @@ class CompaneroAnimalPersonaje(CompaneroAnimal):
     @property
     def bmc(self):
         ataque_base_sum = 0
-        ataque_base_sum = ataque_base_sum + self.ataque_base
+        ataque_base_sum = ataque_base_sum + self.companeroanimal_ptr.ataque_base
         bmc = '+' + str(ataque_base_sum + self.bonificadorFuerza)
         return bmc
 
     @property
     def dmc(self):
         ataque_base_sum = 0
-        ataque_base_sum = ataque_base_sum + self.ataque_base
+        ataque_base_sum = ataque_base_sum + self.companeroanimal_ptr.ataque_base
         dmc = 10 + ataque_base_sum + self.bonificadorFuerza + self.bonificadorDestreza
         return dmc
 

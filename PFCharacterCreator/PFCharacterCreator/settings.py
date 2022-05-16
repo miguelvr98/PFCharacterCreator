@@ -134,4 +134,8 @@ USE_TZ = True
 LOGIN_REDIRECT_URL="/"
 LOGOUT_REDIRECT_URL="/login"
 
+MEDIAFILES_LOCATION = 'main/carga'
+MEDIA_ROOT = os.path.join(BASE_DIR,'main/carga/')
+MEDIA_URL = '/main/carga/'
+
 STATIC_URL = '/static/'

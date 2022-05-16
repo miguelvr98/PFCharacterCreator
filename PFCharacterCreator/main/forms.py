@@ -199,7 +199,7 @@ class BuscarDoteForm(forms.Form):
     TIPO_CHOICES = (('General', 'General'), ('Combate', 'Combate'), ('Metamágica', 'Metamágica'), (None, '---------'), )
 
     nombre = forms.CharField(label='Nombre', required=False, widget=forms.TextInput(attrs={'class': 'form-control w-25 p-3 mx-auto', 'placeholder': 'Nombre'}))
-    tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=False, widget=forms.Select(attrs={'class': 'form-control w-25 mx-auto', 'placeholder': 'Tipo'}))
+    tipo = forms.ChoiceField(choices=TIPO_CHOICES, required=False, widget=forms.Select(attrs={'class': 'd-flex justify-content-center w-25 mx-auto', 'placeholder': 'Tipo'}))
     es_dote_companero_animal = forms.BooleanField(widget=forms.CheckboxInput(attrs={'class': 'd-flex justify-content-center mx-auto mb-1'}), required=False)
 
     def __init__(self, *args, **kwargs):

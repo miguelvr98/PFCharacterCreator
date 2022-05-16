@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main import views
+from django.conf.urls.static import static
+from django.conf import settings
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
@@ -76,4 +78,4 @@ urlpatterns = [
     path('personaje/subir_nivel/<int:pk>/', views.subir_nivel, name='subir_nivel_url'),
     #path('personaje/export/<int:pk>/', views.export_pdf, name="export_pdf_url" )
     #path('jinja', views.jinja),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

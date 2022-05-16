@@ -4,7 +4,8 @@
       <div class="row">
           <div class="col">
                 <h1 class="display-4 py-2 text-center">Crear personaje</h1>
-                <p class="text-center mt-3">En la tabla de la izquierda están relacionadas la cantidad de puntos de características (Car) con sus costes (Cos) correspondientes</p>
+                <p class="mt-2">En la tabla de la izquierda están relacionadas la cantidad de puntos de características (Car) con sus costes (Cos) correspondientes. Debe seleccionar puntos hasta que los puntos restantes sean exactamente 0.</p>
+                <p class="">Mientras más puntos tenga un personaje en una característica más competente será con esa característica</p>
                 {% if formulario_paso_2.errors %}
                 <div class="alert alert-danger text-center" role="alert">
                     Los puntos de característica seleccionados no coinciden con el tipo de campaña (los puntos restantes deben ser igual a 0)
@@ -60,7 +61,7 @@
                     </div>
                     <div class="col align-items-center">
                             {% csrf_token %}
-                            <div class="row mt-5">
+                            <div class="row mt-3">
                                 <div class="col-lg-3">
                                     <h5 class="d-inline mb-3 w-auto text-center align-middle">Fuerza: </h5>
                                 </div>

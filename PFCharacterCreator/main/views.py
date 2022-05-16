@@ -203,17 +203,20 @@ def mostrar_raza(request, pk):
         return redirect('error_url')
 
 def mostrar_dote(request, pk):
-    dote = Dote.objects.get(pk=pk)
-    perfil = usuario_logueado(request)
-    if dote.prerrequisito_dote.all() and dote.prerrequisito_raza != None:
-        prerrequisito_dote = dote.prerrequisito_dote.all()
+    try:
+        dote = Dote.objects.get(pk=pk)
+        perfil = usuario_logueado(request)
+        if dote.prerrequisito_dote.all() and dote.prerrequisito_raza != None:
+            prerrequisito_dote = dote.prerrequisito_dote.all()
+            prerrequisito_raza = dote.prerrequisito_raza
+            return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_dote':prerrequisito_dote, 'prerrequisito_raza':prerrequisito_raza, 'perfil':perfil})
+        elif dote.prerrequisito_dote.all() and dote.prerrequisito_raza == None:
+            prerrequisito_dote = dote.prerrequisito_dote.all()
+            return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_dote':prerrequisito_dote, 'perfil':perfil})
         prerrequisito_raza = dote.prerrequisito_raza
-        return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_dote':prerrequisito_dote, 'prerrequisito_raza':prerrequisito_raza})
-    elif dote.prerrequisito_dote.all() and dote.prerrequisito_raza == None:
-        prerrequisito_dote = dote.prerrequisito_dote.all()
-        return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_dote':prerrequisito_dote})
-    prerrequisito_raza = dote.prerrequisito_raza
-    return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_raza':prerrequisito_raza, 'perfil':perfil})
+        return render(request, 'dote/show.html', {'dote':dote, 'prerrequisito_raza':prerrequisito_raza, 'perfil':perfil})
+    except:
+        return redirect('error_url')
 
 def mostrar_clase(request, pk):
     try:
