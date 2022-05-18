@@ -244,6 +244,9 @@
                 </div>
                 {% endif %}
                 <div class="row mt-2 d-flex justify-content-center">
+                    <div class="col-sm-3 d-flex justify-content-center">
+                        <a href="/json/{{personaje.pk}}" class="btn btn-md btn-dark ">Descargar JSON</a>
+                    </div>
                 {% if personaje.perfil == perfil %}
                     <div class="col-sm-3 d-flex justify-content-center">
                         {% if personaje.es_publico == True %}

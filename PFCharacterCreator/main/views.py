@@ -7,6 +7,9 @@ from main.forms import *
 from django.core.paginator import Paginator
 import math
 import random
+from django.core import serializers
+from django.http import HttpResponse
+import json
 # import jinja2
 # import flask
 #import io
@@ -1168,6 +1171,16 @@ def home(request):
 
 def error(request):
     return render(request, 'paginaError.html')
+
+def json(request, pk):
+    personaje = Personaje.objects.get(pk=pk)
+    with open('personaje_json.json', 'w') as jsonfile:
+        personaje_json = serializers.serialize('json', [personaje, ])
+        jsonfile.write(personaje_json)
+    response = HttpResponse(personaje_json, content_type="text/json-comment-filtered")
+    response['Content-Disposition'] = 'attachment; filename='+personaje.nombre+'.json'
+    return response
+    
 
 # def jinja(request):
 #     templateLoader = jinja2.FileSystemLoader(searchpath="./main/templates/")

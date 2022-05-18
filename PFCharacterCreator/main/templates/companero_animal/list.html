@@ -65,68 +65,68 @@
             {% endfor %}
         </div>
         <div class="tab-pane fade" id="pills-nivel" role="tabpanel" aria-labelledby="pills-nivel-tab">
-            <div class="row">
-                <div class="col d-flex justify-content-center">
+            <div class="row" style="background-color:#68E4F0;">
+                <div class="col border d-flex justify-content-center">
                     <h6>Nivel</h6>
                   </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                       <h6>DG</h6>
                   </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                     <h6>At base</h6>
                 </div>
-                <div class="col d-flex justify-content-center">
+                <div class="col border d-flex justify-content-center">
                     <h6>Fort</h6>
                   </div>
-                <div class="col d-flex justify-content-center">
+                <div class="col border d-flex justify-content-center">
                     <h6>Ref</h6>
                   </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                       <h6>Vol</h6>
                   </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                     <h6>Num dotes</h6>
                  </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                     <h6>Bonif Arm.</h6>
                 </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                     <h6>Bonif Fue/Des</h6>
                 </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                     <h6>Trucos adic</h6>
                 </div>
             </div>
             {% for ca in companeros_animales_por_nivel %}
-            <div class="row">
-                <div class="col d-flex justify-content-center">
+            <div class="row" style="background-color:#D4FBFF;">
+                <div class="col border d-flex justify-content-center">
                     <p>{{ca.nivel}}</p>
                   </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                       <p>{{ca.dados_de_golpe}}</p>
                   </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                     <p>{{ca.ataque_base}}</p>
                 </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                     <p>+{{ca.fortaleza}}</p>
                 </div>
-                <div class="col d-flex justify-content-center">
+                <div class="col border d-flex justify-content-center">
                     <p>+{{ca.reflejos}}</p>
                   </div>
-                  <div class="col d-flex justify-content-center">
+                  <div class="col border d-flex justify-content-center">
                       <p>+{{ca.voluntad}}</p>
                   </div>
-                <div class="col d-flex justify-content-center">
+                <div class="col border d-flex justify-content-center">
                     <p>{{ca.numero_dotes}}</p>
                 </div>
-                <div class="col d-flex justify-content-center">
+                <div class="col border d-flex justify-content-center">
                     <p>+{{ca.ca}}</p>
                 </div>
-                <div class="col d-flex justify-content-center">
+                <div class="col border d-flex justify-content-center">
                     <p>+{{ca.fuerza}}/+{{ca.destreza}}</p>
                 </div>
-                <div class="col d-flex justify-content-center">
+                <div class="col border d-flex justify-content-center">
                     <p>{{ca.numero_trucos}}</p>
                 </div>
             </div>
@@ -134,7 +134,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container mt-3">
     <div class="row d-flex justify-content-center">
       <div class="col-sm-1 d-grid gap-2">
         <input type="button" class="btn btn-dark" value="Atrás" onclick="history.back()">

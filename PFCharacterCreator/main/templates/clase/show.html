@@ -15,7 +15,7 @@
     </div>
 </div>
 <div class="container">
-    <h2 class="mt-4 d-flex justify-content-center">{{clase.clase}}</h2>
+    <h2 class="mt-4 mb-4 d-flex justify-content-center">{{clase.clase}}</h2>
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane show in active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
             <div class="container">
@@ -61,65 +61,65 @@
         </div>
         <div class="tab-pane fade" id="pills-nivel" role="tabpanel" aria-labelledby="pills-nivel-tab">
             <div class="container">
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
+                <div class="row" style="background-color:#68E4F0;">
+                    <div class="col border d-flex justify-content-center">
                         <h6>Nivel</h6>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <h6>Ataque base</h6>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <h6>Fortaleza</h6>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <h6>Reflejos</h6>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <h6>Voluntad</h6>
                     </div>
                     {% if clase.clase == 'Monje' %}
-                    <div class="col-lg-3 d-flex justify-content-center">
+                    <div class="col-lg-3 border d-flex justify-content-center">
                         <h6>Ráfaga de golpes</h6>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <h6>Daño desarmado</h6>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <h6>Bonificación AC</h6>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <h6>Velocidad</h6>
                     </div>
                     {% endif %}
                 </div>
                 {% for c in clases_nivel %}
-                <div class="row">
-                    <div class="col d-flex justify-content-center">
+                <div class="row" style="background-color:#D4FBFF;">
+                    <div class="col border d-flex justify-content-center">
                         <p>{{c.nivel}}</p>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <p>{{c.ataque_base}}</p>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <p>+{{c.fortaleza}}</p>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <p>+{{c.reflejos}}</p>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <p>+{{c.voluntad}}</p>
                     </div>
                     {% if clase.clase == 'Monje' %}
-                    <div class="col-lg-3 d-flex justify-content-center">
+                    <div class="col-lg-3 border d-flex justify-content-center">
                         <p>{{c.rafaga_de_golpes}}</p>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <p>{{c.dano_desarmado}}</p>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <p>+{{c.bonificacion_ac}}</p>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col border d-flex justify-content-center">
                         <p>+{{c.movimiento_rapido}}</p>
                     </div>
                     {% endif %}
@@ -127,6 +127,13 @@
                 {% endfor %}
             </div>
         </div>
+    </div>
+</div>
+<div class="container mt-3">
+    <div class="row d-flex justify-content-center">
+      <div class="col-sm-1 d-grid gap-2">
+        <input type="button" class="btn btn-dark" value="Atrás" onclick="history.back()">
+      </div>
     </div>
 </div>
 {% endblock %}
