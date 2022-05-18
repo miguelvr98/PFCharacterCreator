@@ -1180,7 +1180,6 @@ def json(request, pk):
     response = HttpResponse(personaje_json, content_type="text/json-comment-filtered")
     response['Content-Disposition'] = 'attachment; filename='+personaje.nombre+'.json'
     return response
-    
 
 # def jinja(request):
 #     templateLoader = jinja2.FileSystemLoader(searchpath="./main/templates/")
