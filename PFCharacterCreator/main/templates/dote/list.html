@@ -28,28 +28,28 @@
 {% endif %}
 {% if dotes %}
 <div class="container">
-  <div class="row">
-      <div class="col-lg-2">
+  <div class="row" style="background-color:#68E4F0;">
+      <div class="col-lg-2 border">
         <p>Nombre</p>
       </div>
-      <div class="col-lg-1">
+      <div class="col-lg-1 border">
           <p>Tipo</p>
       </div>
-      <div class="col">
+      <div class="col border">
         <p>Descripción</p>
     </div>
   </div>
 </div>
 <div class="container">
   {% for dote in dotes %}
-  <div class="row">
-      <div class="col-lg-2 align-self-center">
+  <div class="row border">
+      <div class="col-lg-2 d-flex align-items-center border">
         <a href="/dote/show/{{dote.pk}}">{{dote.nombre}}</a>
       </div>
-      <div class="col-lg-1 align-self-center">
+      <div class="col-lg-1 d-flex align-items-center border">
           <p class="align-text-middle">{{dote.tipo}}</p>
       </div>
-      <div class="col">
+      <div class="col border">
         <p class="align-text-middle">{{dote.descripcion}}</p>
     </div>  
   </div>

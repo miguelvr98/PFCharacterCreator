@@ -14,15 +14,15 @@
         </div>
     </form>
 </div>
-<div class="container">
-  <div class="row">
-      <div class="col-lg-2">
+<div class="container mt-3">
+  <div class="row" style="background-color:#68E4F0;">
+      <div class="col-lg-2 border">
         <p>Nombre</p>
       </div>
-      <div class="col-lg-1">
+      <div class="col-lg-1 border">
           <p>Nivel</p>
       </div>
-      <div class="col text-center">
+      <div class="col border text-center">
         <p>Descripción</p>
     </div>
   </div>
@@ -30,20 +30,20 @@
 <div class="container">
   {% for conjuro in conjuros %}
   <div class="row">
-      <div class="col-lg-2 align-self-center">
+      <div class="col-lg-2 d-flex align-items-center border">
         <a href="/conjuro/show/{{conjuro.pk}}">{{conjuro.nombre}}</a>
       </div>
-      <div class="col-lg-1 align-self-center">
+      <div class="col-lg-1 d-flex align-items-center border">
           <p class="align-text-middle">{{conjuro.nivel}}</p>
       </div>
-      <div class="col align-self-center">
+      <div class="col d-flex align-items-center border">
         <p class="align-text-middle">{{conjuro.descripcion}}</p>
     </div>  
   </div>
   {% endfor %}
 </div>
     {% if conjuros %}
-    <div class="container">
+    <div class="container mt-4">
       <ul class="pagination d-flex justify-content-center">
         {% if conjuros.has_previous %}
         <form  role="form"  enctype="multipart/form-data" action="/conjuro/search/{{pk}}/?page={{conjuros.previous_page_number}}" method="POST" id="upload-image-form">
