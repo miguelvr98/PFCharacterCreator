@@ -14,7 +14,6 @@ class Perfil(models.Model):
     class Meta:
         ordering = ('pk', )
 
-# Falta por pensar como hacer los dados de golpe
 class Personaje(models.Model):
     perfil = models.ForeignKey('Perfil', on_delete=models.CASCADE, null=False)
     nombre = models.TextField(verbose_name='Nombre')
@@ -53,7 +52,6 @@ class Personaje(models.Model):
     clase = models.ForeignKey('Clase', on_delete=models.CASCADE, null=True)
     dotes = models.ManyToManyField('Dote')
     puntuaciones_habilidad = models.ManyToManyField('PuntuacionHabilidad')
-    propiedades_objeto = models.ManyToManyField('PropiedadObjeto')
     conjuros_conocidos = models.ManyToManyField('Conjuro')
     poderes_conocidos = models.ManyToManyField('Poder')
     linaje = models.ForeignKey('Linaje', null=True, on_delete=models.SET_NULL)
@@ -87,14 +85,6 @@ class Personaje(models.Model):
         return self.bonificadorDestreza
 
     @property
-    def carga(self):
-        carga = 0.0
-        for propiedad_objeto in self.propiedades_objeto:
-            carga_objeto = propiedad_objeto.objeto.peso * propiedad_objeto.objeto.cantidad
-            carga = carga + carga_objeto
-        return carga
-
-    @property
     def carga_ligera(self):
         carga_ligera = 0.0
         libra = 0.45
@@ -120,44 +110,19 @@ class Personaje(models.Model):
     @property
     def clase_armadura(self):
         clase_armadura = 10
-        for propiedad_objeto in self.propiedades_objeto.all():
-            for propiedad in propiedad_objeto.propiedades:
-                if propiedad.equipado == True and ('Armadura' in propiedad_objeto.objeto.clase or 'Escudo' in propiedad_objeto.objeto.clase):
-                    bonif_arm = propiedad_objeto.objeto.bonif_arm
-                    bonif_max_des = []
-                    bonif_max_des.append(propiedad_objeto.objeto.bonif_max_des)
-                    max = max(bonif_max_des)
-                    clase_armadura = clase_armadura + bonif_arm
-                if max >= self.bonificadorDestreza:
-                    clase_armadura = clase_armadura + self.bonificadorDestreza
-                else:
-                    clase_armadura = clase_armadura + max
-                clase_armadura = clase_armadura + clase.bonificacion_ac
+        clase_armadura = clase_armadura + self.clase.bonificacion_ac + self.bonificadorDestreza
         return clase_armadura
     
     @property
     def desprevenido(self):
         desprevenido = 10
-        for propiedad_objeto in self.propiedades_objeto.all():
-            for propiedad in propiedad_objeto.propiedades:
-                if propiedad.equipado == True and ('Armadura' in propiedad_objeto.objeto.clase or 'Escudo' in propiedad_objeto.objeto.clase):
-                    bonif_arm = propiedad_objeto.objeto.bonif_arm
-                    desprevenido = desprevenido + bonif_arm + clase.bonificacion_ac
+        desprevenido = desprevenido + self.clase.bonificacion_ac
         return desprevenido
 
     @property
     def toque(self):
         toque = 10
-        for propiedad_objeto in self.propiedades_objeto.all():
-            for propiedad in propiedad_objeto.propiedades:
-                if propiedad.equipado == True and ('Armadura' in propiedad_objeto.objeto.clase or 'Escudo' in propiedad_objeto.objeto.clase):
-                    bonif_max_des = []
-                    bonif_max_des.append(propiedad_objeto.objeto.bonif_max_des)
-                    max = max(bonif_max_des)
-                    if max >= self.bonificadorDestreza:
-                        toque = toque + self.bonificadorDestreza
-                    else:
-                        toque = toque + max 
+        toque = toque + self.bonificadorDestreza
         return toque
 
     @property
@@ -525,67 +490,6 @@ class Truco(models.Model):
     def __str__(self):
         return self.nombre
         
-    class Meta:
-        ordering = ('nombre', )
-
-class PropiedadObjeto(models.Model):
-    cantidad = models.IntegerField(verbose_name='Cantidad', default=1)
-    propiedades = models.ManyToManyField('Propiedad')
-    objeto = models.ForeignKey('Objeto', on_delete=models.CASCADE)
-
-class Propiedad(models.Model):
-    nombre = models.TextField(verbose_name='Nombre')
-    descripcion = models.TextField(verbose_name='Descripción')
-    coste = models.IntegerField(verbose_name='Coste', null=True)
-    coste_dinero = models.IntegerField(verbose_name='Coste dinero', null=True)
-    equipado = models.BooleanField(verbose_name='Está equipado', default=False)
-    es_propiedad_arma = models.BooleanField(verbose_name='Es propiedad de arma', default=False)
-    es_propiedad_armadura = models.BooleanField(verbose_name='Es propiedad de armadura', default=False)
-    prerrequisito_propiedad = models.ForeignKey('self', null=True, on_delete=models.SET_NULL, related_name='pr_propiedad')
-
-    def __str__(self):
-        return self.nombre
-
-    class Meta:
-        ordering = ('nombre', )
-
-class Objeto(models.Model):
-    clase = models.TextField(verbose_name='Clase', null=True)
-    nombre = models.TextField(verbose_name='Nombre')
-    precio = models.FloatField(verbose_name='Precio', default=0.0)
-    peso = models.FloatField(verbose_name='Peso', default=0.0)
-
-    def __str__(self):
-        return self.nombre
-        
-    class Meta:
-        ordering = ('nombre', )
-    
-class Arma(Objeto):
-    dano_p = models.TextField(verbose_name='Daño P')
-    dano_m = models.TextField(verbose_name='Daño M')
-    critico = models.TextField(verbose_name='Crítico')
-    alcance = models.TextField(verbose_name='Alcance', null=True)
-    tipo = models.TextField(verbose_name='Tipo')
-    especial = models.TextField(verbose_name='Especial')
-
-    def __str__(self):
-        return self.nombre
-
-    class Meta:
-        ordering = ('nombre', )
-
-class Armadura(Objeto):
-    bonif_arm = models.IntegerField(verbose_name='Bonificación armadura')
-    bonif_max_des = models.IntegerField(verbose_name='Bonificación máximo destreza', null=True)
-    penaliz_arm = models.TextField(verbose_name='Penalizador armadura')
-    fallo_conj_arc = models.TextField(verbose_name='Fallo conjuro arcano')
-    velocidad_9m = models.TextField(verbose_name='Velocidad 9m')
-    velocidad_6m = models.TextField(verbose_name='Velocidad 6m')
-
-    def __str__(self):
-        return self.nombre
-
     class Meta:
         ordering = ('nombre', )
 

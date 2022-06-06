@@ -51,10 +51,10 @@ class EditarContrasenaForm(forms.Form):
         if password1 and password2 and password1 != password2:
             raise forms.ValidationError(self.error_messages['password_mismatch'], code='password_mismatch', )
 
-        """if len(password1) < 8:
+        if len(password1) < 8:
             raise forms.ValidationError(self.error_messages['password_short'], code='password_short', )
 
-        if not re.match("^[A-Za-z0-9\u00f1\u00d1]*$", password1):
+        """if not re.match("^[A-Za-z0-9\u00f1\u00d1]*$", password1):
             raise forms.ValidationError(self.error_messages['password_letters'], code='password_letters', )
 
         if not any(x.isupper() for x in password1):
@@ -90,10 +90,10 @@ class UserForm(forms.ModelForm):
         if password1 and password2 and password1 != password2:
             raise forms.ValidationError(self.error_messages['password_mismatch'], code='password_mismatch', )
 
-        """if len(password1) < 8:
+        if len(password1) < 8:
             raise forms.ValidationError(self.error_messages['password_short'], code='password_short', )
 
-        if not re.match("^[A-Za-z0-9\u00f1\u00d1]*$", password1):
+        """if not re.match("^[A-Za-z0-9\u00f1\u00d1]*$", password1):
             raise forms.ValidationError(self.error_messages['password_letters'], code='password_letters', )
 
         if not any(x.isupper() for x in password1):

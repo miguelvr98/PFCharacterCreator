@@ -27,7 +27,7 @@
 </div>
 {% endif %}
 {% if dotes %}
-<div class="container">
+<div class="container mt-2">
   <div class="row" style="background-color:#68E4F0;">
       <div class="col-lg-2 border">
         <p>Nombre</p>
@@ -57,7 +57,7 @@
 </div>
 {% endif %}
     {% if dotes %}
-    <div class="container mb-2">
+    <div class="container mb-2 mt-3">
       <ul class="pagination d-flex justify-content-center">
         {% if dotes.has_previous %}
         <form  role="form"  enctype="multipart/form-data" action="/dote/search/?page={{dotes.previous_page_number}}" method="POST" id="upload-image-form">
