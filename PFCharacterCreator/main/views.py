@@ -10,11 +10,6 @@ import random
 from django.core import serializers
 from django.http import HttpResponse
 import json
-# import jinja2
-# import flask
-#import io
-#from django.http import FileResponse
-#from reportlab.pdfgen import canvas
 
 # Create your views here.
 
@@ -94,7 +89,6 @@ def listar_habilidades(request):
     except:
         return redirect('error_url')
 
-#Mirar como meter paginación aquí y revisar las queries
 def listar_companeros_animales(request):
     companeros_animales_por_nivel = CompaneroAnimal.objects.all().filter(es_familiar=False).filter(tipo=None).exclude(nivel=0)
     companeros_animales_por_tipo = CompaneroAnimal.objects.all().filter(es_familiar=False).filter(nivel=None)
@@ -183,7 +177,6 @@ def listar_especiales_por_clase(request, pk):
     except:
         return redirect('error_url')
 
-#Mirar si meter paginación
 def listar_conjuros_por_clase(request, pk):
     try:
         clase = Clase.objects.get(pk=pk)
@@ -654,7 +647,6 @@ def buscar_personaje(request):
     except:
         return redirect('error_url')
 
-#Elección de puntos, nombre, raza y clase (falta poner como quiere el usuario que sean los puntos de golpe)
 @login_required(login_url="/login/")
 def crear_personaje_1(request):
     try:
@@ -679,7 +671,6 @@ def crear_personaje_1(request):
     except:
         return redirect('error_url')
 
-#Elección de puntos de características
 @login_required(login_url="/login/")
 def crear_personaje_2(request):
     if request.method == 'POST':
@@ -740,7 +731,6 @@ def modificar_caracteristica2(raza, fuerza, destreza, constitucion, inteligencia
     carisma = carisma + raza.carisma
     return fuerza, destreza, constitucion, inteligencia, sabiduria, carisma
 
-#Habria que meter todos los querysets aqui para que funcione y hacer solo 3 pasos. ¿Añadir el compañero animal una vez esté creado el personaje?
 @login_required(login_url="/login/")
 def crear_personaje_3(request):
     try:
@@ -811,7 +801,6 @@ def guardar_personaje(request, nombre, raza, clase, alineamiento, fuerza, destre
     personaje.save()
     return personaje
 
-#Pensar si quitar los familiares (no vale la pena tenerlos para lo poco que hacen ya) (de momento están quitados)
 @login_required(login_url="/login/")
 def asignar_companero_animal(request, pk):
     try:
@@ -820,7 +809,6 @@ def asignar_companero_animal(request, pk):
         assert perfil == personaje.perfil
         assert not personaje.companero_animal_personaje.all()
         druida_1 = Clase.objects.get(clase='Druida', nivel=1)
-        #mago_1 = Clase.objects.get(clase='Mago', nivel=1) habria que incluir or (mago_1 in personaje.clases en el assert de debajo)
         explorador_4 = Clase.objects.get(clase='Explorador', nivel=4)
         assert (druida_1 == personaje.clase) or (explorador_4 == personaje.clase)
         companero_animal_nivel = CompaneroAnimal.objects.get(nivel=1, tipo=None)
@@ -1040,7 +1028,6 @@ def subir_nivel(request, pk):
     except:
         return redirect('error_url')
 
-#Mirar bien como se meten las habilidades en el personaje
 def guardar_subir_nivel_personaje(personaje, dotes_personaje, clase, poderes, habilidades_personaje, eleccion_puntos_de_golpe, eleccion_caracteristica_personaje, conjuros_conocidos):
     clase_nivel_0 = Clase.objects.get(clase=clase, nivel=0)
     assert clase.nivel - personaje.nivel == 1
@@ -1176,24 +1163,3 @@ def json(request, pk):
     response = HttpResponse(personaje_json, content_type="text/json-comment-filtered")
     response['Content-Disposition'] = 'attachment; filename='+personaje.nombre+'.json'
     return response
-
-# def jinja(request):
-#     templateLoader = jinja2.FileSystemLoader(searchpath="./main/templates/")
-#     templateEnv = jinja2.Environment(loader=templateLoader)
-#     TEMPLATE_FILE = "hola_mundo.html"
-#     template = templateEnv.get_template(TEMPLATE_FILE)
-#     outputText = template.render(name='Miguel')
-#     html_file = open('prueba.html', 'w')
-#     html_file.write(outputText)
-#     html_file.close()
-#     return html_file
-
-#Esto escribe un pdf y lo descarga pero no se como meter la vista que quiero descargar
-# def export_pdf(request, pk):
-#     buffer = io.BytesIO()
-#     p = canvas.Canvas(buffer)
-#     p.drawString(100, 100, "Hello world.")
-#     p.showPage()
-#     p.save()
-#     buffer.seek(0)
-#     return FileResponse(buffer, as_attachment=True, filename='hello.pdf')

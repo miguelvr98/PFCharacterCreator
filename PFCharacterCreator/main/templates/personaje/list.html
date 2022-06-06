@@ -27,41 +27,41 @@
 {% endif %}
 {% if personajes %}
 <div class="container">
-  <div class="row d-flex justify-content-center mx-auto mb-1">
-      <div class="col-lg-2 d-flex justify-content-center">
+  <div class="row d-flex justify-content-center mx-auto">
+      <div class="col-lg-2 d-flex justify-content-center border" style="background-color:#68E4F0;">
         <p>Nombre</p>
       </div>
-      <div class="col-lg-1 d-flex justify-content-center">
+      <div class="col-lg-1 d-flex justify-content-center border" style="background-color:#68E4F0;">
           <p>Raza</p>
       </div>
-      <div class="col-lg-1 d-flex justify-content-center">
+      <div class="col-lg-1 d-flex justify-content-center border" style="background-color:#68E4F0;">
         <p>Clase</p>
     </div>
-      <div class="col-lg-1 d-flex justify-content-center">
+      <div class="col-lg-1 d-flex justify-content-center border" style="background-color:#68E4F0;">
         <p>Nivel</p>
     </div>
     {% if buscador.var == False %}
-    <div class="col-lg-1 d-flex justify-content-center">
+    <div class="col-lg-1 d-flex justify-content-center border" style="background-color:#68E4F0;">
       <p>Creador</p>
   </div>
   {% endif %}
   </div>
   {% for personaje in personajes %}
-  <div class="row d-flex justify-content-center mx-auto mb-1">
-      <div class="col-lg-2 d-flex justify-content-center">
+  <div class="row d-flex justify-content-center mx-auto">
+      <div class="col-lg-2 d-flex justify-content-center border">
         <a href="/personaje/show/{{personaje.pk}}">{{personaje.nombre}}</a>
       </div>
-      <div class="col-lg-1 d-flex justify-content-center">
+      <div class="col-lg-1 d-flex justify-content-center border">
           <p class="align-text-middle">{{personaje.raza.raza}}</p>
       </div>
-      <div class="col-lg-1 d-flex justify-content-center">
+      <div class="col-lg-1 d-flex justify-content-center border">
         <p class="align-text-middle">{{personaje.clase.clase}}</p>
     </div>
-      <div class="col-lg-1 d-flex justify-content-center">
+      <div class="col-lg-1 d-flex justify-content-center border">
         <p class="align-text-middle">{{personaje.nivel}}</p>
     </div>
     {% if buscador.var == False %}
-    <div class="col-lg-1 d-flex justify-content-center">
+    <div class="col-lg-1 d-flex justify-content-center border">
       <a href="/perfil/show/{{personaje.perfil.pk}}">{{personaje.perfil.nickname}}</a>
   </div>
   {% endif %}  
