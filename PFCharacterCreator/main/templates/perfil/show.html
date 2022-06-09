@@ -23,39 +23,39 @@
     <div class="tab-pane show in active" id="pills-personajes" role="tabpanel" aria-labelledby="pills-personajes-tab">
       <div class="row mt-4">
         <div class="col">
-          <div class="row d-flex justify-content-center mx-auto mb-1">
-            <div class="col-lg-1 d-flex justify-content-center">
+          <div class="row d-flex justify-content-center mx-auto">
+            <div class="col-lg-1 d-flex justify-content-center border" style="background-color:#68E4F0;">
               <p>Nombre</p>
             </div>
-            <div class="col-lg-1 d-flex justify-content-center">
+            <div class="col-lg-1 d-flex justify-content-center border" style="background-color:#68E4F0;">
                 <p>Raza</p>
             </div>
-            <div class="col-lg-1 d-flex justify-content-center">
+            <div class="col-lg-1 d-flex justify-content-center border" style="background-color:#68E4F0;">
               <p>Clase</p>
           </div>
-            <div class="col-lg-1 d-flex justify-content-center">
+            <div class="col-lg-1 d-flex justify-content-center border" style="background-color:#68E4F0;">
               <p>Nivel</p>
           </div>
         </div>
         {% for p in personajes %}
-        <div class="row d-flex justify-content-center mx-auto mb-1">
-          <div class="col-lg-1 d-flex justify-content-center">
+        <div class="row d-flex justify-content-center mx-auto">
+          <div class="col-lg-1 d-flex justify-content-center border">
             <a href="/personaje/show/{{personaje.pk}}">{{p.nombre}}</a>
           </div>
-          <div class="col-lg-1 d-flex justify-content-center">
+          <div class="col-lg-1 d-flex justify-content-center border">
               <p class="align-text-middle">{{p.raza.raza}}</p>
           </div>
-          <div class="col-lg-1 d-flex justify-content-center">
+          <div class="col-lg-1 d-flex justify-content-center border">
             <p class="align-text-middle">{{p.clase.clase}}</p>
         </div>
-          <div class="col-lg-1 d-flex justify-content-center">
+          <div class="col-lg-1 d-flex justify-content-center border">
             <p class="align-text-middle">{{p.nivel}}</p>
         </div>
         </div>
           {% endfor %}
       </div>
       </div>
-        <div class="container">
+        <div class="container mt-2">
           <ul class="pagination d-flex justify-content-center">
             {% if personajes.has_previous %}
             <li class="page-item"><a class="page-link" href="?page_personaje={{personajes.previous_page_number}}">Anterior</a></li>

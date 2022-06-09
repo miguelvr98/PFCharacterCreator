@@ -148,7 +148,7 @@ class GDPRForm(forms.Form):
 class DoteForm(forms.ModelForm):
 
     error_messages = {
-        'nombre_letters': ("El nombre solo puede contener letras"),
+        'nombre_letters': ("El nombre solo puede contener letras y números"),
         'nombre_exists': ("Ese nombre ya existe"),
         'nivel_range': ("El nivel tiene que estar entre 1 y 20"),
         'ataque_base_range': ("El ataque base tiene que estar entre 1 y 20"),

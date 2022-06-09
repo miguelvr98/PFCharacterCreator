@@ -290,12 +290,12 @@
             </div>
         </div>
         <div class="tab-pane fade" id="pills-habilidades" role="tabpanel" aria-labelledby="pills-habilidades-tab">
-                <h6>Las habilidades de clase del personaje son: {{clase_nivel_0.descripcion_habilidades}}</h6>
-                <h6>Recuerda que en las tiradas de habilidad con tus habilidades de clase obtienes un +3 a la tirada extra.</h6>
+                <h6 class="text-center">Las habilidades de clase del personaje son: {{clase_nivel_0.descripcion_habilidades}}</h6>
+                <h6 class="text-center">Recuerda que en las tiradas de habilidad con tus habilidades de clase obtienes un +3 a la tirada extra.</h6>
                 {% if personaje.raza.raza == 'Humano' %}
-                <h6 class="mt-3">Los puntos de habilidad por nivel del personaje son: {{clase_nivel_0.descripcion_puntos_de_habilidad}} (+1 por Humano)</h6>
+                <h6 class="mt-3 text-center">Los puntos de habilidad por nivel del personaje son: {{clase_nivel_0.descripcion_puntos_de_habilidad}} (+1 por Humano)</h6>
                 {% else %}
-                <h6 class="mt-3">Los puntos de habilidad por nivel del personaje son: {{clase_nivel_0.descripcion_puntos_de_habilidad}}</h6>
+                <h6 class="mt-3 text-center">Los puntos de habilidad por nivel del personaje son: {{clase_nivel_0.descripcion_puntos_de_habilidad}}</h6>
                 {% endif %}
                 <div class="row d-flex justify-content-center mt-4">
                     <div class="col-3">

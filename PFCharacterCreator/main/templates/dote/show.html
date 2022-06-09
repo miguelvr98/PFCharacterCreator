@@ -7,7 +7,7 @@
         <div class="col">
     {% if dote.creador != None %}
             <h6 class="d-inline">Creador: </h6>
-            <a class="d-inline" href="/perfil/show/{{dote.creador}}">{{dote.creador}}</a>
+            <a class="d-inline" href="/perfil/show/{{dote.creador}}">{{dote.creador.nickname}}</a>
             <br>
     {% endif %}
             <h6 class="d-inline">Tipo: </h6>
@@ -87,7 +87,7 @@
         <div class="col-sm-3 d-flex justify-content-center">
                 <a href="/dote/edit/{{dote.pk}}" class="btn btn-md btn-dark ">Editar dote</a>
         </div>
-        <div class="col-sm-3 mb-4 d-flex justify-content-center">
+        <div class="col-sm-3 d-flex justify-content-center">
                 <a href="/dote/delete/{{dote.pk}}" class="btn btn-md btn-dark ">Eliminar dote</a>
         </div>
 </div>

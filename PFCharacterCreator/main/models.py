@@ -97,7 +97,7 @@ class Personaje(models.Model):
             carga_ligera = diccionario.get(self.fuerza%10+10) * libra * 4
         if self.raza.tamano == 'Pequeño':
             carga_ligera = carga_ligera/2
-        return carga_ligera
+        return round(carga_ligera, 2)
     
     @property
     def carga_media(self):
