@@ -1,0 +1,41 @@
+1. 	Descargar e instalar el servidor PostgreSQL con la versión 14.X.
+	Instalar toda la configuración predeterminada, proporcionando la contraseña y el puerto que
+	están configurados en el fichero settings.py para conectar con Django.
+
+	Contraseña: usuario
+	Puerto: 5432
+	Host por defecto: 127.0.0.1
+
+2. 	Ejecutar pgAdmin el cual encontramos en la ruta donde se ha instalado PostgreSQL y
+	tendremos la interfaz para manejar el servidor.
+	
+	Una vez accedemos desde el navegador abriremos el servidor introduciendo la contraseña de
+	la instalación.
+
+	Creamos un usuario haciendo un click derecho sobre Login/Group Roles, con el nombre
+	usuario. Y le damos todos los permisos.
+
+	Una vez hecho esto crearemos una nueva base de datos haciendo click derecho sobre
+	Databases, con el nombre de PFCharacterCreator.
+	Guardamos y refrescamos Databases y ya tenemos creado la base de datos de nuestra
+	aplicación.
+
+3. 	Para la instalación de Python deberemos descargarlo desde la web y nos descargamos la
+	última versión de la 3.9.X.
+
+	Descargamos el instalador e iniciamos la instalación por defecto y añadiendo Python al
+	PATH.
+
+4.	Instalamos las dependencias pertinentes que hemos preparado en el documento
+	requirements una vez estemos en la ruta mediante el comando y usando el comando:
+ 
+	pip install -r requirements.txt
+
+5. 	Lo siguiente será realizar siguientes comandos en la ruta donde esté el archivo manage.py:
+	
+	python manage.py migrate (crea las tablas en la base de datos)
+	python manage.py createsuperuser (crea nuestro super usuario)
+	python manage.py loaddata populate.xml (cargamos los datos predeterminados)
+	python manage.py runserver (levanta nuestra aplicación en http://127.0.0.1:8000)
+	
+	
